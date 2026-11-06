@@ -88,7 +88,7 @@ Inputs:
 - `DstIP`: The target IP address that was accessed.
 - `Username`: The username of the account that was used to access the DstIP.
 - `Role`: The default role to assign the incident to.
-- `OnCall`: Set to true to assign only the users that are currently on shift. Requires Cortex XSOAR v5.5 or later.
+- `OnCall`: Set to true to assign only the users that are currently on shift. Requires the platform.5 or later.
 - `InternalRange`: A list of internal IP ranges to check IP addresses against. The comma-separated list should be provided in CIDR notation. For example, a list of ranges would be
 
 ### Access Investigation - QRadar

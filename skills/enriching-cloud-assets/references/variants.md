@@ -19,3 +19,51 @@ Given the IP address this playbook enriches information from Prisma Cloud
 - Sub-playbooks: Prisma Cloud - Find Public Cloud Resource by Public IP v2
 - Scripts: GridFieldSetup
 
+## Cortex ASM - Prisma Cloud Enrichment
+
+**Product:** Cortex Attack Surface Management
+
+Given the IP address this playbook enriches information from Prisma Cloud
+
+**Inputs:**
+
+- `remoteIP`: IP address of service.
+- `cloudProvider`: Cloud service provider.
+
+**Dependencies:**
+
+- Sub-playbooks: Prisma Cloud - Find Public Cloud Resource by Public IP v2
+- Scripts: GridFieldSetup
+
+## Cortex ASM - Prisma Cloud Enrichment
+
+**Product:** Cortex Attack Surface Management
+
+Given the IP address this playbook enriches information from Prisma Cloud
+
+**Inputs:**
+
+- `remoteIP`: IP address of service.
+- `cloudProvider`: Cloud service provider.
+
+**Dependencies:**
+
+- Sub-playbooks: Prisma Cloud - Find Public Cloud Resource by Public IP v2
+- Scripts: GridFieldSetup
+
+## Cortex ASM - Prisma Cloud Enrichment
+
+**Product:** Cortex Attack Surface Management
+
+Given the IP address this playbook enriches information from Prisma Cloud
+
+**Inputs:**
+
+- `remoteIP`: IP address of service.
+- `cloudProvider`: Cloud service provider.
+
+**Dependencies:**
+
+- Sub-playbooks: Prisma Cloud - Find Public Cloud Resource by Public IP v2
+- Scripts: GridFieldSetup
+

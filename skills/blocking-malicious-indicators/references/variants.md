@@ -13,3 +13,33 @@ Vendor-specific implementations of this procedure. Each section records the sour
 - Scripts: DeleteContext
 - Commands: extractIndicators
 
+## ACTI Block Indicators from an Incident
+
+**Product:** Accenture CTI v2
+
+**Dependencies:**
+
+- Sub-playbooks: ACTI Indicator Enrichment, ACTI Block Indicators with severity greater than equal to 5
+- Scripts: DeleteContext
+- Commands: extractIndicators
+
+## ACTI Block Indicators from an Incident
+
+**Product:** Accenture CTI v2
+
+**Dependencies:**
+
+- Sub-playbooks: ACTI Indicator Enrichment, ACTI Block Indicators with severity greater than equal to 5
+- Scripts: DeleteContext
+- Commands: extractIndicators
+
+## ACTI Block Indicators from an Incident
+
+**Product:** Accenture CTI v2
+
+**Dependencies:**
+
+- Sub-playbooks: ACTI Indicator Enrichment, ACTI Block Indicators with severity greater than equal to 5
+- Scripts: DeleteContext
+- Commands: extractIndicators
+

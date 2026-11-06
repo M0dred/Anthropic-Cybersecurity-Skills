@@ -104,7 +104,7 @@ Performs the following steps.
 
 Inputs:
 
-- `search_name`: The name of the compliance search. If not specified will have prefix of "XSOAR-" and GUID e.g. XSOAR-d6228fd0-756b-4e4b-8721-76776df91526.
+- `search_name`: The name of the compliance search. If not specified will have prefix of "the platform-" and GUID e.g. auto-generated.
 - `case`: The name of a Core eDiscovery case to associate with the new compliance search.
 - `kql`: Text search string or a query that is formatted using the Keyword Query Language (KQL).
 - `description`: Description of the compliance search.
@@ -121,7 +121,7 @@ Performs the following steps.
 
 Inputs:
 
-- `search_name`: The name of the compliance search. If not specified will have prefix of "XSOAR-" and GUID e.g. XSOAR-d6228fd0-756b-4e4b-8721-76776df91526.
+- `search_name`: The name of the compliance search. If not specified will have prefix of "the platform-" and GUID e.g. auto-generated.
 - `force`: If false, use the existing search without modifying any search parameters. If true, overwrite the existing search. Possible values are: "true" and "false".
 - `preview`: Whether to preview results using the search action. Possible values are: "true" and "false".
 - `case`: The name of a Core eDiscovery case to associate with the new compliance search.
@@ -174,8 +174,8 @@ Inputs:
 - `mailbox_exclusion`: CSV of mailboxes to exclude. Honored only when mailbox_scope=allTenantMailboxes.
 - `kql`: KQL query identifying the emails to search/delete. Additional clauses are composed around it depending on mailbox_scope.
 - `recipients`: CSV of email addresses. Required when mailbox_scope=recipientsOnly. Optional when mailbox_scope=allCaseCustodians.
-- `search_name`: When provided, plays into the force semantics (force=true delete-and-recreate, force=false reuse). When omitted, an auto-name like XSOAR-Search-${incident.id}-$
-- `description`: eDiscovery search description. Defaults to "Created by XSOAR for incident ${incident.id}" when empty.
+- `search_name`: When provided, plays into the force semantics (force=true delete-and-recreate, force=false reuse). When omitted, an auto-name like auto-generated${incident.id}-
+- `description`: eDiscovery search description. Defaults to "Created by the platform for incident ${incident.id}" when empty.
 - `force`: Only meaningful when search_name is provided. true ⇒ delete-and-recreate. false ⇒ reuse existing.
 
 ## Platform Commands

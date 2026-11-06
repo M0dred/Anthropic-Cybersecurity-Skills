@@ -20,3 +20,54 @@ Enriches incoming IP addresses using the 'IP Enrichment - External - Generic v2'
 - Scripts: IsIntegrationAvailable, Print
 - Commands: vega-update-incident
 
+## Vega Incident - External IP Enrichment - Generic
+
+**Product:** Vega
+
+Enriches incoming IP addresses using the 'IP Enrichment - External - Generic v2' sub-playbook and automatically posts the retrieved endpoint details back to the Vega incident as a comment
+
+**Inputs:**
+
+- `IP_Address`: The IP address(es) to enrich.
+
+**Dependencies:**
+
+- Sub-playbooks: IP Enrichment - External - Generic v2
+- Integrations: Vega
+- Scripts: IsIntegrationAvailable, Print
+- Commands: vega-update-incident
+
+## Vega Incident - External IP Enrichment - Generic
+
+**Product:** Vega
+
+Enriches incoming IP addresses using the 'IP Enrichment - External - Generic v2' sub-playbook and automatically posts the retrieved endpoint details back to the Vega incident as a comment
+
+**Inputs:**
+
+- `IP_Address`: The IP address(es) to enrich.
+
+**Dependencies:**
+
+- Sub-playbooks: IP Enrichment - External - Generic v2
+- Integrations: Vega
+- Scripts: IsIntegrationAvailable, Print
+- Commands: vega-update-incident
+
+## Vega Incident - External IP Enrichment - Generic
+
+**Product:** Vega
+
+Enriches incoming IP addresses using the 'IP Enrichment - External - Generic v2' sub-playbook and automatically posts the retrieved endpoint details back to the Vega incident as a comment
+
+**Inputs:**
+
+- `IP_Address`: The IP address(es) to enrich.
+
+**Dependencies:**
+
+- Sub-playbooks: IP Enrichment - External - Generic v2
+- Integrations: Vega
+- Scripts: IsIntegrationAvailable, Print
+- Commands: vega-update-incident
+

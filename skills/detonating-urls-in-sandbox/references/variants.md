@@ -22,3 +22,60 @@ This playbook scans URLs using GTI private scanning and evaluates the results ag
 - Scripts: Set
 - Commands: gti-private-url-scan-and-analysis-get, gti-privatescanning-url
 
+## URL Scan - Google Threat Intelligence
+
+**Product:** GoogleThreatIntelligence
+
+This playbook scans URLs using GTI private scanning and evaluates the results against GTI assessment parameters, including Threat Score, Severity, and Verdict. URLs that meet the defined high-risk criteria are returned for further action
+
+**Inputs:**
+
+- `url`: Provide url for Private Scanning.
+
+**Outputs:**
+
+- `url_output_list`
+
+**Dependencies:**
+
+- Scripts: Set
+- Commands: gti-private-url-scan-and-analysis-get, gti-privatescanning-url
+
+## URL Scan - Google Threat Intelligence
+
+**Product:** GoogleThreatIntelligence
+
+This playbook scans URLs using GTI private scanning and evaluates the results against GTI assessment parameters, including Threat Score, Severity, and Verdict. URLs that meet the defined high-risk criteria are returned for further action
+
+**Inputs:**
+
+- `url`: Provide url for Private Scanning.
+
+**Outputs:**
+
+- `url_output_list`
+
+**Dependencies:**
+
+- Scripts: Set
+- Commands: gti-private-url-scan-and-analysis-get, gti-privatescanning-url
+
+## URL Scan - Google Threat Intelligence
+
+**Product:** GoogleThreatIntelligence
+
+This playbook scans URLs using GTI private scanning and evaluates the results against GTI assessment parameters, including Threat Score, Severity, and Verdict. URLs that meet the defined high-risk criteria are returned for further action
+
+**Inputs:**
+
+- `url`: Provide url for Private Scanning.
+
+**Outputs:**
+
+- `url_output_list`
+
+**Dependencies:**
+
+- Scripts: Set
+- Commands: gti-private-url-scan-and-analysis-get, gti-privatescanning-url
+

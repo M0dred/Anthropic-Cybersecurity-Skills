@@ -19,3 +19,51 @@ Playbook to enrich certificate information
 - Scripts: Set, GridFieldSetup
 - Commands: venafi-get-certificates, venafi-get-certificate-details
 
+## Cortex ASM - Certificate Enrichment
+
+**Product:** Cortex Attack Surface Management
+
+Playbook to enrich certificate information
+
+**Inputs:**
+
+- `Hostname`: Input for Certificate enrichment
+
+**Dependencies:**
+
+- Integrations: VenafiTLSProtect
+- Scripts: Set, GridFieldSetup
+- Commands: venafi-get-certificates, venafi-get-certificate-details
+
+## Cortex ASM - Certificate Enrichment
+
+**Product:** Cortex Attack Surface Management
+
+Playbook to enrich certificate information
+
+**Inputs:**
+
+- `Hostname`: Input for Certificate enrichment
+
+**Dependencies:**
+
+- Integrations: VenafiTLSProtect
+- Scripts: Set, GridFieldSetup
+- Commands: venafi-get-certificates, venafi-get-certificate-details
+
+## Cortex ASM - Certificate Enrichment
+
+**Product:** Cortex Attack Surface Management
+
+Playbook to enrich certificate information
+
+**Inputs:**
+
+- `Hostname`: Input for Certificate enrichment
+
+**Dependencies:**
+
+- Integrations: VenafiTLSProtect
+- Scripts: Set, GridFieldSetup
+- Commands: venafi-get-certificates, venafi-get-certificate-details
+

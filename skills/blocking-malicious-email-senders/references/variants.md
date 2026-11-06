@@ -51,3 +51,147 @@ This playbook will block email address at your email gateway
 
 - `EmailToBlock`: The email address that will be blocked.
 
+## Mimecast - Block Sender Domain
+
+**Product:** Mimecast
+
+A playbook to block sender domain name using Mimecast integration
+
+**Inputs:**
+
+- `BlockGroup`: The sender email block group.
+- `SenderDomain`: The sender domain to block.
+- `QuerySource`: The query source, please input cloud or ldap in the value input.
+
+**Dependencies:**
+
+- Integrations: MimecastV2
+- Scripts: IsIntegrationAvailable
+- Commands: mimecast-find-groups, mimecast-add-group-member
+
+
+## Mimecast - Block Sender Email
+
+**Product:** Mimecast
+
+A playbook to block sender email address using Mimecast integration
+
+**Inputs:**
+
+- `BlockGroup`: The sender email block group.
+- `SenderEmail`: The sender email to block.
+- `QuerySource`: The query source, please input cloud or ldap in the value input.
+
+**Dependencies:**
+
+- Integrations: MimecastV2
+- Scripts: IsIntegrationAvailable
+- Commands: mimecast-find-groups, mimecast-add-group-member
+
+
+## Symantec block Email
+
+**Product:** Symantec Messaging Gateway
+
+This playbook will block email address at your email gateway
+
+**Inputs:**
+
+- `EmailToBlock`: The email address that will be blocked.
+
+## Mimecast - Block Sender Domain
+
+**Product:** Mimecast
+
+A playbook to block sender domain name using Mimecast integration
+
+**Inputs:**
+
+- `BlockGroup`: The sender email block group.
+- `SenderDomain`: The sender domain to block.
+- `QuerySource`: The query source, please input cloud or ldap in the value input.
+
+**Dependencies:**
+
+- Integrations: MimecastV2
+- Scripts: IsIntegrationAvailable
+- Commands: mimecast-find-groups, mimecast-add-group-member
+
+
+## Mimecast - Block Sender Email
+
+**Product:** Mimecast
+
+A playbook to block sender email address using Mimecast integration
+
+**Inputs:**
+
+- `BlockGroup`: The sender email block group.
+- `SenderEmail`: The sender email to block.
+- `QuerySource`: The query source, please input cloud or ldap in the value input.
+
+**Dependencies:**
+
+- Integrations: MimecastV2
+- Scripts: IsIntegrationAvailable
+- Commands: mimecast-find-groups, mimecast-add-group-member
+
+
+## Symantec block Email
+
+**Product:** Symantec Messaging Gateway
+
+This playbook will block email address at your email gateway
+
+**Inputs:**
+
+- `EmailToBlock`: The email address that will be blocked.
+
+## Mimecast - Block Sender Domain
+
+**Product:** Mimecast
+
+A playbook to block sender domain name using Mimecast integration
+
+**Inputs:**
+
+- `BlockGroup`: The sender email block group.
+- `SenderDomain`: The sender domain to block.
+- `QuerySource`: The query source, please input cloud or ldap in the value input.
+
+**Dependencies:**
+
+- Integrations: MimecastV2
+- Scripts: IsIntegrationAvailable
+- Commands: mimecast-find-groups, mimecast-add-group-member
+
+
+## Mimecast - Block Sender Email
+
+**Product:** Mimecast
+
+A playbook to block sender email address using Mimecast integration
+
+**Inputs:**
+
+- `BlockGroup`: The sender email block group.
+- `SenderEmail`: The sender email to block.
+- `QuerySource`: The query source, please input cloud or ldap in the value input.
+
+**Dependencies:**
+
+- Integrations: MimecastV2
+- Scripts: IsIntegrationAvailable
+- Commands: mimecast-find-groups, mimecast-add-group-member
+
+
+## Symantec block Email
+
+**Product:** Symantec Messaging Gateway
+
+This playbook will block email address at your email gateway
+
+**Inputs:**
+
+- `EmailToBlock`: The email address that will be blocked.
+
