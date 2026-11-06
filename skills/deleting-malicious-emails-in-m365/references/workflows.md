@@ -1,0 +1,23 @@
+# Workflows - Deleting Malicious Emails in M365
+
+## Decision sequence
+
+```
+1. Confirm entry criteria
+2. Plan
+3. Execute
+4. Verify
+5. Record
+```
+
+## Record template
+
+```
+Skill:      deleting-malicious-emails-in-m365
+Incident:   INC-1234
+Vendor:     <one of the variants>
+Operator:   analyst@example.com
+Started:    2026-08-31T10:00Z
+Result:     <success|partial|failed>
+Rollback:   <command>
+```

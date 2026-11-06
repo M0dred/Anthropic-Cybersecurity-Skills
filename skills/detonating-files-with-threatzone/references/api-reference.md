@@ -1,0 +1,37 @@
+# API Reference - Detonating Files with Threatzone
+
+## Vendor variants
+
+### Analyze File - Sandbox - ThreatZone v2
+
+Pack: ThreatZone
+
+### Analyze File - Static Scan - ThreatZone v2
+
+Pack: ThreatZone
+
+
+## Platform commands
+
+```bash
+# CrowdStrike Falcon
+curl -X POST "https://api.crowdstrike.com/devices/entities/devices-actions/v2?action_name=contain" \
+  -H "Authorization: Bearer $CS_TOKEN" -H "Content-Type: application/json" \
+  -d '{"ids":["<device_id>"]}'
+curl "https://api.crowdstrike.com/devices/queries/devices/v1?filter=hostname:'WEB-01'" \
+  -H "Authorization: Bearer $CS_TOKEN"
+```
+
+```bash
+# Microsoft Defender for Endpoint
+curl -X POST "https://api.securitycenter.microsoft.com/api/machines/<id>/isolate" \
+  -H "Authorization: Bearer $MDE_TOKEN" -H "Content-Type: application/json" \
+  -d '{"Comment":"INC-1234","IsolationType":"Full"}'
+curl "https://api.securitycenter.microsoft.com/api/machines?\$filter=computerDnsName eq 'WEB-01'" \
+  -H "Authorization: Bearer $MDE_TOKEN"
+```
+
+```bash
+curl "https://www.virustotal.com/api/v3/files/<sha256>" -H "x-apikey: $VT_API_KEY"
+curl -X POST "https://www.virustotal.com/api/v3/files" -H "x-apikey: $VT_API_KEY" -F "file=@sample.bin"
+```
