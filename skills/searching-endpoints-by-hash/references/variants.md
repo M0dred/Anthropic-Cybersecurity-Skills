@@ -139,3 +139,213 @@ This playbooks searches for different indicators (IP,IPV6,File hashes,Domain) in
 - Integrations: CrowdStrikeFalcon, CrowdstrikeFalcon
 - Commands: cs-falcon-device-count-ioc, cs-falcon-device-ran-on, endpoint
 
+## Search Endpoints By Hash - Carbon Black Protection
+
+**Product:** Carbon Black Enterprise Protection
+
+**Kind:** playbook
+
+Hunts for endpoint activity involving hash IOCs, using Carbon Black Protection
+
+**Inputs:**
+
+- `Hash`: The MD5 file Hash to hunt for.
+
+**Dependencies:**
+
+- Integrations: carbonblackprotection
+- Scripts: CBPCatalogFindHash, Exists, CBPFindRule, Set
+- Commands: cbp-computer-get
+
+## Search Endpoints By Hash - Carbon Black Response V2
+
+**Product:** Carbon Black Enterprise Response
+
+**Kind:** playbook
+
+Hunt for malicious indicators using Carbon Black
+
+**Inputs:**
+
+- `Hash`: MD5 Hash
+
+**Dependencies:**
+
+- Integrations: integration-Carbon_Black_Enterprise_Response
+- Commands: cb-get-processes
+
+## Search Endpoints By Hash - Cybereason
+
+**Product:** Cybereason
+
+**Kind:** playbook
+
+Hunt for endpoint activity involving hash, using Cybereason
+
+**Inputs:**
+
+- `MD5Hash`: MD5 Hash
+- `SHA1Hash`: SHA1 Hash
+
+**Dependencies:**
+
+- Integrations: Cybereason
+- Commands: cybereason-query-file
+
+## Search Endpoints By Hash - TIE
+
+**Product:** McAfee Threat Intelligence Exchange
+
+**Kind:** playbook
+
+Hunt for sightings of MD5, SHA1 and/or SHA256 hashes on endpoints, using McAfee TIE (requires ePO as well). Input: Output
+
+**Inputs:**
+
+- `Hash`: The Hash to hunt (Could be MD5,SHA1,SHA256).Default is set to all hashes
+
+**Dependencies:**
+
+- Integrations: McAfee ePO v2, McAfeeTIEV2, McAfee-TIE
+- Commands: epo-find-system, tie-file-references
+
+## Search Endpoints By Hash - Carbon Black Protection
+
+**Product:** Carbon Black Enterprise Protection
+
+**Kind:** playbook
+
+Hunts for endpoint activity involving hash IOCs, using Carbon Black Protection
+
+**Inputs:**
+
+- `Hash`: The MD5 file Hash to hunt for.
+
+**Dependencies:**
+
+- Integrations: carbonblackprotection
+- Scripts: CBPCatalogFindHash, Exists, CBPFindRule, Set
+- Commands: cbp-computer-get
+
+## Search Endpoints By Hash - Carbon Black Response V2
+
+**Product:** Carbon Black Enterprise Response
+
+**Kind:** playbook
+
+Hunt for malicious indicators using Carbon Black
+
+**Inputs:**
+
+- `Hash`: MD5 Hash
+
+**Dependencies:**
+
+- Integrations: integration-Carbon_Black_Enterprise_Response
+- Commands: cb-get-processes
+
+## Search Endpoints By Hash - Cybereason
+
+**Product:** Cybereason
+
+**Kind:** playbook
+
+Hunt for endpoint activity involving hash, using Cybereason
+
+**Inputs:**
+
+- `MD5Hash`: MD5 Hash
+- `SHA1Hash`: SHA1 Hash
+
+**Dependencies:**
+
+- Integrations: Cybereason
+- Commands: cybereason-query-file
+
+## Search Endpoints By Hash - TIE
+
+**Product:** McAfee Threat Intelligence Exchange
+
+**Kind:** playbook
+
+Hunt for sightings of MD5, SHA1 and/or SHA256 hashes on endpoints, using McAfee TIE (requires ePO as well). Input: Output
+
+**Inputs:**
+
+- `Hash`: The Hash to hunt (Could be MD5,SHA1,SHA256).Default is set to all hashes
+
+**Dependencies:**
+
+- Integrations: McAfee ePO v2, McAfeeTIEV2, McAfee-TIE
+- Commands: epo-find-system, tie-file-references
+
+## Search Endpoints By Hash - Carbon Black Protection
+
+**Product:** Carbon Black Enterprise Protection
+
+**Kind:** playbook
+
+Hunts for endpoint activity involving hash IOCs, using Carbon Black Protection
+
+**Inputs:**
+
+- `Hash`: The MD5 file Hash to hunt for.
+
+**Dependencies:**
+
+- Integrations: carbonblackprotection
+- Scripts: CBPCatalogFindHash, Exists, CBPFindRule, Set
+- Commands: cbp-computer-get
+
+## Search Endpoints By Hash - Carbon Black Response V2
+
+**Product:** Carbon Black Enterprise Response
+
+**Kind:** playbook
+
+Hunt for malicious indicators using Carbon Black
+
+**Inputs:**
+
+- `Hash`: MD5 Hash
+
+**Dependencies:**
+
+- Integrations: integration-Carbon_Black_Enterprise_Response
+- Commands: cb-get-processes
+
+## Search Endpoints By Hash - Cybereason
+
+**Product:** Cybereason
+
+**Kind:** playbook
+
+Hunt for endpoint activity involving hash, using Cybereason
+
+**Inputs:**
+
+- `MD5Hash`: MD5 Hash
+- `SHA1Hash`: SHA1 Hash
+
+**Dependencies:**
+
+- Integrations: Cybereason
+- Commands: cybereason-query-file
+
+## Search Endpoints By Hash - TIE
+
+**Product:** McAfee Threat Intelligence Exchange
+
+**Kind:** playbook
+
+Hunt for sightings of MD5, SHA1 and/or SHA256 hashes on endpoints, using McAfee TIE (requires ePO as well). Input: Output
+
+**Inputs:**
+
+- `Hash`: The Hash to hunt (Could be MD5,SHA1,SHA256).Default is set to all hashes
+
+**Dependencies:**
+
+- Integrations: McAfee ePO v2, McAfeeTIEV2, McAfee-TIE
+- Commands: epo-find-system, tie-file-references
+

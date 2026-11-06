@@ -607,3 +607,63 @@ This playbook leverages the Windows built-in PowerShell and WinRM capabilities t
 - Scripts: UnzipFile, IsIntegrationAvailable, AddEvidence, Set
 - Commands: ps-remote-download-file
 
+## Retrieve File from Endpoint - Generic V3
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+'This playbook retrieves a file sample from an endpoint using the following playbooks:'
+
+**Inputs:**
+
+- `MD5`: The MD5 hash value for the file to retrieve.
+- `SHA256`: The SHA256 hash value for the file to retrieve.
+- `Host`: Hostname of the machine on which the file is located for PS remote it can also be an IP address.
+- `Path`: The path of the file to retrieve.For example:C:\users\folder\file.txt
+- `Agent_ID`: The ID of the agent in the relevant integration (such as EDR).
+
+**Dependencies:**
+
+- Sub-playbooks: Get File Sample By Hash - Generic v3, Get File Sample From Path - Generic V3
+
+## Retrieve File from Endpoint - Generic V3
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+'This playbook retrieves a file sample from an endpoint using the following playbooks:'
+
+**Inputs:**
+
+- `MD5`: The MD5 hash value for the file to retrieve.
+- `SHA256`: The SHA256 hash value for the file to retrieve.
+- `Host`: Hostname of the machine on which the file is located for PS remote it can also be an IP address.
+- `Path`: The path of the file to retrieve.For example:C:\users\folder\file.txt
+- `Agent_ID`: The ID of the agent in the relevant integration (such as EDR).
+
+**Dependencies:**
+
+- Sub-playbooks: Get File Sample By Hash - Generic v3, Get File Sample From Path - Generic V3
+
+## Retrieve File from Endpoint - Generic V3
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+'This playbook retrieves a file sample from an endpoint using the following playbooks:'
+
+**Inputs:**
+
+- `MD5`: The MD5 hash value for the file to retrieve.
+- `SHA256`: The SHA256 hash value for the file to retrieve.
+- `Host`: Hostname of the machine on which the file is located for PS remote it can also be an IP address.
+- `Path`: The path of the file to retrieve.For example:C:\users\folder\file.txt
+- `Agent_ID`: The ID of the agent in the relevant integration (such as EDR).
+
+**Dependencies:**
+
+- Sub-playbooks: Get File Sample By Hash - Generic v3, Get File Sample From Path - Generic V3
+

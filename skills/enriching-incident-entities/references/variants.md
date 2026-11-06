@@ -7923,3 +7923,495 @@ The script takes one or more domain names and checks whether they're in the   li
 - `Domain.Name`
 - `Domain.Internal`
 
+## DBot Indicator Enrichment - Generic
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Gets indicator's internal Dbot score
+
+**Inputs:**
+
+- `Email`: The email address to enrich with Dbot ccore.
+- `URL`: The URL to enrich with Dbot score.
+- `IP`: The IP address to enrich with Dbot score.
+- `MD5`: The MD5 hash of the file to enrich with Dbot score.
+- `SHA1`: The SHA1 hash of the file to enrich with Dbot score.
+- `SHA256`: The SHA256 hash of the file to enrich with Dbot score.
+
+## Enrichment for Verdict
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+This playbook checks prior alert closing reasons and performs enrichment and prevalence checks on different IOC types. It then returns the information needed to establish the alert's verdict
+
+**Inputs:**
+
+- `threshold`: The number of previous alerts that were closed as false positive alerts. This threshold establishes whether the Previous Verdict key will be marked as false positive.
+- `query`: A query for the previous alerts search.Use free form query (Lucene syntax) as a filter. All other filters are ignored when this filter is used.
+- `CloseReason`: The closing reason of the previous alerts to search for.Possible values are:- Resolved - Threat Handled- Resolved - True Positive- Resolved - False Positive- Resolved - Security Te
+- `FileSHA256`: File SHA256 to enrich and give verdict.
+- `IP`: IP address to enrich and give verdict.
+- `InternalRange`: A list of internal IP ranges to check IP addresses against. The comma-separated list should be provided in CIDR notation. For example, a list of ranges is: "172.16.0.0/12,10.0.0.0/
+- `ResolveIP`: Determines whether to convert the IP address to a hostname using a DNS query (True/ False).
+- `URL`: URL to enrich and give verdict.
+- `User`: User to enrich and give verdict. (AWS IAM or Active Directory).
+- `Domain`: Domain to enrich and give verdict.
+
+**Dependencies:**
+
+- Sub-playbooks: URL Enrichment - Generic v2, File Reputation, IP Enrichment - Generic v2, Account Enrichment - Generic v2.1, Get prevalence for IOCs, Domain Enrichment - Generic v2
+- Scripts: Set, SearchIncidentsV2
+
+## Entity Enrichment - Generic v2
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Enrich entities using one or more integrations
+
+**Inputs:**
+
+- `IP`: The IP addresses to enrich
+- `InternalRange`: A list of internal IP ranges to check IP addresses against. The comma-separated list should be provided in CIDR notation. For example, a list of ranges would be: "172.16.0.0/12,10.
+- `MD5`: File MD5 to enrich
+- `SHA256`: File SHA256 to enrich
+- `SHA1`: File SHA1 to enrich
+- `URL`: URL to enrich
+- `Email`: The email addresses to enrich
+- `Hostname`: The hostname to enrich
+- `Username`: The Username to enrich
+- `Domain`: The domain name to enrich
+
+**Dependencies:**
+
+- Sub-playbooks: File Enrichment - Generic v2, URL Enrichment - Generic v2, Endpoint Enrichment - Generic v2.1, Domain Enrichment - Generic v2, Account Enrichment - Generic v2.1, Email Address Enrichment - Generic v2.1, IP Enrichment - Generic v2
+
+## Entity Enrichment - Generic v4
+
+**Product:** Use Case Builder
+
+**Kind:** playbook
+
+Enrich entities using one or more integrations
+
+**Inputs:**
+
+- `IP`: The IP addresses to enrich
+- `InternalRange`: A list of internal IP ranges to check IP addresses against. The list should be provided in CIDR notation, separated by commas. An example of a list of ranges would be: "172.16.0.0/
+- `MD5`: File MD5 to enrich
+- `SHA256`: File SHA256 to enrich
+- `SHA1`: File SHA1 to enrich
+- `URL`: URL to enrich
+- `Email`: The email addresses to enrich
+- `Hostname`: The hostname to enrich
+- `Username`: The username to enrich
+- `Domain`: The domain name to enrich
+
+**Dependencies:**
+
+- Sub-playbooks: Email Address Enrichment - Generic v2.1, IP Enrichment - Generic v2, Endpoint Enrichment - Generic v2.1, CVE Enrichment - Generic v2, Account Enrichment - Generic v2.1, File Enrichment - Generic v2, Domain Enrichment - Generic v2, URL Enrichment - Generic v2
+
+## File Enrichment - File reputation
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Gets a file's reputation using one or more integrations
+
+**Inputs:**
+
+- `MD5`: The MD5 hash to enrich.
+- `SHA256`: The SHA256 hash to enrich.
+- `SHA1`: The SHA1 hash to enrich.
+
+**Dependencies:**
+
+- Scripts: FileReputation
+
+## File Enrichment - Generic v2
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Enrich a file using one or more integrations
+
+**Inputs:**
+
+- `MD5`: File MD5 hash to enrich.
+- `SHA256`: The file SHA256 hash to enrich.
+- `SHA1`: The file SHA1 hash to enrich.
+- `UseReputationCommand`: Define if you would like to use the !file command.Note: This input should be used whenever there is no auto-extract enabled in the investigation flow.Possible values: True / False.
+
+**Dependencies:**
+
+- Sub-playbooks: File Enrichment - Virus Total (API v3)
+- Commands: file, cylance-protect-get-threat
+
+## File Reputation
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+This playbook checks the file reputation and sets the verdict as a new context key. The verdict is composed by 3 main components: Note: a user can provide a list of trusted signers of his own using the playbook inputs
+
+**Inputs:**
+
+- `DetectionThreshold`: The minimum number of positive engines needed to mark file as malicious.
+- `TrustedPublishers`: A list of trusted publishers
+- `FileSHA256`: The file SHA256.
+
+**Dependencies:**
+
+- Scripts: Set, http, ParseJSON
+- Commands: wildfire-report, wildfire-get-verdict, file
+
+## Proactive Threat Hunting - Entity Enrichment
+
+**Product:** Proactive Threat Hunting
+
+**Kind:** playbook
+
+This playbook will be executed from the "Proactive Threat Hunting" layout button with the objective of enriching information on hosts and users specified by the analyst
+
+**Dependencies:**
+
+- Sub-playbooks: Account Enrichment - Generic v2.1
+- Scripts: Print, Set, DeleteContext, JsonToTable
+- Commands: endpoint, xdr-get-alerts, setIncident
+
+## DBot Indicator Enrichment - Generic
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Gets indicator's internal Dbot score
+
+**Inputs:**
+
+- `Email`: The email address to enrich with Dbot ccore.
+- `URL`: The URL to enrich with Dbot score.
+- `IP`: The IP address to enrich with Dbot score.
+- `MD5`: The MD5 hash of the file to enrich with Dbot score.
+- `SHA1`: The SHA1 hash of the file to enrich with Dbot score.
+- `SHA256`: The SHA256 hash of the file to enrich with Dbot score.
+
+## Enrichment for Verdict
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+This playbook checks prior alert closing reasons and performs enrichment and prevalence checks on different IOC types. It then returns the information needed to establish the alert's verdict
+
+**Inputs:**
+
+- `threshold`: The number of previous alerts that were closed as false positive alerts. This threshold establishes whether the Previous Verdict key will be marked as false positive.
+- `query`: A query for the previous alerts search.Use free form query (Lucene syntax) as a filter. All other filters are ignored when this filter is used.
+- `CloseReason`: The closing reason of the previous alerts to search for.Possible values are:- Resolved - Threat Handled- Resolved - True Positive- Resolved - False Positive- Resolved - Security Te
+- `FileSHA256`: File SHA256 to enrich and give verdict.
+- `IP`: IP address to enrich and give verdict.
+- `InternalRange`: A list of internal IP ranges to check IP addresses against. The comma-separated list should be provided in CIDR notation. For example, a list of ranges is: "172.16.0.0/12,10.0.0.0/
+- `ResolveIP`: Determines whether to convert the IP address to a hostname using a DNS query (True/ False).
+- `URL`: URL to enrich and give verdict.
+- `User`: User to enrich and give verdict. (AWS IAM or Active Directory).
+- `Domain`: Domain to enrich and give verdict.
+
+**Dependencies:**
+
+- Sub-playbooks: URL Enrichment - Generic v2, File Reputation, IP Enrichment - Generic v2, Account Enrichment - Generic v2.1, Get prevalence for IOCs, Domain Enrichment - Generic v2
+- Scripts: Set, SearchIncidentsV2
+
+## Entity Enrichment - Generic v2
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Enrich entities using one or more integrations
+
+**Inputs:**
+
+- `IP`: The IP addresses to enrich
+- `InternalRange`: A list of internal IP ranges to check IP addresses against. The comma-separated list should be provided in CIDR notation. For example, a list of ranges would be: "172.16.0.0/12,10.
+- `MD5`: File MD5 to enrich
+- `SHA256`: File SHA256 to enrich
+- `SHA1`: File SHA1 to enrich
+- `URL`: URL to enrich
+- `Email`: The email addresses to enrich
+- `Hostname`: The hostname to enrich
+- `Username`: The Username to enrich
+- `Domain`: The domain name to enrich
+
+**Dependencies:**
+
+- Sub-playbooks: File Enrichment - Generic v2, URL Enrichment - Generic v2, Endpoint Enrichment - Generic v2.1, Domain Enrichment - Generic v2, Account Enrichment - Generic v2.1, Email Address Enrichment - Generic v2.1, IP Enrichment - Generic v2
+
+## Entity Enrichment - Generic v4
+
+**Product:** Use Case Builder
+
+**Kind:** playbook
+
+Enrich entities using one or more integrations
+
+**Inputs:**
+
+- `IP`: The IP addresses to enrich
+- `InternalRange`: A list of internal IP ranges to check IP addresses against. The list should be provided in CIDR notation, separated by commas. An example of a list of ranges would be: "172.16.0.0/
+- `MD5`: File MD5 to enrich
+- `SHA256`: File SHA256 to enrich
+- `SHA1`: File SHA1 to enrich
+- `URL`: URL to enrich
+- `Email`: The email addresses to enrich
+- `Hostname`: The hostname to enrich
+- `Username`: The username to enrich
+- `Domain`: The domain name to enrich
+
+**Dependencies:**
+
+- Sub-playbooks: Email Address Enrichment - Generic v2.1, IP Enrichment - Generic v2, Endpoint Enrichment - Generic v2.1, CVE Enrichment - Generic v2, Account Enrichment - Generic v2.1, File Enrichment - Generic v2, Domain Enrichment - Generic v2, URL Enrichment - Generic v2
+
+## File Enrichment - File reputation
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Gets a file's reputation using one or more integrations
+
+**Inputs:**
+
+- `MD5`: The MD5 hash to enrich.
+- `SHA256`: The SHA256 hash to enrich.
+- `SHA1`: The SHA1 hash to enrich.
+
+**Dependencies:**
+
+- Scripts: FileReputation
+
+## File Enrichment - Generic v2
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Enrich a file using one or more integrations
+
+**Inputs:**
+
+- `MD5`: File MD5 hash to enrich.
+- `SHA256`: The file SHA256 hash to enrich.
+- `SHA1`: The file SHA1 hash to enrich.
+- `UseReputationCommand`: Define if you would like to use the !file command.Note: This input should be used whenever there is no auto-extract enabled in the investigation flow.Possible values: True / False.
+
+**Dependencies:**
+
+- Sub-playbooks: File Enrichment - Virus Total (API v3)
+- Commands: file, cylance-protect-get-threat
+
+## File Reputation
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+This playbook checks the file reputation and sets the verdict as a new context key. The verdict is composed by 3 main components: Note: a user can provide a list of trusted signers of his own using the playbook inputs
+
+**Inputs:**
+
+- `DetectionThreshold`: The minimum number of positive engines needed to mark file as malicious.
+- `TrustedPublishers`: A list of trusted publishers
+- `FileSHA256`: The file SHA256.
+
+**Dependencies:**
+
+- Scripts: Set, http, ParseJSON
+- Commands: wildfire-report, wildfire-get-verdict, file
+
+## Proactive Threat Hunting - Entity Enrichment
+
+**Product:** Proactive Threat Hunting
+
+**Kind:** playbook
+
+This playbook will be executed from the "Proactive Threat Hunting" layout button with the objective of enriching information on hosts and users specified by the analyst
+
+**Dependencies:**
+
+- Sub-playbooks: Account Enrichment - Generic v2.1
+- Scripts: Print, Set, DeleteContext, JsonToTable
+- Commands: endpoint, xdr-get-alerts, setIncident
+
+## DBot Indicator Enrichment - Generic
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Gets indicator's internal Dbot score
+
+**Inputs:**
+
+- `Email`: The email address to enrich with Dbot ccore.
+- `URL`: The URL to enrich with Dbot score.
+- `IP`: The IP address to enrich with Dbot score.
+- `MD5`: The MD5 hash of the file to enrich with Dbot score.
+- `SHA1`: The SHA1 hash of the file to enrich with Dbot score.
+- `SHA256`: The SHA256 hash of the file to enrich with Dbot score.
+
+## Enrichment for Verdict
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+This playbook checks prior alert closing reasons and performs enrichment and prevalence checks on different IOC types. It then returns the information needed to establish the alert's verdict
+
+**Inputs:**
+
+- `threshold`: The number of previous alerts that were closed as false positive alerts. This threshold establishes whether the Previous Verdict key will be marked as false positive.
+- `query`: A query for the previous alerts search.Use free form query (Lucene syntax) as a filter. All other filters are ignored when this filter is used.
+- `CloseReason`: The closing reason of the previous alerts to search for.Possible values are:- Resolved - Threat Handled- Resolved - True Positive- Resolved - False Positive- Resolved - Security Te
+- `FileSHA256`: File SHA256 to enrich and give verdict.
+- `IP`: IP address to enrich and give verdict.
+- `InternalRange`: A list of internal IP ranges to check IP addresses against. The comma-separated list should be provided in CIDR notation. For example, a list of ranges is: "172.16.0.0/12,10.0.0.0/
+- `ResolveIP`: Determines whether to convert the IP address to a hostname using a DNS query (True/ False).
+- `URL`: URL to enrich and give verdict.
+- `User`: User to enrich and give verdict. (AWS IAM or Active Directory).
+- `Domain`: Domain to enrich and give verdict.
+
+**Dependencies:**
+
+- Sub-playbooks: URL Enrichment - Generic v2, File Reputation, IP Enrichment - Generic v2, Account Enrichment - Generic v2.1, Get prevalence for IOCs, Domain Enrichment - Generic v2
+- Scripts: Set, SearchIncidentsV2
+
+## Entity Enrichment - Generic v2
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Enrich entities using one or more integrations
+
+**Inputs:**
+
+- `IP`: The IP addresses to enrich
+- `InternalRange`: A list of internal IP ranges to check IP addresses against. The comma-separated list should be provided in CIDR notation. For example, a list of ranges would be: "172.16.0.0/12,10.
+- `MD5`: File MD5 to enrich
+- `SHA256`: File SHA256 to enrich
+- `SHA1`: File SHA1 to enrich
+- `URL`: URL to enrich
+- `Email`: The email addresses to enrich
+- `Hostname`: The hostname to enrich
+- `Username`: The Username to enrich
+- `Domain`: The domain name to enrich
+
+**Dependencies:**
+
+- Sub-playbooks: File Enrichment - Generic v2, URL Enrichment - Generic v2, Endpoint Enrichment - Generic v2.1, Domain Enrichment - Generic v2, Account Enrichment - Generic v2.1, Email Address Enrichment - Generic v2.1, IP Enrichment - Generic v2
+
+## Entity Enrichment - Generic v4
+
+**Product:** Use Case Builder
+
+**Kind:** playbook
+
+Enrich entities using one or more integrations
+
+**Inputs:**
+
+- `IP`: The IP addresses to enrich
+- `InternalRange`: A list of internal IP ranges to check IP addresses against. The list should be provided in CIDR notation, separated by commas. An example of a list of ranges would be: "172.16.0.0/
+- `MD5`: File MD5 to enrich
+- `SHA256`: File SHA256 to enrich
+- `SHA1`: File SHA1 to enrich
+- `URL`: URL to enrich
+- `Email`: The email addresses to enrich
+- `Hostname`: The hostname to enrich
+- `Username`: The username to enrich
+- `Domain`: The domain name to enrich
+
+**Dependencies:**
+
+- Sub-playbooks: Email Address Enrichment - Generic v2.1, IP Enrichment - Generic v2, Endpoint Enrichment - Generic v2.1, CVE Enrichment - Generic v2, Account Enrichment - Generic v2.1, File Enrichment - Generic v2, Domain Enrichment - Generic v2, URL Enrichment - Generic v2
+
+## File Enrichment - File reputation
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Gets a file's reputation using one or more integrations
+
+**Inputs:**
+
+- `MD5`: The MD5 hash to enrich.
+- `SHA256`: The SHA256 hash to enrich.
+- `SHA1`: The SHA1 hash to enrich.
+
+**Dependencies:**
+
+- Scripts: FileReputation
+
+## File Enrichment - Generic v2
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Enrich a file using one or more integrations
+
+**Inputs:**
+
+- `MD5`: File MD5 hash to enrich.
+- `SHA256`: The file SHA256 hash to enrich.
+- `SHA1`: The file SHA1 hash to enrich.
+- `UseReputationCommand`: Define if you would like to use the !file command.Note: This input should be used whenever there is no auto-extract enabled in the investigation flow.Possible values: True / False.
+
+**Dependencies:**
+
+- Sub-playbooks: File Enrichment - Virus Total (API v3)
+- Commands: file, cylance-protect-get-threat
+
+## File Reputation
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+This playbook checks the file reputation and sets the verdict as a new context key. The verdict is composed by 3 main components: Note: a user can provide a list of trusted signers of his own using the playbook inputs
+
+**Inputs:**
+
+- `DetectionThreshold`: The minimum number of positive engines needed to mark file as malicious.
+- `TrustedPublishers`: A list of trusted publishers
+- `FileSHA256`: The file SHA256.
+
+**Dependencies:**
+
+- Scripts: Set, http, ParseJSON
+- Commands: wildfire-report, wildfire-get-verdict, file
+
+## Proactive Threat Hunting - Entity Enrichment
+
+**Product:** Proactive Threat Hunting
+
+**Kind:** playbook
+
+This playbook will be executed from the "Proactive Threat Hunting" layout button with the objective of enriching information on hosts and users specified by the analyst
+
+**Dependencies:**
+
+- Sub-playbooks: Account Enrichment - Generic v2.1
+- Scripts: Print, Set, DeleteContext, JsonToTable
+- Commands: endpoint, xdr-get-alerts, setIncident
+

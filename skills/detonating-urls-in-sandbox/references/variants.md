@@ -79,3 +79,57 @@ This playbook scans URLs using GTI private scanning and evaluates the results ag
 - Scripts: Set
 - Commands: gti-private-url-scan-and-analysis-get, gti-privatescanning-url
 
+## Detonate URL - Generic
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Detonate URL through active integrations that support URL detonation
+
+**Inputs:**
+
+- `URL`: The URL object of the URL to be detonated.
+
+**Dependencies:**
+
+- Sub-playbooks: Detonate URL - JoeSecurity, Detonate URL - Hybrid Analysis, Detonate URL - Lastline v2, Detonate URL - ThreatGrid, Detonate URL - WildFire v2.1, Detonate URL - McAfee ATD, Detonate URL - ANYRUN, Detonate URL - Group-IB TDS Polygon
+- Integrations: CrowdStrike Falcon Sandbox V2, OPSWAT Filescan
+- Commands: cs-falcon-sandbox-submit-url, opswat-filescan-scan-url
+
+## Detonate URL - Generic
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Detonate URL through active integrations that support URL detonation
+
+**Inputs:**
+
+- `URL`: The URL object of the URL to be detonated.
+
+**Dependencies:**
+
+- Sub-playbooks: Detonate URL - JoeSecurity, Detonate URL - Hybrid Analysis, Detonate URL - Lastline v2, Detonate URL - ThreatGrid, Detonate URL - WildFire v2.1, Detonate URL - McAfee ATD, Detonate URL - ANYRUN, Detonate URL - Group-IB TDS Polygon
+- Integrations: CrowdStrike Falcon Sandbox V2, OPSWAT Filescan
+- Commands: cs-falcon-sandbox-submit-url, opswat-filescan-scan-url
+
+## Detonate URL - Generic
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Detonate URL through active integrations that support URL detonation
+
+**Inputs:**
+
+- `URL`: The URL object of the URL to be detonated.
+
+**Dependencies:**
+
+- Sub-playbooks: Detonate URL - JoeSecurity, Detonate URL - Hybrid Analysis, Detonate URL - Lastline v2, Detonate URL - ThreatGrid, Detonate URL - WildFire v2.1, Detonate URL - McAfee ATD, Detonate URL - ANYRUN, Detonate URL - Group-IB TDS Polygon
+- Integrations: CrowdStrike Falcon Sandbox V2, OPSWAT Filescan
+- Commands: cs-falcon-sandbox-submit-url, opswat-filescan-scan-url
+

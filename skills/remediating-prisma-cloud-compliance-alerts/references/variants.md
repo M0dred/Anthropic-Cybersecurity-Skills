@@ -555,3 +555,39 @@ Starts a Security & Compliance Analyzer scan session for the Veeam Backup & Repl
 - Scripts: DeleteContext
 - Commands: veeam-vbr-get-security-analyzer-best-practices, veeam-vbr-get-security-analyzer-last-run, veeam-vbr-start-security-analyzer
 
+## Prisma Cloud Compute - Compliance Alert
+
+**Product:** Prisma Cloud Compute by Palo Alto Networks
+
+**Kind:** playbook
+
+Parses Prisma Cloud Compute compliance alerts. This is a default playbook
+
+**Dependencies:**
+
+- Scripts: PrismaCloudComputeParseComplianceAlert
+
+## Prisma Cloud Compute - Compliance Alert
+
+**Product:** Prisma Cloud Compute by Palo Alto Networks
+
+**Kind:** playbook
+
+Parses Prisma Cloud Compute compliance alerts. This is a default playbook
+
+**Dependencies:**
+
+- Scripts: PrismaCloudComputeParseComplianceAlert
+
+## Prisma Cloud Compute - Compliance Alert
+
+**Product:** Prisma Cloud Compute by Palo Alto Networks
+
+**Kind:** playbook
+
+Parses Prisma Cloud Compute compliance alerts. This is a default playbook
+
+**Dependencies:**
+
+- Scripts: PrismaCloudComputeParseComplianceAlert
+

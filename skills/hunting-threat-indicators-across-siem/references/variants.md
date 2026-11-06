@@ -2691,3 +2691,2589 @@ In this playbook, the 'trendmicro-cas-email-sweep' command is used to automatica
 - Scripts: IsIntegrationAvailable, SetAndHandleEmpty
 - Commands: trendmicro-cas-email-sweep
 
+## Abnormal Security Event Collector
+
+**Product:** Abnormal Security
+
+**Kind:** integration
+
+Abnormal Security Event Collector integration for XSIAM. This integration was integrated and tested with version 01 of Abnormal Security Event Collector
+
+**Commands:**
+
+- `None`:
+
+## Alibaba Action Trail Event Collector
+
+**Product:** Alibaba Action Trail
+
+**Kind:** integration
+
+Alibaba log event collector integration for XSIAM. This integration was integrated and tested with API version 0.6 of Alicloud Log Service
+
+**Commands:**
+
+- `None`:
+
+## Armis Event Collector
+
+**Product:** Armis
+
+**Kind:** integration
+
+Collects alerts, devices and activities from Armis resources. This integration was integrated and tested with API V.1.8 of Armis API
+
+**Commands:**
+
+- `None`:
+
+## AWS - GuardDuty Event Collector
+
+**Product:** AWS - GuardDuty
+
+**Kind:** integration
+
+Amazon Web Services Guard Duty Service Event Collector integration for Cortex XSIAM
+
+**Commands:**
+
+- `None`:
+
+## AWS Security Hub Event Collector
+
+**Product:** AWS - Security Hub
+
+**Kind:** integration
+
+An XSIAM event collector for AWS Security Hub
+
+**Commands:**
+
+- `None`:
+
+## BitSight Event Collector
+
+**Product:** Bitsight
+
+**Kind:** integration
+
+Use this integration to fetch BitSight security findings as events in Cortex XSIAM. This is important for organizations that wish to integrate BitSight programmatically into their security operations. When configured as a fetching integration, it will continuously fetch new findings starting from the current day. The manual bitsight-get-events command fetches findings from the last 2 days (48 hours) by default, or from an explicit date range when start_date and/or end_date are provided
+
+**Commands:**
+
+- `None`:
+
+## Box Event Collector
+
+**Product:** Box
+
+**Kind:** integration
+
+Collect events from Box's logs
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Carbon Black Endpoint Standard Event Collector
+
+**Product:** Carbon Black Endpoint Standard
+
+**Kind:** integration
+
+Endpoint Standard (formerly called Carbon Black Defense), a Next-Generation Anti-Virus + EDR. Collect Anti-Virus & EDR alerts and Audit Log Events
+
+**Commands:**
+
+- `None`:
+
+## Cisco AMP Event Collector
+
+**Product:** Cisco AMP
+
+**Kind:** integration
+
+This is the Cisco AMP event collector integration for Cortex XSIAM. This integration was integrated and tested with version v1 of CiscoAMPEventCollector
+
+**Commands:**
+
+- `None`:
+
+## Cisco Webex Event Collector
+
+**Product:** Cisco Webex Teams
+
+**Kind:** integration
+
+Cisco Webex Event Collector fetches Events and Admin Audit Events and Security Audit Events. This integration was integrated and tested with version 1 of CiscoWebex API
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## Code42 Event Collector
+
+**Product:** Code42
+
+**Kind:** integration
+
+Code42 Insider Risk software solutions provide the right balance of transparency, technology and training to detect and appropriately respond to data risk. Use the Code42EventCollector integration to fetch file events and audit logs
+
+**Commands:**
+
+- `None`:
+
+## Cohesity Helios Event Collector
+
+**Product:** Cohesity Helios
+
+**Kind:** integration
+
+This is the Cohesity Helios Event Collector integration for XSIAM
+
+**Commands:**
+
+- `None`:
+
+## CyberArk EPM Event Collector
+
+**Product:** CyberArk Endpoint Privilege Manager
+
+**Kind:** integration
+
+Collects policy audits, admin audits, and detailed (raw) events from CyberArk Endpoint Privilege Manager (EPM). This integration was integrated and tested with version 23.12.0 of CyberArk EPM
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## CyberArk Identity Event Collector
+
+**Product:** CyberArk Identity
+
+**Kind:** integration
+
+CyberArk Identity log event collector integration for Cortex XSIAM. This integration was integrated and tested with version 22.4 of CyberArk Identity Event Collector
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Darktrace Event Collector
+
+**Product:** Darktrace
+
+**Kind:** integration
+
+Use this integration to fetch a list of model breaches, filtered by the specified parameters. This is important for organizations that wish to integrate Darktrace programmatically into their SOC environment. The integration was integrated and tested with version v5.2 API of Darktrace
+
+**Commands:**
+
+- `None`:
+
+## DeCYFIR Event Collector
+
+**Product:** DeCYFIR
+
+**Kind:** integration
+
+Collects event logs from DeCYFIR for ingestion into Cortex XSIAM. Once configured, the integration periodically fetches event logs from DeCYFIR’s APIs and sends them to Cortex XSIAM for ingestion and analysis
+
+**Commands:**
+
+- `None`:
+
+## Digital Guardian ARC Event Collector
+
+**Product:** Digital Guardian
+
+**Kind:** integration
+
+This is the Digital Guardian ARC event collector integration for Cortex XSIAM. This integration was integrated and tested with version 3.10.0 of DigitalGuardianARCEventCollector
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Dropbox Event Collector
+
+**Product:** Dropbox
+
+**Kind:** integration
+
+Collect events from Dropbox's logs. This integration was integrated and tested with version 2 of Dropbox API
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## Druva Event Collector
+
+**Product:** Druva
+
+**Kind:** integration
+
+This is the Druva event collector integration for Cortex XSIAM
+
+**Commands:**
+
+- `None`:
+
+## Duo Event Collector
+
+**Product:** DUO Admin
+
+**Kind:** integration
+
+Collects Auth and Audit events for Duo using the API
+
+**Commands:**
+
+- `None`:
+
+## Elasticsearch Event Collector
+
+**Product:** Elasticsearch
+
+**Kind:** integration
+
+Elasticsearch Event Collector integration is used to search for and analyze data in real time. Supports version 6 and later
+
+**Commands:**
+
+- `None`:
+
+## ExtraHop Reveal(x) Event Collector
+
+**Product:** ExtraHop Reveal(x)
+
+**Kind:** integration
+
+ExtraHop Reveal(x) is a network detection and response solution that provides complete visibility of network communications at enterprise scale, real-time threat detections backed by machine learning, and guided investigation workflows that simplify response
+
+**Commands:**
+
+- `None`:
+
+## Trellix Email Security - Cloud Event Collector
+
+**Product:** Trellix Email Security - Cloud
+
+**Kind:** integration
+
+Use this integration to fetch email security incidents from Trellix Email Security - Cloud as XSIAM events
+
+**Commands:**
+
+- `None`:
+
+## FireEye HX Event Collector
+
+**Product:** FireEye HX
+
+**Kind:** integration
+
+Palo Alto Networks FireEye HX Event Collector integration for XSIAM
+
+**Commands:**
+
+- `None`:
+
+## Forcepoint DLP Event Collector (Beta)
+
+**Product:** Forcepoint DLP
+
+**Kind:** integration
+
+Use this integration to fetch security incidents from Forcepoint DLP as Cortex XSIAM events
+
+**Commands:**
+
+- `None`:
+
+## Generic API Event Collector (Beta)
+
+**Product:** GenericAPIEventCollector
+
+**Kind:** integration
+
+The Generic API Event Collector allows you to ingest data from any API endpoint into Cortex. By configuring this collector, you can gather data from various systems and bring it into the Cortex ecosystem for better analysis and correlation. Note: This pack is currently in Beta, and as such, it may be subject to future changes and may not work on all types of APIs and Authentication
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Genetec Security Center Event Collector
+
+**Product:** Genetec Security Center
+
+**Kind:** integration
+
+Security Center is the foundation of our unified security portfolio. It lets you connect your security at your own pace, starting with a single core system. Even if you're only interested in upgrading your video surveillance or access control, taking the next step is easy
+
+**Commands:**
+
+- `None`:
+
+## GitGuardian Event Collector
+
+**Product:** GitGuardian
+
+**Kind:** integration
+
+This is the GitGuardian event collector integration for Cortex XSIAM. This integration was integrated and tested with version 1.0.0 of GitGuardianEventCollector
+
+**Commands:**
+
+- `None`:
+
+## GitLab Event Collector
+
+**Product:** GitLab
+
+**Kind:** integration
+
+An event collector for GitLab audit events using Gitlab's API. Audit events API documentation
+
+## GitHub Event Collector
+
+**Product:** GitHub
+
+**Kind:** integration
+
+**Commands:**
+
+- `None`:
+
+## HelloWorld Event Collector
+
+**Product:** HelloWorld
+
+**Kind:** integration
+
+This is the Hello World event collector integration for XSIAM
+
+**Commands:**
+
+- `None`:
+
+## HPE Aruba Central Event Collector
+
+**Product:** HPE Aruba Central
+
+**Kind:** integration
+
+This is the Aruba Central event collector integration for Cortex XSIAM
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## Infoblox BloxOne Threat Defense Event Collector
+
+**Product:** Infoblox Threat Defense with DDI
+
+**Kind:** integration
+
+BloxOne Threat Defense is a hybrid cybersecurity solution that leverages DNS as the first line of defense to detect and block cyber threats
+
+**Commands:**
+
+- `None`:
+
+## Ironscales Event Collector
+
+**Product:** Ironscales Event Collector
+
+**Kind:** integration
+
+Use this integration to fetch email security incidents from Ironscales as XSIAM events
+
+**Commands:**
+
+- `None`:
+
+## Jamf Protect Event Collector
+
+**Product:** JamfProtect
+
+**Kind:** integration
+
+Use this integration to fetch audit logs events, alerts events and computers assets from Jamf Protect to Cortex XSIAM
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Jira Event Collector
+
+**Product:** Atlassian Jira
+
+**Kind:** integration
+
+This integration was integrated and tested with version 3 of Jira Event Collector rest API
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## KnowBe4 KSAT Event Collector
+
+**Product:** KSAT
+
+**Kind:** integration
+
+Allows you to push and pull your external data to and from the KnowBe4 KSAT (Security Awareness Training) console. For subscription levels and pricing, see the KnowBe4 Security Awareness Training pricing page
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Microsoft Defender for Cloud Apps Event Collector
+
+**Product:** Microsoft Defender for Cloud Apps
+
+**Kind:** integration
+
+Microsoft Defender for Cloud Apps Event Collector integration
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Microsoft Defender for Cloud Event Collector
+
+**Product:** Microsoft Defender for Cloud
+
+**Kind:** integration
+
+XSIAM collector for Microsoft Defender for Cloud alerts
+
+## Mimecast Event Collector v2
+
+**Product:** Mimecast
+
+**Kind:** integration
+
+**Commands:**
+
+- `None`:
+
+## NetBox Event Collector
+
+**Product:** NetBox
+
+**Kind:** integration
+
+This is the NetBox event collector integration for Cortex XSIAM. This integration was integrated and tested with version 3.0 and above of NetBox API
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`:
+
+## Netskope Event Collector v2
+
+**Product:** Netskope
+
+**Kind:** integration
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Okta Auth0 Event Collector
+
+**Product:** Okta Auth0
+
+**Kind:** integration
+
+Okta Auth0 logs event collector integration for Cortex XSIAM. This integration was integrated and tested with version 2.0 of Okta Auth0. Please see the Okta Auth0 rate limit policy
+
+**Commands:**
+
+- `None`:
+
+## Okta Event Collector
+
+**Product:** Okta
+
+**Kind:** integration
+
+Collects the events log for authentication and Audit provided by Okta admin API
+
+**Commands:**
+
+- `None`:
+
+## OneLogin Event Collector
+
+**Product:** OneLogin
+
+**Kind:** integration
+
+Simple customer authentication and streamlined workforce identity operations
+
+**Commands:**
+
+- `None`:
+
+## Oracle Cloud Infrastructure Event Collector
+
+**Product:** Oracle Cloud Infrastructure (OCI)
+
+**Kind:** integration
+
+This integration fetches audit log events from an Oracle Cloud Infrastructure resources. Audit log events can be used for security audits, to track usage of and changes to Oracle Cloud Infrastructure resources, and to help ensure compliance with standards or regulations
+
+## Orca Event Collector
+
+**Product:** Orca
+
+**Kind:** integration
+
+Orca Security event collector integration for Cortex XSIAM. This integration was integrated and tested with version 0.1.0 of Orca Event Collector
+
+**Commands:**
+
+- `None`:
+
+## Proofpoint Email Security Event Collector
+
+**Product:** Proofpoint Email Security
+
+**Kind:** integration
+
+Collects events for Proofpoint using the streaming API. This integration was integrated and tested Proofpoint Email Security
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Proofpoint Threat Response Event Collector
+
+**Product:** Proofpoint Threat Response
+
+**Kind:** integration
+
+Use the Proofpoint Threat Response integration to orchestrate and automate incident response
+
+**Commands:**
+
+- `None`:
+
+## Recorded Future Event Collector
+
+**Product:** Recorded Future Intelligence
+
+**Kind:** integration
+
+This integration fetches alerts from Recorded Future. This integration was integrated and tested with version 2 of the Recorded Future API
+
+**Commands:**
+
+- `None`:
+
+## ReliaQuest GreyMatter DRP Event Collector
+
+**Product:** ReliaQuest Digital Risk Protection
+
+**Kind:** integration
+
+ReliaQuest GreyMatter DRP Event Collector minimizes digital risk by identifying unwanted exposure and protecting against external threats. The award-winning SearchLight solution provides ongoing monitoring of a customer's unique assets and exposure across the open, deep, and dark web. This enables clients to detect data loss, brand impersonation, infrastructure risks, cyber threats, and much more. This integration fetches event items which can be either incident/alerts, for more information refer here
+
+**Commands:**
+
+- `None`:
+
+## RunZero Event Collector
+
+**Product:** RunZero
+
+**Kind:** integration
+
+This is the RunZero event collector integration for XSIAM. This integration was integrated and tested with version 3.3.0 of RunZero Event Collector
+
+**Commands:**
+
+- `None`:
+
+## SaaS Security Event Collector
+
+**Product:** SaaS Security by Palo Alto Networks
+
+**Kind:** integration
+
+SaaS Security is an integrated CASB (Cloud Access Security Broker) solution that helps Security teams like yours meet the challenges of
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Thales SafeNet Trusted Access Event Collector
+
+**Product:** Thales SafeNet Trusted Access
+
+**Kind:** integration
+
+Retrieve access, authentication, and audit logs and stores them in a Security Information and Event Management (SIEM) system, local repository, or syslog file server. You can retrieve the logs only for the tenant that is associated with the API key, or for a direct or delegated child of that tenant
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## SailPoint IdentityNow Event Collector
+
+**Product:** SailPoint IdentityNow
+
+**Kind:** integration
+
+This is the SailPoint IdentityNow event collector integration for Cortex XSIAM. This integration was integrated and tested with version 3 of SailPoint API
+
+**Commands:**
+
+- `None`:
+
+## SecurityScorecard Event Collector
+
+**Product:** SecurityScorecard
+
+**Kind:** integration
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## ServiceNow Event Collector
+
+**Product:** ServiceNow
+
+**Kind:** integration
+
+Use this integration to fetch audit, case, syslog transactions, and outbound HTTP logs from ServiceNow as Cortex XSIAM events. This integration was integrated and tested with Vancouver version of ServiceNow API
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## Slack Event Collector
+
+**Product:** Slack
+
+**Kind:** integration
+
+Slack logs event collector integration for XSIAM. This integration was integrated and tested with version v1 of Slack Audit Logs API
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Symantec Cloud Secure Web Gateway Event Collector
+
+**Product:** Symantec Cloud Secure Web Gateway
+
+**Kind:** integration
+
+Palo Alto Networks Symantec Cloud Secure Web Gateway Event Collector integration for XSIAM
+
+## Symantec CloudSOC Event Collector
+
+**Product:** SymantecCloudSOC
+
+**Kind:** integration
+
+Gets Events from Symantec CloudSOC. This integration was integrated and tested with version 3.157 of Symantec CloudSOC
+
+**Commands:**
+
+- `None`:
+
+## TeamViewer Event Collector
+
+**Product:** TeamViewer
+
+**Kind:** integration
+
+TeamViewer event collector integration for Cortex XSIAM. This integration was integrated and tested with version 15.40 of TeamViewer. User access token scope: Event logging - Allow requesting all event logs. A Tensor license is required
+
+**Commands:**
+
+- `None`:
+
+## Trend Micro Email Security Event Collector
+
+**Product:** Trend Micro Email Security
+
+**Kind:** integration
+
+Palo Alto Networks Trend Micro Email Security Event Collector integration for XSIAM
+
+**Commands:**
+
+- `None`:
+
+## TrendAI Vision One™ Event Collector
+
+**Product:** TrendAI Vision One™
+
+**Kind:** integration
+
+Important: This integration is supported by Palo Alto Networks. Palo Alto Networks TrendAI Vision One™ Event Collector integration for Cortex XSIAM collects the Workbench, Observed Attack Techniques, Search Detections and Audit logs. TrendAI Vision One™ is a purpose-built threat defense platform that provides added value and new benefits beyond XDR solutions, allowing you to see more and respond faster. Providing deep and broad extended detection and response (XDR) capabilities that collect and automatically correlate data across multiple security layers—email, endpoints, servers, cloud workloads, and networks—TrendAI Vision One™ prevents the majority of attacks with automated protection
+
+**Commands:**
+
+- `None`:
+
+## Vectra AI Event Collector
+
+**Product:** Vectra AI
+
+**Kind:** integration
+
+Collects Vectra Detections and Audits into XSIAM Events. This integration was integrated and tested with version 2.2 of Vectra
+
+**Commands:**
+
+- `None`:
+
+## VeloCloud Event Collector
+
+**Product:** VeloCloud
+
+**Kind:** integration
+
+Collects events from the VeloCloud API. This integration was integrated and tested with VeloCloud as of 2025-10-06
+
+**Commands:**
+
+- `None`:
+
+## WithSecure Event Collector
+
+**Product:** WithSecure
+
+**Kind:** integration
+
+WithSecure event collector integration for Cortex XSIAM. This integration was integrated and tested with version 1.0 of WithSecure API
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Workday Event Collector
+
+**Product:** Workday
+
+**Kind:** integration
+
+Use Workday Event Collector integration to get activity loggings from Workday. This integration was integrated and tested with API v1
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Workday Sign On Event Collector
+
+**Product:** Workday
+
+**Kind:** integration
+
+Use the Workday Sign On Event Collector integration to get sign on logs from Workday. This integration was integrated and tested with version v37.0 of Workday Sign On Event Collector
+
+**Commands:**
+
+- `None`:
+
+## Zoom Event Collector
+
+**Product:** Zoom
+
+**Kind:** integration
+
+This is the Zoom event collector integration for Cortex XSIAM. This integration was integrated and tested with version 2.0.0 of Zoom
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## Abnormal Security Event Collector
+
+**Product:** Abnormal Security
+
+**Kind:** integration
+
+Abnormal Security Event Collector integration for XSIAM. This integration was integrated and tested with version 01 of Abnormal Security Event Collector
+
+**Commands:**
+
+- `None`:
+
+## Alibaba Action Trail Event Collector
+
+**Product:** Alibaba Action Trail
+
+**Kind:** integration
+
+Alibaba log event collector integration for XSIAM. This integration was integrated and tested with API version 0.6 of Alicloud Log Service
+
+**Commands:**
+
+- `None`:
+
+## Armis Event Collector
+
+**Product:** Armis
+
+**Kind:** integration
+
+Collects alerts, devices and activities from Armis resources. This integration was integrated and tested with API V.1.8 of Armis API
+
+**Commands:**
+
+- `None`:
+
+## AWS - GuardDuty Event Collector
+
+**Product:** AWS - GuardDuty
+
+**Kind:** integration
+
+Amazon Web Services Guard Duty Service Event Collector integration for Cortex XSIAM
+
+**Commands:**
+
+- `None`:
+
+## AWS Security Hub Event Collector
+
+**Product:** AWS - Security Hub
+
+**Kind:** integration
+
+An XSIAM event collector for AWS Security Hub
+
+**Commands:**
+
+- `None`:
+
+## BitSight Event Collector
+
+**Product:** Bitsight
+
+**Kind:** integration
+
+Use this integration to fetch BitSight security findings as events in Cortex XSIAM. This is important for organizations that wish to integrate BitSight programmatically into their security operations. When configured as a fetching integration, it will continuously fetch new findings starting from the current day. The manual bitsight-get-events command fetches findings from the last 2 days (48 hours) by default, or from an explicit date range when start_date and/or end_date are provided
+
+**Commands:**
+
+- `None`:
+
+## Box Event Collector
+
+**Product:** Box
+
+**Kind:** integration
+
+Collect events from Box's logs
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Carbon Black Endpoint Standard Event Collector
+
+**Product:** Carbon Black Endpoint Standard
+
+**Kind:** integration
+
+Endpoint Standard (formerly called Carbon Black Defense), a Next-Generation Anti-Virus + EDR. Collect Anti-Virus & EDR alerts and Audit Log Events
+
+**Commands:**
+
+- `None`:
+
+## Cisco AMP Event Collector
+
+**Product:** Cisco AMP
+
+**Kind:** integration
+
+This is the Cisco AMP event collector integration for Cortex XSIAM. This integration was integrated and tested with version v1 of CiscoAMPEventCollector
+
+**Commands:**
+
+- `None`:
+
+## Cisco Webex Event Collector
+
+**Product:** Cisco Webex Teams
+
+**Kind:** integration
+
+Cisco Webex Event Collector fetches Events and Admin Audit Events and Security Audit Events. This integration was integrated and tested with version 1 of CiscoWebex API
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## Code42 Event Collector
+
+**Product:** Code42
+
+**Kind:** integration
+
+Code42 Insider Risk software solutions provide the right balance of transparency, technology and training to detect and appropriately respond to data risk. Use the Code42EventCollector integration to fetch file events and audit logs
+
+**Commands:**
+
+- `None`:
+
+## Cohesity Helios Event Collector
+
+**Product:** Cohesity Helios
+
+**Kind:** integration
+
+This is the Cohesity Helios Event Collector integration for XSIAM
+
+**Commands:**
+
+- `None`:
+
+## CyberArk EPM Event Collector
+
+**Product:** CyberArk Endpoint Privilege Manager
+
+**Kind:** integration
+
+Collects policy audits, admin audits, and detailed (raw) events from CyberArk Endpoint Privilege Manager (EPM). This integration was integrated and tested with version 23.12.0 of CyberArk EPM
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## CyberArk Identity Event Collector
+
+**Product:** CyberArk Identity
+
+**Kind:** integration
+
+CyberArk Identity log event collector integration for Cortex XSIAM. This integration was integrated and tested with version 22.4 of CyberArk Identity Event Collector
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Darktrace Event Collector
+
+**Product:** Darktrace
+
+**Kind:** integration
+
+Use this integration to fetch a list of model breaches, filtered by the specified parameters. This is important for organizations that wish to integrate Darktrace programmatically into their SOC environment. The integration was integrated and tested with version v5.2 API of Darktrace
+
+**Commands:**
+
+- `None`:
+
+## DeCYFIR Event Collector
+
+**Product:** DeCYFIR
+
+**Kind:** integration
+
+Collects event logs from DeCYFIR for ingestion into Cortex XSIAM. Once configured, the integration periodically fetches event logs from DeCYFIR’s APIs and sends them to Cortex XSIAM for ingestion and analysis
+
+**Commands:**
+
+- `None`:
+
+## Digital Guardian ARC Event Collector
+
+**Product:** Digital Guardian
+
+**Kind:** integration
+
+This is the Digital Guardian ARC event collector integration for Cortex XSIAM. This integration was integrated and tested with version 3.10.0 of DigitalGuardianARCEventCollector
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Dropbox Event Collector
+
+**Product:** Dropbox
+
+**Kind:** integration
+
+Collect events from Dropbox's logs. This integration was integrated and tested with version 2 of Dropbox API
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## Druva Event Collector
+
+**Product:** Druva
+
+**Kind:** integration
+
+This is the Druva event collector integration for Cortex XSIAM
+
+**Commands:**
+
+- `None`:
+
+## Duo Event Collector
+
+**Product:** DUO Admin
+
+**Kind:** integration
+
+Collects Auth and Audit events for Duo using the API
+
+**Commands:**
+
+- `None`:
+
+## Elasticsearch Event Collector
+
+**Product:** Elasticsearch
+
+**Kind:** integration
+
+Elasticsearch Event Collector integration is used to search for and analyze data in real time. Supports version 6 and later
+
+**Commands:**
+
+- `None`:
+
+## ExtraHop Reveal(x) Event Collector
+
+**Product:** ExtraHop Reveal(x)
+
+**Kind:** integration
+
+ExtraHop Reveal(x) is a network detection and response solution that provides complete visibility of network communications at enterprise scale, real-time threat detections backed by machine learning, and guided investigation workflows that simplify response
+
+**Commands:**
+
+- `None`:
+
+## Trellix Email Security - Cloud Event Collector
+
+**Product:** Trellix Email Security - Cloud
+
+**Kind:** integration
+
+Use this integration to fetch email security incidents from Trellix Email Security - Cloud as XSIAM events
+
+**Commands:**
+
+- `None`:
+
+## FireEye HX Event Collector
+
+**Product:** FireEye HX
+
+**Kind:** integration
+
+Palo Alto Networks FireEye HX Event Collector integration for XSIAM
+
+**Commands:**
+
+- `None`:
+
+## Forcepoint DLP Event Collector (Beta)
+
+**Product:** Forcepoint DLP
+
+**Kind:** integration
+
+Use this integration to fetch security incidents from Forcepoint DLP as Cortex XSIAM events
+
+**Commands:**
+
+- `None`:
+
+## Generic API Event Collector (Beta)
+
+**Product:** GenericAPIEventCollector
+
+**Kind:** integration
+
+The Generic API Event Collector allows you to ingest data from any API endpoint into Cortex. By configuring this collector, you can gather data from various systems and bring it into the Cortex ecosystem for better analysis and correlation. Note: This pack is currently in Beta, and as such, it may be subject to future changes and may not work on all types of APIs and Authentication
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Genetec Security Center Event Collector
+
+**Product:** Genetec Security Center
+
+**Kind:** integration
+
+Security Center is the foundation of our unified security portfolio. It lets you connect your security at your own pace, starting with a single core system. Even if you're only interested in upgrading your video surveillance or access control, taking the next step is easy
+
+**Commands:**
+
+- `None`:
+
+## GitGuardian Event Collector
+
+**Product:** GitGuardian
+
+**Kind:** integration
+
+This is the GitGuardian event collector integration for Cortex XSIAM. This integration was integrated and tested with version 1.0.0 of GitGuardianEventCollector
+
+**Commands:**
+
+- `None`:
+
+## GitLab Event Collector
+
+**Product:** GitLab
+
+**Kind:** integration
+
+An event collector for GitLab audit events using Gitlab's API. Audit events API documentation
+
+## GitHub Event Collector
+
+**Product:** GitHub
+
+**Kind:** integration
+
+**Commands:**
+
+- `None`:
+
+## HelloWorld Event Collector
+
+**Product:** HelloWorld
+
+**Kind:** integration
+
+This is the Hello World event collector integration for XSIAM
+
+**Commands:**
+
+- `None`:
+
+## HPE Aruba Central Event Collector
+
+**Product:** HPE Aruba Central
+
+**Kind:** integration
+
+This is the Aruba Central event collector integration for Cortex XSIAM
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## Infoblox BloxOne Threat Defense Event Collector
+
+**Product:** Infoblox Threat Defense with DDI
+
+**Kind:** integration
+
+BloxOne Threat Defense is a hybrid cybersecurity solution that leverages DNS as the first line of defense to detect and block cyber threats
+
+**Commands:**
+
+- `None`:
+
+## Ironscales Event Collector
+
+**Product:** Ironscales Event Collector
+
+**Kind:** integration
+
+Use this integration to fetch email security incidents from Ironscales as XSIAM events
+
+**Commands:**
+
+- `None`:
+
+## Jamf Protect Event Collector
+
+**Product:** JamfProtect
+
+**Kind:** integration
+
+Use this integration to fetch audit logs events, alerts events and computers assets from Jamf Protect to Cortex XSIAM
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Jira Event Collector
+
+**Product:** Atlassian Jira
+
+**Kind:** integration
+
+This integration was integrated and tested with version 3 of Jira Event Collector rest API
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## KnowBe4 KSAT Event Collector
+
+**Product:** KSAT
+
+**Kind:** integration
+
+Allows you to push and pull your external data to and from the KnowBe4 KSAT (Security Awareness Training) console. For subscription levels and pricing, see the KnowBe4 Security Awareness Training pricing page
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Microsoft Defender for Cloud Apps Event Collector
+
+**Product:** Microsoft Defender for Cloud Apps
+
+**Kind:** integration
+
+Microsoft Defender for Cloud Apps Event Collector integration
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Microsoft Defender for Cloud Event Collector
+
+**Product:** Microsoft Defender for Cloud
+
+**Kind:** integration
+
+XSIAM collector for Microsoft Defender for Cloud alerts
+
+## Mimecast Event Collector v2
+
+**Product:** Mimecast
+
+**Kind:** integration
+
+**Commands:**
+
+- `None`:
+
+## NetBox Event Collector
+
+**Product:** NetBox
+
+**Kind:** integration
+
+This is the NetBox event collector integration for Cortex XSIAM. This integration was integrated and tested with version 3.0 and above of NetBox API
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`:
+
+## Netskope Event Collector v2
+
+**Product:** Netskope
+
+**Kind:** integration
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Okta Auth0 Event Collector
+
+**Product:** Okta Auth0
+
+**Kind:** integration
+
+Okta Auth0 logs event collector integration for Cortex XSIAM. This integration was integrated and tested with version 2.0 of Okta Auth0. Please see the Okta Auth0 rate limit policy
+
+**Commands:**
+
+- `None`:
+
+## Okta Event Collector
+
+**Product:** Okta
+
+**Kind:** integration
+
+Collects the events log for authentication and Audit provided by Okta admin API
+
+**Commands:**
+
+- `None`:
+
+## OneLogin Event Collector
+
+**Product:** OneLogin
+
+**Kind:** integration
+
+Simple customer authentication and streamlined workforce identity operations
+
+**Commands:**
+
+- `None`:
+
+## Oracle Cloud Infrastructure Event Collector
+
+**Product:** Oracle Cloud Infrastructure (OCI)
+
+**Kind:** integration
+
+This integration fetches audit log events from an Oracle Cloud Infrastructure resources. Audit log events can be used for security audits, to track usage of and changes to Oracle Cloud Infrastructure resources, and to help ensure compliance with standards or regulations
+
+## Orca Event Collector
+
+**Product:** Orca
+
+**Kind:** integration
+
+Orca Security event collector integration for Cortex XSIAM. This integration was integrated and tested with version 0.1.0 of Orca Event Collector
+
+**Commands:**
+
+- `None`:
+
+## Proofpoint Email Security Event Collector
+
+**Product:** Proofpoint Email Security
+
+**Kind:** integration
+
+Collects events for Proofpoint using the streaming API. This integration was integrated and tested Proofpoint Email Security
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Proofpoint Threat Response Event Collector
+
+**Product:** Proofpoint Threat Response
+
+**Kind:** integration
+
+Use the Proofpoint Threat Response integration to orchestrate and automate incident response
+
+**Commands:**
+
+- `None`:
+
+## Recorded Future Event Collector
+
+**Product:** Recorded Future Intelligence
+
+**Kind:** integration
+
+This integration fetches alerts from Recorded Future. This integration was integrated and tested with version 2 of the Recorded Future API
+
+**Commands:**
+
+- `None`:
+
+## ReliaQuest GreyMatter DRP Event Collector
+
+**Product:** ReliaQuest Digital Risk Protection
+
+**Kind:** integration
+
+ReliaQuest GreyMatter DRP Event Collector minimizes digital risk by identifying unwanted exposure and protecting against external threats. The award-winning SearchLight solution provides ongoing monitoring of a customer's unique assets and exposure across the open, deep, and dark web. This enables clients to detect data loss, brand impersonation, infrastructure risks, cyber threats, and much more. This integration fetches event items which can be either incident/alerts, for more information refer here
+
+**Commands:**
+
+- `None`:
+
+## RunZero Event Collector
+
+**Product:** RunZero
+
+**Kind:** integration
+
+This is the RunZero event collector integration for XSIAM. This integration was integrated and tested with version 3.3.0 of RunZero Event Collector
+
+**Commands:**
+
+- `None`:
+
+## SaaS Security Event Collector
+
+**Product:** SaaS Security by Palo Alto Networks
+
+**Kind:** integration
+
+SaaS Security is an integrated CASB (Cloud Access Security Broker) solution that helps Security teams like yours meet the challenges of
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Thales SafeNet Trusted Access Event Collector
+
+**Product:** Thales SafeNet Trusted Access
+
+**Kind:** integration
+
+Retrieve access, authentication, and audit logs and stores them in a Security Information and Event Management (SIEM) system, local repository, or syslog file server. You can retrieve the logs only for the tenant that is associated with the API key, or for a direct or delegated child of that tenant
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## SailPoint IdentityNow Event Collector
+
+**Product:** SailPoint IdentityNow
+
+**Kind:** integration
+
+This is the SailPoint IdentityNow event collector integration for Cortex XSIAM. This integration was integrated and tested with version 3 of SailPoint API
+
+**Commands:**
+
+- `None`:
+
+## SecurityScorecard Event Collector
+
+**Product:** SecurityScorecard
+
+**Kind:** integration
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## ServiceNow Event Collector
+
+**Product:** ServiceNow
+
+**Kind:** integration
+
+Use this integration to fetch audit, case, syslog transactions, and outbound HTTP logs from ServiceNow as Cortex XSIAM events. This integration was integrated and tested with Vancouver version of ServiceNow API
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## Slack Event Collector
+
+**Product:** Slack
+
+**Kind:** integration
+
+Slack logs event collector integration for XSIAM. This integration was integrated and tested with version v1 of Slack Audit Logs API
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Symantec Cloud Secure Web Gateway Event Collector
+
+**Product:** Symantec Cloud Secure Web Gateway
+
+**Kind:** integration
+
+Palo Alto Networks Symantec Cloud Secure Web Gateway Event Collector integration for XSIAM
+
+## Symantec CloudSOC Event Collector
+
+**Product:** SymantecCloudSOC
+
+**Kind:** integration
+
+Gets Events from Symantec CloudSOC. This integration was integrated and tested with version 3.157 of Symantec CloudSOC
+
+**Commands:**
+
+- `None`:
+
+## TeamViewer Event Collector
+
+**Product:** TeamViewer
+
+**Kind:** integration
+
+TeamViewer event collector integration for Cortex XSIAM. This integration was integrated and tested with version 15.40 of TeamViewer. User access token scope: Event logging - Allow requesting all event logs. A Tensor license is required
+
+**Commands:**
+
+- `None`:
+
+## Trend Micro Email Security Event Collector
+
+**Product:** Trend Micro Email Security
+
+**Kind:** integration
+
+Palo Alto Networks Trend Micro Email Security Event Collector integration for XSIAM
+
+**Commands:**
+
+- `None`:
+
+## TrendAI Vision One™ Event Collector
+
+**Product:** TrendAI Vision One™
+
+**Kind:** integration
+
+Important: This integration is supported by Palo Alto Networks. Palo Alto Networks TrendAI Vision One™ Event Collector integration for Cortex XSIAM collects the Workbench, Observed Attack Techniques, Search Detections and Audit logs. TrendAI Vision One™ is a purpose-built threat defense platform that provides added value and new benefits beyond XDR solutions, allowing you to see more and respond faster. Providing deep and broad extended detection and response (XDR) capabilities that collect and automatically correlate data across multiple security layers—email, endpoints, servers, cloud workloads, and networks—TrendAI Vision One™ prevents the majority of attacks with automated protection
+
+**Commands:**
+
+- `None`:
+
+## Vectra AI Event Collector
+
+**Product:** Vectra AI
+
+**Kind:** integration
+
+Collects Vectra Detections and Audits into XSIAM Events. This integration was integrated and tested with version 2.2 of Vectra
+
+**Commands:**
+
+- `None`:
+
+## VeloCloud Event Collector
+
+**Product:** VeloCloud
+
+**Kind:** integration
+
+Collects events from the VeloCloud API. This integration was integrated and tested with VeloCloud as of 2025-10-06
+
+**Commands:**
+
+- `None`:
+
+## WithSecure Event Collector
+
+**Product:** WithSecure
+
+**Kind:** integration
+
+WithSecure event collector integration for Cortex XSIAM. This integration was integrated and tested with version 1.0 of WithSecure API
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Workday Event Collector
+
+**Product:** Workday
+
+**Kind:** integration
+
+Use Workday Event Collector integration to get activity loggings from Workday. This integration was integrated and tested with API v1
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Workday Sign On Event Collector
+
+**Product:** Workday
+
+**Kind:** integration
+
+Use the Workday Sign On Event Collector integration to get sign on logs from Workday. This integration was integrated and tested with version v37.0 of Workday Sign On Event Collector
+
+**Commands:**
+
+- `None`:
+
+## Zoom Event Collector
+
+**Product:** Zoom
+
+**Kind:** integration
+
+This is the Zoom event collector integration for Cortex XSIAM. This integration was integrated and tested with version 2.0.0 of Zoom
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## Abnormal Security Event Collector
+
+**Product:** Abnormal Security
+
+**Kind:** integration
+
+Abnormal Security Event Collector integration for XSIAM. This integration was integrated and tested with version 01 of Abnormal Security Event Collector
+
+**Commands:**
+
+- `None`:
+
+## Alibaba Action Trail Event Collector
+
+**Product:** Alibaba Action Trail
+
+**Kind:** integration
+
+Alibaba log event collector integration for XSIAM. This integration was integrated and tested with API version 0.6 of Alicloud Log Service
+
+**Commands:**
+
+- `None`:
+
+## Armis Event Collector
+
+**Product:** Armis
+
+**Kind:** integration
+
+Collects alerts, devices and activities from Armis resources. This integration was integrated and tested with API V.1.8 of Armis API
+
+**Commands:**
+
+- `None`:
+
+## AWS - GuardDuty Event Collector
+
+**Product:** AWS - GuardDuty
+
+**Kind:** integration
+
+Amazon Web Services Guard Duty Service Event Collector integration for Cortex XSIAM
+
+**Commands:**
+
+- `None`:
+
+## AWS Security Hub Event Collector
+
+**Product:** AWS - Security Hub
+
+**Kind:** integration
+
+An XSIAM event collector for AWS Security Hub
+
+**Commands:**
+
+- `None`:
+
+## BitSight Event Collector
+
+**Product:** Bitsight
+
+**Kind:** integration
+
+Use this integration to fetch BitSight security findings as events in Cortex XSIAM. This is important for organizations that wish to integrate BitSight programmatically into their security operations. When configured as a fetching integration, it will continuously fetch new findings starting from the current day. The manual bitsight-get-events command fetches findings from the last 2 days (48 hours) by default, or from an explicit date range when start_date and/or end_date are provided
+
+**Commands:**
+
+- `None`:
+
+## Box Event Collector
+
+**Product:** Box
+
+**Kind:** integration
+
+Collect events from Box's logs
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Carbon Black Endpoint Standard Event Collector
+
+**Product:** Carbon Black Endpoint Standard
+
+**Kind:** integration
+
+Endpoint Standard (formerly called Carbon Black Defense), a Next-Generation Anti-Virus + EDR. Collect Anti-Virus & EDR alerts and Audit Log Events
+
+**Commands:**
+
+- `None`:
+
+## Cisco AMP Event Collector
+
+**Product:** Cisco AMP
+
+**Kind:** integration
+
+This is the Cisco AMP event collector integration for Cortex XSIAM. This integration was integrated and tested with version v1 of CiscoAMPEventCollector
+
+**Commands:**
+
+- `None`:
+
+## Cisco Webex Event Collector
+
+**Product:** Cisco Webex Teams
+
+**Kind:** integration
+
+Cisco Webex Event Collector fetches Events and Admin Audit Events and Security Audit Events. This integration was integrated and tested with version 1 of CiscoWebex API
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## Code42 Event Collector
+
+**Product:** Code42
+
+**Kind:** integration
+
+Code42 Insider Risk software solutions provide the right balance of transparency, technology and training to detect and appropriately respond to data risk. Use the Code42EventCollector integration to fetch file events and audit logs
+
+**Commands:**
+
+- `None`:
+
+## Cohesity Helios Event Collector
+
+**Product:** Cohesity Helios
+
+**Kind:** integration
+
+This is the Cohesity Helios Event Collector integration for XSIAM
+
+**Commands:**
+
+- `None`:
+
+## CyberArk EPM Event Collector
+
+**Product:** CyberArk Endpoint Privilege Manager
+
+**Kind:** integration
+
+Collects policy audits, admin audits, and detailed (raw) events from CyberArk Endpoint Privilege Manager (EPM). This integration was integrated and tested with version 23.12.0 of CyberArk EPM
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## CyberArk Identity Event Collector
+
+**Product:** CyberArk Identity
+
+**Kind:** integration
+
+CyberArk Identity log event collector integration for Cortex XSIAM. This integration was integrated and tested with version 22.4 of CyberArk Identity Event Collector
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Darktrace Event Collector
+
+**Product:** Darktrace
+
+**Kind:** integration
+
+Use this integration to fetch a list of model breaches, filtered by the specified parameters. This is important for organizations that wish to integrate Darktrace programmatically into their SOC environment. The integration was integrated and tested with version v5.2 API of Darktrace
+
+**Commands:**
+
+- `None`:
+
+## DeCYFIR Event Collector
+
+**Product:** DeCYFIR
+
+**Kind:** integration
+
+Collects event logs from DeCYFIR for ingestion into Cortex XSIAM. Once configured, the integration periodically fetches event logs from DeCYFIR’s APIs and sends them to Cortex XSIAM for ingestion and analysis
+
+**Commands:**
+
+- `None`:
+
+## Digital Guardian ARC Event Collector
+
+**Product:** Digital Guardian
+
+**Kind:** integration
+
+This is the Digital Guardian ARC event collector integration for Cortex XSIAM. This integration was integrated and tested with version 3.10.0 of DigitalGuardianARCEventCollector
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Dropbox Event Collector
+
+**Product:** Dropbox
+
+**Kind:** integration
+
+Collect events from Dropbox's logs. This integration was integrated and tested with version 2 of Dropbox API
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## Druva Event Collector
+
+**Product:** Druva
+
+**Kind:** integration
+
+This is the Druva event collector integration for Cortex XSIAM
+
+**Commands:**
+
+- `None`:
+
+## Duo Event Collector
+
+**Product:** DUO Admin
+
+**Kind:** integration
+
+Collects Auth and Audit events for Duo using the API
+
+**Commands:**
+
+- `None`:
+
+## Elasticsearch Event Collector
+
+**Product:** Elasticsearch
+
+**Kind:** integration
+
+Elasticsearch Event Collector integration is used to search for and analyze data in real time. Supports version 6 and later
+
+**Commands:**
+
+- `None`:
+
+## ExtraHop Reveal(x) Event Collector
+
+**Product:** ExtraHop Reveal(x)
+
+**Kind:** integration
+
+ExtraHop Reveal(x) is a network detection and response solution that provides complete visibility of network communications at enterprise scale, real-time threat detections backed by machine learning, and guided investigation workflows that simplify response
+
+**Commands:**
+
+- `None`:
+
+## Trellix Email Security - Cloud Event Collector
+
+**Product:** Trellix Email Security - Cloud
+
+**Kind:** integration
+
+Use this integration to fetch email security incidents from Trellix Email Security - Cloud as XSIAM events
+
+**Commands:**
+
+- `None`:
+
+## FireEye HX Event Collector
+
+**Product:** FireEye HX
+
+**Kind:** integration
+
+Palo Alto Networks FireEye HX Event Collector integration for XSIAM
+
+**Commands:**
+
+- `None`:
+
+## Forcepoint DLP Event Collector (Beta)
+
+**Product:** Forcepoint DLP
+
+**Kind:** integration
+
+Use this integration to fetch security incidents from Forcepoint DLP as Cortex XSIAM events
+
+**Commands:**
+
+- `None`:
+
+## Generic API Event Collector (Beta)
+
+**Product:** GenericAPIEventCollector
+
+**Kind:** integration
+
+The Generic API Event Collector allows you to ingest data from any API endpoint into Cortex. By configuring this collector, you can gather data from various systems and bring it into the Cortex ecosystem for better analysis and correlation. Note: This pack is currently in Beta, and as such, it may be subject to future changes and may not work on all types of APIs and Authentication
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Genetec Security Center Event Collector
+
+**Product:** Genetec Security Center
+
+**Kind:** integration
+
+Security Center is the foundation of our unified security portfolio. It lets you connect your security at your own pace, starting with a single core system. Even if you're only interested in upgrading your video surveillance or access control, taking the next step is easy
+
+**Commands:**
+
+- `None`:
+
+## GitGuardian Event Collector
+
+**Product:** GitGuardian
+
+**Kind:** integration
+
+This is the GitGuardian event collector integration for Cortex XSIAM. This integration was integrated and tested with version 1.0.0 of GitGuardianEventCollector
+
+**Commands:**
+
+- `None`:
+
+## GitLab Event Collector
+
+**Product:** GitLab
+
+**Kind:** integration
+
+An event collector for GitLab audit events using Gitlab's API. Audit events API documentation
+
+## GitHub Event Collector
+
+**Product:** GitHub
+
+**Kind:** integration
+
+**Commands:**
+
+- `None`:
+
+## HelloWorld Event Collector
+
+**Product:** HelloWorld
+
+**Kind:** integration
+
+This is the Hello World event collector integration for XSIAM
+
+**Commands:**
+
+- `None`:
+
+## HPE Aruba Central Event Collector
+
+**Product:** HPE Aruba Central
+
+**Kind:** integration
+
+This is the Aruba Central event collector integration for Cortex XSIAM
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## Infoblox BloxOne Threat Defense Event Collector
+
+**Product:** Infoblox Threat Defense with DDI
+
+**Kind:** integration
+
+BloxOne Threat Defense is a hybrid cybersecurity solution that leverages DNS as the first line of defense to detect and block cyber threats
+
+**Commands:**
+
+- `None`:
+
+## Ironscales Event Collector
+
+**Product:** Ironscales Event Collector
+
+**Kind:** integration
+
+Use this integration to fetch email security incidents from Ironscales as XSIAM events
+
+**Commands:**
+
+- `None`:
+
+## Jamf Protect Event Collector
+
+**Product:** JamfProtect
+
+**Kind:** integration
+
+Use this integration to fetch audit logs events, alerts events and computers assets from Jamf Protect to Cortex XSIAM
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Jira Event Collector
+
+**Product:** Atlassian Jira
+
+**Kind:** integration
+
+This integration was integrated and tested with version 3 of Jira Event Collector rest API
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## KnowBe4 KSAT Event Collector
+
+**Product:** KSAT
+
+**Kind:** integration
+
+Allows you to push and pull your external data to and from the KnowBe4 KSAT (Security Awareness Training) console. For subscription levels and pricing, see the KnowBe4 Security Awareness Training pricing page
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Microsoft Defender for Cloud Apps Event Collector
+
+**Product:** Microsoft Defender for Cloud Apps
+
+**Kind:** integration
+
+Microsoft Defender for Cloud Apps Event Collector integration
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Microsoft Defender for Cloud Event Collector
+
+**Product:** Microsoft Defender for Cloud
+
+**Kind:** integration
+
+XSIAM collector for Microsoft Defender for Cloud alerts
+
+## Mimecast Event Collector v2
+
+**Product:** Mimecast
+
+**Kind:** integration
+
+**Commands:**
+
+- `None`:
+
+## NetBox Event Collector
+
+**Product:** NetBox
+
+**Kind:** integration
+
+This is the NetBox event collector integration for Cortex XSIAM. This integration was integrated and tested with version 3.0 and above of NetBox API
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`:
+
+## Netskope Event Collector v2
+
+**Product:** Netskope
+
+**Kind:** integration
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Okta Auth0 Event Collector
+
+**Product:** Okta Auth0
+
+**Kind:** integration
+
+Okta Auth0 logs event collector integration for Cortex XSIAM. This integration was integrated and tested with version 2.0 of Okta Auth0. Please see the Okta Auth0 rate limit policy
+
+**Commands:**
+
+- `None`:
+
+## Okta Event Collector
+
+**Product:** Okta
+
+**Kind:** integration
+
+Collects the events log for authentication and Audit provided by Okta admin API
+
+**Commands:**
+
+- `None`:
+
+## OneLogin Event Collector
+
+**Product:** OneLogin
+
+**Kind:** integration
+
+Simple customer authentication and streamlined workforce identity operations
+
+**Commands:**
+
+- `None`:
+
+## Oracle Cloud Infrastructure Event Collector
+
+**Product:** Oracle Cloud Infrastructure (OCI)
+
+**Kind:** integration
+
+This integration fetches audit log events from an Oracle Cloud Infrastructure resources. Audit log events can be used for security audits, to track usage of and changes to Oracle Cloud Infrastructure resources, and to help ensure compliance with standards or regulations
+
+## Orca Event Collector
+
+**Product:** Orca
+
+**Kind:** integration
+
+Orca Security event collector integration for Cortex XSIAM. This integration was integrated and tested with version 0.1.0 of Orca Event Collector
+
+**Commands:**
+
+- `None`:
+
+## Proofpoint Email Security Event Collector
+
+**Product:** Proofpoint Email Security
+
+**Kind:** integration
+
+Collects events for Proofpoint using the streaming API. This integration was integrated and tested Proofpoint Email Security
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Proofpoint Threat Response Event Collector
+
+**Product:** Proofpoint Threat Response
+
+**Kind:** integration
+
+Use the Proofpoint Threat Response integration to orchestrate and automate incident response
+
+**Commands:**
+
+- `None`:
+
+## Recorded Future Event Collector
+
+**Product:** Recorded Future Intelligence
+
+**Kind:** integration
+
+This integration fetches alerts from Recorded Future. This integration was integrated and tested with version 2 of the Recorded Future API
+
+**Commands:**
+
+- `None`:
+
+## ReliaQuest GreyMatter DRP Event Collector
+
+**Product:** ReliaQuest Digital Risk Protection
+
+**Kind:** integration
+
+ReliaQuest GreyMatter DRP Event Collector minimizes digital risk by identifying unwanted exposure and protecting against external threats. The award-winning SearchLight solution provides ongoing monitoring of a customer's unique assets and exposure across the open, deep, and dark web. This enables clients to detect data loss, brand impersonation, infrastructure risks, cyber threats, and much more. This integration fetches event items which can be either incident/alerts, for more information refer here
+
+**Commands:**
+
+- `None`:
+
+## RunZero Event Collector
+
+**Product:** RunZero
+
+**Kind:** integration
+
+This is the RunZero event collector integration for XSIAM. This integration was integrated and tested with version 3.3.0 of RunZero Event Collector
+
+**Commands:**
+
+- `None`:
+
+## SaaS Security Event Collector
+
+**Product:** SaaS Security by Palo Alto Networks
+
+**Kind:** integration
+
+SaaS Security is an integrated CASB (Cloud Access Security Broker) solution that helps Security teams like yours meet the challenges of
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Thales SafeNet Trusted Access Event Collector
+
+**Product:** Thales SafeNet Trusted Access
+
+**Kind:** integration
+
+Retrieve access, authentication, and audit logs and stores them in a Security Information and Event Management (SIEM) system, local repository, or syslog file server. You can retrieve the logs only for the tenant that is associated with the API key, or for a direct or delegated child of that tenant
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## SailPoint IdentityNow Event Collector
+
+**Product:** SailPoint IdentityNow
+
+**Kind:** integration
+
+This is the SailPoint IdentityNow event collector integration for Cortex XSIAM. This integration was integrated and tested with version 3 of SailPoint API
+
+**Commands:**
+
+- `None`:
+
+## SecurityScorecard Event Collector
+
+**Product:** SecurityScorecard
+
+**Kind:** integration
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## ServiceNow Event Collector
+
+**Product:** ServiceNow
+
+**Kind:** integration
+
+Use this integration to fetch audit, case, syslog transactions, and outbound HTTP logs from ServiceNow as Cortex XSIAM events. This integration was integrated and tested with Vancouver version of ServiceNow API
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## Slack Event Collector
+
+**Product:** Slack
+
+**Kind:** integration
+
+Slack logs event collector integration for XSIAM. This integration was integrated and tested with version v1 of Slack Audit Logs API
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Symantec Cloud Secure Web Gateway Event Collector
+
+**Product:** Symantec Cloud Secure Web Gateway
+
+**Kind:** integration
+
+Palo Alto Networks Symantec Cloud Secure Web Gateway Event Collector integration for XSIAM
+
+## Symantec CloudSOC Event Collector
+
+**Product:** SymantecCloudSOC
+
+**Kind:** integration
+
+Gets Events from Symantec CloudSOC. This integration was integrated and tested with version 3.157 of Symantec CloudSOC
+
+**Commands:**
+
+- `None`:
+
+## TeamViewer Event Collector
+
+**Product:** TeamViewer
+
+**Kind:** integration
+
+TeamViewer event collector integration for Cortex XSIAM. This integration was integrated and tested with version 15.40 of TeamViewer. User access token scope: Event logging - Allow requesting all event logs. A Tensor license is required
+
+**Commands:**
+
+- `None`:
+
+## Trend Micro Email Security Event Collector
+
+**Product:** Trend Micro Email Security
+
+**Kind:** integration
+
+Palo Alto Networks Trend Micro Email Security Event Collector integration for XSIAM
+
+**Commands:**
+
+- `None`:
+
+## TrendAI Vision One™ Event Collector
+
+**Product:** TrendAI Vision One™
+
+**Kind:** integration
+
+Important: This integration is supported by Palo Alto Networks. Palo Alto Networks TrendAI Vision One™ Event Collector integration for Cortex XSIAM collects the Workbench, Observed Attack Techniques, Search Detections and Audit logs. TrendAI Vision One™ is a purpose-built threat defense platform that provides added value and new benefits beyond XDR solutions, allowing you to see more and respond faster. Providing deep and broad extended detection and response (XDR) capabilities that collect and automatically correlate data across multiple security layers—email, endpoints, servers, cloud workloads, and networks—TrendAI Vision One™ prevents the majority of attacks with automated protection
+
+**Commands:**
+
+- `None`:
+
+## Vectra AI Event Collector
+
+**Product:** Vectra AI
+
+**Kind:** integration
+
+Collects Vectra Detections and Audits into XSIAM Events. This integration was integrated and tested with version 2.2 of Vectra
+
+**Commands:**
+
+- `None`:
+
+## VeloCloud Event Collector
+
+**Product:** VeloCloud
+
+**Kind:** integration
+
+Collects events from the VeloCloud API. This integration was integrated and tested with VeloCloud as of 2025-10-06
+
+**Commands:**
+
+- `None`:
+
+## WithSecure Event Collector
+
+**Product:** WithSecure
+
+**Kind:** integration
+
+WithSecure event collector integration for Cortex XSIAM. This integration was integrated and tested with version 1.0 of WithSecure API
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Workday Event Collector
+
+**Product:** Workday
+
+**Kind:** integration
+
+Use Workday Event Collector integration to get activity loggings from Workday. This integration was integrated and tested with API v1
+
+**Commands:**
+
+- `None`: 
+- `None`:
+
+## Workday Sign On Event Collector
+
+**Product:** Workday
+
+**Kind:** integration
+
+Use the Workday Sign On Event Collector integration to get sign on logs from Workday. This integration was integrated and tested with version v37.0 of Workday Sign On Event Collector
+
+**Commands:**
+
+- `None`:
+
+## Zoom Event Collector
+
+**Product:** Zoom
+
+**Kind:** integration
+
+This is the Zoom event collector integration for Cortex XSIAM. This integration was integrated and tested with version 2.0.0 of Zoom
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+

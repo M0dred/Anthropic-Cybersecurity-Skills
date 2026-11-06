@@ -567,3 +567,228 @@ This playbook performs IOC Scan on fileset object. It also creates tickets on Se
 - Scripts: Set, Print, http
 - Commands: servicenow-add-comment, servicenow-update-ticket, servicenow-create-ticket
 
+## Darkmon - Ransomware Victim Response
+
+**Product:** Darkmon
+
+**Kind:** playbook
+
+Triggered when our company surfaces in a Darkmon ransomware mention. Verifies the match, opens a war-room channel via Generic Notify, pages the CISO, and prints next-step guidance for the customer's IR runbook
+
+**Dependencies:**
+
+- Sub-playbooks: Open war-room channel, Page CISO
+- Scripts: DarkmonFilterUnseen, PrintErrorEntry
+
+## Druva-Ransomware-Response
+
+**Product:** Druva
+
+**Kind:** playbook
+
+Use Druva-Ransomware-Response to stop the spread of ransomware and avoid reinfection or contamination spread
+
+**Inputs:**
+
+- `UserName`: UserName is used to search userID of user
+- `ResourceName`: ResourceName is used to search resource of type FS,NAS and VMware
+- `SiteURL`: SiteURL is used to search sharedrive and sharepoint resources
+- `DateOfOccurrence`: Date is used to quarantine device
+
+**Dependencies:**
+
+- Integrations: Druva Ransomware Response
+- Scripts: IsIntegrationAvailable
+- Commands: druva-find-sharePointSites, druva-find-userDevice, druva-quarantine-resource, druva-find-sharedDrives, druva-find-user, druva-find-device
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## Ransomware Response
+
+**Product:** Core
+
+**Kind:** playbook
+
+This playbook handles ransomware alerts based on the Cortex XDR Traps module signature 'Suspicious File Modification' Attacker’s Goals: An attacker is attempting to encrypt the victim files for either extortion or destruction purposes. Investigative Actions: Investigate the executed process image and verify if it is malicious using: XDR trusted signers VT trusted signers VT detection rate NSRL DB Response Actions: The playbook’s first response action is a remediation plan which includes two sub-playbooks, Containment Plan and Eradication Plan, which is based on the initial data provided within the alert. In that phase, the playbooks will execute: Auto endpoint isolation Auto block indicators Auto file quarantine Auto user disable Auto process termination Next, the playbook executes an enrichment and response phase which includes two sub-playbooks, Ransomware Enrich and Contain & Account Enrichment - Generic v2.1. The Ransomware Enrich and Contain playbook does the following: 1.Checks if the initiator is a remote attacker and allows isolating the remote host, if possible. 2.Retrieves the WildFire sandbox report and extracts the indicators within it. * The playbook tries to retrieve the report, but if there is no report available, the playbook tries to fetch the ransomware file for detonation. 3.Hunts for the ransomware alert indicators from the alert table, searches for endpoints that have been seen with them, and allows containing the identified endpoints. Next, an advanced a
+
+**Inputs:**
+
+- `earlyRemediation`: Whether to execute the early remediation phase.
+- `AutoContainment`: Whether to execute the containment actions automatically.
+- `AutoEradication`: Whether to execute the eradication actions automatically.
+- `isolateRemoteAttacker`: Whether to isolate the remote endpoint if the attack has been triggered remotely.
+- `isolateSimilarEndpoints`: Whether to isolate the endpoints identified with similar IoCs to the ransomware alert.
+- `RunAdvancedAnalysis`: Whether to execute the Ransomware Advanced Analysis playbook. Note that advanced analysis contains manual tasks which will stop the playbook's flow until the analysts's response.
+- `ShouldCloseAutomatically`: Whether to close the alert automatically.
+- `FileSHA256`: The file SHA256 to investigate.
+- `FilePath`: The file path to investigate.
+- `IP`: The IP address to investigate.
+
+**Dependencies:**
+
+- Sub-playbooks: Enrichment for Verdict, Account Enrichment - Generic v2.1, Handle False Positive Alerts, Containment Plan, Ransomware Enrich and Contain, Eradication Plan, Recovery Plan, Ransomware Advanced Analysis
+- Commands: setParentIncidentFields, closeInvestigation
+
+## Darkmon - Ransomware Victim Response
+
+**Product:** Darkmon
+
+**Kind:** playbook
+
+Triggered when our company surfaces in a Darkmon ransomware mention. Verifies the match, opens a war-room channel via Generic Notify, pages the CISO, and prints next-step guidance for the customer's IR runbook
+
+**Dependencies:**
+
+- Sub-playbooks: Open war-room channel, Page CISO
+- Scripts: DarkmonFilterUnseen, PrintErrorEntry
+
+## Druva-Ransomware-Response
+
+**Product:** Druva
+
+**Kind:** playbook
+
+Use Druva-Ransomware-Response to stop the spread of ransomware and avoid reinfection or contamination spread
+
+**Inputs:**
+
+- `UserName`: UserName is used to search userID of user
+- `ResourceName`: ResourceName is used to search resource of type FS,NAS and VMware
+- `SiteURL`: SiteURL is used to search sharedrive and sharepoint resources
+- `DateOfOccurrence`: Date is used to quarantine device
+
+**Dependencies:**
+
+- Integrations: Druva Ransomware Response
+- Scripts: IsIntegrationAvailable
+- Commands: druva-find-sharePointSites, druva-find-userDevice, druva-quarantine-resource, druva-find-sharedDrives, druva-find-user, druva-find-device
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## Ransomware Response
+
+**Product:** Core
+
+**Kind:** playbook
+
+This playbook handles ransomware alerts based on the Cortex XDR Traps module signature 'Suspicious File Modification' Attacker’s Goals: An attacker is attempting to encrypt the victim files for either extortion or destruction purposes. Investigative Actions: Investigate the executed process image and verify if it is malicious using: XDR trusted signers VT trusted signers VT detection rate NSRL DB Response Actions: The playbook’s first response action is a remediation plan which includes two sub-playbooks, Containment Plan and Eradication Plan, which is based on the initial data provided within the alert. In that phase, the playbooks will execute: Auto endpoint isolation Auto block indicators Auto file quarantine Auto user disable Auto process termination Next, the playbook executes an enrichment and response phase which includes two sub-playbooks, Ransomware Enrich and Contain & Account Enrichment - Generic v2.1. The Ransomware Enrich and Contain playbook does the following: 1.Checks if the initiator is a remote attacker and allows isolating the remote host, if possible. 2.Retrieves the WildFire sandbox report and extracts the indicators within it. * The playbook tries to retrieve the report, but if there is no report available, the playbook tries to fetch the ransomware file for detonation. 3.Hunts for the ransomware alert indicators from the alert table, searches for endpoints that have been seen with them, and allows containing the identified endpoints. Next, an advanced a
+
+**Inputs:**
+
+- `earlyRemediation`: Whether to execute the early remediation phase.
+- `AutoContainment`: Whether to execute the containment actions automatically.
+- `AutoEradication`: Whether to execute the eradication actions automatically.
+- `isolateRemoteAttacker`: Whether to isolate the remote endpoint if the attack has been triggered remotely.
+- `isolateSimilarEndpoints`: Whether to isolate the endpoints identified with similar IoCs to the ransomware alert.
+- `RunAdvancedAnalysis`: Whether to execute the Ransomware Advanced Analysis playbook. Note that advanced analysis contains manual tasks which will stop the playbook's flow until the analysts's response.
+- `ShouldCloseAutomatically`: Whether to close the alert automatically.
+- `FileSHA256`: The file SHA256 to investigate.
+- `FilePath`: The file path to investigate.
+- `IP`: The IP address to investigate.
+
+**Dependencies:**
+
+- Sub-playbooks: Enrichment for Verdict, Account Enrichment - Generic v2.1, Handle False Positive Alerts, Containment Plan, Ransomware Enrich and Contain, Eradication Plan, Recovery Plan, Ransomware Advanced Analysis
+- Commands: setParentIncidentFields, closeInvestigation
+
+## Darkmon - Ransomware Victim Response
+
+**Product:** Darkmon
+
+**Kind:** playbook
+
+Triggered when our company surfaces in a Darkmon ransomware mention. Verifies the match, opens a war-room channel via Generic Notify, pages the CISO, and prints next-step guidance for the customer's IR runbook
+
+**Dependencies:**
+
+- Sub-playbooks: Open war-room channel, Page CISO
+- Scripts: DarkmonFilterUnseen, PrintErrorEntry
+
+## Druva-Ransomware-Response
+
+**Product:** Druva
+
+**Kind:** playbook
+
+Use Druva-Ransomware-Response to stop the spread of ransomware and avoid reinfection or contamination spread
+
+**Inputs:**
+
+- `UserName`: UserName is used to search userID of user
+- `ResourceName`: ResourceName is used to search resource of type FS,NAS and VMware
+- `SiteURL`: SiteURL is used to search sharedrive and sharepoint resources
+- `DateOfOccurrence`: Date is used to quarantine device
+
+**Dependencies:**
+
+- Integrations: Druva Ransomware Response
+- Scripts: IsIntegrationAvailable
+- Commands: druva-find-sharePointSites, druva-find-userDevice, druva-quarantine-resource, druva-find-sharedDrives, druva-find-user, druva-find-device
+
+**Commands:**
+
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`: 
+- `None`:
+
+## Ransomware Response
+
+**Product:** Core
+
+**Kind:** playbook
+
+This playbook handles ransomware alerts based on the Cortex XDR Traps module signature 'Suspicious File Modification' Attacker’s Goals: An attacker is attempting to encrypt the victim files for either extortion or destruction purposes. Investigative Actions: Investigate the executed process image and verify if it is malicious using: XDR trusted signers VT trusted signers VT detection rate NSRL DB Response Actions: The playbook’s first response action is a remediation plan which includes two sub-playbooks, Containment Plan and Eradication Plan, which is based on the initial data provided within the alert. In that phase, the playbooks will execute: Auto endpoint isolation Auto block indicators Auto file quarantine Auto user disable Auto process termination Next, the playbook executes an enrichment and response phase which includes two sub-playbooks, Ransomware Enrich and Contain & Account Enrichment - Generic v2.1. The Ransomware Enrich and Contain playbook does the following: 1.Checks if the initiator is a remote attacker and allows isolating the remote host, if possible. 2.Retrieves the WildFire sandbox report and extracts the indicators within it. * The playbook tries to retrieve the report, but if there is no report available, the playbook tries to fetch the ransomware file for detonation. 3.Hunts for the ransomware alert indicators from the alert table, searches for endpoints that have been seen with them, and allows containing the identified endpoints. Next, an advanced a
+
+**Inputs:**
+
+- `earlyRemediation`: Whether to execute the early remediation phase.
+- `AutoContainment`: Whether to execute the containment actions automatically.
+- `AutoEradication`: Whether to execute the eradication actions automatically.
+- `isolateRemoteAttacker`: Whether to isolate the remote endpoint if the attack has been triggered remotely.
+- `isolateSimilarEndpoints`: Whether to isolate the endpoints identified with similar IoCs to the ransomware alert.
+- `RunAdvancedAnalysis`: Whether to execute the Ransomware Advanced Analysis playbook. Note that advanced analysis contains manual tasks which will stop the playbook's flow until the analysts's response.
+- `ShouldCloseAutomatically`: Whether to close the alert automatically.
+- `FileSHA256`: The file SHA256 to investigate.
+- `FilePath`: The file path to investigate.
+- `IP`: The IP address to investigate.
+
+**Dependencies:**
+
+- Sub-playbooks: Enrichment for Verdict, Account Enrichment - Generic v2.1, Handle False Positive Alerts, Containment Plan, Ransomware Enrich and Contain, Eradication Plan, Recovery Plan, Ransomware Advanced Analysis
+- Commands: setParentIncidentFields, closeInvestigation
+

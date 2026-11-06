@@ -3771,3 +3771,174 @@ Take a remediation action over an asset: Use this playbook as a sub-playbook to 
 - Integrations: SaaS Security
 - Commands: saas-security-remediation-status-get, saas-security-asset-remediate
 
+## Prisma Cloud Remediation - Azure Network Misconfiguration
+
+**Product:** Prisma Cloud by Palo Alto Networks
+
+**Kind:** playbook
+
+This playbook remediates Prisma Cloud Azure Network alerts. It calls sub-playbooks that perform the actual remediation steps. Remediation
+
+**Inputs:**
+
+- `AutoRemediateAzureNetwork`: Execute Azure Network remediation automatically?
+- `policyId`: Grab the Prisma Cloud policy Id.
+- `portNumber`: Port number.
+
+**Dependencies:**
+
+- Sub-playbooks: Prisma Cloud Remediation - Azure Network Security Group Misconfiguration
+- Integrations: PrismaCloud v2
+- Scripts: IsIntegrationAvailable
+- Commands: redlock-dismiss-alerts, closeInvestigation
+
+## Prisma Cloud Remediation - Azure SQL Misconfiguration
+
+**Product:** Prisma Cloud by Palo Alto Networks
+
+**Kind:** playbook
+
+This playbook remediates Prisma Cloud Azure SQL alerts. It calls sub-playbooks that perform the actual remediation steps. Remediation
+
+**Inputs:**
+
+- `AutoRemediateAzureSQL`: Execute Azure SQL remediation automatically?
+- `policyId`: Grab the Prisma Cloud policy ID.
+
+**Dependencies:**
+
+- Commands: redlock-dismiss-alerts, closeInvestigation
+
+## Prisma Cloud Remediation - GCP Kubernetes Engine Misconfiguration
+
+**Product:** Prisma Cloud by Palo Alto Networks
+
+**Kind:** playbook
+
+This playbook remediates Prisma Cloud GCP Kubernetes Engine alerts. It calls sub-playbooks that perform the actual remediation steps. Remediation
+
+**Inputs:**
+
+- `AutoRemediateKubernetesEngine`: Execute GCP Kubernetes Engine remediation automatically?
+- `policyId`: Grab the Prima Cloud policy Id.
+
+**Dependencies:**
+
+- Sub-playbooks: Prisma Cloud Remediation - GCP Kubernetes Engine Cluster Misconfiguration
+- Integrations: PrismaCloud v2
+- Commands: closeInvestigation, redlock-dismiss-alerts
+
+## Prisma Cloud Remediation - Azure Network Misconfiguration
+
+**Product:** Prisma Cloud by Palo Alto Networks
+
+**Kind:** playbook
+
+This playbook remediates Prisma Cloud Azure Network alerts. It calls sub-playbooks that perform the actual remediation steps. Remediation
+
+**Inputs:**
+
+- `AutoRemediateAzureNetwork`: Execute Azure Network remediation automatically?
+- `policyId`: Grab the Prisma Cloud policy Id.
+- `portNumber`: Port number.
+
+**Dependencies:**
+
+- Sub-playbooks: Prisma Cloud Remediation - Azure Network Security Group Misconfiguration
+- Integrations: PrismaCloud v2
+- Scripts: IsIntegrationAvailable
+- Commands: redlock-dismiss-alerts, closeInvestigation
+
+## Prisma Cloud Remediation - Azure SQL Misconfiguration
+
+**Product:** Prisma Cloud by Palo Alto Networks
+
+**Kind:** playbook
+
+This playbook remediates Prisma Cloud Azure SQL alerts. It calls sub-playbooks that perform the actual remediation steps. Remediation
+
+**Inputs:**
+
+- `AutoRemediateAzureSQL`: Execute Azure SQL remediation automatically?
+- `policyId`: Grab the Prisma Cloud policy ID.
+
+**Dependencies:**
+
+- Commands: redlock-dismiss-alerts, closeInvestigation
+
+## Prisma Cloud Remediation - GCP Kubernetes Engine Misconfiguration
+
+**Product:** Prisma Cloud by Palo Alto Networks
+
+**Kind:** playbook
+
+This playbook remediates Prisma Cloud GCP Kubernetes Engine alerts. It calls sub-playbooks that perform the actual remediation steps. Remediation
+
+**Inputs:**
+
+- `AutoRemediateKubernetesEngine`: Execute GCP Kubernetes Engine remediation automatically?
+- `policyId`: Grab the Prima Cloud policy Id.
+
+**Dependencies:**
+
+- Sub-playbooks: Prisma Cloud Remediation - GCP Kubernetes Engine Cluster Misconfiguration
+- Integrations: PrismaCloud v2
+- Commands: closeInvestigation, redlock-dismiss-alerts
+
+## Prisma Cloud Remediation - Azure Network Misconfiguration
+
+**Product:** Prisma Cloud by Palo Alto Networks
+
+**Kind:** playbook
+
+This playbook remediates Prisma Cloud Azure Network alerts. It calls sub-playbooks that perform the actual remediation steps. Remediation
+
+**Inputs:**
+
+- `AutoRemediateAzureNetwork`: Execute Azure Network remediation automatically?
+- `policyId`: Grab the Prisma Cloud policy Id.
+- `portNumber`: Port number.
+
+**Dependencies:**
+
+- Sub-playbooks: Prisma Cloud Remediation - Azure Network Security Group Misconfiguration
+- Integrations: PrismaCloud v2
+- Scripts: IsIntegrationAvailable
+- Commands: redlock-dismiss-alerts, closeInvestigation
+
+## Prisma Cloud Remediation - Azure SQL Misconfiguration
+
+**Product:** Prisma Cloud by Palo Alto Networks
+
+**Kind:** playbook
+
+This playbook remediates Prisma Cloud Azure SQL alerts. It calls sub-playbooks that perform the actual remediation steps. Remediation
+
+**Inputs:**
+
+- `AutoRemediateAzureSQL`: Execute Azure SQL remediation automatically?
+- `policyId`: Grab the Prisma Cloud policy ID.
+
+**Dependencies:**
+
+- Commands: redlock-dismiss-alerts, closeInvestigation
+
+## Prisma Cloud Remediation - GCP Kubernetes Engine Misconfiguration
+
+**Product:** Prisma Cloud by Palo Alto Networks
+
+**Kind:** playbook
+
+This playbook remediates Prisma Cloud GCP Kubernetes Engine alerts. It calls sub-playbooks that perform the actual remediation steps. Remediation
+
+**Inputs:**
+
+- `AutoRemediateKubernetesEngine`: Execute GCP Kubernetes Engine remediation automatically?
+- `policyId`: Grab the Prima Cloud policy Id.
+
+**Dependencies:**
+
+- Sub-playbooks: Prisma Cloud Remediation - GCP Kubernetes Engine Cluster Misconfiguration
+- Integrations: PrismaCloud v2
+- Commands: closeInvestigation, redlock-dismiss-alerts
+

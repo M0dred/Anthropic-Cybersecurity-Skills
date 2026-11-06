@@ -711,3 +711,54 @@ This playbook unisolates a machine based on the hostname provided
 
 - `Hostname`: The hostname of the endpoint you want to unisolate.
 
+## Isolate Endpoint - Generic
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Isolates a given endpoint using the following integrations
+
+**Inputs:**
+
+- `Hostname`: The hostname of the endpoint to block.
+- `EndpointId`: The Endpoint ID to isolate using Traps.
+
+**Dependencies:**
+
+- Sub-playbooks: Block Endpoint - Carbon Black Response, Traps Isolate Endpoint, Isolate Endpoint - Cybereason
+
+## Isolate Endpoint - Generic
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Isolates a given endpoint using the following integrations
+
+**Inputs:**
+
+- `Hostname`: The hostname of the endpoint to block.
+- `EndpointId`: The Endpoint ID to isolate using Traps.
+
+**Dependencies:**
+
+- Sub-playbooks: Block Endpoint - Carbon Black Response, Traps Isolate Endpoint, Isolate Endpoint - Cybereason
+
+## Isolate Endpoint - Generic
+
+**Product:** Common Playbooks
+
+**Kind:** playbook
+
+Isolates a given endpoint using the following integrations
+
+**Inputs:**
+
+- `Hostname`: The hostname of the endpoint to block.
+- `EndpointId`: The Endpoint ID to isolate using Traps.
+
+**Dependencies:**
+
+- Sub-playbooks: Block Endpoint - Carbon Black Response, Traps Isolate Endpoint, Isolate Endpoint - Cybereason
+
