@@ -20,6 +20,314 @@
         "hardening-windows-endpoint-with-cis-benchmark"
       ],
       "reason": "Same CIS Benchmark methodology, different operating systems. The controls, tooling and audit commands do not overlap, so both must exist; each description must name the OS explicitly and point at the other."
+    },
+    {
+      "pair": [
+        "remediating-aws-vm-exposures",
+        "remediating-gcp-vm-exposures"
+      ],
+      "reason": "Different cloud provider: AWS EC2 vs GCP Compute Engine. The APIs, resource identifiers, and remediation commands do not overlap."
+    },
+    {
+      "pair": [
+        "remediating-azure-vm-exposures",
+        "remediating-gcp-vm-exposures"
+      ],
+      "reason": "Different cloud provider: Azure VMs vs GCP Compute Engine. The APIs, resource identifiers, and remediation commands do not overlap."
+    },
+    {
+      "pair": [
+        "remediating-aws-vm-exposures",
+        "remediating-azure-vm-exposures"
+      ],
+      "reason": "Different cloud provider: AWS EC2 vs Azure VMs. The APIs, resource identifiers, and remediation commands do not overlap."
+    },
+    {
+      "pair": [
+        "executing-incident-containment-plan",
+        "executing-incident-recovery-plan"
+      ],
+      "reason": "Different incident-response phase: containment stops the spread; recovery restores service. Entry criteria, actions, and exit criteria differ."
+    },
+    {
+      "pair": [
+        "executing-incident-containment-plan",
+        "executing-incident-eradication-plan"
+      ],
+      "reason": "Different incident-response phase: containment stops the spread; eradication removes the adversary. Entry criteria, actions, and exit criteria differ."
+    },
+    {
+      "pair": [
+        "blocking-malicious-domains",
+        "blocking-malicious-urls"
+      ],
+      "reason": "Different enforcement layer: DNS RPZ or sinkhole for a whole domain vs proxy/SWG URL category for a specific URL path."
+    },
+    {
+      "pair": [
+        "executing-incident-eradication-plan",
+        "executing-incident-recovery-plan"
+      ],
+      "reason": "Different incident-response phase: eradication removes the adversary; recovery restores service. Entry criteria, actions, and exit criteria differ."
+    },
+    {
+      "pair": [
+        "acquiring-mft-over-winrm",
+        "acquiring-windows-forensics-over-winrm"
+      ],
+      "reason": "Different artifact: the NTFS $MFT alone vs a full host collection including memory, logs, and registry. Collectors and parsers differ."
+    },
+    {
+      "pair": [
+        "detonating-files-in-sandbox",
+        "detonating-urls-in-sandbox"
+      ],
+      "reason": "Different submission type: a file sample or hash vs a URL. Sandbox APIs, inputs, and outputs differ."
+    },
+    {
+      "pair": [
+        "hunting-endpoints-with-microsoft-defender",
+        "investigating-malware-with-microsoft-defender"
+      ],
+      "reason": "Different intent: proactive fleet-wide search vs investigation of a specific malware detection."
+    },
+    {
+      "pair": [
+        "acquiring-mft-over-winrm",
+        "acquiring-registry-hives-over-winrm"
+      ],
+      "reason": "Different artifact: the NTFS $MFT vs registry hives. Collectors and parsers differ."
+    },
+    {
+      "pair": [
+        "hunting-endpoints-with-crowdstrike",
+        "investigating-malware-with-crowdstrike"
+      ],
+      "reason": "Different intent: proactive fleet-wide search vs investigation of a specific malware detection."
+    },
+    {
+      "pair": [
+        "retrieving-file-samples-by-hash",
+        "retrieving-file-samples-by-path"
+      ],
+      "reason": "Different lookup key: a file hash vs an absolute path on a named host. Prerequisites and API calls differ."
+    },
+    {
+      "pair": [
+        "calculating-severity-from-email-authenticity",
+        "validating-email-authentication-results"
+      ],
+      "reason": "Different output: a severity score weighted by SPF/DKIM/DMARC vs an authentication verdict."
+    },
+    {
+      "pair": [
+        "investigating-malware-with-crowdstrike",
+        "verifying-containment-actions-with-crowdstrike"
+      ],
+      "reason": "Different intent: investigate a detection vs confirm that a containment action is active."
+    },
+    {
+      "pair": [
+        "hunting-endpoints-with-crowdstrike",
+        "verifying-containment-actions-with-crowdstrike"
+      ],
+      "reason": "Different intent: search the fleet for indicators vs confirm containment status."
+    },
+    {
+      "pair": [
+        "acquiring-registry-hives-over-winrm",
+        "acquiring-windows-forensics-over-winrm"
+      ],
+      "reason": "Different artifact: registry hives alone vs a full host collection. Collectors and parsers differ."
+    },
+    {
+      "pair": [
+        "enriching-cve-severity",
+        "enriching-cve-vulnerabilities"
+      ],
+      "reason": "Different output: a severity band from the CVSS base score vs full CVE enrichment with EPSS, KEV, and exploit data."
+    },
+    {
+      "pair": [
+        "enriching-email-addresses",
+        "enriching-internal-ip-addresses"
+      ],
+      "reason": "Different indicator type: an email address vs an internal IP address. Sources and pivots differ."
+    },
+    {
+      "pair": [
+        "enriching-domains-with-threat-intelligence",
+        "enriching-urls-with-threat-intelligence"
+      ],
+      "reason": "Different indicator type: a domain vs a URL. Passive DNS and WHOIS vs URL reputation and redirect chain."
+    },
+    {
+      "pair": [
+        "recovering-vms-with-veeam",
+        "scanning-backups-with-veeam"
+      ],
+      "reason": "Different action: restore a virtual machine vs scan a restore point for malware."
+    },
+    {
+      "pair": [
+        "enriching-attack-surface-assets",
+        "enriching-cloud-assets"
+      ],
+      "reason": "Different source: ASM findings and ownership vs cloud resource inventory and tags."
+    },
+    {
+      "pair": [
+        "retrieving-file-samples-by-hash",
+        "retrieving-file-samples-from-endpoints"
+      ],
+      "reason": "Different scope: a single hash lookup vs enumerating the EDR fleet and pulling from each host."
+    },
+    {
+      "pair": [
+        "remediating-azure-aks-misconfiguration",
+        "remediating-azure-storage-misconfiguration"
+      ],
+      "reason": "Different Azure resource: an AKS cluster vs a Storage account. APIs and fixes do not overlap."
+    },
+    {
+      "pair": [
+        "retrieving-file-samples-by-path",
+        "retrieving-file-samples-from-endpoints"
+      ],
+      "reason": "Different scope: a single absolute path vs enumerating the EDR fleet and pulling from each host."
+    },
+    {
+      "pair": [
+        "enriching-certificate-reputation",
+        "enriching-email-addresses"
+      ],
+      "reason": "Different indicator type: an X.509 certificate vs an email address. Sources and pivots differ."
+    },
+    {
+      "pair": [
+        "acquiring-mft-over-winrm",
+        "capturing-network-traffic-over-winrm"
+      ],
+      "reason": "Different artifact: the NTFS $MFT vs a packet capture. Collectors and parsers differ."
+    },
+    {
+      "pair": [
+        "eradicating-threats-by-deleting-files",
+        "eradicating-threats-by-terminating-processes"
+      ],
+      "reason": "Different eradication action: delete a malicious file vs terminate a malicious process tree."
+    },
+    {
+      "pair": [
+        "blocking-files-with-crowdstrike",
+        "isolating-endpoints-with-crowdstrike"
+      ],
+      "reason": "Different action: block a file hash in the IOA blocklist vs isolate a host from the network."
+    },
+    {
+      "pair": [
+        "blocking-malicious-indicators",
+        "blocking-malicious-urls"
+      ],
+      "reason": "Different scope: a fan-out block across IP, domain, URL, and hash controls vs a URL-only block at the proxy."
+    },
+    {
+      "pair": [
+        "enriching-domains-with-threat-intelligence",
+        "enriching-endpoints-during-investigation"
+      ],
+      "reason": "Different indicator type: a domain vs an endpoint. Passive DNS and WHOIS vs EDR inventory and telemetry."
+    },
+    {
+      "pair": [
+        "enriching-certificate-reputation",
+        "enriching-domains-with-threat-intelligence"
+      ],
+      "reason": "Different indicator type: an X.509 certificate vs a domain. Certificate transparency and issuer data vs passive DNS and WHOIS."
+    },
+    {
+      "pair": [
+        "blocking-compromised-accounts",
+        "containing-incident-by-disabling-accounts"
+      ],
+      "reason": "Different scope: a standalone account block at the IdP vs the account-disable step inside a containment plan."
+    },
+    {
+      "pair": [
+        "enriching-domains-with-threat-intelligence",
+        "enriching-user-accounts-during-investigation"
+      ],
+      "reason": "Different indicator type: a domain vs a user account. Passive DNS vs directory and IdP data."
+    },
+    {
+      "pair": [
+        "searching-endpoints-by-cve",
+        "searching-endpoints-by-hash"
+      ],
+      "reason": "Different pivot: a CVE identifier vs a file hash. The queries and data sources differ."
+    },
+    {
+      "pair": [
+        "calculating-severity-from-email-authenticity",
+        "calculating-severity-from-indicator-scores"
+      ],
+      "reason": "Different input: SPF/DKIM/DMARC results vs indicator reputation scores."
+    },
+    {
+      "pair": [
+        "blocking-malicious-domains",
+        "blocking-malicious-indicators"
+      ],
+      "reason": "Different scope: a domain-only block at DNS and the SWG vs a fan-out block across all indicator types."
+    },
+    {
+      "pair": [
+        "enriching-domains-with-threat-intelligence",
+        "enriching-email-addresses"
+      ],
+      "reason": "Different indicator type: a domain vs an email address. Passive DNS vs breach and directory data."
+    },
+    {
+      "pair": [
+        "investigating-malware-with-cortex-xdr",
+        "isolating-endpoints-with-cortex-xdr"
+      ],
+      "reason": "Different intent: investigate a malware detection vs isolate the endpoint. The XDR APIs and outputs differ."
+    },
+    {
+      "pair": [
+        "enriching-email-addresses",
+        "enriching-user-accounts-during-investigation"
+      ],
+      "reason": "Different entity: an email address vs a user account. Breach and reputation data vs directory and IdP data."
+    },
+    {
+      "pair": [
+        "calculating-cvss-scores",
+        "calculating-severity-from-indicator-scores"
+      ],
+      "reason": "Different model: CVSS v3.1 base metrics vs incident severity from indicator reputation."
+    },
+    {
+      "pair": [
+        "enriching-endpoints-during-investigation",
+        "enriching-user-accounts-during-investigation"
+      ],
+      "reason": "Different entity: an endpoint vs a user account. EDR inventory vs directory and IdP data."
+    },
+    {
+      "pair": [
+        "enriching-urls-with-threat-intelligence",
+        "enriching-user-accounts-during-investigation"
+      ],
+      "reason": "Different entity: a URL vs a user account. URL reputation vs directory and IdP data."
+    },
+    {
+      "pair": [
+        "enriching-endpoints-during-investigation",
+        "enriching-urls-with-threat-intelligence"
+      ],
+      "reason": "Different entity: an endpoint vs a URL. EDR inventory vs URL reputation."
     }
   ]
 }

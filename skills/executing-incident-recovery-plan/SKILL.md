@@ -1,0 +1,91 @@
+---
+name: executing-incident-recovery-plan
+description: >-
+  Covers only the recovery phase: restore, validate integrity, and monitor. Use when an incident reaches the recovery phase, or when a response plan needs a recovery step. Keywords: executing, incident, recovery, plan, incident-response, playbook, incident response. Do not use for executing incident containment plan - use `executing-incident-containment-plan`.
+domain: cybersecurity
+subdomain: incident-response
+tags:
+- incident-response
+- containment
+- soc-operations
+version: "1.0"
+author: mahipal
+license: Apache-2.0
+nist_csf:
+- RS.MA-01
+- RS.MI-01
+- RS.AN-03
+mitre_attack:
+- T1486
+- T1566
+- T1078
+---
+
+# Executing Incident Recovery Plan
+
+## When to Use
+
+- An incident has reached the recovery phase.
+- A playbook step needs a documented, repeatable execution.
+- A review needs to see what was done and why.
+
+**Do not use** for executing incident containment plan - use `executing-incident-containment-plan`.
+
+## Prerequisites
+
+- The incident record, the current phase, and the owner.
+- The evidence collected so far.
+- Authority for the actions in this phase.
+
+## Workflow
+
+### Step 1: Confirm entry criteria
+
+Verify the facts that justify this phase.
+
+### Step 2: Plan
+
+List the actions, the owner, and the expected effect.
+
+### Step 3: Execute
+
+Perform the actions, capturing output and timestamps.
+
+### Step 4: Verify
+
+Confirm the phase objective is met.
+
+### Step 5: Record
+
+Write the decision log and the exit criteria.
+
+## Platform Commands
+
+The commands below are the platform-native equivalents for this procedure.
+
+```bash
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+```
+
+## Verification
+
+- The phase objective is met and evidenced.
+- Every action has an owner and a timestamp.
+- The decision log explains the choices.
+- The next phase's entry criteria are stated.
+
+## Common Pitfalls
+
+- Skipping the evidence capture.
+- Moving phases without exit criteria.
+- No decision log.
+- Losing the incident timeline.
+
+## References
+
+- `references/api-reference.md` - platform commands and script usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `references/workflows.md` - decision tree and incident record template
+- `scripts/agent.py` - runnable helper for this procedure
