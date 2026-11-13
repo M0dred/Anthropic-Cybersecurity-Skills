@@ -1,7 +1,7 @@
 ---
 name: acquiring-mft-over-winrm
 description: >-
-  Leverages the Windows built-in PowerShell and WinRM capabilities to connect to a Windows host to acquire and export the MFT (Master File Table) as forensic evidence for further analysis. Pulls the $MFT over WinRM and parses it with MFTECmd. Use when the MFT over WinRM must be collected as evidence, or when volatile data about the MFT over WinRM must be preserved. Keywords: acquiring, mft, over, winrm, acquisition, forensics, digital forensics. Do not use for acquiring windows forensics over winrm - use `acquiring-windows-forensics-over-winrm`.
+  Pulls the NTFS $MFT from a Windows host over WinRM and parses it with MFTECmd to recover file timestamps, sizes, and paths. Use when the MFT over WinRM must be collected as evidence, or when volatile data about the MFT over WinRM must be preserved. Keywords: acquiring, mft, over, winrm, acquisition, forensics, digital forensics. Do not use for acquiring windows forensics over winrm - use `acquiring-windows-forensics-over-winrm`.
 domain: cybersecurity
 subdomain: digital-forensics
 tags:

@@ -1,7 +1,7 @@
 ---
 name: capturing-network-traffic-over-winrm
 description: >-
-  Leverages the Windows built-in PowerShell and WinRM capabilities to connect to a Windows host. It then connects to the Netsh tool to create an ETL file which is the equivalent of a Wireshark PCAP file by using the PS-Remote integration. After receiving the. Starts a packet capture on the host and retrieves the pcap. Use when network traffic over WinRM must be collected as evidence, or when volatile data about network traffic over WinRM must be preserved. Keywords: capturing, network, traffic, over, winrm, acquisition, forensics, digital forensics. Do not use for acquiring mft over winrm - use `acquiring-mft-over-winrm`.
+  Starts a packet capture on a Windows host over WinRM, stops it after the window, and retrieves the pcap for analysis. Use when network traffic over WinRM must be collected as evidence, or when volatile data about network traffic over WinRM must be preserved. Keywords: capturing, network, traffic, over, winrm, acquisition, forensics, digital forensics. Do not use for acquiring mft over winrm - use `acquiring-mft-over-winrm`.
 domain: cybersecurity
 subdomain: digital-forensics
 tags:

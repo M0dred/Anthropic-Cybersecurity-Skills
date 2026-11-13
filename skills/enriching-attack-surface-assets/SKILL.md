@@ -65,7 +65,7 @@ The commands below are the platform-native equivalents for this procedure.
 
 ```bash
 # Pull ASM findings for an asset
-curl -sS "https://api.example-asm.com/v1/assets?query=203.0.113.10" \
+curl -sS "https://$ASM_BASE_URL/v1/assets?query=203.0.113.10" \
   -H "Authorization: Bearer $ASM_TOKEN"
 ```
 

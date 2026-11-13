@@ -1,7 +1,7 @@
 ---
 name: remediating-aws-vm-exposures
 description: >-
-  Handles exposure issue remediation for cloud hosted Virtual Machines by modifying cloud network security settings to block public access to the exposed service port. Targets EC2 instances, security groups, and public IP associations using aws ec2 describe-instances and authorize-security-group-ingress. Use when a finding about AWS virtual-machine exposures is confirmed and needs a fix, or when a compliance finding requires AWS virtual-machine exposures remediation. Keywords: remediating, aws, exposures, remediation, configuration, vulnerability management. Do not use for remediating azure vm exposures - use `remediating-azure-vm-exposures`.
+  Closes AWS exposure findings on EC2 instances: public IPv4 addresses, security groups open to 0.0.0.0/0, and unencrypted EBS volumes. Use when a finding about AWS virtual-machine exposures is confirmed and needs a fix, or when a compliance finding requires AWS virtual-machine exposures remediation. Keywords: remediating, aws, exposures, remediation, configuration, vulnerability management. Do not use for remediating azure vm exposures - use `remediating-azure-vm-exposures`.
 domain: cybersecurity
 subdomain: vulnerability-management
 tags:

@@ -1,7 +1,7 @@
 ---
 name: remediating-azure-vm-exposures
 description: >-
-  Handles exposure issue remediation for cloud hosted Virtual Machines by modifying cloud network security settings to block public access to the exposed service port. Targets Azure VMs, network security groups, and public IP resources using az vm list and az network nsg rule. Use when a finding about Azure virtual-machine exposures is confirmed and needs a fix, or when a compliance finding requires Azure virtual-machine exposures remediation. Keywords: remediating, azure, exposures, remediation, configuration, vulnerability management. Do not use for remediating aws vm exposures - use `remediating-aws-vm-exposures`.
+  Closes Azure exposure findings on virtual machines: public IPs, NSG rules open to the internet, and unmanaged disks. Use when a finding about Azure virtual-machine exposures is confirmed and needs a fix, or when a compliance finding requires Azure virtual-machine exposures remediation. Keywords: remediating, azure, exposures, remediation, configuration, vulnerability management. Do not use for remediating aws vm exposures - use `remediating-aws-vm-exposures`.
 domain: cybersecurity
 subdomain: vulnerability-management
 tags:

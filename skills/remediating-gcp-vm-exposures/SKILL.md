@@ -1,7 +1,7 @@
 ---
 name: remediating-gcp-vm-exposures
 description: >-
-  Handles exposure issue remediation for cloud hosted Virtual Machines by modifying cloud network security settings to block public access to the exposed service port. Targets GCE instances and VPC firewall rules using gcloud compute instances list and firewall-rules. Use when a finding about GCP virtual-machine exposures is confirmed and needs a fix, or when a compliance finding requires GCP virtual-machine exposures remediation. Keywords: remediating, gcp, exposures, remediation, configuration, vulnerability management. Do not use for remediating aws vm exposures - use `remediating-aws-vm-exposures`.
+  Closes GCP exposure findings on Compute Engine: external IPs, firewall rules open to 0.0.0.0/0, and public buckets. Use when a finding about GCP virtual-machine exposures is confirmed and needs a fix, or when a compliance finding requires GCP virtual-machine exposures remediation. Keywords: remediating, gcp, exposures, remediation, configuration, vulnerability management. Do not use for remediating aws vm exposures - use `remediating-aws-vm-exposures`.
 domain: cybersecurity
 subdomain: vulnerability-management
 tags:

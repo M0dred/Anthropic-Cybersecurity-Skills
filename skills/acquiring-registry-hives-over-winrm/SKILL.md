@@ -1,7 +1,7 @@
 ---
 name: acquiring-registry-hives-over-winrm
 description: >-
-  Leverages the Windows built-in PowerShell and WinRM capabilities to connect to a Windows host to acquire and export the registry as forensic evidence for further analysis. The capture can be for the entire registry or for a specific hive or path. Exports SYSTEM, SOFTWARE, SAM, and NTUSER.DAT over WinRM. Use when registry hives over WinRM must be collected as evidence, or when volatile data about registry hives over WinRM must be preserved. Keywords: acquiring, registry, hives, over, winrm, acquisition, forensics, digital forensics. Do not use for acquiring mft over winrm - use `acquiring-mft-over-winrm`.
+  Exports SYSTEM, SOFTWARE, SAM, and NTUSER.DAT from a Windows host over WinRM for offline registry analysis. Use when registry hives over WinRM must be collected as evidence, or when volatile data about registry hives over WinRM must be preserved. Keywords: acquiring, registry, hives, over, winrm, acquisition, forensics, digital forensics. Do not use for acquiring mft over winrm - use `acquiring-mft-over-winrm`.
 domain: cybersecurity
 subdomain: digital-forensics
 tags:
