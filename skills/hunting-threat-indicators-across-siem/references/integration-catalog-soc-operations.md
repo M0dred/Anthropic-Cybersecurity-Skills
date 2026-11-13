@@ -17099,32 +17099,6 @@ The Silent Push Platform uses first-party data and a proprietary scanning engine
 - `None`: 
 
 
-## SilentPush
-
-**Type:** integration  
-**Product:** Silent Push  
-
-The Silent Push Platform uses first-party data and a proprietary scanning engine to enrich global DNS data with risk and reputation scoring, giving security teams the ability to join the dots across the entire IPv4 and IPv6 range, and identify adversary infrastructure before an attack is launched. The content pack integrates with the Silent Push system to gain insights into domain/IP information, reputations, enrichment, and infratag-related details. It also provides functionality to live-scan URLs and take screenshots of them. Additionally, it allows fetching future attack feeds from the Silent Push system. This integration was integrated and tested with version 4.2 of SilentPush
-
-**Commands:**
-
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-
-
 ## Silverfort
 
 **Type:** integration  
@@ -19645,24 +19619,6 @@ Returns all items from the list where their given field attribute is equal to th
 - `equalTo`: The value to filter all items by in the collection.
 - `getField`: The field to extract from each item (Optional).
 - `stringify`: Whether the argument should be saved as a string (Optional).
-
-
-## WhisperGate and HermeticWiper & CVE-2021-32648
-
-**Type:** playbook  
-**Product:** WhisperGate and HermeticWiper & CVE-2021-32648  
-
-CVE-2021-32648 vulnerability has a CVSS score of 9.1 and was found in octobercms, which is a CMS platform based on the Laravel PHP Framework. In affected versions of the october/system package an attacker can request an account password reset and then gain access to the account using a specially crafted request. The issue has been patched in Build 472 and v1.1.5. The playbook includes the following tasks: Mitigations: More information: UNIT42 Blog - Ongoing Russia and Ukraine Cyber Conflict Russia-Ukraine Cyberattacks: How to Protect Against Related Cyberthreats Including DDoS, HermeticWiper, Gamaredon and Website Defacement Microsoft Blog CVE-2021-32648 NVD Note: This is a beta playbook, which lets you implement and test pre-release software. Since the playbook is beta, it might contain bugs. Updates to the pack during the beta phase might include non-backward compatible features. We appreciate your feedback on the quality and usability of the pack to help us identify issues, fix them, and continually improve
-
-**Inputs:**
-
-- `PlaybookDescription`: The playbook description for Rapid Breach Response layout.
-- `BlockIndicatorsAutomatically`: Whether to block the indicators automatically or not.
-- `CollectedIndicatorsSeverity`: The verdict of the collected indicators. Default is "Malicious". Other options can be "Suspicious" and "Unknown".
-- `RelatedCVE`: The WhisperGate malware related CVE.
-- `RunXQLHuntingQueries`: Whether to perform XQL hunting queries. Default is "False".
-- `UserVerification`: Possible values: True/False.\nWhether to provide user verification for blocking IPs. \n\nFalse - No prompt will be displayed to the user.\nT
-- `AutoBlockIndicators`: Should the given indicators be automatically blocked, or should the user be given the option to choose?If set to True - no prompt will appea
 
 
 ## WhisperGate and HermeticWiper & CVE-2021-32648
