@@ -12,9 +12,9 @@ Agari Phishing Defense stops phishing, BEC, and other identity deception attacks
 
 **Commands:**
 
-- `apd-list-policy-events`: 
-- `apd-list-message-data`: 
-- `apd-remediate-message`: 
+- `apd-list-policy-events`: Retrieves a list of policy events.
+- `apd-list-message-data`: Retrieves a list of messages.
+- `apd-remediate-message`: Remediate suspected message.
 
 
 ## Check Point - Phishing Takedown
@@ -45,21 +45,21 @@ The Best Way to Protect Enterprise Email & Collaboration from phishing, malware,
 
 **Commands:**
 
-- `checkpointhec-get-entity`: 
-- `checkpointhec-get-email-info`: 
-- `checkpointhec-get-scan-info`: 
-- `checkpointhec-search-emails`: 
-- `checkpointhec-send-action`: 
-- `checkpointhec-get-action-result`: 
-- `checkpointhec-send-notification`: 
-- `checkpointhec-get-events`: 
-- `checkpointhec-get-ctp-list`: 
-- `checkpointhec-delete-avurl-exceptions`: 
-- `checkpointhec-delete-avdlp-exception`: 
-- `checkpointhec-get-anomaly-exceptions`: 
-- `checkpointhec-update-cp2-exception`: 
-- `checkpointhec-create-avdlp-exception`: 
-- `checkpointhec-delete-ctp-list-items`: 
+- `checkpointhec-get-entity`: Retrieve specific entity.
+- `checkpointhec-get-email-info`: Retrieve specific email entity
+- `checkpointhec-get-scan-info`: Retrieve specific email scan with positive threats.
+- `checkpointhec-search-emails`: Search for emails.
+- `checkpointhec-send-action`: Action for one or more emails.
+- `checkpointhec-get-action-result`: Get task info related to a sent action
+- `checkpointhec-send-notification`: Send notification about user exposition for the specific entity to the list of emails
+- `checkpointhec-get-events`: Retrieve security events.
+- `checkpointhec-get-ctp-list`: Get Click Time Protection list.
+- `checkpointhec-delete-avurl-exceptions`: Delete Avanan URL exceptions.
+- `checkpointhec-delete-avdlp-exception`: Delete Avanan URL exception.
+- `checkpointhec-get-anomaly-exceptions`: Get Anomaly exceptions.
+- `checkpointhec-update-cp2-exception`: Update Anti-Malware exception.
+- `checkpointhec-create-avdlp-exception`: Create Avanan DLP exception.
+- `checkpointhec-delete-ctp-list-items`: Delete Click Time Protection list items.
 
 
 ## CheckPhish
@@ -68,6 +68,11 @@ The Best Way to Protect Enterprise Email & Collaboration from phishing, malware,
 **Product:** CheckPhish  
 
 Check any URL to detect supsicious behavior
+
+**Commands:**
+
+- `CheckPhish-check-urls`: Checks URLs against the CheckPhish database and returns the results.
+- `url`: Retrieves URL information from CheckPhish.
 
 
 ## CheckPointHEC Get email for incident
@@ -91,7 +96,7 @@ The Cisco ETD Connector ingests Cisco Secure Email Threat Defense (ETD) message,
 
 **Commands:**
 
-- `cisco-etd-get-events`: 
+- `cisco-etd-get-events`: Retrieves Cisco ETD logs for an explicit time range.
 
 
 ## Cloaked Ursa Diplomatic Phishing Campaign
@@ -187,9 +192,9 @@ This pack includes configurations to combine the world-class threat detection of
 
 **Commands:**
 
-- `darktrace-email-get-email`: 
-- `darktrace-email-hold-email`: 
-- `darktrace-email-release-email`: 
+- `darktrace-email-get-email`: Fetch details about a specific Email.
+- `darktrace-email-hold-email`: Apply "hold" action to a specified Email.
+- `darktrace-email-release-email`: Apply "release" action to a specified Email.
 
 
 ## DBot Create Phishing Classifier V2
@@ -345,7 +350,9 @@ This is the Email Hippo integration used to verify email sources as fake emails 
 
 **Commands:**
 
-- `email-hippo-email-quota-get`: 
+- `email-hippo-email-quota-get`: Get the email quota from the API.
+- `email`: Return email information and reputation.
+- `domain`: Returns domain information and reputation.
 
 
 ## EmailAskUser
@@ -425,8 +432,9 @@ EmailRep.io provides the reputation and reports for email addresses. This integr
 
 **Commands:**
 
-- `emailrepio-email-reputation-get`: 
-- `emailrepio-email-address-report`: 
+- `emailrepio-email-reputation-get`: Gets the EmailRepIO reputation for the given email address.
+- `email`: Gets the DBot score for the given email address using the EmailRepIO reputation.
+- `emailrepio-email-address-report`: Reports a malicious email address to EmailRepIO. You tag the type of malicious activity associated with the email address. The date of the malicious activity de
 
 
 ## EmailReputation
@@ -464,18 +472,18 @@ FireEye Email Security (EX) series protects against breaches caused by advanced 
 
 **Commands:**
 
-- `fireeye-ex-get-alerts`: 
-- `fireeye-ex-get-alert-details`: 
-- `fireeye-ex-get-artifacts-by-uuid`: 
-- `fireeye-ex-get-artifacts-metadata-by-uuid`: 
-- `fireeye-ex-get-quarantined-emails`: 
-- `fireeye-ex-release-quarantined-emails`: 
-- `fireeye-ex-download-quarantined-emails`: 
-- `fireeye-ex-get-reports`: 
-- `fireeye-ex-list-allowedlist`: 
-- `fireeye-ex-update-allowedlist`: 
-- `fireeye-ex-list-blockedlist`: 
-- `fireeye-ex-update-blockedlist`: 
+- `fireeye-ex-get-alerts`: Searches and retrieves FireEye EX alerts based on several filters.
+- `fireeye-ex-get-alert-details`: Searches and retrieves the details of a single alert.
+- `fireeye-ex-get-artifacts-by-uuid`: Downloads malware artifacts data for the specified UUID as a zip file.
+- `fireeye-ex-get-artifacts-metadata-by-uuid`: Gets artifacts metadata for the specified UUID.
+- `fireeye-ex-get-quarantined-emails`: Searches and retrieves quarantined emails.
+- `fireeye-ex-release-quarantined-emails`: Releases and deletes quarantined emails. This is not available when Email Security is in Drop mode.
+- `fireeye-ex-download-quarantined-emails`: Download quarantined emails.
+- `fireeye-ex-get-reports`: Returns reports on selected alerts.
+- `fireeye-ex-list-allowedlist`: Lists the allowed sender domain by type.
+- `fireeye-ex-update-allowedlist`: Updates allowed sender domain.
+- `fireeye-ex-list-blockedlist`: Lists the blocked sender domain by type.
+- `fireeye-ex-update-blockedlist`: Updates blocked sender domain.
 
 
 ## Get Email From Email Gateway - FireEye
@@ -553,21 +561,21 @@ Gophish is a powerful, open-source phishing framework that makes it easy to test
 
 **Commands:**
 
-- `gophish-get-users`: 
-- `gophish-get-user`: 
-- `gophish-create-user`: 
-- `gophish-modify-user`: 
-- `gophish-delete-user`: 
-- `gophish-get-all-sending-profiles`: 
-- `gophish-get-sending-profile`: 
-- `gophish-create-sending-profile`: 
-- `gophish-delete-sending-profile`: 
-- `gophish-get-all-landing-pages`: 
-- `gophish-create-landing-page`: 
-- `gophish-delete-landing-page`: 
-- `gophish-import-site-as-landing-page`: 
-- `gophish-get-all-templates`: 
-- `gophish-get-template`: 
+- `gophish-get-users`: Gets all users from gophish
+- `gophish-get-user`: Get single user details from gophish
+- `gophish-create-user`: Creates a new user
+- `gophish-modify-user`: Modifies a user account. This can be used to change the role, reset the password, or change the username.
+- `gophish-delete-user`: Deletes a user, as well as every object (landing page, template, etc.) and campaign they've created.
+- `gophish-get-all-sending-profiles`: Gets a list of the sending profiles created by the authenticated user.
+- `gophish-get-sending-profile`: Returns a sending profile given an ID, returning a 404 error if no sending profile with the provided ID is found.
+- `gophish-create-sending-profile`: Creates a sending profile.
+- `gophish-delete-sending-profile`: Deletes a sending profile by ID.
+- `gophish-get-all-landing-pages`: Returns a list of landing pages.
+- `gophish-create-landing-page`: Creates a landing page.
+- `gophish-delete-landing-page`: Deletes a landing page.
+- `gophish-import-site-as-landing-page`: Fetches a URL to be later imported as a landing page
+- `gophish-get-all-templates`: Returns a list of templates.
+- `gophish-get-template`: Returns a template with the provided ID.Returns a 404: Not Found error if the specified template doesn't exist.
 
 
 ## HtmlPhishingCheck
@@ -602,6 +610,10 @@ Automatically changes email field when choosing a classification
 
 Collaborative web service that provides validation on whether a URL is a phishing page or not by analyzing the content of the webpage
 
+**Commands:**
+
+- `url`: Checks if URL is phishing
+
 
 ## LinkToPhishingCampaign
 
@@ -620,21 +632,21 @@ Use the Mimecast integration to manage email security, continuity, and archiving
 
 **Commands:**
 
-- `mimecast-query`: 
-- `mimecast-list-blocked-sender-policies`: 
-- `mimecast-get-policy`: 
-- `mimecast-create-policy`: 
-- `mimecast-delete-policy`: 
-- `mimecast-manage-sender`: 
-- `mimecast-list-managed-url`: 
-- `mimecast-create-managed-url`: 
-- `mimecast-list-messages`: 
-- `mimecast-get-attachment-logs`: 
-- `mimecast-get-url-logs`: 
-- `mimecast-get-impersonation-logs`: 
-- `mimecast-url-decode`: 
-- `mimecast-discover`: 
-- `mimecast-refresh-token`: 
+- `mimecast-query`: Query Mimecast emails. This is an archive search command.
+- `mimecast-list-blocked-sender-policies`: Deprecate - use mimecast-list-policies instead
+- `mimecast-get-policy`: Get a policy by ID.
+- `mimecast-create-policy`: Deprecated. Please use mimecast-create-block-sender-policy
+- `mimecast-delete-policy`: Deletes a policy by ID.
+- `mimecast-manage-sender`: Permit or block a specific sender
+- `mimecast-list-managed-url`: Get a list of all managed URLs
+- `mimecast-create-managed-url`: Create a managed URL on Mimecast
+- `mimecast-list-messages`: Get a list of messages for a given user. This is an archive search command. Required Permissions The following permissions are required for this command.
+- `mimecast-get-attachment-logs`: Returns Attachment Protect logs for a Mimecast customer account
+- `mimecast-get-url-logs`: Returns URL protect logs for a Mimecast customer account. Default value of scanResult as malicious
+- `mimecast-get-impersonation-logs`: Returns Impersonation Protect logs for a Mimecast customer account
+- `mimecast-url-decode`: Decodes a given url from mimecast
+- `mimecast-discover`: discover authentication types that are supported for your account and which base URL to use for the requesting user. only for API 1.0 users.
+- `mimecast-refresh-token`: Refresh access key validity only for API 1.0 users
 
 
 ## MimecastFindEmail
@@ -688,8 +700,9 @@ OpenPhish uses proprietary Artificial Intelligence algorithms to automatically i
 
 **Commands:**
 
-- `openphish-reload`: 
-- `openphish-status`: 
+- `url`: Checks the reputation of a URL.
+- `openphish-reload`: Reload OpenPhish database
+- `openphish-status`: Show OpenPhish database status
 
 
 ## PhishER
@@ -701,11 +714,11 @@ KnowBe4 PhishER integration allows to pull events from PhishER system and do mut
 
 **Commands:**
 
-- `phisher-message-list`: 
-- `phisher-create-comment`: 
-- `phisher-update-message`: 
-- `phisher-tags-create`: 
-- `phisher-tags-delete`: 
+- `phisher-message-list`: Command to get messages from PhishER
+- `phisher-create-comment`: Adds a comment to a PhishER message
+- `phisher-update-message`: Updates a PhishER message status. User must provide at least one argument.
+- `phisher-tags-create`: Add tags to a given message
+- `phisher-tags-delete`: Removes tags from a given message.
 
 
 ## Phishing - Handle Microsoft 365 Defender Results
@@ -790,8 +803,9 @@ PhishTank is a free community site where anyone can submit, verify, track and sh
 
 **Commands:**
 
-- `phishtank-reload`: 
-- `phishtank-status`: 
+- `url`: Checks the reputation of the supplied URLs.
+- `phishtank-reload`: Reload PhishTank database
+- `phishtank-status`: Show PhishTank database status
 
 
 ## PhishUp
@@ -800,6 +814,10 @@ PhishTank is a free community site where anyone can submit, verify, track and sh
 **Product:** PhishUp  
 
 If you don't have PhishUp Api Key please create an account on PhishUp and get a free Api Key. Also you can visit and test PhishUp Web Demo. If you have any question feel free to concat us: info@phishup.com
+
+**Commands:**
+
+- `url`: PhishUp Url investigation
 
 
 ## Process Email - EWS
@@ -823,7 +841,7 @@ Proofpoint Isolation is an integration that supports fetching Browser and Email 
 
 **Commands:**
 
-- `proofpoint-isolation-get-events`: 
+- `proofpoint-isolation-get-events`: Retrieves a list of events from the Proofpoint Isolation instance.
 
 
 ## Proofpoint TAP v2
@@ -835,18 +853,18 @@ Use the Proofpoint Targeted Attack Protection (TAP) integration to protect again
 
 **Commands:**
 
-- `proofpoint-get-events`: 
-- `proofpoint-get-forensics`: 
-- `proofpoint-get-events-clicks-blocked`: 
-- `proofpoint-get-events-clicks-permitted`: 
-- `proofpoint-get-events-messages-blocked`: 
-- `proofpoint-get-events-messages-delivered`: 
-- `proofpoint-list-issues`: 
-- `proofpoint-list-campaigns`: 
-- `proofpoint-get-campaign`: 
-- `proofpoint-list-most-attacked-users`: 
-- `proofpoint-get-top-clickers`: 
-- `proofpoint-url-decode`: 
+- `proofpoint-get-events`: Fetches events for all clicks and messages relating to known threats within the specified time period. Details as per clicks/blocked.
+- `proofpoint-get-forensics`: Returns forensics evidence.
+- `proofpoint-get-events-clicks-blocked`: Gets events for clicks to malicious URLs blocked in the specified time period. Must provide either the interval or time_range arguments.
+- `proofpoint-get-events-clicks-permitted`: Get events for clicks to malicious URLs permitted in the specified time period. Must provide either the interval or time_range arguments.
+- `proofpoint-get-events-messages-blocked`: Get events for blocked messages in the specified time period. Must provide either the interval or time_range arguments.
+- `proofpoint-get-events-messages-delivered`: Get events for delivered messages in the specified time period. Must provide either the interval or time_range arguments.
+- `proofpoint-list-issues`: Get events for clicks to malicious URLs permitted and messages delivered containing a known attachment threat within the specified time period. Must provide eit
+- `proofpoint-list-campaigns`: Gets a list of IDs of campaigns active in a specified time period. Must provide either the interval or time_range arguments.
+- `proofpoint-get-campaign`: Gets details for a given campaign.
+- `proofpoint-list-most-attacked-users`: Gets a list of the most attacked users in the organization.
+- `proofpoint-get-top-clickers`: Gets a list of the top clickers in the organization for a specified time period.
+- `proofpoint-url-decode`: Decodes URLs that have been rewritten by TAP to their original, target URL.
 
 
 ## ProofpointTAPMostAttackedUsers
@@ -911,8 +929,8 @@ Symantec Email Security.cloud is a hosted service that filters email messages an
 
 **Commands:**
 
-- `symantec-email-security-ioc-list`: 
-- `symantec-email-security-ioc-action`: 
+- `symantec-email-security-ioc-list`: List the IOCs that apply to a specific domain or to all domains.
+- `symantec-email-security-ioc-action`: Add, update, delete, and renew multiple IOCs through the entry_id or a single IOC through the rest of the parameters.
 
 
 ## Trustwave Secure Email Gateway
@@ -924,20 +942,20 @@ Trustwave SEG is a secure messaging solution that protects businesses and users 
 
 **Commands:**
 
-- `trustwave-seg-get-version`: 
-- `trustwave-seg-automatic-config-backup-list`: 
-- `trustwave-seg-automatic-config-backup-restore`: 
-- `trustwave-seg-automatic-config-backup-run`: 
-- `trustwave-seg-list-alerts`: 
-- `trustwave-seg-statistics`: 
-- `trustwave-seg-list-servers`: 
-- `trustwave-seg-get-server`: 
-- `trustwave-seg-list-classifications`: 
-- `trustwave-seg-list-quarantine-folders`: 
-- `trustwave-seg-list-quarantine-folders-with-day-info`: 
-- `trustwave-seg-list-day-info-by-quarantine-folder`: 
-- `trustwave-seg-find-quarantine-message`: 
-- `trustwave-seg-spiderlabs-forward-quarantine-message-as-spam`: 
+- `trustwave-seg-get-version`: Gets Trustwave version information.
+- `trustwave-seg-automatic-config-backup-list`: Returns a list of automatic configuration backups.
+- `trustwave-seg-automatic-config-backup-restore`: Restores a specific automatic configuration backup.
+- `trustwave-seg-automatic-config-backup-run`: Run automatic backup now.
+- `trustwave-seg-list-alerts`: Gets a list of current alerts.
+- `trustwave-seg-statistics`: Gets Trustwave SEG statistics. Must provide a start time or time range.
+- `trustwave-seg-list-servers`: Gets a list of servers.
+- `trustwave-seg-get-server`: Gets server details.
+- `trustwave-seg-list-classifications`: Gets a list of classifications.
+- `trustwave-seg-list-quarantine-folders`: Gets a list of folders.
+- `trustwave-seg-list-quarantine-folders-with-day-info`: Gets a list of folders with current day information.
+- `trustwave-seg-list-day-info-by-quarantine-folder`: Get the current day information for a folder.
+- `trustwave-seg-find-quarantine-message`: Find message by specified parameters.
+- `trustwave-seg-spiderlabs-forward-quarantine-message-as-spam`: Forwards a message to Spiderlabs as spam.
 
 
 ## VectraXDRGenerateMailBody

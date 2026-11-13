@@ -12,7 +12,7 @@ This integration enables the management of Kubernetes environments using Ansible
 
 **Commands:**
 
-- `k8s-k8s`: 
+- `k8s-k8s`: Manage Kubernetes (K8s) objects Further documentation available at https://docs.ansible.com/ansible/2.9/modules/k8s_module.html
 
 
 ## Google Kubernetes Engine
@@ -24,19 +24,19 @@ The Google Kubernetes Engine integration is used for building and managing conta
 
 **Commands:**
 
-- `gcloud-clusters-list`: 
-- `gcloud-clusters-describe`: 
-- `gcloud-clusters-set-muster-auth`: 
-- `gcloud-clusters-set-addons`: 
-- `gcloud-clusters-set-legacy-auth`: 
-- `gcloud-clusters-set-master-authorized-network`: 
-- `gcloud-clusters-set-k8s-stackdriver`: 
-- `gcloud-clusters-set-binary-auth`: 
-- `gcloud-clusters-set-intra-node-visibility`: 
-- `gcloud-node-pool-list`: 
-- `gcloud-node-pool-describe`: 
-- `gcloud-node-pool-set-management`: 
-- `gcloud-operations-list`: 
-- `gcloud-operations-describe`: 
-- `gcloud-operations-cancel`: 
+- `gcloud-clusters-list`: Lists all clusters owned by a project in either the specified zone or all zones.
+- `gcloud-clusters-describe`: Gets the details of a specific cluster.
+- `gcloud-clusters-set-muster-auth`: Enable basic (username/password) auth for the cluster. Enable will create user admin with generated password.
+- `gcloud-clusters-set-addons`: Sets the addons for a specific cluster.
+- `gcloud-clusters-set-legacy-auth`: Configuration for the legacy Attribute Based Access Control authorization mode.
+- `gcloud-clusters-set-master-authorized-network`: Configuration options for the master authorized networks feature. Enabled master authorized networks will disallow all external traffic to access Kubernetes mas
+- `gcloud-clusters-set-k8s-stackdriver`: Enable or Disable k8s stackdriver. Important - To use this functinality the user should enable manually logging to "monitoring.googleapis.com/kubernetes" manula
+- `gcloud-clusters-set-binary-auth`: Enable or Disable binary auth.
+- `gcloud-clusters-set-intra-node-visibility`: Enable or Disable for intra node visibility in cluster.
+- `gcloud-node-pool-list`: Lists the node pools for a cluster.
+- `gcloud-node-pool-describe`: Retrieves the requested node pool.
+- `gcloud-node-pool-set-management`: Sets the NodeManagement options for a node pool.
+- `gcloud-operations-list`: List operations in project-zone.
+- `gcloud-operations-describe`: Retrieve operation information by name.
+- `gcloud-operations-cancel`: Cancel operation by operation name.
 

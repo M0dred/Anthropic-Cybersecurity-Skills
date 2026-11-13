@@ -12,21 +12,21 @@ Support for AWS cloud This integration was integrated and tested with version 1.
 
 **Commands:**
 
-- `aws-s3-public-access-block-update`: 
-- `aws-s3-bucket-delete`: 
-- `aws-s3-bucket-objects-list`: 
-- `aws-s3-bucket-objects-list-v2`: 
-- `aws-s3-bucket-acl-put`: 
-- `aws-s3-bucket-logging-put`: 
-- `aws-s3-bucket-versioning-put`: 
-- `aws-s3-bucket-policy-put`: 
-- `aws-s3-bucket-website-delete`: 
-- `aws-s3-bucket-ownership-controls-put`: 
-- `aws-s3-bucket-website-get`: 
-- `aws-s3-bucket-acl-get`: 
-- `aws-iam-account-password-policy-get`: 
-- `aws-iam-account-password-policy-update`: 
-- `aws-iam-role-policy-put`: 
+- `aws-s3-public-access-block-update`: Creates or modifies the PublicAccessBlock configuration for an Amazon S3 bucket. Required IAM permission: s3:PutBucketPublicAccessBlock.
+- `aws-s3-bucket-delete`: Delete AWS S3 bucket, the bucket must be empty from files. Required IAM Permission: s3:DeleteBucket.
+- `aws-s3-bucket-objects-list`: Returns some or all (up to 1,000) of the objects in a bucket. Required IAM Permission: s3:ListBucket.
+- `aws-s3-bucket-objects-list-v2`: Lists objects in an Amazon S3 bucket (up to 1,000 objects) using the ListObjectsV2 API. Unlike aws-s3-bucket-objects-list, this command consistently returns a p
+- `aws-s3-bucket-acl-put`: Sets the access control list (ACL) permissions for an existing Amazon S3 bucket. This command allows you to define who can access the bucket and what actions th
+- `aws-s3-bucket-logging-put`: Configures logging settings for an AWS S3 bucket, enabling monitoring bucket access via logs delivered to a designated target bucket. Required IAM permission: s
+- `aws-s3-bucket-versioning-put`: Sets the versioning state of an existing bucket. Required IAM permission: s3:PutBucketVersioning.
+- `aws-s3-bucket-policy-put`: Applies an Amazon S3 bucket policy to an Outposts bucket. Required IAM permission: s3:PutBucketPolicy.
+- `aws-s3-bucket-website-delete`: Removes the website configuration for a bucket. Required IAM permission: s3:DeleteBucketWebsite.
+- `aws-s3-bucket-ownership-controls-put`: Creates or modifies ownership controls for an Amazon S3 bucket. Required IAM permission: s3:PutBucketOwnershipControls.
+- `aws-s3-bucket-website-get`: Retrieves the website configuration for a bucket. Required IAM permission: s3:GetBucketWebsite.
+- `aws-s3-bucket-acl-get`: Retrieves the access control list (ACL) of a bucket. Required IAM permission: s3:GetBucketAcl.
+- `aws-iam-account-password-policy-get`: Retrieves the AWS account password policy. Required IAM permission: iam:GetAccountPasswordPolicy.
+- `aws-iam-account-password-policy-update`: Creates or updates AWS account password policy. Required IAM permission: iam:UpdateAccountPasswordPolicy.
+- `aws-iam-role-policy-put`: Adds or updates an inline policy document that is embedded in the specified IAM role. Required IAM permission: iam:PutRolePolicy.
 
 
 ## Analyze URL - ReversingLabs TitaniumCloud
@@ -50,7 +50,7 @@ This integration enables the management of Alibaba Cloud Elastic Compute Service
 
 **Commands:**
 
-- `ali-instance`: 
+- `ali-instance`: Create, Start, Stop, Restart or Terminate an Instance in ECS. Add or Remove Instance to/from a Security Group. Further documentation available at https://docs.a
 
 
 ## Ansible Azure
@@ -62,7 +62,7 @@ This integration enables the management of Azure Services using Ansible modules.
 
 **Commands:**
 
-- `azure-rm-autoscale`: 
+- `azure-rm-autoscale`: Manage Azure autoscale setting Further documentation available at https://docs.ansible.com/ansible/2.9/modules/azure_rm_autoscale_module.html
 
 
 ## Ansible HCloud
@@ -74,9 +74,9 @@ This integration enables the management of Hetzner Cloud environments using Ansi
 
 **Commands:**
 
-- `hcloud-datacenter-info`: 
-- `hcloud-floating-ip-info`: 
-- `hcloud-image-info`: 
+- `hcloud-datacenter-info`: Gather info about the Hetzner Cloud datacenters. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/hcloud_datacenter_info_module.h
+- `hcloud-floating-ip-info`: Gather infos about the Hetzner Cloud Floating IPs. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/hcloud_floating_ip_info_modul
+- `hcloud-image-info`: Gather infos about your Hetzner Cloud images. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/hcloud_image_info_module.html
 
 
 ## Atlassian Cloud MCP
@@ -88,8 +88,8 @@ Use this integration to connect securely with an Atlassian Cloud Model Context P
 
 **Commands:**
 
-- `atlassian-cloud-mcp-auth-test`: 
-- `atlassian-cloud-mcp-generate-login-url`: 
+- `atlassian-cloud-mcp-auth-test`: Test the authentication configuration with the MCP server.
+- `atlassian-cloud-mcp-generate-login-url`: Generate an authentication login URL.
 
 
 ## Atlassian Confluence Cloud
@@ -101,21 +101,21 @@ Atlassian Confluence Cloud allows users to interact with confluence entities lik
 
 **Commands:**
 
-- `confluence-cloud-space-create`: 
-- `confluence-cloud-content-create`: 
-- `confluence-cloud-comment-create`: 
-- `confluence-cloud-space-list`: 
-- `confluence-cloud-content-list`: 
-- `confluence-cloud-content-delete`: 
-- `confluence-cloud-content-update`: 
-- `confluence-cloud-content-search`: 
-- `confluence-cloud-user-list`: 
-- `confluence-cloud-group-list`: 
-- `confluence-cloud-get-events`: 
-- `confluence-cloud-content-get`: 
-- `confluence-cloud-oauth-start`: 
-- `confluence-cloud-oauth-complete`: 
-- `confluence-cloud-oauth-test`: 
+- `confluence-cloud-space-create`: Creates a new space. Note: If no permissions are specified, the default space permissions defined by the Confluence cloud account admin will be used.
+- `confluence-cloud-content-create`: Creates a page or blogpost for a given space. Note: To view the expansion of content properties, execute confluence-cloud-content-list and confluence-cloud-cont
+- `confluence-cloud-comment-create`: Creates a comment for the given content. Note: To view the expansion of content properties, execute the confluence-cloud-content-list and confluence-cloud-conte
+- `confluence-cloud-space-list`: Returns a list of all Confluence spaces.
+- `confluence-cloud-content-list`: Returns the list of content of Confluence.
+- `confluence-cloud-content-delete`: Delete the content depending on the content's type and status. Note: If the content's type is page or blogpost, it should be moved to trash before deleting perm
+- `confluence-cloud-content-update`: Update the existing content with new content. Note: Updating draft content is currently not supported.
+- `confluence-cloud-content-search`: Retrieves a list of content using the Confluence Query Language (CQL).
+- `confluence-cloud-user-list`: Returns a list of users.
+- `confluence-cloud-group-list`: Returns all user groups.
+- `confluence-cloud-get-events`: Retrieves a list of events from the Atlassian Confluence Cloud instance.
+- `confluence-cloud-content-get`: Retrieves a piece of content (e.g., page, blogpost) from Confluence Cloud by its ID.
+- `confluence-cloud-oauth-start`: Starts the OAuth 2.0 authentication flow. Returns an authorization URL that the user must visit to authorize the integration.
+- `confluence-cloud-oauth-complete`: Completes the OAuth 2.0 authentication flow by exchanging the authorization code for access and refresh tokens.
+- `confluence-cloud-oauth-test`: Tests the OAuth 2.0 authentication by verifying the current access token is valid.
 
 
 ## AWS - AccessAnalyzer
@@ -127,13 +127,13 @@ Amazon Web Services IAM Access Analyzer For detailed instructions about setting 
 
 **Commands:**
 
-- `aws-access-analyzer-list-analyzers`: 
-- `aws-access-analyzer-list-analyzed-resource`: 
-- `aws-access-analyzer-list-findings`: 
-- `aws-access-analyzer-get-analyzed-resource`: 
-- `aws-access-analyzer-get-finding`: 
-- `aws-access-analyzer-start-resource-scan`: 
-- `aws-access-analyzer-update-findings`: 
+- `aws-access-analyzer-list-analyzers`: Retrieves a list of analyzers.
+- `aws-access-analyzer-list-analyzed-resource`: Retrieves a list of resources that have been analyzed.
+- `aws-access-analyzer-list-findings`: Retrieves a list of findings generated by the specified analyzer.
+- `aws-access-analyzer-get-analyzed-resource`: Retrieves information about an analyzed resource.
+- `aws-access-analyzer-get-finding`: Retrieves information about the specified finding.
+- `aws-access-analyzer-start-resource-scan`: Starts a scan of the policies applied to the specified resource.
+- `aws-access-analyzer-update-findings`: Updates findings with the new values provided in the request.
 
 
 ## AWS - ACM
@@ -145,12 +145,12 @@ Amazon Web Services Certificate Manager Service (ACM) For more information regar
 
 **Commands:**
 
-- `aws-acm-describe-certificate`: 
-- `aws-acm-list-certificates`: 
-- `aws-acm-add-tags-to-certificate`: 
-- `aws-acm-remove-tags-from-certificate`: 
-- `aws-acm-list-tags-for-certificate`: 
-- `aws-acm-get-certificate`: 
+- `aws-acm-describe-certificate`: Returns detailed metadata about the specified ACM certificate.
+- `aws-acm-list-certificates`: Retrieves a list of certificate ARNs and domain names. You can request that only certificates that match a specific status be listed. You can also filter by spe
+- `aws-acm-add-tags-to-certificate`: Adds one or more tags to an ACM certificate.
+- `aws-acm-remove-tags-from-certificate`: Remove one or more tags from an ACM certificate.
+- `aws-acm-list-tags-for-certificate`: Lists the tags that have been applied to the ACM certificate. Use the certificate's Amazon Resource Name (ARN) to specify the certificate.
+- `aws-acm-get-certificate`: Retrieves a certificate specified by an ARN and its certificate chain . The chain is an ordered list of certificates that contains the end entity certificate, i
 
 
 ## AWS - Athena
@@ -162,11 +162,11 @@ Amazon Web Services Athena
 
 **Commands:**
 
-- `aws-athena-execute-query`: 
-- `aws-athena-start-query`: 
-- `aws-athena-stop-query`: 
-- `aws-athena-get-query-execution`: 
-- `aws-athena-get-query-results`: 
+- `aws-athena-execute-query`: Execute a new query, wait for the query to complete (using polling), and return query's execution information, and query's results (if successful). Either 'Outp
+- `aws-athena-start-query`: Start an Athena query. Either 'OutputLocation' or 'WorkGroup' must be specified for the query to run.
+- `aws-athena-stop-query`: Stop an existing running query.
+- `aws-athena-get-query-execution`: Return execution information of a query.
+- `aws-athena-get-query-results`: Return the results of a query.
 
 
 ## AWS - CloudTrail
@@ -178,14 +178,14 @@ Amazon Web Services CloudTrail. This integration was integrated and tested with 
 
 **Commands:**
 
-- `aws-cloudtrail-create-trail`: 
-- `aws-cloudtrail-delete-trail`: 
-- `aws-cloudtrail-describe-trails`: 
-- `aws-cloudtrail-update-trail`: 
-- `aws-cloudtrail-start-logging`: 
-- `aws-cloudtrail-stop-logging`: 
-- `aws-cloudtrail-lookup-events`: 
-- `aws-cloudtrail-get-trail-status`: 
+- `aws-cloudtrail-create-trail`: Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket. A maximum of five trails can exist in a region, irrespective of the
+- `aws-cloudtrail-delete-trail`: Deletes a trail. This operation must be called from the region in which the trail was created. DeleteTrail cannot be called on the shadow trails (replicated tra
+- `aws-cloudtrail-describe-trails`: Retrieves settings for the trail associated with the current region for your account.
+- `aws-cloudtrail-update-trail`: Updates the settings that specify delivery of log files. Changes to a trail do not require stopping the CloudTrail service.
+- `aws-cloudtrail-start-logging`: Starts the recording of AWS API calls and log file delivery for a trail. For a trail that is enabled in all regions, this operation must be called from the regi
+- `aws-cloudtrail-stop-logging`: Suspends the recording of AWS API calls and log file delivery for the specified trail. Under most circumstances, there is no need to use this action. You can up
+- `aws-cloudtrail-lookup-events`: Looks up API activity events captured by CloudTrail that create, update, or delete resources in your account. Events for a region can be looked up for the times
+- `aws-cloudtrail-get-trail-status`: Returns a JSON-formatted list of information about the specified trail. Fields include information on delivery errors, Amazon SNS and Amazon S3 errors, and star
 
 
 ## AWS - EC2
@@ -197,21 +197,21 @@ Amazon Web Services Elastic Compute Cloud (EC2)
 
 **Commands:**
 
-- `aws-ec2-describe-instances`: 
-- `aws-ec2-describe-iam-instance-profile-associations`: 
-- `aws-ec2-describe-images`: 
-- `aws-ec2-describe-regions`: 
-- `aws-ec2-describe-addresses`: 
-- `aws-ec2-describe-snapshots`: 
-- `aws-ec2-describe-launch-templates`: 
-- `aws-ec2-describe-key-pairs`: 
-- `aws-ec2-describe-volumes`: 
-- `aws-ec2-describe-volumes`: 
-- `aws-ec2-describe-vpcs`: 
-- `aws-ec2-describe-subnets`: 
-- `aws-ec2-describe-security-groups`: 
-- `aws-ec2-allocate-address`: 
-- `aws-ec2-associate-address`: 
+- `aws-ec2-describe-instances`: Describes one or more of your instances.
+- `aws-ec2-describe-iam-instance-profile-associations`: Describes your IAM instance profile associations.
+- `aws-ec2-describe-images`: Describes one or more of the images (AMIs, AKIs, and ARIs) available to you. Images available to you include public images, private images that you own, and pri
+- `aws-ec2-describe-regions`: Describes one or more regions that are currently available to you.
+- `aws-ec2-describe-addresses`: Describes one or more of your Elastic IP addresses.
+- `aws-ec2-describe-snapshots`: Describes one or more of the EBS snapshots available to you.
+- `aws-ec2-describe-launch-templates`: Describes one or more launch templates.
+- `aws-ec2-describe-key-pairs`: Describes one or more of your key pairs.
+- `aws-ec2-describe-volumes`: !aws-ec2-describe-key-pairs
+- `aws-ec2-describe-volumes`: Describes the specified EBS volumes.
+- `aws-ec2-describe-vpcs`: Describes one or more of your VPCs.
+- `aws-ec2-describe-subnets`: Describes one or more of your subnets.
+- `aws-ec2-describe-security-groups`: Describes one or more of your security groups.
+- `aws-ec2-allocate-address`: Allocates an Elastic IP address.
+- `aws-ec2-associate-address`: Associates an Elastic IP address with an instance or a network interface.
 
 
 ## AWS - GuardDuty
@@ -223,21 +223,21 @@ Amazon Web Services Guard Duty Service (gd) Use this integration to detect and m
 
 **Commands:**
 
-- `aws-gd-create-detector`: 
-- `aws-gd-delete-detector`: 
-- `aws-gd-get-detector`: 
-- `aws-gd-update-detector`: 
-- `aws-gd-create-ip-set`: 
-- `aws-gd-delete-ip-set`: 
-- `aws-gd-list-detectors`: 
-- `aws-gd-update-ip-set`: 
-- `aws-gd-get-ip-set`: 
-- `aws-gd-list-ip-sets`: 
-- `aws-gd-create-threatintel-set`: 
-- `aws-gd-delete-threatintel-set`: 
-- `aws-gd-get-threatintel-set`: 
-- `aws-gd-list-threatintel-sets`: 
-- `aws-gd-update-threatintel-set`: 
+- `aws-gd-create-detector`: Create an AWS Guard Duty Detector on the integration instance specified aws account.
+- `aws-gd-delete-detector`: Deletes a Amazon GuardDuty detector specified by the detector ID.
+- `aws-gd-get-detector`: Retrieves an Amazon GuardDuty detector specified by the detectorId.
+- `aws-gd-update-detector`: Updates an Amazon GuardDuty detector specified by the detectorId.
+- `aws-gd-create-ip-set`: A list of trusted IP addresses on allow list for secure communication with AWS infrastructure and applications.
+- `aws-gd-delete-ip-set`: Deletes the IPSet specified by the IPSet ID.
+- `aws-gd-list-detectors`: Lists detectorIds of all the existing Amazon GuardDuty detector resources.
+- `aws-gd-update-ip-set`: Updates the IPSet specified by the IPSet ID.
+- `aws-gd-get-ip-set`: Retrieves the IPSet specified by the IPSet ID.
+- `aws-gd-list-ip-sets`: Lists the IPSets of the GuardDuty service specified by the detector ID.
+- `aws-gd-create-threatintel-set`: Create a new ThreatIntelSet. ThreatIntelSets consist of known malicious IP addresses. GuardDuty generates findings based on ThreatIntelSets.
+- `aws-gd-delete-threatintel-set`: Deletes ThreatIntelSet specified by the ThreatIntelSet ID.
+- `aws-gd-get-threatintel-set`: Retrieves the ThreatIntelSet that is specified by the ThreatIntelSet ID.
+- `aws-gd-list-threatintel-sets`: Lists the ThreatIntelSets of the GuardDuty service specified by the detector ID.
+- `aws-gd-update-threatintel-set`: Updates the ThreatIntelSet specified by ThreatIntelSet ID.
 
 
 ## AWS - IAM (user lifecycle management)
@@ -249,14 +249,14 @@ Integrate with AWS-ILM Identity Access Management service to execute CRUD (creat
 
 **Commands:**
 
-- `iam-create-user`: 
-- `iam-update-user`: 
-- `iam-get-user`: 
-- `iam-disable-user`: 
-- `iam-get-group`: 
-- `iam-create-group`: 
-- `iam-update-group`: 
-- `iam-delete-group`: 
+- `iam-create-user`: Creates a user.
+- `iam-update-user`: Updates an existing user with the data passed in the user-profile argument.
+- `iam-get-user`: Retrieves a single user resource.
+- `iam-disable-user`: Disable an active user.
+- `iam-get-group`: Retrieves a group
+- `iam-create-group`: Creates an empty group
+- `iam-update-group`: Updates an existing group resource. This command allows individual (or groups of) users to be added or removed from the group with a single operation. A maximum
+- `iam-delete-group`: Permanently removes a group.
 
 
 ## AWS - IAM Identity Center
@@ -268,21 +268,21 @@ Amazon Web Services Identity and Access Management Identity Center(IAM) For deta
 
 **Commands:**
 
-- `aws-iam-identitycenter-create-user`: 
-- `aws-iam-identitycenter-get-user`: 
-- `aws-iam-identitycenter-list-users`: 
-- `aws-iam-identitycenter-list-groups`: 
-- `aws-iam-identitycenter-list-groups-for-user`: 
-- `aws-iam-identitycenter-add-user-to-group`: 
-- `aws-iam-identitycenter-get-group`: 
-- `aws-iam-identitycenter-get-user-by-email`: 
-- `aws-iam-identitycenter-list-memberships`: 
-- `aws-iam-identitycenter-delete-user`: 
-- `aws-iam-identitycenter-delete-group`: 
-- `aws-iam-identitycenter-create-group`: 
-- `aws-iam-identitycenter-update-group`: 
-- `aws-iam-identitycenter-update-user`: 
-- `aws-iam-identitycenter-delete-group-membership`: 
+- `aws-iam-identitycenter-create-user`: Creates a new IAM Identity Center user for your AWS account.
+- `aws-iam-identitycenter-get-user`: Retrieves information about the specified IAM user.
+- `aws-iam-identitycenter-list-users`: Lists the IAM users, returns all users in the AWS account.
+- `aws-iam-identitycenter-list-groups`: Lists all the IAM groups in the AWS account.
+- `aws-iam-identitycenter-list-groups-for-user`: Lists the IAM Identity Center groups that the specified IAM user belongs to.
+- `aws-iam-identitycenter-add-user-to-group`: Adds the specified user to the specified group.
+- `aws-iam-identitycenter-get-group`: Get AWS IAM Identity Center group Information.
+- `aws-iam-identitycenter-get-user-by-email`: Retrieves information about the specified IAM user.
+- `aws-iam-identitycenter-list-memberships`: Lists the memberships of the group.
+- `aws-iam-identitycenter-delete-user`: Removes the specified user from the AWS IAM Identity Center.
+- `aws-iam-identitycenter-delete-group`: Removes the specified group from the IAM Identity Center.
+- `aws-iam-identitycenter-create-group`: Creates a new IAM Identity Center group for your AWS account.
+- `aws-iam-identitycenter-update-group`: Updates an IAM Identity Center group for your AWS account.
+- `aws-iam-identitycenter-update-user`: Updates an IAM Identity Center user for your AWS account.
+- `aws-iam-identitycenter-delete-group-membership`: Deletes a user from all groups if a username is provided, or deletes multiple memberships if a list of memberships is provided.
 
 
 ## AWS - Identity and Access Management
@@ -294,21 +294,21 @@ Amazon Web Services Identity and Access Management (IAM) For detailed instructio
 
 **Commands:**
 
-- `aws-iam-create-user`: 
-- `aws-iam-get-user`: 
-- `aws-iam-list-users`: 
-- `aws-iam-update-user`: 
-- `aws-iam-delete-user`: 
-- `aws-iam-update-login-profile`: 
-- `aws-iam-create-group`: 
-- `aws-iam-list-groups`: 
-- `aws-iam-list-groups-for-user`: 
-- `aws-iam-add-user-to-group`: 
-- `aws-iam-create-access-key`: 
-- `aws-iam-update-access-key`: 
-- `aws-iam-list-access-keys-for-user`: 
-- `aws-iam-list-policies`: 
-- `aws-iam-list-roles`: 
+- `aws-iam-create-user`: Creates a new IAM user for your AWS account.
+- `aws-iam-get-user`: Retrieves information about the specified IAM user, including the user's creation date, path, unique ID, and ARN.
+- `aws-iam-list-users`: Lists the IAM users, returns all users in the AWS account.
+- `aws-iam-update-user`: Updates the name and/or the path of the specified IAM user.
+- `aws-iam-delete-user`: Deletes the specified IAM user. The user must not belong to any groups or have any access keys, signing certificates, or attached policies.
+- `aws-iam-update-login-profile`: Changes the password for the specified IAM user.
+- `aws-iam-create-group`: Creates a new iam group.
+- `aws-iam-list-groups`: Lists all the IAM groups in the AWS account
+- `aws-iam-list-groups-for-user`: Lists the IAM groups that the specified IAM user belongs to.
+- `aws-iam-add-user-to-group`: Adds the specified user to the specified group.
+- `aws-iam-create-access-key`: Creates a new AWS secret access key and corresponding AWS access key ID for the specified user. The default status for new keys is Active .
+- `aws-iam-update-access-key`: Changes the status of the specified access key from Active to Inactive, or vice versa. This operation can be used to disable a user's key as part of a key rotat
+- `aws-iam-list-access-keys-for-user`: Returns information about the access key IDs associated with the specified IAM user.
+- `aws-iam-list-policies`: Lists all the managed policies that are available in your AWS account, including your own customer-defined managed policies and all AWS managed policies.
+- `aws-iam-list-roles`: Lists all IAM roles
 
 
 ## AWS - Lambda
@@ -320,21 +320,21 @@ Amazon Web Services Serverless Compute service (lambda) This integration was int
 
 **Commands:**
 
-- `aws-lambda-get-function`: 
-- `aws-lambda-list-functions`: 
-- `aws-lambda-list-aliases`: 
-- `aws-lambda-invoke`: 
-- `aws-lambda-get-account-settings`: 
-- `aws-lambda-get-policy`: 
-- `aws-lambda-list-versions-by-function`: 
-- `aws-lambda-get-function-url-config`: 
-- `aws-lambda-get-function-configuration`: 
-- `aws-lambda-delete-function-url-config`: 
-- `aws-lambda-delete-function`: 
-- `aws-lambda-create-function`: 
-- `aws-lambda-publish-layer-version`: 
-- `aws-lambda-list-layer-version`: 
-- `aws-lambda-delete-layer-version`: 
+- `aws-lambda-get-function`: Returns the configuration information of the Lambda function and a presigned URL link to the .zip file you uploaded with CreateFunction so you can download the 
+- `aws-lambda-list-functions`: Returns a list of your Lambda functions. For each function, the response includes the function configuration information. You must use GetFunction to retrieve t
+- `aws-lambda-list-aliases`: Returns list of aliases created for a Lambda function. For each alias, the response includes information such as the alias ARN, description, alias name, and the
+- `aws-lambda-invoke`: Invokes a Lambda function. Specify just a function name to invoke the latest version of the function. To invoke a published version, use the Qualifier parameter
+- `aws-lambda-get-account-settings`: Retrieves details about your account's limits and usage in an AWS Region.
+- `aws-lambda-get-policy`: Returns the resource-based IAM policy for a function, version, or alias.
+- `aws-lambda-list-versions-by-function`: Returns a list of versions, with the version-specific configuration of each.
+- `aws-lambda-get-function-url-config`: Returns details about a Lambda function URL.
+- `aws-lambda-get-function-configuration`: Returns the version-specific settings of a Lambda function or version. The output includes only options that can vary between versions of a function.
+- `aws-lambda-delete-function-url-config`: Deletes a Lambda function URL. When you delete a function URL, you can’t recover it. Creating a new function URL results in a different URL address.
+- `aws-lambda-delete-function`: Deletes a Lambda function. To delete a specific function version, use the Qualifier parameter. Otherwise, all versions and aliases are deleted.
+- `aws-lambda-create-function`: Creates a Lambda function. To create a function, you need a deployment package and an execution role.
+- `aws-lambda-publish-layer-version`: Creates an Lambda layer from a ZIP archive.
+- `aws-lambda-list-layer-version`: Lists the versions of an Lambda layer.
+- `aws-lambda-delete-layer-version`: Deletes a version of an Lambda layer.
 
 
 ## AWS - Organizations
@@ -346,21 +346,21 @@ Manage Amazon Web Services accounts and their resources. For AWS Organizations q
 
 **Commands:**
 
-- `aws-org-root-list`: 
-- `aws-org-children-list`: 
-- `aws-org-parent-list`: 
-- `aws-org-organization-unit-get`: 
-- `aws-org-account-list`: 
-- `aws-org-organization-get`: 
-- `aws-org-organization-unit-create`: 
-- `aws-org-organization-unit-rename`: 
-- `aws-org-organization-unit-delete`: 
-- `aws-org-policy-list`: 
-- `aws-org-policy-get`: 
-- `aws-org-policy-attach`: 
-- `aws-org-policy-target-list`: 
-- `aws-org-target-policy-list`: 
-- `aws-org-policy-delete`: 
+- `aws-org-root-list`: List the roots that are defined in the current organization.
+- `aws-org-children-list`: List all of the organizational units (OUs) or accounts that are contained in the specified parent OU or root.
+- `aws-org-parent-list`: Lists all of the organizational units (OUs) or accounts that are a parent OU or root of the specified child. This command returns only the immediate parents in 
+- `aws-org-organization-unit-get`: Retrieve information about an organizational unit (OU). This command can be called only from the organization's management account or by a member account that i
+- `aws-org-account-list`: Lists all the accounts in the organization or a specific account by ID.
+- `aws-org-organization-get`: Retrieves information about the organization that the user's account belongs to.
+- `aws-org-organization-unit-create`: Creates an organizational unit (OU) within a root or parent OU. An OU is a container for accounts that enables the organization of accounts to apply policies ac
+- `aws-org-organization-unit-rename`: Renames the specified organizational unit (OU). The ID and ARN don’t change. The child OUs and accounts remain in place, and any attached policies of the OU rem
+- `aws-org-organization-unit-delete`: Deletes an organizational unit (OU) from a root or another OU. All accounts and child OUs must first be removed.
+- `aws-org-policy-list`: Retrieves the list of all policies in an organization of a specified type.
+- `aws-org-policy-get`: Retrieves information about a policy.
+- `aws-org-policy-attach`: Attaches a policy to a root, an organizational unit (OU), or an individual account.
+- `aws-org-policy-target-list`: Lists all the roots, organizational units (OUs), and accounts that the specified policy is attached to.
+- `aws-org-target-policy-list`: Lists the policies that are directly attached to the specified target root, organizational unit (OU), or account.
+- `aws-org-policy-delete`: Deletes the specified policy from the organization. Before performing this operation, the policy must be detached from all organizational units (OUs), roots, an
 
 
 ## AWS - Route53
@@ -372,13 +372,13 @@ Amazon Web Services Managed Cloud DNS Service
 
 **Commands:**
 
-- `aws-route53-create-record`: 
-- `aws-route53-delete-record`: 
-- `aws-route53-list-hosted-zones`: 
-- `aws-route53-list-resource-record-sets`: 
-- `aws-route53-waiter-resource-record-sets-changed`: 
-- `aws-route53-test-dns-answer`: 
-- `aws-route53-upsert-record`: 
+- `aws-route53-create-record`: Creates a resource record set. Creates a resource record set that has the specified values.
+- `aws-route53-delete-record`: Deletes a resource record set. Deletes an existing resource record set that has the specified values.
+- `aws-route53-list-hosted-zones`: Retrieves a list of the public and private hosted zones that are associated with the current AWS account.
+- `aws-route53-list-resource-record-sets`: Lists the resource record sets in a specified hosted zone.
+- `aws-route53-waiter-resource-record-sets-changed`: A waiter function that waits until record set change is successful
+- `aws-route53-test-dns-answer`: Gets the value that Amazon Route 53 returns in response to a DNS request for a specified record name and type. You can optionally specify the IP address of a DN
+- `aws-route53-upsert-record`: Upsert a resource record set. If a resource record set does not already exist, AWS creates it. If a resource set does exist, Amazon Route 53 updates it with the
 
 
 ## AWS - S3
@@ -390,18 +390,18 @@ Amazon Web Services Simple Storage Service (S3). This integration was integrated
 
 **Commands:**
 
-- `aws-s3-create-bucket`: 
-- `aws-s3-delete-bucket`: 
-- `aws-s3-list-buckets`: 
-- `aws-s3-get-bucket-policy`: 
-- `aws-s3-delete-bucket-policy`: 
-- `aws-s3-download-file`: 
-- `aws-s3-list-bucket-objects`: 
-- `aws-s3-put-bucket-policy`: 
-- `aws-s3-upload-file`: 
-- `aws-s3-get-public-access-block`: 
-- `aws-s3-put-public-access-block`: 
-- `aws-s3-get-bucket-encryption`: 
+- `aws-s3-create-bucket`: Create AWS S3 bucket.
+- `aws-s3-delete-bucket`: Delete AWS S3 bucket.
+- `aws-s3-list-buckets`: List all S3 buckets in AWS account
+- `aws-s3-get-bucket-policy`: Get AWS S3 Bucket Policy
+- `aws-s3-delete-bucket-policy`: Deletes the policy from the bucket.
+- `aws-s3-download-file`: Download a file from S3 bucket to war room.
+- `aws-s3-list-bucket-objects`: List object in S3 bucket.
+- `aws-s3-put-bucket-policy`: Replaces a policy on a bucket. If the bucket already has a policy, the one in this request completely replaces it.
+- `aws-s3-upload-file`: Upload file to S3 bucket
+- `aws-s3-get-public-access-block`: Retrieves the PublicAccessBlock configuration for an Amazon S3 bucket.
+- `aws-s3-put-public-access-block`: Creates or modifies the PublicAccessBlock configuration for an Amazon S3 bucket.
+- `aws-s3-get-bucket-encryption`: Get AWS S3 Bucket Encryption
 
 
 ## AWS - Security Hub
@@ -410,8 +410,14 @@ Amazon Web Services Simple Storage Service (S3). This integration was integrated
 **Product:** AWS - Security Hub  
 **Commands:**
 
-- `aws-securityhub-disable-security-hub`: 
-- `aws-securityhub-batch-update-findings`: 
+- `aws-securityhub-disable-security-hub`: Disables Security Hub in your account only in the current Region. To disable Security Hub in all Regions, you must submit one request per Region where you have 
+- `aws-securityhub-batch-update-findings`: Used by Security Hub customers to update information about their investigation into a finding. Requested by master accounts or member accounts. Master accounts 
+- `aws-securityhub-enable-security-hub`: Enables Security Hub for your account in the current Region or the Region you specify in the request. Enabling Security Hub also enables the CIS AWS Foundations
+- `aws-securityhub-get-findings`: Returns a list of findings that match the specified criteria.
+- `aws-securityhub-get-master-account`: Provides the details for the Security Hub master account to the current member account.
+- `aws-securityhub-list-members`: Lists details about all member accounts for the current Security Hub master account.
+- `get-remote-data`: Get remote data from a remote incident. This method does not update the current incident, and should be used for debugging purposes only.
+- `get-mapping-fields`: Returns the list of fields to map in outgoing mirroring. This command is only used for debugging purposes.
 
 
 ## AWS - Security Hub v2
@@ -423,13 +429,13 @@ Unified security and compliance findings management using the AWS Security Hub V
 
 **Commands:**
 
-- `aws-securityhub-v2-security-hub-enable`: 
-- `aws-securityhub-v2-security-hub-disable`: 
-- `aws-securityhub-v2-findings-get`: 
-- `aws-securityhub-v2-findings-batch-update`: 
-- `get-remote-data`: 
-- `get-mapping-fields`: 
-- `update-remote-system`: 
+- `aws-securityhub-v2-security-hub-enable`: Enables AWS Security Hub V2 for the configured account and region. Required IAM Permission: securityhub:EnableSecurityHubV2.
+- `aws-securityhub-v2-security-hub-disable`: Disables AWS Security Hub V2 for the configured account and region. Required IAM Permission: securityhub:DisableSecurityHubV2.
+- `aws-securityhub-v2-findings-get`: Retrieves a list of OCSF-formatted findings from AWS Security Hub V2. Required IAM Permission: securityhub:GetFindingsV2.
+- `aws-securityhub-v2-findings-batch-update`: Updates one or more AWS Security Hub V2 findings in a single batch request. Findings are targeted by metadata_uids and/or finding_identifiers. Required IAM Perm
+- `get-remote-data`: Returns the updated data of a single mirrored AWS Security Hub V2 finding. This command is used for mirroring and is not intended to be run manually.
+- `get-mapping-fields`: Returns the list of fields available for outgoing mirroring. This command is used for mirroring and is not intended to be run manually.
+- `update-remote-system`: Pushes local (the platform. This command is used for mirroring and is not intended to be run manually.
 
 
 ## AWS - SNS
@@ -441,9 +447,9 @@ Amazon Web Services Simple Notification Service (SNS) For more information regar
 
 **Commands:**
 
-- `aws-sns-create-subscription`: 
-- `aws-sns-send-message`: 
-- `aws-sns-delete-topic`: 
+- `aws-sns-create-subscription`: Subscribes an endpoint to an Amazon SNS topic. If the endpoint type is HTTP/S or email, or if the endpoint and the topic are not in the same Amazon Web Services
+- `aws-sns-send-message`: Sends a message to an Amazon SNS topic, a text message (SMS message) directly to a phone number, or a message to a mobile platform endpoint (when you specify th
+- `aws-sns-delete-topic`: Deletes a topic and all its subscriptions.
 
 
 ## AWS - SQS
@@ -455,12 +461,12 @@ Amazon Web Services Simple Queuing Service (SQS) For more information regarding 
 
 **Commands:**
 
-- `aws-sqs-get-queue-url`: 
-- `aws-sqs-list-queues`: 
-- `aws-sqs-send-message`: 
-- `aws-sqs-create-queue`: 
-- `aws-sqs-delete-queue`: 
-- `aws-sqs-purge-queue`: 
+- `aws-sqs-get-queue-url`: Returns the URL of an existing queue. To access a queue that belongs to another AWS account, use the queueOwnerAWSAccountId parameter to specify the account ID 
+- `aws-sqs-list-queues`: Returns a list of your queues. The maximum number of queues that can be returned is 1,000. If you specify a value for the optional QueueNamePrefix parameter, on
+- `aws-sqs-send-message`: Delivers a message to the specified queue.
+- `aws-sqs-create-queue`: Creates a new standard or FIFO queue. You can pass one or more attributes in the request.
+- `aws-sqs-delete-queue`: Deletes the queue specified by the QueueUrl , regardless of the queue's contents. If the specified queue doesn't exist, Amazon SQS returns a successful response
+- `aws-sqs-purge-queue`: Deletes the messages in a queue specified by the QueueURL parameter.
 
 
 ## AWS - System Manager
@@ -472,21 +478,21 @@ AWS Systems Manager is the operations hub for your AWS applications and resource
 
 **Commands:**
 
-- `aws-ssm-tag-add`: 
-- `aws-ssm-tag-remove`: 
-- `aws-ssm-tag-list`: 
-- `aws-ssm-inventory-list`: 
-- `aws-ssm-inventory-entry-list`: 
-- `aws-ssm-association-list`: 
-- `aws-ssm-association-get`: 
-- `aws-ssm-association-version-list`: 
-- `aws-ssm-document-list`: 
-- `aws-ssm-document-get`: 
-- `aws-ssm-automation-execution-run`: 
-- `aws-ssm-automation-execution-cancel`: 
-- `aws-ssm-automation-execution-list`: 
-- `aws-ssm-command-list`: 
-- `aws-ssm-command-run`: 
+- `aws-ssm-tag-add`: Adds or overwrites one tag for the specified resource. Tags are metadata that you can assign to the automations, documents, managed nodes, maintenance windows, 
+- `aws-ssm-tag-remove`: Removes tag keys from the specified resource.
+- `aws-ssm-tag-list`: Returns a list of the tags assigned to the specified resource.
+- `aws-ssm-inventory-list`: Query inventory information. This includes the managed node status, such as Stopped or Terminated.
+- `aws-ssm-inventory-entry-list`: A list of inventory items returned by the request.
+- `aws-ssm-association-list`: Returns all State Manager associations in the current Amazon Web Services account and Amazon Web Services Region. Note: An association is a binding between a do
+- `aws-ssm-association-get`: Describes the association for the specified target or managed node. If the association was established using the Targets parameter, the association details must
+- `aws-ssm-association-version-list`: Retrieves all versions of an association for a specific association ID.
+- `aws-ssm-document-list`: Returns all Systems Manager (SSM) documents in the current Amazon Web Services account and Amazon Web Services Region.
+- `aws-ssm-document-get`: Describes the specified Amazon Web Services Systems Manager document (SSM document).
+- `aws-ssm-automation-execution-run`: Initiates execution of an Automation runbook.
+- `aws-ssm-automation-execution-cancel`: Stop an Automation execution.
+- `aws-ssm-automation-execution-list`: If the argument execution_id is provided, the command returns detailed information about a particular Automation execution. if not provided, the command provide
+- `aws-ssm-command-list`: Lists the commands requested by users of the Amazon Web Services account.
+- `aws-ssm-command-run`: Runs commands on one or more managed nodes.
 
 
 ## AWS - Unclaimed S3 Bucket Validation
@@ -510,21 +516,21 @@ AWS Network Firewall is a stateful, managed, network firewall and intrusion dete
 
 **Commands:**
 
-- `aws-network-firewall-associate-firewall-policy`: 
-- `aws-network-firewall-associate-subnets`: 
-- `aws-network-firewall-create-firewall`: 
-- `aws-network-firewall-create-firewall-policy`: 
-- `aws-network-firewall-create-rule-group`: 
-- `aws-network-firewall-delete-firewall`: 
-- `aws-network-firewall-delete-firewall-policy`: 
-- `aws-network-firewall-delete-resource-policy`: 
-- `aws-network-firewall-delete-rule-group`: 
-- `aws-network-firewall-describe-firewall`: 
-- `aws-network-firewall-describe-firewall-policy`: 
-- `aws-network-firewall-describe-logging-configuration`: 
-- `aws-network-firewall-describe-resource-policy`: 
-- `aws-network-firewall-describe-rule-group`: 
-- `aws-network-firewall-disassociate-subnets`: 
+- `aws-network-firewall-associate-firewall-policy`: Associates a FirewallPolicy to a Firewall. A firewall policy defines how to monitor and manage your VPC network traffic, using a collection of inspection rule g
+- `aws-network-firewall-associate-subnets`: Associates the specified subnets in the Amazon VPC to the firewall. You can specify one subnet for each of the Availability Zones that the VPC spans. This reque
+- `aws-network-firewall-create-firewall`: Creates an AWS Network Firewall Firewall and accompanying FirewallStatus for a VPC. The firewall defines the configuration settings for an AWS Network Firewall 
+- `aws-network-firewall-create-firewall-policy`: Creates the firewall policy for the firewall according to the specifications. An AWS Network Firewall firewall policy defines the behavior of a firewall, in a c
+- `aws-network-firewall-create-rule-group`: Creates the specified stateless or stateful rule group, which includes the rules for network traffic inspection, a capacity setting, and tags. You provide your 
+- `aws-network-firewall-delete-firewall`: Deletes the specified Firewall and its FirewallStatus. This operation requires the firewall's DeleteProtection flag to be FALSE. You can't revert this operation
+- `aws-network-firewall-delete-firewall-policy`: Deletes the specified FirewallPolicy.
+- `aws-network-firewall-delete-resource-policy`: Deletes a resource policy that you created in a PutResourcePolicy request.
+- `aws-network-firewall-delete-rule-group`: Deletes the specified RuleGroup.
+- `aws-network-firewall-describe-firewall`: Returns the data objects for the specified firewall.
+- `aws-network-firewall-describe-firewall-policy`: Returns the data objects for the specified firewall policy.
+- `aws-network-firewall-describe-logging-configuration`: Returns the logging configuration for the specified firewall.
+- `aws-network-firewall-describe-resource-policy`: Retrieves a resource policy that you created in a PutResourcePolicy request.
+- `aws-network-firewall-describe-rule-group`: Returns the data objects for the specified rule group.
+- `aws-network-firewall-disassociate-subnets`: Removes the specified subnet associations from the firewall. This removes the firewall endpoints from the subnets and removes any network filtering protections 
 
 
 ## AWS Sagemaker
@@ -536,7 +542,7 @@ AWS Sagemaker - the platform
 
 **Commands:**
 
-- `predict-phishing`: 
+- `predict-phishing`: Classify input text (usually email content)
 
 
 ## Aws Secrets Manager
@@ -548,7 +554,11 @@ AWS Secrets Manager helps you to securely encrypt, store, and retrieve credentia
 
 **Commands:**
 
-- `aws-secrets-manager-secret-list`: 
+- `aws-secrets-manager-secret-list`: Retrieve all secrets.
+- `aws-secrets-manager-secret–value-get`: Retrieve a secret value by key.
+- `aws-secrets-manager-secret–delete`: Delete a specific secret.
+- `aws-secrets-manager-secret–restore`: Restore a specific secret after deletion.
+- `aws-secrets-manager-secret–policy-get`: Get the Secret Manager policy for a specific secret.
 
 
 ## AWS-EKS
@@ -560,12 +570,12 @@ The AWS EKS integration allows for the management and operation of Amazon Elasti
 
 **Commands:**
 
-- `aws-eks-list-clusters`: 
-- `aws-eks-update-cluster-config`: 
-- `aws-eks-describe-cluster`: 
-- `aws-eks-create-access-entry`: 
-- `aws-eks-associate-access-policy`: 
-- `aws-eks-update-access-entry`: 
+- `aws-eks-list-clusters`: Lists the Amazon EKS clusters in your Amazon Web Services account in the specified Amazon Web Services Region.
+- `aws-eks-update-cluster-config`: Updates an Amazon EKS cluster configuration. Only one type of update is allowed. Potentially harmful: once the authentication mode is updated to 'API' it is irr
+- `aws-eks-describe-cluster`: Describes an Amazon EKS cluster.
+- `aws-eks-create-access-entry`: Creates an access entry.
+- `aws-eks-associate-access-policy`: Associates an access policy and its scope to an access entry.
+- `aws-eks-update-access-entry`: Updates an access entry.
 
 
 ## AWS-WAF
@@ -577,21 +587,21 @@ Amazon Web Services Web Application Firewall (WAF)
 
 **Commands:**
 
-- `aws-waf-ip-set-create`: 
-- `aws-waf-ip-set-get`: 
-- `aws-waf-ip-set-update`: 
-- `aws-waf-ip-set-list`: 
-- `aws-waf-ip-set-delete`: 
-- `aws-waf-regex-set-create`: 
-- `aws-waf-regex-set-get`: 
-- `aws-waf-regex-set-update`: 
-- `aws-waf-regex-set-list`: 
-- `aws-waf-regex-set-delete`: 
-- `aws-waf-rule-group-list`: 
-- `aws-waf-rule-group-get`: 
-- `aws-waf-rule-group-delete`: 
-- `aws-waf-rule-group-create`: 
-- `aws-waf-ip-rule-create`: 
+- `aws-waf-ip-set-create`: Create a new IP set.
+- `aws-waf-ip-set-get`: Get a specific IP set.
+- `aws-waf-ip-set-update`: Update an IP set.
+- `aws-waf-ip-set-list`: Lists IP sets.
+- `aws-waf-ip-set-delete`: Delete a specific IP set.
+- `aws-waf-regex-set-create`: Create a new regex set.
+- `aws-waf-regex-set-get`: Get a specific regex set.
+- `aws-waf-regex-set-update`: Update a regex set.
+- `aws-waf-regex-set-list`: Lists regex sets.
+- `aws-waf-regex-set-delete`: Delete a specific regex set.
+- `aws-waf-rule-group-list`: Lists rule groups.
+- `aws-waf-rule-group-get`: Get a specific rule group.
+- `aws-waf-rule-group-delete`: Delete a specific rule group.
+- `aws-waf-rule-group-create`: Create a new rule group.
+- `aws-waf-ip-rule-create`: Create an IP rule.
 
 
 ## AWSAccountHierarchy
@@ -700,21 +710,21 @@ Cloud integrations are installed from the Data Sources page. To configure a clou
 
 **Commands:**
 
-- `azure-nsg-security-rule-update`: 
-- `azure-storage-accounts-list`: 
-- `azure-storage-blob-containers-list`: 
-- `azure-storage-account-update`: 
-- `azure-storage-blob-service-properties-set`: 
-- `azure-policy-assignment-create`: 
-- `azure-postgres-config-set`: 
-- `azure-webapp-config-set`: 
-- `azure-webapp-auth-update`: 
-- `azure-mysql-flexible-server-param-set`: 
-- `azure-monitor-log-profile-update`: 
-- `azure-disk-update`: 
-- `azure-webapp-update`: 
-- `azure-acr-update`: 
-- `azure-postgres-server-update`: 
+- `azure-nsg-security-rule-update`: Update a security rule. If one does not exist, it will be created. The command is deprecated, please use azure-vn-security-rule-update. Required Permissions: Mi
+- `azure-storage-accounts-list`: Lists storage accounts, or retrieves a single storage account when an account name is provided. Required permission: Microsoft.Storage/storageAccounts/read.
+- `azure-storage-blob-containers-list`: Lists blob containers, or retrieves a single blob container when a container name is provided. Required permission: Microsoft.Storage/storageAccounts/blobServic
+- `azure-storage-account-update`: Updates a specific account storage. Required permissions: Microsoft.Storage/storageAccounts/read, Microsoft.Storage/storageAccounts/write.
+- `azure-storage-blob-service-properties-set`: Sets properties for the blob service in a specific account storage. The command is deprecated, please use azure-storage-blob-service-property-set. Required Perm
+- `azure-policy-assignment-create`: Creates a policy assignment. Required permissions: Microsoft.Authorization/policyAssignments/read, Microsoft.Authorization/policyAssignments/write.
+- `azure-postgres-config-set`: Updates a configuration of a server. The command is deprecated due to the retirement of Azure PostgreSQL Single Server.
+- `azure-webapp-config-set`: Updates the configuration settings of an existing Azure Web App. The command is deprecated, please use azure-appservice-webapp-config-update. Required Permissio
+- `azure-webapp-auth-update`: Updates the authentication and authorization settings of an existing Azure Web App. The command is deprecated, please use azure-appservice-webapp-auth-settings-
+- `azure-mysql-flexible-server-param-set`: Updates a server configuration. Required permissions: Microsoft.DBforMySQL/flexibleServers/configurations/read, Microsoft.DBforMySQL/flexibleServers/configurati
+- `azure-monitor-log-profile-update`: Updates a log profile in Azure Monitoring REST API. Required permissions: Microsoft.Insights/logprofiles/read, Microsoft.Insights/logprofiles/write.
+- `azure-disk-update`: Updates a disk. The command is deprecated, please use azure-compute-disk-update. Required Permissions: Microsoft.Compute/disks/read, Microsoft.Compute/disks/wri
+- `azure-webapp-update`: Updates an Azure Web App. The command is deprecated, please use azure-appservice-webapp-update. Required Permissions: Microsoft.Web/sites/read, Microsoft.Web/si
+- `azure-acr-update`: Updates a container registry. The command is deprecated, please use azure-cr-registry-update. Required Permissions: Microsoft.ContainerRegistry/registries/read,
+- `azure-postgres-server-update`: Updates an existing server. The command is deprecated due to the retirement of Azure PostgreSQL Single Server.
 
 
 ## Azure Compute v2
@@ -726,19 +736,19 @@ You can use this integration to create and manage Azure Virtual Machines. This i
 
 **Commands:**
 
-- `azure-vm-list-instances`: 
-- `azure-vm-start-instance`: 
-- `azure-vm-poweroff-instance`: 
-- `azure-vm-get-instance-details`: 
-- `azure-vm-create-instance`: 
-- `azure-list-resource-groups`: 
-- `azure-vm-delete-instance`: 
-- `azure-list-subscriptions`: 
-- `azure-vm-get-nic-details`: 
-- `azure-vm-get-public-ip-details`: 
-- `azure-vm-get-all-public-ip-details`: 
-- `azure-vm-create-nic`: 
-- `azure-vm-auth-reset`: 
+- `azure-vm-list-instances`: Lists the virtual machine instances in the given resource group.
+- `azure-vm-start-instance`: Powers on a given virtual machine.
+- `azure-vm-poweroff-instance`: Powers off a given virtual machine.
+- `azure-vm-get-instance-details`: Gets the properties of a given virtual machine.
+- `azure-vm-create-instance`: Creates a virtual machine instance with the specified OS image.
+- `azure-list-resource-groups`: Lists all resource groups that belong to your Azure subscription.
+- `azure-vm-delete-instance`: Deletes a specified virtual machine.
+- `azure-list-subscriptions`: Lists the subscriptions for this application.
+- `azure-vm-get-nic-details`: Gets the properties of a given network interface.
+- `azure-vm-get-public-ip-details`: Gets the properties of a given public IP address.
+- `azure-vm-get-all-public-ip-details`: Gets the properties of all public ip address in a subscription.
+- `azure-vm-create-nic`: Creates a virtual machine network interface.
+- `azure-vm-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
 
 
 ## Azure Data Explorer
@@ -750,15 +760,15 @@ Use the Azure Data Explorer integration to collect and analyze data inside Azure
 
 **Commands:**
 
-- `azure-data-explorer-search-query-execute`: 
-- `azure-data-explorer-search-query-list`: 
-- `azure-data-explorer-running-search-query-list`: 
-- `azure-data-explorer-running-search-query-cancel`: 
-- `azure-data-explorer-auth-start`: 
-- `azure-data-explorer-auth-complete`: 
-- `azure-data-explorer-auth-reset`: 
-- `azure-data-explorer-auth-test`: 
-- `azure-data-explorer-generate-login-url`: 
+- `azure-data-explorer-search-query-execute`: Execute a Kusto Query Language (KQL) query against the given database inside a cluster. The Kusto query is a read-only request to process data and return result
+- `azure-data-explorer-search-query-list`: List search queries that have reached a final state in the given database. A database admin or database monitor can see any command that was invoked on their da
+- `azure-data-explorer-running-search-query-list`: List currently executing search queries in the given database. A database admin or database monitor can see any search query that was invoked on their database.
+- `azure-data-explorer-running-search-query-cancel`: Starts a best-effort attempt to cancel a specific running search query in the specified database.
+- `azure-data-explorer-auth-start`: Run this command to start the authorization process and follow the instructions in the command results.
+- `azure-data-explorer-auth-complete`: Run this command to complete the authorization process. This should be used after running the azure-data-explorer-auth-start command.
+- `azure-data-explorer-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
+- `azure-data-explorer-auth-test`: Run this command to test the connectivity to Azure Data Explorer.
+- `azure-data-explorer-generate-login-url`: Generate the login url used for Authorization code flow.
 
 
 ## Azure Firewall
@@ -770,21 +780,21 @@ Azure Firewall is a cloud-native and intelligent network firewall security servi
 
 **Commands:**
 
-- `azure-firewall-auth-test`: 
-- `azure-firewall-auth-start`: 
-- `azure-firewall-auth-complete`: 
-- `azure-firewall-auth-reset`: 
-- `azure-firewall-list`: 
-- `azure-firewall-get`: 
-- `azure-firewall-rule-collection-list`: 
-- `azure-firewall-rule-list`: 
-- `azure-firewall-rule-get`: 
-- `azure-firewall-policy-create`: 
-- `azure-firewall-policy-update`: 
-- `azure-firewall-policy-get`: 
-- `azure-firewall-policy-delete`: 
-- `azure-firewall-policy-list`: 
-- `azure-firewall-policy-attach`: 
+- `azure-firewall-auth-test`: Tests the connectivity to Azure.
+- `azure-firewall-auth-start`: Run this command to start the authorization process and follow the instructions in the command results.
+- `azure-firewall-auth-complete`: Run this command to complete the authorization process. Should be used after running the azure-firewall-auth-start command.
+- `azure-firewall-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
+- `azure-firewall-list`: List Azure firewalls in the specified resource group or subscription.
+- `azure-firewall-get`: Retrieve Azure firewall information.
+- `azure-firewall-rule-collection-list`: List the collection rules in the firewall or policy. One of the arguments 'firewall_name' or 'policy' must be provided.
+- `azure-firewall-rule-list`: List rules in the firewall or in the policy. One of the arguments 'firewall_name' or 'policy' must be provided.
+- `azure-firewall-rule-get`: Retrieve rule information. One of the arguments 'firewall_name' or 'policy' must be provided.
+- `azure-firewall-policy-create`: Create a firewall policy. This command only creates the policy resource. In order to attach the policy to a firewall, run the 'azure-firewall-policy-attach' com
+- `azure-firewall-policy-update`: Update the policy resource. The command will update the provided arguments.
+- `azure-firewall-policy-get`: Retrieve policy information.
+- `azure-firewall-policy-delete`: Delete policy resource.
+- `azure-firewall-policy-list`: List the policy in the resource group or subscription.
+- `azure-firewall-policy-attach`: Attach a policy to a firewall. The policy and firewall have to belong to the same tier.
 
 
 ## Azure Key Vault
@@ -796,21 +806,21 @@ Use the Azure Key Vault integration to safeguard and manage cryptographic keys a
 
 **Commands:**
 
-- `azure-key-vault-create-update`: 
-- `azure-key-vault-delete`: 
-- `azure-key-vault-get`: 
-- `azure-key-vault-list`: 
-- `azure-key-vault-access-policy-update`: 
-- `azure-key-vault-key-get`: 
-- `azure-key-vault-key-list`: 
-- `azure-key-vault-key-delete`: 
-- `azure-key-vault-secret-get`: 
-- `azure-key-vault-secret-list`: 
-- `azure-key-vault-secret-delete`: 
-- `azure-key-vault-certificate-get`: 
-- `azure-key-vault-certificate-list`: 
-- `azure-key-vault-certificate-policy-get`: 
-- `azure-key-vault-subscriptions-list`: 
+- `azure-key-vault-create-update`: Create or update a key vault in the specified subscription. If the Key Vault exists, the updated properties will overwrite the existing ones. Please use azure-k
+- `azure-key-vault-delete`: Delete the specified key vault.
+- `azure-key-vault-get`: Get the specified key vault.
+- `azure-key-vault-list`: The List operation gets information about the vaults associated with the subscription. For a limit greater than 25, more than one API call will be required and 
+- `azure-key-vault-access-policy-update`: Update access policies in a key vault in the specified subscription. The update regards only the access policy for the specified object ID.
+- `azure-key-vault-key-get`: Get the public part of a stored key. This operation requires the keys/get permission.
+- `azure-key-vault-key-list`: List keys in the specified vault. For a limit greater than 25, more than one API call will be required and the command might take longer time. This operation re
+- `azure-key-vault-key-delete`: Delete a key of any type from storage in Azure Key vault. This operation requires the keys/delete permission.
+- `azure-key-vault-secret-get`: Get a specified secret from a given key vault. The GET operation is applicable to any secret stored in Azure Key Vault. This operation requires the secrets/get 
+- `azure-key-vault-secret-list`: List secrets in a specified key vault. For a limit greater than 25, more than one API call will be required and the command might take longer time. This operati
+- `azure-key-vault-secret-delete`: Delete a secret from a specified key vault. This operation requires the secrets/delete permission.
+- `azure-key-vault-certificate-get`: Gets information about a specific certificate. This operation requires the certificates/get permission.
+- `azure-key-vault-certificate-list`: List certificates in a specified key vault. For a limit greater than 25, more than one API call will be required and the command might take longer time. This op
+- `azure-key-vault-certificate-policy-get`: Get the policy of the specified certificate.This operation requires the certificates/get permission.
+- `azure-key-vault-subscriptions-list`: List all subscriptions for a tenant.
 
 
 ## Azure Kubernetes Services
@@ -822,15 +832,15 @@ Deploy and manage containerized applications with a fully managed Kubernetes ser
 
 **Commands:**
 
-- `azure-ks-auth-test`: 
-- `azure-ks-auth-start`: 
-- `azure-ks-auth-complete`: 
-- `azure-ks-auth-reset`: 
-- `azure-ks-clusters-list`: 
-- `azure-ks-cluster-addon-update`: 
-- `azure-ks-generate-login-url`: 
-- `azure-ks-resource-group-list`: 
-- `azure-ks-subscriptions-list`: 
+- `azure-ks-auth-test`: Tests the connectivity to Azure.
+- `azure-ks-auth-start`: Run this command to start the authorization process and follow the instructions in the command results.
+- `azure-ks-auth-complete`: Run this command to complete the authorization process. Should be used after running the azure-ks-auth-start command.
+- `azure-ks-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
+- `azure-ks-clusters-list`: Gets a list of managed clusters in the specified subscription.
+- `azure-ks-cluster-addon-update`: Updates a managed cluster with the specified configuration.
+- `azure-ks-generate-login-url`: Generate the login url used for Authorization code flow.
+- `azure-ks-resource-group-list`: Gets all resource groups for a subscription.
+- `azure-ks-subscriptions-list`: Gets all subscriptions for a tenant.
 
 
 ## Azure Log Analytics
@@ -842,7 +852,7 @@ Log Analytics is a service that helps you collect and analyze data generated by 
 
 **Commands:**
 
-- `azure-log-analytics-execute-query`: 
+- `azure-log-analytics-execute-query`: Executes an Analytics query for data.
 
 
 ## Azure Log Analytics - Query From Saved Search
@@ -867,21 +877,21 @@ Azure network security groups are used to filter network traffic to and from Azu
 
 **Commands:**
 
-- `azure-nsg-security-groups-list`: 
-- `azure-nsg-security-rules-list`: 
-- `azure-nsg-auth-test`: 
-- `azure-nsg-auth-start`: 
-- `azure-nsg-auth-complete`: 
-- `azure-nsg-auth-reset`: 
-- `azure-nsg-security-rule-delete`: 
-- `azure-nsg-security-rule-create`: 
-- `azure-nsg-security-rule-update`: 
-- `azure-nsg-security-rule-get`: 
-- `azure-nsg-generate-login-url`: 
-- `azure-nsg-subscriptions-list`: 
-- `azure-nsg-resource-group-list`: 
-- `azure-nsg-network-interfaces-create`: 
-- `azure-nsg-virtual-networks-list`: 
+- `azure-nsg-security-groups-list`: List all network security groups.
+- `azure-nsg-security-rules-list`: List all rules of the specified security groups.
+- `azure-nsg-auth-test`: Tests the connectivity to the Azure Network Security Groups.
+- `azure-nsg-auth-start`: Run this command to start the authorization process and follow the instructions in the command results.
+- `azure-nsg-auth-complete`: Run this command to complete the authorization process. Should be used after running the azure-nsg-auth-start command.
+- `azure-nsg-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
+- `azure-nsg-security-rule-delete`: Delete a security rule.
+- `azure-nsg-security-rule-create`: Create a security rule.
+- `azure-nsg-security-rule-update`: Update a security rule. If one does not exist, it will be created.
+- `azure-nsg-security-rule-get`: Get a specific rule.
+- `azure-nsg-generate-login-url`: Generate the login url used for Authorization code.
+- `azure-nsg-subscriptions-list`: Gets all subscriptions for a tenant.
+- `azure-nsg-resource-group-list`: Gets all resource groups for a subscription.
+- `azure-nsg-network-interfaces-create`: Creates or updates a network interface.
+- `azure-nsg-virtual-networks-list`: Gets virtual networks in a resource group.
 
 
 ## Azure Open AI Service
@@ -893,7 +903,7 @@ Azure Open AI ServiceAI
 
 **Commands:**
 
-- `azure-openai-send-message`: 
+- `azure-openai-send-message`: Send message to Azure Open AI
 
 
 ## Azure Resource Graph
@@ -907,7 +917,7 @@ Azure Resource Graph is an Azure service designed to extend Azure Resource Manag
 
 - `azure-rg-list-operations`: 
 - `azure-rg-query`: 
-- `azure-rg-auth-reset`: 
+- `azure-rg-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
 
 
 ## Azure Risky Users
@@ -919,16 +929,16 @@ Azure Risky Users provides access to all at-risk users and risk detections in Az
 
 **Commands:**
 
-- `azure-risky-users-auth-test`: 
-- `azure-risky-users-auth-start`: 
-- `azure-risky-users-auth-complete`: 
-- `azure-risky-users-auth-reset`: 
-- `azure-risky-users-list`: 
-- `azure-risky-user-get`: 
-- `azure-risky-users-risk-detections-list`: 
-- `azure-risky-users-risk-detection-get`: 
-- `azure-risky-users-confirm-safe`: 
-- `azure-risky-users-confirm-compromise`: 
+- `azure-risky-users-auth-test`: Tests the connectivity to Azure.
+- `azure-risky-users-auth-start`: Run this command to start the authorization process and follow the instructions in the command results.
+- `azure-risky-users-auth-complete`: Run this command to complete the authorization process. Should be used after running the azure-risky-users-auth-start command.
+- `azure-risky-users-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
+- `azure-risky-users-list`: Returns a list of all risky users and their properties.
+- `azure-risky-user-get`: Retrieve properties and relationships of a Risky User.
+- `azure-risky-users-risk-detections-list`: Get a list of the riskDetection objects and their properties.
+- `azure-risky-users-risk-detection-get`: Read the properties and relationships of a riskDetection object.
+- `azure-risky-users-confirm-safe`: Confirms user(s) as safe (post-investigation).
+- `azure-risky-users-confirm-compromise`: Confirms user(s) as compromised.
 
 
 ## Azure SQL Management
@@ -940,21 +950,21 @@ Microsoft Azure SQL Management Integration manages the Auditing and Threat Polic
 
 **Commands:**
 
-- `azure-sql-auth-start`: 
-- `azure-sql-auth-complete`: 
-- `azure-sql-auth-reset`: 
-- `azure-sql-auth-test`: 
-- `azure-sql-servers-list`: 
-- `azure-sql-db-list`: 
-- `azure-sql-db-audit-policy-list`: 
-- `azure-sql-db-threat-policy-get`: 
-- `azure-sql-db-audit-policy-create-update`: 
-- `azure-sql-db-threat-policy-create-update`: 
-- `azure-sql-generate-login-url`: 
-- `azure-sql-subscriptions-list`: 
-- `azure-sql-resource-group-list`: 
-- `azure-sql-firewall-rule-list`: 
-- `azure-sql-firewall-rule-create-update`: 
+- `azure-sql-auth-start`: Run this command to start the authorization process and follow the instructions in the command results.
+- `azure-sql-auth-complete`: Run this command to complete the authorization process. Should be used after running the azure-sql-auth-start command.
+- `azure-sql-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
+- `azure-sql-auth-test`: Tests the connectivity to the Azure SQL Management.
+- `azure-sql-servers-list`: Lists all the servers.
+- `azure-sql-db-list`: Lists all of the databases for the server.
+- `azure-sql-db-audit-policy-list`: Gets the audit settings of the specified database.
+- `azure-sql-db-threat-policy-get`: Gets the threat detection policy of the specified database.
+- `azure-sql-db-audit-policy-create-update`: Creates or updates the database's auditing policy.
+- `azure-sql-db-threat-policy-create-update`: Creates or updates the database's threat detection policy.
+- `azure-sql-generate-login-url`: Generate the login url used for Authorization code flow.
+- `azure-sql-subscriptions-list`: Gets all subscriptions for a tenant.
+- `azure-sql-resource-group-list`: Gets all the resource groups for a subscription.
+- `azure-sql-firewall-rule-list`: Retrieves a list of firewall rules or a specific firewall rule. Required Permissions: Microsoft.Sql/servers/firewallRules/read.
+- `azure-sql-firewall-rule-create-update`: Creates or updates a firewall rule. Required Permissions: Microsoft.Sql/servers/firewallRules/write.
 
 
 ## Azure Storage Container
@@ -966,21 +976,21 @@ Create and Manage Azure Storage Container services. This integration was integra
 
 **Commands:**
 
-- `azure-storage-container-list`: 
-- `azure-storage-container-create`: 
-- `azure-storage-container-property-get`: 
-- `azure-storage-container-delete`: 
-- `azure-storage-container-blob-list`: 
-- `azure-storage-container-blob-create`: 
-- `azure-storage-container-blob-update`: 
-- `azure-storage-container-blob-get`: 
-- `azure-storage-container-blob-tag-get`: 
-- `azure-storage-container-blob-tag-set`: 
-- `azure-storage-container-blob-delete`: 
-- `azure-storage-container-blob-property-get`: 
-- `azure-storage-container-blob-property-set`: 
-- `azure-storage-container-sas-create`: 
-- `azure-storage-container-block-public-access`: 
+- `azure-storage-container-list`: List Containers under the specified storage account.
+- `azure-storage-container-create`: Create a new Container under the specified account.
+- `azure-storage-container-property-get`: Retrieve properties for the specified Container.
+- `azure-storage-container-delete`: Marks the specified Container for deletion. The Container and any Blobs contained within it, will be deleted during garbage collection.
+- `azure-storage-container-blob-list`: List Blobs under the specified container.
+- `azure-storage-container-blob-create`: Create a new Blob under the specified Container.
+- `azure-storage-container-blob-update`: Update the content of an existing Blob.
+- `azure-storage-container-blob-get`: Retrieve Blob from Container.
+- `azure-storage-container-blob-tag-get`: Retrieve the tags of the specified Blob.
+- `azure-storage-container-blob-tag-set`: Sets the tags for the specified Blob. The command replace the entire tags of the Blob and can be used to remove tags.
+- `azure-storage-container-blob-delete`: Marks the specified Blob for deletion. The Blob will be deleted during garbage collection.
+- `azure-storage-container-blob-property-get`: Retrieve Blob properties.
+- `azure-storage-container-blob-property-set`: Set Blob properties.
+- `azure-storage-container-sas-create`: Retrieve Blob properties.
+- `azure-storage-container-block-public-access`: Block public access to a container..
 
 
 ## Azure Storage FileShare
@@ -992,15 +1002,15 @@ Create and Manage Azure FileShare Files and Directories. This integration was in
 
 **Commands:**
 
-- `azure-storage-fileshare-create`: 
-- `azure-storage-fileshare-delete`: 
-- `azure-storage-fileshare-list`: 
-- `azure-storage-fileshare-content-list`: 
-- `azure-storage-fileshare-directory-create`: 
-- `azure-storage-fileshare-directory-delete`: 
-- `azure-storage-fileshare-file-create`: 
-- `azure-storage-fileshare-file-get`: 
-- `azure-storage-fileshare-file-delete`: 
+- `azure-storage-fileshare-create`: Create a new Azure file share under the specified account.
+- `azure-storage-fileshare-delete`: Delete file share under the specified account.
+- `azure-storage-fileshare-list`: list Azure file shares under the specified account.
+- `azure-storage-fileshare-content-list`: List files and directories under the specified share or directory.
+- `azure-storage-fileshare-directory-create`: Create a new directory under the specified share or parent directory.
+- `azure-storage-fileshare-directory-delete`: Delete the specified empty directory. Note that the directory must be empty before it can be deleted.
+- `azure-storage-fileshare-file-create`: Creates a new file in Share.
+- `azure-storage-fileshare-file-get`: Retrieve file from Share.
+- `azure-storage-fileshare-file-delete`: Delete file from Share.
 
 
 ## Azure Storage Management
@@ -1012,21 +1022,21 @@ This integration enables you to deploy and manage storage accounts and blob serv
 
 **Commands:**
 
-- `azure-storage-auth-test`: 
-- `azure-storage-auth-start`: 
-- `azure-storage-auth-complete`: 
-- `azure-storage-auth-reset`: 
-- `azure-storage-account-list`: 
-- `azure-storage-account-create-update`: 
-- `azure-storage-blob-service-properties-get`: 
-- `azure-storage-blob-service-properties-set`: 
-- `azure-storage-blob-containers-create`: 
-- `azure-storage-blob-containers-update`: 
-- `azure-storage-blob-containers-list`: 
-- `azure-storage-blob-container-delete`: 
-- `azure-storage-generate-login-url`: 
-- `azure-storage-subscriptions-list`: 
-- `azure-storage-resource-group-list`: 
+- `azure-storage-auth-test`: Tests the connectivity to Azure.
+- `azure-storage-auth-start`: Run this command to start the authorization process and follow the instructions in the command results.
+- `azure-storage-auth-complete`: Run this command to complete the authorization process. Should be used after running the azure-storage-auth-start command.
+- `azure-storage-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
+- `azure-storage-account-list`: Run this command to get the all or specific account storage details.
+- `azure-storage-account-create-update`: Run this command to create or update a specific account storage.
+- `azure-storage-blob-service-properties-get`: Run this command to get the blob service properties of a specific account storage.
+- `azure-storage-blob-service-properties-set`: Run this command to set properties for the blob service in a specific account storage
+- `azure-storage-blob-containers-create`: Run this command to create a blob container.
+- `azure-storage-blob-containers-update`: Run this command to update a specific blob container.
+- `azure-storage-blob-containers-list`: Run this command to get the all or specific blob container details.
+- `azure-storage-blob-container-delete`: Run this command to delete a specific blob container.
+- `azure-storage-generate-login-url`: Generate the login url used for Authorization code flow.
+- `azure-storage-subscriptions-list`: Gets all subscriptions for a tenant.
+- `azure-storage-resource-group-list`: Gets all resource groups for a subscription.
 
 
 ## Azure Storage Queue
@@ -1038,16 +1048,16 @@ Create and Manage Azure Storage Queues and Messages. This integration was integr
 
 **Commands:**
 
-- `azure-storage-queue-list`: 
-- `azure-storage-queue-create`: 
-- `azure-storage-queue-delete`: 
-- `azure-storage-queue-message-create`: 
-- `azure-storage-queue-message-get`: 
-- `azure-storage-queue-message-peek`: 
-- `azure-storage-queue-message-dequeue`: 
-- `azure-storage-queue-message-update`: 
-- `azure-storage-queue-message-delete`: 
-- `azure-storage-queue-message-clear`: 
+- `azure-storage-queue-list`: List queues in storage account.
+- `azure-storage-queue-create`: Create new queue in storage account.
+- `azure-storage-queue-delete`: Delete queue from storage account.
+- `azure-storage-queue-message-create`: Add a new message to the back of the queue.
+- `azure-storage-queue-message-get`: Retrieves messages from the front of the queue. Retrieved messages will move to the end of the queue,and will be visible after 'TimeNextVisible' param.
+- `azure-storage-queue-message-peek`: Retrieves messages from the front of the queue. The command does not alter the visibility of the message.
+- `azure-storage-queue-message-dequeue`: Dequeue a message from the front of the queue.
+- `azure-storage-queue-message-update`: Update message content in the queue.
+- `azure-storage-queue-message-delete`: Delete message from a Queue.
+- `azure-storage-queue-message-clear`: Delete all messages from the specified Queue.
 
 
 ## Azure Storage Table
@@ -1059,14 +1069,14 @@ Create and Manage Azure Storage Tables and Entities. This integration was integr
 
 **Commands:**
 
-- `azure-storage-table-create`: 
-- `azure-storage-table-delete`: 
-- `azure-storage-table-query`: 
-- `azure-storage-table-entity-insert`: 
-- `azure-storage-table-entity-update`: 
-- `azure-storage-table-entity-replace`: 
-- `azure-storage-table-entity-query`: 
-- `azure-storage-table-entity-delete`: 
+- `azure-storage-table-create`: Creates a new table in a storage account.
+- `azure-storage-table-delete`: Delete the specified table and any data it contains.
+- `azure-storage-table-query`: List tables under the specified account.
+- `azure-storage-table-entity-insert`: Insert a new entity into a table.
+- `azure-storage-table-entity-update`: Update an existing entity in a table. The Update Entity command does not replace the existing entity.
+- `azure-storage-table-entity-replace`: Replace an existing entity in a table. The Replace Entity command replace the entire entity and can be used to remove properties.
+- `azure-storage-table-entity-query`: Query Entities in a table.
+- `azure-storage-table-entity-delete`: Delete an existing entity in a table.
 
 
 ## Azure Web Application Firewall
@@ -1078,21 +1088,21 @@ The Azure WAF (Web Application Firewall) integration provides centralized protec
 
 **Commands:**
 
-- `azure-waf-policies-get`: 
-- `azure-waf-policies-list-all-in-subscription`: 
-- `azure-waf-policy-update-or-create`: 
-- `azure-waf-policy-delete`: 
-- `azure-waf-front-door-policies-list`: 
-- `azure-waf-front-door-policies-list-all-in-subscription`: 
-- `azure-waf-front-door-policy-update-or-create`: 
-- `azure-waf-front-door-policy-delete`: 
-- `azure-waf-auth-start`: 
-- `azure-waf-auth-complete`: 
-- `azure-waf-auth-reset`: 
-- `azure-waf-auth-test`: 
-- `azure-waf-generate-login-url`: 
-- `azure-waf-subscriptions-list`: 
-- `azure-waf-resource-group-list`: 
+- `azure-waf-policies-get`: Retrieves protection policies within a resource group.
+- `azure-waf-policies-list-all-in-subscription`: Retrieves all the WAF policies in a subscription.
+- `azure-waf-policy-update-or-create`: Creates or updates a policy with a specified rule set name within a resource group.
+- `azure-waf-policy-delete`: Deletes a policy.
+- `azure-waf-front-door-policies-list`: Lists all of the Front Door protection policies within a resource group.
+- `azure-waf-front-door-policies-list-all-in-subscription`: Lists all of the Front Door protection policies within a subscription.
+- `azure-waf-front-door-policy-update-or-create`: Creates or updates a Front Door policy with a specified rule set name within a resource group.
+- `azure-waf-front-door-policy-delete`: Deletes a Front Door policy.
+- `azure-waf-auth-start`: Run this command to start the authorization process and follow the instructions provided in the command results.
+- `azure-waf-auth-complete`: Run this command to complete the authorization process. Should be used after running the azure_waf-auth-start command.
+- `azure-waf-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
+- `azure-waf-auth-test`: Tests connectivity to the Azure Web Application Firewall.
+- `azure-waf-generate-login-url`: Generate the login url used for Authorization code flow.
+- `azure-waf-subscriptions-list`: Gets all subscriptions for a tenant.
+- `azure-waf-resource-group-list`: Gets all the resource groups for a subscription.
 
 
 ## AzureDevOps
@@ -1104,12 +1114,12 @@ Manage Git repositories in Azure DevOps Services. Integration capabilities inclu
 
 **Commands:**
 
-- `azure-devops-auth-test`: 
-- `azure-devops-generate-login-url`: 
-- `azure-devops-auth-start`: 
-- `azure-devops-auth-complete`: 
-- `azure-devops-auth-reset`: 
-- `get-mapping-fields`: 
+- `azure-devops-auth-test`: Tests the connectivity to Azure.
+- `azure-devops-generate-login-url`: Generate the login url used for Authorization code flow.
+- `azure-devops-auth-start`: Run this command to start the authorization process and follow the instructions in the command results.
+- `azure-devops-auth-complete`: Run this command to complete the authorization process. Should be used after running the azure-devops-auth-start command.
+- `azure-devops-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
+- `get-mapping-fields`: Get mapping fields from remote incident. Please note that this method will not update the current incident. It's here for debugging purposes.
 
 
 ## AzureFindAvailableNSGPriorities
@@ -1169,7 +1179,21 @@ Use this playbook to search processes in Carbon Black Enterprise EDR. This playb
 **Product:** Carbon Black Cloud Enterprise EDR  
 **Commands:**
 
-- `cb-eedr-alert-workflow-update`: 
+- `cb-eedr-alert-workflow-update`: Updates the workflow of a single event.
+- `cb-eedr-device-quarantine`: Quarantines a device.
+- `cb-eedr-device-unquarantine`: Removes a device from quarantine.
+- `cb-eedr-device-background-scan-stop`: Stops a background scan on the specified devices.
+- `cb-eedr-device-background-scan`: Start a background scan on device.
+- `cb-eedr-device-bypass`: Enable a bypass on device.
+- `cb-eedr-device-unbypass`: Disable a bypass on device.
+- `cb-eedr-device-policy-update`: Update device policy.
+- `cb-eedr-devices-list`: List devices based on the search query.
+- `cb-eedr-list-alerts`: Returns a list of alerts.
+- `cb-eedr-watchlist-list`: Retrieves all watchlists.
+- `cb-eedr-get-watchlist-by-id`: Gets watchlist information by watchlist ID.
+- `cb-eedr-watchlist-alerts-status`: Retrieves the alert status for the watchlist with given watchlist ID.
+- `cb-eedr-watchlist-alerts-enable`: Turns on alerts for the watchlist with the specified watchlist ID.
+- `cb-eedr-watchlist-alerts-disable`: Turns off alerts for the watchlist with the specified watchlist ID.
 
 
 ## Check Point Dome9 (CloudGuard)
@@ -1181,21 +1205,21 @@ Dome9 integration allows to easily manage the security and compliance of the pub
 
 **Commands:**
 
-- `dome9-access-lease-list`: 
-- `dome9-access-lease-delete`: 
-- `dome9-access-lease-invitation-list`: 
-- `dome9-access-lease-invitation-delete`: 
-- `dome9-findings-search`: 
-- `dome9-ip-list-create`: 
-- `dome9-ip-list-update`: 
-- `dome9-ip-list-get`: 
-- `dome9-ip-list-delete`: 
-- `dome9-ip-list-metadata-list`: 
-- `dome9-ip-list-metadata-create`: 
-- `dome9-ip-list-metadata-update`: 
-- `dome9-ip-list-metadata-delete`: 
-- `dome9-compliance-remediation-get`: 
-- `dome9-compliance-remediation-create`: 
+- `dome9-access-lease-list`: Get a list of all active Access Leases.
+- `dome9-access-lease-delete`: Terminate an Access Lease.
+- `dome9-access-lease-invitation-list`: Get a lease invitation.
+- `dome9-access-lease-invitation-delete`: Delete an Access Lease invitation.
+- `dome9-findings-search`: Search for findings in CloudGuard.
+- `dome9-ip-list-create`: Add a new IP list.
+- `dome9-ip-list-update`: Update an IP list. This will override the existing IP list.
+- `dome9-ip-list-get`: Get an IP List by ID.
+- `dome9-ip-list-delete`: Delete an IP List by ID.
+- `dome9-ip-list-metadata-list`: Get all IP addresses metadata.
+- `dome9-ip-list-metadata-create`: Add metadata for a new IP address. An IP address metadata must contain the CIDR, name, and classification. Classification can be External, Unsafe, Dmz, Internal
+- `dome9-ip-list-metadata-update`: Update an existing IP address metadata. Classification can only be External, Unsafe, Dmz, InternalVpc, InternalDc, or NoClassification.
+- `dome9-ip-list-metadata-delete`: Delete an IP address metadata with a specific CIDR.
+- `dome9-compliance-remediation-get`: Get a list of remediations for the account.
+- `dome9-compliance-remediation-create`: Add a new remediation.
 
 
 ## Cisco Umbrella Cloud Security v2
@@ -1207,13 +1231,13 @@ Cisco Umbrella is a cloud security platform providing the first line of defense 
 
 **Commands:**
 
-- `umbrella-destinations-list`: 
-- `umbrella-destination-add`: 
-- `umbrella-destination-delete`: 
-- `umbrella-destination-lists-list`: 
-- `umbrella-destination-list-create`: 
-- `umbrella-destination-list-update`: 
-- `umbrella-destination-list-delete`: 
+- `umbrella-destinations-list`: Get destinations within a destination list. A destination is a URL, IP or fully qualified domain name.
+- `umbrella-destination-add`: Add a destination to a destination list. A destination is a URL, IPv4, CIDR or fully qualified domain name. Accepted types for destination list with the access 
+- `umbrella-destination-delete`: Remove a destination from a destination list. A destination is a URL, IP or fully qualified domain name.
+- `umbrella-destination-lists-list`: Get destination lists. A list of destinations (for example, domain name or URL) to which you can block or allow access.
+- `umbrella-destination-list-create`: Create a destination list. A list of destinations (for example, domain name or URL) to which you can block or allow access. Accepted types for destination list 
+- `umbrella-destination-list-update`: Edit a destination list. A list of destinations (for example, domain name or URL) to which you can block or allow access.
+- `umbrella-destination-list-delete`: Delete a destination list. A list of destinations (for example, domain name or URL) to which you can block or allow access.
 
 
 ## Cloud Credentials Rotation - AWS
@@ -1293,10 +1317,10 @@ Use the CloudConvert integration to convert your files to the required format. T
 
 **Commands:**
 
-- `cloudconvert-upload`: 
-- `cloudconvert-convert`: 
-- `cloudconvert-check-status`: 
-- `cloudconvert-download`: 
+- `cloudconvert-upload`: Uploads a file for conversion.
+- `cloudconvert-convert`: Converts an uploaded file to the required format.
+- `cloudconvert-check-status`: Checks the status of an operation. Use the 'create_war_room_entry' argument to also create a war room entry of the file when checking on a download operation.
+- `cloudconvert-download`: Downloads a converted file as a URL or a War Room entry.
 
 
 ## CloudConvert - Convert File
@@ -1323,8 +1347,8 @@ Use this integration to connect securely with a Cloudflare Model Context Protoco
 
 **Commands:**
 
-- `cloudflare-mcp-generate-login-url`: 
-- `cloudflare-mcp-auth-test`: 
+- `cloudflare-mcp-generate-login-url`: Generate an authentication login URL.
+- `cloudflare-mcp-auth-test`: Test the authentication configuration with the MCP server.
 
 
 ## Cloudflare WAF
@@ -1336,21 +1360,21 @@ Cloudflare WAF integration allows customers to manage firewall rules, filters, a
 
 **Commands:**
 
-- `cloudflare-waf-firewall-rule-create`: 
-- `cloudflare-waf-firewall-rule-update`: 
-- `cloudflare-waf-firewall-rule-delete`: 
-- `cloudflare-waf-firewall-rule-list`: 
-- `cloudflare-waf-filter-create`: 
-- `cloudflare-waf-filter-update`: 
-- `cloudflare-waf-filter-delete`: 
-- `cloudflare-waf-filter-list`: 
-- `cloudflare-waf-zone-list`: 
-- `cloudflare-waf-ip-list-create`: 
-- `cloudflare-waf-ip-list-delete`: 
-- `cloudflare-waf-ip-lists-list`: 
-- `cloudflare-waf-ip-list-item-create`: 
-- `cloudflare-waf-ip-list-item-update`: 
-- `cloudflare-waf-ip-list-item-delete`: 
+- `cloudflare-waf-firewall-rule-create`: will be as deprecated, available until 2025-06-15 Create a new firewall rule that create new filter or use an exist filter. Permissions required for the API tok
+- `cloudflare-waf-firewall-rule-update`: will be as deprecated, available until 2025-06-15 Update firewall rule by the specified rule ID. Can update rule action, paused, description, priority, products
+- `cloudflare-waf-firewall-rule-delete`: will be as deprecated, available until 2025-06-15 Delete firewall rule by the specified rule ID. Permissions required for the API token: Account: Account Firewa
+- `cloudflare-waf-firewall-rule-list`: will be as deprecated, available until 2025-06-15 List of firewall rules or details of individual rule by ID. Permissions required for the API token: Account: A
+- `cloudflare-waf-filter-create`: Create a new filter which can be added to a firewall rule. Permissions required for the API token: Account: Account Filter Lists:Edit Zone: Firewall Services:Ed
+- `cloudflare-waf-filter-update`: Update filter by the specified filter ID. Permissions required for the API token: Account: Account Filter Lists:Edit Zone: Firewall Services:Edit
+- `cloudflare-waf-filter-delete`: Delete an exist filter (Note that a filter linked to firewall rule cannot be deleted). Permissions required for the API token: Account: Account Filter Lists:Edi
+- `cloudflare-waf-filter-list`: List filters. Permissions required for the API token: Account: Account Filter Lists:Read Zone: Firewall Services:Read
+- `cloudflare-waf-zone-list`: List all account zones. Permissions required for the API token: Zone: Zone Settings:Read Zone:Read
+- `cloudflare-waf-ip-list-create`: Create a new IP-list. An IP-list is a list that includes IP addresses and CIDR. IP-list is used in the filter expression. Permissions required for the API token
+- `cloudflare-waf-ip-list-delete`: Delete IP-list by the specified list ID. Permissions required for the API token: Account: All accounts - Account WAF:Edit
+- `cloudflare-waf-ip-lists-list`: List IP-lists. Permissions required for the API token: Account: All accounts - Account WAF:Read
+- `cloudflare-waf-ip-list-item-create`: Create new items for exist IP-list. Permissions required for the API token: Account: All accounts - Account WAF:Edit
+- `cloudflare-waf-ip-list-item-update`: Replace the IP-list items with a new items Permissions required for the API token: Account: All accounts - Account WAF:Edit
+- `cloudflare-waf-ip-list-item-delete`: Delete item of a IP-list by the specified list ID and list item. Permissions required for the API token: Account: All accounts - Account WAF:Edit
 
 
 ## Cloudflare Zero Trust
@@ -1362,7 +1386,7 @@ Cloudflare provides network and security products for consumers and businesses, 
 
 **Commands:**
 
-- `cloudflare-zero-trust-get-events`: 
+- `cloudflare-zero-trust-get-events`: Gets events from Cloudflare Zero Trust.
 
 
 ## CloudShare (Beta)
@@ -1374,21 +1398,21 @@ This integration is a BETA that covers the API commands from CloudShare
 
 **Commands:**
 
-- `cloudshare-get-envs`: 
-- `cloudshare-get-projects`: 
-- `cloudshare-get-project`: 
-- `cloudshare-get-project-policies`: 
-- `cloudshare-get-project-blueprints`: 
-- `cloudshare-get-project-blueprint`: 
-- `cloudshare-get-classes`: 
-- `cloudshare-get-class`: 
-- `cloudshare-delete-class`: 
-- `cloudshare-delete-class-environments`: 
-- `cloudshare-get-classes-countries`: 
-- `cloudshare-get-classes-customfields`: 
-- `cloudshare-get-classes-detailed`: 
-- `cloudshare-get-classes-instructors`: 
-- `cloudshare-create-class`: 
+- `cloudshare-get-envs`: Retrieves environments
+- `cloudshare-get-projects`: Retrieves all available projects
+- `cloudshare-get-project`: Retrieves a specified project's details
+- `cloudshare-get-project-policies`: Retrieves all environment policies available in a specified project. Environment policies define how long an environment will run, when it will be deleted, and 
+- `cloudshare-get-project-blueprints`: Retrieves all blueprints available in a specified project
+- `cloudshare-get-project-blueprint`: Retrieves details of a specified blueprint, including snapshots.
+- `cloudshare-get-classes`: Retrieves all classes visible to the user
+- `cloudshare-get-class`: Retrieves details of a specified class
+- `cloudshare-delete-class`: Deletes a class
+- `cloudshare-delete-class-environments`: Deletes all active student environments in a class
+- `cloudshare-get-classes-countries`: Retrieves all countries that can be set as class locations
+- `cloudshare-get-classes-customfields`: Retrieves any custom class creation fields defined in a specified project.
+- `cloudshare-get-classes-detailed`: Retrieves all the details of a specified class, including full student data.
+- `cloudshare-get-classes-instructors`: Retrieves project member users who can be assigned to classes as instructors
+- `cloudshare-create-class`: Creates a class
 
 
 ## Commvault Cloud
@@ -1400,13 +1424,13 @@ Commvault Cloud provides pre-built integrations, automation workflows, and playb
 
 **Commands:**
 
-- `commvault-security-set-disable-data-aging`: 
-- `commvault-security-get-generate-token`: 
-- `commvault-security-get-access-token-from-keyvault`: 
-- `commvault-security-set-disable-saml-provider`: 
-- `commvault-security-get-copy-files-list-to-war-room`: 
-- `commvault-security-set-disable-user`: 
-- `commvault-security-set-cleanroom-add-vm-to-recovery-group`: 
+- `commvault-security-set-disable-data-aging`: Disables data aging on CS
+- `commvault-security-get-generate-token`: Generate Token
+- `commvault-security-get-access-token-from-keyvault`: Read the access token from KeyVault
+- `commvault-security-set-disable-saml-provider`: Disable SAML provider
+- `commvault-security-get-copy-files-list-to-war-room`: Copy the list of affected files list to war room
+- `commvault-security-set-disable-user`: Disables user
+- `commvault-security-set-cleanroom-add-vm-to-recovery-group`: Add VM to Cleanroom
 
 
 ## Cortex XDR - Cloud Enrichment
@@ -1428,21 +1452,21 @@ This playbook is responsible for collecting data from Cortex XDR detector and en
 **Product:** Datadog Cloud SIEM  
 **Commands:**
 
-- `datadog-event-create`: 
-- `datadog-event-list`: 
-- `datadog-tag-list`: 
-- `datadog-host-tag-create`: 
-- `datadog-host-tag-get`: 
-- `datadog-host-tag-update`: 
-- `datadog-host-tag-delete`: 
-- `datadog-active-metric-list`: 
-- `datadog-metric-search`: 
-- `datadog-metric-metadata-get`: 
-- `datadog-metric-metadata-update`: 
-- `datadog-incident-create`: 
-- `datadog-incident-delete`: 
-- `datadog-incident-update`: 
-- `datadog-incident-list`: 
+- `datadog-event-create`: This endpoint allows you to post events to the stream.
+- `datadog-event-list`: Get a list of events / Get the details of a particular event.
+- `datadog-tag-list`: Return a mapping of tags to hosts for your whole infrastructure.
+- `datadog-host-tag-create`: This endpoint allows you to add new tags to a host, optionally specifying where these tags come from.
+- `datadog-host-tag-get`: Return the list of tags that apply to a given host.
+- `datadog-host-tag-update`: This endpoint allows you to replace all tags in an integration source with those supplied in the request.
+- `datadog-host-tag-delete`: This endpoint allows you to remove all user-assigned tags for a single host.
+- `datadog-active-metric-list`: Get the list of actively reporting metrics.
+- `datadog-metric-search`: Search for metrics from the last 24 hours in Datadog.
+- `datadog-metric-metadata-get`: Get metadata about a specific metric.
+- `datadog-metric-metadata-update`: Edit metadata of a specific metric.
+- `datadog-incident-create`: Create an incident.
+- `datadog-incident-delete`: Delete an existing incident.
+- `datadog-incident-update`: Updates an incident. Provide only the attributes that should be updated as this request is a partial update.
+- `datadog-incident-list`: Get all incidents for the user’s organization / Get the details of an incident using incident_id.
 
 
 ## Datadog Cloud SIEM
@@ -1454,7 +1478,21 @@ Datadog Cloud SIEM integration for the platform. This integration allows securit
 
 **Commands:**
 
-- `datadog-get-signal`: 
+- `datadog-get-signal`: Get a specific security signal by ID from Datadog Cloud SIEM.
+- `datadog-list-signals`: Get a list of security signals from Datadog Cloud SIEM with optional filtering and pagination.
+- `datadog-update-signal-state`: Update a security signal's assignee and/or state in Datadog Cloud SIEM. Can update assignee only, state only, or both in a single command.
+- `datadog-add-signal-comment`: Add a comment to a security signal in Datadog Cloud SIEM.
+- `datadog-list-signal-comments`: List all comments for a security signal in Datadog Cloud SIEM.
+- `datadog-get-rule`: Get a specific security monitoring rule by ID from Datadog Cloud SIEM.
+- `datadog-query-logs`: Query logs in Datadog Cloud SIEM with optional filtering for security investigations.
+- `datadog-update-signal-assignee`: Update a security signal's assignee in Datadog Cloud SIEM.
+- `datadog-update-suppression`: Update an existing suppression rule by ID.
+- `datadog-list-suppressions`: List all suppressions affecting a specific security monitoring rule.
+- `datadog-list-security-filters`: List all security filters from Datadog Cloud SIEM.
+- `datadog-list-signal-notification-rules`: List all signal notification rules from Datadog Cloud SIEM.
+- `datadog-list-vulnerability-notification-rules`: List all vulnerability notification rules from Datadog Cloud SIEM.
+- `datadog-bitsai-get-investigation`: Get the BitsAI investigation for a security signal.
+- `datadog-list-risk-scores`: List risk scores from Datadog Cloud SIEM.
 
 
 ## DatadogSyncIncidentFields
@@ -1548,21 +1586,21 @@ This playbook automates the removal of an AWS Lambda function and its associated
 **Product:** GCP IAM  
 **Commands:**
 
-- `gcp-iam-projects-get`: 
-- `gcp-iam-project-iam-policy-get`: 
-- `gcp-iam-project-iam-permission-test`: 
-- `gcp-iam-project-iam-member-add`: 
-- `gcp-iam-project-iam-member-remove`: 
-- `gcp-iam-project-iam-policy-set`: 
-- `gcp-iam-project-iam-policy-create`: 
-- `gcp-iam-folders-get`: 
-- `gcp-iam-folder-iam-policy-get`: 
-- `gcp-iam-folder-iam-permission-test`: 
-- `gcp-iam-folder-iam-member-add`: 
-- `gcp-iam-folder-iam-member-remove`: 
-- `gcp-iam-folder-iam-policy-set`: 
-- `gcp-iam-folder-iam-policy-create`: 
-- `gcp-iam-organizations-get`: 
+- `gcp-iam-projects-get`: Lists project under the specified parent, or retrieves a specific project''s information. One of the arguments: ''parent'' or ''project_name'' must be provided.
+- `gcp-iam-project-iam-policy-get`: Retrieves the IAM access control policy for the specified project.
+- `gcp-iam-project-iam-permission-test`: Returns permissions that a caller has on the specified project. The permission list can be obtained by running the 'gcp-iam-testable-permission-list' command.
+- `gcp-iam-project-iam-member-add`: Adds members to the project policy.
+- `gcp-iam-project-iam-member-remove`: Removes members from the project policy.
+- `gcp-iam-project-iam-policy-set`: Sets the IAM access control policy for the specified project. This operation will overwrite any existing policy.
+- `gcp-iam-project-iam-policy-create`: Adds a new project IAM policy.
+- `gcp-iam-folders-get`: Lists folders under the specified parent, or retrieves a specific folder information. One of the arguments: ''parent'' or ''folder_name'' must be provided.
+- `gcp-iam-folder-iam-policy-get`: Retrieves the IAM access control policy for the specified folder.
+- `gcp-iam-folder-iam-permission-test`: Returns permissions that a caller has on the specified folder. The permission list can be obtained by running the 'gcp-iam-testable-permission-list' command.
+- `gcp-iam-folder-iam-member-add`: Adds members to the folder policy.
+- `gcp-iam-folder-iam-member-remove`: Removes members from the folder policy.
+- `gcp-iam-folder-iam-policy-set`: Sets the IAM access control policy for the specified folder. This operation will overwrite any existing policy.
+- `gcp-iam-folder-iam-policy-create`: Adds a new folder IAM policy.
+- `gcp-iam-organizations-get`: Lists organization resources that are visible to the caller, or retrieves an organization's information.
 
 
 ## GCPOffendingFirewallRule
@@ -1602,7 +1640,7 @@ Fetch audit events to see changes within a Genesys Cloud organization. This inte
 
 **Commands:**
 
-- `genesys-cloud-get-events`: 
+- `genesys-cloud-get-events`: Retrieves audit events from Genesys Cloud from the past 14 days. This command is intended for development and debugging purposes, as it may produce duplicate ev
 
 
 ## Google Cloud Compute
@@ -1614,7 +1652,21 @@ Google Compute Engine delivers virtual machines running in Google's innovative d
 
 **Commands:**
 
-- `gcp-compute-insert-instance`: 
+- `gcp-compute-insert-instance`: Creates an instance resource in the specified project using the data included in the request.
+- `gcp-compute-get-image-from-family`: Returns the latest image that is part of an image family and is not deprecated.
+- `gcp-compute-get-network`: Returns the specified network.
+- `gcp-compute-list-instances`: Retrieves the list of instances contained within the specified zone.
+- `gcp-compute-aggregated-list-instances`: Retrieves aggregated list of all of the instances in your project across all regions and zones.
+- `gcp-compute-get-global-operation`: Retrieves the specified Operations resource. Gets a list of operations by making a list() request.
+- `gcp-compute-get-zone-operation`: Retrieves the specified zone-specific Operations resource.
+- `gcp-compute-list-zone-operation`: Retrieves a list of Operation resources contained within the specified zone.
+- `gcp-compute-delete-zone-operation`: Deletes the specified zone-specific Operations resource.
+- `gcp-compute-get-instance`: Returns the specified Instance resource. Gets a list of available instances by making a list() request.
+- `gcp-compute-delete-instance`: Deletes the specified Instance resource. For more information, see Stopping or Deleting an Instance.
+- `gcp-compute-start-instance`: Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
+- `gcp-compute-stop-instance`: Stops a running instance, shutting it down cleanly, and allows you to restart the instance at a later time. Stopped instances do not incur VM usage charges whil
+- `gcp-compute-reset-instance`: Performs a reset on the instance. This is a hard reset the VM does not do a graceful shutdown. For more information, see Resetting an instance.
+- `gcp-compute-set-instance-labels`: Sets labels on an instance. To learn more about labels, read the Labeling Resources documentation.
 
 
 ## Google Cloud Functions
@@ -1626,7 +1678,10 @@ Google Cloud Functions is an event-driven serverless compute platform that enabl
 
 **Commands:**
 
-- `google-cloud-functions-list`: 
+- `google-cloud-functions-list`: Lists all Google Cloud functions.
+- `google-cloud-function-regions-list`: Lists all regions in the project.
+- `google-cloud-function-get-by-name`: Gets the details of a specific Google Cloud function.
+- `google-cloud-function-execute`: Executes a Google Cloud function.
 
 
 ## Google Cloud Logging
@@ -1638,7 +1693,7 @@ With Google Cloud Logging, users can centralize all their logs in a single locat
 
 **Commands:**
 
-- `gcp-logging-log-entries-list`: 
+- `gcp-logging-log-entries-list`: Lists log entries. Use this method to retrieve log entries that originated from a project/folder/organization/billing account.
 
 
 ## Google Cloud Platform
@@ -1650,21 +1705,21 @@ The GCP Integration automates management and security configurations for Compute
 
 **Commands:**
 
-- `gcp-compute-firewall-patch`: 
-- `gcp-storage-bucket-policy-delete`: 
-- `gcp-compute-subnet-update`: 
-- `gcp-container-cluster-security-update`: 
-- `gcp-gke-cluster-legacy-abac-auth-set`: 
-- `gcp-gke-clusters-list`: 
-- `gcp-gke-cluster-get`: 
-- `gcp-gke-node-pools-list`: 
-- `gcp-gke-node-pool-get`: 
-- `gcp-gke-node-pool-management-set`: 
-- `gcp-gke-operations-list`: 
-- `gcp-gke-operation-get`: 
-- `gcp-gke-operation-cancel`: 
-- `gcp-storage-bucket-metadata-update`: 
-- `gcp-iam-project-policy-binding-remove`: 
+- `gcp-compute-firewall-patch`: Updates a specific firewall rule with the data included in the request. Required permissions: compute.firewalls.update, compute.firewalls.get, compute.firewalls
+- `gcp-storage-bucket-policy-delete`: Removes an entity from a bucket's Access Control List. Required permissions: storage.buckets.getIamPolicy, storage.buckets.setIamPolicy.
+- `gcp-compute-subnet-update`: Enables flow logs or Private Google Access on a subnet. Required permissions: compute.subnetworks.setPrivateIpGoogleAccess, compute.subnetworks.update, compute.
+- `gcp-container-cluster-security-update`: Configures security settings for GKE clusters, including access controls and visibility. Required permissions: container.clusters.update, container.clusters.get
+- `gcp-gke-cluster-legacy-abac-auth-set`: Enables or disables legacy ABAC authorization for a GKE cluster. Required permissions: container.clusters.update.
+- `gcp-gke-clusters-list`: Lists all GKE clusters owned by a project in the specified location. Required permissions: container.clusters.list.
+- `gcp-gke-cluster-get`: Gets the details of a specific GKE cluster. Required permissions: container.clusters.get.
+- `gcp-gke-node-pools-list`: Lists the node pools for a GKE cluster. Required permissions: container.clusters.get.
+- `gcp-gke-node-pool-get`: Gets the details of a specific node pool in a GKE cluster. Required permissions: container.clusters.get.
+- `gcp-gke-node-pool-management-set`: Enables or disables the auto-repair and/or auto-upgrade management features of a node pool. Required permissions: container.clusters.update.
+- `gcp-gke-operations-list`: Lists all GKE operations in a project for the specified location. Required permissions: container.operations.list.
+- `gcp-gke-operation-get`: Gets the details of a specific GKE operation. Required permissions: container.operations.get.
+- `gcp-gke-operation-cancel`: Cancels a specific GKE operation. Required permissions: container.operations.get.
+- `gcp-storage-bucket-metadata-update`: Updates Google Cloud Storage (GCS) bucket metadata, including settings such as versioning and Uniform Bucket-Level Access (UBLA). Required permission: storage.b
+- `gcp-iam-project-policy-binding-remove`: Removes a specified IAM role binding from a GCP project. Required permissions: resourcemanager.projects.getIamPolicy, resourcemanager.projects.setIamPolicy.
 
 
 ## Google Cloud Pub/Sub
@@ -1676,7 +1731,21 @@ Google Cloud Pub / Sub is a fully-managed real-time messaging service that allow
 
 **Commands:**
 
-- `gcp-pubsub-topics-list`: 
+- `gcp-pubsub-topics-list`: Get a list of the project's topics.
+- `gcp-pubsub-topic-publish-message`: Publish a message in a topic.
+- `gcp-pubsub-topic-subscription-get-by-name`: Get subscription details by subscription ID.
+- `gcp-pubsub-topic-subscriptions-list`: Get a list of subscriptions by project ID or topic ID.
+- `gcp-pubsub-topic-messages-pull`: Pull messages that were published.
+- `gcp-pubsub-topic-subscription-create`: Create a pull or push subscription.
+- `gcp-pubsub-topic-create`: Create a topic.
+- `gcp-pubsub-topic-delete`: Delete a topic.
+- `gcp-pubsub-topic-update`: Updates a topic.
+- `gcp-pubsub-topic-subscription-update`: Update a subscription.
+- `gcp-pubsub-topic-messages-seek`: Seeks a subscription to a given point in time or to a given snapshot.
+- `gcp-pubsub-topic-snapshots-list`: Get a list of snapshots by project ID and topic ID.
+- `gcp-pubsub-topic-snapshot-create`: Creates a snapshot from the requested subscription. Snapshots are used in gcp-pubsub-topic-messages-seek command.
+- `gcp-pubsub-topic-snapshot-update`: Updates an existing snapshot. Snapshots are used in gcp-pubsub-topic-messages-seek command.
+- `gcp-pubsub-topic-snapshot-delete`: Removes an existing snapshot.
 
 
 ## Google Cloud SCC
@@ -1688,19 +1757,19 @@ Security Command Center is a security and risk management platform for Google Cl
 
 **Commands:**
 
-- `google-cloud-scc-asset-list`: 
-- `google-cloud-scc-finding-list`: 
-- `google-cloud-scc-finding-update`: 
-- `google-cloud-scc-asset-resource-list`: 
-- `google-cloud-scc-asset-owner-get`: 
-- `google-cloud-scc-finding-state-update`: 
-- `google-cloud-scc-v2-finding-list`: 
-- `google-cloud-scc-v2-finding-update`: 
-- `google-cloud-scc-v2-finding-state-update`: 
-- `google-cloud-scc-finding-mute`: 
-- `google-cloud-scc-finding-unmute`: 
-- `google-cloud-scc-mute-rule-get`: 
-- `google-cloud-scc-mute-rule-create`: 
+- `google-cloud-scc-asset-list`: Lists an organization's assets.
+- `google-cloud-scc-finding-list`: Use google-cloud-scc-v2-finding-list instead. Lists an organization or source's findings.
+- `google-cloud-scc-finding-update`: Use google-cloud-scc-v2-finding-update instead. Update an organization's or source's finding.
+- `google-cloud-scc-asset-resource-list`: Lists cloud asset's resources.
+- `google-cloud-scc-asset-owner-get`: Gets the owner information for the provided projects.
+- `google-cloud-scc-finding-state-update`: Use google-cloud-scc-v2-finding-state-update instead. Update the state of organization's or source's finding.
+- `google-cloud-scc-v2-finding-list`: Lists an organization or source's findings using the Security Command Center v2 API.
+- `google-cloud-scc-v2-finding-update`: Update an organization's or source's finding using the Security Command Center v2 API.
+- `google-cloud-scc-v2-finding-state-update`: Update the state of an organization's or source's finding using the Security Command Center v2 API.
+- `google-cloud-scc-finding-mute`: Mute an organization's or source's finding using the Security Command Center v2 API.
+- `google-cloud-scc-finding-unmute`: Unmute an organization's or source's finding using the Security Command Center v2 API.
+- `google-cloud-scc-mute-rule-get`: Get a mute rule (mute config) of an organization using the Security Command Center v2 API.
+- `google-cloud-scc-mute-rule-create`: Create a mute rule (mute config) for an organization using the Security Command Center v2 API.
 
 
 ## GoogleCloudSCCMuteFinding
@@ -1766,7 +1835,17 @@ Unified security management and advanced threat protection across hybrid cloud w
 
 **Commands:**
 
-- `azure-sc-list-alert`: 
+- `azure-sc-list-alert`: Lists alerts for the subscription according to the specified filters. The OData select, expand, and filter arguments are deprecated, as they are no longer suppo
+- `azure-sc-update-atp`: Updates Advanced Threat Detection settings.
+- `azure-sc-get-atp`: Returns the Advanced Threat Protection setting.
+- `azure-sc-update-aps`: Updates a specific auto provisioning setting.
+- `azure-sc-get-aps`: Returns details of a specific auto provisioning setting.
+- `azure-sc-list-aps`: Lists auto provisioning settings in the subscription.
+- `azure-sc-list-jit`: Lists all policies for protecting resources using Just-in-Time access control.
+- `azure-sc-list-storage`: Lists all the storage accounts available under the subscription.
+- `azure-list-subscriptions`: List available subscriptions for this application.
+- `azure-sc-list-location`: The location of the responsible ASC of the specific subscription. For each subscription there is only one responsible location.
+- `azure-sc-get-alert`: Get an alert that is associated a resource group or a subscription.
 
 
 ## Microsoft Defender for Cloud Apps
@@ -1778,17 +1857,17 @@ Microsoft Cloud App Security is a multimode Cloud Access Security Broker (CASB).
 
 **Commands:**
 
-- `microsoft-cas-auth-start`: 
-- `microsoft-cas-auth-complete`: 
-- `microsoft-cas-auth-reset`: 
-- `microsoft-cas-auth-test`: 
-- `microsoft-cas-alerts-list`: 
-- `microsoft-cas-alert-close-benign`: 
-- `microsoft-cas-alert-close-true-positive`: 
-- `microsoft-cas-alert-close-false-positive`: 
-- `microsoft-cas-activities-list`: 
-- `microsoft-cas-files-list`: 
-- `microsoft-cas-users-accounts-list`: 
+- `microsoft-cas-auth-start`: Run this command to start the authorization process and follow the instructions in the command results. (for device-code mode)
+- `microsoft-cas-auth-complete`: Run this command to complete the authorization process. Should be used after running the microsoft-cas-auth-start command. (for device-code mode)
+- `microsoft-cas-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
+- `microsoft-cas-auth-test`: Tests the connectivity to the Microsoft cas.
+- `microsoft-cas-alerts-list`: Returns a list of alerts that match the specified filters.
+- `microsoft-cas-alert-close-benign`: An alert on a suspicious but not malicious activity, such as a penetration test or other authorized suspicious action
+- `microsoft-cas-alert-close-true-positive`: Cֹlose multiple alerts matching the specified filters as true positive (an alert on a confirmed malicious activity.
+- `microsoft-cas-alert-close-false-positive`: Close multiple alerts matching the specified filters as false positive (an alert on a non-malicious activity).
+- `microsoft-cas-activities-list`: Returns a list of activities that match the specified filters.
+- `microsoft-cas-files-list`: Returns a list of files that match the specified filters. Filters include file type, file share value, file extension, file quarantine status, and a custom filt
+- `microsoft-cas-users-accounts-list`: Returns a list of user accounts that match the specified filters. Filters include user account type, group ID, external/internal, user account status, and custo
 
 
 ## Microsoft Management Activity API (O365 Azure Events)
@@ -1800,7 +1879,12 @@ The Microsoft Management Activity API integration enables you to subscribe or un
 
 **Commands:**
 
-- `ms-management-activity-start-subscription`: 
+- `ms-management-activity-start-subscription`: Starts a subscription to a given content type.
+- `ms-management-activity-stop-subscription`: Stops a subscription to a given content type.
+- `ms-management-activity-list-subscriptions`: List the content types you are currently subscribed to.
+- `ms-management-activity-list-content`: Returns all content of a specific content type.
+- `ms-management-activity-generate-login-url`: Generate the login url used for Authorization code flow.
+- `ms-management-activity-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
 
 
 ## Microsoft Policy And Compliance (Audit Log)
@@ -1812,7 +1896,7 @@ Use the integration to get logs from the O365 service
 
 **Commands:**
 
-- `o365-auditlog-search`: 
+- `o365-auditlog-search`: Use the o365-search-auditlog command to search the unified audit log. This log contains events from Exchange Online, SharePoint Online, OneDrive for Business, E
 
 
 ## Palo Alto Networks - Prisma Cloud Compute
@@ -1824,21 +1908,21 @@ Prisma™ Cloud Compute Edition delivers cloud workload protection (CWPP) for mo
 
 **Commands:**
 
-- `prisma-cloud-compute-profile-host-list`: 
-- `prisma-cloud-compute-profile-container-list`: 
-- `prisma-cloud-compute-profile-container-hosts-list`: 
-- `prisma-cloud-compute-profile-container-forensic-list`: 
-- `prisma-cloud-compute-host-forensic-list`: 
-- `prisma-cloud-compute-console-version-info`: 
-- `prisma-cloud-compute-custom-feeds-ip-list`: 
-- `prisma-cloud-compute-custom-feeds-ip-add`: 
-- `prisma-cloud-compute-custom-feeds-ip-remove`: 
-- `prisma-cloud-compute-custom-feeds-malware-list`: 
-- `prisma-cloud-compute-custom-feeds-malware-add`: 
-- `prisma-cloud-compute-defenders-list`: 
-- `prisma-cloud-compute-collections-list`: 
-- `prisma-cloud-compute-container-namespace-list`: 
-- `prisma-cloud-compute-images-scan-list`: 
+- `prisma-cloud-compute-profile-host-list`: Get information about the hosts and their profile events. This command supports asterisks which allows you to get host profiles by filtering its fields accordin
+- `prisma-cloud-compute-profile-container-list`: Get information about the containers and their profile events. This command supports asterisks which allows you to get container profiles by filtering its field
+- `prisma-cloud-compute-profile-container-hosts-list`: Get the hosts where a specific container is running.
+- `prisma-cloud-compute-profile-container-forensic-list`: Get runtime forensics data for a specific container on a specific host.
+- `prisma-cloud-compute-host-forensic-list`: Get forensics on a specific host.
+- `prisma-cloud-compute-console-version-info`: Get the console version.
+- `prisma-cloud-compute-custom-feeds-ip-list`: Get all the blacklisted IP addresses in the system.
+- `prisma-cloud-compute-custom-feeds-ip-add`: Add a list of banned IP addresses to be blocked by the system.
+- `prisma-cloud-compute-custom-feeds-ip-remove`: Remove a list of IPs from the system's block list.
+- `prisma-cloud-compute-custom-feeds-malware-list`: List all custom uploaded md5 malwares.
+- `prisma-cloud-compute-custom-feeds-malware-add`: Add custom md5 malware hashes.
+- `cve`: Get information about the CVEs in the system. Will return a maximum of 50 records. It is possible to query for a partial CVE description such as cve-2020 or cve
+- `prisma-cloud-compute-defenders-list`: Retrieve a list of defenders and their information.
+- `prisma-cloud-compute-collections-list`: Retrieves a list of all collections.
+- `prisma-cloud-compute-container-namespace-list`: Get the containers namespaces names.
 
 
 ## Palo Alto Networks - Strata Cloud Manager
@@ -1850,21 +1934,21 @@ Provides commands for interaction with Prisma SASE API. This integration was int
 
 **Commands:**
 
-- `prisma-sase-security-rule-create`: 
-- `prisma-sase-security-rule-list`: 
-- `prisma-sase-candidate-config-push`: 
-- `prisma-sase-security-rule-update`: 
-- `prisma-sase-address-object-update`: 
-- `prisma-sase-config-job-list`: 
-- `prisma-sase-security-rule-delete`: 
-- `prisma-sase-address-object-create`: 
-- `prisma-sase-address-object-delete`: 
-- `prisma-sase-address-object-list`: 
-- `prisma-sase-tag-list`: 
-- `prisma-sase-tag-create`: 
-- `prisma-sase-tag-update`: 
-- `prisma-sase-tag-delete`: 
-- `prisma-sase-address-group-list`: 
+- `prisma-sase-security-rule-create`: Create a new security rule.
+- `prisma-sase-security-rule-list`: Lists all security rules.
+- `prisma-sase-candidate-config-push`: Push the candidate configuration.
+- `prisma-sase-security-rule-update`: Update an existing security rule.
+- `prisma-sase-address-object-update`: Update an existing address object.
+- `prisma-sase-config-job-list`: Lists all configuration jobs.
+- `prisma-sase-security-rule-delete`: Delete a specific security rule.
+- `prisma-sase-address-object-create`: Create a new address object.
+- `prisma-sase-address-object-delete`: Delete a specific address object.
+- `prisma-sase-address-object-list`: Lists all addresses objects.
+- `prisma-sase-tag-list`: Lists all tags.
+- `prisma-sase-tag-create`: Create a new tag.
+- `prisma-sase-tag-update`: Update an existing tag.
+- `prisma-sase-tag-delete`: Delete a specific tag.
+- `prisma-sase-address-group-list`: Lists all address groups.
 
 
 ## Palo Alto Networks Prisma AIRS - AI Red Teaming
@@ -1876,21 +1960,21 @@ Discover and remediate AI application vulnerabilities with Palo Alto Networks Pr
 
 **Commands:**
 
-- `prisma-airs-redteam-targets-list`: 
-- `prisma-airs-redteam-targets-create`: 
-- `prisma-airs-redteam-targets-get`: 
-- `prisma-airs-redteam-targets-update`: 
-- `prisma-airs-redteam-targets-delete`: 
-- `prisma-airs-redteam-targets-probe`: 
-- `prisma-airs-redteam-targets-profile`: 
-- `prisma-airs-redteam-targets-update-profile`: 
-- `prisma-airs-redteam-targets-metadata`: 
-- `prisma-airs-redteam-targets-validate-auth`: 
-- `prisma-airs-redteam-targets-templates`: 
-- `prisma-airs-redteam-targets-error-logs`: 
-- `prisma-airs-redteam-scan-error-logs`: 
-- `prisma-airs-redteam-dashboard-scan-statistics`: 
-- `prisma-airs-redteam-dashboard-score-trend`: 
+- `prisma-airs-redteam-targets-list`: List all Red Team targets.
+- `prisma-airs-redteam-targets-create`: Create a new Red Team target.
+- `prisma-airs-redteam-targets-get`: Get Red Team target details by UUID.
+- `prisma-airs-redteam-targets-update`: Update an existing Red Team target.
+- `prisma-airs-redteam-targets-delete`: Delete a Red Team target.
+- `prisma-airs-redteam-targets-probe`: Probe a Red Team target to validate connectivity and gather profiling data.
+- `prisma-airs-redteam-targets-profile`: Get Red Team target profile (background, context, profiling status). View detailed profiling information including background context and AI-generated fields.
+- `prisma-airs-redteam-targets-update-profile`: Update Red Team target profile (background and additional context). Modify target background information or add additional context like model details and suppor
+- `prisma-airs-redteam-targets-metadata`: Get Red Team target field metadata. Returns field definitions (types, requirements, constraints) for all available target configuration fields. Useful for under
+- `prisma-airs-redteam-targets-validate-auth`: Validate authentication credentials for a Red Team target provider without creating or modifying a target. Useful for verifying credentials before creating a ta
+- `prisma-airs-redteam-targets-templates`: List Red Team target configuration templates per provider. Each template describes the connection fields expected for that target provider type. Read-only.
+- `prisma-airs-redteam-targets-error-logs`: List target-profile (profiling) error logs for a Red Team target. Returns the failures recorded while Prisma AIRS was probing or profiling the target (for examp
+- `prisma-airs-redteam-scan-error-logs`: List job-level error logs for a Red Team scan. Returns the per-attack probe failures recorded while a scan job was running (for example, timeouts or target conn
+- `prisma-airs-redteam-dashboard-scan-statistics`: Get Red Team scan statistics and risk profile (dashboard telemetry). Returns aggregate scan counts and, when available, breakdowns by target type, scan status, 
+- `prisma-airs-redteam-dashboard-score-trend`: Get the Red Team risk score trend for a target (dashboard telemetry). Returns time-bucketed labels plus one or more data series showing how the target's score c
 
 
 ## Palo Alto Networks Prisma AIRS - AI Runtime Security
@@ -1902,7 +1986,7 @@ Integrate with Palo Alto Networks Prisma AIRS for AI security capabilities inclu
 
 **Commands:**
 
-- `prisma-airs-runtime-scan`: 
+- `prisma-airs-runtime-scan`: Scan a single prompt against a security profile for AI security threats.
 
 
 ## Palo Alto Networks Prisma AIRS - AI Supply Chain Security
@@ -1914,21 +1998,21 @@ Scan and govern AI models with Palo Alto Networks Prisma AIRS AI Supply Chain Se
 
 **Commands:**
 
-- `prisma-airs-model-security-scans-list`: 
-- `prisma-airs-model-security-scans-create`: 
-- `prisma-airs-model-security-scans-get`: 
-- `prisma-airs-model-security-scans-violations`: 
-- `prisma-airs-model-security-labels-keys`: 
-- `prisma-airs-model-security-labels-values`: 
-- `prisma-airs-model-security-labels-add`: 
-- `prisma-airs-model-security-labels-set`: 
-- `prisma-airs-model-security-labels-delete`: 
-- `prisma-airs-model-security-scans-evaluation`: 
-- `prisma-airs-model-security-scans-violation`: 
-- `prisma-airs-model-security-scans-files`: 
-- `prisma-airs-model-security-scans-evaluations`: 
-- `prisma-airs-model-security-models-list`: 
-- `prisma-airs-model-security-models-get`: 
+- `prisma-airs-model-security-scans-list`: List all model security scans.
+- `prisma-airs-model-security-scans-create`: Create a new model security scan to check a model for supply chain security issues. Scan is asynchronous - use scans-get to poll for completion.
+- `prisma-airs-model-security-scans-get`: Get model security scan status and results. Use this to poll scan completion after scans-create.
+- `prisma-airs-model-security-scans-violations`: Get rule violations for a model security scan. Shows detailed information about which security rules failed and why.
+- `prisma-airs-model-security-labels-keys`: Get distinct label keys across all model security scans. Use for discovering available labels for filtering/organization.
+- `prisma-airs-model-security-labels-values`: Get distinct values for a specific label key across all model security scans. Use to discover what values exist for a given label.
+- `prisma-airs-model-security-labels-add`: Add labels to a model security scan for organization and filtering. Labels are key-value pairs.
+- `prisma-airs-model-security-labels-set`: Set labels on a model security scan, replacing all existing labels. Use this to completely update scan labels.
+- `prisma-airs-model-security-labels-delete`: Delete labels from a model security scan by key. Removes specific labels while preserving others.
+- `prisma-airs-model-security-scans-evaluation`: Get a single rule evaluation by UUID. Retrieves detailed information about how a specific rule was evaluated during a scan.
+- `prisma-airs-model-security-scans-violation`: Get a single violation by UUID. Retrieves detailed information about a specific security rule violation found during a scan.
+- `prisma-airs-model-security-scans-files`: Get files for a scan. Lists all files that were scanned within a model, showing file structure and scan results.
+- `prisma-airs-model-security-scans-evaluations`: Get rule evaluations for a scan. Lists all rule evaluations showing which security rules passed, failed, or had errors.
+- `prisma-airs-model-security-models-list`: List Model Security model catalog entries (aggregate over their scanned versions). Read-only.
+- `prisma-airs-model-security-models-get`: Get a single Model Security model by UUID. Read-only.
 
 
 ## PCComputeContainerComplianceIssuesButton
@@ -1976,7 +2060,10 @@ This script runs the "prisma-cloud-compute-images-scan-list" command for a speci
 **Product:** Palo Alto Networks - Strata Cloud Manager  
 **Commands:**
 
-- `prisma-access-logout-user`: 
+- `prisma-access-logout-user`: Force logout a specific user from Prisma Access
+- `prisma-access-query`: Run a query via the Prisma Access CLI
+- `prisma-access-cli-command`: Run a custom CLI command on Prisma Access
+- `prisma-access-active-users`: Query currently active users.
 
 
 ## Prisma Access - Logout User
@@ -2372,16 +2459,16 @@ Prisma Cloud secures infrastructure, workloads and applications, across the enti
 
 **Commands:**
 
-- `prisma-cloud-alert-dismiss`: 
-- `prisma-cloud-alert-get-details`: 
-- `prisma-cloud-alert-filter-list`: 
-- `prisma-cloud-remediation-command-list`: 
-- `prisma-cloud-alert-remediate`: 
-- `prisma-cloud-alert-reopen`: 
-- `prisma-cloud-alert-search`: 
-- `prisma-cloud-config-search`: 
-- `prisma-cloud-event-search`: 
-- `prisma-cloud-network-search`: 
+- `prisma-cloud-alert-dismiss`: Dismiss or snooze the alerts matching the given filter. Either policy IDs or alert IDs must be provided. When no absolute time nor relative time arguments are p
+- `prisma-cloud-alert-get-details`: Gets the details of an alert based on the alert ID.
+- `prisma-cloud-alert-filter-list`: List the acceptable filters and values for alerts.
+- `prisma-cloud-remediation-command-list`: Generates and returns a list of remediation commands for the specified alerts and policies. Data returned for a successful call include fully constructed comman
+- `prisma-cloud-alert-remediate`: Remediates the alert with the specified ID, if that alert is associated with a remediable policy. In order to check what remediation would run, use the "prisma-
+- `prisma-cloud-alert-reopen`: Re-open the alerts matching the given filter. Either policy IDs or alert IDs must be provided. When no absolute time nor relative time arguments are provided, t
+- `prisma-cloud-alert-search`: Search alerts on the Prisma Cloud platform. When no absolute time nor relative time arguments are provided, the search will show alerts from the last 7 days.
+- `prisma-cloud-config-search`: Search configuration inventory on the Prisma Cloud platform using RQL language. Use this command for all queries that start with "config". When no absolute time
+- `prisma-cloud-event-search`: Search events inventory on the Prisma Cloud platform using RQL language. Use this command for all queries that start with "event". When no absolute time nor rel
+- `prisma-cloud-network-search`: Search networks inventory on the Prisma Cloud platform using RQL language. Use this command for all queries that start with "networks". When no absolute time no
 
 
 ## Prisma SASE - Add IPs to Static Address Group
@@ -2482,10 +2569,10 @@ Note: This integration should be used as part of our Identity Lifecycle Manageme
 
 **Commands:**
 
-- `iam-create-user`: 
-- `iam-update-user`: 
-- `iam-get-user`: 
-- `iam-disable-user`: 
+- `iam-create-user`: Creates a user.
+- `iam-update-user`: Updates an existing user with the data passed in the user-profile argument.
+- `iam-get-user`: Retrieves a single user resource.
+- `iam-disable-user`: Disable an active user.
 
 
 ## PrismaCloudAttribution
@@ -2588,8 +2675,8 @@ Fetches Proofpoint Cloud Threat Response (CTR) incidents into the platform, and 
 
 **Commands:**
 
-- `proofpoint-ctr-incidents-list`: 
-- `proofpoint-ctr-incident-get`: 
+- `proofpoint-ctr-incidents-list`: Returns a list of Proofpoint Cloud Threat Response incidents matching the supplied filters.
+- `proofpoint-ctr-incident-get`: Returns full details for a specific Proofpoint Cloud Threat Response incident.
 
 
 ## Radware Cloud DDoS Protection Services
@@ -2601,7 +2688,7 @@ Radware Cloud Service provides customers and partners with the ability to progra
 
 **Commands:**
 
-- `radware-cloud-ddos-protection-services-get-events`: 
+- `radware-cloud-ddos-protection-services-get-events`: Send events from Radware Cloud DDoS Protection Services to XSIAM. Used mainly for debugging.
 
 
 ## Rapid7 InsightVM Cloud
@@ -2613,15 +2700,15 @@ InsightVM is a Vulnerability Management Tool which Scan your Network, Eliminate 
 
 **Commands:**
 
-- `insightvm-cloud-get-asset`: 
-- `insightvm-cloud-get-scan`: 
-- `insightvm-cloud-get-scan-engines`: 
-- `insightvm-cloud-get-health-check`: 
-- `insightvm-cloud-search-assets`: 
-- `insightvm-cloud-last-sites`: 
-- `insightvm-cloud-search-vulnerabilities`: 
-- `insightvm-cloud-start-scan`: 
-- `insightvm-cloud-stop-scan`: 
+- `insightvm-cloud-get-asset`: Returns the assessment and details of an asset (specified by id). Only assets which the caller has access to can be returned.
+- `insightvm-cloud-get-scan`: Retrieves the scan with the specified identifier.
+- `insightvm-cloud-get-scan-engines`: Retrieves a page of scan engines.
+- `insightvm-cloud-get-health-check`: Returns an indicator of the health of the API.
+- `insightvm-cloud-search-assets`: Returns the inventory, assessment, and summary details for a page of assets.
+- `insightvm-cloud-last-sites`: Returns the details for sites
+- `insightvm-cloud-search-vulnerabilities`: Returns all vulnerabilities that can be assessed.
+- `insightvm-cloud-start-scan`: Starts a scan.
+- `insightvm-cloud-stop-scan`: Stops the scan with the specified identifier.
 
 
 ## ReversingLabs TitaniumCloud v2
@@ -2633,7 +2720,7 @@ ReversingLabs TitaniumCloud provides threat analysis data from various Reversing
 
 **Commands:**
 
-- `reversinglabs-titaniumcloud-file-reputation`: 
+- `reversinglabs-titaniumcloud-file-reputation`: Retrieve File Reputation data from TitaniumCloud
 
 
 ## Rubrik Data Object Discovery - Rubrik Polaris
@@ -2754,21 +2841,21 @@ The Rubrik Security Cloud integration will fetch the Rubrik Anomaly Event and is
 
 **Commands:**
 
-- `rubrik-radar-analysis-status`: 
-- `rubrik-sonar-sensitive-hits`: 
-- `rubrik-cdm-cluster-location`: 
-- `rubrik-cdm-cluster-connection-state`: 
-- `rubrik-polaris-object-search`: 
-- `rubrik-sonar-policies-list`: 
-- `rubrik-sonar-policy-analyzer-groups-list`: 
-- `rubrik-polaris-vm-object-metadata-get`: 
-- `rubrik-polaris-vm-objects-list`: 
-- `rubrik-sonar-ondemand-scan`: 
-- `rubrik-sonar-ondemand-scan-status`: 
-- `rubrik-polaris-vm-object-snapshot-list`: 
-- `rubrik-sonar-ondemand-scan-result`: 
-- `rubrik-radar-anomaly-csv-analysis`: 
-- `rubrik-sonar-csv-download`: 
+- `rubrik-radar-analysis-status`: Check the Radar Event for updates.
+- `rubrik-sonar-sensitive-hits`: Find data classification hits on an object.
+- `rubrik-cdm-cluster-location`: Find the CDM GeoLocation of a CDM Cluster.
+- `rubrik-cdm-cluster-connection-state`: Find the CDM Connection State of a CDM Cluster.
+- `rubrik-polaris-object-search`: Search for Rubrik discovered objects of any type, return zero or more matches.
+- `rubrik-sonar-policies-list`: Retrieve the list of all the available Sonar policies.
+- `rubrik-sonar-policy-analyzer-groups-list`: List the analyzer group policies.
+- `rubrik-polaris-vm-object-metadata-get`: Retrieve details for a Vsphere object based on the provided object ID.
+- `rubrik-polaris-vm-objects-list`: Retrieve a list of all the objects of the Vsphere Vm known to the Rubrik.
+- `rubrik-sonar-ondemand-scan`: Trigger an on-demand scan of a system. Supports "Vsphere VM" object type only.
+- `rubrik-sonar-ondemand-scan-status`: Retrieve the status of a scanned system.
+- `rubrik-polaris-vm-object-snapshot-list`: Search for a Rubrik snapshot of an object based on the provided snapshot ID, exact timestamp, or specific value like earliest/latest, or closest before/after a 
+- `rubrik-sonar-ondemand-scan-result`: Retrieve the download link for the requested scanned file.
+- `rubrik-radar-anomaly-csv-analysis`: Request for the analysis and retrieve the download link or directly download file for the Radar CSV analyzed file.
+- `rubrik-sonar-csv-download`: Request to download the Sonar CSV Snapshot results file.
 
 
 ## Rubrik Sensitive Data Object Discovery - Rubrik Security Cloud
@@ -3054,7 +3141,7 @@ Use the SAP Cloud for Customer C4C integration to fetch events from SAP Cloud AP
 
 **Commands:**
 
-- `sap-cloud-get-events`: 
+- `sap-cloud-get-events`: Retrieves events from the SAP Cloud for Customer API.
 
 
 ## Saviynt Enterprise Identity Cloud
@@ -3066,7 +3153,7 @@ Collector for Saviynt Enterprise Identity Cloud (EIC) audit logs using Analytics
 
 **Commands:**
 
-- `saviynt-eic-get-events`: 
+- `saviynt-eic-get-events`: Gets events from Saviynt EIC.
 
 
 ## Spring Core and Cloud Function SpEL RCEs
@@ -3095,11 +3182,11 @@ With the SpyCloud integration, data from breaches can be pulled and further proc
 
 **Commands:**
 
-- `spycloud-list-breaches`: 
-- `spycloud-get-breach-data`: 
-- `spycloud-domain-data`: 
-- `spycloud-email-data`: 
-- `spycloud-watchlist-data`: 
+- `spycloud-list-breaches`: Lists the breaches identified. By default this lists all breaches known in Spycloud. With the arguments it's possible to scope the results on date and keywords.
+- `spycloud-get-breach-data`: Retrieves the breach details. While very similar to list-breaches, this command obtains one specific breach, which is easier for automation tasks
+- `spycloud-domain-data`: Get all the data from a monitored domain and the breaches occurred that relates with it. Can be scoped by domain, type and severity
+- `spycloud-email-data`: Get all the data from a monitored email address and the breaches occurred that relates with it. Can be scoped by date, severity and breach
+- `spycloud-watchlist-data`: Get all the data from a watchlist.
 
 
 ## SpyCloud Enterprise Protection Enrichment
@@ -3108,18 +3195,18 @@ With the SpyCloud integration, data from breaches can be pulled and further proc
 **Product:** SpyCloud Enterprise Protection  
 **Commands:**
 
-- `spycloud-breach-catalog-list`: 
-- `spycloud-breach-catalog-get`: 
-- `spycloud-domain-data-get`: 
-- `spycloud-username-data-get`: 
-- `spycloud-ip-address-data-get`: 
-- `spycloud-email-data-get`: 
-- `spycloud-password-data-get`: 
-- `spycloud-watchlist-data-list`: 
-- `spycloud-compass-device-data-get`: 
-- `spycloud-compass-data-list`: 
-- `spycloud-compass-device-list`: 
-- `spycloud-compass-application-data-get`: 
+- `spycloud-breach-catalog-list`: List the Breach Catalog. By default, this lists all breaches in SpyCloud. With the arguments, it's possible to scope the results.
+- `spycloud-breach-catalog-get`: Get Breach Catalog Information by ID.
+- `spycloud-domain-data-get`: Get Breach Data by Domain.
+- `spycloud-username-data-get`: Get Breach Data by Username.
+- `spycloud-ip-address-data-get`: Get Breach Data by IP Address.
+- `spycloud-email-data-get`: Get Breach Data by Email.
+- `spycloud-password-data-get`: Get Breach Data by Password.
+- `spycloud-watchlist-data-list`: List Breach Data. By default, this lists all breach data for the customer's configured watchlist. With the arguments, it's possible to scope the results.
+- `spycloud-compass-device-data-get`: Get Compass device data by infected_machine_id.
+- `spycloud-compass-data-list`: List Compass data. By default, this lists all Compass data. With the arguments, it's possible to scope the results.
+- `spycloud-compass-device-list`: List Compass device data. By default, this lists all devices. With the arguments, it's possible to scope the results.
+- `spycloud-compass-application-data-get`: Get Compass application data for a specific application.
 
 
 ## Sumo Logic Cloud SIEM
@@ -3131,20 +3218,20 @@ Freeing the analyst with autonomous decisions. This integration was integrated a
 
 **Commands:**
 
-- `sumologic-sec-insight-get-details`: 
-- `sumologic-sec-insight-get-comments`: 
-- `sumologic-sec-insight-get-comments`: 
-- `sumologic-sec-signal-get-details`: 
-- `sumologic-sec-entity-get-details`: 
-- `sumologic-sec-insight-search`: 
-- `sumologic-sec-signal-search`: 
-- `sumologic-sec-entity-search`: 
-- `sumologic-sec-insight-set-status`: 
-- `sumologic-sec-match-list-get`: 
-- `sumologic-sec-match-list-update`: 
-- `sumologic-sec-threat-intel-search-indicators`: 
-- `sumologic-sec-threat-intel-get-sources`: 
-- `sumologic-sec-threat-intel-update-source`: 
+- `sumologic-sec-insight-get-details`: Get Insight details for a specific Insight ID.
+- `sumologic-sec-insight-add-comment`: Get comments for a specific Insight ID. (Users can post and update comments on the Sumo Logic Cloud SIEM portal for any Insight ID.)
+- `sumologic-sec-insight-get-comments`: Get comments for a specific Insight ID. (Users can post and update comments on the Sumo Logic Cloud SIEM portal for any Insight ID.)
+- `sumologic-sec-signal-get-details`: Get Signal details for a specific Signal ID. Signal details command references signals in Sumo Logic Cloud SIEM which are created when records exhibit suspiciou
+- `sumologic-sec-entity-get-details`: Get entity details for a specific entity ID
+- `sumologic-sec-insight-search`: Search insights using available filters
+- `sumologic-sec-signal-search`: Search signals using available filters
+- `sumologic-sec-entity-search`: Search entities using the available filters
+- `sumologic-sec-insight-set-status`: Change status of Insight
+- `sumologic-sec-match-list-get`: Get match lists
+- `sumologic-sec-match-list-update`: Add item to match list
+- `sumologic-sec-threat-intel-search-indicators`: Search Threat Intel Indicators
+- `sumologic-sec-threat-intel-get-sources`: Get Threat Intel Sources
+- `sumologic-sec-threat-intel-update-source`: Add Threat Intel Indicator to Threat Intel Source
 
 
 ## Sumo Logic Cloud SIEM - Link Signal Incidents
@@ -3178,7 +3265,15 @@ This is a wrapper around the setIndicators script
 **Product:** Trellix Email Security - Cloud  
 **Commands:**
 
-- `fireeye-etp-search-messages`: 
+- `fireeye-etp-search-messages`: Search for messages using specific message attributes as indicators.
+- `fireeye-etp-get-message`: Get the data of a specific message.
+- `fireeye-etp-list-alerts`: Get summary format information about the alerts.
+- `fireeye-etp-download-alert-case-files`: Downloads all case files for the specified alert ID as a ZIP file. You can obtain the alert ID from the Alert Summary response, for example: "id": "AV7zzRy7kvIw
+- `fireeye-etp-list-yara-rulesets`: Fetch the list of YARA rulesets and return a list with all the rules.
+- `fireeye-etp-download-yara-file`: Downloads a YARA file.
+- `fireeye-etp-upload-yara-file`: Update or replace the YARA rule file in the existing ruleset.
+- `fireeye-etp-get-events-data`: Returns all events of the alert by the alert ID.
+- `fireeye-etp-quarantine-release`: Releases the email file present in the quarantine for the given email. Cloud message ID.
 
 
 ## Trend Micro CAS - Take Action On Emails
@@ -3223,14 +3318,14 @@ Use TrendAI™ Cloud App Security integration to protect against ransomware, phi
 
 **Commands:**
 
-- `trendmicro-cas-security-events-list`: 
-- `trendmicro-cas-email-sweep`: 
-- `trendmicro-cas-user-take-action`: 
-- `trendmicro-cas-email-take-action`: 
-- `trendmicro-cas-user-action-result-query`: 
-- `trendmicro-cas-email-action-result-query`: 
-- `trendmicro-cas-blocked-lists-get`: 
-- `trendmicro-cas-blocked-lists-update`: 
+- `trendmicro-cas-security-events-list`: Retrieves security event logs of services.
+- `trendmicro-cas-email-sweep`: Searches for email messages in mailboxes, matching search criteria.
+- `trendmicro-cas-user-take-action`: Takes action on a batch of specified user accounts, such as disabling users accounts, requesting multi-factor authentication, and requesting to reset a password
+- `trendmicro-cas-email-take-action`: Takes action on a batch of specified email messages, such as deleting and quarantining email messages. Relevant for office365 exchange only.
+- `trendmicro-cas-user-action-result-query`: Queries the results of actions taken on a user's account.
+- `trendmicro-cas-email-action-result-query`: Queries the results of actions taken for email messages.
+- `trendmicro-cas-blocked-lists-get`: Retrieves all blocked senders, URLs, and SHA-1 hash values that have been configured to quarantine Exchange Online email messages.
+- `trendmicro-cas-blocked-lists-update`: Adds or removes senders, URLs, SHA-1 hash values to or from blocked lists. You must specify one of senders, urls, or filehashes.
 
 
 ## URL Reputation - ReversingLabs TitaniumCloud
@@ -3251,7 +3346,12 @@ Get reputation data for the submitted URL. Required TitaniumCloud API rights: TC
 **Product:** WootCloud  
 **Commands:**
 
-- `wootcloud-get-pkt-alerts`: 
+- `wootcloud-get-pkt-alerts`: list packet alerts generated in requested time span
+- `wootcloud-get-bt-alerts`: list bluetooth alerts generated in requested time span
+- `wootcloud-get-anomaly-alerts`: list anomaly alerts generated in requested time span
+- `wootcloud-fetch-packet-alert`: retrieve single packet alert given packet id
+- `wootcloud-fetch-bluetooth-alert`: retrieve single bluetooth alert given packet id
+- `wootcloud-fetch-anomaly-alert`: retrieve single anomaly alert given packet id
 
 
 ## XCloud Alert Enrichment

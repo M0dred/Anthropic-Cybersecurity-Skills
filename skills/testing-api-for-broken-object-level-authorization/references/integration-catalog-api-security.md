@@ -12,19 +12,21 @@ APIVoid wraps up a number of services such as ipvoid & urlvoid
 
 **Commands:**
 
-- `apivoid-ip`: 
-- `apivoid-domain`: 
-- `apivoid-url`: 
-- `apivoid-dns-lookup`: 
-- `apivoid-ssl-info`: 
-- `apivoid-email-verify`: 
-- `apivoid-threatlog`: 
-- `apivoid-parked-domain`: 
-- `apivoid-domain-age`: 
-- `apivoid-url-to-image`: 
-- `apivoid-url-to-pdf`: 
-- `apivoid-url-to-html`: 
-- `apivoid-site-trustworthiness`: 
+- `apivoid-ip`: Returns the reputation and extended context of the IP.
+- `apivoid-domain`: Returns the reputation of the domain.
+- `apivoid-url`: Returns the reputation of the URL.
+- `ip`: Returns the reputation of the IP.
+- `domain`: Returns the reputation of the domain.
+- `url`: Returns the reputation of the URL.
+- `apivoid-dns-lookup`: Gets DNS records of a host.
+- `apivoid-ssl-info`: Get useful SSL information from a remote host
+- `apivoid-email-verify`: Checks if an email address is disposable, if it has MX records, and more.
+- `apivoid-threatlog`: Check if a website is present on ThreatLog database
+- `apivoid-parked-domain`: Detect if a domain (i.e google.com) is actually parked
+- `apivoid-domain-age`: Get the registration date of a domain and the domain age in days
+- `apivoid-url-to-image`: Capture a high-quality screenshot of any website or URL
+- `apivoid-url-to-pdf`: Convert an URL info high-quality and printable PDF document
+- `apivoid-url-to-html`: Get the body of an html page after javascript has been executed
 
 
 ## Core REST API
@@ -33,19 +35,19 @@ APIVoid wraps up a number of services such as ipvoid & urlvoid
 **Product:** Cortex REST API  
 **Commands:**
 
-- `core-api-post`: 
-- `core-api-get`: 
-- `core-api-put`: 
-- `core-api-patch`: 
-- `core-api-delete`: 
-- `core-api-download`: 
-- `core-api-multipart`: 
-- `core-delete-incidents`: 
-- `core-api-install-packs`: 
-- `core-api-file-upload`: 
-- `core-api-file-delete`: 
-- `core-api-file-attachment-delete`: 
-- `core-api-file-check`: 
+- `core-api-post`: send HTTP POST request
+- `core-api-get`: send HTTP GET requests
+- `core-api-put`: send HTTP PUT request
+- `core-api-patch`: send HTTP PATCH request
+- `core-api-delete`: send HTTP DELETE request
+- `core-api-download`: Download files from core server
+- `core-api-multipart`: Send HTTP Multipart request to upload files to Core server
+- `core-delete-incidents`: Delete Core incidents
+- `core-api-install-packs`: Upload packs to Core server from url or the marketplace.
+- `core-api-file-upload`: Upload to the incident a file that the user provided according to the entry_id or the content of the file.
+- `core-api-file-delete`: Delete a war room (investigation) file entry.
+- `core-api-file-attachment-delete`: Delete a file attachment from an incident — specifically from the incident’s file attachments (not from the war room).
+- `core-api-file-check`: Check if the file exists in the platform.
 
 
 ## Google Apigee
@@ -57,7 +59,7 @@ Apigee is Google Cloud's native API management platform that can be used to buil
 
 **Commands:**
 
-- `google-apigee-get-events`: 
+- `google-apigee-get-events`: Gets logs from Google Apigee.
 
 
 ## Illumio Core
@@ -69,18 +71,18 @@ Connects to Illumio Core APIs to perform investigative and restorative actions. 
 
 **Commands:**
 
-- `illumio-traffic-analysis`: 
-- `illumio-virtual-service-create`: 
-- `illumio-service-binding-create`: 
-- `illumio-object-provision`: 
-- `illumio-workload-get`: 
-- `illumio-workloads-list`: 
-- `illumio-enforcement-boundary-create`: 
-- `illumio-enforcement-mode-update`: 
-- `illumio-ip-list-get`: 
-- `illumio-ip-lists-get`: 
-- `illumio-ruleset-create`: 
-- `illumio-rule-create`: 
+- `illumio-traffic-analysis`: Retrieves traffic flow of a particular port & protocol within the specified time range based on policy decisions.
+- `illumio-virtual-service-create`: Creates a virtual service for a particular port & protocol, which can be further binded to workloads. Until provisioned with the 'illumio-object-provision' comm
+- `illumio-service-binding-create`: Binds the existing or a new virtual service to the workloads.
+- `illumio-object-provision`: A utility method for provisioning policy objects from draft to active state. Policy objects only affect the network once they've been provisioned.
+- `illumio-workload-get`: Retrieves the details of the workload based on the provided workload's HREF.
+- `illumio-workloads-list`: Retrieves the list of workloads based on the provided filters.
+- `illumio-enforcement-boundary-create`: Creates an enforcement boundary for a particular port/protocol. After completion of this command, provisioning will be done using the "illumio-object-provision"
+- `illumio-enforcement-mode-update`: Update the Enforcement Mode for one or more workloads.
+- `illumio-ip-list-get`: Retrieves the list of IPs based on the name of the IP list.
+- `illumio-ip-lists-get`: Retrieves the list of IPs based on the query parameters.
+- `illumio-ruleset-create`: Creates a ruleset with a unique name. Until provisioned with the 'illumio-object-provision' command, this object will remain in a draft state.
+- `illumio-rule-create`: Creates & assigns rules to a particular ruleset. Added or updated Rules will remain in draft state until their containing Rule Set is provisioned using the "ill
 
 
 ## IP-API
@@ -89,6 +91,10 @@ Connects to Illumio Core APIs to perform investigative and restorative actions. 
 **Product:** IP-API  
 
 This integration will enrich IP addresses from IP-API with data about the geolocation, as well as a determination of the IP address being associated with a mobile device, hosting or proxy. Revers DNS is also returned. This service is available for free (with a throttle) - or paid. This integration was integrated and tested with IP-API
+
+**Commands:**
+
+- `ip`: Return IP information
 
 
 ## Microsoft Graph API
@@ -100,12 +106,12 @@ Use the Microsoft Graph API integration to interact with Microsoft APIs that do 
 
 **Commands:**
 
-- `msgraph-api-auth-start`: 
-- `msgraph-api-auth-complete`: 
-- `msgraph-api-test`: 
-- `msgraph-api-request`: 
-- `msgraph-api-auth-reset`: 
-- `msgraph-api-generate-login-url`: 
+- `msgraph-api-auth-start`: Run this command to start the authorization process and follow the instructions in the command results.
+- `msgraph-api-auth-complete`: Run this command to complete the authorization process. Should be used after running the msgraph-api-auth-start command.
+- `msgraph-api-test`: Tests connectivity to Microsoft.
+- `msgraph-api-request`: Run a Microsoft Graph API query.
+- `msgraph-api-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
+- `msgraph-api-generate-login-url`: Generate the login URL used for Authorization code flow.
 
 
 ## RapidBreachResponse-CompletedTasksCount-Widget
@@ -185,7 +191,8 @@ Enrich indicators using the Spur Context API. This integration was integrated an
 
 **Commands:**
 
-- `spur-context-api-enrich`: 
+- `spur-context-api-enrich`: Enrich indicators using the Spur Context API.
+- `ip`: IP reputation command using the Spur Context API.
 
 
 ## Update enforcement mode - Illumio

@@ -25,14 +25,18 @@ Query Indicators of Compromise in AlienVault OTX
 
 **Commands:**
 
-- `alienvault-search-ipv6`: 
-- `alienvault-search-hostname`: 
-- `alienvault-search-cve`: 
-- `alienvault-get-related-urls-by-indicator`: 
-- `alienvault-get-related-hashes-by-indicator`: 
-- `alienvault-get-passive-dns-data-by-indicator`: 
-- `alienvault-search-pulses`: 
-- `alienvault-get-pulse-details`: 
+- `ip`: Queries an IP address in AlienVault OTX.
+- `domain`: Queries a domain in AlienVault OTX.
+- `alienvault-search-ipv6`: Queries IPv6 in AlienVault OTX.
+- `alienvault-search-hostname`: Searches for a host name in AlienVault OTX.
+- `file`: Query a file in AlienVault OTX.
+- `alienvault-search-cve`: Query Common Vulnerabilities and Exposures (CVE) in AlienVault OTX.
+- `alienvault-get-related-urls-by-indicator`: Returns related URLs by indicator.
+- `alienvault-get-related-hashes-by-indicator`: Returns related hashes by indicator.
+- `alienvault-get-passive-dns-data-by-indicator`: Returns passive DNS records by indicator.
+- `alienvault-search-pulses`: Searches for pulses in AlienVault OTX.
+- `alienvault-get-pulse-details`: Returns pulse details.
+- `url`: Queries a URL in AlienVault OTX.
 
 
 ## Auto Add Assets - RiskIQ Digital Footprint
@@ -109,7 +113,9 @@ Use the Claroty CTD integration to manage assets and alerts. This integration wa
 
 **Commands:**
 
-- `claroty-get-assets`: 
+- `claroty-get-assets`: Gets all assets from CTD. You can apply one or more filters.
+- `claroty-query-alerts`: Gets alerts from CTD.
+- `claroty-resolve-alert`: Resolves alerts.
 
 
 ## Claroty Incident
@@ -179,9 +185,13 @@ CyberTotal is a cloud-based threat intelligence service developed by CyCraft. Th
 
 **Commands:**
 
-- `cybertotal-ip-whois`: 
-- `cybertotal-url-whois`: 
-- `cybertotal-domain-whois`: 
+- `ip`: Return IP information and reputation
+- `file`: Return file's information and reputation
+- `domain`: Return domain information and reputation
+- `url`: Return domain information and reputation
+- `cybertotal-ip-whois`: Return ip whois information
+- `cybertotal-url-whois`: Return url whois information
+- `cybertotal-domain-whois`: Return domain whois information
 
 
 ## CyberTotal Whois - CyCraft
@@ -258,10 +268,10 @@ HYAS Protect is a generational leap forward utilizing authoritative knowledge of
 
 **Commands:**
 
-- `hyas-get-domain-verdict`: 
-- `hyas-get-ip-verdict`: 
-- `hyas-get-fqdn-verdict`: 
-- `hyas-get-nameserver-verdict`: 
+- `hyas-get-domain-verdict`: Returns verdict information for the provided Domain.
+- `hyas-get-ip-verdict`: Returns verdict information for the provided IP Address.
+- `hyas-get-fqdn-verdict`: Returns verdict information for the provided FQDN.
+- `hyas-get-nameserver-verdict`: Returns verdict information for the provided Nameserver.
 
 
 ## Integration Troubleshooting
@@ -305,6 +315,10 @@ Adds the IP Address(es) to allow list after checking if it should be added to al
 
 The LINE API Integration is used for sending a message to LINE Group. This integration was integrated and tested with LINE version 7.0.3 of LINENotify
 
+**Commands:**
+
+- `LINE-send-message`: Send message/notification to LINE Group
+
 
 ## OTRS
 
@@ -315,7 +329,11 @@ Service management suite that comprises ticketing, workflow automation, and noti
 
 **Commands:**
 
-- `otrs-get-ticket`: 
+- `otrs-get-ticket`: Retrieves details for an OTRS ticket by ticket ID or ticket number. At least one input argument is required for the integration to run.
+- `otrs-search-ticket`: Search for an OTRS ticket using search filters
+- `otrs-create-ticket`: Create a new ticket in OTRS
+- `otrs-update-ticket`: Update an OTRS ticket
+- `otrs-close-ticket`: Close an OTRS ticket
 
 
 ## PassiveTotal v2
@@ -327,21 +345,21 @@ Analyze and understand threat infrastructure from a variety of sources-passive D
 
 **Commands:**
 
-- `pt-whois-search`: 
-- `pt-get-components`: 
-- `pt-get-trackers`: 
-- `pt-get-pdns-details`: 
-- `pt-ssl-cert-search`: 
-- `pt-get-host-pairs`: 
-- `pt-get-services`: 
-- `pt-get-whois`: 
-- `pt-get-cookies`: 
-- `pt-get-articles`: 
-- `pt-get-data-card`: 
-- `pt-get-reputation`: 
-- `pt-list-intel-profiles`: 
-- `pt-list-intel-profile-indicators`: 
-- `pt-list-my-attack-surface-insights`: 
+- `pt-whois-search`: Gets WHOIS information records based on field matching queries.
+- `pt-get-components`: Retrieves the host attribute components for a domain or IP address. Maximum 2000 records are fetched.
+- `pt-get-trackers`: Retrieves the host attribute trackers for a domain or IP address. Maximum 2000 records are fetched.
+- `pt-get-pdns-details`: Retrieves the passive DNS results from active account sources.
+- `pt-ssl-cert-search`: Retrieves SSL certificates for a given field value.
+- `pt-get-host-pairs`: Retrieves the host attribute pairs related to a domain or IP address. Maximum 2000 records are fetched.
+- `domain`: Provides data enrichment for domains.
+- `pt-get-services`: Retrieves exposed services on the recently open ports for an IP address.
+- `pt-get-whois`: Gets WHOIS information records based on queries.
+- `pt-get-cookies`: Retrieves cookies addresses or hostname information based on cookie name or domain.
+- `pt-get-articles`: Retrieves information related to articles for a specific indicator.
+- `pt-get-data-card`: Retrieves a summary data card associated with the given query.
+- `pt-get-reputation`: Gets reputation for a given domain, host or IP.
+- `ip`: Checks the reputation of an IP address.
+- `pt-list-intel-profiles`: Retrieves the list of all profiles.
 
 
 ## PowerShell Remoting (Beta)
@@ -353,13 +371,13 @@ PowerShell Remoting is a comprehensive built-in remoting subsystem that is a par
 
 **Commands:**
 
-- `ps-remote-command`: 
-- `ps-remote-download-file`: 
-- `ps-remote-upload-file`: 
-- `ps-remote-etl-create-start`: 
-- `ps-remote-etl-create-stop`: 
-- `ps-remote-export-registry`: 
-- `ps-remote-export-mft`: 
+- `ps-remote-command`: Executes remote PowerShell commands on a single host.
+- `ps-remote-download-file`: Downloads a file from the remote endpoint.
+- `ps-remote-upload-file`: Uploads a file to the remote endpoint.
+- `ps-remote-etl-create-start`: This command starts the recording of an ETL file on a Windows endpoint. An ETL file is just like a PCAP file which is created by the Windows Netsh command.
+- `ps-remote-etl-create-stop`: Ends the recording of an ETL file on a Windows endpoint.
+- `ps-remote-export-registry`: Exports the specified registry of hive to a file.
+- `ps-remote-export-mft`: Extracts the master file table from the volume.
 
 
 ## PTEnrich
@@ -383,8 +401,9 @@ This integration transfers files between the platform. Some changes have been ma
 
 **Commands:**
 
-- `copy-to`: 
-- `copy-from`: 
+- `ssh`: Run the specified command on the remote system with SSH.
+- `copy-to`: Copies the given file from the platform.
+- `copy-from`: Copies the given file from the remote machine to the platform.
 
 
 ## Reset User Password via Chatbot
@@ -415,12 +434,12 @@ RiskIQ Digital Footprint integration enables your security team to manage assets
 
 **Commands:**
 
-- `df-asset-connections`: 
-- `df-asset-changes-summary`: 
-- `df-asset-changes`: 
-- `df-get-asset`: 
-- `df-add-assets`: 
-- `df-update-assets`: 
+- `df-asset-connections`: Retrieve the set of assets that are connected to the requested asset.
+- `df-asset-changes-summary`: Retrieve summary information describing counts of confirmed assets that have been added, removed or changed in inventory over the given time period.
+- `df-asset-changes`: Retrieve the list of confirmed assets that have been added or removed from inventory over the given time period. Retrieve the list of asset detail changes in in
+- `df-get-asset`: Retrieve the asset of the specified UUID or type and name from Global Inventory.
+- `df-add-assets`: Add one or more assets to Global Inventory with a provided set of properties to apply to all assets.
+- `df-update-assets`: Update one or more assets in Global Inventory with provided set of properties.
 
 
 ## RiskIQDigitalFootprintAssetDetailsWidgetScript
@@ -578,6 +597,10 @@ Set widgets to custom layout in Domain, Email and RiskIQ Asset type of indicator
 
 Uses screenshot machine to get a screenshot
 
+**Commands:**
+
+- `screenshot-machine-get-screenshot`: Retrieve screenshot
+
 
 ## TroubleshootAggregateResults
 
@@ -723,20 +746,21 @@ This integration analyzes suspicious hashes, URLs, domains, and IP addresses. Th
 
 **Commands:**
 
-- `url-scan`: 
-- `vt-comments-add`: 
-- `vt-file-scan-upload-url`: 
-- `vt-comments-delete`: 
-- `vt-comments-get`: 
-- `vt-comments-get-by-id`: 
-- `vt-search`: 
-- `vt-file-sandbox-report`: 
-- `vt-passive-dns-data`: 
-- `vt-analysis-get`: 
-- `vt-file-sigma-analysis`: 
-- `vt-privatescanning-file`: 
-- `vt-privatescanning-file-scan`: 
-- `vt-privatescanning-analysis-get`: 
+- `ip`: Checks the reputation of an IP address.
+- `url`: Checks the reputation of a URL.
+- `domain\`: Checks the reputation of a domain.
+- `url-scan`: Scans a specified URL. Use the vt-analysis-get command to get the scan results.
+- `vt-comments-add`: Adds comments to files and URLs.
+- `vt-file-scan-upload-url`: Premium API. Get a special URL for files larger than 32 MB.
+- `vt-comments-delete`: Delete a comment.
+- `vt-comments-get`: Retrieves comments for a given resource.
+- `vt-comments-get-by-id`: Retrieves a comment by comment ID.
+- `vt-search`: Search for an indicator in VirusTotal.
+- `vt-file-sandbox-report`: Retrieves a behavioral relationship of the given file hash.
+- `vt-passive-dns-data`: Returns passive DNS records by indicator.
+- `vt-analysis-get`: Retrieves resolutions of the given IP.
+- `vt-file-sigma-analysis`: Retrieves result of the last Sigma analysis.
+- `vt-privatescanning-file`: Checks the file reputation of the specified private hash.
 
 
 ## VirusTotal - Premium (API v3)
@@ -748,21 +772,21 @@ Use the premium API capabilities of VirusTotal to analyze retro hunts, read live
 
 **Commands:**
 
-- `vt-private-download-file`: 
-- `vt-private-zip-create`: 
-- `vt-private-zip-get`: 
-- `vt-private-zip-download`: 
-- `vt-private-file-sandbox-pcap`: 
-- `vt-private-intelligence-search`: 
-- `vt-private-search-file`: 
-- `vt-private-livehunt-rules-get-by-id`: 
-- `vt-private-livehunt-rules-list`: 
-- `vt-private-livehunt-rules-create`: 
-- `vt-private-livehunt-rules-update`: 
-- `vt-private-livehunt-rules-delete`: 
-- `vt-private-livehunt-notifications-list`: 
-- `vt-private-livehunt-notifications-files-list`: 
-- `vt-private-livehunt-notifications-files-get-by-hash`: 
+- `vt-private-download-file`: Downloads file from VirusTotal
+- `vt-private-zip-create`: Creates a password-protected ZIP file containing files from VirusTotal.
+- `vt-private-zip-get`: Retrieve information about a ZIP file.
+- `vt-private-zip-download`: Download a ZIP file.
+- `vt-private-file-sandbox-pcap`: Extracted PCAP from a sandbox analysis.
+- `vt-private-intelligence-search`: Search for files.
+- `vt-private-search-file`: Search for files.
+- `vt-private-livehunt-rules-get-by-id`: Retrieve VT Hunting livehunt rulesets.
+- `vt-private-livehunt-rules-list`: Retrieve VT Hunting livehunt rulesets.
+- `vt-private-livehunt-rules-create`: Create a new VT Hunting Livehunt ruleset.
+- `vt-private-livehunt-rules-update`: Update a VT Hunting Livehunt ruleset.
+- `vt-private-livehunt-rules-delete`: Delete a VT Hunting Livehunt ruleset.
+- `vt-private-livehunt-notifications-list`: Retrieve VT Hunting Livehunt notifications.
+- `vt-private-livehunt-notifications-files-list`: Retrieve file objects for VT Hunting Livehunt notifications.
+- `vt-private-livehunt-notifications-files-get-by-hash`: Retrieve file objects for VT Hunting Livehunt notifications.
 
 
 ## Windows Remote Management (Beta)
@@ -774,8 +798,8 @@ Uses the Python pywinrm library and commands to execute either a process or usin
 
 **Commands:**
 
-- `winrm-run-process`: 
-- `winrm-run-powershell`: 
+- `winrm-run-process`: Executes a command on the host
+- `winrm-run-powershell`: Executes a Powershell script on the endpoint
 
 
 ## xDome
@@ -787,7 +811,7 @@ Use the xDome integration to manage assets and alerts. This integration was inte
 
 **Commands:**
 
-- `xdome-get-device-alert-relations`: 
-- `xdome-set-status-for-device-alert-relations`: 
-- `xdome-get-device-vulnerability-relations`: 
+- `xdome-get-device-alert-relations`: Gets all device-alert pairs from xDome. You can apply a query-filter.
+- `xdome-set-status-for-device-alert-relations`: Set device-alert status to resolved or unresolved.
+- `xdome-get-device-vulnerability-relations`: Get details of devices with their related vulnerabilities from the database. The data returned by this endpoint for each device corresponds to the vulnerabiliti
 

@@ -12,19 +12,21 @@ Druva Ransomware Response Integration provides ransomware protection for endpoin
 
 **Commands:**
 
-- `druva-find-device`: 
-- `druva-list-quarantine-ranges`: 
-- `druva-quarantine-resource`: 
-- `druva-delete-quarantine-range`: 
-- `druva-view-quarantine-range`: 
-- `druva-update-quarantine-range`: 
-- `druva-list-quarantine-snapshots`: 
-- `druva-delete-quarantined-snapshot`: 
-- `druva-endpoint-search-file-hash`: 
-- `druva-endpoint-initiate-restore`: 
-- `druva-endpoint-check-restore-status`: 
-- `druva-endpoint-decommission`: 
-- `druva-find-user`: 
+- `druva-find-device`: Finds device information for a specific hostname.
+- `druva-list-quarantine-ranges`: Lists all quarantine ranges in your environment.
+- `druva-quarantine-resource`: Quarantines a resource.
+- `druva-delete-quarantine-range`: Deletes a quarantine range.
+- `druva-view-quarantine-range`: View details of the quarantine range.
+- `druva-update-quarantine-range`: Updates an existing quarantine range of a resource.
+- `druva-list-quarantine-snapshots`: List all quarantine snapshots for a quarantine range.
+- `druva-delete-quarantined-snapshot`: Deletes a quarantined Snapshot. Snapshots that are deleted cannot be recovered.
+- `druva-endpoint-search-file-hash`: Searches a file using the SHA1 checksum.
+- `druva-endpoint-initiate-restore`: Restores data to a replacement device and deletes a quarantined Snapshot. This command restores your endpoint data from a day prior to the snapshot. Any changes
+- `druva-endpoint-check-restore-status`: Checks the restore job status of the endpoint.
+- `druva-endpoint-decommission`: Wipes remotely an infected Endpoint Resource and deletes a quarantined Snapshot. This command remote wipes data from the endpoint. This action cannot be undone.
+- `druva-find-user`: Finds user information for a specific username.
+- `druva-find-userDevice`: Finds device information for a specific user.
+- `druva-find-sharePointSites`: Find all share point resources with given user name
 
 
 ## RansomwareDataEncryptionStatus
@@ -150,21 +152,21 @@ Veeam Backup & Replication REST API allows you to query information about Veeam 
 
 **Commands:**
 
-- `veeam-vbr-create-malware-event`: 
-- `veeam-vbr-get-all-malware-events`: 
-- `veeam-vbr-get-all-repository-states`: 
-- `veeam-vbr-get-all-restore-points`: 
+- `veeam-vbr-create-malware-event`: Create Malware Event.
+- `veeam-vbr-get-malware-events`: Get All Malware Events
+- `veeam-vbr-get-repository-states`: Get All Repository States
+- `veeam-vbr-get-restore-points`: Get All Restore Points
 - `veeam-vbr-get-backup-object`: 
-- `veeam-vbr-get-backup-object`: 
-- `veeam-vbr-get-inventory-objects`: 
-- `veeam-vbr-get-session`: 
-- `veeam-vbr-start-configuration-backup`: 
-- `veeam-vbr-start-instant-recovery-customized`: 
-- `veeam-vbr-start-instant-recovery`: 
-- `veeam-vbr-mount-entra-id-tenant`: 
-- `veeam-vbr-start-security-analyzer`: 
-- `veeam-vbr-start-malware-backup-scan`: 
-- `veeam-vbr-start-disk-publishing`: 
+- `veeam-vbr-get-backup-object`: Get Backup Object.
+- `veeam-vbr-get-inventory-objects`: Get Inventory Objects
+- `veeam-vbr-get-session`: Get Session
+- `veeam-vbr-start-configuration-backup`: Start Configuration Backup
+- `veeam-vbr-start-instant-recovery-customized`: Start Customized VM Instant Recovery
+- `veeam-vbr-start-instant-recovery`: Start VM Instant Recovery to Original Location
+- `veeam-vbr-mount-entra-id-tenant`: Mounts a Microsoft Entra ID tenant from its backup and starts a mount session required for restore.
+- `veeam-vbr-start-security-analyzer`: Starts the Security & Compliance Analyzer scan. The command creates a new session and returns its details.
+- `veeam-vbr-start-malware-backup-scan`: Starts a Scan Backup session.
+- `veeam-vbr-start-disk-publishing`: Start Disk Publishing. Publishes disk content from a restore point via the Data Integration API using ISCSITarget mount mode.
 
 
 ## Veeam ONE REST API
@@ -176,6 +178,6 @@ Veeam ONE REST API allows you to query information about Veeam ONE entities and 
 
 **Commands:**
 
-- `veeam-vone-get-triggered-alarms`: 
-- `veeam-vone-resolve-triggered-alarms`: 
+- `veeam-vone-get-triggered-alarms`: Get All Triggered Alarms.
+- `veeam-vone-resolve-triggered-alarms`: Resolve Triggered Alarms.
 

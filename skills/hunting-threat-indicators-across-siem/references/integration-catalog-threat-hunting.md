@@ -12,7 +12,7 @@ Appsentinels.ai offers a platform for collecting, analyzing, and managing securi
 
 **Commands:**
 
-- `appsentinels-get-events`: 
+- `appsentinels-get-events`: Retrieves a list of events from the AppSentinels.ai instance.
 
 
 ## Elasticsearch v2
@@ -24,21 +24,21 @@ Elasticsearch_v2 integration is used to search for and analyze data in real time
 
 **Commands:**
 
-- `es-search`: 
-- `get-mapping-fields`: 
-- `es-eql-search`: 
-- `es-index`: 
-- `es-integration-health-check`: 
-- `es-get-indices-statistics`: 
-- `es-esql-search`: 
-- `es-kibana-alerting-health-get`: 
-- `es-kibana-rule-types-list`: 
-- `es-kibana-rule-list`: 
-- `es-kibana-rule-enable`: 
-- `es-kibana-rule-disable`: 
-- `es-kibana-rule-update`: 
-- `es-kibana-rule-alert-mute`: 
-- `es-kibana-rule-alert-unmute`: 
+- `es-search`: Queries an index.
+- `search`: Searches an index.
+- `get-mapping-fields`: Returns the schema of the index to fetch from. This commmand should be used for debugging purposes.
+- `es-eql-search`: Search using EQL query
+- `es-index`: Indexes a document into an Elasticsearch index.
+- `es-integration-health-check`: Returns the health status of the integration. This commmand should be used for debugging purposes.
+- `es-get-indices-statistics`: Returns Elasticsearch indices statistics and information. This command is not supported for client type OpenSearch.
+- `es-esql-search`: Search using ES|QL query (Elasticsearch 8.11 and above).
+- `es-kibana-alerting-health-get`: Retrieves the health of the Kibana alerting framework.
+- `es-kibana-rule-types-list`: Retrieves all rule types available in Kibana.
+- `es-kibana-rule-list`: Retrieves information about rules.
+- `es-kibana-rule-enable`: Enable a rule.
+- `es-kibana-rule-disable`: Disable a rule.
+- `es-kibana-rule-update`: Update a rule.
+- `es-kibana-rule-alert-mute`: Mute an alert, or mute all alerts for a rule.
 
 
 ## FortiSIEM v2
@@ -50,21 +50,21 @@ Use FortiSIEM v2 to fetch and update incidents, search events and manage FortiSI
 
 **Commands:**
 
-- `fortisiem-event-search`: 
-- `fortisiem-incident-update`: 
-- `fortisiem-cmdb-devices-list`: 
-- `fortisiem-cmdb-device-get`: 
-- `fortisiem-monitored-organizations-list`: 
-- `fortisiem-event-list-by-incident`: 
-- `fortisiem-watchlist-list`: 
-- `fortisiem-watchlist-get`: 
-- `fortisiem-watchlist-add`: 
-- `fortisiem-watchlist-entry-add`: 
-- `fortisiem-watchlist-entry-update`: 
-- `fortisiem-watchlist-entry-delete`: 
-- `fortisiem-watchlist-delete`: 
-- `fortisiem-watchlist-entry-get`: 
-- `fortisiem-event-search-results`: 
+- `fortisiem-event-search`: Initiate search process on events. Events are retrieved according to a constraint determined either by the query argument or by the filtering arguments. When us
+- `fortisiem-incident-update`: Update attributes of the specified incident. Only the provided attributes are overwritten.
+- `fortisiem-cmdb-devices-list`: List CMDB (Centralized Management Database) devices with short information for each device. If you provide one of the exclude arguments, their values are exclud
+- `fortisiem-cmdb-device-get`: Retrieve full information of the specified devices.
+- `fortisiem-monitored-organizations-list`: List of monitored organizations in service provider deployments.
+- `fortisiem-event-list-by-incident`: Lists events by the specified incident ID. Available for FortiSiem version 6.6 and earlier.
+- `fortisiem-watchlist-list`: List all watchlists from FortiSIEM database.
+- `fortisiem-watchlist-get`: Get watchlist by the specified watchlist or entry ID.
+- `fortisiem-watchlist-add`: Add a watchlist group. You can also add an entry to the watchlist.
+- `fortisiem-watchlist-entry-add`: Add watchlist entry to one or more watchlist groups.
+- `fortisiem-watchlist-entry-update`: Update watchlist entry. This command overrides all existing values in the entry's attribute. Fill in all relevant arguments to avoid deletion of data.
+- `fortisiem-watchlist-entry-delete`: Delete entry of watchlist.
+- `fortisiem-watchlist-delete`: Delete watchlist.
+- `fortisiem-watchlist-entry-get`: Get entry by the specified entry ID.
+- `fortisiem-event-search-results`: The results of the specified search ID.
 
 
 ## ForwardAuditLogsToSplunkHEC
@@ -88,9 +88,10 @@ FullHunt is the attack surface database of the entire Internet. FullHunt enables
 
 **Commands:**
 
-- `fullhunt-get-account-status`: 
-- `fullhunt-get-host`: 
-- `fullhunt-get-subdomain`: 
+- `fullhunt-get-account-status`: Get information about the user account such as company, email, credit, and usage
+- `fullhunt-get-host`: Get host details
+- `fullhunt-domain`: Get details about one specified domain
+- `fullhunt-get-subdomain`: Get all subdomains from a given domain
 
 
 ## GaiatopForwardAuditLogsToSplunkHEC
@@ -157,15 +158,15 @@ Use the Hoxhunt integration to send feedback to reporters of incidents, set inci
 
 **Commands:**
 
-- `hoxhunt-current-user-get`: 
-- `hoxhunt-incident-threats-get`: 
-- `hoxhunt-incident-note-add`: 
-- `hoxhunt-incident-threats-remove`: 
-- `hoxhunt-incident-soc-feedback-send`: 
-- `hoxhunt-incident-set-sensitive`: 
-- `hoxhunt-incident-set-soc-classification`: 
-- `hoxhunt-incident-update-state`: 
-- `get-mapping-fields`: 
+- `hoxhunt-current-user-get`: Gets the current user information from Hoxhunt.
+- `hoxhunt-incident-threats-get`: Gets threats from Hoxhunt.
+- `hoxhunt-incident-note-add`: Add Incident note.
+- `hoxhunt-incident-threats-remove`: Remove all threats that belong to an incident.
+- `hoxhunt-incident-soc-feedback-send`: Send feedback to reporters of incident about whether the reported email was safe, spam or malicious.
+- `hoxhunt-incident-set-sensitive`: Set incident to contain sensitive information.
+- `hoxhunt-incident-set-soc-classification`: Set soc classification for an incident.
+- `hoxhunt-incident-update-state`: Updates Incident state.
+- `get-mapping-fields`: Get mapping fields from remote incident. Please note that this method will not update the current incident. It's here for debugging purposes.
 
 
 ## IBM QRadar v3
@@ -177,20 +178,20 @@ IBM QRadar SIEM helps security teams accurately detect and prioritize threats ac
 
 **Commands:**
 
-- `qradar-offenses-list`: 
-- `qradar-offense-update`: 
-- `qradar-closing-reasons`: 
-- `qradar-offense-notes-list`: 
-- `qradar-offense-note-create`: 
-- `qradar-rules-list`: 
-- `qradar-rule-groups-list`: 
-- `qradar-assets-list`: 
-- `qradar-saved-searches-list`: 
-- `qradar-searches-list`: 
-- `qradar-search-create`: 
-- `qradar-search-status-get`: 
-- `qradar-search-results-get`: 
-- `qradar-search-delete`: 
+- `qradar-offenses-list`: Gets offenses from QRadar.
+- `qradar-offense-update`: Updates an offense.
+- `qradar-closing-reasons`: Retrieves a list of offense closing reasons.
+- `qradar-offense-notes-list`: Retrieves a list of notes for an offense.
+- `qradar-offense-note-create`: Creates a note on an offense.
+- `qradar-rules-list`: Retrieves a list of rules.
+- `qradar-rule-groups-list`: Retrieves a list of the rule groups.
+- `qradar-assets-list`: Retrieves assets list.
+- `qradar-saved-searches-list`: Retrieves a list of Ariel saved searches.
+- `qradar-searches-list`: Retrieves the list of Ariel searches IDs. Search status and results can be polled by sending the search ID to the 'qradar-search-status-get' and 'qradar-search-
+- `qradar-search-create`: Creates a new asynchronous Ariel search. Returns the search ID. Search status and results can be polled by sending the search ID to the 'qradar-search-status-ge
+- `qradar-search-status-get`: Retrieves status information for a search, based on the search ID.
+- `qradar-search-results-get`: Retrieves search results.
+- `qradar-search-delete`: Deleted search from Qradar, based on the search ID.
 - `qradar-reference-sets-list`: 
 
 
@@ -203,21 +204,21 @@ Case management that enables visibility across your tools for continual IR impro
 
 **Commands:**
 
-- `rs-search-incidents`: 
-- `rs-update-incident`: 
-- `rs-incidents-get-members`: 
-- `rs-get-incident`: 
-- `rs-get-incident`: 
-- `rs-incident-artifacts`: 
-- `rs-incident-attachments`: 
-- `rs-related-incidents`: 
-- `rs-incidents-get-tasks`: 
-- `rs-add-note`: 
-- `rs-add-artifact`: 
-- `rs-delete-incidents`: 
-- `rs-list-incident-notes`: 
-- `rs-update-task`: 
-- `rs-add-custom-task`: 
+- `rs-search-incidents`: Query for incidents
+- `rs-update-incident`: Updates incidents.
+- `rs-incidents-get-members`: Gets members of the incident.
+- `rs-get-incident`: Gets an individual incident by ID.
+- `rs-get-incident`: Gets an individual incident by ID.
+- `rs-incident-artifacts`: Gets incident artifacts.
+- `rs-incident-attachments`: Gets incident attachments.
+- `rs-related-incidents`: Gets related incidents.
+- `rs-incidents-get-tasks`: Gets tasks of incidents.
+- `rs-add-note`: Add a note to an incident.
+- `rs-add-artifact`: Add an artifact to an incident.
+- `rs-delete-incidents`: Delete multiple incidents.
+- `rs-list-incident-notes`: Gets all of the top-level comments for an incident.
+- `rs-update-task`: Update an incident's task fields.
+- `rs-add-custom-task`: Adds a custom task to the specified incident.
 
 
 ## IbmAddNote
@@ -334,21 +335,21 @@ Use this Content Pack to search logs, fetch incident logs from LogPoint, analyze
 
 **Commands:**
 
-- `lp-get-incidents`: 
-- `lp-get-incident-data`: 
-- `lp-get-incident-states`: 
-- `lp-add-incident-comment`: 
-- `lp-assign-incidents`: 
-- `lp-resolve-incidents`: 
-- `lp-close-incidents`: 
-- `lp-reopen-incidents`: 
-- `lp-get-users`: 
-- `lp-get-users-preference`: 
-- `lp-get-logpoints`: 
-- `lp-get-repos`: 
-- `lp-get-devices`: 
-- `lp-get-livesearches`: 
-- `lp-get-searchid`: 
+- `lp-get-incidents`: Displays incidents between the provided two Timestamps ts_from and ts_to. By default, this command will display first 50 incidents of the past 24 hours but limi
+- `lp-get-incident-data`: Retrieves a Particular Incident's Data
+- `lp-get-incident-states`: Displays incident states data between the provided two Timestamps ts_from and ts_to. By default, this command will display first 50 data of the past 24 hours bu
+- `lp-add-incident-comment`: Add comments to the incidents
+- `lp-assign-incidents`: Assigning/Re-assigning Incidents
+- `lp-resolve-incidents`: Resolves the Incidents.
+- `lp-close-incidents`: Closes the Incidents.
+- `lp-reopen-incidents`: Re-opens the closed incidents
+- `lp-get-users`: Gets Incident users and user groups.
+- `lp-get-users-preference`: Gets LogPoint user's preference such as timezone, date format, etc.
+- `lp-get-logpoints`: Gets user's LogPoints.
+- `lp-get-repos`: Gets the list of LogPoint repos that can be accessed by the user.
+- `lp-get-devices`: Gets devices associated with LogPoint.
+- `lp-get-livesearches`: Gets live search results of the alerts and dashboards.
+- `lp-get-searchid`: Gets the search ID based on the provided search parameters.
 
 
 ## LogPoint SIEM Playbook
@@ -368,9 +369,9 @@ Logsign SIEM provides comprehensive visibility and control of your data lake by 
 
 **Commands:**
 
-- `logsign-fetch-incidents`: 
-- `logsign-get-columns-query`: 
-- `logsign-get-count-query`: 
+- `logsign-fetch-incidents`: Gets Incidents from Logsign SIEM
+- `logsign-get-columns-query`: Gets column values based on your lucene query
+- `logsign-get-count-query`: Gets count of column values.
 
 
 ## Microsoft Sentinel
@@ -382,21 +383,21 @@ Use the Azure Sentinel integration to get and manage incidents and get related e
 
 **Commands:**
 
-- `azure-sentinel-get-incident-by-id`: 
-- `azure-sentinel-list-incidents`: 
-- `azure-sentinel-list-watchlists`: 
-- `azure-sentinel-delete-watchlist`: 
-- `azure-sentinel-watchlist-create-update`: 
-- `azure-sentinel-update-incident`: 
-- `azure-sentinel-create-incident`: 
-- `azure-sentinel-delete-incident`: 
-- `azure-sentinel-list-incident-comments`: 
-- `azure-sentinel-incident-add-comment`: 
-- `azure-sentinel-incident-delete-comment`: 
-- `azure-sentinel-list-incident-relations`: 
-- `azure-sentinel-list-incident-entities`: 
-- `azure-sentinel-list-incident-alerts`: 
-- `azure-sentinel-list-watchlist-items`: 
+- `azure-sentinel-get-incident-by-id`: Gets a single incident from Azure Sentinel.
+- `azure-sentinel-list-incidents`: Gets a list of incidents from Azure Sentinel.
+- `azure-sentinel-list-watchlists`: Gets a list of watchlists from Azure Sentinel.
+- `azure-sentinel-delete-watchlist`: Delete a watchlists from Azure Sentinel.
+- `azure-sentinel-watchlist-create-update`: Create or update a watchlist in Azure Sentinel.
+- `azure-sentinel-update-incident`: Updates a single incident in Azure Sentinel.
+- `azure-sentinel-create-incident`: Creates a single incident in Azure Sentinel.
+- `azure-sentinel-delete-incident`: Deletes a single incident in Azure Sentinel.
+- `azure-sentinel-list-incident-comments`: Gets the comments of an incident from Azure Sentinel.
+- `azure-sentinel-incident-add-comment`: Adds a comment to an incident in Azure Sentinel.
+- `azure-sentinel-incident-delete-comment`: Deletes a comment from incident in Azure Sentinel.
+- `azure-sentinel-list-incident-relations`: Gets a list of an incident's related entities from Azure Sentinel.
+- `azure-sentinel-list-incident-entities`: Gets a list of an incident's entities from Azure Sentinel.
+- `azure-sentinel-list-incident-alerts`: Gets a list of an incident's alerts from Azure Sentinel.
+- `azure-sentinel-list-watchlist-items`: Get a single watchlist item or list of watchlist items.
 
 
 ## MicrosoftSentinelConvertAlertsToTable
@@ -681,7 +682,21 @@ Use the SplunkPy integration to: This integration was integrated and tested with
 
 **Commands:**
 
-- `splunk-results`: 
+- `splunk-results`: Returns the results of a previous Splunk search. This command can be used in conjunction with the splunk-job-create command.
+- `splunk-search`: Searches Splunk for events. For human readable output, the table command is supported in the query argument. For example, query=" * | table field1 field2 field3
+- `splunk-submit-event`: Creates a new event in Splunk.
+- `splunk-get-indexes`: Prints all Splunk index names.
+- `splunk-notable-event-edit`: Update an existing notable event in Splunk ES.
+- `splunk-job-create`: Creates a new search job in Splunk.
+- `splunk-parse-raw`: Parses the raw part of the event.
+- `splunk-submit-event-hec`: Sends events Splunk. if batch_event_data or entry_id arguments are provided then all arguments related to a single event are ignored.
+- `splunk-job-status`: Returns the status of a job.
+- `get-mapping-fields`: Gets one sample alert per alert type. Used only for creating a mapping with Select Schema.
+- `splunk-kv-store-collection-create`: Creates a new KV store table.
+- `splunk-kv-store-collection-config`: Configures the KV store fields.
+- `splunk-kv-store-collection-add-entries`: Adds objects to a KV store utilizing the batch-save API.
+- `splunk-kv-store-collections-list`: Lists all collections for the specified application.
+- `splunk-kv-store-collection-data-list`: Lists all data within a specific KV store collection or collections.
 
 
 ## SplunkPy v2
@@ -693,7 +708,21 @@ Use the SplunkPy v2 integration to: Important: This integration is designed spec
 
 **Commands:**
 
-- `splunk-results`: 
+- `splunk-results`: Returns the results of a previous Splunk search. This command can be used in conjunction with the splunk-job-create command.
+- `splunk-search`: Searches Splunk for events. For human readable output, the table command is supported in the query argument. For example, query=" * | table field1 field2 field3
+- `splunk-submit-event`: Creates a new event in Splunk.
+- `splunk-get-indexes`: Prints all Splunk index names.
+- `splunk-finding-event-edit`: Update an existing finding event in Splunk ES.
+- `splunk-update-investigation`: Updates existing investigations in Splunk ES. Supports updating fields such as owner, status, urgency, disposition, name, and description, adding a note, and ap
+- `splunk-job-create`: Creates a new search job in Splunk.
+- `splunk-parse-raw`: Parses the raw part of the event.
+- `splunk-submit-event-hec`: Sends events Splunk. if batch_event_data or entry_id arguments are provided then all arguments related to a single event are ignored.
+- `splunk-job-status`: Returns the status of a job.
+- `get-mapping-fields`: Gets one sample alert per alert type. Used only for creating a mapping with Select Schema.
+- `splunk-kv-store-collection-create`: Creates a new KV store table.
+- `splunk-kv-store-collection-config`: Configures the KV store fields.
+- `splunk-kv-store-collection-add-entries`: Adds objects to a KV store utilizing the batch-save API.
+- `splunk-kv-store-collections-list`: Lists all collections for the specified application.
 
 
 ## SplunkShowAsset

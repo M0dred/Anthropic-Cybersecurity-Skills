@@ -50,10 +50,10 @@ RF monitoring for wireless intrusion detection and policy enforcement. Visit  fo
 
 **Commands:**
 
-- `bastille-get-device-events`: 
-- `bastille-get-zone-events`: 
-- `bastille-add-device-tag`: 
-- `bastille-remove-device-tag`: 
+- `bastille-get-device-events`: Command to fetch device detection events
+- `bastille-get-zone-events`: Command to fetch zone detection events
+- `bastille-add-device-tag`: Command to add tag to an existing device
+- `bastille-remove-device-tag`: Command to remove tag from an existing device
 
 
 ## Calculate Severity - Cortex XDR Risky Assets
@@ -75,21 +75,21 @@ Calculates a severity for the incident based on the involvement of risky users o
 **Product:** Check Point Firewall  
 **Commands:**
 
-- `checkpoint-host-list`: 
-- `checkpoint-host-get`: 
-- `checkpoint-host-add`: 
-- `checkpoint-host-update`: 
-- `checkpoint-host-delete`: 
-- `checkpoint-group-list`: 
-- `checkpoint-group-get`: 
-- `checkpoint-group-add`: 
-- `checkpoint-group-update`: 
-- `checkpoint-group-delete`: 
-- `checkpoint-address-range-list`: 
-- `checkpoint-address-range-add`: 
-- `checkpoint-address-range-update`: 
-- `checkpoint-address-range-delete`: 
-- `checkpoint-threat-indicator-list`: 
+- `checkpoint-host-list`: Show all host objects
+- `checkpoint-host-get`: get all data of a given host
+- `checkpoint-host-add`: Add new host
+- `checkpoint-host-update`: update host changes
+- `checkpoint-host-delete`: delete host
+- `checkpoint-group-list`: Show a list of all groups
+- `checkpoint-group-get`: Get all data of a given group
+- `checkpoint-group-add`: add a group
+- `checkpoint-group-update`: update group object
+- `checkpoint-group-delete`: delete a group object
+- `checkpoint-address-range-list`: List all address range objects
+- `checkpoint-address-range-add`: Add address range object
+- `checkpoint-address-range-update`: Update an address range object
+- `checkpoint-address-range-delete`: Delete a given address range
+- `checkpoint-threat-indicator-list`: List all threat indicators
 
 
 ## Cisco Secure Network Analytics (Stealthwatch)
@@ -101,17 +101,17 @@ Scalable visibility and security analytics. This integration was integrated and 
 
 **Commands:**
 
-- `cisco-stealthwatch-query-flows-initialize`: 
-- `cisco-stealthwatch-query-flows-status`: 
-- `cisco-stealthwatch-query-flows-results`: 
-- `cisco-stealthwatch-list-tags`: 
-- `cisco-stealthwatch-get-tag`: 
-- `cisco-stealthwatch-list-tenants`: 
-- `cisco-stealthwatch-get-tag-hourly-traffic-report`: 
-- `cisco-stealthwatch-get-top-alarming-tags`: 
-- `cisco-stealthwatch-list-security-events-initialize`: 
-- `cisco-stealthwatch-list-security-events-status`: 
-- `cisco-stealthwatch-list-security-events-results`: 
+- `cisco-stealthwatch-query-flows-initialize`: Initializes the flow search based on specified arguments. Must provide a start time, time range, or start time and end time.
+- `cisco-stealthwatch-query-flows-status`: Checks the flow search status.
+- `cisco-stealthwatch-query-flows-results`: Retrieves the flow search results. Use this command after the search job completes.
+- `cisco-stealthwatch-list-tags`: Lists the host groups (called tags in the API).
+- `cisco-stealthwatch-get-tag`: Gets a single host group (called tag in the API).
+- `cisco-stealthwatch-list-tenants`: Lists all domains if no domain is specified or gets a specified domain (called tenant(s) in the API).
+- `cisco-stealthwatch-get-tag-hourly-traffic-report`: Gets the hourly traffic summary of the byte count for a single host group (called tenant in the API).
+- `cisco-stealthwatch-get-top-alarming-tags`: Gets the top alarming host groups (called tags on the API) for a specific domain (called tenant in the API).
+- `cisco-stealthwatch-list-security-events-initialize`: Initializes the list of security events for a domain (called tenant on the API).
+- `cisco-stealthwatch-list-security-events-status`: Lists the security events status.
+- `cisco-stealthwatch-list-security-events-results`: Lists the security events results. Use this command after the search job completes.
 
 
 ## CombineSeverity
@@ -323,21 +323,21 @@ Cortex XDR - XQL Query Engine enables you to run XQL queries on your data source
 
 **Commands:**
 
-- `xdr-xql-generic-query`: 
-- `xdr-xql-get-quota`: 
-- `xdr-xql-get-query-results`: 
-- `xdr-xql-file-event-query`: 
-- `xdr-xql-process-event-query`: 
-- `xdr-xql-dll-module-query`: 
-- `xdr-xql-network-connection-query`: 
-- `xdr-xql-registry-query`: 
-- `xdr-xql-event-log-query`: 
-- `xdr-xql-dns-query`: 
-- `xdr-xql-file-dropper-query`: 
-- `xdr-xql-process-instance-network-activity-query`: 
-- `xdr-xql-process-causality-network-activity-query`: 
-- `xdr-xql-library-list`: 
-- `xdr-xql-library-create`: 
+- `xdr-xql-generic-query`: Execute an XQL query and retrieve results of an executed XQL query API. The command will be executed every 10 seconds until results are retrieved or until a tim
+- `xdr-xql-get-quota`: Retrieve the amount of query quota available and used.
+- `xdr-xql-get-query-results`: Retrieve results of an executed XQL query API. When more than 1000 results are retrieved, the command will return a compressed gzipped JSON format file, unless 
+- `xdr-xql-file-event-query`: Query file events by the SHA256 file.
+- `xdr-xql-process-event-query`: Query process events by the SHA256 process.
+- `xdr-xql-dll-module-query`: Query DLL module events by the SHA256 DLL.
+- `xdr-xql-network-connection-query`: Query network connections between a source IP, destination IP and port.
+- `xdr-xql-registry-query`: Query windows registry by registry key name.
+- `xdr-xql-event-log-query`: Query event logs by event ID.
+- `xdr-xql-dns-query`: Query by DNS query or domain name.
+- `xdr-xql-file-dropper-query`: Search for the process that wrote the given file, by its SHA256 or file path.
+- `xdr-xql-process-instance-network-activity-query`: Search for network connection created by a given process instance ID.
+- `xdr-xql-process-causality-network-activity-query`: Search for network connection created by a given process causality ID.
+- `xdr-xql-library-list`: Gets a list of XQL queries from the library.
+- `xdr-xql-library-create`: Creates or updates XQL query in the library.
 
 
 ## Cortex XDR Alerts Handling v2
@@ -798,21 +798,21 @@ Use the F5 ASM integration to read information and to manage F5 firewall. This i
 
 **Commands:**
 
-- `f5-asm-policy-list`: 
-- `f5-asm-policy-create`: 
-- `f5-asm-policy-apply`: 
-- `f5-asm-policy-export-file`: 
-- `f5-asm-policy-methods-list`: 
-- `f5-asm-policy-file-types-list`: 
-- `f5-asm-policy-methods-add`: 
-- `f5-asm-policy-methods-update`: 
-- `f5-asm-policy-methods-delete`: 
-- `f5-asm-policy-file-types-add`: 
-- `f5-asm-policy-file-types-update`: 
-- `f5-asm-policy-file-types-delete`: 
-- `f5-asm-policy-delete`: 
-- `f5-asm-policy-hostnames-list`: 
-- `f5-asm-policy-hostnames-add`: 
+- `f5-asm-policy-list`: Lists all F5 Application Security Manager (ASM) policies.
+- `f5-asm-policy-create`: Creates a new ASM policy.
+- `f5-asm-policy-apply`: Applies a policy in the application security manager.
+- `f5-asm-policy-export-file`: Exports a policy file.
+- `f5-asm-policy-methods-list`: Lists the HTTP methods that are enforced in the security policy.
+- `f5-asm-policy-file-types-list`: Lists the file types that are allowed or not allowed in the security policy.
+- `f5-asm-policy-methods-add`: Adds a new allowed method.
+- `f5-asm-policy-methods-update`: Updates a policy method.
+- `f5-asm-policy-methods-delete`: Deletes a method from a given policy.
+- `f5-asm-policy-file-types-add`: add new file type
+- `f5-asm-policy-file-types-update`: Updates the policy file type.
+- `f5-asm-policy-file-types-delete`: Deletes the policy file type.
+- `f5-asm-policy-delete`: Deletes a policy.
+- `f5-asm-policy-hostnames-list`: Lists the hostnames of the policy.
+- `f5-asm-policy-hostnames-add`: Adds a new hostname to a policy.
 
 
 ## F5 firewall
@@ -821,6 +821,14 @@ Use the F5 ASM integration to read information and to manage F5 firewall. This i
 **Product:** F5 firewall  
 
 Use the F5 Firewall integration to manage your F5 firewall rules
+
+**Commands:**
+
+- `f5-create-policy`: Creates an F5 firewall policy.
+- `f5-list-rules`: Lists all the rules of a specific policy
+- `f5-del-rule`: Delete an F5 rule.
+- `f5-show-global-policy`: Display global policy.
+- `f5-list-all-user-sessions`: Lists all the sessions with client IP for the given username.
 
 
 ## Fidelis Elevate Network
@@ -832,7 +840,21 @@ Automate Detection and Response to Network Threats and data leakage in your orga
 
 **Commands:**
 
-- `fidelis-get-alert`: 
+- `fidelis-get-alert`: Gets alert details from Fidelis Elevate.
+- `fidelis-delete-alert`: Deletes an alert from Fidelis Elevate.
+- `fidelis-get-malware-data`: Retrieves malware data related to a "Malware" type alert.
+- `fidelis-get-alert-report`: Downloads a PDF report for a specified alert.
+- `fidelis-list-alerts`: Returns a list of open alerts from Fidelis Elevate.
+- `fidelis-upload-pcap`: Uploads a PCAP file to Fidelis Elevate for analysis.
+- `fidelis-list-pcap-components`: Gets PCAP components.
+- `fidelis-run-pcap`: Runs PCAP file analysis in Fidelis Elevate.
+- `fidelis-get-alert-by-uuid`: Returns an alert, by UUID.
+- `fidelis-list-metadata`: Returns a metadata list.
+- `fidelis-list-alerts-by-ip`: Returns a list of alerts, by source IP address or destination IP address.
+- `fidelis-download-malware-file`: Downloads a malware file from a specified alert.
+- `fidelis-download-pcap-file`: Downloads the PCAP file from a specified alert.
+- `fidelis-get-alert-session-data`: Return the session information related to an alert.
+- `fidelis-get-alert-execution-forensics`: Get the exectution forensics for an alert.
 
 
 ## FireEye NX
@@ -844,11 +866,11 @@ FireEye Network Security is an effective cyber threat protection solution that h
 
 **Commands:**
 
-- `fireeye-nx-get-alerts`: 
-- `fireeye-nx-get-artifacts-metadata-by-alert`: 
-- `fireeye-nx-get-artifacts-by-alert`: 
-- `fireeye-nx-get-reports`: 
-- `fireeye-nx-get-events`: 
+- `fireeye-nx-get-alerts`: Search and retrieve FireEye alerts based on several filters.
+- `fireeye-nx-get-artifacts-metadata-by-alert`: Gets malware artifacts metadata for the specified UUID.
+- `fireeye-nx-get-artifacts-by-alert`: Downloads malware artifacts data for the specified UUID as a zip file.
+- `fireeye-nx-get-reports`: Returns reports on selected alerts by specifying a time_frame value or a start_time and end_time of the search range.
+- `fireeye-nx-get-events`: Search and retrieve FireEye events based on several filters.
 
 
 ## Illusive - Incident Escalation
@@ -889,8 +911,21 @@ This playbook is used for retrieving an extensive view over a detected incident 
 **Product:** Illusive Networks  
 **Commands:**
 
-- `illusive-get-forensics-timeline`: 
-- `illusive-get-asm-host-insight`: 
+- `illusive-get-forensics-timeline`: Retrieve forensics timeline for a specific incident
+- `illusive-get-asm-host-insight`: Retrieve the specified host insights from Attack Surface Manager
+- `illusive-get-asm-cj-insight`: Retrieve Crown-Jewels insights from Attack Surface Manager
+- `illusive-get-deceptive-users`: Retrieve a list of all deceptive users
+- `illusive-get-deceptive-servers`: Retrieve a list of all deceptive servers
+- `illusive-is-deceptive-user`: Retrieve whether a specified user is deceptive
+- `illusive-is-deceptive-server`: Retrieve whether a specified server is deceptive
+- `illusive-add-deceptive-users`: Add or approve deceptive users
+- `illusive-add-deceptive-servers`: Add or approve deceptive servers
+- `illusive-delete-deceptive-users`: Delete deceptive users
+- `illusive-delete-deceptive-servers`: Delete deceptive servers
+- `illusive-assign-host-to-policy`: Assign a deception policy to domain hosts
+- `illusive-remove-host-from-policy`: Remove deception policy assignment from domain hosts
+- `illusive-run-forensics-on-demand`: Collect forensics on a specified host and retrieve the forensics timeline
+- `illusive-get-incidents`: Retrieve incidents
 
 
 ## iot-security-alert-post-processing
@@ -980,16 +1015,16 @@ Creates, modifies, or deletes a Netskope private application (ZTNA/NPA) "segment
 **Product:** Netskope  
 **Commands:**
 
-- `netskope-event-list`: 
-- `netskope-alert-list`: 
-- `netskope-quarantined-file-list`: 
-- `netskope-quarantined-file-get`: 
-- `netskope-quarantined-file-update`: 
-- `netskope-url-list-update`: 
-- `netskope-file-hash-list-update`: 
-- `netskope-client-list`: 
-- `netskope-host-associated-user-list`: 
-- `netskope-user-associated-host-list`: 
+- `netskope-event-list`: Get events extracted from SaaS traffic and or logs.
+- `netskope-alert-list`: Get alerts generated by Netskope, including policy, DLP, and watch list alerts.
+- `netskope-quarantined-file-list`: List all quarantined files.
+- `netskope-quarantined-file-get`: Download a quarantined file.
+- `netskope-quarantined-file-update`: Take an action on a quarantined file.
+- `netskope-url-list-update`: Update the URL List with the values provided. The command will override the whole list content, rather than appending the new values.
+- `netskope-file-hash-list-update`: Update file hash list with the values provided. The command will override the whole list content, rather than appending the new values.
+- `netskope-client-list`: Get information about the Netskope clients.
+- `netskope-host-associated-user-list`: List all users of certain host by its hostname.
+- `netskope-user-associated-host-list`: List all hosts related to a certain username.
 
 
 ## Netskope (API v2)
@@ -1001,19 +1036,19 @@ Netskope API v2 provides a powerful interface for managing and monitoring Netsko
 
 **Commands:**
 
-- `netskope-alert-list`: 
-- `netskope-event-list`: 
-- `netskope-url-list-update`: 
-- `netskope-url-list-create`: 
-- `netskope-url-lists-list`: 
-- `netskope-url-list-delete`: 
-- `netskope-client-list`: 
-- `netskope-url-list-add`: 
-- `netskope-incident-dlp-list`: 
-- `get-mapping-fields`: 
-- `update-remote-system`: 
-- `get-remote-data`: 
-- `get-modified-remote-data`: 
+- `netskope-alert-list`: Retrieve alerts generated by Netskope. Select the desired alerts using the alert_type parameter. Mandatory inputs include start_time and end_time, or insertion_
+- `netskope-event-list`: Get events extracted from SaaS traffic. You may choose what events to receive with the event_type parameter. You must provide start_time and end_time, or insert
+- `netskope-url-list-update`: Update the URL List with the values provided. please note that this command overrides the list.
+- `netskope-url-list-create`: Create a new URL list.
+- `netskope-url-lists-list`: Get all URL Lists or a specific by specifying the list ID.
+- `netskope-url-list-delete`: Delete a URL list by the list ID.
+- `netskope-client-list`: Get information about Netskope SCIM users. The command provides a list of users who have been imported into the Netskope tenant through SCIM integration. Users 
+- `netskope-url-list-add`: Update the URL list with the values provided. Note that this command appends the list.
+- `netskope-incident-dlp-list`: Fetch DLP incidents.
+- `get-mapping-fields`: Returns the list of fields for an incident type.
+- `update-remote-system`: Updates the remote incident or detection with local incident or detection changes. This method is only used for debugging purposes and will not update the curre
+- `get-remote-data`: Gets remote data from a remote incident. This method does not update the current incident, and should be used for debugging purposes.
+- `get-modified-remote-data`: Gets the list of incidents that were modified since the last update time. Note that this method is here for debugging purposes. The get-modified-remote-data com
 
 
 ## NetskopeBuildProtocolsJson
@@ -1141,11 +1176,11 @@ The Nozomi Networks integration enables the collection of alert and asset inform
 
 **Commands:**
 
-- `nozomi-find-assets`: 
-- `nozomi-close-incidents-as-security`: 
-- `nozomi-close-incidents-as-change`: 
-- `nozomi-query`: 
-- `nozomi-find-ip-by-mac`: 
+- `nozomi-find-assets`: This command permits you to get some assets from Nozomi, you can use the query filter to to refine your search. With the limits you can decide the max number of
+- `nozomi-close-incidents-as-security`: Close incidents as security
+- `nozomi-close-incidents-as-change`: Close incidents as change
+- `nozomi-query`: Can execute a nozomi query to get all the information you want. A query can be something like that: "alerts | select id name status ack | where status == open" 
+- `nozomi-find-ip-by-mac`: Find a node ip from a mac address
 
 
 ## Palo Alto Networks AIOps
@@ -1157,7 +1192,7 @@ Palo Alto Networks Best Practice Assessment (BPA) analyzes NGFW and Panorama con
 
 **Commands:**
 
-- `aiops-bpa-report-generate`: 
+- `aiops-bpa-report-generate`: Generates a bpa report. Steps -
 
 
 ## Palo Alto Networks Automatic SLR
@@ -1167,6 +1202,15 @@ Palo Alto Networks Best Practice Assessment (BPA) analyzes NGFW and Panorama con
 
 Use the Palo Alto Networks NGFW API to automatically generate a Security Lifecycle Review (SLR) Report
 
+**Commands:**
+
+- `!autoslr-dump-params`: In some circumstances, it may be required to get visbility of all currently configured parameters dumped to the context for troubleshooting.
+- `!autoslr-ngfw-system-info`: This command will retrieve certain information about the target firewall for use within other functions.
+- `!autoslr-ngfw-generate`: This command will initiate the *-stats_dump.tar.gz generation job on the target firewall
+- `!autoslr-ngfw-check`: This command will check the *-stats_dump.tar.gz generation job on the target firewall
+- `!autoslr-ngfw-download`: This command will download the *-stats_dump.tar.gz from the target firewall
+- `!autoslr-csp-upload`: This command will upload the *-stats_dump.tar.gz file to Palo Alto Networks for report generation
+
 
 ## Palo Alto Networks Cortex XDR - Investigation and Response
 
@@ -1174,6 +1218,24 @@ Use the Palo Alto Networks NGFW API to automatically generate a Security Lifecyc
 **Product:** Cortex XDR by Palo Alto Networks  
 
 Cortex XDR is the world's first detection and response app that natively integrates network, endpoint, and cloud data to stop sophisticated attacks. This integration was integrated and tested with version 2.6.5 of Cortex XDR - IR. <~PLATFORM> Note: On the Cortex Platform, this integration is used to connect to a different Cortex XDR/XSIAM tenant. Configuring the Server URL parameter with the URL of the tenant this integration instance is running on is not supported - the integration will fail to run. For actions on the local tenant, use the built-in Cortex Platform commands instead. </~PLATFORM>
+
+**Commands:**
+
+- `xdr-get-incidents`: This command is deprecated please use xdr-case-list instead. Returns a list of incidents, which you can filter by a list of incident IDs (max. 100), the time th
+- `xdr-get-incident-extra-data`: This command is deprecated. Returns additional data for the specified incident, for example, related alerts, file artifacts, network artifacts, and so on.
+- `xdr-update-incident`: This command is deprecated please use xdr-case-update instead. Updates one or more fields of a specified incident. Missing fields will be ignored. To remove the
+- `xdr-insert-parsed-alert`: This command is deprecated. Uploads an alert from external alert sources in Cortex XDR format. Cortex XDR displays alerts that are parsed successfully in relate
+- `xdr-insert-cef-alerts`: This command is deprecated. Upload alerts in CEF format from external alert sources. After you map CEF alert fields to Cortex XDR fields, Cortex XDR displays th
+- `xdr-endpoint-isolate`: Isolates the specified endpoint.
+- `xdr-endpoint-unisolate`: Reverses the isolation of an endpoint.
+- `xdr-get-endpoints`: Gets a list of endpoints, according to the passed filters. If there are no filters, all endpoints are returned. Filtering by multiple fields will be concatenate
+- `xdr-get-distribution-versions`: Gets a list of all the agent versions to use for creating a distribution list.
+- `xdr-create-distribution`: Creates an installation package. This is an asynchronous call that returns the distribution ID. This does not mean that the creation succeeded. To confirm that 
+- `xdr-get-distribution-url`: Gets the distribution URL for downloading the installation package.
+- `xdr-get-create-distribution-status`: Gets the status of the installation package.
+- `xdr-get-audit-management-logs`: Gets management logs. You can filter by multiple fields, which will be concatenated using the AND condition (OR is not supported). Maximum result set size is 10
+- `xdr-get-audit-management-logs`: 
+- `xdr-get-audit-agent-reports`: Gets agent event reports. You can filter by multiple fields, which will be concatenated using the AND condition (OR is not supported). Maximum result set size i
 
 
 ## Palo Alto Networks Device Security
@@ -1185,13 +1247,13 @@ Use the Palo Alto Networks Device Security integration to fetch alerts and vulne
 
 **Commands:**
 
-- `device-security-get-device`: 
-- `device-security-get-device-by-ip`: 
-- `device-security-list-devices`: 
-- `device-security-list-alerts`: 
-- `device-security-list-vulns`: 
-- `device-security-resolve-alert`: 
-- `device-security-resolve-vuln`: 
+- `device-security-get-device`: Retrieves a single device's details using its MAC address.
+- `device-security-get-device-by-ip`: Returns a single device's details using its IP address.
+- `device-security-list-devices`: Retrieves a list of devices.
+- `device-security-list-alerts`: Retrieves a list of device security alerts.
+- `device-security-list-vulns`: Retrieves a list of device security vulnerabilities.
+- `device-security-resolve-alert`: Resolves a device security alert.
+- `device-security-resolve-vuln`: Resolves a device security vulnerability.
 
 
 ## Palo Alto Networks Enterprise DLP
@@ -1203,11 +1265,11 @@ Palo Alto Networks Enterprise DLP discovers and protects company data across eve
 
 **Commands:**
 
-- `pan-dlp-get-report`: 
-- `pan-dlp-update-incident`: 
-- `pan-dlp-exemption-eligible`: 
-- `pan-dlp-slack-message`: 
-- `pan-dlp-reset-last-run`: 
+- `pan-dlp-get-report`: Fetches DLP reports associated with a report ID.
+- `pan-dlp-update-incident`: Updates a DLP incident with user feedback.
+- `pan-dlp-exemption-eligible`: Determines whether exemption can be granted on incidents from a certain data profile.
+- `pan-dlp-slack-message`: Gets the Slack bot message to send to the user for gathering feedback.
+- `pan-dlp-reset-last-run`: Deprecated. Reset the "last run" timestamp via the integration instance configuration window.
 
 
 ## Palo Alto Networks IoT
@@ -1219,13 +1281,13 @@ This is the Palo Alto Networks IoT integration (previously Zingbox). This integr
 
 **Commands:**
 
-- `iot-security-get-device`: 
-- `iot-security-list-devices`: 
-- `iot-security-list-alerts`: 
-- `iot-security-list-vulns`: 
-- `iot-security-resolve-alert`: 
-- `iot-security-resolve-vuln`: 
-- `iot-security-get-device-by-ip`: 
+- `iot-security-get-device`: IoT get device command - get a single device's details.
+- `iot-security-list-devices`: IoT list devices command
+- `iot-security-list-alerts`: IoT list alerts.
+- `iot-security-list-vulns`: IoT list Vulnerabilities.
+- `iot-security-resolve-alert`: Resolving an IoT alert.
+- `iot-security-resolve-vuln`: Resolving an IoT vulnerability.
+- `iot-security-get-device-by-ip`: IoT get device command - get a single device's details.
 
 
 ## Palo Alto Networks PAN-OS
@@ -1237,21 +1299,21 @@ This integration supports both Palo Alto Networks Panorama and Palo Alto Network
 
 **Commands:**
 
-- `pan-os`: 
-- `pan-os-get-predefined-threats-list`: 
-- `pan-os-commit`: 
-- `pan-os-push-to-device-group`: 
-- `pan-os-list-addresses`: 
-- `pan-os-get-address`: 
-- `pan-os-create-address`: 
-- `pan-os-delete-address`: 
-- `pan-os-list-address-groups`: 
-- `pan-os-get-address-group`: 
-- `pan-os-create-address-group`: 
-- `pan-os-block-vulnerability`: 
-- `pan-os-delete-address-group`: 
-- `pan-os-edit-address-group`: 
-- `pan-os-list-services`: 
+- `pan-os`: Run any command supported in the API.
+- `pan-os-get-predefined-threats-list`: Gets the pre-defined threats list from a Firewall or Panorama and stores as a JSON file in the context.
+- `pan-os-commit`: Commits a configuration to the Palo Alto firewall or Panorama, validates if a commit was successful if using polling="true", otherwise does not validate if the 
+- `pan-os-push-to-device-group`: Pushes rules from PAN-OS to the configured device group. In order to push the configuration to Prisma Access managed tenants (single or multi tenancy), use the 
+- `pan-os-list-addresses`: Returns a list of addresses.
+- `pan-os-get-address`: Returns address details for the supplied address name.
+- `pan-os-create-address`: Creates an address object.
+- `pan-os-delete-address`: Delete an address object
+- `pan-os-list-address-groups`: Returns a list of address groups.
+- `pan-os-get-address-group`: Get details for the specified address group
+- `pan-os-create-address-group`: Creates a static or dynamic address group.
+- `pan-os-block-vulnerability`: Sets a vulnerability signature to block mode.
+- `pan-os-delete-address-group`: Deletes an address group.
+- `pan-os-edit-address-group`: Edits a static or dynamic address group.
+- `pan-os-list-services`: Returns a list of addresses.
 
 
 ## Palo Alto Networks Security Advisories (Beta)
@@ -1263,7 +1325,7 @@ Queries the public repository of PAN-OS CVEs. This integration was integrated an
 
 **Commands:**
 
-- `pan-advisories-get-advisories`: 
+- `pan-advisories-get-advisories`: Gets all the advisories for the given product.
 
 
 ## Palo Alto Networks WildFire Reports
@@ -1275,7 +1337,7 @@ Generates a Palo Alto Networks WildFire PDF report. This integration is set up b
 
 **Commands:**
 
-- `internal-wildfire-get-report`: 
+- `internal-wildfire-get-report`: Retrieves results for a file hash using WildFire.
 
 
 ## Palo Alto Networks WildFire v2
@@ -1287,14 +1349,15 @@ Use the Palo Alto Networks Wildfire integration to automatically identify unknow
 
 **Commands:**
 
-- `wildfire-upload`: 
-- `wildfire-upload-file-url`: 
-- `wildfire-report`: 
-- `wildfire-get-verdict`: 
-- `wildfire-get-verdicts`: 
-- `wildfire-upload-url`: 
-- `wildfire-get-sample`: 
-- `wildfire-get-url-webartifacts`: 
+- `file`: Retrieve results for a file hash using WildFire
+- `wildfire-upload`: Uploads a file to WildFire for analysis.
+- `wildfire-upload-file-url`: Uploads the URL of a remote file to WildFire for analysis.
+- `wildfire-report`: Retrieves results for a file hash using WildFire.
+- `wildfire-get-verdict`: Returns a verdict for a hash.
+- `wildfire-get-verdicts`: Returns a verdict regarding multiple hashes, stored in a TXT file or given as list.
+- `wildfire-upload-url`: Uploads a URL of a webpage to WildFire for analysis.
+- `wildfire-get-sample`: Retrieves a sample.
+- `wildfire-get-url-webartifacts`: Get web artifacts for a URL webpage. An empty tgz will be returned, no matter what the verdict, or even if the URL is malformed.
 
 
 ## PAN-OS - Add Anti-Spyware Security Profile To Rule
@@ -1562,12 +1625,12 @@ Automate your AppID Adoption by using this integration together with your Palo A
 
 **Commands:**
 
-- `pan-os-po-get-stats`: 
-- `pan-os-po-no-apps`: 
-- `pan-os-po-unused-apps`: 
-- `pan-os-po-get-rules`: 
-- `pan-os-po-app-and-usage`: 
-- `pan-os-get-dag`: 
+- `pan-os-po-get-stats`: Gets the Policy Optimizer statistics.
+- `pan-os-po-no-apps`: Shows all security policies with no apps specified.
+- `pan-os-po-unused-apps`: Gets the unused apps.
+- `pan-os-po-get-rules`: Gets unused, used, or any rules.
+- `pan-os-po-app-and-usage`: Gets the app usage statistics for a specific security rule.
+- `pan-os-get-dag`: Gets a specific dynamic address group.
 
 
 ## PAN-OS Query Logs For Indicators
@@ -1848,12 +1911,12 @@ Use the SaaS Security integration to protect against cloud‑based threats by
 
 **Commands:**
 
-- `saas-security-incidents-get`: 
-- `saas-security-incident-get-by-id`: 
-- `saas-security-incident-state-update`: 
-- `saas-security-get-apps`: 
-- `saas-security-asset-remediate`: 
-- `saas-security-remediation-status-get`: 
+- `saas-security-incidents-get`: Retrieves incidents from the SaaS Security platform.
+- `saas-security-incident-get-by-id`: Gets an incident by its ID.
+- `saas-security-incident-state-update`: Closes an incident and updates its category.
+- `saas-security-get-apps`: Returns the Application ID, Name, and Type for all applications.
+- `saas-security-asset-remediate`: Remediates an asset.
+- `saas-security-remediation-status-get`: Gets the remediation status for a given asset ID.
 
 
 ## Saas Security - Incident Processor
@@ -1892,21 +1955,21 @@ On-Premise firewall by Sophos enables you to manage your firewall, respond to th
 
 **Commands:**
 
-- `sophos-firewall-rule-list`: 
-- `sophos-firewall-rule-get`: 
-- `sophos-firewall-rule-add`: 
-- `sophos-firewall-rule-update`: 
-- `sophos-firewall-rule-delete`: 
-- `sophos-firewall-rule-group-list`: 
-- `sophos-firewall-rule-group-get`: 
-- `sophos-firewall-rule-group-add`: 
-- `sophos-firewall-rule-group-update`: 
-- `sophos-firewall-rule-group-delete`: 
-- `sophos-firewall-url-group-list`: 
-- `sophos-firewall-url-group-get`: 
-- `sophos-firewall-url-group-add`: 
-- `sophos-firewall-url-group-update`: 
-- `sophos-firewall-url-group-delete`: 
+- `sophos-firewall-rule-list`: Lists all firewall rules. IMPORTANT: Listing starts at 0 (not 1)!
+- `sophos-firewall-rule-get`: Gets a single firewall rule by name.
+- `sophos-firewall-rule-add`: Adds a new firewall rule.
+- `sophos-firewall-rule-update`: Updates an existing firewall rule.
+- `sophos-firewall-rule-delete`: Deletes an existing firewall rule.
+- `sophos-firewall-rule-group-list`: Lists all firewall rule groups. IMPORTANT: Listing starts at 0 (not 1)!
+- `sophos-firewall-rule-group-get`: Gets a single firewall rule group by name.
+- `sophos-firewall-rule-group-add`: Adds a new firewall rule group.
+- `sophos-firewall-rule-group-update`: Updates an existing firewall rule group.
+- `sophos-firewall-rule-group-delete`: Deletes an existing firewall group.
+- `sophos-firewall-url-group-list`: Lists all URL groups. IMPORTANT: Listing starts at 0 (not 1)!
+- `sophos-firewall-url-group-get`: Gets a single URL group by name.
+- `sophos-firewall-url-group-add`: Adds a new URL group.
+- `sophos-firewall-url-group-update`: Updates an existing URL group.
+- `sophos-firewall-url-group-delete`: Deletes an existing URL group or groups.
 
 
 ## Sync Threat Intel to Destination Profile - Netskope
@@ -2037,7 +2100,7 @@ This is the Zero Networks event collector integration for Cortex XSIAM
 
 **Commands:**
 
-- `zero-networks-segment-get-events`: 
+- `zero-networks-segment-get-events`: Gets events from Zero Networks Segment.
 
 
 ## Zscaler Internet Access
@@ -2049,17 +2112,21 @@ Zscaler is a cloud security solution built for performance and flexible scalabil
 
 **Commands:**
 
-- `zscaler-blacklist-url`: 
-- `zscaler-undo-blacklist-url`: 
-- `zscaler-whitelist-url`: 
-- `zscaler-undo-whitelist-url`: 
-- `zscaler-undo-whitelist-ip`: 
-- `zscaler-whitelist-ip`: 
-- `zscaler-undo-blacklist-ip`: 
-- `zscaler-blacklist-ip`: 
-- `zscaler-category-add-url`: 
-- `zscaler-category-add-ip`: 
-- `zscaler-category-remove-url`: 
+- `zscaler-blacklist-url`: Adds the specified URLs to the block list.
+- `url`: Looks up the classification for the each of the specified URLs.
+- `ip`: Looks up the classification for each of the specified IP addresses.
+- `domain`: Looks up the classification for each of the specified domains.
+- `zscaler-undo-blacklist-url`: Removes the specified URLs from the block list.
+- `zscaler-whitelist-url`: Adds the specified URLs to the allow list.
+- `zscaler-undo-whitelist-url`: Removes the specified URLs from the allow list.
+- `zscaler-undo-whitelist-ip`: Removes the specified IP addresses from the allow list.
+- `zscaler-whitelist-ip`: Adds the specified IP address to the allow list.
+- `zscaler-undo-blacklist-ip`: Removes the specified IP addresses from the block list.
+- `zscaler-blacklist-ip`: Adds the specified IP addresses to the block list.
+- `zscaler-category-add-url`: Adds URLs to the specified category. Ensure that the URLs are properly formatted according to Zscaler's guidelines. For more information on valid URL formats, r
+- `zscaler-category-add-ip`: Adds IP address to the specified category.
+- `zscaler-category-remove-url`: Removes URLs from the specified category.
+- `zscaler-category-remove-ip`: Removes IP address from the specified category.
 
 
 ## Zscaler Internet Access via ZIdentity
@@ -2071,19 +2138,19 @@ This integration uses ZIdentity OAuth 2.0 client credentials to authenticate wit
 
 **Commands:**
 
-- `zia-denylist-list`: 
-- `zia-denylist-update`: 
-- `zia-allowlist-list`: 
-- `zia-allowlist-update`: 
-- `zia-category-list`: 
-- `zia-category-update`: 
-- `zia-url-quota-get`: 
-- `zia-ip-destination-group-list`: 
-- `zia-ip-destination-group-update`: 
-- `zia-ip-destination-group-add`: 
-- `zia-ip-destination-group-delete`: 
-- `zia-user-list`: 
-- `zia-user-update`: 
-- `zia-groups-list`: 
-- `zia-departments-list`: 
+- `zia-denylist-list`: Gets a list of URLs and IPs that are in the denylist.
+- `zia-denylist-update`: Updates the list of URLs in the denylist.
+- `zia-allowlist-list`: Gets a list of URLs and IPs that are in the allowlist.
+- `zia-allowlist-update`: Updates the list of URLs in the allowlist.
+- `zia-category-list`: Gets information about all or custom URL categories. By default, the response includes keywords. The lite option cannot be used in combination with other parame
+- `zia-category-update`: Updates the URL category for the specified ID.
+- `zia-url-quota-get`: Gets information on the number of unique URLs that are currently provisioned for your organization as well as how many URLs you can add before reaching that num
+- `zia-ip-destination-group-list`: Gets a list of all IP destination groups or for the specified ID.
+- `zia-ip-destination-group-update`: Updates an existing IP destination group.
+- `zia-ip-destination-group-add`: Adds a new IP destination group.
+- `zia-ip-destination-group-delete`: Deletes the IP destination group for the specified ID.
+- `zia-user-list`: Gets a list of all users or the user information for the specified ID.
+- `zia-user-update`: Updates the user information for the specified ID.
+- `zia-groups-list`: Gets a list of groups.
+- `zia-departments-list`: Gets a list of all departments or the department information for the specified ID.
 

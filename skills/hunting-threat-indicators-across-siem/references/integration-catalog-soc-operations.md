@@ -12,7 +12,7 @@ Fetch events about actions performed by 1Password users within a specific accoun
 
 **Commands:**
 
-- `one-password-get-events`: 
+- `one-password-get-events`: Fetch events from 1Password. This command is intended for development and debugging purposes and should be used with caution as it may create duplicate events.
 
 
 ## 1Touch.io's Inventa Connector
@@ -24,20 +24,20 @@ Use the Inventa integration to generate DSAR reports within Inventa instance and
 
 **Commands:**
 
-- `inventa-get-datasubjects`: 
-- `inventa-get-sources`: 
-- `inventa-get-sources-piis`: 
-- `inventa-get-dsar-transactions`: 
-- `inventa-get-dsar-files`: 
-- `inventa-get-dsar-databases`: 
-- `inventa-get-datasubject-details`: 
-- `inventa-get-dsar-dataassets`: 
-- `inventa-get-dsar-piis`: 
-- `inventa-get-entities`: 
-- `inventa-get-datasubject-id-from-ticket`: 
-- `inventa-get-datasubject-id`: 
-- `inventa-create-ticket`: 
-- `inventa-validate-incident-inputs`: 
+- `inventa-get-datasubjects`: Get Data Subject full details
+- `inventa-get-sources`: Retrieves data sources' details containing info about data subject
+- `inventa-get-sources-piis`: Retrieves PII entities stored in data sources related to datasubject
+- `inventa-get-dsar-transactions`: Retrieves data transactions' details containing info about data subject
+- `inventa-get-dsar-files`: Retrieves details of files contatining info about data subject
+- `inventa-get-dsar-databases`: Retrieves list of databases and tables containing info about data subject
+- `inventa-get-datasubject-details`: Get datasubject name and email
+- `inventa-get-dsar-dataassets`: Retrieves list of data assets containing info about data subject
+- `inventa-get-dsar-piis`: Get list of PII categories related to the data subject
+- `inventa-get-entities`: Retrieves list of PII entities described in Inventa
+- `inventa-get-datasubject-id-from-ticket`: Retrieves ID of a data subject from Inventa's DSAR ticket
+- `inventa-get-datasubject-id`: Retrieves ID of a data subject from passed constraints
+- `inventa-create-ticket`: Creates Inventa ticket
+- `inventa-validate-incident-inputs`: Validates Incident inputs
 
 
 ## 3CXDesktopApp Supply Chain Attack
@@ -81,21 +81,21 @@ Abnormal Security detects the whole spectrum of email attacks, from vendor email
 
 **Commands:**
 
-- `abnormal-security-check-case-action-status`: 
-- `abnormal-security-check-threat-action-status`: 
-- `abnormal-security-download-threat-log-csv`: 
-- `abnormal-security-list-abuse-mailbox-campaigns`: 
-- `abnormal-security-list-abnormal-cases`: 
-- `abnormal-security-list-threats`: 
-- `abnormal-security-get-threat`: 
-- `abnormal-security-get-abnormal-case`: 
-- `abnormal-security-get-abuse-mailbox-campaign`: 
-- `abnormal-security-get-employee-identity-analysis`: 
-- `abnormal-security-get-employee-information`: 
-- `abnormal-security-get-employee-last-30-days-login-csv`: 
-- `abnormal-security-get-latest-threat-intel-feed`: 
-- `abnormal-security-manage-threat`: 
-- `abnormal-security-manage-abnormal-case`: 
+- `abnormal-security-check-case-action-status`: Check the status of an action requested on a case.
+- `abnormal-security-check-threat-action-status`: Check the status of an action requested on a threat.
+- `abnormal-security-download-threat-log-csv`: Download data from Threat Log in .csv format
+- `abnormal-security-list-abuse-mailbox-campaigns`: Get a list of campaigns submitted to Abuse Mailbox
+- `abnormal-security-list-abnormal-cases`: Get a list of Abnormal cases identified by Abnormal Security
+- `abnormal-security-list-threats`: Get a list of threats
+- `abnormal-security-get-threat`: Get details of a threat
+- `abnormal-security-get-abnormal-case`: Get details of an Abnormal case
+- `abnormal-security-get-abuse-mailbox-campaign`: Get details of an Abuse Mailbox campaign
+- `abnormal-security-get-employee-identity-analysis`: Get employee identity analysis (Genome) data
+- `abnormal-security-get-employee-information`: Get employee information
+- `abnormal-security-get-employee-last-30-days-login-csv`: Get employee login information for last 30 days in csv format
+- `abnormal-security-get-latest-threat-intel-feed`: DEPRECATED. Get the latest threat intel feed.
+- `abnormal-security-manage-threat`: Manage a Threat identified by Abnormal Security
+- `abnormal-security-manage-abnormal-case`: Manage an Abnormal Case.
 
 
 ## Absolute
@@ -107,21 +107,21 @@ Absolute is an adaptive endpoint security solution that delivers device security
 
 **Commands:**
 
-- `absolute-custom-device-field-list`: 
-- `absolute-custom-device-field-update`: 
-- `absolute-device-freeze-request`: 
-- `absolute-device-remove-freeze-request`: 
-- `absolute-device-freeze-request-get`: 
-- `absolute-device-freeze-message-list`: 
-- `absolute-device-freeze-message-create`: 
-- `absolute-device-freeze-message-update`: 
-- `absolute-device-freeze-message-delete`: 
-- `absolute-device-unenroll`: 
-- `absolute-device-application-list`: 
-- `absolute-device-list`: 
-- `absolute-device-get`: 
-- `absolute-device-location-get`: 
-- `absolute-device-get-events`: 
+- `absolute-custom-device-field-list`: Returns a list of custom device fields associated with the given device_id, based on the authorization token.
+- `absolute-custom-device-field-update`: Updates the value of the included custom device fields for the given device_id.
+- `absolute-device-freeze-request`: Creates a new Freeze request for the devices specified in the device_ids argument.
+- `absolute-device-remove-freeze-request`: Creates a new Remove Freeze request for one or more devices, regardless of their Freeze status. You can submit Remove Freeze requests to perform the following a
+- `absolute-device-freeze-request-get`: Gets detailed information about the Freeze request specified by request_uid.
+- `absolute-device-freeze-message-list`: Gets all the Freeze messages that are configured for the account by the given message_id. If message_id is not given all the messages will be returned.
+- `absolute-device-freeze-message-create`: Creates a new Freeze message for the account.
+- `absolute-device-freeze-message-update`: Updates the content of an existing Freeze message.
+- `absolute-device-freeze-message-delete`: Deletes an existing Freeze message for the account.
+- `absolute-device-unenroll`: Initiates an unenroll request on a list of eligible devices.
+- `absolute-device-application-list`: Gets a list of device records and the corresponding software application data for each device on the account that you have access to or that meets the given fil
+- `absolute-device-list`: Gets a list of device records and their corresponding data that meets the required filter for all devices in your account, based on your authorization token.
+- `absolute-device-get`: Gets a list of device records and their corresponding data that meets the required fields for all devices in your account. Note that the command supports return
+- `absolute-device-location-get`: Gets a list of devices geo locations records and their corresponding data that meets the required devices IDs.
+- `absolute-device-get-events`: Retrieves a list of events from the Absolute device instance.
 
 
 ## AbuseIPDBPopulateIndicators
@@ -147,13 +147,13 @@ Acalvio ShadowPlex is a comprehensive Autonomous Deception Platform that offers 
 
 **Commands:**
 
-- `acalvio-is-deception-host`: 
-- `acalvio-is-deception-user`: 
-- `acalvio-is-deception-file`: 
-- `acalvio-mute-deception-host`: 
-- `acalvio-unmute-deception-host`: 
-- `acalvio-mute-deception-on-endpoint`: 
-- `acalvio-unmute-deception-on-endpoint`: 
+- `acalvio-is-deception-host`: Check if its a Deception Host
+- `acalvio-is-deception-user`: Check if its a Deception User
+- `acalvio-is-deception-file`: Check if its a Deception File on the Endpoint
+- `acalvio-mute-deception-host`: Mute a Deception Host
+- `acalvio-unmute-deception-host`: Unmute a Deception Host
+- `acalvio-mute-deception-on-endpoint`: Mute a Deception on Endpoint
+- `acalvio-unmute-deception-on-endpoint`: Unmute a Deception on Endpoint
 
 
 ## Add Employees to Departing Employee Watchlist
@@ -197,10 +197,10 @@ AdminByRequest is a Privileged Access Management (PAM) solution that enables sec
 
 **Commands:**
 
-- `adminbyrequest-get-events`: 
-- `adminbyrequest-list-requests`: 
-- `adminbyrequest-request-deny`: 
-- `adminbyrequest-request-approve`: 
+- `adminbyrequest-get-events`: Retrieves a list of entries logs events from the AdminByRequest instance.
+- `adminbyrequest-list-requests`: Lists requests from AdminByRequest.
+- `adminbyrequest-request-deny`: Denies a request in AdminByRequest.
+- `adminbyrequest-request-approve`: Approves a request in AdminByRequest.
 
 
 ## AfterRelativeDate
@@ -225,10 +225,10 @@ Use the Aha! integration to list and manage the platform. This integration was i
 
 **Commands:**
 
-- `aha-get-features`: 
-- `aha-edit-feature`: 
-- `aha-get-ideas`: 
-- `aha-edit-idea`: 
+- `aha-get-features`: Lists all features from service, unless a specific feature is specified.
+- `aha-edit-feature`: You can edit the following fields in a feature: Name and Description.
+- `aha-get-ideas`: Lists all ideas from service, unless a specific idea is specified.
+- `aha-edit-idea`: Edit an idea status to Shipped.
 
 
 ## Akamai Prolexic
@@ -240,7 +240,7 @@ Collects DDoS detection critical events and general events from Akamai Prolexic 
 
 **Commands:**
 
-- `akamai-prolexic-get-events`: 
+- `akamai-prolexic-get-events`: Gets events from Akamai Prolexic. This command is used for developing and debugging and is to be used with caution, as it can create duplicate events in the dat
 
 
 ## Akamai WAF
@@ -252,21 +252,21 @@ Use the Akamai WAF integration to manage common sets of lists used by various Ak
 
 **Commands:**
 
-- `akamai-check-group`: 
-- `akamai-create-group`: 
-- `akamai-create-enrollment`: 
-- `akamai-list-enrollments`: 
-- `akamai-create-domain`: 
-- `akamai-update-property`: 
-- `akamai-get-change`: 
-- `akamai-update-change`: 
-- `akamai-get-enrollment-by-cn`: 
-- `akamai-list-groups`: 
-- `akamai-get-group`: 
-- `akamai-get-client-list`: 
-- `akamai-create-client-list`: 
-- `akamai-deprecate-client-list`: 
-- `akamai-activate-client-list`: 
+- `akamai-check-group`: Check an existing group within the context of your account.
+- `akamai-create-group`: Create a new group under a parent GID.
+- `akamai-create-enrollment`: Create a new enrollment.
+- `akamai-list-enrollments`: List enrollments of a specific contract.
+- `akamai-create-domain`: Create a domain with properties and domain controller (DC).
+- `akamai-update-property`: Update a property for a specific domain.
+- `akamai-get-change`: Get the CPS code.
+- `akamai-update-change`: Update the certs and trust chains.
+- `akamai-get-enrollment-by-cn`: Get enrollment by common name.
+- `akamai-list-groups`: Lists groups of Akamai.
+- `akamai-get-group`: Get group.
+- `akamai-get-client-list`: Get a client list.
+- `akamai-create-client-list`: Creates a new client list.
+- `akamai-deprecate-client-list`: Deprecates a client list.
+- `akamai-activate-client-list`: Activates a client list.
 
 
 ## Akamai WAF - Activate Network Lists
@@ -293,7 +293,11 @@ Algosec AppViz, Firewall Analyzer (AFA) and FireFlow(AFF)
 
 **Commands:**
 
-- `algosec-get-ticket`: 
+- `algosec-get-ticket`: Retrieves a FireFlow change request by its ID
+- `algosec-create-ticket`: Creates a new FireFlow change request
+- `algosec-get-applications`: Find applications containing network objects related to IP address using AppViz
+- `algosec-get-network-object`: Find network objects related to IP address
+- `algosec-query`: Performs a batch traffic simulation query using Firewall Analyzer
 
 
 ## AlgosecGetApplications
@@ -347,8 +351,8 @@ This is an API to get stock prices etc
 
 **Commands:**
 
-- `alphavantage-stock-data-get`: 
-- `alphavantage-stock-history-get`: 
+- `alphavantage-stock-data-get`: Gets data for a stock
+- `alphavantage-stock-history-get`: Gets historical data for a stock
 
 
 ## Amazon DynamoDB
@@ -360,21 +364,21 @@ Amazon DynamoDB Amazon DynamoDB is a fully managed NoSQL database service that p
 
 **Commands:**
 
-- `aws-dynamodb-batch-get-item`: 
-- `aws-dynamodb-batch-write-item`: 
-- `aws-dynamodb-create-backup`: 
-- `aws-dynamodb-create-global-table`: 
-- `aws-dynamodb-create-table`: 
-- `aws-dynamodb-delete-backup`: 
-- `aws-dynamodb-delete-item`: 
-- `aws-dynamodb-delete-table`: 
-- `aws-dynamodb-describe-backup`: 
-- `aws-dynamodb-describe-continuous-backups`: 
-- `aws-dynamodb-describe-endpoints`: 
-- `aws-dynamodb-describe-global-table`: 
-- `aws-dynamodb-describe-global-table-settings`: 
-- `aws-dynamodb-describe-limits`: 
-- `aws-dynamodb-describe-table`: 
+- `aws-dynamodb-batch-get-item`: The BatchGetItem operation returns the attributes of one or more items from one or more tables. You identify requested items by primary key. A single operation 
+- `aws-dynamodb-batch-write-item`: The BatchWriteItem operation puts or deletes multiple items in one or more tables. A single call to BatchWriteItem can write up to 16 MB of data, which can comp
+- `aws-dynamodb-create-backup`: Creates a backup for an existing table. Each time you create an on-demand backup, the entire table data is backed up. There is no limit to the number of on-dema
+- `aws-dynamodb-create-global-table`: Creates a global table from an existing table. A global table creates a replication relationship between two or more DynamoDB tables with the same table name in
+- `aws-dynamodb-create-table`: The CreateTable operation adds a new table to your account. In an AWS account, table names must be unique within each Region. That is, you can have two tables w
+- `aws-dynamodb-delete-backup`: Deletes an existing backup of a table. You can call DeleteBackup at a maximum rate of 10 times per second.
+- `aws-dynamodb-delete-item`: Deletes a single item in a table by primary key. You can perform a conditional delete operation that deletes the item if it exists, or if it has an expected att
+- `aws-dynamodb-delete-table`: The DeleteTable operation deletes a table and all of its items. After a DeleteTable request, the specified table is in the DELETING state until DynamoDB complet
+- `aws-dynamodb-describe-backup`: Describes an existing backup of a table. You can call DescribeBackup at a maximum rate of 10 times per second.
+- `aws-dynamodb-describe-continuous-backups`: Checks the status of continuous backups and point in time recovery on the specified table. Continuous backups are ENABLED on all tables at table creation. If po
+- `aws-dynamodb-describe-endpoints`: Returns the regional endpoint information.
+- `aws-dynamodb-describe-global-table`: Returns information about the specified global table.
+- `aws-dynamodb-describe-global-table-settings`: Describes Region-specific settings for a global table.
+- `aws-dynamodb-describe-limits`: Returns the current provisioned-capacity limits for your AWS account in a Region, both for the Region as a whole and for any one DynamoDB table that you create 
+- `aws-dynamodb-describe-table`: Returns information about the table, including the current status of the table, when it was created, the primary key schema, and any indexes on the table. If yo
 
 
 ## Amazon Security Lake
@@ -386,15 +390,15 @@ Amazon Security Lake is a fully managed security data lake service. This integra
 
 **Commands:**
 
-- `aws-security-lake-query-execute`: 
-- `aws-security-lake-data-catalogs-list`: 
-- `aws-security-lake-databases-list`: 
-- `aws-security-lake-table-metadata-list`: 
-- `aws-security-lake-user-mfalogin-query`: 
-- `aws-security-lake-source-ip-query`: 
-- `aws-security-lake-guardduty-activity-query`: 
-- `aws-security-lake-data-sources-list`: 
-- `aws-security-lake-data-lakes-list`: 
+- `aws-security-lake-query-execute`: Execute a new query, wait for the query to complete (using polling), and return query's execution information, and query's results (if successful). Either 'Outp
+- `aws-security-lake-data-catalogs-list`: Lists the data catalogs in the current Amazon Web Services account.
+- `aws-security-lake-databases-list`: Lists the databases in the specified data catalog.
+- `aws-security-lake-table-metadata-list`: Lists the metadata for the tables in the specified data catalog database.
+- `aws-security-lake-user-mfalogin-query`: Runs query that takes a provided username and queries the AWS Security Lake for MFA login attempts (Success/Failed) associated with the user's account, using AW
+- `aws-security-lake-source-ip-query`: Runs a query that takes a provided source IP address and queries the AWS Security Lake for console login attempts (Success/Failed) associated with the IP addres
+- `aws-security-lake-guardduty-activity-query`: This command is used to search for Guard Duty logs for any criticality level activity.
+- `aws-security-lake-data-sources-list`: Retrieves a snapshot of the current region, including whether Amazon Security Lake is enabled for those accounts and which sources Security Lake is collecting d
+- `aws-security-lake-data-lakes-list`: Retrieves the Amazon Security Lake configuration object for the specified Amazon Web Services Regions. In order to run this command the user must have 'security
 
 
 ## AMP
@@ -404,6 +408,24 @@ Amazon Security Lake is a fully managed security data lake service. This integra
 
 Uses CISCO AMP Endpoint This integration was integrated and tested with API version v1 of AMP
 
+**Commands:**
+
+- `amp_get_computers`: Returns a list of computers on which agents are deployed. You can use filters (arguments) to narrow the search.
+- `amp_get_computer_by_connector`: Returns information for the specified computer.
+- `amp_get_computer_trajctory`: Returns a list of all activities associated with a particular computer. This is analogous to the Device Trajectory on the FireAMP Console. Use the Q argument to
+- `amp_move_computer`: Moves a computer to a group with the corresponding connector_guid and group_guid, respectively.
+- `amp_get_computer_activity`: This endpoint enables you to search all computers across your organization for any events or activities associated with a file or network operation, and returns
+- `amp_get_events`: A general query interface for events. This is analogous to the Events view on the FireAMP Console.
+- `amp_get_event_types`: Events are identified and filtered by a unique ID. This endpoint provides a human readable name and short description of each event (by ID).
+- `amp_get_application_blocking`: Returns a list of application blocking file lists. You can filter this list by name
+- `amp_get_file_list_by_guid`: Returns a particular file list for application blocking or simple custom detection. You need to specify the file_list_guid argument to retrieve information abou
+- `amp_get_simple_custom_detections`: Returns a list of simple custom detection file lists. You can filter this list by detection name.
+- `amp_get_file_list_files`: Returns a list of items for a particular file_list. You need to specify the file_list_guid argument to retrieve these items.
+- `amp_get_file_list_files_by_sha`: Returns a particular item for a given file_list. You need to specify the sha256 argument and the file_list_guid argument to retrieve an item.
+- `amp_set_file_list_files_by_sha`: Adds a SHA256 hash to a file list, using file_list_guid.
+- `amp_delete_file_list_files_by_sha`: Deletes an item from a file_list using the SHA256 hash and file_list_guid.
+- `amp_get_groups`: Returns basic information about groups in your organization. You can map group names to GUIDs for filtering on the events endpoint.
+
 
 ## Analyst1
 
@@ -411,21 +433,21 @@ Uses CISCO AMP Endpoint This integration was integrated and tested with API vers
 **Product:** Analyst1  
 **Commands:**
 
-- `analyst1-enrich-string`: 
-- `analyst1-enrich-ipv6`: 
-- `analyst1-enrich-mutex`: 
-- `analyst1-enrich-http-request`: 
-- `analyst1-evidence-submit`: 
-- `analyst1-evidence-status`: 
-- `analyst1-evidence-search`: 
-- `analyst1-evidence-file-fetch`: 
-- `analyst1-batch-check`: 
-- `analyst1-batch-check-post`: 
-- `analyst1-indicator-by-id`: 
-- `analyst1-get-sensor-config`: 
-- `analyst1-get-sensor-taskings`: 
-- `analyst1-get-sensor-diff`: 
-- `analyst1-get-sensors`: 
+- `domain`: Queries the Analyst1 REST API and enriches the given domain with Analyst1 Indicator data
+- `email`: Queries the Analyst1 REST API and enriches the given email with Analyst1 indicator data.
+- `ip`: Queries the Analyst1 REST API and enriches the given IP address with Analyst1 indicator data.
+- `file`: Queries the Analyst1 REST API and enriches the given file with Analyst1 indicator data.
+- `analyst1-enrich-string`: Queries the Analyst1 REST API and enriches the given string with Analyst1 indicator data
+- `analyst1-enrich-ipv6`: Queries the Analyst1 REST API and enriches the given IP address with Analyst1 indicator data.
+- `analyst1-enrich-mutex`: Queries the Analyst1 REST API and enriches the given mutex with Analyst1 indicator data.
+- `analyst1-enrich-http-request`: Queries the Analyst1 REST API and enriches the given HTTP request with Analyst1 indicator data.
+- `url`: Queries the Analyst1 REST API and enriches the given URL with Analyst1 indicator data.
+- `analyst1-evidence-submit`: Submits an 'Evidence' to Analyst1. Submission can be any text or attachment (PDF, JSON,DOCX...). The a1Bot will extract all relevant context. The 'Evidence' can
+- `analyst1-evidence-status`: Check on the status of the analyst1-evidence-submit action by using its output UUID.
+- `analyst1-evidence-search`: Search for evidence in Analyst1 using filters and search terms.
+- `analyst1-evidence-file-fetch`: Download an evidence file from Analyst1 by its ID.
+- `analyst1-batch-check`: Queries the Analyst1 REST API for indicator enrichment data based on a CSV input of multiple indicator values.
+- `analyst1-batch-check-post`: Similar to analyst1-batch-check, however the inputs can be more complex. The 'values' input is an option for a pre-formatted newline separated file. This allows
 
 
 ## Anomali Match
@@ -437,9 +459,10 @@ Use Anomali Match to search indicators and enrich domains
 
 **Commands:**
 
-- `anomali-enterprise-retro-forensic-search`: 
-- `anomali-enterprise-retro-forensic-search-results`: 
-- `anomali-enterprise-dga-domain-status`: 
+- `anomali-enterprise-retro-forensic-search`: Initiates a forensic search of the indicators.
+- `anomali-enterprise-retro-forensic-search-results`: Retrieves the forensic search results.
+- `anomali-enterprise-dga-domain-status`: The search domains Domain Generation Algorithm (DGA).
+- `domain`: The search domains Domain Generation Algorithm (DGA). Includes DBotScore and domain information. There is no distinction between benign to unknown domains in An
 
 
 ## Anomali Security Analytics Alerts
@@ -451,10 +474,10 @@ The Anomali Security Analytics pack allows users to manage security alerts by in
 
 **Commands:**
 
-- `anomali-security-analytics-search-job-create`: 
-- `anomali-security-analytics-search-job-status`: 
-- `anomali-security-analytics-search-job-results`: 
-- `anomali-security-analytics-alert-update`: 
+- `anomali-security-analytics-search-job-create`: Create a new search job.
+- `anomali-security-analytics-search-job-status`: Get the status of one or more search jobs.
+- `anomali-security-analytics-search-job-results`: Get search job results.
+- `anomali-security-analytics-alert-update`: Update various fields of an alert including status, comment, assignee, severity, and owner.
 
 
 ## Ansible ACME
@@ -466,8 +489,8 @@ Automatic Certificate Management Environment on Linux hosts management using Ans
 
 **Commands:**
 
-- `acme-account`: 
-- `acme-account-info`: 
+- `acme-account`: Create, modify or delete ACME accounts Further documentation available at https://docs.ansible.com/ansible/2.9/modules/acme_account_module.html
+- `acme-account-info`: Retrieves information on ACME accounts Further documentation available at https://docs.ansible.com/ansible/2.9/modules/acme_account_info_module.html
 
 
 ## Ansible Automation Platform
@@ -479,21 +502,21 @@ Scale IT automation, manage complex deployments, and speed productivity. This in
 
 **Commands:**
 
-- `ansible-tower-inventories-list`: 
-- `ansible-tower-hosts-list`: 
-- `ansible-tower-host-create`: 
-- `ansible-tower-host-delete`: 
-- `ansible-tower-job-templates-list`: 
-- `ansible-tower-credentials-list`: 
-- `ansible-tower-job-launch`: 
-- `ansible-tower-job-relaunch`: 
-- `ansible-tower-job-cancel`: 
-- `ansible-tower-job-stdout`: 
-- `ansible-tower-job-status`: 
-- `ansible-tower-job-events-list`: 
-- `ansible-tower-adhoc-command-launch`: 
-- `ansible-tower-adhoc-command-relaunch`: 
-- `ansible-tower-adhoc-command-cancel`: 
+- `ansible-tower-inventories-list`: Retrieves the list of inventories.
+- `ansible-tower-hosts-list`: Retrieves the list of hosts. If an inventory ID is specified, retrieve the host located under the specific inventory.
+- `ansible-tower-host-create`: Creates a host under the specified inventory ID and with the specified name.
+- `ansible-tower-host-delete`: Deletes the specified host.
+- `ansible-tower-job-templates-list`: Retrieves the list of job templates.
+- `ansible-tower-credentials-list`: Retrieves the list of credentials. If an ID is specified, retrieve the specific credential.
+- `ansible-tower-job-launch`: Launches the job template.
+- `ansible-tower-job-relaunch`: Relaunch a job.
+- `ansible-tower-job-cancel`: Cancels a pending or running job.
+- `ansible-tower-job-stdout`: Retrieves the standard output by running the provided job.
+- `ansible-tower-job-status`: Retrieves the job status.
+- `ansible-tower-job-events-list`: Retrieves the list of job events.
+- `ansible-tower-adhoc-command-launch`: Creates new ad hoc commands.
+- `ansible-tower-adhoc-command-relaunch`: Launch a new job to run the ad hoc command.
+- `ansible-tower-adhoc-command-cancel`: Cancel a job of the specified ad hoc command.
 
 
 ## Ansible Cisco IOS
@@ -505,21 +528,21 @@ This integration enables the management of Cisco IOS Switches and Routers direct
 
 **Commands:**
 
-- `ios-banner`: 
-- `ios-bgp`: 
-- `ios-command`: 
-- `ios-l2-interfaces`: 
-- `ios-l3-interfaces`: 
-- `ios-lacp`: 
-- `ios-lacp-interfaces`: 
-- `ios-lag-interfaces`: 
-- `ios-linkagg`: 
-- `ios-lldp`: 
-- `ios-lldp-global`: 
-- `ios-lldp-interfaces`: 
-- `ios-logging`: 
-- `ios-ntp`: 
-- `ios-ping`: 
+- `ios-banner`: Manage multiline banners on Cisco IOS devices Further documentation available at https://docs.ansible.com/ansible/2.9/modules/ios_banner_module.html
+- `ios-bgp`: Configure global BGP protocol settings on Cisco IOS. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/ios_bgp_module.html
+- `ios-command`: Run commands on remote devices running Cisco IOS Further documentation available at https://docs.ansible.com/ansible/2.9/modules/ios_command_module.html
+- `ios-l2-interfaces`: Manage Layer-2 interface on Cisco IOS devices. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/ios_l2_interfaces_module.html
+- `ios-l3-interfaces`: Manage Layer-3 interface on Cisco IOS devices. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/ios_l3_interfaces_module.html
+- `ios-lacp`: Manage Global Link Aggregation Control Protocol (LACP) on Cisco IOS devices. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/ios
+- `ios-lacp-interfaces`: Manage Link Aggregation Control Protocol (LACP) on Cisco IOS devices interface. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/
+- `ios-lag-interfaces`: Manage Link Aggregation on Cisco IOS devices. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/ios_lag_interfaces_module.html
+- `ios-linkagg`: Manage link aggregation groups on Cisco IOS network devices Further documentation available at https://docs.ansible.com/ansible/2.9/modules/ios_linkagg_module.h
+- `ios-lldp`: Manage LLDP configuration on Cisco IOS network devices. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/ios_lldp_module.html
+- `ios-lldp-global`: Configure and manage Link Layer Discovery Protocol(LLDP) attributes on IOS platforms. Further documentation available at https://docs.ansible.com/ansible/2.9/mo
+- `ios-lldp-interfaces`: Manage link layer discovery protocol (LLDP) attributes of interfaces on Cisco IOS devices. Further documentation available at https://docs.ansible.com/ansible/2
+- `ios-logging`: Manage logging on network devices Further documentation available at https://docs.ansible.com/ansible/2.9/modules/ios_logging_module.html
+- `ios-ntp`: Manages core NTP configuration. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/ios_ntp_module.html
+- `ios-ping`: Tests reachability using ping from Cisco IOS network devices Further documentation available at https://docs.ansible.com/ansible/2.9/modules/ios_ping_module.htm
 
 
 ## Ansible Cisco NXOS
@@ -531,21 +554,21 @@ This integration enables the management of Cisco NXOS Switches and Routers direc
 
 **Commands:**
 
-- `nxos-aaa-server`: 
-- `nxos-aaa-server-host`: 
-- `nxos-acl-interface`: 
-- `nxos-banner`: 
-- `nxos-bfd-global`: 
-- `nxos-bfd-interfaces`: 
-- `nxos-bgp`: 
-- `nxos-bgp-af`: 
-- `nxos-bgp-neighbor`: 
-- `nxos-bgp-neighbor-af`: 
-- `nxos-command`: 
-- `nxos-evpn-vni`: 
-- `nxos-facts`: 
-- `nxos-gir`: 
-- `nxos-gir-profile-management`: 
+- `nxos-aaa-server`: Manages AAA server global configuration. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/nxos_aaa_server_module.html
+- `nxos-aaa-server-host`: Manages AAA server host-specific configuration. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/nxos_aaa_server_host_module.html
+- `nxos-acl-interface`: Manages applying ACLs to interfaces. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/nxos_acl_interface_module.html
+- `nxos-banner`: Manage multiline banners on Cisco NXOS devices Further documentation available at https://docs.ansible.com/ansible/2.9/modules/nxos_banner_module.html
+- `nxos-bfd-global`: Bidirectional Forwarding Detection (BFD) global-level configuration Further documentation available at https://docs.ansible.com/ansible/2.9/modules/nxos_bfd_glo
+- `nxos-bfd-interfaces`: Manages BFD attributes of nxos interfaces. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/nxos_bfd_interfaces_module.html
+- `nxos-bgp`: Manages BGP configuration. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/nxos_bgp_module.html
+- `nxos-bgp-af`: Manages BGP Address-family configuration. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/nxos_bgp_af_module.html
+- `nxos-bgp-neighbor`: Manages BGP neighbors configurations. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/nxos_bgp_neighbor_module.html
+- `nxos-bgp-neighbor-af`: Manages BGP address-family's neighbors configuration. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/nxos_bgp_neighbor_af_modul
+- `nxos-command`: Run arbitrary command on Cisco NXOS devices Further documentation available at https://docs.ansible.com/ansible/2.9/modules/nxos_command_module.html
+- `nxos-evpn-vni`: Manages Cisco EVPN VXLAN Network Identifier (VNI). Further documentation available at https://docs.ansible.com/ansible/2.9/modules/nxos_evpn_vni_module.html
+- `nxos-facts`: Gets facts about NX-OS switches Further documentation available at https://docs.ansible.com/ansible/2.9/modules/nxos_facts_module.html
+- `nxos-gir`: Trigger a graceful removal or insertion (GIR) of the switch. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/nxos_gir_module.htm
+- `nxos-gir-profile-management`: Create a maintenance-mode or normal-mode profile for GIR. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/nxos_gir_profile_manag
 
 
 ## Ansible DNS
@@ -557,7 +580,7 @@ This integration enables the management of DNS Records directly from platform us
 
 **Commands:**
 
-- `dns-nsupdate`: 
+- `dns-nsupdate`: Manage DNS records. Further documentation available at https://docs.ansible.com/ansible/2.9/modules/nsupdate_module.html
 
 
 ## Ansible Microsoft Windows
@@ -569,10 +592,10 @@ This integration enables the management of Microsoft Windows hosts directly from
 
 **Commands:**
 
-- `win-gather-facts`: 
-- `win-acl`: 
-- `win-acl-inheritance`: 
-- `win-audit-policy-system`: 
+- `win-gather-facts`: Gathers facts about remote hosts Further documentation available at https://docs.ansible.com/ansible/2.9/modules/gather_facts_module.html
+- `win-acl`: Set file/directory/registry permissions for a system user or group Further documentation available at https://docs.ansible.com/ansible/2.9/modules/win_acl_modul
+- `win-acl-inheritance`: Change ACL inheritance Further documentation available at https://docs.ansible.com/ansible/2.9/modules/win_acl_inheritance_module.html
+- `win-audit-policy-system`: Used to make changes to the system wide Audit Policy Further documentation available at https://docs.ansible.com/ansible/2.9/modules/win_audit_policy_system_mod
 
 
 ## Ansible OpenSSL
@@ -584,8 +607,8 @@ This integration enables the management of certificates on Linux hosts directly 
 
 **Commands:**
 
-- `openssl-certificate`: 
-- `openssl-certificate-info`: 
+- `openssl-certificate`: Generate and/or check OpenSSL certificates Further documentation available at https://docs.ansible.com/ansible/2.9/modules/openssl_certificate_module.html
+- `openssl-certificate-info`: Provide information of OpenSSL X.509 certificates Further documentation available at https://docs.ansible.com/ansible/2.9/modules/openssl_certificate_info_modul
 
 
 ## Ansible VMware
@@ -597,7 +620,7 @@ This integration enables the management of VMware vCenter and ESXi hosts directl
 
 **Commands:**
 
-- `vmware-about-info`: 
+- `vmware-about-info`: Provides information about VMware server to which user is connecting to Further documentation available at https://docs.ansible.com/ansible/2.9/modules/vmware_a
 
 
 ## Anthropic Claude
@@ -609,21 +632,21 @@ Designed to assist security professionals with security investigations, threat h
 
 **Commands:**
 
-- `claude-send-message`: 
-- `claude-check-email-header`: 
-- `claude-check-email-body`: 
-- `claude-create-soc-email-template`: 
-- `claude-list-chats`: 
-- `claude-list-groups`: 
-- `claude-get-events`: 
-- `claude-list-roles`: 
-- `claude-list-projects`: 
-- `claude-list-project-attachments`: 
-- `claude-list-organization-users`: 
-- `claude-list-role-permissions`: 
-- `claude-list-group-members`: 
-- `claude-get-project-document`: 
-- `claude-list-organizations`: 
+- `claude-send-message`: Send a plain message to the selected Claude model and receive the generated response.
+- `claude-check-email-header`: Checking email header for possible security issues. It is possible to keep asking questions on the provided info using 'claude-send-message'. Resets conversatio
+- `claude-check-email-body`: Check email body for possible security issues. It is possible to keep asking questions on the provided info using 'claude-send-message'. Resets conversation con
+- `claude-create-soc-email-template`: Create an email template out of the conversation context to be sent from the SOC.
+- `claude-list-chats`: List chats metadata (Compliance API).
+- `claude-list-groups`: List groups, or retrieve a single group when group_id is provided (Compliance API).
+- `claude-get-events`: Manually retrieve Activity Feed events from the Anthropic Compliance API for testing and troubleshooting.
+- `claude-list-roles`: List roles of an organization, or retrieve a single role when role_id is provided (Compliance API).
+- `claude-list-projects`: List projects, or retrieve a single project when project_id is provided (Compliance API).
+- `claude-list-project-attachments`: List the attachments of a project (Compliance API).
+- `claude-list-organization-users`: List the users of an organization (Compliance API).
+- `claude-list-role-permissions`: List the permissions of a role (Compliance API).
+- `claude-list-group-members`: List the members of a group (Compliance API).
+- `claude-get-project-document`: Retrieve a project document including its text content (Compliance API).
+- `claude-list-organizations`: List the organizations under the parent organization (Compliance API).
 
 
 ## Anthropic Claude (Standard Connector)
@@ -635,8 +658,8 @@ This integration is configured automatically as part of the Anthropic Claude Sta
 
 **Commands:**
 
-- `claude-chat-file-delete`: 
-- `claude-project-document-delete`: 
+- `claude-chat-file-delete`: Permanently delete a Claude file (a conversation file or a project binary file) via the Compliance API. This is an irreversible hard delete, and it requires a C
+- `claude-project-document-delete`: Permanently delete a Claude project document (a plain-text project_doc) via the Compliance API. This is an irreversible hard delete, and it requires a Complianc
 
 
 ## AnthropicClaudeApiModule
@@ -655,19 +678,19 @@ ANY.RUN is a cloud-based sandbox with interactive access
 
 **Commands:**
 
-- `anyrun-detonate-file-windows`: 
-- `anyrun-detonate-url-windows`: 
-- `anyrun-detonate-file-linux`: 
-- `anyrun-detonate-url-linux`: 
-- `anyrun-detonate-file-android`: 
-- `anyrun-detonate-url-android`: 
-- `anyrun-get-user-limits`: 
-- `anyrun-get-analysis-history`: 
-- `anyrun-delete-task`: 
-- `anyrun-get-analysis-report`: 
-- `anyrun-download-analysis-pcap`: 
-- `anyrun-download-analysis-sample`: 
-- `anyrun-get-analysis-verdict`: 
+- `anyrun-detonate-file-windows`: Perform File analysis using Windows VM.
+- `anyrun-detonate-url-windows`: Perform URL analysis using Windows VM.
+- `anyrun-detonate-file-linux`: Perform File analysis using Linux VM.
+- `anyrun-detonate-url-linux`: Perform URL analysis using Linux VM.
+- `anyrun-detonate-file-android`: Perform File analysis using Android VM.
+- `anyrun-detonate-url-android`: Perform URL analysis using Android VM.
+- `anyrun-get-user-limits`: Get user available limits to perform the Sandbox analysis.
+- `anyrun-get-analysis-history`: Get analysis history.
+- `anyrun-delete-task`: Deletes analysis task according to specified task uuid.
+- `anyrun-get-analysis-report`: Returns the analysis report summary.
+- `anyrun-download-analysis-pcap`: Returns the analysis network traffic dump.
+- `anyrun-download-analysis-sample`: Returns the analysis file in zip archive. Archive password: infected.
+- `anyrun-get-analysis-verdict`: Returns a threat level text. Possible values: No threats detected, Suspicious activity, Malicious activity.
 
 
 ## ANY.RUN TI Lookup
@@ -679,7 +702,11 @@ TI Lookup is a searchable database of IOCs, IOAs, IOBs, and events for threat hu
 
 **Commands:**
 
-- `anyrun-get-intelligence`: 
+- `anyrun-get-intelligence`: Perform threat intelligence using specified IOC
+- `ip`: Check the IP address reputation.
+- `domain`: Check the Domain name reputation.
+- `url`: Check the URL reputation.
+- `file`: Check the SHA256 hash reputation.
 
 
 ## AnyLlmAddResultsConvo
@@ -1133,21 +1160,21 @@ Retrieval Augmented Generation (RAG) with LLM and Vector DB that can be local fo
 
 **Commands:**
 
-- `anyllm-document-upload-file`: 
-- `anyllm-document-upload-link`: 
-- `anyllm-document-upload-text`: 
-- `anyllm-workspace-new`: 
-- `anyllm-workspace-delete`: 
-- `anyllm-workspace-list`: 
-- `anyllm-workspace-get`: 
-- `anyllm-workspace-settings`: 
-- `anyllm-workspace-add-embedding`: 
-- `anyllm-workspace-delete-embedding`: 
-- `anyllm-document-createfolder`: 
-- `anyllm-document-move`: 
-- `anyllm-document-delete`: 
-- `anyllm-workspace-chat`: 
-- `anyllm-workspace-stream-chat`: 
+- `anyllm-document-upload-file`: Uploads an platform file entry to the custom-documents folder.
+- `anyllm-document-upload-link`: Uploads a web link to the custom-documents folder
+- `anyllm-document-upload-text`: Upload text content as a document to the custom-documents folder
+- `anyllm-workspace-new`: Creates a new workspace in AnythingLLM
+- `anyllm-workspace-delete`: Deletes an AnythingLLM workspace
+- `anyllm-workspace-list`: List all the workspaces in AnythingLLM
+- `anyllm-workspace-get`: Get a specific workspace details
+- `anyllm-workspace-settings`: Update workspace settings
+- `anyllm-workspace-add-embedding`: Add a document to a workspace and create its vector embedding in the workspace
+- `anyllm-workspace-delete-embedding`: Delete a document embedding from the workspace
+- `anyllm-document-createfolder`: Create a new document folder
+- `anyllm-document-move`: Move a document from a source folder to a destination folder
+- `anyllm-document-delete`: Delete a document
+- `anyllm-workspace-chat`: Send a chat message to a workspace (default thread). Query mode is based on embedded documents in chat, whereas chat mode is more general.
+- `anyllm-workspace-stream-chat`: Send a stream chat message to a workspace (default thread). Query mode is based on embedded documents in chat, whereas chat mode is more general
 
 
 ## appNovi
@@ -1159,11 +1186,11 @@ Search across meshed network, security, and business data in appNovi to make eff
 
 **Commands:**
 
-- `search-appnovi-components`: 
-- `search-appnovi-connected`: 
-- `search-appnovi-cve`: 
-- `search-appnovi-component-property`: 
-- `search-appnovi-server-by-ip`: 
+- `search-appnovi-components`: Search for Components by name or value
+- `search-appnovi-connected`: Search for Components connected to supplied identity
+- `search-appnovi-cve`: Search for servers with matching CVE
+- `search-appnovi-component-property`: Search for Components by property and value
+- `search-appnovi-server-by-ip`: Search for servers using IP address
 
 
 ## appNovi-MAC-Address-Lookup
@@ -1199,8 +1226,8 @@ Arcanna integration for using the power of AI in SOC This integration was integr
 
 **Commands:**
 
-- `arcanna-get-jobs`: 
-- `arcanna-send-event`: 
+- `arcanna-get-jobs`: Get jobs list
+- `arcanna-send-event`: Sends a raw event to Arcanna
 
 
 ## ArcannaFeedbackPostProcessing
@@ -1248,20 +1275,21 @@ ArcSight ESM is a security information and event management (SIEM) product. It c
 
 **Commands:**
 
-- `as-get-all-cases`: 
-- `as-get-case`: 
-- `as-get-matrix-data`: 
-- `as-add-entries`: 
-- `as-clear-entries`: 
-- `as-get-entries`: 
-- `as-get-security-events`: 
-- `as-get-case-event-ids`: 
-- `as-update-case`: 
-- `as-get-all-query-viewers`: 
-- `as-case-delete`: 
-- `as-get-query-viewer-results`: 
-- `as-fetch-incidents`: 
-- `as-delete-entries`: 
+- `as-get-all-cases`: (Deprecated) Retrieves all case resource IDs.
+- `as-get-case`: Gets information about a single case.
+- `as-get-matrix-data`: Retrieves query viewer results (query viewer must be configured to be refreshed every minute, see documentation)
+- `as-add-entries`: Adds new entries to the Active List.
+- `as-clear-entries`: Deletes all entries in the Active List.
+- `as-get-entries`: Returns all entries in the Active List
+- `as-get-entries`: Returns up to 2000 entries.
+- `as-get-security-events`: Returns the security event details
+- `as-get-case-event-ids`: Returns all case event IDs.
+- `as-update-case`: Updates a specific case.
+- `as-get-all-query-viewers`: Returns all the query viewer IDs.
+- `as-case-delete`: Deletes a case
+- `as-get-query-viewer-results`: Retrieves query viewer results (query viewer must be configured to be refreshed every minute, see documentation)
+- `as-fetch-incidents`: Fetches incidents
+- `as-delete-entries`: Delete entries from the Active List.
 
 
 ## ArcusTeam
@@ -1273,7 +1301,7 @@ The ArcusTeam API allows the user to inspect connected devices' attack surface. 
 
 **Commands:**
 
-- `arcusteam-get-devices`: 
+- `arcusteam-get-devices`: Find ArcusTeam Device
 
 
 ## Arduino
@@ -1285,9 +1313,9 @@ Connects to and controls an Arduino pin system using the network
 
 **Commands:**
 
-- `arduino-set-pin`: 
-- `arduino-get-pin`: 
-- `arduino-send-data`: 
+- `arduino-set-pin`: Requests that a pin be set
+- `arduino-get-pin`: Requests the value of a pin
+- `arduino-send-data`: Send arbitrary data to the Arduino
 
 
 ## Arkime
@@ -1299,19 +1327,19 @@ Arkime (formerly Moloch) is a large scale, open source, indexed packet capture a
 
 **Commands:**
 
-- `arkime-connection-list`: 
-- `arkime-connection-csv-get`: 
-- `arkime-session-pcap-get`: 
-- `arkime-session-csv-get`: 
-- `arkime-session-list`: 
-- `arkime-unique-field-list`: 
-- `arkime-multi-unique-field-list`: 
-- `arkime-field-list`: 
-- `arkime-spigraph-get`: 
-- `arkime-spiview-get`: 
-- `arkime-session-tag-add`: 
-- `arkime-session-tag-remove`: 
-- `arkime-pcap-file-list`: 
+- `arkime-connection-list`: Gets a list of nodes and links and returns them to the client.
+- `arkime-connection-csv-get`: Gets a list of nodes and links in csv format and returns them to the client.
+- `arkime-session-pcap-get`: Retrieve the raw session data in pcap format.
+- `arkime-session-csv-get`: Gets a list of sessions and returns them as CSV to the client.
+- `arkime-session-list`: Gets a list of sessions and returns them to the client.
+- `arkime-unique-field-list`: Gets a list of unique field values (with or without counts) and sends them to the client.
+- `arkime-multi-unique-field-list`: Gets an intersection of unique field values (with or without counts) and sends them to the client.
+- `arkime-field-list`: Gets available database field objects pertaining to sessions.
+- `arkime-spigraph-get`: Gets a list of values for a field with counts and graph data and returns them to the client.
+- `arkime-spiview-get`: Gets a list of field values with counts and returns them to the client.
+- `arkime-session-tag-add`: Add tag(s) to individual session(s) by id or by query.
+- `arkime-session-tag-remove`: Removes tag(s) from individual session(s) by id or by query.
+- `arkime-pcap-file-list`: Gets a list of PCAP files that Arkime knows about.
 
 
 ## Armis
@@ -1323,8 +1351,8 @@ Use the Armis integration to search alerts and devices, tag and untag devices, a
 
 **Commands:**
 
-- `armis-search-alerts`: 
-- `armis-update-alert-status`: 
+- `armis-search-alerts`: Search Armis Alerts.
+- `armis-update-alert-status`: Updates the status for an alert.
 
 
 ## Armorblox
@@ -1336,8 +1364,8 @@ Armorblox is an API-based platform that stops targeted email attacks, protects s
 
 **Commands:**
 
-- `armorblox-check-remediation-action`: 
-- `fetch-incidents`: 
+- `armorblox-check-remediation-action`: Check the recommended remediation action for any incident
+- `fetch-incidents`: Gets a list of armorblox incidents
 
 
 ## Armorblox Needs Review
@@ -1394,9 +1422,9 @@ Integrate Asimily Insight to ingest security anomalies, CVEs, and leverage detai
 
 **Commands:**
 
-- `asimily-get-asset-details`: 
-- `asimily-get-asset-anomalies`: 
-- `asimily-get-asset-vulnerabilities`: 
+- `asimily-get-asset-details`: Fetch assets details from Asimily Insight. You can add argument filters.
+- `asimily-get-asset-anomalies`: Fetch anomaly alerts from Asimily Insight. You can add argument filters.
+- `asimily-get-asset-vulnerabilities`: Fetch device CVEs from Asimily Insight. You can add argument filters.
 
 
 ## AsimilyExtraAssetContextData
@@ -1448,7 +1476,7 @@ Use the Ataya Harmony integration, we can achieve the security access control wh
 
 **Commands:**
 
-- `ataya-assign-user`: 
+- `ataya-assign-user`: After assign the user on ataya harmony, user can successfully register to harmony
 
 
 ## Atlassian Confluence Server
@@ -1460,14 +1488,14 @@ Atlassian Confluence Server API. This integration was integrated and tested with
 
 **Commands:**
 
-- `confluence-create-space`: 
-- `confluence-create-content`: 
-- `confluence-list-spaces`: 
-- `confluence-get-content`: 
-- `confluence-get-page-as-pdf`: 
-- `confluence-delete-content`: 
-- `confluence-update-content`: 
-- `confluence-search-content`: 
+- `confluence-create-space`: Creates a new Confluence space.
+- `confluence-create-content`: Creates Confluence content for a given space.
+- `confluence-list-spaces`: Returns a list of all Confluence spaces.
+- `confluence-get-content`: Returns Confluence content by space key and title.
+- `confluence-get-page-as-pdf`: Returns Confluence Page as PDF by PageID.
+- `confluence-delete-content`: Deletes Confluence content.
+- `confluence-update-content`: Update (overwrite) the existing content of a Confluence page with new content.
+- `confluence-search-content`: Fetches a list of content using the Confluence Query Language (CQL). For more information about CQL syntax, see https://developer.atlassian.com/server/confluenc
 
 
 ## Atlassian IAM
@@ -1479,10 +1507,10 @@ Note: This integration should be used as part of our IAM premium pack. For furth
 
 **Commands:**
 
-- `iam-create-user`: 
-- `iam-update-user`: 
-- `iam-get-user`: 
-- `iam-disable-user`: 
+- `iam-create-user`: Creates a user.
+- `iam-update-user`: Updates an existing user with the data passed in the user-profile argument.
+- `iam-get-user`: Retrieves a single user resource.
+- `iam-disable-user`: Disable an active user.
 
 
 ## Atlassian Jira Service Management
@@ -1494,21 +1522,21 @@ Use this integration to manage Jira objects and attach files to Jira objects fro
 
 **Commands:**
 
-- `jira-asset-object-schema-list`: 
-- `jira-asset-object-type-list`: 
-- `jira-asset-object-type-attribute-list`: 
-- `jira-asset-object-create`: 
-- `jira-asset-object-update`: 
-- `jira-asset-object-delete`: 
-- `jira-asset-object-get`: 
-- `jira-asset-object-search`: 
-- `jira-asset-attribute-json-create`: 
-- `jira-asset-comment-create`: 
-- `jira-asset-connected-ticket-list`: 
-- `jira-asset-comment-list`: 
-- `jira-asset-attachment-add`: 
-- `jira-asset-attachment-list`: 
-- `jira-asset-attachment-remove`: 
+- `jira-asset-object-schema-list`: List all object schemas.
+- `jira-asset-object-type-list`: List all object types.
+- `jira-asset-object-type-attribute-list`: List all attributes for an object type.
+- `jira-asset-object-create`: Create a new object of the specified object type ID. Either attributes or attributes_json must be provided.
+- `jira-asset-object-update`: Updates an existing object of specified object type ID. Either attributes or attributes_json must be provided.
+- `jira-asset-object-delete`: Deletes an existing object of the specified object ID.
+- `jira-asset-object-get`: Retrieves the object with the specified object ID.
+- `jira-asset-object-search`: Searches for objects of the specified object type.
+- `jira-asset-attribute-json-create`: Utility command used to create a JSON file with all attributes of the specified object type. All that is left is to fill in the values of each attribute.
+- `jira-asset-comment-create`: Creates a comment for the specified object.
+- `jira-asset-connected-ticket-list`: Returns a list of all connected tickets for the specified object.
+- `jira-asset-comment-list`: Returns a list of comments for the specified object.
+- `jira-asset-attachment-add`: Uploads a file attachment to the specified object.
+- `jira-asset-attachment-list`: Returns a list of attachments for the specified object. You can also download the files in a zipped format.
+- `jira-asset-attachment-remove`: Removes an attachment from a specific object.
 
 
 ## Atlassian Jira v3
@@ -1520,21 +1548,21 @@ Use the Jira integration to manage issues and create the platform. From the plat
 
 **Commands:**
 
-- `jira-issue-get-attachment`: 
-- `jira-delete-issue`: 
-- `jira-get-specific-field`: 
-- `jira-issue-add-link`: 
-- `jira-get-id-by-attribute`: 
-- `jira-issue-query`: 
-- `jira-get-id-offset`: 
-- `jira-issue-add-comment`: 
-- `jira-issue-upload-file`: 
-- `jira-issue-delete-file`: 
-- `jira-list-transitions`: 
-- `jira-edit-issue`: 
-- `jira-issue-assign`: 
-- `jira-create-issue`: 
-- `jira-get-issue`: 
+- `jira-issue-get-attachment`: Download attachments for a specific issue (Will download a file to War Room).
+- `jira-delete-issue`: Deletes an issue in Jira. Issue's sub-tasks will also be deleted if there are any.
+- `jira-get-specific-field`: Gets specific fields from a Jira issue and adds it to context dynamically.
+- `jira-issue-add-link`: Creates (or updates) an issue link.
+- `jira-get-id-by-attribute`: Gets the account ID for a given user attribute.
+- `jira-issue-query`: Queries Jira issues.
+- `jira-get-id-offset`: Returns the ID offset, which is the ID of the first issue that was created in the current Jira instance, or the ID of the first issue with respect to the given 
+- `jira-issue-add-comment`: Adds a new comment to an existing Jira issue.
+- `jira-issue-upload-file`: Uploads a file attachment to an issue.
+- `jira-issue-delete-file`: Delete an attachment from an issue.
+- `jira-list-transitions`: Lists all possible transitions for a given ticket in its current status.
+- `jira-edit-issue`: Modifies an issue in Jira. If the status or transition fields are given, then the other supplied fields should appear on the transition screen.
+- `jira-issue-assign`: Assigns an assignee to an existing issue.
+- `jira-create-issue`: Creates a new issue in Jira.
+- `jira-get-issue`: Fetches an issue from Jira.
 
 
 ## AtlassianApiModule
@@ -1551,6 +1579,22 @@ This API module provides shared OAuth 2.0 authentication functionality for Atlas
 
 Use the AttackIQ integration to simulate a platform that provides validations for security controls, responses, and remediation exercises. This integration was integrated and tested with AttackIQ FireDrill v2.15.96
 
+**Commands:**
+
+- `attackiq-get-assessment-by-id`: Returns all assessment information by ID.
+- `attackiq-list-assessments`: Returns all assessment details by page.
+- `attackiq-activate-assessment`: Deprecated, without available replacement. Activates the assessment, which is required for execution.
+- `attackiq-run-all-tests-in-assessment`: Runs all tests in the assessment.
+- `attackiq-get-assessment-execution-status`: Returns an assessment execution status when running an on-demand execution only.
+- `attackiq-get-test-execution-status`: Returns the status of the test.
+- `attackiq-list-tests-by-assessment`: Returns a list of tests by an assessment.
+- `attackiq-get-test-results`: Returns the test results of an assessment.
+- `attackiq-list-assessment-templates`: Lists all available assessment templates.
+- `attackiq-list-assets`: Lists all assets.
+- `attackiq-create-assessment`: Creates a new assesment.
+- `attackiq-add-assets-to-assessment`: Adds assets or asset groups to an assesment.
+- `attackiq-delete-assessment`: Deletes an assessment.
+
 
 ## Augur Security
 
@@ -1561,10 +1605,10 @@ Leverage Augur's preemptive threat intelligence for actionable data against pers
 
 **Commands:**
 
-- `augur-get-indicators`: 
-- `augur-get-file-hash-context`: 
-- `augur-get-host-context`: 
-- `augur-get-ip-context`: 
+- `augur-get-daily-indicators`: Get daily indicators from Augur.
+- `augur-get-file-hash-context`: Get threat context of a file hash from the Augur API.
+- `augur-get-host-context`: Get threat context of a host name from the Augur API.
+- `augur-get-ip-context`: Get threat context of a ipv4 address from the Augur API.
 
 
 ## Automox
@@ -1576,21 +1620,21 @@ Use the Automox integration to create device groups, update devices, run policie
 
 **Commands:**
 
-- `automox-devices-list`: 
-- `automox-organizations-list`: 
-- `automox-organization-users-list`: 
-- `automox-vulnerability-sync-batch-action`: 
-- `automox-vulnerability-sync-task-action`: 
-- `automox-vulnerability-sync-batch-get`: 
-- `automox-vulnerability-sync-batches-list`: 
-- `automox-vulnerability-sync-tasks-list`: 
-- `automox-vulnerability-sync-file-upload`: 
-- `automox-policies-list`: 
-- `automox-command-run`: 
-- `automox-device-delete`: 
-- `automox-device-update`: 
-- `automox-groups-list`: 
-- `automox-group-create`: 
+- `automox-devices-list`: List all devices in Automox based on group and organization permissions.
+- `automox-organizations-list`: List all Automox organizations based on user permissions.
+- `automox-organization-users-list`: List all Automox users within an organization.
+- `automox-vulnerability-sync-batch-action`: Perform an action on an Automox Vulnerability Sync batch.
+- `automox-vulnerability-sync-task-action`: Perform an action on an Automox task.
+- `automox-vulnerability-sync-batch-get`: Get details about a Vulnerability Sync batch.
+- `automox-vulnerability-sync-batches-list`: Get a list of Vulnerability Sync batches.
+- `automox-vulnerability-sync-tasks-list`: Get a list of Automox tasks.
+- `automox-vulnerability-sync-file-upload`: Upload a vulnerability report to Automox Vulnerability Sync.
+- `automox-policies-list`: Retrieve a list of Automox policies belonging to an organization.
+- `automox-command-run`: Run a command on a device in Automox
+- `automox-device-delete`: Delete a device from Automox
+- `automox-device-update`: Update a device's information in Automox
+- `automox-groups-list`: List all groups in Automox based on organization permissions.
+- `automox-group-create`: Create a group in Automox
 
 
 ## Axonius
@@ -1602,21 +1646,21 @@ This integration is for fetching information about assets in Axonius. This integ
 
 **Commands:**
 
-- `axonius-get-devices-by-savedquery`: 
-- `axonius-get-devices-by-aql`: 
-- `axonius-get-users-by-aql`: 
-- `axonius-get-users-by-savedquery`: 
-- `axonius-get-users-by-mail`: 
-- `axonius-get-users-by-mail-regex`: 
-- `axonius-get-users-by-username`: 
-- `axonius-get-users-by-username-regex`: 
-- `axonius-get-devices-by-hostname`: 
-- `axonius-get-devices-by-hostname-regex`: 
-- `axonius-get-devices-by-ip`: 
-- `axonius-get-devices-by-ip-regex`: 
-- `axonius-get-devices-by-mac`: 
-- `axonius-get-devices-by-mac-regex`: 
-- `axonius-add-note`: 
+- `axonius-get-devices-by-savedquery`: Gather device info by saved query
+- `axonius-get-devices-by-aql`: Gather devices info by AQL query
+- `axonius-get-users-by-aql`: Gather users info by AQL query
+- `axonius-get-users-by-savedquery`: Gather user info by saved query
+- `axonius-get-users-by-mail`: Gather user info by email address
+- `axonius-get-users-by-mail-regex`: Gather user info by email address using regex
+- `axonius-get-users-by-username`: Gather user info by username
+- `axonius-get-users-by-username-regex`: Gather user info by username using regex
+- `axonius-get-devices-by-hostname`: Gather device info by hostname
+- `axonius-get-devices-by-hostname-regex`: Gather device info by hostname using regex
+- `axonius-get-devices-by-ip`: Gather device info by IP address
+- `axonius-get-devices-by-ip-regex`: Gather device info by IP address using regex
+- `axonius-get-devices-by-mac`: Gather device info by MAC address
+- `axonius-get-devices-by-mac-regex`: Gather device info by MAC address using regex
+- `axonius-add-note`: Add note to assets
 
 
 ## Barracuda Reputation Block List (BRBL)
@@ -1625,6 +1669,10 @@ This integration is for fetching information about assets in Axonius. This integ
 **Product:** Barracuda  
 
 This integration enables reputation checks against IPs from Barracuda Reputation Block List (BRBL) This integration was integrated and tested with Barracuda Reputation Block List (BRBL)
+
+**Commands:**
+
+- `ip`: Get IP Reputation
 
 
 ## Base64Decode
@@ -1719,12 +1767,12 @@ The dark web scan integration notifies you if login credentials to your company 
 
 **Commands:**
 
-- `darkwebscan-getcompanies`: 
-- `darkwebscan-getleaks`: 
-- `darkwebscan-getosint`: 
-- `darkwebscan-getemailsecurity`: 
-- `darkwebscan-getwaf`: 
-- `darkwebscan-resetcontext`: 
+- `darkwebscan-getcompanies`: Returns a list of all companies associated with your API key.
+- `darkwebscan-getleaks`: Returns leaked credentials for a given company_id.
+- `darkwebscan-getosint`: Returns OSINT information about the associated domain of a given company_id.
+- `darkwebscan-getemailsecurity`: Returns information about the email security for the associated domain of a given company_id.
+- `darkwebscan-getwaf`: Returns Web Application Firewall Status information about the associated domain of a given company_id.
+- `darkwebscan-resetcontext`: Resets integration context for the DarkWebScan. May result in many alerts reappearing.
 
 
 ## BeforeRelativeDate
@@ -1777,8 +1825,8 @@ Use this integration to handle Beyond Trust authorization requests through platf
 
 **Commands:**
 
-- `bt-authorize-ticket`: 
-- `bt-get-ticket`: 
+- `bt-authorize-ticket`: approve or deny authorization requests for BT.
+- `bt-get-ticket`: retrieves an existing ticket.
 
 
 ## BeyondTrust Privilege Management Cloud
@@ -1787,7 +1835,7 @@ Use this integration to handle Beyond Trust authorization requests through platf
 **Product:** BeyondTrust  
 **Commands:**
 
-- `beyondtrust-pm-cloud-get-events`: 
+- `beyondtrust-pm-cloud-get-events`: Retrieves events or activity audits from BeyondTrust PM Cloud. Use the event_type argument to switch between Events and Activity Audits.
 
 
 ## BeyondTrust Retrieve Credentials
@@ -1804,8 +1852,8 @@ Playbook for retrieving credentials for BeyondTrust Password Safe
 **Product:** Binalyze AIR  
 **Commands:**
 
-- `binalyze-air-isolate`: 
-- `binalyze-air-acquire`: 
+- `binalyze-air-isolate`: Isolate an endpoint
+- `binalyze-air-acquire`: Acquire evidence from an endpoint
 
 
 ## Binalyze AIR Extended
@@ -1817,21 +1865,21 @@ Manage Binalyze AIR forensic acquisition, endpoint isolation, triage, cases, tas
 
 **Commands:**
 
-- `binalyze-air-isolate`: 
-- `binalyze-air-acquire`: 
-- `binalyze-air-create-case`: 
-- `binalyze-air-get-case`: 
-- `binalyze-air-list-cases`: 
-- `binalyze-air-close-case`: 
-- `binalyze-air-get-case-tasks`: 
-- `binalyze-air-get-case-endpoints`: 
-- `binalyze-air-get-case-activities`: 
-- `binalyze-air-list-assets`: 
-- `binalyze-air-get-asset`: 
-- `binalyze-air-get-asset-by-hostname`: 
-- `binalyze-air-get-asset-tasks`: 
-- `binalyze-air-get-task`: 
-- `binalyze-air-list-tasks`: 
+- `binalyze-air-isolate`: Isolate an endpoint or release endpoint isolation.
+- `binalyze-air-acquire`: Start forensic evidence acquisition from an endpoint.
+- `binalyze-air-create-case`: Create a Binalyze AIR case.
+- `binalyze-air-get-case`: Get a Binalyze AIR case by ID.
+- `binalyze-air-list-cases`: List Binalyze AIR cases.
+- `binalyze-air-close-case`: Close a Binalyze AIR case.
+- `binalyze-air-get-case-tasks`: Get tasks associated with a Binalyze AIR case.
+- `binalyze-air-get-case-endpoints`: Get endpoints associated with a Binalyze AIR case.
+- `binalyze-air-get-case-activities`: Get activity history associated with a Binalyze AIR case.
+- `binalyze-air-list-assets`: List Binalyze AIR endpoints/assets with optional filters.
+- `binalyze-air-get-asset`: Get a Binalyze AIR endpoint/asset by asset ID.
+- `binalyze-air-get-asset-by-hostname`: Find a Binalyze AIR endpoint/asset by hostname and organization ID.
+- `binalyze-air-get-asset-tasks`: Get tasks associated with an endpoint/asset.
+- `binalyze-air-get-task`: Get task details and normalized terminal status flags for polling.
+- `binalyze-air-list-tasks`: List Binalyze AIR tasks.
 
 
 ## BinarySearchPy
@@ -1851,21 +1899,21 @@ Bitbucket Cloud is a Git-based code and CI/CD tool optimized for teams using Jir
 
 **Commands:**
 
-- `bitbucket-project-list`: 
-- `bitbucket-open-branch-list`: 
-- `bitbucket-branch-get`: 
-- `bitbucket-branch-create`: 
-- `bitbucket-branch-delete`: 
-- `bitbucket-commit-create`: 
-- `bitbucket-commit-list`: 
-- `bitbucket-file-delete`: 
-- `bitbucket-raw-file-get`: 
-- `bitbucket-issue-create`: 
-- `bitbucket-issue-list`: 
-- `bitbucket-issue-update`: 
-- `bitbucket-pull-request-create`: 
-- `bitbucket-pull-request-update`: 
-- `bitbucket-pull-request-list`: 
+- `bitbucket-project-list`: If a project_key is given, returns the requested project. Else, returns a list of the projects in the workspace.
+- `bitbucket-open-branch-list`: Returns a list of the open branches.
+- `bitbucket-branch-get`: Returns the information of the requested branch.
+- `bitbucket-branch-create`: Creates a new branch in Bitbucket.
+- `bitbucket-branch-delete`: Deletes the given branch from Bitbucket.
+- `bitbucket-commit-create`: Creates a new commit in Bitbucket.
+- `bitbucket-commit-list`: Returns a list of the commit in accordance with the included and excluded branches.
+- `bitbucket-file-delete`: Deletes the given file from Bitbucket.
+- `bitbucket-raw-file-get`: Returns the content of the given file, along with the option to download it.
+- `bitbucket-issue-create`: Deprecated. Issues are fully removed from Bitbucket Cloud by Atlassian as of Mid-August 2026. Use the jira-create-issue command in the Atlassian Jira v3 integra
+- `bitbucket-issue-list`: Deprecated. Issues are fully removed from Bitbucket Cloud by Atlassian as of Mid-August 2026. Use the jira-get-issue command (for a single issue) or the jira-is
+- `bitbucket-issue-update`: Deprecated. Issues are fully removed from Bitbucket Cloud by Atlassian as of Mid-August 2026. Use the jira-edit-issue command in the Atlassian Jira v3 integrati
+- `bitbucket-pull-request-create`: Creates a pull request in Bitbucket.
+- `bitbucket-pull-request-update`: Updates a pull request in Bitbucket.
+- `bitbucket-pull-request-list`: Returns a list of the pull requests. If a state is provided than the list will contain only PRs with the wanted status. If a state is not provided, by default a
 
 
 ## Bitsight for Security Performance Management
@@ -1877,9 +1925,9 @@ Use the "Bitsight for Security Performance Management" Integration to get compan
 
 **Commands:**
 
-- `bitsight-company-details-get`: 
-- `bitsight-company-findings-get`: 
-- `bitsight-companies-guid-get`: 
+- `bitsight-company-details-get`: Bitsight command to get company details based on the provided GUID. The details include rating details, rating history, and grades for individual risk vectors.
+- `bitsight-company-findings-get`: Bitsight command to get company findings.
+- `bitsight-companies-guid-get`: Bitsight command to get list of companies and GUID.
 
 
 ## Bitwarden Password Manager
@@ -1891,7 +1939,7 @@ This integration collects event logs from Bitwarden Password Manager to Cortex X
 
 **Commands:**
 
-- `bitwarden-get-events`: 
+- `bitwarden-get-events`: Gets events from Bitwarden.
 
 
 ## Block Indicator - Infoblox NIOS
@@ -1973,21 +2021,21 @@ BMC Helix ITSM integration enables customers to manage service request, incident
 
 **Commands:**
 
-- `bmc-itsm-user-list`: 
-- `bmc-itsm-company-list`: 
-- `bmc-itsm-service-request-definition-list`: 
-- `bmc-itsm-ticket-list`: 
-- `bmc-itsm-service-request-create`: 
-- `bmc-itsm-service-request-update`: 
-- `bmc-itsm-incident-update`: 
-- `bmc-itsm-ticket-delete`: 
-- `bmc-itsm-incident-create`: 
-- `bmc-itsm-change-request-create`: 
-- `bmc-itsm-change-request-update`: 
-- `bmc-itsm-task-create`: 
-- `bmc-itsm-task-update`: 
-- `bmc-itsm-problem-investigation-create`: 
-- `bmc-itsm-problem-investigation-update`: 
+- `bmc-itsm-user-list`: Retrieves a list of user profiles from BMC Helix ITSM. The records are retrieved by the query argument or by the filtering arguments. When using filtering argum
+- `bmc-itsm-company-list`: Retrieves a list of companies from BMC Helix ITSM. The records are retrieved by the query argument or by the filtering arguments. When using filtering arguments
+- `bmc-itsm-service-request-definition-list`: Retrieves a list of service request definitions. The records are retrieved by the query argument or by the filtering arguments. When using filtering arguments, 
+- `bmc-itsm-ticket-list`: Retrieves a list of BMC Helix ITSM tickets. The records are retrieved by the query argument or by the filtering arguments. When using filtering arguments, each 
+- `bmc-itsm-service-request-create`: Creates a new service request ticket. A service request ticket is the request record that is generated from the service request definition to manage and track t
+- `bmc-itsm-service-request-update`: Updates the details of a service request ticket for a given request ID. User and company related arguments can be retrieved by executing the bmc-itsm-user-list 
+- `bmc-itsm-incident-update`: Update incident ticket.
+- `bmc-itsm-ticket-delete`: Deletes a ticket by its request ID. Only admin users can perform this command.
+- `bmc-itsm-incident-create`: Creates a new incident ticket. An incident is any event that is not part of the standard operation of a service and that causes an interruption to or a reductio
+- `bmc-itsm-change-request-create`: Creates a change request ticket in BMC Helix ITSM. The ticket is created by using a template or from scratch.
+- `bmc-itsm-change-request-update`: Updates the details of change request ticket for the specified request ID.
+- `bmc-itsm-task-create`: Creates a new task ticket. By splitting cases into individual tasks (assignments), you can focus on one assignment at a time to resolve cases more efficiently. 
+- `bmc-itsm-task-update`: Updates the task ticket.
+- `bmc-itsm-problem-investigation-create`: Creates a problem investigation ticket.
+- `bmc-itsm-problem-investigation-update`: Updates The problem investigation ticket type.
 
 
 ## BMC Helix Remedyforce
@@ -1999,21 +2047,21 @@ BMC Helix Remedyforce integration allows customers to create/update service requ
 
 **Commands:**
 
-- `bmc-remedy-service-request-definition-get`: 
-- `bmc-remedy-note-create`: 
-- `bmc-remedy-service-request-update`: 
-- `bmc-remedy-service-request-create`: 
-- `bmc-remedy-template-details-get`: 
-- `bmc-remedy-impact-details-get`: 
-- `bmc-remedy-service-offering-details-get`: 
-- `bmc-remedy-incident-create`: 
-- `bmc-remedy-incident-update`: 
-- `bmc-remedy-asset-details-get`: 
-- `bmc-remedy-account-details-get`: 
-- `bmc-remedy-status-details-get`: 
-- `bmc-remedy-urgency-details-get`: 
-- `bmc-remedy-category-details-get`: 
-- `bmc-remedy-queue-details-get`: 
+- `bmc-remedy-service-request-definition-get`: This command gets details of service request definitions with the help of service request definition name.
+- `bmc-remedy-note-create`: This command creates notes for incidents and service requests.
+- `bmc-remedy-service-request-update`: This command updates the details of a service request for a given service request number.
+- `bmc-remedy-service-request-create`: This command allows the user to create a new service request. A service request is the request record that is generated from the service request definition to m
+- `bmc-remedy-template-details-get`: This command helps to get template details for Incidents. Templates enable users to prepopulate commonly used fields in a form.
+- `bmc-remedy-impact-details-get`: This command helps to get impact details for incidents and service requests. Impact helps to calculate priority of the incident or service request.
+- `bmc-remedy-service-offering-details-get`: This command helps to get service offering details for incidents. Users can link a service offering of the associated service.
+- `bmc-remedy-incident-create`: This command allows the user to create a new incident.
+- `bmc-remedy-incident-update`: This command updates the details of an incident for a given incident number.
+- `bmc-remedy-asset-details-get`: This command helps to get asset or configuration item details for incidents.
+- `bmc-remedy-account-details-get`: This command helps to get account details for incidents and service requests.
+- `bmc-remedy-status-details-get`: This command helps to get status details for incidents and service requests. Status is used to display the progress of the service request or incident through i
+- `bmc-remedy-urgency-details-get`: This command helps to get urgency details for incidents and service requests. Urgency is used to determine the priority of the incident or service request.
+- `bmc-remedy-category-details-get`: This command helps to get category details for incidents and service requests. Categories allow users to classify the incident or service request using standard
+- `bmc-remedy-queue-details-get`: This command helps to get queue details for incidents and service requests. It accepts queue name and type as arguments.
 
 
 ## BMCHelixRemedyforceCreateIncident
@@ -2060,11 +2108,11 @@ This script is used to simplify the process of creating a service request in BMC
 **Product:** Bonusly  
 **Commands:**
 
-- `bonusly-list-bonuses`: 
-- `bonusly-create-bonus`: 
-- `bonusly-get-bonus`: 
-- `bonusly-update-bonus`: 
-- `bonusly-delete-bonus`: 
+- `bonusly-list-bonuses`: Get a list of bonuses based on a filter
+- `bonusly-create-bonus`: Creates a bonusly bonus
+- `bonusly-get-bonus`: Get a bonusly based on an ID
+- `bonusly-update-bonus`: Update a bonus to bonusly
+- `bonusly-delete-bonus`: Delete a bonus based on an ID like 24abcdef1234567890abcdef
 
 
 ## Bonusly - AutoGratitude
@@ -2088,21 +2136,21 @@ Manage Box users This integration was integrated and tested with API version 2.0
 
 **Commands:**
 
-- `box-search-content`: 
-- `box-find-file-folder-by-share-link`: 
-- `box-get-shared-link-by-file`: 
-- `box-create-file-share-link`: 
-- `box-update-file-share-link`: 
-- `box-remove-file-share-link`: 
-- `box-get-shared-link-by-folder`: 
-- `box-create-folder-share-link`: 
-- `box-update-folder-share-link`: 
-- `box-remove-folder-share-link`: 
-- `box-get-folder`: 
-- `box-list-folder-items`: 
-- `box-folder-create`: 
-- `box-file-delete`: 
-- `box-list-users`: 
+- `box-search-content`: Searches for files, folders, web links, and shared files across the users content or across the entire enterprise.
+- `box-find-file-folder-by-share-link`: Return the file represented by a shared link.
+- `box-get-shared-link-by-file`: Gets the information for a shared link on a file.
+- `box-create-file-share-link`: Adds a shared link to a file.
+- `box-update-file-share-link`: Updates a shared link on a file.
+- `box-remove-file-share-link`: Removes a shared link from a file.
+- `box-get-shared-link-by-folder`: Gets the information for a shared link on a folder.
+- `box-create-folder-share-link`: Adds a shared link to a folder.
+- `box-update-folder-share-link`: Updates a shared link on a folder.
+- `box-remove-folder-share-link`: Removes a shared link from a folder.
+- `box-get-folder`: Retrieves details for a folder, including the first 100 entries in the folder.
+- `box-list-folder-items`: Retrieves a page of items in a folder.
+- `box-folder-create`: Creates a new empty folder within the specified parent folder.
+- `box-file-delete`: Deletes a file, either permanently or by moving it to the trash.
+- `box-list-users`: Returns a list of all users for the Enterprise along with their user_id, public_name, and login.
 
 
 ## BreachConfirmationHTML
@@ -2122,10 +2170,10 @@ Automate your privacy Incident Response workflow through the BreachRx platform. 
 
 **Commands:**
 
-- `breachrx-incident-create`: 
-- `breachrx-incident-actions-get`: 
-- `breachrx-incident-import`: 
-- `breachrx-incident-get`: 
+- `breachrx-incident-create`: Create a privacy Incident on the BreachRx platform.
+- `breachrx-incident-actions-get`: Fetch all actions for a BreachRx privacy Incident.
+- `breachrx-incident-import`: Link a BreachRx privacy Incident with an platform Incident.
+- `breachrx-incident-get`: Find a BreachRx privacy Incident on the connected BreachRx platform.
 
 
 ## BreachRx - Create Incident and get Active Tasks
@@ -2162,13 +2210,13 @@ Automate data collection. Process data at cloud speed. Analyze with purpose. Thi
 
 **Commands:**
 
-- `cado-create-project`: 
-- `cado-list-project`: 
-- `cado-get-pipeline`: 
-- `cado-list-ec2`: 
-- `cado-list-s3`: 
-- `cado-trigger-ec2`: 
-- `cado-trigger-s3`: 
+- `cado-create-project`: Create a project in Cado Response
+- `cado-list-project`: Get a list of projects from Cado Response
+- `cado-get-pipeline`: Get pipeline details from Cado Response
+- `cado-list-ec2`: Get a list of EC2 instances in a region
+- `cado-list-s3`: Get a list of S3 buckets
+- `cado-trigger-ec2`: Trigger a disk acquisition and processing pipeline in Cado Response for a given EC2 instance
+- `cado-trigger-s3`: Trigger a disk acquisition and processing pipeline in Cado Response for a given file in an S3 bucket
 
 
 ## Calculate Severity - GreyNoise
@@ -2225,10 +2273,10 @@ You can use this integration to automate different Camlytics surveillance analys
 
 **Commands:**
 
-- `camlytics-get-channels`: 
-- `camlytics-get-events-totals-by-rule`: 
-- `camlytics-get-events-totals-by-type`: 
-- `camlytics-get-events`: 
+- `camlytics-get-channels`: Retrieve video channels
+- `camlytics-get-events-totals-by-rule`: Retrieve video analytics events totals grouped by calibration rules, these rules can be defined using zones and lines to set areas where different camera events
+- `camlytics-get-events-totals-by-type`: Retrieve video analytics events totals grouped by analytics event type. For example: ObjectAppear, Tailgating, Sabotage and TripwireCrossed.
+- `camlytics-get-events`: Retrieve video analytics events ordered by event id.
 
 
 ## Cape Sandbox
@@ -2237,17 +2285,17 @@ You can use this integration to automate different Camlytics surveillance analys
 **Product:** Cape Sandbox  
 **Commands:**
 
-- `cape-file-submit`: 
-- `cape-file-view`: 
-- `cape-sample-download`: 
-- `cape-url-submit`: 
-- `cape-task-delete`: 
-- `cape-tasks-list`: 
-- `cape-task-report-get`: 
-- `cape-pcap-file-download`: 
-- `cape-task-screenshot-download`: 
-- `cape-machines-list`: 
-- `cape-cuckoo-status-get`: 
+- `cape-file-submit`: Submits a file for analysis to CAPE Sandbox. This command supports PCAP files and automatically sets the pcap option to 1. The command polls the CAPE server unt
+- `cape-file-view`: View detailed information about a file that has been analyzed by CAPE Sandbox. You must specify at least one identifier: Task ID, MD5 hash, or SHA256 hash.
+- `cape-sample-download`: Download a sample file from a CAPE Sandbox task. You must specify at least one identifier: Task ID, MD5 hash, SHA1 hash, or SHA256 hash. The downloaded file wil
+- `cape-url-submit`: Submit a URL for analysis to CAPE Sandbox. The command polls the CAPE server until the analysis task is reported as complete, and then returns the task view wit
+- `cape-task-delete`: Delete a CAPE Sandbox analysis task by its Task ID.
+- `cape-tasks-list`: Returns a list of CAPE Sandbox tasks. If a task_id is provided, the command returns the detailed information for that specific task.
+- `cape-task-report-get`: Retrieve the analysis report associated with a specified CAPE Sandbox task ID. If zip=true, the report will be returned as a downloadable ZIP file.
+- `cape-pcap-file-download`: Download the PCAP (Packet Capture) network dump file associated with a specific CAPE Sandbox task ID. The PCAP file contains all network traffic captured during
+- `cape-task-screenshot-download`: Download screenshots captured during the analysis of a CAPE Sandbox task. Screenshots show the visual behavior of the analyzed file or URL. If a specific screen
+- `cape-machines-list`: Returns a list of available analysis machines configured in CAPE Sandbox. If a machine_name is provided, the command returns detailed information for that speci
+- `cape-cuckoo-status-get`: Returns the overall status of the CAPE/Cuckoo system in a human-readable format. This command provides a quick overview of the sandbox's operational status.
 
 
 ## CaseMgmtAnalystTools
@@ -2291,7 +2339,7 @@ Celonis Event Collector is an integration that supports fetching audit log event
 
 **Commands:**
 
-- `celonis-get-events`: 
+- `celonis-get-events`: Retrieves a list of audit logs events from the Celonis instance.
 
 
 ## Censys Platform
@@ -2303,11 +2351,13 @@ Built on the industry’s most comprehensive Internet Map, the Censys Platform d
 
 **Commands:**
 
-- `cen-view`: 
-- `cen-search`: 
-- `cen-host-history-list`: 
-- `cen-rescan`: 
-- `cen-related-infrastructure-list`: 
+- `cen-view`: Returns detailed information for an IP address or SHA256 within the specified index.
+- `cen-search`: Return previews of hosts matching a specified search query or a list of certificates that match the given query.
+- `domain`: Return all related IPs as relationships.
+- `ip`: Runs reputation on IPs.
+- `cen-host-history-list`: Retrieve the event history for a host (IP address).
+- `cen-rescan`: Initiate a live rescan for a known host service at a specific IP and port (ip:port) or hostname and port (hostname:port).
+- `cen-related-infrastructure-list`: Initiate a CensEye (Related Infrastructure) pivot analysis job for a Host, Web Property, or SHA256 Certificate.
 
 
 ## Centrify Vault
@@ -2319,18 +2369,18 @@ Leverage the Centrify Vault integration to create and manage Secrets
 
 **Commands:**
 
-- `centrify-retrieve-secrets`: 
-- `centrify-retrieve-secret-by-secretid`: 
-- `centrify-create-secretfolder`: 
-- `centrify-create-secret`: 
-- `centrify-create-set`: 
-- `centrify-retrieve-folders`: 
-- `centrify-delete-folder`: 
-- `centrify-delete-secret`: 
-- `centrify-delete-secret-by-secretid`: 
-- `centrify-add-secret-to-set`: 
-- `centrify-retrieve-sets`: 
-- `centrify-delete-set`: 
+- `centrify-retrieve-secrets`: Retrieves the secret from centrify vault based on folder name, set name or secret name. If folder name is not provided, all the secrets in the parent folder wil
+- `centrify-retrieve-secret-by-secretid`: Retrieves the secret from centrify vault based on secret ID.
+- `centrify-create-secretfolder`: Creates a folder in Centrify Vault
+- `centrify-create-secret`: Creates a secret in Centrify Vault.
+- `centrify-create-set`: Creates a set in Centrify Vault
+- `centrify-retrieve-folders`: Fetch details of all folders in Centrify Vault
+- `centrify-delete-folder`: Delete a folder from the Centrify Vault
+- `centrify-delete-secret`: Delete Secret from the Centrify Vault. Please note: Enabling "recursiveDelete" to "Yes" will delete all secrets if there multiple secrets with same name in subf
+- `centrify-delete-secret-by-secretid`: Delete Secret from the Centrify Vault based on the Secret ID provided
+- `centrify-add-secret-to-set`: Adds/Moves a secret to a set for the provided secretID. Use "centrify-retrieve-secrets" to fetch secret ID's.
+- `centrify-retrieve-sets`: Fetches the details of all sets in the Centrify Vault
+- `centrify-delete-set`: Delete set from the Centrify Vault
 
 
 ## Change Management
@@ -2376,10 +2426,10 @@ Cyberint provides intelligence-driven digital risk protection. This integration 
 
 **Commands:**
 
-- `cyberint-alerts-fetch`: 
-- `cyberint-alerts-status-update`: 
-- `cyberint-alerts-get-attachment`: 
-- `cyberint-alerts-analysis-report`: 
+- `cyberint-alerts-fetch`: List alerts according to parameters
+- `cyberint-alerts-status-update`: Update the status of one or more alerts.
+- `cyberint-alerts-get-attachment`: Get alert attachment.
+- `cyberint-alerts-analysis-report`: Get alert analysis report.
 
 
 ## Check Point EM Takedowns
@@ -2391,8 +2441,8 @@ Use the Cyberint Takedowns integration to manage takedowns requests
 
 **Commands:**
 
-- `cyberint-retrieve-takedowns`: 
-- `cyberint-takedown-url`: 
+- `cyberint-retrieve-takedowns`: Retrieve takedowns requests.
+- `cyberint-takedown-url`: Submit takedown request.
 
 
 ## Check Point Harmony Endpoint
@@ -2404,21 +2454,21 @@ Checkpoint Harmony Endpoint provides a complete endpoint security solution built
 
 **Commands:**
 
-- `harmony-ep-job-status-get`: 
-- `harmony-ep-ioc-list`: 
-- `harmony-ep-ioc-update`: 
-- `harmony-ep-ioc-create`: 
-- `harmony-ep-ioc-delete`: 
-- `harmony-ep-policy-rule-assignments-get`: 
-- `harmony-ep-policy-rule-assignments-add`: 
-- `harmony-ep-policy-rule-assignments-remove`: 
-- `harmony-ep-policy-rule-install`: 
-- `harmony-ep-policy-rule-modifications-get`: 
-- `harmony-ep-policy-rule-metadata-list`: 
-- `harmony-ep-push-operation-status-list`: 
-- `harmony-ep-push-operation-get`: 
-- `harmony-ep-push-operation-abort`: 
-- `harmony-ep-anti-malware-scan`: 
+- `harmony-ep-job-status-get`: Retrieves the status and result (if any) of a given asynchronous operation. A job is a way to monitor the progress of an asynchronous operation while avoiding i
+- `harmony-ep-ioc-list`: Gets a list of all Indicators of Compromise. Use the filter parameters to fetch specific IOCs.
+- `harmony-ep-ioc-update`: Updates the given Indicators of Compromise with the given parameters.
+- `harmony-ep-ioc-create`: Creates new Indicators of Compromise using the given parameters.
+- `harmony-ep-ioc-delete`: Deletes the given Indicators of Compromise by their ID.
+- `harmony-ep-policy-rule-assignments-get`: Gets all entities directly assigned to the given rule.
+- `harmony-ep-policy-rule-assignments-add`: Assigns the specified entities to the given rule. Specified IDs that are already assigned to the rule are ignored.
+- `harmony-ep-policy-rule-assignments-remove`: Removes the specified entities from the given rule's assignments. Specified IDs that are not assigned to the rule are ignored.
+- `harmony-ep-policy-rule-install`: Installs all policies.
+- `harmony-ep-policy-rule-modifications-get`: Gets information on modifications to a given rule. (Modifications are the additions or removal of assignments on a rule since it was last installed).
+- `harmony-ep-policy-rule-metadata-list`: Gets the metadata of all rules or the given rule's metadata. (Metadata refers to all information relating to the rule except it's actual settings).
+- `harmony-ep-push-operation-status-list`: Gets the current statuses of all remediation operations or if a specific ID is specified, retrieve the current status of the given remediation operation.
+- `harmony-ep-push-operation-get`: Gets the results of a given Remediation Operation. Remediation Operations may produce results such a Forensics Report or yield status updates such as an anti-ma
+- `harmony-ep-push-operation-abort`: Aborts the given remediation operation. Aborting an operation prevents it from being sent to further Harmony Endpoint Clients. Clients that have already receive
+- `harmony-ep-anti-malware-scan`: Performs an anti-malware scan on computers matching the given query. Note that you must specify at least one of the following filter arguments: computer_ids, co
 
 
 ## Check Point Network Detection and Response (Infinity NDR)
@@ -2430,7 +2480,7 @@ Collect network security events from Check Point Infinity NDR for your secured S
 
 **Commands:**
 
-- `check-point-ndr-fetch-insights`: 
+- `check-point-ndr-fetch-insights`: Retrieve all NDR Insights
 
 
 ## Check Point XDR
@@ -2442,9 +2492,9 @@ The Check Point XDR (Extended Detection and Response) integration allows you to 
 
 **Commands:**
 
-- `fetch-incidents`: 
-- `get-mapping-fields`: 
-- `update-remote-system`: 
+- `fetch-incidents`: Fetches incidents from Check Point XDR and converts them into the platform.
+- `get-mapping-fields`: Returns the fields available for mapping incoming incidents to the platform.
+- `update-remote-system`: Sends updates from the platform, such as status changes or ownership updates.
 
 
 ## Cherwell
@@ -2456,19 +2506,19 @@ Cloud-based IT service management solution This integration was integrated and t
 
 **Commands:**
 
-- `cherwell-create-business-object`: 
-- `cherwell-update-business-object`: 
-- `cherwell-delete-business-object`: 
-- `cherwell-get-business-object`: 
-- `cherwell-download-attachments`: 
-- `cherwell-upload-attachment`: 
-- `cherwell-link-business-objects`: 
-- `cherwell-unlink-business-objects`: 
-- `cherwell-get-attachments-info`: 
-- `cherwell-remove-attachment`: 
-- `cherwell-query-business-object`: 
-- `cherwell-get-field-info`: 
-- `cherwell-run-saved-search`: 
+- `cherwell-create-business-object`: Creates a business object.
+- `cherwell-update-business-object`: Update a business object with the specified fields.
+- `cherwell-delete-business-object`: Deletes a given business object.
+- `cherwell-get-business-object`: Gets a business object by an ID.
+- `cherwell-download-attachments`: Downloads imported attachements from a specified business object.
+- `cherwell-upload-attachment`: Uploads an attachment to a specified business object.
+- `cherwell-link-business-objects`: Links business objects that are related.
+- `cherwell-unlink-business-objects`: Unlinks business objects that are linked and related.
+- `cherwell-get-attachments-info`: Gets information for business object attachments.
+- `cherwell-remove-attachment`: Remove the attachment from the specified business object.
+- `cherwell-query-business-object`: Runs advanced queries to search in a specified business object.
+- `cherwell-get-field-info`: Gets information for a field, by one of its properties (Name, Display Name, or id).
+- `cherwell-run-saved-search`: Returns the results of a saved search.
 
 
 ## CherwellCreateIncident
@@ -2561,7 +2611,21 @@ This script is an example script of how to update an incident in Cherwell. The s
 **Product:** Google SecOps  
 **Commands:**
 
-- `gcb-list-iocs`: 
+- `gcb-list-iocs`: Lists the IOC Domain matches within your enterprise for the specified time interval. The indicator of compromise (IOC) domain matches lists for which the domain
+- `gcb-assets`: Returns a list of the assets that accessed the input artifact (IP, domain, MD5, SHA1 and SHA256) during the specified time.
+- `ip`: Checks the reputation of an IP address.
+- `domain`: Checks the reputation of a domain.
+- `gcb-ioc-details`: Accepts an artifact indicator and returns any threat intelligence associated with the artifact. The threat intelligence information is drawn from your enterpris
+- `gcb-list-alerts`: List all the alerts tracked within your enterprise for the specified time range. Both the parsed alerts and their corresponding raw alert logs are returned.
+- `gcb-list-events`: List all of the events discovered within your enterprise on a particular device within the specified time range. If you receive the maximum number of events you
+- `gcb-list-detections`: Return the detections for the specified version of a rule, the latest version of a rule, all versions of a rule, or all versions of all rules.
+- `gcb-list-rules`: List the latest versions of all Rules.
+- `gcb-create-rule`: Creates a new rule. By default the live rule status will be set to disabled.
+- `gcb-get-rule`: Retrieves the rule details of specified Rule ID or Version ID.
+- `gcb-delete-rule`: Deletes the rule specified by Rule ID.
+- `gcb-create-rule-version`: Creates a new version of an existing rule.
+- `gcb-change-rule-alerting-status`: Updates the alerting status for a rule specified by Rule ID.
+- `gcb-change-live-rule-status`: Updates the live rule status for a rule specified by Rule ID.
 
 
 ## ChronicleAssetEventsForHostnameWidgetScript
@@ -2715,7 +2779,8 @@ Searches for CVE information using circl.lu
 
 **Commands:**
 
-- `cve-latest`: 
+- `cve-latest`: Deprecated. use NVD feed 2.0 instead. Returns the latest updated CVEs.
+- `cve`: Returns CVE information by CVE ID.
 
 
 ## CircleCI
@@ -2727,11 +2792,11 @@ Gets the details of the CircleCI workflows; including the details of the last ru
 
 **Commands:**
 
-- `circleci-workflows-list`: 
-- `circleci-artifacts-list`: 
-- `circleci-workflow-jobs-list`: 
-- `circleci-workflow-last-runs`: 
-- `circleci-trigger-workflow`: 
+- `circleci-workflows-list`: Gets information on workflows.
+- `circleci-artifacts-list`: Retrieves the artifacts list from the CircleCI job.
+- `circleci-workflow-jobs-list`: Retrieves the jobs list from the CircleCI workflow.
+- `circleci-workflow-last-runs`: Retrieves the jobs list from the CircleCI workflow.
+- `circleci-trigger-workflow`: Triggers a new pipeline on the project.
 
 
 ## CIRCLEHashlookup
@@ -2743,9 +2808,9 @@ CIRCL hash lookup is a public API to lookup hash values against known database o
 
 **Commands:**
 
-- `circl-info`: 
-- `circl-bulk-sha1`: 
-- `circl-top`: 
+- `circl-info`: Get information about the hash lookup database
+- `circl-bulk-sha1`: Bulk search of SHA1 hashes
+- `circl-top`: Return the top 100 of most queried values.
 
 
 ## Cisco AMP v2
@@ -2757,21 +2822,21 @@ Cisco Advanced Malware Protection software is designed to prevent, detect, and h
 
 **Commands:**
 
-- `cisco-amp-computer-list`: 
-- `cisco-amp-computer-trajectory-list`: 
-- `cisco-amp-computer-user-activity-list`: 
-- `cisco-amp-computer-user-trajectory-list`: 
-- `cisco-amp-computer-vulnerabilities-list`: 
-- `cisco-amp-computer-move`: 
-- `cisco-amp-computer-delete`: 
-- `cisco-amp-computer-activity-list`: 
-- `cisco-amp-computer-isolation-feature-availability-get`: 
-- `cisco-amp-computer-isolation-get`: 
-- `cisco-amp-computer-isolation-create`: 
-- `cisco-amp-computer-isolation-delete`: 
-- `cisco-amp-event-list`: 
-- `cisco-amp-event-type-list`: 
-- `cisco-amp-file-list-list`: 
+- `cisco-amp-computer-list`: Fetch computers to shows information about them. Can be filtered by a variety of criteria.
+- `cisco-amp-computer-trajectory-list`: Provides a list of all activities associated with a particular computer. This is analogous to the Device Trajectory on the FireAMP console.
+- `cisco-amp-computer-user-activity-list`: Fetch a list of computers that have observed activity by given username.
+- `cisco-amp-computer-user-trajectory-list`: Fetch a specific computer's trajectory with a given connector_guid and filter for events with user name activity.
+- `cisco-amp-computer-vulnerabilities-list`: Provides a list of vulnerabilities observed on a specific computer. The vulnerabilities can be filtered to show only vulnerable applications observed for a spec
+- `cisco-amp-computer-move`: Moves a computer to a group with a given connector_guid and group_guid.
+- `cisco-amp-computer-delete`: Deletes a specific computer with given connector GUID.
+- `cisco-amp-computer-activity-list`: Fetch a list of computers that have observed files with a given file name. Provides the ability to search all computers across an organization for any events or
+- `cisco-amp-computer-isolation-feature-availability-get`: Performs a feature availability request on a computer. Isolation must be enabled within the computer's policy. This can be done through the instance. Log in to 
+- `cisco-amp-computer-isolation-get`: Returns a fine-grained isolation status for a computer. The available flag is set to true if isolation can be performed on the computer. Status will be set to o
+- `cisco-amp-computer-isolation-create`: Request isolation for a computer. Supports polling. Isolation must be enabled within the computer's policy. This can be done through the instance. Log in to you
+- `cisco-amp-computer-isolation-delete`: Request isolation stop for a computer. Supports polling. Isolation must be enabled within the computer's policy. This can be done through the instance. Log in t
+- `cisco-amp-event-list`: Fetch a list of events that can be filtered by a variety of criteria. Each criteria type is logically ANDed with the other criteria, each selection of a criteri
+- `cisco-amp-event-type-list`: Fetches a list of event types. Events are identified and filtered by a unique ID.
+- `cisco-amp-file-list-list`: Returns a particular file list for application blocking or simple custom detection. file_list_guid must be provided to retrieve information about a particular f
 
 
 ## Cisco AppDynamics
@@ -2783,7 +2848,7 @@ AppDynamics enables you to automate incident management, gain real-time performa
 
 **Commands:**
 
-- `cisco-appdynamics-get-events`: 
+- `cisco-appdynamics-get-events`: Retrieves a list of events from the cisappdynamics instance.
 
 
 ## Cisco ASA
@@ -2795,21 +2860,21 @@ Use the Cisco Adaptive Security Appliance Software integration to manage interfa
 
 **Commands:**
 
-- `cisco-asa-list-network-object-group`: 
-- `cisco-asa-list-local-user-group`: 
-- `cisco-asa-list-local-user`: 
-- `cisco-asa-list-time-range`: 
-- `cisco-asa-list-security-object-group`: 
-- `cisco-asa-list-user-object`: 
-- `cisco-asa-write-memory`: 
-- `cisco-asa-list-rules`: 
-- `cisco-asa-backup`: 
-- `cisco-asa-get-rule-by-id`: 
-- `cisco-asa-create-rule`: 
-- `cisco-asa-delete-rule`: 
-- `cisco-asa-edit-rule`: 
-- `cisco-asa-list-network-objects`: 
-- `cisco-asa-create-network-object`: 
+- `cisco-asa-list-network-object-group`: Retrieve information about network object groups. Network object groups can contain multiple network objects as well as inline networks or hosts. Network object
+- `cisco-asa-list-local-user-group`: Retrieve information about local user groups, which are collections of user accounts, either from the local database or imported from Active Directory, that man
+- `cisco-asa-list-local-user`: Retrieve information about individual local user accounts within a network system. These local users can be part of local user groups and groups imported from A
+- `cisco-asa-list-time-range`: Retrieve information about time range objects. A time range object defines a specific time consisting of a start time, an end time, and optional recurring entri
+- `cisco-asa-list-security-object-group`: Retrieve information about security groups, which are collections of security groups or identifiers that manage access and permissions to network resources. The
+- `cisco-asa-list-user-object`: Retrieve information about user definitions within the system. This helps in managing and configuring user access and permissions in a network security context.
+- `cisco-asa-write-memory`: Saves the running configuration to the default location for the startup configuration.
+- `cisco-asa-list-rules`: Gets a list all rules for the supplied interface.
+- `cisco-asa-backup`: Creates a backup of the current settings (i.e., the backup.cfg file).
+- `cisco-asa-get-rule-by-id`: Gets a specific rule by rule ID.
+- `cisco-asa-create-rule`: Creates a rule.
+- `cisco-asa-delete-rule`: Deletes a rule.
+- `cisco-asa-edit-rule`: Updates an existing rule.
+- `cisco-asa-list-network-objects`: Gets a list all configured network objects.
+- `cisco-asa-create-network-object`: Creates a network object.
 
 
 ## Cisco ESA
@@ -2821,21 +2886,21 @@ The Cisco Email Security Appliance is an email security gateway product. It is d
 
 **Commands:**
 
-- `cisco-esa-spam-quarantine-message-search`: 
-- `cisco-esa-spam-quarantine-message-get`: 
-- `cisco-esa-spam-quarantine-message-release`: 
-- `cisco-esa-spam-quarantine-message-delete`: 
-- `cisco-esa-list-entry-get`: 
-- `cisco-esa-list-entry-add`: 
-- `cisco-esa-list-entry-append`: 
-- `cisco-esa-list-entry-edit`: 
-- `cisco-esa-list-entry-delete`: 
-- `cisco-esa-message-search`: 
-- `cisco-esa-message-details-get`: 
-- `cisco-esa-message-amp-details-get`: 
-- `cisco-esa-message-dlp-details-get`: 
-- `cisco-esa-message-url-details-get`: 
-- `cisco-esa-report-get`: 
+- `cisco-esa-spam-quarantine-message-search`: Search messages in the spam quarantine.
+- `cisco-esa-spam-quarantine-message-get`: Get spam quarantine message details.
+- `cisco-esa-spam-quarantine-message-release`: Release quarantine emails.
+- `cisco-esa-spam-quarantine-message-delete`: Delete quarantine emails.
+- `cisco-esa-list-entry-get`: Get spam quarantine blocklist/safelist entry.
+- `cisco-esa-list-entry-add`: Add spam quarantine blocklist/safelist entry.
+- `cisco-esa-list-entry-append`: Append spam quarantine blocklist/safelist entry.
+- `cisco-esa-list-entry-edit`: Edit spam quarantine blocklist/safelist entry. Using this command will override the existing value.
+- `cisco-esa-list-entry-delete`: Delete spam quarantine blocklist/safelist entry.
+- `cisco-esa-message-search`: Search tracking messages.
+- `cisco-esa-message-details-get`: Get message details.
+- `cisco-esa-message-amp-details-get`: Get message AMP summary details.
+- `cisco-esa-message-dlp-details-get`: Get message DLP summary details.
+- `cisco-esa-message-url-details-get`: Get message URL summary details.
+- `cisco-esa-report-get`: Get statistics reports. Note that each report type is compatible with different arguments. Refer to Addendum for Cisco Secure Email Gateway ("Secure Email Repor
 
 
 ## Cisco ETD Connector
@@ -2847,7 +2912,7 @@ Fetches Cisco Email Threat Defense (ETD) message events and creates incidents. T
 
 **Commands:**
 
-- `cisco-etd-move-message`: 
+- `cisco-etd-move-message`: Reclassifies and remediates an ETD message.
 
 
 ## Cisco Firepower
@@ -2856,7 +2921,21 @@ Fetches Cisco Email Threat Defense (ETD) message events and creates incidents. T
 **Product:** Cisco Firepower  
 **Commands:**
 
-- `ciscofp-list-zones`: 
+- `ciscofp-list-zones`: Retrieves a list of all security zone objects.
+- `ciscofp-list-ports`: Retrieves a list of all port objects.
+- `ciscofp-list-url-categories`: Retrieves a list of all URL category objects.
+- `ciscofp-get-network-object`: Retrieves the network objects associated with the specified ID. If no ID is supplied, retrieves a list of all network objects.
+- `ciscofp-create-network-object`: Creates a network object.
+- `ciscofp-update-network-object`: Updates the specified network object.
+- `ciscofp-get-network-groups-object`: Retrieves the groups of network objects and addresses associated with the specified ID. If no ID is supplied, retrieves a list of all network objects.
+- `ciscofp-create-network-groups-objects`: Creates a group of network objects.
+- `ciscofp-update-network-groups-objects`: Updates a group of network objects.
+- `ciscofp-delete-network-groups-objects`: Deletes a group of network objects.
+- `ciscofp-get-host-object`: Retrieves the groups of host objects associated with the specified ID. If no ID is passed, retrieves a list of all network objects.
+- `ciscofp-create-host-object`: Creates a host object.
+- `ciscofp-update-host-object`: Updates the specified host object.
+- `ciscofp-delete-network-object`: Deletes the specified network object.
+- `ciscofp-delete-host-object`: Deletes the specified host object.
 
 
 ## Cisco FirePower- Append network group object
@@ -2884,11 +2963,11 @@ Cisco Meraki is a cloud-managed IT company that simplifies networking, security,
 
 **Commands:**
 
-- `meraki-organization-list`: 
-- `meraki-network-list`: 
-- `meraki-organization-license-state-list`: 
-- `meraki-organization-inventory-list`: 
-- `meraki-device-claim`: 
+- `meraki-organization-list`: List the organizations that the user has privileges on.
+- `meraki-network-list`: List the networks that the user has privileges on in an organization.
+- `meraki-organization-license-state-list`: List the license states overview of an organization.
+- `meraki-organization-inventory-list`: List the device inventories for an organization.
+- `meraki-device-claim`: Claim devices into a network. (Note: For recently claimed devices, it may take a few minutes for API requests against that device to succeed). This operation ca
 
 
 ## Cisco Secure Malware Analytics (Threat Grid) v2
@@ -2900,21 +2979,21 @@ Query and upload samples to Cisco threat grid. This integration was integrated a
 
 **Commands:**
 
-- `threat-grid-sample-list`: 
-- `threat-grid-sample-upload`: 
-- `threat-grid-submissions-search`: 
-- `threat-grid-sample-summary-get`: 
-- `threat-grid-who-am-i`: 
-- `threat-grid-rate-limit-get`: 
-- `threat-grid-feed-specific-get`: 
-- `threat-grid-ip-search`: 
-- `threat-grid-analysis-annotations-get`: 
-- `threat-grid-url-search`: 
-- `threat-grid-feeds-artifact`: 
-- `threat-grid-feeds-domain`: 
-- `threat-grid-feeds-url`: 
-- `threat-grid-feeds-ip`: 
-- `threat-grid-feeds-network-stream`: 
+- `threat-grid-sample-list`: Search samples on the Threat Grid platform. Input parameters are ANDed together. Only finished samples can be searched (that is, the ones that are having a stat
+- `threat-grid-sample-upload`: Submits a sample to threat grid for analysis. URL or file, not both.
+- `threat-grid-submissions-search`: Search threat grid submissions
+- `threat-grid-sample-summary-get`: Returns summary analysis information
+- `threat-grid-who-am-i`: Get logged in user
+- `threat-grid-rate-limit-get`: Get rate limit for a specific user name. ThreatGrid employs a simple rate limiting method for sample submissions by specifying the number of samples which can b
+- `threat-grid-feed-specific-get`: Gets a specific threat feed
+- `threat-grid-ip-search`: Search IPs. Please provide a single argument (only one) to use this command, as the API supports 1 filter at a time.
+- `threat-grid-analysis-annotations-get`: Returns data regarding the annotations of the analysis
+- `threat-grid-url-search`: Search urls. Please provide the URL in the format http://example.com:80/ (note that ThreatGrid only support '.com' domains).
+- `threat-grid-feeds-artifact`: Get artifacts threat feed
+- `threat-grid-feeds-domain`: Get domain threat feed
+- `threat-grid-feeds-url`: Get url threat feed
+- `threat-grid-feeds-ip`: Get ips threat feed
+- `threat-grid-feeds-network-stream`: Get network stream threat feed
 
 
 ## Cisco Security Management Appliance
@@ -2926,21 +3005,21 @@ The Security Management Appliance (SMA) is used to centralize services from Emai
 
 **Commands:**
 
-- `cisco-sma-spam-quarantine-message-search`: 
-- `cisco-sma-spam-quarantine-message-get`: 
-- `cisco-sma-spam-quarantine-message-release`: 
-- `cisco-sma-spam-quarantine-message-delete`: 
-- `cisco-sma-list-entry-get`: 
-- `cisco-sma-list-entry-add`: 
-- `cisco-sma-list-entry-append`: 
-- `cisco-sma-list-entry-edit`: 
-- `cisco-sma-list-entry-delete`: 
-- `cisco-sma-message-search`: 
-- `cisco-sma-message-details-get`: 
-- `cisco-sma-message-amp-details-get`: 
-- `cisco-sma-message-dlp-details-get`: 
-- `cisco-sma-message-url-details-get`: 
-- `cisco-sma-report-get`: 
+- `cisco-sma-spam-quarantine-message-search`: Search messages in the spam quarantine.
+- `cisco-sma-spam-quarantine-message-get`: Get spam quarantine message.
+- `cisco-sma-spam-quarantine-message-release`: Release spam quarantined message.
+- `cisco-sma-spam-quarantine-message-delete`: Delete spam quarantined message.
+- `cisco-sma-list-entry-get`: Get spam quarantine blocklist/safelist entry.
+- `cisco-sma-list-entry-add`: Add spam quarantine blocklist/safelist entry.
+- `cisco-sma-list-entry-append`: Append spam quarantine blocklist/safelist entry.
+- `cisco-sma-list-entry-edit`: Edit the spam quarantine blocklist/safelist entry. Using this command will override the existing value.
+- `cisco-sma-list-entry-delete`: Delete a spam quarantine blocklist/safelist entry.
+- `cisco-sma-message-search`: Search tracking messages.
+- `cisco-sma-message-details-get`: Get more details on the message.
+- `cisco-sma-message-amp-details-get`: Get message AMP summary details.
+- `cisco-sma-message-dlp-details-get`: Get message DLP summary details.
+- `cisco-sma-message-url-details-get`: Get message URL summary details.
+- `cisco-sma-report-get`: Get statistics reports. Note that each report type is compatible with different arguments. Refer to the following link ("ESA Reporting" section in the file) in 
 
 
 ## Cisco ThousandEyes
@@ -2952,7 +3031,7 @@ This is the Cisco ThousandEyes event collector integration for Cortex XSIAM. Thi
 
 **Commands:**
 
-- `cisco-thousandeyes-get-events`: 
+- `!cisco-thousandeyes-get-events`: Gets events from Cisco ThousandEyes.
 
 
 ## Cisco Umbrella Enforcement
@@ -2964,9 +3043,9 @@ Add and remove domains in Cisco OpenDNS. This integration was integrated and tes
 
 **Commands:**
 
-- `umbrella-domain-event-add`: 
-- `umbrella-domains-list`: 
-- `umbrella-domain-delete`: 
+- `umbrella-domain-event-add`: Posts a malware event to the API for processing and optionally adding to a customer's domain lists.
+- `umbrella-domains-list`: List of domains.
+- `umbrella-domain-delete`: Delete domain.
 
 
 ## Cisco Umbrella Investigate
@@ -2978,21 +3057,21 @@ Cisco Umbrella Investigate enable you to research domains, IPs, and URLs observe
 
 **Commands:**
 
-- `umbrella-domain-categorization`: 
-- `umbrella-domain-search`: 
-- `umbrella-domain-co-occurrences`: 
-- `umbrella-domain-related`: 
-- `umbrella-domain-security`: 
-- `umbrella-get-domain-risk-score`: 
-- `umbrella-list-resource-record`: 
-- `umbrella-list-domain-subdomain`: 
-- `umbrella-get-ip-bgp`: 
-- `umbrella-get-asn-bgp`: 
-- `umbrella-get-whois-for-domain`: 
-- `umbrella-get-domain-whois-history`: 
-- `umbrella-get-nameserver-whois`: 
-- `umbrella-get-email-whois`: 
-- `umbrella-get-regex-whois`: 
+- `umbrella-domain-categorization`: Get the status, security, and content categories for the domain.
+- `umbrella-domain-search`: Search for newly seen domains that match a regular expression pattern.
+- `umbrella-domain-co-occurrences`: List the co-occurences for the specified domain. A co-occurrence is when two or more domains are accessed by the same users within a small window of time. Co-oc
+- `umbrella-domain-related`: List domain names that are frequently requested around the same time (up to 60 seconds before or after) as the given domain name, but that are not frequently as
+- `umbrella-domain-security`: Get multiple scores or security features for a domain. You can use the scores or security features to determine relevant data points and build insights on the r
+- `umbrella-get-domain-risk-score`: Get the domain risk score. The Umbrella Investigate Risk Score is based on an analysis of the lexical characteristics of the domain name, patterns in queries an
+- `umbrella-list-resource-record`: List the Resource Record (RR) data for DNS responses, and categorization data, where the answer (or rdata) is the inserted value or list historical data from th
+- `umbrella-list-domain-subdomain`: List sub-domains of a given domain.
+- `umbrella-get-ip-bgp`: Get data about ASN and IP relationships, showing how IP addresses are related to each other and to the regional registries. You can find out more about the IP s
+- `umbrella-get-asn-bgp`: Get BGP Route Information for ASN. Each hash reference contains two keys: geo and cidr. Geo is a hash reference with the country name and country code (the code
+- `domain`: Get the WHOIS information for the specified domains.
+- `umbrella-get-whois-for-domain`: Get the WHOIS information for the specified domains. You can search by multiple email addresses or multiple nameservers.
+- `umbrella-get-domain-whois-history`: Get a WHOIS response record for a single domain with available historical WHOIS data returned in an object. The information displayed varies by registrant.
+- `umbrella-get-nameserver-whois`: Get WHOIS information for the nameserver. A nameserver can potentially register hundreds or thousands of domains.
+- `umbrella-get-email-whois`: Get WHOIS information for the email address. Returns the email address or addresses of the registrar for the domain or domains. The results include the total nu
 
 
 ## Cisco Umbrella Reporting
@@ -3001,15 +3080,21 @@ Cisco Umbrella Investigate enable you to research domains, IPs, and URLs observe
 **Product:** Cisco Umbrella Reporting  
 **Commands:**
 
-- `umbrella-reporting-destination-list`: 
-- `umbrella-reporting-category-list`: 
-- `umbrella-reporting-identity-list`: 
-- `umbrella-reporting-event-type-list`: 
-- `umbrella-reporting-file-list`: 
-- `umbrella-reporting-threat-list`: 
-- `umbrella-reporting-activity-list`: 
-- `umbrella-reporting-activity-get`: 
-- `umbrella-reporting-summary-list`: 
+- `umbrella-reporting-destination-list`: List of destinations ordered by the number of requests made in descending order.
+- `umbrella-reporting-category-list`: List of categories ordered by the number of requests made matching the categories in descending order.
+- `umbrella-reporting-identity-list`: List of identities ordered by the number of requests made matching the categories in descending order.
+- `umbrella-reporting-event-type-list`: List of event types ordered by the number of requests made for each type of event in descending order. The event types are: domain_security, domain_integration,
+- `umbrella-reporting-file-list`: List of files within a time frame. Only returns proxy data.
+- `umbrella-reporting-threat-list`: List of top threats within a time frame. Returns both DNS and Proxy data.
+- `umbrella-reporting-activity-list`: List all activity entries (dns/proxy/firewall/ip/intrusion/amp) within the time frame.
+- `umbrella-reporting-activity-get`: List all entries within a time frame based on the traffic type selected. Valid activity types are dns, proxy, firewall, intrusion, ip, amp. Only one activity ty
+- `!umbrella-reporting-activity-get traffic_type=amp limit=2`: 
+- `!umbrella-reporting-activity-get traffic_type=proxy limit=2`: 
+- `!umbrella-reporting-activity-get traffic_type=firewall limit=2`: 
+- `!umbrella-reporting-activity-get traffic_type=intrusion limit=2`: 
+- `umbrella-reporting-summary-list`: Get the summary.
+- `!umbrella-reporting-summary-list summary_type=category limit=1`: 
+- `!umbrella-reporting-summary-list summary_type=destination limit=1`: 
 
 
 ## Cisco Webex Teams
@@ -3021,21 +3106,21 @@ Send messages, create rooms and more, via the Cisco Spark API. This integration 
 
 **Commands:**
 
-- `cisco-spark-list-people`: 
-- `cisco-spark-create-person`: 
-- `cisco-spark-get-person-details`: 
-- `cisco-spark-update-person`: 
-- `cisco-spark-delete-person`: 
-- `cisco-spark-get-own-details`: 
-- `cisco-spark-list-rooms`: 
-- `cisco-spark-create-room`: 
-- `cisco-spark-get-room-details`: 
-- `cisco-spark-update-room`: 
-- `cisco-spark-delete-room`: 
-- `cisco-spark-list-memberships`: 
-- `cisco-spark-create-membership`: 
-- `cisco-spark-get-membership-details`: 
-- `cisco-spark-update-membership`: 
+- `cisco-spark-list-people`: List people
+- `cisco-spark-create-person`: Create a new user account for a given organization. Only an admin can create a new user account.
+- `cisco-spark-get-person-details`: Shows details for a person, by ID.
+- `cisco-spark-update-person`: Update details for a person, by ID. Only an admin can update a person details.
+- `cisco-spark-delete-person`: Remove a person from the system. Only an admin can remove a person.
+- `cisco-spark-get-own-details`: Show the profile for the authenticated user.
+- `cisco-spark-list-rooms`: List rooms.
+- `cisco-spark-create-room`: Creates a room.
+- `cisco-spark-get-room-details`: Shows details for a room, by ID.
+- `cisco-spark-update-room`: Updates details for a room, by ID.
+- `cisco-spark-delete-room`: Deletes a room, by ID. Deleted rooms cannot be recovered.
+- `cisco-spark-list-memberships`: Lists all room memberships. Use either personId or personEmail to filter the results.
+- `cisco-spark-create-membership`: Add someone to a room by Person ID or email address; optionally making them a moderator.
+- `cisco-spark-get-membership-details`: Get details for a membership by ID.
+- `cisco-spark-update-membership`: Updates properties for a membership by ID.
 
 
 ## Cisco WSA v2
@@ -3047,21 +3132,21 @@ Cisco Secure Web Appliance protects your organization by automatically blocking 
 
 **Commands:**
 
-- `cisco-wsa-access-policy-list`: 
-- `cisco-wsa-access-policy-create`: 
-- `cisco-wsa-access-policy-update`: 
-- `cisco-wsa-access-policy-protocols-user-agents-update`: 
-- `cisco-wsa-access-policy-url-filtering-update`: 
-- `cisco-wsa-access-policy-applications-update`: 
-- `cisco-wsa-access-policy-objects-update`: 
-- `cisco-wsa-access-policy-anti-malware-update`: 
-- `cisco-wsa-access-policy-delete`: 
-- `cisco-wsa-domain-map-list`: 
-- `cisco-wsa-domain-map-create`: 
-- `cisco-wsa-domain-map-update`: 
-- `cisco-wsa-domain-map-delete`: 
-- `cisco-wsa-identification-profiles-list`: 
-- `cisco-wsa-identification-profiles-create`: 
+- `cisco-wsa-access-policy-list`: Retrieve access policies. Access policies contain allowed/blocked URL categories in the network.
+- `cisco-wsa-access-policy-create`: Create an access policy. This command enables you to create the access policy object. To define more settings you can use the dependencies commands: cisco-wsa-a
+- `cisco-wsa-access-policy-update`: Update the access policy.
+- `cisco-wsa-access-policy-protocols-user-agents-update`: Update the Protocols and User Agents policy for access policy.
+- `cisco-wsa-access-policy-url-filtering-update`: Update the URL filtering policy for access policy.
+- `cisco-wsa-access-policy-applications-update`: Update applications policy for access policy. Only applicable for global_policy.
+- `cisco-wsa-access-policy-objects-update`: Update objects policy for access policy.
+- `cisco-wsa-access-policy-anti-malware-update`: Update the anti-malware policy for access policy.
+- `cisco-wsa-access-policy-delete`: Delete access policy.
+- `cisco-wsa-domain-map-list`: Retrieve domains mapping. Domain maps are DNS mappings of domain to IP addresses.
+- `cisco-wsa-domain-map-create`: Create domain mapping for IP addresses.
+- `cisco-wsa-domain-map-update`: Update the domain map.
+- `cisco-wsa-domain-map-delete`: Delete domain map.
+- `cisco-wsa-identification-profiles-list`: Retrieve identification profiles. Identification profiles are classifications of users, defining authentication requirements.
+- `cisco-wsa-identification-profiles-create`: Create an identification profile.
 
 
 ## Citrix Cloud
@@ -3070,7 +3155,7 @@ Cisco Secure Web Appliance protects your organization by automatically blocking 
 **Product:** Citrix  
 **Commands:**
 
-- `citrix-cloud-get-events`: 
+- `citrix-cloud-get-events`: Returns system log events extracted from Citrix.
 
 
 ## Citrix DaaS
@@ -3082,7 +3167,7 @@ Citrix DaaS simplifies the delivery and management of Citrix technologies
 
 **Commands:**
 
-- `citrix-daas-get-events`: 
+- `citrix-daas-get-events`: Extracts Citrix configuration log events. Use with caution during development or debugging; this command may trigger event duplication or exceed API request lim
 
 
 ## Clarizen IAM
@@ -3094,10 +3179,10 @@ Integrate with Clarizen's Identity Access Management service to execute CRUD ope
 
 **Commands:**
 
-- `iam-create-user`: 
-- `iam-update-user`: 
-- `iam-get-user`: 
-- `iam-disable-user`: 
+- `iam-create-user`: Creates a user.
+- `iam-update-user`: Updates an existing user with the data passed in the user-profile argument.
+- `iam-get-user`: Retrieves a single user resource.
+- `iam-disable-user`: Disable an active user.
 
 
 ## clear-user-session
@@ -3124,8 +3209,8 @@ This is the ClickSend integration for make a phonecall from platform made by Tru
 
 **Commands:**
 
-- `clicksend-text-to-voice`: 
-- `clicksend-voice-history`: 
+- `clicksend-text-to-voice`: Make phone call with you own text. Example: !clicksend-text-to-voice Message="Hi im here" phoneNumber=+972501234567 require_input=False voice=male
+- `clicksend-voice-history`: Your calls history Example: !clicksend-voice-history
 
 
 ## Code42
@@ -3137,21 +3222,21 @@ Use the Code42 integration to identify potential data exfiltration from insider 
 
 **Commands:**
 
-- `code42-file-events-search`: 
-- `code42-alert-get`: 
-- `code42-alert-update`: 
-- `code42-alert-resolve`: 
-- `code42-user-create`: 
-- `code42-user-block`: 
-- `code42-user-deactivate`: 
-- `code42-user-unblock`: 
-- `code42-user-reactivate`: 
-- `code42-legalhold-add-user`: 
-- `code42-legalhold-remove-user`: 
-- `code42-download-file`: 
-- `code42-download-file-by-xfc-id`: 
-- `code42-watchlists-list`: 
-- `code42-watchlists-add-user`: 
+- `code42-file-events-search`: Search for Code42 Incydr File Events
+- `code42-alert-get`: Retrieve alert details by alert ID
+- `code42-alert-update`: Updates a Code42 Alert Session
+- `code42-alert-resolve`: DEPRECATED. Use code42-alert-update instead.
+- `code42-user-create`: Creates a Code42 user.
+- `code42-user-block`: Blocks a user in Code42. A blocked user is not allowed to log in or restore files. Backups will continue if the user is still active.
+- `code42-user-deactivate`: Deactivate a user in Code42; signing them out of their devices. Backups discontinue for a deactivated user, and their archives go to cold storage.
+- `code42-user-unblock`: Removes a block, if one exists, on the user with the given user ID. Unblocked users are allowed to log in and restore.
+- `code42-user-reactivate`: Reactivates the user with the given username.
+- `code42-legalhold-add-user`: Adds a Code42 user to a legal hold matter.
+- `code42-legalhold-remove-user`: Removes a Code42 user from a legal hold matter.
+- `code42-download-file`: Downloads a file from Code42.
+- `code42-download-file-by-xfc-id`: Downloads a file from Incydr using the XFC ID.
+- `code42-watchlists-list`: List all existing watchlists in your environment.
+- `code42-watchlists-add-user`: Add a user to a watchlist.
 
 
 ## Code42 Exfiltration Playbook
@@ -3249,13 +3334,13 @@ Use the Cofense Triage integration to ingest reported phishing indicators. This 
 
 **Commands:**
 
-- `cofense-search-reports`: 
-- `cofense-search-inbox-reports`: 
-- `cofense-get-attachment`: 
-- `cofense-get-reporter`: 
-- `cofense-get-report-by-id`: 
-- `cofense-get-report-png-by-id`: 
-- `cofense-get-threat-indicators`: 
+- `cofense-search-reports`: Runs a query for reports.
+- `cofense-search-reports`: Runs a query for reports from the inbox mailbox.
+- `cofense-get-attachment`: Retrieves an attachment by the attachment ID number.
+- `cofense-get-reporter`: Retrieves Email address of the reporter by ID
+- `cofense-get-report-by-id`: Retrieves a report by the report ID number.
+- `cofense-get-report-png-by-id`: Retrieves a report by the report ID number and displays as PNG
+- `cofense-get-threat-indicators`: Threat Indicators that are designated by analysts as malicious, suspicious or benign
 
 
 ## Cofense Triage v3
@@ -3267,21 +3352,21 @@ The Cofense Triage v3 integration uses the Cofense Triage v2 API (previous integ
 
 **Commands:**
 
-- `cofense-threat-indicator-list`: 
-- `cofense-report-list`: 
-- `cofense-report-download`: 
-- `cofense-report-categorize`: 
-- `cofense-report-attachment-payload-list`: 
-- `cofense-report-attachment-list`: 
-- `cofense-report-attachment-download`: 
-- `cofense-category-list`: 
-- `cofense-rule-list`: 
-- `cofense-url-list`: 
-- `cofense-threat-indicator-create`: 
-- `cofense-reporter-list`: 
-- `cofense-integration-submission-get`: 
-- `cofense-attachment-payload-list`: 
-- `cofense-comment-list`: 
+- `cofense-threat-indicator-list`: Retrieves the list of threat indicators based on the provided parameters. Threat indicators identify the threat level of an email's subject, sender, domains, UR
+- `cofense-report-list`: Retrieves a report or a list of reports based on the filter values provided in the command arguments.
+- `cofense-report-download`: Downloads the raw email for the report that matches the specified report ID.
+- `cofense-report-categorize`: Categorizes a report into a specific category provided by the user.
+- `cofense-report-attachment-payload-list`: Retrieves attachment payloads based on provided report id in the command arguments. Attachment payloads identify the MIME type and MD5 and SHA256 hash signature
+- `cofense-report-attachment-list`: Retrieves attachments based on provided report id in the command arguments. For reported emails that contain attachments, Cofense Triage captures the attachment
+- `cofense-report-attachment-download`: Downloads the attachment for the specified attachment ID.
+- `cofense-category-list`: Retrieves categories based on the provided parameters. Categories are applied while processing the email to indicate the type of threat (or non-threat) that rep
+- `cofense-rule-list`: Retrieves rules based on the filter values provided in the command arguments. Rules identify specific characteristics for categorizing the reported emails.
+- `cofense-url-list`: Retrieves URLs based on the filter values provided in the command arguments. URLs are the threats (or non-threat) that are detected in the reported emails.
+- `cofense-threat-indicator-create`: Creates a threat indicator based on the values provided in the command arguments.
+- `cofense-reporter-list`: Retrieves the reporters that match the provided parameters. Reporters are employees of an organization who send, or report, suspicious emails to Cofense Triage.
+- `cofense-integration-submission-get`: Retrieves integration submission based on the filter values provided in the command arguments.
+- `cofense-attachment-payload-list`: Retrieves attachment payloads based on the filter values provided in the command arguments. Attachment payloads identify the MIME type and MD5 and SHA256 hash s
+- `cofense-comment-list`: Retrieves comments based on the filter values provided in the command arguments.
 
 
 ## Cofense Vision
@@ -3293,13 +3378,13 @@ The Cofense Vision integration provides commands to initiate advanced search job
 
 **Commands:**
 
-- `cofense-message-token-get`: 
-- `cofense-message-metadata-get`: 
-- `cofense-message-get`: 
-- `cofense-message-attachment-get`: 
-- `cofense-quarantine-jobs-list`: 
-- `cofense-quarantine-job-create`: 
-- `cofense-quarantine-job-delete`: 
+- `cofense-message-token-get`: Retrieves a one-time token that can be used to get an email's content.
+- `cofense-message-metadata-get`: Retrieves the full content of a message that matches the specified Internet message ID and recipient email address of an email.
+- `cofense-message-get`: Fetches full content of an email and returns it as a zip file using a token.
+- `cofense-message-attachment-get`: Fetches the full content of an email and returns a zip file.
+- `cofense-quarantine-jobs-list`: Filters and returns a paginated list of matching quarantine jobs.
+- `cofense-quarantine-job-create`: Creates a new quarantine job.
+- `cofense-quarantine-job-delete`: Deletes the quarantine job identified by its unique ID.
 
 
 ## CofenseTriageReportDownload
@@ -3335,9 +3420,9 @@ The Cognni connector offers a quick and simple integration with the platform. Wi
 
 **Commands:**
 
-- `cognni-get-event`: 
-- `cognni-get-insight`: 
-- `cognni-fetch-insights`: 
+- `cognni-get-event`: Fetches a single event by ID.
+- `cognni-get-insight`: Fetches a single insight by ID.
+- `cognni-fetch-insights`: Fetches insights according to severity.
 
 
 ## CohesityHelios
@@ -3349,9 +3434,9 @@ Integrate with Cohesity Helios services to fetch alerts and take remedial action
 
 **Commands:**
 
-- `cohesity-helios-get-ransomware-alerts`: 
-- `cohesity-helios-ignore-anomalous-object`: 
-- `cohesity-helios-restore-latest-clean-snapshot`: 
+- `cohesity-helios-get-ransomware-alerts`: Get Cohesity Helios ransomware alerts.
+- `cohesity-helios-ignore-anomalous-object`: Ignore detected anomalous object by suppressing the alert.
+- `cohesity-helios-restore-latest-clean-snapshot`: Restore the latest clean snapshot for the given object using incidence details.
 
 
 ## commentsToContext
@@ -3464,10 +3549,10 @@ Concentric’s Semantic Intelligence™ solution discovers and protects business
 
 **Commands:**
 
-- `concentricai-get-file-details`: 
-- `concentricai-get-users-overview`: 
-- `concentricai-get-user-details`: 
-- `concentricai-get-file-sharing-details`: 
+- `concentricai-get-file-details`: Get's file information
+- `concentricai-get-users-overview`: Get overview of Users involved
+- `concentricai-get-user-details`: Get's user details
+- `concentricai-get-file-sharing-details`: Get's file sharing details
 
 
 ## ConcentricAI Demo Playbook
@@ -3518,9 +3603,9 @@ This script is grants a user the permissions needed to create a Teams meeting. I
 **Product:** Confluera  
 **Commands:**
 
-- `confluera-fetch-detections`: 
-- `confluera-fetch-progressions`: 
-- `confluera-fetch-trail-details`: 
+- `confluera-fetch-detections`: Fetches list of detections in confluera for past x hours.
+- `confluera-fetch-progressions`: Fetches list of progressions in confluera for past x hours.
+- `confluera-fetch-trail-details`: Fetches progression details of which provided trailId is a part of.
 
 
 ## ConflueraDetectionsCount
@@ -3729,7 +3814,8 @@ To use the COOC API logic, run the following command to import the COOCApiModule
 **Product:** Coralogix  
 **Commands:**
 
-- `coralogix-search`: 
+- `coralogix-search`: Returns logs from your Coralogix account according to the specified Lucene query
+- `coralogix-tag`: Allows you to tag an interesting point in time in Coralogix from the platform
 
 
 ## CoreXQLApiModule
@@ -3840,16 +3926,16 @@ Integration to pull assets and other ASM related information. This integration w
 
 **Commands:**
 
-- `asm-list-external-service`: 
-- `asm-get-external-service`: 
-- `asm-list-external-ip-address-range`: 
-- `asm-get-external-ip-address-range`: 
-- `asm-list-asset-internet-exposure`: 
-- `asm-get-asset-internet-exposure`: 
-- `asm-list-remediation-rule`: 
-- `asm-start-remediation-confirmation-scan`: 
-- `asm-get-remediation-confirmation-scan-status`: 
-- `asm-get-attack-surface-rule`: 
+- `asm-list-external-service`: Get a list of all your external services filtered by business units, externally detected providers, domain, externally inferred CVEs, active classifications, in
+- `asm-get-external-service`: Get service details according to the service ID.
+- `asm-list-external-ip-address-range`: Get a list of all your internet exposure filtered by business units and organization handles. Maximum result limit is 100 ranges.
+- `asm-get-external-ip-address-range`: Get the external IP address range details according to the range IDs.
+- `asm-list-asset-internet-exposure`: Get a list of all your internet exposure filtered by IP address, domain, type, asm id, IPv6 address, AWS/GCP/Azure tags, has XDR agent, Externally detected prov
+- `asm-get-asset-internet-exposure`: Get internet exposure asset details according to the asset ID.
+- `asm-list-remediation-rule`: Returns the list of remediation path rules. This command applies only to Expander v2.
+- `asm-start-remediation-confirmation-scan`: Starts a new Remediation Confirmation Scan or gets an existing scan ID.
+- `asm-get-remediation-confirmation-scan-status`: Get the status of an existing Remediation Confirmation Scan.
+- `asm-get-attack-surface-rule`: Get information of an attack surface rule ID.
 
 
 ## Cortex EM - ServiceNow CMDB
@@ -3876,7 +3962,21 @@ This integration uses the Cortex API to access all the core services and capabil
 
 **Commands:**
 
-- `core-get-asset-details`: 
+- `core-get-asset-details`: Get asset information.
+- `core-get-issues`: Returns a list of issues and their metadata, which you can filter by built-in arguments or use the custom_filter to input a JSON filter object. Multiple filter 
+- `core-get-case-extra-data`: Get extra data fields of a specific case including issues and key artifacts.
+- `core-get-cases`: Get case information based on the specified filters.
+- `core-update-case`: Updates the properties of a case.
+- `core-search-asset-groups`: Retrieve asset groups from the Cortex platform with optional filtering.
+- `core-get-vulnerabilities`: Retrieves vulnerabilities based on specified filters.
+- `core-search-assets`: Retrieves asset from the Cortex platform using optional filter criteria.
+- `core-get-issue-recommendations`: Get comprehensive recommendations for an issue, including remediation steps, playbook suggestions, and recommended actions.
+- `core-enable-scanners`: Enable or disable scanners with the specified configuration.
+- `core-get-asset-coverage-histogram`: Calculates the distribution of values (counts and percentages) for specified categorical fields.
+- `core-get-asset-coverage`: Retrieves a list of assets (e.g., Repositories, CI/CD Pipelines, Container Image Repositories) along with their scan coverage status.
+- `core-create-appsec-policy`: Creates a new AppSec policy in Cortex Platform with defined conditions, scope, and triggers for application security governance.
+- `core-update-issue`: Updates the properties of an issue. This command does not provide an explicit indication of success.
+- `core-appsec-remediate-issue`: Create automated pull requests to fix multiple security issues in a single bulk operation.
 
 
 ## Cortex XDR - CVE-2025-31324 - SAP NetWeaver Visual Composer
@@ -3922,11 +4022,11 @@ This integration is a Mock customized only for the Capture The Flag challenge
 
 **Commands:**
 
-- `get-mapping-fields`: 
-- `xdr-get-incident-extra-data-ctf`: 
-- `xdr-endpoint-isolate-ctf`: 
-- `xdr-file-retrieve-ctf`: 
-- `xdr-get-alerts-ctf`: 
+- `get-mapping-fields`: Gets mapping fields from remote incident. Note: This method will not update the current incident, it's here for debugging purposes.
+- `xdr-get-incident-extra-data-ctf`: Returns additional data for the specified incident, for example, related alerts, file artifacts, network artifacts, and so on.
+- `xdr-endpoint-isolate-ctf`: Isolates the specified endpoint.
+- `xdr-file-retrieve-ctf`: Retrieves files from selected endpoints. You can retrieve up to 20 files, from no more than 10 endpoints. At least one endpoint ID and one file path are necessa
+- `xdr-get-alerts-ctf`: Returns a list of alerts and their metadata, which you can filter by built-in arguments or use the custom_filter to input a JSON filter object. Multiple filter 
 
 
 ## Cortex XDR - Possible External RDP Brute-Force CTF
@@ -3989,21 +4089,21 @@ Integration to pull assets and other ASM related information. This integration w
 
 **Commands:**
 
-- `asm-list-external-service`: 
-- `asm-get-external-service`: 
-- `asm-list-external-ip-address-range`: 
-- `asm-get-external-ip-address-range`: 
-- `asm-list-asset-internet-exposure`: 
-- `asm-get-asset-internet-exposure`: 
-- `asm-list-alerts`: 
-- `asm-get-attack-surface-rule`: 
-- `asm-tag-asset-assign`: 
-- `asm-tag-asset-remove`: 
-- `asm-tag-range-assign`: 
-- `asm-tag-range-remove`: 
-- `asm-list-incidents`: 
-- `asm-get-incident`: 
-- `asm-update-incident`: 
+- `asm-list-external-service`: Get a list of all your external services filtered by business units, externally detected providers, domain, externally inferred CVEs, active classifications, in
+- `asm-get-external-service`: Get service details according to the service ID.
+- `asm-list-external-ip-address-range`: Get a list of all your internet exposures filtered by business units and organization handles. Maximum result limit is 100 ranges.
+- `asm-get-external-ip-address-range`: Get external IP address range details according to the range IDs.
+- `asm-list-asset-internet-exposure`: Get a list of all your internet exposures filtered by IP address, domain, type, asm id, IPv6 address, AWS/GCP/Azure tags, has XDR agent, Externally detected pro
+- `asm-get-asset-internet-exposure`: Get internet exposure asset details according to the asset ID.
+- `asm-list-alerts`: Get a list of all your ASM alerts filtered by alert IDs, severity and/or creation time. Can also sort by creation time or severity. Maximum result limit is 100 
+- `asm-get-attack-surface-rule`: Fetches attack surface rules related to how Cortex Xpanse does assessment.
+- `asm-tag-asset-assign`: Assigns tags to a list of assets.
+- `asm-tag-asset-remove`: Removes tags from a list of assets.
+- `asm-tag-range-assign`: Assigns tags to a list of IP ranges.
+- `asm-tag-range-remove`: Removes tags from a list of IP ranges.
+- `asm-list-incidents`: Fetches ASM incidents that match provided filters. Incidents are an aggregation of related alerts. Note: Incident IDs may also be references as "Case IDs' elsew
+- `asm-get-incident`: Returns additional details about a specific incident. Note: Incident IDs may also be references as "Case IDs" elsewhere in the API.
+- `asm-update-incident`: Updates a given incident. Can be used to modify the status, severity, assignee, or add comments.
 
 
 ## CounterCraft Deception Director
@@ -4012,7 +4112,21 @@ Integration to pull assets and other ASM related information. This integration w
 **Product:** CounterCraft Deception Director  
 **Commands:**
 
-- `countercraft-list-campaigns`: 
+- `countercraft-list-campaigns`: List all deception campaigns
+- `countercraft-list-hosts`: Lists all deception hosts
+- `countercraft-list-services`: List services currently deployed on deception hosts
+- `countercraft-list-breadcrumbs`: List breadcrumbs in a campaign
+- `countercraft-get-object`: Get information about an object (IoC)
+- `countercraft-get-events`: Get full list of Events
+- `countercraft-create-campaign`: Create a new deception campaign
+- `countercraft-list-dsns`: List Deception Support Nodes (DSNs)
+- `countercraft-list-providers`: List providers (providers for hosts or services i.e. AWS or Office365)
+- `countercraft-create-host-machine`: Deploy a new deception host
+- `countercraft-list-incidents`: List all incidents currently active
+- `countercraft-manage-campaign`: Manage Campaign parameters
+- `countercraft-manage-host`: Manage a deception host
+- `countercraft-manage-service`: Manage a deception service
+- `countercraft-manage-breadcrumb`: Manage breadcrumb
 
 
 ## CounterTack
@@ -4024,21 +4138,21 @@ CounterTack empowers endpoint security teams to assure endpoint protection for I
 
 **Commands:**
 
-- `countertack-get-endpoints`: 
-- `countertack-get-behaviors`: 
-- `countertack-get-endpoint`: 
-- `countertack-get-behavior`: 
-- `countertack-get-endpoint-tags`: 
-- `countertack-add-tags`: 
-- `countertack-delete-tags`: 
-- `countertack-add-behavior-tags`: 
-- `countertack-delete-behavior-tags`: 
-- `countertack-endpoint-quarantine`: 
-- `countertack-disable-quarantine`: 
-- `countertack-extract-file`: 
-- `countertack-delete-file`: 
-- `countertack-get-all-files`: 
-- `countertack-get-endpoint-files`: 
+- `countertack-get-endpoints`: Returns information for endpoints.
+- `countertack-get-behaviors`: Returns information for all behaviors.
+- `countertack-get-endpoint`: Get information on specific endpoint
+- `countertack-get-behavior`: Gets information of a given behavior.
+- `countertack-get-endpoint-tags`: Gets the tags of a given endpoint.
+- `countertack-add-tags`: Adds tags to a given endpoint.
+- `countertack-delete-tags`: Deletes the supplied tags from a given endpoint.
+- `countertack-add-behavior-tags`: Adds tags to a given behavior.
+- `countertack-delete-behavior-tags`: Deletes the supplied tags from a given behavior.
+- `countertack-endpoint-quarantine`: Quarantines a given endpoint.
+- `countertack-disable-quarantine`: Removes a given endpoint from quarantine.
+- `countertack-extract-file`: Extracts a file from given endpoint.
+- `countertack-delete-file`: Deletes a file from the given endpoint.
+- `countertack-get-all-files`: Gets all extracted files for all endpoints.
+- `countertack-get-endpoint-files`: Returns all extracted files from a given endpoint.
 
 
 ## Covalence For Security Providers
@@ -4050,20 +4164,20 @@ Triggers by any alert from endpoint, cloud, and network security monitoring, wit
 
 **Commands:**
 
-- `cov-secpr-list-alerts`: 
-- `cov-secpr-list-sensors`: 
-- `cov-secpr-get-sensor`: 
-- `cov-secpr-connections-summary-ip`: 
-- `cov-secpr-connections-summary-port`: 
-- `cov-secpr-list-dns-resolutions`: 
-- `cov-secpr-list-internal-networks`: 
-- `cov-secpr-set-internal-networks`: 
-- `cov-secpr-list-endpoint-agents`: 
-- `cov-secpr-find-endpoint-agents-by-user`: 
-- `cov-secpr-find-endpoint-agents-by-uuid`: 
-- `cov-secpr-search-endpoint-process`: 
-- `cov-secpr-search-endpoint-installed-software`: 
-- `cov-secpr-list-organizations`: 
+- `cov-secpr-list-alerts`: Lists Covalence alerts
+- `cov-secpr-list-sensors`: Lists Covalence sensors
+- `cov-secpr-get-sensor`: Get sensor details when provided with the sensor id
+- `cov-secpr-connections-summary-ip`: List summarized connections details by IP Address
+- `cov-secpr-connections-summary-port`: List summarized connections details by Port
+- `cov-secpr-list-dns-resolutions`: List summarized connections details by Port
+- `cov-secpr-list-internal-networks`: List internal networks
+- `cov-secpr-set-internal-networks`: Set internal networks
+- `cov-secpr-list-endpoint-agents`: List endpoint agents
+- `cov-secpr-find-endpoint-agents-by-user`: List endpoint agents where the last session user is the one provided as parameter
+- `cov-secpr-find-endpoint-agents-by-uuid`: Find the endpoint agent with the UUID provided as parameter
+- `cov-secpr-search-endpoint-process`: Search processes by name or advanced filter, at least one parameter is required
+- `cov-secpr-search-endpoint-installed-software`: Search for endpoint installed software
+- `cov-secpr-list-organizations`: List monitored organizations, only available in broker mode
 
 
 ## Covalence Managed Security
@@ -4075,13 +4189,13 @@ Triggers by triaged alerts from endpoint, cloud, and network security monitoring
 
 **Commands:**
 
-- `cov-mgsec-get-aro`: 
-- `cov-mgsec-list-org`: 
-- `cov-mgsec-transition-aro`: 
-- `cov-mgsec-transition-aro`: 
-- `cov-mgsec-broker-cloud-action-by-aro`: 
-- `cov-mgsec-broker-endpoint-action-by-aro`: 
-- `cov-mgsec-broker-ping`: 
+- `cov-mgsec-get-aro`: Query FES Portal for ARO.
+- `cov-mgsec-list-org`: List organizations.
+- `cov-mgsec-transition-aro`: Transition an ARO.
+- `cov-mgsec-transition-aro`: Transition an ARO.
+- `cov-mgsec-broker-cloud-action-by-aro`: Broker - Cloud Action By ARO.
+- `cov-mgsec-broker-endpoint-action-by-aro`: Broker - Endpoint Action By ARO.
+- `cov-mgsec-broker-ping`: Broker - Ping.
 
 
 ## Create Jira Issue
@@ -4127,8 +4241,8 @@ CreateIncidents fetches incident created manually
 
 **Commands:**
 
-- `create-test-incident-from-file`: 
-- `create-test-incident-from-raw-json`: 
+- `create-test-incident-from-file`: Creates incidents from JSON files provided, and stores them in the instance context.
+- `create-test-incident-from-raw-json`: Creates incidents from a JSON file, and stores it in the instance context.
 
 
 ## Cribl Search
@@ -4140,15 +4254,15 @@ Cribl Search is a search solution that allows you to query, retrieve, and manage
 
 **Commands:**
 
-- `cribl-search-query`: 
-- `cribl-search-status`: 
-- `cribl-search-result`: 
-- `cribl-search-job-create`: 
-- `cribl-search-job-list`: 
-- `cribl-search-job-update`: 
-- `cribl-search-job-delete`: 
-- `cribl-search-dataset-list`: 
-- `cribl-saved-search-list`: 
+- `cribl-search-query`: Runs a search query against Cribl Search and returns results.
+- `cribl-search-status`: Retrieves the status of a specific search job.
+- `cribl-search-result`: Retrieves the results of a completed search job.
+- `cribl-search-job-create`: Creates a new search job in Cribl Search.
+- `cribl-search-job-list`: Retrieves a list of search jobs or details of a specific search job.
+- `cribl-search-job-update`: Updates a search job's status or privacy setting. At least one of status or is_private must be provided.
+- `cribl-search-job-delete`: Deletes a specific search job.
+- `cribl-search-dataset-list`: Retrieves a list of available datasets or details of a specific dataset.
+- `cribl-saved-search-list`: Retrieves a list of saved searches or details of a specific saved search.
 
 
 ## Criminal_IP_Check_Malicious_Domain
@@ -4196,18 +4310,18 @@ Criminal IP is a comprehensive cyber threat intelligence solution that provides 
 
 **Commands:**
 
-- `criminal-ip-ip-report`: 
-- `criminal-ip-check-malicious-ip`: 
-- `criminal-ip-check-last-scan-date`: 
-- `criminal-ip-domain-quick-scan`: 
-- `criminal-ip-domain-lite-scan`: 
-- `criminal-ip-domain-lite-scan-status`: 
-- `criminal-ip-domain-lite-scan-result`: 
-- `criminal-ip-domain-full-scan`: 
-- `criminal-ip-domain-full-scan-status`: 
-- `criminal-ip-domain-full-scan-result`: 
-- `criminal-ip-domain-full-scan-make-email-body`: 
-- `criminal-ip-micro-asm`: 
+- `criminal-ip-ip-report`: Provides detailed information about an IP address using Criminal IP's API.
+- `criminal-ip-check-malicious-ip`: Determines whether an IP is malicious or safe through CriminalIP Asset Search.
+- `criminal-ip-check-last-scan-date`: Checks if the domain has been scanned within the last 7 days.
+- `criminal-ip-domain-quick-scan`: Performs a Domain Quick Scan using CriminalIP's API.
+- `criminal-ip-domain-lite-scan`: Initiates a Domain Lite Scan and returns a scan_id.
+- `criminal-ip-domain-lite-scan-status`: Checks the progress of the Lite Scan.
+- `criminal-ip-domain-lite-scan-result`: Returns the Lite Scan results for the given scan_id.
+- `criminal-ip-domain-full-scan`: Initiates a Domain Full Scan and returns a scan_id.
+- `criminal-ip-domain-full-scan-status`: Checks the progress of the Full Scan.
+- `criminal-ip-domain-full-scan-result`: Returns the Full Scan results for the given scan_id.
+- `criminal-ip-domain-full-scan-make-email-body`: Builds an email body summarizing notable findings from a completed Full Scan.
+- `criminal-ip-micro-asm`: Performs a micro ASM-style summary for a domain with a completed Full Scan.
 
 
 ## CrowdSec
@@ -4216,6 +4330,10 @@ Criminal IP is a comprehensive cyber threat intelligence solution that provides 
 **Product:** CrowdSec  
 
 Identify Malicious IP addresses with the CrowdSec CTI API
+
+**Commands:**
+
+- `ip`: Check the specified IP Address against the CrowdSec CTI.
 
 
 ## CrowdStrikeApiModule
@@ -4244,6 +4362,10 @@ Verifies that a cryptocurrency address is valid and only returns the address if 
 
 Cryptocurrency will help classify Cryptocurrency indicators as suspicious when ingested
 
+**Commands:**
+
+- `crypto`: Return Cryptocurrency reputation.
+
 
 ## Cryptosim
 
@@ -4254,7 +4376,7 @@ CRYPTOSIM meets the SIEM needs of corporations by its unique correlation engine 
 
 **Commands:**
 
-- `cryptosim-get-correlation-alerts`: 
+- `cryptosim-get-correlation-alerts`: The command is used to get correlation alerts.
 
 
 ## CSCDomainManager
@@ -4266,10 +4388,11 @@ CSCDomainManager uses rules-based technology, customizable reporting, granular u
 
 **Commands:**
 
-- `csc-domains-search`: 
-- `csc-domains-availability-check`: 
-- `csc-domains-configuration-list`: 
-- `csc-domains-configuration-search`: 
+- `csc-domains-search`: Gets the domains by the applied filters
+- `csc-domains-availability-check`: Check registration availability for one or more domain names
+- `csc-domains-configuration-list`: Get domains configuration information for owned domains with optional filtering
+- `domain`: Get domain data by qualified domain name
+- `csc-domains-configuration-search`: Get configuration information for owned domains with optional filtering.
 
 
 ## CSCFraudProtection
@@ -4281,21 +4404,21 @@ This is an anti fraud external api for organizations. This integration was integ
 
 **Commands:**
 
-- `csc-controldetectionflowbyeventidandaction`: 
-- `csc-fetchthephishkitdatawithticketid`: 
-- `csc-fetchthescreenshotdatawithticketid`: 
-- `csc-gethtmlsourcecodeforaticket`: 
-- `csc-getlistofbrands`: 
-- `csc-getlistoffraudtypes`: 
-- `csc-listofworklogsforticketid`: 
-- `csc-listtakedownevents`: 
-- `csc-listtakedowneventswithfilters`: 
-- `csc-performanactiononasingletarget`: 
-- `csc-retrieveeventscreenshotwitheventid`: 
-- `csc-getfilteredlistofmonitoringresultsspecifiedtime`: 
-- `csc-retrievelistofdetectionswithinspecifiedtimeframe`: 
-- `csc-getlistofmonitoringresultsspecifiedtime`: 
-- `csc-retrievephishkitwitheventid`: 
+- `csc-controldetectionflowbyeventidandaction`: Control detection flow by event ID and action
+- `csc-fetchthephishkitdatawithticketid`: Fetch the phishkit data with ticketId
+- `csc-fetchthescreenshotdatawithticketid`: Fetch the screenshot data with ticketId
+- `csc-gethtmlsourcecodeforaticket`: Get HTML Source Code for a Ticket
+- `csc-getlistofbrands`: Get list of Brands
+- `csc-getlistoffraudtypes`: Get list of fraud types
+- `csc-listofworklogsforticketid`: List of work logs for ticket id
+- `csc-listtakedownevents`: List Takedown Events
+- `csc-listtakedowneventswithfilters`: List Takedown events with filters
+- `csc-performanactiononasingletarget`: Perform an action on a single target
+- `csc-retrieveeventscreenshotwitheventid`: Retrieve event screenshot with eventId
+- `csc-getfilteredlistofmonitoringresultsspecifiedtime`: Retrieve filtered list of monitoring results within specified timeframe
+- `csc-retrievelistofdetectionswithinspecifiedtimeframe`: Retrieve list of detections within specified timeframe
+- `csc-getlistofmonitoringresultsspecifiedtime`: Retrieve list of monitoring results within specified timeframe
+- `csc-retrievephishkitwitheventid`: Retrieve phishkit with eventId
 
 
 ## CSCTakedowns
@@ -4307,13 +4430,13 @@ This is a CSCTakedowns api for organizations. This integration was integrated an
 
 **Commands:**
 
-- `csctakedowns-fetchthephishkitdatawithticketid`: 
-- `csctakedowns-fetchthescreenshotdatawithticketid`: 
-- `csctakedowns-gethtmlsourcecodeforaticket`: 
-- `csctakedowns-listofworklogsforticketid`: 
-- `csctakedowns-listtakedownevents`: 
-- `csctakedowns-listtakedowneventswithfilters`: 
-- `csctakedowns-updatetheactionwithticketid`: 
+- `csctakedowns-fetchthephishkitdatawithticketid`: Fetch the phishkit data with ticketId
+- `csctakedowns-fetchthescreenshotdatawithticketid`: Fetch the screenshot data with ticketId
+- `csctakedowns-gethtmlsourcecodeforaticket`: Get HTML Source Code for a Ticket
+- `csctakedowns-listofworklogsforticketid`: List of work logs for ticket id
+- `csctakedowns-listtakedownevents`: List Takedown Events
+- `csctakedowns-listtakedowneventswithfilters`: List Takedown events with filters
+- `csctakedowns-updatetheactionwithticketid`: Update the action with ticketId
 
 
 ## CSVFeedApiModule
@@ -4348,15 +4471,15 @@ Take action on incidents derived from CTM360 CBS threat intelligence that is dir
 
 **Commands:**
 
-- `ctm360-cbs-incident-list`: 
-- `ctm360-cbs-incident-close`: 
-- `ctm360-cbs-incident-request-takedown`: 
-- `get-mapping-fields`: 
-- `ctm360-cbs-incident-details`: 
-- `ctm360-cbs-incident-retrieve-screenshots`: 
-- `get-remote-data`: 
-- `get-modified-remote-data`: 
-- `update-remote-system`: 
+- `ctm360-cbs-incident-list`: Get the list of incidents from CBS.
+- `ctm360-cbs-incident-close`: Close a CBS incident.
+- `ctm360-cbs-incident-request-takedown`: Request a takedown of the asset where the incident was found.
+- `get-mapping-fields`: Returns the list of fields for an incident type.
+- `ctm360-cbs-incident-details`: Fetch details of a single incident from the CyberBlindspot platform.
+- `ctm360-cbs-incident-retrieve-screenshots`: Retrieves screenshot evidence if available.
+- `get-remote-data`: Gets remote data from a remote incident. This method does not update the current incident, and should be used for debugging purposes.
+- `get-modified-remote-data`: Gets the list of incidents that were modified since the last update time. Note that this method is here for debugging purposes. The get-modified-remote-data com
+- `update-remote-system`: Updates the remote system with local changes.
 
 
 ## CTM360 HackerView
@@ -4368,13 +4491,13 @@ External Attack Surface Management platform, which combines automated asset disc
 
 **Commands:**
 
-- `ctm360-hv-incident-list`: 
-- `ctm360-hv-incident-status-change`: 
-- `get-mapping-fields`: 
-- `ctm360-hv-incident-details`: 
-- `get-remote-data`: 
-- `get-modified-remote-data`: 
-- `update-remote-system`: 
+- `ctm360-hv-incident-list`: Get the list of incidents from HV.
+- `ctm360-hv-incident-status-change`: Change status of a HV incident and optionally add a comment.
+- `get-mapping-fields`: Returns the list of fields for an incident type.
+- `ctm360-hv-incident-details`: Fetch details of a single incident from the HackerView platform.
+- `get-remote-data`: Gets remote data from a remote incident. This method does not update the current incident, and should be used for debugging purposes.
+- `get-modified-remote-data`: Gets the list of incidents that were modified since the last update time. Note that this method is here for debugging purposes. The get-modified-remote-data com
+- `update-remote-system`: Updates the remote system with local changes.
 
 
 ## CuckooDisplayReport
@@ -4415,7 +4538,7 @@ Custom Indicator Demo is a demo integration that demonstrates the usage of the C
 
 **Commands:**
 
-- `test-custom-indicator`: 
+- `test-custom-indicator`: This command demonstrates the usage of CustomIndicator.
 
 
 ## Cut
@@ -4615,16 +4738,16 @@ CybelAngel receives reports from the CybelAngel platform, which specializes in e
 
 **Commands:**
 
-- `cybelangel-get-events`: 
-- `cybelangel-report-status-update`: 
-- `cybelangel-report-get`: 
-- `cybelangel-report-remediation-request-create`: 
-- `cybelangel-report-attachment-get`: 
-- `cybelangel-archive-report-by-id-get`: 
-- `cybelangel-mirror-report-get`: 
-- `cybelangel-report-comment-create`: 
-- `cybelangel-report-list`: 
-- `cybelangel-report-comments-get`: 
+- `cybelangel-get-events`: Send events from CybelAngel to XSIAM. Used mainly for debugging.
+- `cybelangel-report-status-update`: Update the status of one or multiple reports.
+- `cybelangel-report-get`: Retrieve reports from CybelAngel.
+- `cybelangel-report-remediation-request-create`: Create a remediation request for a report.
+- `cybelangel-report-attachment-get`: Retrieve an attachment from a report.
+- `cybelangel-archive-report-by-id-get`: Retrieve an archived report by ID as a ZIP file.
+- `cybelangel-mirror-report-get`: Retrieve the mirror details for the specified report.
+- `cybelangel-report-comment-create`: Create a new comment on a report.
+- `cybelangel-report-list`: Retrieve reports from CybelAngel.
+- `cybelangel-report-comments-get`: Retrieve comments from a report.
 
 
 ## CybelAngel EASM
@@ -4636,13 +4759,13 @@ This integration enables the platform, allowing security teams to monitor and re
 
 **Commands:**
 
-- `cybelangel-get-report-by-id`: 
-- `cybelangel-get-report-attachment`: 
-- `cybelangel-remediate`: 
-- `cybelangel-get-comments`: 
-- `cybelangel-post-comment`: 
-- `cybelangel-update-status`: 
-- `cybelangel-get-report-pdf`: 
+- `cybelangel-get-report-by-id`: Retrieves detailed information about a specific report.
+- `cybelangel-get-report-attachment`: Downloads an attachment from a specified report.
+- `cybelangel-remediate`: Creates a remediation request for a specific report.
+- `cybelangel-get-comments`: Retrieves comments associated with a report.
+- `cybelangel-post-comment`: Adds a comment to a specified report.
+- `cybelangel-update-status`: Updates the status of a report.
+- `cybelangel-get-report-pdf`: Downloads the PDF version of a report.
 
 
 ## CyberBlindspot Incident Management
@@ -4686,8 +4809,8 @@ CyberChef is a web-application developed by GCHQ that's been called the “Cyber
 
 **Commands:**
 
-- `cyberchef-bake`: 
-- `cyberchef-magic`: 
+- `cyberchef-bake`: Bake you recipe!
+- `cyberchef-magic`: CyberChef Magic function
 
 
 ## Cyberhaven
@@ -4699,10 +4822,10 @@ Fetches DLP incidents from the Cyberhaven data security platform and enables inv
 
 **Commands:**
 
-- `cyberhaven-incident-list`: 
-- `cyberhaven-incident-update`: 
-- `cyberhaven-event-details-get`: 
-- `cyberhaven-event-lineage-get`: 
+- `cyberhaven-incident-list`: List and search Cyberhaven DLP incidents with optional filters.
+- `cyberhaven-incident-update`: Update the status, assignment, or close reason of a Cyberhaven incident.
+- `cyberhaven-event-details-get`: Retrieves full details for one or more Cyberhaven events by ID.
+- `cyberhaven-event-lineage-get`: Retrieves the data lineage chain between two Cyberhaven event IDs.
 
 
 ## CyberhavenIncidentRefresh
@@ -4726,8 +4849,8 @@ Vulnerabilities management This integration was integrated and tested with versi
 
 **Commands:**
 
-- `cyberpion-get-domain-action-items`: 
-- `cyberpion-get-domain-state`: 
+- `cyberpion-get-domain-action-items`: Retrieves domain's action items
+- `cyberpion-get-domain-state`: Retrieves domain's info and current state
 
 
 ## Cyberpion Domain State
@@ -4747,19 +4870,19 @@ Find, prioritize, and fix vulnerabilities on your IT & OT assets. This integrati
 
 **Commands:**
 
-- `cyberwatch-list-cves`: 
-- `cyberwatch-fetch-cve`: 
-- `cyberwatch-list-assets`: 
-- `cyberwatch-fetch-asset`: 
-- `cyberwatch-fetch-asset-fulldetails`: 
-- `cyberwatch-list-securityissues`: 
-- `cyberwatch-fetch-securityissue`: 
-- `cyberwatch-list-sysadmin-assets`: 
-- `cyberwatch-fetch-sysadmin-asset`: 
-- `cyberwatch-list-compliance-assets`: 
-- `cyberwatch-fetch-compliance-asset`: 
-- `cyberwatch-send-declarative-data-asset`: 
-- `cyberwatch-get-declarative-data-asset`: 
+- `cyberwatch-list-cves`: Get a list of CVEs from Cyberwatch.
+- `cyberwatch-fetch-cve`: Get all details for a CVE from Cyberwatch.
+- `cyberwatch-list-assets`: Get a list of assets scanned by Cyberwatch.
+- `cyberwatch-fetch-asset`: Get security details for an asset scanned by Cyberwatch.
+- `cyberwatch-fetch-asset-fulldetails`: Get all details for an asset scanned by Cyberwatch, including packages, ports, services, metadata.
+- `cyberwatch-list-securityissues`: Get a list of Security issues from Cyberwatch.
+- `cyberwatch-fetch-securityissue`: Get all details for a Security issue from Cyberwatch.
+- `cyberwatch-list-sysadmin-assets`: Get a list of assets from Cyberwatch Sysadmin (/assets/servers) view.
+- `cyberwatch-fetch-sysadmin-asset`: Get details for a Sysadmin Asset from Cyberwatch (/assets/servers/<ID>).
+- `cyberwatch-list-compliance-assets`: Get a list of assets from Cyberwatch Compliance (/compliance/assets) view.
+- `cyberwatch-fetch-compliance-asset`: Get details for a Compliance Asset from Cyberwatch (/compliance/assets/<ID>).
+- `cyberwatch-send-declarative-data-asset`: Upload Declarative Data (airgap) built from hostname + JSON to Cyberwatch (via /api/v2/cbw_scans/scripts). The command first checks that the hostname already ex
+- `cyberwatch-get-declarative-data-asset`: Retrieve Declarative Data for a Cyberwatch server (GET /api/v3/servers/{id}/info). Returns the raw text blob.
 
 
 ## Cyble Vision Alert V2
@@ -4779,11 +4902,11 @@ Cyble Events for Vision Users. Must have Vision API access to use the threat int
 
 **Commands:**
 
-- `cyble-vision-subscribed-services`: 
-- `cyble-vision-fetch-iocs`: 
-- `cyble-vision-fetch-alerts`: 
-- `cyble-vision-fetch-alert-groups`: 
-- `update-alert-data`: 
+- `cyble-vision-subscribed-services`: Get list of Subscribed services
+- `cyble-vision-fetch-iocs`: Fetch the indicators in the given timeline.
+- `cyble-vision-fetch-alerts`: Fetch alerts based on the given parameters. The alerts would have multiple events grouped into one, based on a specific service type. This way the user will see
+- `cyble-vision-fetch-alert-groups`: Fetch incident event group
+- `cyble-vision-update-alerts`: Update the status and/or severity of one or more alerts by ID.
 
 
 ## CyCognito
@@ -4795,12 +4918,12 @@ The CyCognito integration fetches issues discovered by the CyCognito platform, t
 
 **Commands:**
 
-- `cycognito-issue-get`: 
-- `cycognito-asset-get`: 
-- `cycognito-asset-investigation-status-change`: 
-- `cycognito-issue-investigation-status-change`: 
-- `cycognito-issues-list`: 
-- `cycognito-assets-list`: 
+- `cycognito-issue-get`: Retrieves information about an issue associated with a particular instance based on the provided issue instance ID.
+- `cycognito-asset-get`: Retrieves information about a specific asset according to the specified asset type and asset ID.
+- `cycognito-asset-investigation-status-change`: Modifies the investigation status of the specified asset.
+- `cycognito-issue-investigation-status-change`: Modifies the investigation status of the specified issue.
+- `cycognito-issues-list`: Retrieves the list of the issues that meet the specified filter criteria.
+- `cycognito-assets-list`: Retrieves the list of assets that meet specified filter criteria.
 
 
 ## CyCognitoGetEndpoints
@@ -4820,14 +4943,19 @@ Cymptom is a Breach and Attack Simulation solution that revolutionizes the exist
 
 **Commands:**
 
-- `cymptom-get-mitigations`: 
-- `cymptom-get-users-with-cracked-passwords`: 
+- `cymptom-get-mitigations`: This command returns mitigations recommended by Cymptom
+- `cymptom-get-users-with-cracked-passwords`: This command returns users with cracked password
 
 
 ## Cymulate
 
 **Type:** integration  
 **Product:** Cymulate  
+**Commands:**
+
+- `cymulate_get_incident_info`: This commands return full cymulate's incidents information
+- `cymulate-get-incident-info`: This commands return full cymulate's incidents information
+
 
 ## Cymulate IOC Findings Mitigation
 
@@ -4846,8 +4974,8 @@ Cyren Inbox Security is an innovative solution that safeguards Office 365 mailbo
 
 **Commands:**
 
-- `cyren-resolve-and-remediate`: 
-- `cyren-reset-sample-fetch`: 
+- `cyren-resolve-and-remediate`: resolve a case and remediate incidents
+- `cyren-reset-sample-fetch`: resets integration to fetch a sample incident
 
 
 ## Cyren Inbox Security Default
@@ -4895,17 +5023,21 @@ Stay ahead of cyber threats with Darkmon TIP - real-time threat intelligence fro
 
 **Commands:**
 
-- `dmontip-global-search`: 
-- `dmontip-get-compromised`: 
-- `dmontip-get-vpn`: 
-- `dmontip-get-proxy`: 
-- `dmontip-get-cve`: 
-- `dmontip-get-nrd`: 
-- `dmontip-get-tbf`: 
-- `dmontip-get-ransomware`: 
-- `dmontip-get-landscape`: 
-- `dmontip-get-boardprotection`: 
-- `dmontip-get-boardemails`: 
+- `dmontip-global-search`: The dmontip-global-search command performs a comprehensive search across the Darkmon Threat Intelligence Platform. This command allows users to search for indic
+- `ip`: Searches the Darkmon platform for intelligence related to a specific IP address. A focused interface for threat intelligence lookup of IP indicators.
+- `url`: Searches for URL-specific threat intelligence across the Darkmon platform. Quickly identifies malicious or suspicious URLs and associated threat data.
+- `domain`: Performs domain-focused threat intelligence searches in the Darkmon platform. Returns comprehensive information about potentially malicious domains.
+- `email`: Searches for threat intelligence related to specific email addresses. Identifies compromised accounts or emails associated with malicious activities.
+- `file`: Searches the Darkmon platform using file hash values (MD5, SHA-1, SHA-256). Identifies malware and provides associated threat intelligence data.
+- `dmontip-get-compromised`: Retrieve compromised data of a given type from Darkmon - leaked accounts, leaked bank cards, combo lists, public breaches, or compromised employee accounts. Use
+- `dmontip-get-vpn`: Retrieve known VPN exit-node IOCs with pagination, sorted newest first by firstSeen unless overridden.
+- `dmontip-get-proxy`: Retrieve known open-proxy IOCs with pagination, sorted newest first by firstSeen unless overridden.
+- `dmontip-get-cve`: Retrieve security vulnerabilities (CVEs) with severity, CVSS score, published/lastModified timestamps, source identifier, and tags.
+- `dmontip-get-nrd`: Retrieve newly registered domains (NRD) recently observed by Darkmon, sorted newest first by timestamp unless overridden. Filters the IOC feed by classification
+- `dmontip-get-tbf`: Retrieve telnet brute-force IOCs - sources observed attempting telnet brute-force attacks, sorted newest first by timestamp unless overridden. Filters the IOC f
+- `dmontip-get-ransomware`: Retrieve ransomware articles or company-specific ransomware mentions with details such as victim name, threat actor, published date, and matched keywords. Sorte
+- `dmontip-get-landscape`: Retrieve cybersecurity landscape news articles or company-specific landscape mentions with title, link, source, author, and matched keywords.
+- `dmontip-get-boardprotection`: Lists the emails currently under board-leak protection (monitored) including request state, owner name, and tokens. Backed by the board-leak/request endpoint.
 
 
 ## Darkmon - Block IOC
@@ -5151,13 +5283,13 @@ Darktrace is a Cyber AI platform for threat detection and response across cloud,
 
 **Commands:**
 
-- `darktrace-get-external-endpoint-details`: 
-- `darktrace-get-device-connection-info`: 
-- `darktrace-run-advanced-search-analysis`: 
-- `darktrace-post-to-watched-list`: 
-- `darktrace-get-tagged-devices`: 
-- `darktrace-get-tags-for-device`: 
-- `darktrace-post-tag-to-device`: 
+- `darktrace-get-external-endpoint-details`: Returns details collected by Darktrace about external IP addresses or hostnames.
+- `darktrace-get-device-connection-info`: Returns the graphable data used in the "Connections Data" view for a specific device that can be accessed from the Threat Visualizer omnisearch in Darktrace. Da
+- `darktrace-run-advanced-search-analysis`: Runs advanced search analysis queries.
+- `darktrace-post-to-watched-list`: Posts hostnames and ips to the Darktrace Watched Domain List.
+- `darktrace-get-tagged-devices`: Returns all Darktrace tagged devices
+- `darktrace-get-tags-for-device`: Returns all tags present on a specified device.
+- `darktrace-post-tag-to-device`: Posts a tag to a device
 
 
 ## Darktrace AI Analyst
@@ -5169,11 +5301,12 @@ Darktrace is a Cyber AI platform for threat detection and response across cloud,
 
 **Commands:**
 
-- `darktrace-get-ai-analyst-incident-event`: 
-- `darktrace-get-comments-for-ai-analyst-incident-event`: 
-- `darktrace-post-comment-to-ai-analyst-incident-event`: 
-- `darktrace-acknowledge-ai-analyst-incident-event`: 
-- `darktrace-unacknowledge-ai-analyst-incident-event`: 
+- `darktrace-get-ai-analyst-incident-event`: Returns all AI Analyst incident events
+- `darktrace-get-comments-for-ai-analyst-incident-event`: Returns all Darktrace Comments for a given Incident Event
+- `darktrace-post-comment-to-ai-analyst-incident-event`: Post comment to an AI Analyst Incident Event.
+- `darktrace-acknowledge-ai-analyst-incident-event`: Acknowledges an AI Analyst Incident Event
+- `darktrace-unacknowledge-ai-analyst-incident-event`: Unacknowledges an AI Analyst Incident Event
+- `darktrace-get-ai-analyst-incident-group-from-eventId`: Pulls all linked events for a given event. Over time, events can become merged with one another. This happens when two sets of disparate activity are suddenly l
 
 
 ## Darktrace ASM
@@ -5185,15 +5318,15 @@ Darktrace is a Cyber AI platform for threat detection and response across cloud,
 
 **Commands:**
 
-- `darktrace-asm-get-risk`: 
-- `darktrace-asm-get-asset`: 
-- `darktrace-asm-mitigate-risk`: 
-- `darktrace-asm-post-comment`: 
-- `darktrace-asm-edit-comment`: 
-- `darktrace-asm-delete-comment`: 
-- `darktrace-asm-create-tag`: 
-- `darktrace-asm-assign-tag`: 
-- `darktrace-asm-unassign-tag`: 
+- `darktrace-asm-get-risk`: Returns the Risk object associated with the given Risk ID.
+- `darktrace-asm-get-asset`: Returns the Asset object associated with the given Asset ID. The output will depend on the type of Asset(IP Address, Netblock, FQDN or Application).
+- `darktrace-asm-mitigate-risk`: Mitigates Risk within the Darktrace UI. Warning: Mitigating a Risk without taking action to resolve the Risk means you accept a Risk and it will no longer appea
+- `darktrace-asm-post-comment`: Post a comment to a Risk or an Asset within the Darktrace UI.
+- `darktrace-asm-edit-comment`: Edit an existing comment within the Darktrace UI.
+- `darktrace-asm-delete-comment`: Delete an existing comment within the Darktrace UI.
+- `darktrace-asm-create-tag`: Creat a new Tag within the Darktrace UI. Tags can be applied to Assets.
+- `darktrace-asm-assign-tag`: Assign an existing Tag to an Asset within the Darktrace UI.
+- `darktrace-asm-unassign-tag`: Unssign an existing Tag from an Asset within the Darktrace UI.
 
 
 ## Darktrace ASM Basic Risk Handler
@@ -5229,14 +5362,14 @@ Darktrace is a Cyber AI platform for threat detection and response across cloud,
 
 **Commands:**
 
-- `darktrace-get-model-breach`: 
-- `darktrace-get-model-breach-comments`: 
-- `darktrace-acknowledge-model-breach`: 
-- `darktrace-unacknowledge-model-breach`: 
-- `darktrace-get-model-breach-connections`: 
-- `darktrace-get-model`: 
-- `darktrace-get-model-component`: 
-- `darktrace-post-comment-to-model-breach`: 
+- `darktrace-get-model-breach`: darktrace-get-model-breach returns a model breach based on its model breach id (pbid)
+- `darktrace-get-model-breach-comments`: Returns the comments on a model breach based on its model breach id (pbid)
+- `darktrace-acknowledge-model-breach`: Acknowledge a model breach as specified by Model Breach ID
+- `darktrace-unacknowledge-model-breach`: Unacknowledges a model breach as specified by Model Breach ID
+- `darktrace-get-model-breach-connections`: Returns connections encountered by the device during a model breach.
+- `darktrace-get-model`: Returns a model given a UUID
+- `darktrace-get-model-component`: Returns the details of a component given a CID
+- `darktrace-post-comment-to-model-breach`: Posts a specified comment to a model breach.
 
 
 ## DataBee
@@ -5248,9 +5381,10 @@ DataBee, from Comcast Technology Solutions, is a cloud-native security and compl
 
 **Commands:**
 
-- `databee-device-search`: 
-- `databee-user-search`: 
-- `databee-finding-search`: 
+- `databee-device-search`: Search for devices based on filters.
+- `databee-user-search`: Search for users based on filters.
+- `databee-finding-search`: Search for security findings based on filters.
+- `endpoint`: Returns information about an endpoint.
 
 
 ## Databricks
@@ -5262,21 +5396,21 @@ Comprehensive integration with Databricks workspace APIs for managing clusters, 
 
 **Commands:**
 
-- `databricks-cluster-get`: 
-- `databricks-cluster-list`: 
-- `databricks-cluster-create`: 
-- `databricks-cluster-edit`: 
-- `databricks-cluster-delete`: 
-- `databricks-cluster-permanent-delete`: 
-- `databricks-cluster-start`: 
-- `databricks-cluster-restart`: 
-- `databricks-cluster-resize`: 
-- `databricks-cluster-pin`: 
-- `databricks-cluster-unpin`: 
-- `databricks-cluster-change-owner`: 
-- `databricks-cluster-list-zones`: 
-- `databricks-cluster-update`: 
-- `databricks-cluster-policy-get`: 
+- `databricks-cluster-get`: Retrieves information about a cluster by its ID.
+- `databricks-cluster-list`: Lists all clusters in the workspace.
+- `databricks-cluster-create`: Creates a new Databricks cluster.
+- `databricks-cluster-edit`: Edits the configuration of an existing cluster.
+- `databricks-cluster-delete`: Terminates a cluster.
+- `databricks-cluster-permanent-delete`: Permanently deletes a cluster.
+- `databricks-cluster-start`: Starts a previously terminated cluster.
+- `databricks-cluster-restart`: Restarts a running cluster.
+- `databricks-cluster-resize`: Resizes a cluster by changing the number of workers.
+- `databricks-cluster-pin`: Pins a cluster to keep it visible in the cluster list.
+- `databricks-cluster-unpin`: Unpins a cluster.
+- `databricks-cluster-change-owner`: Changes the owner of a cluster.
+- `databricks-cluster-list-zones`: Lists available availability zones for cluster deployment.
+- `databricks-cluster-update`: Updates specific properties of a cluster.
+- `databricks-cluster-policy-get`: Retrieves a cluster policy by its ID.
 
 
 ## Dataminr Pulse
@@ -5285,9 +5419,9 @@ Comprehensive integration with Databricks workspace APIs for managing clusters, 
 **Product:** Dataminr Pulse  
 **Commands:**
 
-- `dataminrpulse-watchlists-get`: 
-- `dataminrpulse-alerts-get`: 
-- `dataminrpulse-related-alerts-get`: 
+- `dataminrpulse-watchlists-get`: Retrieves the Watchlists configured on the Dataminr platform.
+- `dataminrpulse-alerts-get`: Retrieves the alerts as per the provided watchlist_ids or query or configured watchlist_names parameter in integration. Note: The "from" and "to" arguments shou
+- `dataminrpulse-related-alerts-get`: Retrieves the alerts related to the provided Alert ID.
 
 
 ## Dataminr Pulse - ReGenAI
@@ -5296,8 +5430,8 @@ Comprehensive integration with Databricks workspace APIs for managing clusters, 
 **Product:** Dataminr Pulse  
 **Commands:**
 
-- `dataminrpulse-watchlists-get`: 
-- `dataminrpulse-alerts-get`: 
+- `dataminrpulse-watchlists-get`: Retrieves the Watchlists configured on the Dataminr platform.
+- `dataminrpulse-alerts-get`: Retrieves the alerts as per the provided watchlist_ids or query or configured watchlist_names parameter in integration.
 
 
 ## DataminrPulseCVSSColor
@@ -5454,7 +5588,7 @@ Integration to provide connectivity to IBM DB2 using the python ibm_db2 library.
 
 **Commands:**
 
-- `db2-query`: 
+- `db2-query`: Running a DB2 query command
 
 
 ## DBotAverageScore
@@ -5631,8 +5765,8 @@ DeCYFIR API's provides External Threat Landscape Management insights. This integ
 
 **Commands:**
 
-- `decyfir-takedown-initiate`: 
-- `decyfir-takedown-list`: 
+- `decyfir-takedown-initiate`: Initiate a take down request.
+- `decyfir-takedown-list`: Get take down list.
 
 
 ## DeCYFIR - v1
@@ -5649,7 +5783,19 @@ DeCYFIR API's provides External Threat Landscape Management insights
 **Product:** DeepInstinct  
 **Commands:**
 
-- `deepinstinct-get-device`: 
+- `deepinstinct-get-device`: get specific device by ID
+- `deepinstinct-get-events`: Get all events. Max events in response can be 50, use first_event_id parameter to define first event id to get
+- `deepinstinct-get-all-groups`: get all groups
+- `deepinstinct-get-all-policies`: get all policies
+- `deepinstinct-add-hash-to-blacklist`: add file hash to block list
+- `deepinstinct-add-hash-to-whitelist`: add file hash to allow list
+- `deepinstinct-remove-hash-from-blacklist`: remove file hash from block list
+- `deepinstinct-remove-hash-from-whitelist`: remove file hash from allow list
+- `deepinstinct-add-devices-to-group`: add multiple devices to group
+- `deepinstinct-remove-devices-from-group`: remove list of devices from group
+- `deepinstinct-delete-files-remotely`: delete multiple files remotely
+- `deepinstinct-terminate-processes`: terminate list of processes
+- `deepinstinct-close-events`: close list of events
 
 
 ## DeepInstinct v3
@@ -5661,21 +5807,21 @@ Deep Instinct is a prevention-first approach to stopping ransomware and other ma
 
 **Commands:**
 
-- `deepinstinctv3-get-device`: 
-- `deepinstinctv3-get-events`: 
-- `deepinstinctv3-get-suspicious-events`: 
-- `deepinstinctv3-get-all-groups`: 
-- `deepinstinctv3-get-all-policies`: 
-- `deepinstinctv3-add-hash-to-deny-list`: 
-- `deepinstinctv3-add-hash-to-allow-list`: 
-- `deepinstinctv3-remove-hash-from-deny-list`: 
-- `deepinstinctv3-remove-hash-from-allow-list`: 
-- `deepinstinctv3-add-devices-to-group`: 
-- `deepinstinctv3-remove-devices-from-group`: 
-- `deepinstinctv3-delete-files-remotely`: 
-- `deepinstinctv3-terminate-processes`: 
-- `deepinstinctv3-close-events`: 
-- `deepinstinctv3-disable-device`: 
+- `deepinstinctv3-get-device`: Get device information from its ID
+- `deepinstinctv3-get-events`: Get all events after given event ID
+- `deepinstinctv3-get-suspicious-events`: Get all suspicious events after given event ID
+- `deepinstinctv3-get-all-groups`: Get all groups
+- `deepinstinctv3-get-all-policies`: Get list of all policies
+- `deepinstinctv3-add-hash-to-deny-list`: Add file hash to Deny List
+- `deepinstinctv3-add-hash-to-allow-list`: Add file hash to Allow List
+- `deepinstinctv3-remove-hash-from-deny-list`: Remove hash from Deny List
+- `deepinstinctv3-remove-hash-from-allow-list`: Remove hash from Allow List
+- `deepinstinctv3-add-devices-to-group`: Add multiple devices to a group
+- `deepinstinctv3-remove-devices-from-group`: Remove list of devices from groups
+- `deepinstinctv3-delete-files-remotely`: Delete multiple files remotely
+- `deepinstinctv3-terminate-processes`: Terminate list of processes
+- `deepinstinctv3-close-events`: Close list of events
+- `deepinstinctv3-disable-device`: Disable device at next check-in
 
 
 ## DeepL
@@ -5687,11 +5833,11 @@ This integration uses DeepL ( to translate text or files This integration was in
 
 **Commands:**
 
-- `deepl-usage`: 
-- `deepl-translate-text`: 
-- `deepl-submit-document`: 
-- `deepl-check-document-status`: 
-- `deepl-get-document`: 
+- `deepl-usage`: Get current API key usage
+- `deepl-translate-text`: Translates input text
+- `deepl-submit-document`: Please note that with every submitted document of type .pptx, .docx or .pdf you are billed a minimum of 50'000 characters with the DeepL API plan, no matter how
+- `deepl-check-document-status`: The status of the document translation process can be checked by sending a status request to the document specific status URL.
+- `deepl-get-document`: Get the translated document
 
 
 ## Defang
@@ -5731,7 +5877,8 @@ This integration allows you to check if your personal information such as your e
 
 **Commands:**
 
-- `dehashed-search`: 
+- `dehashed-search`: Performs a search to check if information is compromised.
+- `email`: Checks if an email address was compromised.
 
 
 ## Delete Custom Content
@@ -5756,7 +5903,7 @@ Manage credentials for applications, databases, CI/CD tools, and services withou
 
 **Commands:**
 
-- `dsv-secret-get`: 
+- `dsv-secret-get`: Getting a secret fom DSV
 
 
 ## DelineaSS
@@ -5768,21 +5915,21 @@ Secret Server and Platform is the fully featured Privileged Account Management (
 
 **Commands:**
 
-- `delinea-secret-password-get`: 
-- `delinea-secret-username-get`: 
-- `delinea-secret-search-name`: 
-- `delinea-secret-password-update`: 
-- `delinea-secret-checkout`: 
-- `delinea-secret-checkin`: 
-- `delinea-folder-create`: 
-- `delinea-folder-search`: 
-- `delinea-secret-get`: 
-- `delinea-secret-search`: 
-- `delinea-folder-update`: 
-- `delinea-secret-create`: 
-- `delinea-secret-delete`: 
-- `delinea-secret-server-user-create`: 
-- `delinea-secret-server-user-search`: 
+- `delinea-secret-password-get`: Retrieved password from secret
+- `delinea-secret-username-get`: Retrieved username from secret
+- `delinea-secret-search-name`: Search ID secret by field name
+- `delinea-secret-password-update`: Update password for secret
+- `delinea-secret-checkout`: Check Out a secret
+- `delinea-secret-checkin`: Check In a secret
+- `delinea-folder-create`: Create a new secret folder
+- `delinea-folder-search`: Search folder by name folder
+- `delinea-secret-get`: Get secret object by ID secret
+- `delinea-secret-search`: Search secret ID by multiply params
+- `delinea-folder-update`: Update a single secret folder by ID
+- `delinea-secret-create`: Create new object Secret
+- `delinea-secret-delete`: Delete secret
+- `delinea-secret-server-user-create`: Create a new Secret Server user
+- `delinea-secret-server-user-search`: Search, filter, sort, and page Secret Server users
 
 
 ## Departing Employee Auto-Add
@@ -6282,10 +6429,11 @@ Detonates a URL using the VMRay sandbox integration
 **Product:** Devo  
 **Commands:**
 
-- `devo-run-query`: 
-- `devo-get-alerts`: 
-- `devo-multi-table-query`: 
-- `devo-write-to-table`: 
+- `devo-run-query`: Queries Devo based on the specified LINQ query.
+- `devo-get-alerts`: Queries alerts in the specified timeframe.
+- `devo-multi-table-query`: Queries multiple tables for a given token and returns relevant results.
+- `devo-write-to-table`: Writes records to a specified Devo table.
+- `devo-write-to-lookup-table`: Writes lookup table entry records to a specified Devo table.
 
 
 ## DFIRe
@@ -6297,21 +6445,21 @@ DFIRe is a self-hosted Digital Forensics and Incident Response (DFIR) case manag
 
 **Commands:**
 
-- `dfire-search`: 
-- `dfire-case-type-list`: 
-- `dfire-case-list`: 
-- `dfire-case-get`: 
-- `dfire-case-create`: 
-- `dfire-case-update`: 
-- `dfire-case-delete`: 
-- `dfire-case-note-list`: 
-- `dfire-case-note-create`: 
-- `dfire-indicator-list`: 
-- `dfire-indicator-get`: 
-- `dfire-indicator-create`: 
-- `dfire-indicator-update`: 
-- `dfire-indicator-delete`: 
-- `dfire-item-type-list`: 
+- `dfire-search`: Searches across all DFIRe data (cases, indicators, notes, items). Supports AND, OR, NOT operators.
+- `dfire-case-type-list`: Lists available case types and their IDs.
+- `dfire-case-list`: Lists cases from DFIRe.
+- `dfire-case-get`: Retrieves details of a specific case.
+- `dfire-case-create`: Creates a new case in DFIRe.
+- `dfire-case-update`: Updates an existing case in DFIRe.
+- `dfire-case-delete`: Deletes a case from DFIRe.
+- `dfire-case-note-list`: Lists notes for a case.
+- `dfire-case-note-create`: Creates a note on a case.
+- `dfire-indicator-list`: Lists indicators from the global IOC registry.
+- `dfire-indicator-get`: Retrieves details of a specific indicator.
+- `dfire-indicator-create`: Creates a new indicator in the global IOC registry.
+- `dfire-indicator-update`: Updates an existing indicator.
+- `dfire-indicator-delete`: Deletes an indicator from the global IOC registry.
+- `dfire-item-type-list`: Lists available evidence item types and their IDs.
 
 
 ## Dig
@@ -6337,8 +6485,8 @@ Use the Digital Defense Frontline VM to identify and evaluate the security and b
 
 **Commands:**
 
-- `frontline-get-assets`: 
-- `frontline-scan-asset`: 
+- `frontline-get-assets`: Retrieves the asset's information from Frontline VM.
+- `frontline-scan-asset`: Performs a scan on the specified asset.
 
 
 ## Digital Defense FrontlineVM - Old Vulnerabilities Found
@@ -6370,7 +6518,12 @@ This integration was integrated and tested with version 2.11.0 of Digital Guardi
 
 **Commands:**
 
-- `digitalguardian-add-watchlist-entry`: 
+- `digitalguardian-add-watchlist-entry`: Add Watchlist Entry
+- `digitalguardian-check-watchlist-entry`: Check Watchlist Entry
+- `digitalguardian-remove-watchlist-entry`: Remove Watchlist Entry
+- `digitalguardian-add-componentlist-entry`: Add Componentlist Entry
+- `digitalguardian-check-componentlist-entry`: Check Componentlist Entry
+- `digitalguardian-remove-componentlist-entry`: Remove Componentlist Entry
 
 
 ## Digital Guardian Demo Playbook
@@ -6426,8 +6579,8 @@ This is the Discord integration for sending Messages from platform to Discord se
 
 **Commands:**
 
-- `discord-send-message`: 
-- `discord-get-message`: 
+- `discord-send-message`: Send message to your channel
+- `discord-get-message`: Get message details
 
 
 ## DNSOverHttps
@@ -6439,7 +6592,7 @@ Query dns names over https from Cloudflare or Google
 
 **Commands:**
 
-- `doh-resolve`: 
+- `doh-resolve`: Resolve a name to IP over HTTPS
 
 
 ## Docker Engine API
@@ -6451,21 +6604,21 @@ The Engine API is an HTTP API served by Docker Engine. It is the API the Docker 
 
 **Commands:**
 
-- `docker-build-prune`: 
-- `docker-config-create`: 
-- `docker-config-inspect`: 
-- `docker-config-list`: 
-- `docker-container-changes`: 
-- `docker-container-create`: 
-- `docker-container-delete`: 
-- `docker-container-inspect`: 
-- `docker-container-list`: 
-- `docker-container-stats`: 
-- `docker-container-top`: 
-- `docker-image-create`: 
-- `docker-image-delete`: 
-- `docker-image-history`: 
-- `docker-image-inspect`: 
+- `docker-build-prune`: Delete builder cache
+- `docker-config-create`: Create a config
+- `docker-config-inspect`: Inspect a config
+- `docker-config-list`: List configs
+- `docker-container-changes`: Get changes on a container’s filesystem
+- `docker-container-create`: Create a container
+- `docker-container-delete`: Remove a container
+- `docker-container-inspect`: Inspect a container
+- `docker-container-list`: List containers
+- `docker-container-stats`: Get container stats based on resource usage
+- `docker-container-top`: List processes running inside a container
+- `docker-image-create`: Create an image by either pulling it from a registry or importing it.
+- `docker-image-delete`: Remove an image, along with any untagged parent images that were referenced by that image. Images can't be removed if they have descendant images, are being use
+- `docker-image-history`: Get the history of an image
+- `docker-image-inspect`: Inspect an image
 
 
 ## DockerHardeningCheck
@@ -6495,10 +6648,10 @@ Docusign is a leading provider of electronic signature technology, allowing indi
 
 **Commands:**
 
-- `docusign-generate-consent-url`: 
-- `docusign-auth-test`: 
-- `docusign-get-events`: 
-- `docusign-reset-access-token`: 
+- `docusign-generate-consent-url`: Generates the Docusign admin consent URL based on configured parameters and environment.
+- `docusign-auth-test`: Tests the full authentication flow and API connectivity by validating configuration, exchanging a JWT for an access token, and calling the /oauth/userinfo endpo
+- `docusign-get-events`: Fetches events from Docusign. Used for debugging purposes on failures.
+- `docusign-reset-access-token`: Resets the access token stored in the integration context.
 
 
 ## domain-enrichment
@@ -6580,15 +6733,19 @@ Together, DomainTools and the platform, web crawl, SSL and infrastructure data. 
 
 **Commands:**
 
-- `domaintoolsiris-investigate`: 
-- `domaintoolsiris-enrich`: 
-- `domaintoolsiris-analytics`: 
-- `domaintoolsiris-threat-profile`: 
-- `domaintoolsiris-pivot`: 
-- `domaintools-whois-history`: 
-- `domaintools-hosting-history`: 
-- `domaintools-reverse-whois`: 
-- `domaintools-whois`: 
+- `domain`: Provides data enrichment for domains.
+- `domaintoolsiris-investigate`: Returns a complete profile of the domain (SLD.TLD) using Iris Investigate. If parsing of FQDNs is desired, see domainExtractAndInvestigate.
+- `domaintoolsiris-enrich`: Returns a complete profile of the domain (SLD.TLD) using Iris Enrich. If parsing of URLs or FQDNs is desired, see domainExtractAndEnrich.
+- `domaintoolsiris-analytics`: Displays DomainTools Analytic data in a markdown format table.
+- `domaintoolsiris-threat-profile`: Displays DomainTools Threat Profile data in a markdown format table.
+- `domaintoolsiris-pivot`: Pivot on connected infrastructure (IP, email, SSL), or import domains from Iris Investigate using a search hash. Retrieves up to 5000 domains at a time. Optiona
+- `domaintools-whois-history`: The DomainTools Whois History API endpoint returns up to 100 historical Whois records associated with a domain name.
+- `domaintools-hosting-history`: Hosting History will list IP address, name server and registrar history.
+- `domaintools-reverse-whois`: The DomainTools Reverse Whois API provides a list of domain names that share the same Registrant Information. You can enter terms that describe a domain owner, 
+- `domaintools-whois`: The DomainTools Parsed Whois API provides parsed information extracted from the raw Whois record. The API is optimized to quickly retrieve the Whois record, gro
+- `domainRdap`: Returns the most recent Domain-RDAP registration record.
+- `reverseNameServer`: Reverse nameserver lookup.
+- `reverseIP`: Reverse loopkup of an IP address or a domain.
 
 
 ## DomainTools Iris Detect
@@ -6600,17 +6757,17 @@ Iris Detect is an Internet infrastructure detection, monitoring, and enforcement
 
 **Commands:**
 
-- `domaintools-iris-detect-escalate-domains`: 
-- `domaintools-iris-detect-blocklist-domains`: 
-- `domaintools-iris-detect-watch-domains`: 
-- `domaintools-iris-detect-ignore-domains`: 
-- `domaintools-iris-detect-get-monitors-list`: 
-- `domaintools-iris-detect-get-new-domains`: 
-- `domaintools-iris-detect-get-watched-domains`: 
-- `domaintools-iris-detect-get-ignored-domains`: 
-- `domaintools-iris-detect-get-escalated-domains`: 
-- `domaintools-iris-detect-get-blocklist-domains`: 
-- `domaintools-iris-detect-reset-fetch-indicators`: 
+- `domaintools-iris-detect-escalate-domains`: Reports a domain to Google's Safe Browsing API. After approval, their block list is picked up by Chrome and most modern browsers.
+- `domaintools-iris-detect-blocklist-domains`: Mark a given domain as blocked, which allows a script against the Iris Detect API to pass these domains on to other teams or security controls within your organ
+- `domaintools-iris-detect-watch-domains`: Mark a given domain as watched, which will trigger more frequent scanning by DomainTools automation. Changes to watched domains can trigger incidents if enabled
+- `domaintools-iris-detect-ignore-domains`: Ignore a given domain, removing it from new and block lists, if applicable.
+- `domaintools-iris-detect-get-monitors-list`: This command allows users to retrieve the list of monitored terms and respective IDs associated with your organization's Iris Detect account. New terms can only
+- `domaintools-iris-detect-get-new-domains`: Manually retrieve new domains matching all of your monitored terms, or a specific term specified by a "monitor_id" that can be retrieved using the domaintools-i
+- `domaintools-iris-detect-get-watched-domains`: Manually retrieve changes to domains that have been marked as "watched" by users of your organization, matching all of your monitored terms, or a specific term 
+- `domaintools-iris-detect-get-ignored-domains`: Manually retrieve domains that your organization has marked as ignored, matching all of your monitored terms, or a specific term specified by a "monitor_id" tha
+- `domaintools-iris-detect-get-escalated-domains`: Manually retrieve domains that your organization has escalated to Google Safe Browsing, matching all of your monitored terms, or a specific term specified by a 
+- `domaintools-iris-detect-get-blocklist-domains`: Manually retrieve domains that your organization has marked as "blocklisted", matching all of your monitored terms, or a specific term specified by a "monitor_i
+- `domaintools-iris-detect-reset-fetch-indicators`: This command will reset your fetch history.
 
 
 ## DomainTools Iris Risk Score
@@ -6644,16 +6801,16 @@ Doppel is a Modern Digital Risk Protection Solution, that detects the phishing a
 
 **Commands:**
 
-- `doppel-get-alert`: 
-- `doppel-create-alert`: 
-- `doppel-update-alert`: 
-- `doppel-create-abuse-alert`: 
-- `doppel-get-alert-screenshot`: 
-- `doppel-get-alerts`: 
-- `get-mapping-fields`: 
-- `update-remote-system`: 
-- `get-remote-data`: 
-- `get-modified-remote-data`: 
+- `doppel-get-alert`: Retrieves the alert details by ID or entity. Must include either ID or entity.
+- `doppel-create-alert`: Creates an alert for a specified entity. This command requires the entity to be provided in the arguments.
+- `doppel-update-alert`: Updates an alert in the Doppel platform. Either alert_id or entity must be specified.
+- `doppel-create-abuse-alert`: Create an alert for the provided value to abuse box. Will fail if the alert value is invalid or is protected.
+- `doppel-get-alert-screenshot`: Fetch the alert's current screenshot from Doppel and attach it to the incident as a War Room file entry. The image is downloaded immediately after the URL is si
+- `doppel-get-alerts`: Retrieves a list of alerts. The result can be filtered by provided parameters.
+- `get-mapping-fields`: Returns the list of fields for an incident type.
+- `update-remote-system`: Pushes local changes to the remote system. If an platform Incident is closed, created via Doppel Integration, then on Doppel Portal the Alert status will be upd
+- `get-remote-data`: Get remote data from a remote incident. This method does not update the current incident, and should be used for debugging purposes.
+- `get-modified-remote-data`: Gets the list of incidents that were modified since the last update time. Note that this method is here for debugging purposes. The get-modified-remote-data com
 
 
 ## Doppel Screenshot Preview
@@ -6689,7 +6846,7 @@ Custom integration designed to pull in reports from the Dragos Worldview API as 
 
 **Commands:**
 
-- `dragos-get-indicators`: 
+- `dragos-get-indicators`: Get Indicators from the Dragos WorldView API
 
 
 ## DrawRelatedIncidentsCanvas
@@ -6717,10 +6874,10 @@ Drift integration to fetch, modify, create and delete contacts within the Drift 
 
 **Commands:**
 
-- `drift-get-contact`: 
-- `drift-update-contact`: 
-- `drift-delete-contact`: 
-- `drift-post-contact`: 
+- `drift-get-contact`: Retrieve a contact using their email address (for multiple) or ID (for single).
+- `drift-update-contact`: Patch Contact Updates using contact ID
+- `drift-delete-contact`: Delete Contact using contact ID
+- `drift-post-contact`: Post New Contact using a new contact Email
 
 
 ## DropBox - Massive scale operations on files
@@ -6840,18 +6997,18 @@ DUO for admins. Must have access to the admin api in order to use this. This int
 
 **Commands:**
 
-- `duoadmin-get-authentication-logs-by-user`: 
-- `duoadmin-dissociate-device-from-user`: 
-- `duoadmin-delete-u2f-token`: 
-- `duoadmin-get-users`: 
-- `duoadmin-get-devices-by-user`: 
-- `duoadmin-get-u2f-tokens-by-user`: 
-- `duoadmin-get-devices`: 
-- `duoadmin-associate-device-to-user`: 
-- `duoadmin-get-admins`: 
-- `duoadmin-get-bypass-codes`: 
-- `duoadmin-modify-admin`: 
-- `duoadmin-modify-user`: 
+- `duoadmin-get-authentication-logs-by-user`: Returns authentication logs associated with a user. Limited to 30 at a time
+- `duoadmin-dissociate-device-from-user`: Dissociates a device from a user
+- `duoadmin-delete-u2f-token`: Delete a u2f token
+- `duoadmin-get-users`: Return usernames and their user id
+- `duoadmin-get-devices-by-user`: Return devices associated with a user
+- `duoadmin-get-u2f-tokens-by-user`: Returns a list of U2F tokens associated with the given username
+- `duoadmin-get-devices`: Returns all existing devices
+- `duoadmin-associate-device-to-user`: Associates a device to a user
+- `duoadmin-get-admins`: Returns administrator accounts
+- `duoadmin-get-bypass-codes`: Retrieves the information from the bypass code table
+- `duoadmin-modify-admin`: Modify the administrator user.
+- `duoadmin-modify-user`: Modify the user account.
 
 
 ## DuoAuth
@@ -6863,7 +7020,7 @@ The Duo Auth API lets developers integrate with Duo Security's platform at a low
 
 **Commands:**
 
-- `duoauth-push-notification`: 
+- `duoauth-push-notification`: Send push message to Duo user.
 
 
 ## DuoPush
@@ -6889,21 +7046,21 @@ Cloud-based continuous vulnerability management and penetration testing solution
 
 **Commands:**
 
-- `edgescan-host-get-hosts`: 
-- `edgescan-host-get`: 
-- `edgescan-host-get-export`: 
-- `edgescan-host-get-query`: 
-- `edgescan-host-update`: 
-- `edgescan-asset-get-assets`: 
-- `edgescan-asset-get`: 
-- `edgescan-asset-get-query`: 
-- `edgescan-asset-create`: 
-- `edgescan-asset-update`: 
-- `edgescan-asset-delete`: 
-- `edgescan-user-get-users`: 
-- `edgescan-user-get`: 
-- `edgescan-user-get-query`: 
-- `edgescan-user-create`: 
+- `edgescan-host-get-hosts`: Get a list of all hosts
+- `edgescan-host-get`: Get detailed information about a host.
+- `edgescan-host-get-export`: Get a list of hosts in export format.
+- `edgescan-host-get-query`: Get a list of hosts by query
+- `edgescan-host-update`: Update a host
+- `edgescan-asset-get-assets`: Get the full list of assets
+- `edgescan-asset-get`: Get asset details
+- `edgescan-asset-get-query`: Query the asset database
+- `edgescan-asset-create`: Create an asset
+- `edgescan-asset-update`: Update an asset
+- `edgescan-asset-delete`: Delete an asset
+- `edgescan-user-get-users`: Get the full user list
+- `edgescan-user-get`: Get user details
+- `edgescan-user-get-query`: Query for a user
+- `edgescan-user-create`: Create a user
 
 
 ## EditServerConfig
@@ -6929,9 +7086,9 @@ This integration can monitor EDLs by emailing the content of an EDL as a zipped 
 
 **Commands:**
 
-- `get-edl-contents`: 
-- `email-edl-contents`: 
-- `check-status`: 
+- `get-edl-contents`: Gets the current contents of an EDL
+- `email-edl-contents`: Gets the current contents of an EDL and emails it to a specified email address
+- `check-status`: Return the response code of the EDL
 
 
 ## Endace
@@ -6943,7 +7100,14 @@ The EndaceProbe Analytics Platform provides 100% accurate, continuous packet cap
 
 **Commands:**
 
-- `endace-create-search`: 
+- `endace-create-search`: Create a search task on EndaceProbe. Search is issued against all Rotation Files on EndaceProbe.
+- `endace-get-search-status`: Get search status from EndaceProbe. This command can be polled in a loop until response is received or polling timer is over.
+- `endace-delete-search-task`: Delete search task
+- `endace-create-archive`: Create an archive task to archive packets of interest on EndaceProbe. Archived packets can later be downloaded from EndaceProbe as a PCAP file. Archived Files n
+- `endace-get-archive-status`: get status of archived task
+- `endace-delete-archive-task`: delete archive task
+- `endace-download-pcap`: Download a copy of the PCAP file from EndaceProbe if PCAP file size is within the threshold value defined by filesizelimit.
+- `endace-delete-archived-file`: Delete an archived file from EndaceProbe.
 
 
 ## Enrich Custom IOCs - Dataminr Pulse
@@ -6998,18 +7162,18 @@ Use the Entra ID Applications integration (formerly Azure Active Directory Appli
 
 **Commands:**
 
-- `msgraph-apps-auth-start`: 
-- `msgraph-apps-auth-complete`: 
-- `msgraph-apps-auth-reset`: 
-- `msgraph-apps-auth-test`: 
-- `msgraph-apps-service-principal-list`: 
-- `msgraph-apps-service-principal-remove`: 
-- `msgraph-apps-service-principal-get`: 
-- `msgraph-apps-service-principal-update`: 
-- `msgraph-apps-service-principal-password-add`: 
-- `msgraph-apps-service-principal-password-remove`: 
-- `msgraph-apps-service-principal-unlock-configuration`: 
-- `msgraph-apps-service-principal-lock-configuration`: 
+- `msgraph-apps-auth-start`: Run this command to start the authorization process and follow the instructions in the command results.
+- `msgraph-apps-auth-complete`: Run this command to complete the authorization process. Should be used after running the msgraph-apps-auth-start command.
+- `msgraph-apps-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
+- `msgraph-apps-auth-test`: Tests connectivity to Microsoft.
+- `msgraph-apps-service-principal-list`: Retrieves a list of applications.
+- `msgraph-apps-service-principal-remove`: Removes an application from the directory.
+- `msgraph-apps-service-principal-get`: Retrieve the properties and relationships of a servicePrincipal object.
+- `msgraph-apps-service-principal-update`: Update the properties of servicePrincipal object.
+- `msgraph-apps-service-principal-password-add`: Add a strong password or secret to a service principal.
+- `msgraph-apps-service-principal-password-remove`: Remove a password from a service principal.
+- `msgraph-apps-service-principal-unlock-configuration`: Unlock configuration of a service principal.
+- `msgraph-apps-service-principal-lock-configuration`: Lock configuration of a service principal.
 
 
 ## Entra ID Users
@@ -7021,21 +7185,21 @@ The Entra ID Users integration (formerly Azure Active Directory Users) is a Unif
 
 **Commands:**
 
-- `msgraph-user-account-disable`: 
-- `msgraph-user-unblock`: 
-- `msgraph-user-update`: 
-- `msgraph-user-delete`: 
-- `msgraph-user-create`: 
-- `msgraph-user-get`: 
-- `msgraph-user-list`: 
-- `msgraph-direct-reports`: 
-- `msgraph-user-get-manager`: 
-- `msgraph-user-assign-manager`: 
-- `msgraph-user-change-password`: 
-- `msgraph-user-test`: 
-- `msgraph-user-session-revoke`: 
-- `msgraph-user-generate-login-url`: 
-- `msgraph-user-auth-reset`: 
+- `msgraph-user-account-disable`: Disables a user from all Office 365 applications, and prevents sign in. Note: This command disables the user but does not terminate an existing session. Support
+- `msgraph-user-unblock`: Unblock a user.
+- `msgraph-user-update`: Updates the properties of a user object. Permissions: - User.ReadWrite (Delegated & Application) Permission For unblocking an admin/privileged user: User.Enable
+- `msgraph-user-delete`: Deletes an existing user. Permissions: Directory.AccessAsUser.All (Delegated), User.ReadWrite.All (Application)
+- `msgraph-user-create`: Creates a new user. Permissions: User.ReadWrite.All (Delegated & Application)
+- `msgraph-user-get`: Retrieves the properties and relationships of a user object. For more information, visit: https://learn.microsoft.com/en-us/graph/api/user-get?view=graph-rest-1
+- `msgraph-user-list`: Retrieves a list of user objects. Permissions: User.ReadBasic.All (Delegated), User.Read.All (Application)
+- `msgraph-direct-reports`: Retrieves the direct reports for a user. Direct reports are the people who have that user configured as their manager.
+- `msgraph-user-get-manager`: Retrieves the properties from the manager of a user.
+- `msgraph-user-assign-manager`: Assigns a manager to the specified user. Permission: - User.ReadWrite (Delegated) or - User.ReadWrite (Application)
+- `msgraph-user-change-password`: Changes the user password. Supported only in a self deployed app flow with the Permission: Directory.AccessAsUser.All(Delegated) Note: In order to change the pa
+- `msgraph-user-test`: Tests connectivity to Microsoft Graph User.
+- `msgraph-user-session-revoke`: Revoke a user session by invalidating all refresh tokens issued to applications for a user. This command requires an administrator role. Permission required: Di
+- `msgraph-user-generate-login-url`: Generate the login url used for Authorization code flow.
+- `msgraph-user-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
 
 
 ## Envoy IAM
@@ -7047,10 +7211,10 @@ Integrate with Envoy Identity Access Management services to execute CRUD operati
 
 **Commands:**
 
-- `iam-create-user`: 
-- `iam-update-user`: 
-- `iam-get-user`: 
-- `iam-disable-user`: 
+- `iam-create-user`: Creates a user.
+- `iam-update-user`: Updates an existing user with the data passed in the user-profile argument.
+- `iam-get-user`: Retrieves a single user resource.
+- `iam-disable-user`: Disable an active user.
 
 
 ## EPOFindSystem
@@ -7110,21 +7274,21 @@ Use the EWS Extension Online Powershell v3 integration to get information about 
 
 **Commands:**
 
-- `ews-mailbox-list`: 
-- `ews-cas-mailbox-list`: 
-- `ews-mailbox-permission-list`: 
-- `ews-recipient-permission-list`: 
-- `ews-recipient-list`: 
-- `ews-new-tenant-allow-block-list-items`: 
-- `ews-get-tenant-allow-block-list-items`: 
-- `ews-get-tenant-allow-block-list-count`: 
-- `ews-remove-tenant-allow-block-list-items`: 
-- `ews-export-quarantinemessage`: 
-- `ews-get-quarantinemessage`: 
-- `ews-release-quarantinemessage`: 
-- `ews-junk-rules-get`: 
-- `ews-junk-rules-set`: 
-- `ews-global-junk-rules-set`: 
+- `ews-mailbox-list`: Displays mailbox objects and attributes, populate property pages, or supplies mailbox information to other tasks.
+- `ews-cas-mailbox-list`: Displays Client Access settings that are configured on mailboxes.
+- `ews-mailbox-permission-list`: Retrieves permissions on a mailbox.
+- `ews-recipient-permission-list`: Displays information about SendAs permissions that are configured for users.
+- `ews-recipient-list`: Displays existing recipient objects in your organization. This command returns all mail-enabled objects (for example, mailboxes, mail users, mail contacts, and 
+- `ews-new-tenant-allow-block-list-items`: Add new items to the Tenant Allow/Block Lists. Uses PowerShell New-TenantAllowBlockListItems cmdlet.
+- `ews-get-tenant-allow-block-list-items`: Retrieve current Tenant Allow/Block List items. Uses Get-TenantAllowBlockListItems cmdlet.
+- `ews-get-tenant-allow-block-list-count`: Retrieve current count of defined Tenant Allow/Block List items. Uses Get-TenantAllowBlockListItems cmdlet.
+- `ews-remove-tenant-allow-block-list-items`: Remove items from the Tenant Allow/Block Lists. You can delete items by their value or by unique ID. Uses PowerShell cmdlet Remove-TenantAllowBlockListItems cmd
+- `ews-export-quarantinemessage`: Export quarantine messages.
+- `ews-get-quarantinemessage`: Retrieve quarantine messages.
+- `ews-release-quarantinemessage`: Releases the quarantined messages. Uses the PowerShell Release-QuarantineMessage cmdlet.
+- `ews-junk-rules-get`: Gets junk rules for the specified mailbox.
+- `ews-junk-rules-set`: Sets junk rules for the specified mailbox.
+- `ews-global-junk-rules-set`: Sets junk rules in all managed accounts.
 
 
 ## EWS v2
@@ -7136,21 +7300,21 @@ Exchange Web Services (EWS) provides the functionality to enable client applicat
 
 **Commands:**
 
-- `ews-get-attachment`: 
-- `ews-delete-attachment`: 
-- `ews-get-searchable-mailboxes`: 
-- `ews-search-mailboxes`: 
-- `ews-move-item`: 
-- `ews-delete-items`: 
-- `ews-search-mailbox`: 
-- `ews-get-contacts`: 
-- `ews-resolve-name`: 
-- `ews-get-out-of-office`: 
-- `ews-recover-messages`: 
-- `ews-create-folder`: 
-- `ews-mark-item-as-junk`: 
-- `ews-find-folders`: 
-- `ews-get-items-from-folder`: 
+- `ews-get-attachment`: Retrieves the actual attachments from an item (email message). To get all attachments for a message, only specify the item-id argument.
+- `ews-delete-attachment`: Deletes the attachments of an item (email message).
+- `ews-get-searchable-mailboxes`: Returns a list of searchable mailboxes. This command requires eDiscovery permissions to the Exchange Server. For more information, see the EWSv2 integration doc
+- `ews-search-mailboxes`: Searches over multiple mailboxes or all Exchange mailboxes. Use either the mailbox-search-scope command or the email-addresses command to search specific mailbo
+- `ews-move-item`: Move an item to different folder in the mailbox.
+- `ews-delete-items`: Delete items from mailbox. This command requires eDiscovery permissions to the Exchange Server. For more information, see the EWSv2 integration documentation.
+- `ews-search-mailbox`: Searches for items in the specified mailbox. Specific permissions are needed for this operation to search in a target mailbox other than the default.
+- `ews-get-contacts`: Retrieves contacts for a specified mailbox.
+- `ews-resolve-name`: This operation verifies aliases and matches display names to the correct mailbox user. It handles one ambiguous name at a time. If there are multiple potential 
+- `ews-get-out-of-office`: Retrieves the out-of-office status for a specified mailbox.
+- `ews-recover-messages`: Recovers messages that were soft-deleted.
+- `ews-create-folder`: Creates a new folder in a specified mailbox.
+- `ews-mark-item-as-junk`: Marks an item as junk. This is commonly used to block an email address. For more information, see the Microsoft documentation: https://msdn.microsoft.com/en-us/
+- `ews-find-folders`: Retrieves information for folders for a specified mailbox. Only folders with read permissions will be returned. Your visual folders on the mailbox, such as "Inb
+- `ews-get-items-from-folder`: Retrieves items from a specified folder in a mailbox. The items are order by the item created time, most recent is first.
 
 
 ## EWSApiModule
@@ -7169,21 +7333,21 @@ The Exabeam Security Management Platform provides end-to-end detection, User Eve
 
 **Commands:**
 
-- `exabeam-get-notable-users`: 
-- `exabeam-get-watchlists`: 
-- `exabeam-get-peer-groups`: 
-- `exabeam-get-user-info`: 
-- `exabeam-get-user-labels`: 
-- `exabeam-get-user-sessions`: 
-- `exabeam-delete-watchlist`: 
-- `exabeam-get-asset-data`: 
-- `exabeam-get-session-info-by-id`: 
-- `exabeam-list-top-domains`: 
-- `exabeam-list-triggered-rules`: 
-- `exabeam-get-asset-info`: 
-- `exabeam-list-asset-timeline-next-events`: 
-- `exabeam-list-security-alerts-by-asset`: 
-- `exabeam-search-rules`: 
+- `exabeam-get-notable-users`: Returns notable users in a period of time.
+- `exabeam-get-watchlists`: Returns all watchlist IDs and titles.
+- `exabeam-get-peer-groups`: Returns all peer groups.
+- `exabeam-get-user-info`: Returns user information data for the username.
+- `exabeam-get-user-labels`: Returns all labels of the user.
+- `exabeam-get-user-sessions`: Returns sessions for the given username and time range.
+- `exabeam-delete-watchlist`: Deletes a watchlist.
+- `exabeam-get-asset-data`: Returns asset data.
+- `exabeam-get-session-info-by-id`: Returns session info data for the given ID.
+- `exabeam-list-top-domains`: List top domains of a sequence.
+- `exabeam-list-triggered-rules`: Gets all the triggered rules of a sequence.
+- `exabeam-get-asset-info`: Returns asset information for given asset ID (hostname or IP address).
+- `exabeam-list-asset-timeline-next-events`: Gets next events for a given asset.
+- `exabeam-list-security-alerts-by-asset`: Gets security alerts for a given asset.
+- `exabeam-search-rules`: Searches for rules by a keyword.
 
 
 ## Exabeam Data Lake
@@ -7195,7 +7359,7 @@ Exabeam Data Lake provides a searchable log management system. Data Lake is used
 
 **Commands:**
 
-- `exabeam-data-lake-search`: 
+- `exabeam-data-lake-search`: Get events from Exabeam Data Lake.
 
 
 ## Exabeam Security Operations Platform
@@ -7207,18 +7371,18 @@ Exabeam Security Operations Platform offers a centralized and scalable platform 
 
 **Commands:**
 
-- `exabeam-platform-event-search`: 
-- `exabeam-platform-table-record-list`: 
-- `exabeam-platform-table-record-create`: 
-- `exabeam-platform-alert-search`: 
-- `exabeam-platform-context-table-delete`: 
-- `exabeam-platform-context-table-list`: 
-- `exabeam-platform-case-search`: 
-- `exabeam-platform-get-events`: 
-- `exabeam-get-threat-summary`: 
-- `exabeam-update-case-details`: 
-- `exabeam-platform-list-case-notes`: 
-- `exabeam-platform-create-case-note`: 
+- `exabeam-platform-event-search`: Get events from Exabeam Security Operations Platform.
+- `exabeam-platform-table-record-list`: Retrieve the records for a specific context table.
+- `exabeam-platform-table-record-create`: Add one or more context records directly to an existing table.
+- `exabeam-platform-alert-search`: Search for alerts that match one or more search criteria.
+- `exabeam-platform-context-table-delete`: Delete a specific context table, including records and attributes.
+- `exabeam-platform-table-record-list`: Retrieve metadata for all existing context tables, including source, operational status, and attribute mapping.
+- `exabeam-platform-case-search`: Search for cases that match one or more search criteria. For example, you can search for cases that are associated with a specific caseId and that reference spe
+- `exabeam-platform-get-events`: Get cases from Exabeam Security Operations Platform as Cortex XSIAM events. This command is supported in Cortex XSIAM only and is intended to be used for debugg
+- `exabeam-get-threat-summary`: Retrieve the Copilot Threat Summary for an individual alert.
+- `exabeam-update-case-details`: Update details for a specific case.
+- `exabeam-platform-list-case-notes`: Retrieve a list of notes associated with the specified caseId.
+- `exabeam-platform-create-case-note`: Add a new note to the specified case.
 
 
 ## Example-Delinea-Folder Operations
@@ -7278,10 +7442,10 @@ Note: This integration should be used as part of our Identity Lifecycle Manageme
 
 **Commands:**
 
-- `iam-create-user`: 
-- `iam-update-user`: 
-- `iam-get-user`: 
-- `iam-disable-user`: 
+- `iam-create-user`: Creates a user.
+- `iam-update-user`: Updates an existing user with the data passed in the user-profile argument.
+- `iam-get-user`: Retrieves a single user resource.
+- `iam-disable-user`: Disable an active user.
 
 
 ## ExifRead
@@ -7448,6 +7612,10 @@ Exposes the incident owner into IncidentOwner context key
 
 Use the Exterro package to integrate with the Exterro FTK platform enabling the automation of case/evidence management and endpoint collection. Documentation for the integration was provided by FTK Connect
 
+**Commands:**
+
+- `exterro-ftk-trigger-workflow`: Triggers the automation job and returns a string.
+
 
 ## ExtFilter
 
@@ -7513,20 +7681,20 @@ ExtraHop Reveal(x) for the platform, real-time threat detections backed by machi
 
 **Commands:**
 
-- `extrahop-watchlist-get`: 
-- `extrahop-peers-get`: 
-- `extrahop-devices-search`: 
-- `extrahop-protocols-get`: 
-- `extrahop-activity-map-get`: 
-- `extrahop-alert-rules-get`: 
-- `extrahop-packets-search`: 
-- `extrahop-devices-tag`: 
-- `extrahop-alert-rule-create`: 
-- `extrahop-ticket-track`: 
-- `extrahop-alert-rule-edit`: 
-- `extrahop-watchlist-edit`: 
-- `extrahop-metrics-list`: 
-- `extrahop-detections-list`: 
+- `extrahop-watchlist-get`: Get all devices on the advanced analysis watchlist in ExtraHop Reveal(x).
+- `extrahop-peers-get`: Get all peers for a device from ExtraHop Reveal(x).
+- `extrahop-devices-search`: Search for devices in ExtraHop Reveal(x).
+- `extrahop-protocols-get`: Get all active network protocols for a device from ExtraHop Reveal(x).
+- `extrahop-activity-map-get`: Get a link to a live activity map in ExtraHop Reveal(x).
+- `extrahop-alert-rules-get`: Get all alert rules from ExtraHop Reveal(x).
+- `extrahop-packets-search`: Search for specific packets in ExtraHop Reveal(x).
+- `extrahop-devices-tag`: Add or remove a tag from devices in ExtraHop Reveal(x).
+- `extrahop-alert-rule-create`: Create a new alert rule in ExtraHop Reveal(x).
+- `extrahop-ticket-track`: Link an ExtraHop Reveal(x) detection to a the platform.
+- `extrahop-alert-rule-edit`: Modify an alert rule in ExtraHop Reveal(x).
+- `extrahop-watchlist-edit`: Add or remove devices from the advanced analysis watchlist in ExtraHop Reveal(x).
+- `extrahop-metrics-list`: Get metrics for specified objects from ExtraHop Reveal(x).
+- `extrahop-detections-list`: Get detections from ExtraHop Reveal(x).
 
 
 ## ExtraHopTrackIncidents
@@ -7546,17 +7714,17 @@ Manages F5 LTM This integration was integrated and tested with version 16.1.0 of
 
 **Commands:**
 
-- `f5-ltm-get-pools`: 
-- `f5-ltm-get-pool`: 
-- `f5-ltm-get-pool-members`: 
-- `f5-ltm-get-nodes`: 
-- `f5-ltm-get-node`: 
-- `f5-ltm-disable-node`: 
-- `f5-ltm-enable-node`: 
-- `f5-ltm-get-pool-member-stats`: 
-- `f5-ltm-get-node-stats`: 
-- `f5-ltm-get-node-by-address`: 
-- `f5-ltm-get-pool-by-node`: 
+- `f5-ltm-get-pools`: Get a list of all pools
+- `f5-ltm-get-pool`: Get pool details
+- `f5-ltm-get-pool-members`: Get Pool Members
+- `f5-ltm-get-nodes`: Get a list of all nodes
+- `f5-ltm-get-node`: Get node details
+- `f5-ltm-disable-node`: Disable a node
+- `f5-ltm-enable-node`: Enable a node
+- `f5-ltm-get-pool-member-stats`: Get Pool Member Stats
+- `f5-ltm-get-node-stats`: Get Node Stats
+- `f5-ltm-get-node-by-address`: Get node information by address
+- `f5-ltm-get-pool-by-node`: Get pool information by node
 
 
 ## F5 Silverline
@@ -7568,9 +7736,9 @@ F5 Silverline Threat Intelligence is a cloud-based service incorporating externa
 
 **Commands:**
 
-- `f5-silverline-ip-objects-list`: 
-- `f5-silverline-ip-object-add`: 
-- `f5-silverline-ip-object-delete`: 
+- `f5-silverline-ip-objects-list`: Gets a dynamic list of threatening IP addresses by the given list type.
+- `f5-silverline-ip-object-add`: Adds a new particular threatening IP address object by its IP address.
+- `f5-silverline-ip-object-delete`: Deletes an existing particular threatening IP address object by its object ID or by its IP address.
 
 
 ## FailedInstances
@@ -7590,8 +7758,8 @@ This integration uses Farsight Security’s DNSDB solution to interactively look
 
 **Commands:**
 
-- `dnsdb-rdata`: 
-- `dnsdb-rrset`: 
+- `dnsdb-rdata`: Lookup rdata records
+- `dnsdb-rrset`: Lookup rrser records
 
 
 ## Farsight DNSDB v2
@@ -7603,12 +7771,12 @@ Farsight Security DNSDB® is the world’s largest DNS intelligence database tha
 
 **Commands:**
 
-- `dnsdb-flex`: 
-- `dnsdb-rdata`: 
-- `dnsdb-summarize-rdata`: 
-- `dnsdb-rrset`: 
-- `dnsdb-summarize-rrset`: 
-- `dnsdb-rate-limit`: 
+- `dnsdb-flex`: DNSDB flex search
+- `dnsdb-rdata`: Lookup RData records
+- `dnsdb-summarize-rdata`: Summarize RData records
+- `dnsdb-rrset`: Lookup RRset records
+- `dnsdb-summarize-rrset`: Lookup RRset records
+- `dnsdb-rate-limit`: Retrieve service limits
 
 
 ## FeedIntegrationErrorWidget
@@ -7633,7 +7801,21 @@ Widget script to view information about the relationship between an indicator, e
 **Product:** Fidelis Endpoint  
 **Commands:**
 
-- `fidelis-endpoint-list-alerts`: 
+- `fidelis-endpoint-list-alerts`: Returns all alerts in the system.
+- `fidelis-endpoint-host-info`: Searches for endpoints based on an IP address or hostname.
+- `fidelis-endpoint-file-search`: Searches for files on multiple hosts, using file hash, file extension, file size, and other search criteria.
+- `fidelis-endpoint-file-search-status`: Gets the file search job status.
+- `fidelis-endpoint-file-search-result-metadata`: Gets the job results metadata. The maximum is 50 results.
+- `fidelis-endpoint-get-file`: Gets the file stream and download the file.
+- `fidelis-endpoint-delete-file-search-job`: Removes the job to free up space on the server.
+- `fidelis-endpoint-list-scripts`: Gets a list of all script packages.
+- `fidelis-endpoint-get-script-manifest`: Gets the script manifest.
+- `fidelis-endpoint-list-processes`: Gets a list all processes according to the OS system.
+- `fidelis-endpoint-get-script-result`: Gets script job results.
+- `fidelis-endpoint-kill-process`: Terminates the process that matches the required parameter's process ID.
+- `fidelis-endpoint-delete-file`: Deletes a file at the specified path.
+- `fidelis-endpoint-isolate-network`: Quarantines an endpoint. While isolated, the endpoint's network communication is restricted to only the allowed servers.
+- `fidelis-endpoint-remove-network-isolation`: Removes the endpoint from isolation.
 
 
 ## File Analysis - ReversingLabs A1000
@@ -7729,7 +7911,7 @@ Manage FileOrbis operations. This integration was integrated and tested with ver
 
 **Commands:**
 
-- `fileorbis-change-user-status`: 
+- `fileorbis-change-user-status`: Changes user status
 
 
 ## FileReputation
@@ -7779,17 +7961,17 @@ FireEye Central Management (CM Series) is the FireEye threat intelligence hub. I
 
 **Commands:**
 
-- `fireeye-cm-get-alerts`: 
-- `fireeye-cm-get-alert-details`: 
-- `fireeye-cm-alert-acknowledge`: 
-- `fireeye-cm-get-artifacts-by-uuid`: 
-- `fireeye-cm-get-artifacts-metadata-by-uuid`: 
-- `fireeye-cm-get-events`: 
-- `fireeye-cm-get-quarantined-emails`: 
-- `fireeye-cm-release-quarantined-emails`: 
-- `fireeye-cm-delete-quarantined-emails`: 
-- `fireeye-cm-download-quarantined-emails`: 
-- `fireeye-cm-get-reports`: 
+- `fireeye-cm-get-alerts`: Searches and retrieves FireEye CM alerts based on several filters.
+- `fireeye-cm-get-alert-details`: Searches and retrieves the details of a single alert.
+- `fireeye-cm-alert-acknowledge`: Confirms that the alert has been reviewed.
+- `fireeye-cm-get-artifacts-by-uuid`: Downloads malware artifacts data for the specified UUID as a zip file.
+- `fireeye-cm-get-artifacts-metadata-by-uuid`: Gets artifacts metadata for the specified UUID.
+- `fireeye-cm-get-events`: Retrieves information about existing IPS NX events. An IPS enabled appliance is a prerequisite to be able to retrieve IPS event data.
+- `fireeye-cm-get-quarantined-emails`: Searches and retrieves quarantined emails.
+- `fireeye-cm-release-quarantined-emails`: Releases and deletes quarantined emails. This is not available when Email Security is in Drop mode.
+- `fireeye-cm-delete-quarantined-emails`: Deletes quarantined emails. This is not available when Email Security is in Drop mode.
+- `fireeye-cm-download-quarantined-emails`: Download quarantined emails.
+- `fireeye-cm-get-reports`: Returns reports on selected alerts.
 
 
 ## FireEye Endpoint Security (HX) v2
@@ -7801,21 +7983,21 @@ FireEye Endpoint Security is an integrated solution that detects what others mis
 
 **Commands:**
 
-- `fireeye-hx-get-host-information`: 
-- `fireeye-hx-get-all-hosts-information`: 
-- `fireeye-hx-host-containment`: 
-- `fireeye-hx-cancel-containment`: 
-- `fireeye-hx-initiate-data-acquisition`: 
-- `fireeye-hx-get-host-set-information`: 
-- `fireeye-hx-list-policy`: 
-- `fireeye-hx-list-host-set-policy`: 
-- `fireeye-hx-list-containment`: 
-- `fireeye-hx-search-list`: 
-- `fireeye-hx-search-stop`: 
-- `fireeye-hx-search-result-get`: 
-- `fireeye-hx-search`: 
-- `fireeye-hx-get-alert`: 
-- `fireeye-hx-suppress-alert`: 
+- `fireeye-hx-get-host-information`: Returns information on a host associated with an agent.
+- `fireeye-hx-get-all-hosts-information`: Returns information on all hosts.
+- `fireeye-hx-host-containment`: Applies containment for a specific host, so that it no longer has access to other systems. If the user does not have the necessary permissions, the command will
+- `fireeye-hx-cancel-containment`: Releases a specific host from containment.
+- `fireeye-hx-initiate-data-acquisition`: Initiates a data acquisition process to collect artifacts from the system disk and memory.
+- `fireeye-hx-get-host-set-information`: Returns a list of all host sets known to your HX Series appliance.
+- `fireeye-hx-list-policy`: Returns a list of all policies.
+- `fireeye-hx-list-host-set-policy`: Returns a list of all policies for all host sets.
+- `fireeye-hx-list-containment`: Fetches all containment states across known hosts.
+- `fireeye-hx-search-list`: Fetches all enterprise searches.
+- `fireeye-hx-search-stop`: Stops a specific running search.
+- `fireeye-hx-search-result-get`: Fetches the results for a specific enterprise search.
+- `fireeye-hx-search`: Searches endpoints to check all hosts or a subset of hosts for a specific file or indicator.
+- `fireeye-hx-get-alert`: Get details of a specific alert.
+- `fireeye-hx-suppress-alert`: Suppresses an alert by ID.
 
 
 ## FireEye Helix
@@ -7824,6 +8006,24 @@ FireEye Endpoint Security is an integrated solution that detects what others mis
 **Product:** FireEye Helix  
 
 Use the FireEye Helix integration to integrate security tools and arguments with next-generation SIEM, orchestration and threat intelligence tools such as alert management, search, analysis, investigations and reporting. In order to configure this integration you must have a FireEye customer ID. Your customer ID will placed in the FireEye Helix URL of your FireEye Helix app after /helix/id/. e.g. for the following URL  the customer ID is "helixid". The API key can be found and generated in the API KEYS section. You can navigate to it from your FireEye Helix app home page by clicking on the user icon on the top right, and choosing HELIX Settings. You'll be redirected to the HELIX Settings page, where API KEYS can be found
+
+**Commands:**
+
+- `fireeye-helix-list-alerts`: Returns all alerts.
+- `fireeye-helix-get-alert-by-id`: Returns alert details, by alert ID.
+- `fireeye-helix-alert-create-note`: Creates an alert note.
+- `fireeye-helix-get-events-by-alert`: Lists events alerts for a specific alert.
+- `fireeye-helix-get-endpoints-by-alert`: Retrieves a specific alert from an helix endpoint.
+- `fireeye-helix-get-cases-by-alert`: Returns cases of an alert.
+- `fireeye-helix-get-lists`: Returns lists.
+- `fireeye-helix-get-list-by-id`: Returns a specific list by list ID.
+- `fireeye-helix-create-list`: Creates a list.
+- `fireeye-helix-update-list`: Updates an existing list.
+- `fireeye-helix-delete-list`: Deletes a single list by list ID.
+- `fireeye-helix-list-sensors`: Fetches all sensors.
+- `fireeye-helix-list-rules`: Returns all rules.
+- `fireeye-helix-edit-rule`: Modifies an existing rule.
+- `fireeye-helix-alert-get-notes`: Returns all notes related to an alert.
 
 
 ## FireEye Helix Archive Search
@@ -7893,10 +8093,10 @@ FireMon Security Manager delivers comprehensive rule lifecycle management to hel
 
 **Commands:**
 
-- `firemon-user-authentication`: 
-- `firemon-create-pp-ticket`: 
-- `firemon-pca`: 
-- `firemon-secmgr-secrule-search`: 
+- `firemon-user-authentication`: Returns authentication token
+- `firemon-create-pp-ticket`: Creates a ticket in policy planner application
+- `firemon-pca`: PCA- Pre-Change Assessment is process of showing impact of created devices changes in early stages before implementing changes to devices. We can check the PCA 
+- `firemon-secmgr-secrule-search`: Searches for security rules using the SIQL language query (limit to 10k)
 
 
 ## FirstArrayElement
@@ -7920,21 +8120,21 @@ Use the Flashpoint Ignite integration to reduce business risk. Ignite allows use
 
 **Commands:**
 
-- `flashpoint-ignite-intelligence-report-search`: 
-- `flashpoint-ignite-compromised-credentials-list`: 
-- `flashpoint-ignite-event-list`: 
-- `flashpoint-ignite-event-get`: 
-- `flashpoint-ignite-intelligence-report-get`: 
-- `flashpoint-ignite-intelligence-related-report-list`: 
-- `flashpoint-ignite-alert-list`: 
-- `flashpoint-ignite-common-lookup`: 
-- `flashpoint-ignite-indicator-get`: 
-- `flashpoint-ignite-vulnerability-get`: 
-- `flashpoint-ignite-vulnerability-list`: 
-- `flashpoint-ignite-vulnerability-library-list`: 
-- `flashpoint-ignite-vulnerability-package-list`: 
-- `flashpoint-ignite-vendor-list`: 
-- `flashpoint-ignite-product-list`: 
+- `flashpoint-ignite-intelligence-report-search`: Search for the Intelligence Reports using a keyword.
+- `flashpoint-ignite-compromised-credentials-list`: Retrieves the compromised credentials based on the filter values provided in the command arguments.
+- `flashpoint-ignite-event-list`: Searches for events within the specified time period, the Flashpoint report ID, or attack IDs.
+- `flashpoint-ignite-event-get`: Retrieves the details of a single event using event FPID or UUID.
+- `flashpoint-ignite-intelligence-report-get`: Get single report details using the report id.
+- `flashpoint-ignite-intelligence-related-report-list`: List related reports for a particular report using the report ID.
+- `flashpoint-ignite-alert-list`: Retrieves a list of alerts based on the filter values provided in the command arguments.
+- `email`: Looks up the "Email" type indicator details. The reputation of Email is considered malicious if there's at least one IoC event in the Ignite database matching t
+- `filename`: Looks up the "Filename" type indicator details. The reputation of Filename is considered malicious if there's at least one IoC event in the Ignite database matc
+- `ip`: Looks up the "IP" type indicator details. The reputation of the IP address is decided from the indicator score if it is found in the Ignite IOC database. Altern
+- `flashpoint-ignite-common-lookup`: Looks up details for indicators of types: "URL", "Domain", "File Hash", and "IP". The reputation of the indicator is decided from the indicator score if it is f
+- `flashpoint-ignite-indicator-get`: Looks up details for indicators of types "URL", "Domain", "File Hash", and "IP" using their ID. The reputation of the indicator is decided from the indicator sc
+- `url`: Looks up the "URL" type indicator details. The reputation of the URL is decided from the indicator score if it is found in the Ignite IOC database.
+- `domain`: Looks up the "Domain" type indicator details. The reputation of the domain is decided from the indicator score if it is found in the Ignite IOC database.
+- `file`: Looks up the "File" type indicator details. The reputation of the file is decided from the indicator score if it is found in the Ignite IOC database.
 
 
 ## FlashpointCreateThreatIntelReport
@@ -7978,21 +8178,21 @@ Forcepoint SMC provides unified, centralized management of all models of Forcepo
 
 **Commands:**
 
-- `forcepoint-smc-ip-list-create`: 
-- `forcepoint-smc-ip-list-update`: 
-- `forcepoint-smc-ip-list-list`: 
-- `forcepoint-smc-ip-list-delete`: 
-- `forcepoint-smc-host-list`: 
-- `forcepoint-smc-host-create`: 
-- `forcepoint-smc-host-update`: 
-- `forcepoint-smc-host-delete`: 
-- `forcepoint-smc-domain-create`: 
-- `forcepoint-smc-domain-list`: 
-- `forcepoint-smc-domain-delete`: 
-- `forcepoint-smc-policy-template-list`: 
-- `forcepoint-smc-firewall-policy-list`: 
-- `forcepoint-smc-firewall-policy-create`: 
-- `forcepoint-smc-firewall-policy-delete`: 
+- `forcepoint-smc-ip-list-create`: Creates an IP list.
+- `forcepoint-smc-ip-list-update`: Updates an IP list.
+- `forcepoint-smc-ip-list-list`: Lists the IP Lists in the system.
+- `forcepoint-smc-ip-list-delete`: Deletes an IP list.
+- `forcepoint-smc-host-list`: Lists the hosts in the system.
+- `forcepoint-smc-host-create`: Creates a new host.
+- `forcepoint-smc-host-update`: Updates a host.
+- `forcepoint-smc-host-delete`: Deletes a host.
+- `forcepoint-smc-domain-create`: Creates a new domain.
+- `forcepoint-smc-domain-list`: Lists the domains in the system.
+- `forcepoint-smc-domain-delete`: Deletes a domain.
+- `forcepoint-smc-policy-template-list`: Lists the policy templates in the system.
+- `forcepoint-smc-firewall-policy-list`: Lists the firewall policies in the system.
+- `forcepoint-smc-firewall-policy-create`: Creates a firewall policy.
+- `forcepoint-smc-firewall-policy-delete`: Deletes a firewall policy.
 
 
 ## Forescout EyeInspect
@@ -8001,15 +8201,15 @@ Forcepoint SMC provides unified, centralized management of all models of Forcepo
 **Product:** Forescout EyeInspect  
 **Commands:**
 
-- `forescout-ei-host-list`: 
-- `forescout-ei-link-list`: 
-- `forescout-ei-vulnerability-info-get`: 
-- `forescout-ei-alert-list`: 
-- `forescout-ei-alert-pcap-get`: 
-- `forescout-ei-sensor-list`: 
-- `forescout-ei-sensor-module-list`: 
-- `forescout-ei-sensor-module-update`: 
-- `forescout-ei-sensor-module-delete`: 
+- `forescout-ei-host-list`: Retrieves information about the hosts in the eyeInspect CC database.
+- `forescout-ei-link-list`: Retrieves information about the links in the eyeInspect CC database.
+- `forescout-ei-vulnerability-info-get`: Retrieves information about a specific vulnerability stored in the eyeInspect CC database.
+- `forescout-ei-alert-list`: Retrieves information about the alerts inside eyeInspect CC.
+- `forescout-ei-alert-pcap-get`: Retrieves the PCAP file associated to a given alert.
+- `forescout-ei-sensor-list`: Retrieves information about the sensors associated to the eyeInspect CC.
+- `forescout-ei-sensor-module-list`: Retrieves information about the modules of the specified sensor.
+- `forescout-ei-sensor-module-update`: Changes the specified properties of the specified module.
+- `forescout-ei-sensor-module-delete`: Deletes the specified module from the specified sensor and from the eyeInspect CC database.
 
 
 ## ForescoutEyeInspectButtonGetVulnerabilityInfo
@@ -8041,15 +8241,15 @@ Manage Secrets and Protect Confidential Data using Fortanix Data Security Manage
 
 **Commands:**
 
-- `fortanix-list-secrets`: 
-- `fortanix-get-secret-metadata`: 
-- `fortanix-fetch-secret`: 
-- `fortanix-new-secret`: 
-- `fortanix-rotate-secret`: 
-- `fortanix-delete-secret`: 
-- `fortanix-invoke-plugin`: 
-- `fortanix-encrypt`: 
-- `fortanix-decrypt`: 
+- `fortanix-list-secrets`: List secrets from one or more specified group(s)
+- `fortanix-get-secret-metadata`: Get the secret metadata without exposing its value
+- `fortanix-fetch-secret`: Retrieve the secret value
+- `fortanix-new-secret`: Import a new secret
+- `fortanix-rotate-secret`: Update an existing secret, which will be rotated
+- `fortanix-delete-secret`: Delete the secret
+- `fortanix-invoke-plugin`: Invoke a Fortanix Plugin that is executed in a Confidential Computing enclave
+- `fortanix-encrypt`: Protects data using key configured in Fortanix DSM
+- `fortanix-decrypt`: Reveal data using key configured in Fortanix DSM
 
 
 ## FortiAuthenticator
@@ -8074,8 +8274,8 @@ FortiGate provides flawless convergence that can scale to any location: remote o
 
 **Commands:**
 
-- `fortigate-list-firewall-address-ipv4s`: 
-- `fortigate-create-firewall-address-ipv4`: 
+- `fortigate-list-firewall-address-ipv4s`: Retrieve firewall IPv4 addresses. Addresses define sources and destinations of network traffic and can be used in many functions such as firewall policies, ZTNA
+- `fortigate-create-firewall-address-ipv4`: Create firewall IPv4 addresses. Addresses define sources and destinations of network traffic and can be used in many functions such as firewall policies, ZTNA, 
 
 
 ## FortiMail
@@ -8087,21 +8287,21 @@ FortiMail is a comprehensive email security solution by Fortinet, offering advan
 
 **Commands:**
 
-- `fortimail-ip-group-create`: 
-- `fortimail-ip-group-update`: 
-- `fortimail-ip-group-delete`: 
-- `fortimail-ip-group-list`: 
-- `fortimail-ip-group-member-add`: 
-- `fortimail-ip-group-member-replace`: 
-- `fortimail-ip-group-member-delete`: 
-- `fortimail-ip-group-member-list`: 
-- `fortimail-email-group-create`: 
-- `fortimail-email-group-update`: 
-- `fortimail-email-group-delete`: 
-- `fortimail-email-group-list`: 
-- `fortimail-email-group-member-add`: 
-- `fortimail-email-group-member-replace`: 
-- `fortimail-email-group-member-delete`: 
+- `fortimail-ip-group-create`: Create an IP group. IP group is a container that contains members of IP address that can be used when configuring access control rules (define the source IP gro
+- `fortimail-ip-group-update`: Update the comment of an IP group.
+- `fortimail-ip-group-delete`: Delete an IP group.
+- `fortimail-ip-group-list`: List IP groups. if a name is given, the command will return the information about the specified IP group.
+- `fortimail-ip-group-member-add`: Add an IP group member (IP/Netmask or IP range) to an IP group. An IP group member is an IP address that can be used when configuring access control rules (defi
+- `fortimail-ip-group-member-replace`: Replace IP group members with new members. This command overwrites all the IP group members that was defined in the IP group.
+- `fortimail-ip-group-member-delete`: Delete an IP group member from IP group.
+- `fortimail-ip-group-member-list`: List IP group members. If an ip is given, the command will return the information about the specified IP group member.
+- `fortimail-email-group-create`: Create an email group. An email group is a container for a list of email addresses, allowing you to use it in configuring access control rules (for defining the
+- `fortimail-email-group-update`: Update the comment of an email group.
+- `fortimail-email-group-delete`: Delete an email group.
+- `fortimail-email-group-list`: List email groups. If a name is given, the command will return the information about the specified email group.
+- `fortimail-email-group-member-add`: Add an email group member (email address) to an email group.
+- `fortimail-email-group-member-replace`: Replace email group members with new members. This command overwrites all the email group members that were defined in the email group.
+- `fortimail-email-group-member-delete`: Delete an email group member from an email group.
 
 
 ## FortiManager
@@ -8113,21 +8313,21 @@ FortiManager is a single console central management system that manages Fortinet
 
 **Commands:**
 
-- `fortimanager-devices-list`: 
-- `fortimanager-device-groups-list`: 
-- `fortimanager-address-list`: 
-- `fortimanager-address-create`: 
-- `fortimanager-address-update`: 
-- `fortimanager-address-delete`: 
-- `fortimanager-address-group-list`: 
-- `fortimanager-address-group-create`: 
-- `fortimanager-address-group-update`: 
-- `fortimanager-address-group-delete`: 
-- `fortimanager-service-categories-list`: 
-- `fortimanager-service-group-list`: 
-- `fortimanager-service-group-create`: 
-- `fortimanager-service-group-update`: 
-- `fortimanager-service-group-delete`: 
+- `fortimanager-devices-list`: List all devices in the ADOM instance.
+- `fortimanager-device-groups-list`: List ADOM device groups.
+- `fortimanager-address-list`: List ADOM firewall IPv4 addresses.
+- `fortimanager-address-create`: Add a new IPv4 address.
+- `fortimanager-address-update`: Add a new IPv4 address.
+- `fortimanager-address-delete`: Delete an address.
+- `fortimanager-address-group-list`: List ADOM IPv4 address groups.
+- `fortimanager-address-group-create`: Create a new address group.
+- `fortimanager-address-group-update`: Create a new address group.
+- `fortimanager-address-group-delete`: Delete an address group.
+- `fortimanager-service-categories-list`: List the ADOM service categories.
+- `fortimanager-service-group-list`: List ADOM service groups.
+- `fortimanager-service-group-create`: Creates a new service group.
+- `fortimanager-service-group-update`: Create a new service group.
+- `fortimanager-service-group-delete`: Delete a service group
 
 
 ## FortiSandbox - Loop for Job Submissions
@@ -8180,7 +8380,9 @@ FortiSandbox is an advanced security tool that goes beyond standard sandboxing. 
 
 **Commands:**
 
-- `fortisandbox-submission-file-upload`: 
+- `file`: Runs reputation on files.
+- `url`: Runs reputation on URLs.
+- `fortisandbox-submission-file-upload`: Scheduled command to upload any file type to be sandboxed. The system swiftly identifies and mitigates threats in files.
 
 
 ## Fortiweb VM
@@ -8192,21 +8394,21 @@ Fortiweb VM integration allows to manage WAF policies and block cookies, URLs, a
 
 **Commands:**
 
-- `fortiwebvm-protected-hostname-group-create`: 
-- `fortiwebvm-protected-hostname-group-update`: 
-- `fortiwebvm-protected-hostname-group-list`: 
-- `fortiwebvm-protected-hostname-member-create`: 
-- `fortiwebvm-protected-hostname-member-update`: 
-- `fortiwebvm-protected-hostname-member-list`: 
-- `fortiwebvm-protected-hostname-member-delete`: 
-- `fortiwebvm-protected-hostname-group-delete`: 
-- `fortiwebvm-ip-list-group-create`: 
-- `fortiwebvm-ip-list-group-update`: 
-- `fortiwebvm-ip-list-group-list`: 
-- `fortiwebvm-ip-list-member-create`: 
-- `fortiwebvm-ip-list-member-update`: 
-- `fortiwebvm-ip-list-member-list`: 
-- `fortiwebvm-ip-list-member-delete`: 
+- `fortiwebvm-protected-hostname-group-create`: Create protected host name group.
+- `fortiwebvm-protected-hostname-group-update`: Update protected host name group.
+- `fortiwebvm-protected-hostname-group-list`: List the Protected host name group.
+- `fortiwebvm-protected-hostname-member-create`: Create protected host name member.
+- `fortiwebvm-protected-hostname-member-update`: Update a protected host name member.
+- `fortiwebvm-protected-hostname-member-list`: List all the protected host name members.
+- `fortiwebvm-protected-hostname-member-delete`: Delete protected host name member.
+- `fortiwebvm-protected-hostname-group-delete`: Delete a protected host name.
+- `fortiwebvm-ip-list-group-create`: Create IP List.
+- `fortiwebvm-ip-list-group-update`: Update an IP list.
+- `fortiwebvm-ip-list-group-list`: Supports API versions 1 & 2.
+- `fortiwebvm-ip-list-member-create`: Create an IP list member. Supports API versions 1 & 2.
+- `fortiwebvm-ip-list-member-update`: Update IP list policy member.
+- `fortiwebvm-ip-list-member-list`: List the IP list policy members.
+- `fortiwebvm-ip-list-member-delete`: Delete an IP list policy member.
 
 
 ## FPDeleteRule
@@ -8253,16 +8455,16 @@ Manage incidents via the Fraudwatch API. FraudWatch International provides a ful
 
 **Commands:**
 
-- `fraudwatch-incidents-list`: 
-- `fraudwatch-incident-report`: 
-- `fraudwatch-incident-update`: 
-- `fraudwatch-incident-get-by-identifier`: 
-- `fraudwatch-incident-forensic-get`: 
-- `fraudwatch-incident-contact-emails-list`: 
-- `fraudwatch-incident-messages-add`: 
-- `fraudwatch-incident-urls-add`: 
-- `fraudwatch-incident-attachment-upload`: 
-- `fraudwatch-brands-list`: 
+- `fraudwatch-incidents-list`: Get a list of incidents from FraudWatch service.
+- `fraudwatch-incident-report`: Report an incident to FraudWatch service.
+- `fraudwatch-incident-update`: Updates the incident associated with the 'incident_id' with the specified argument values.
+- `fraudwatch-incident-get-by-identifier`: Gets an incident from FraudWatch service by its reference ID or incident ID. Single values of 'reference_id' and 'incident_id' should be specified.
+- `fraudwatch-incident-forensic-get`: Gets the forensic data of the incident associated with the specified incident ID.
+- `fraudwatch-incident-contact-emails-list`: Provides a list of the messages related to the incident associated with the specified incident ID.
+- `fraudwatch-incident-messages-add`: Add a new related message to the incident associated with the specified incident ID.
+- `fraudwatch-incident-urls-add`: Adds additional URLs to the incident associated with the specified incident ID. Fails if one of the new urls already exists.
+- `fraudwatch-incident-attachment-upload`: Adds a new file attachment to the incident associated with the specified incident ID.
+- `fraudwatch-brands-list`: Gets a list of brands from FraudWatch service.
 
 
 ## Freshworks Freshservice
@@ -8274,21 +8476,21 @@ Freshservice is a service management solution that allows customers to manage se
 
 **Commands:**
 
-- `freshservice-ticket-list`: 
-- `freshservice-ticket-create`: 
-- `freshservice-ticket-update`: 
-- `freshservice-ticket-delete`: 
-- `freshservice-ticket-task-list`: 
-- `freshservice-ticket-task-create`: 
-- `freshservice-ticket-task-update`: 
-- `freshservice-ticket-task-delete`: 
-- `freshservice-ticket-conversation-list`: 
-- `freshservice-ticket-conversation-reply-create`: 
-- `freshservice-ticket-conversation-note-create`: 
-- `freshservice-ticket-conversation-update`: 
-- `freshservice-ticket-conversation-delete`: 
-- `freshservice-problem-list`: 
-- `freshservice-problem-create`: 
+- `freshservice-ticket-list`: Retrieve all existing tickets or a specific ticket by specifying the ticket ID. By default, only tickets that have been created within the past 30 days will be 
+- `freshservice-ticket-create`: Create a new Ticket at the service desk. The default Ticket type is incident. Create ticket required one of the following: requester_id, phone, email. Ticket ty
+- `freshservice-ticket-update`: Update an existing Ticket in Freshservice.
+- `freshservice-ticket-delete`: Delete an existing Ticket in Freshservice.
+- `freshservice-ticket-task-list`: Retrieve tasks list (or a specific task) on a Ticket with the given ID from Freshservice.
+- `freshservice-ticket-task-create`: Create a new task on a Ticket request in Freshservice.
+- `freshservice-ticket-task-update`: Update an existing task on an existing Ticket in Freshservice.
+- `freshservice-ticket-task-delete`: Delete the task on a Ticket with the given ID from Freshservice.
+- `freshservice-ticket-conversation-list`: Retrieve all Conversations of a Ticket. Conversations consist of replies as well as public and private notes added to a ticket. Notes are non-invasive ways of s
+- `freshservice-ticket-conversation-reply-create`: Create a new reply for an existing Ticket Conversation.
+- `freshservice-ticket-conversation-note-create`: Create a new note for an existing Ticket Conversation.
+- `freshservice-ticket-conversation-update`: Update an existing Conversation on an existing Ticket in Freshservice.
+- `freshservice-ticket-conversation-delete`: Delete the Conversation on a Ticket with the given ID from Freshservice.
+- `freshservice-problem-list`: Retrieve a list of all Problems or a specific problem with the given ID from Freshservice.
+- `freshservice-problem-create`: Create a new problem request in Freshservice. Creating a problem required one of the following- requester_id or email.
 
 
 ## FTP
@@ -8300,9 +8502,9 @@ FTP integration to download or upload files to a remote FTP server. Please note 
 
 **Commands:**
 
-- `ftp-ls`: 
-- `ftp-put`: 
-- `ftp-get`: 
+- `ftp-ls`: List all the files under the current folder.
+- `ftp-put`: Upload file to FTP server.
+- `ftp-get`: Download file from FTP server.
 
 
 ## G Suite Auditor
@@ -8314,7 +8516,7 @@ G Suite Auditor is an integration that receives audit logs from G Suite's differ
 
 **Commands:**
 
-- `gsuite-activity-search`: 
+- `gsuite-activity-search`: Retrieves a list of activities for a specific customer's account and application.
 
 
 ## G Suite Security Alert Center
@@ -8326,12 +8528,12 @@ G Suite Security Alert Center allows users to fetch different alert types such a
 
 **Commands:**
 
-- `gsac-alert-list`: 
-- `gsac-alert-get`: 
-- `gsac-alert-feedback-create`: 
-- `gsac-alert-feedback-list`: 
-- `gsac-alert-delete`: 
-- `gsac-alert-recover`: 
+- `gsac-alert-list`: Lists the alerts. Use the filter to filter the list by various alert types. Note: The alerts that have been marked for deletion in the past 30 days will still b
+- `gsac-alert-get`: Gets the specified alert. Note: To get the alert_id, execute the gsac-alert-list command.
+- `gsac-alert-feedback-create`: Creates new feedback for an alert.
+- `gsac-alert-feedback-list`: Lists all the feedback for an alert.
+- `gsac-alert-delete`: Performs delete operation on alerts. Note: The alerts that are marked for deletion will be removed from the Alert Center after 30 days.
+- `gsac-alert-recover`: Performs a recover operation on alerts. Note: Recovers the alerts that were marked for deletion within the past 30 days.
 
 
 ## Gamma
@@ -8343,9 +8545,9 @@ Gamma Enterprise DLP provides 1-click automatic discovery and remediation of dat
 
 **Commands:**
 
-- `gamma-get-violation-list`: 
-- `gamma-get-violation`: 
-- `gamma-update-violation`: 
+- `gamma-get-violation-list`: Fetch DLP violations found across SaaS applications monitored by Gamma
+- `gamma-get-violation`: Fetches a single DLP violation. This command is the same as gamma-get-violation-list except that this command only returns the DLP violation details of the give
+- `gamma-update-violation`: Updates a DLP violation status in Gamma
 
 
 ## GatewatcherAlertEngine
@@ -8365,7 +8567,21 @@ This integration allows, via about twenty commands, to interact with the GCenter
 
 **Commands:**
 
-- `gw-get-alert`: 
+- `gw-get-alert`: Get an alert by it's uid
+- `gw-es-query`: Get Elasticsearch data
+- `gw-add-malcore-list-entry`: Add malcore whitelist/blacklist entry
+- `gw-del-malcore-list-entry`: Delete malcore whitelist/blacklist entry
+- `gw-add-dga-list-entry`: Add dga whitelist/blacklist entry
+- `gw-del-dga-list-entry`: Delete dga whitelist/blacklist entry
+- `gw-add-ignore-asset-name`: Ignore asset name
+- `gw-add-ignore-kuser-ip`: Ignore kuser IP
+- `gw-add-ignore-kuser-name`: Ignore kuser name
+- `gw-add-ignore-mac-address`: Ignore mac address
+- `gw-del-ignore-asset-name`: Delete an ignore asset ID
+- `gw-del-ignore-kuser-ip`: Delete an ignore kuser IP ID
+- `gw-del-ignore-kuser-name`: Delete an ignore kuser name ID
+- `gw-del-ignore-mac-address`: Delete an ignore mac address ID
+- `gw-send-malware`: Send malware
 
 
 ## GCenter 103
@@ -8377,21 +8593,21 @@ This integration fetch events generated by the GCenter appliance. This integrati
 
 **Commands:**
 
-- `gcenter103-alerts-list`: 
-- `gcenter103-alerts-get`: 
-- `gcenter103-alerts-note-add`: 
-- `gcenter103-alerts-note-remove`: 
-- `gcenter103-alerts-tags-get`: 
-- `gcenter103-alerts-tags-add`: 
-- `gcenter103-alerts-tags-remove`: 
-- `gcenter103-alerts-status-update`: 
-- `gcenter103-raw-alerts-get`: 
-- `gcenter103-raw-alerts-file-get`: 
-- `gcenter103-file-scan`: 
-- `gcenter103-file-scan-result-get`: 
-- `gcenter103-assets-list`: 
-- `gcenter103-assets-alerts-get`: 
-- `gcenter103-assets-get`: 
+- `gcenter103-alerts-list`: List all alerts.
+- `gcenter103-alerts-get`: Get an alert with its UUID (corresponds to event.id field) or the GCenter ID of the alert.
+- `gcenter103-alerts-note-add`: Add or update a note to an alert.
+- `gcenter103-alerts-note-remove`: Delete the note of an alert.
+- `gcenter103-alerts-tags-get`: Get the tags of an alert.
+- `gcenter103-alerts-tags-add`: Add or update tags of an alert.
+- `gcenter103-alerts-tags-remove`: Remove tags from an alert.
+- `gcenter103-alerts-status-update`: Update status of an alert.
+- `gcenter103-raw-alerts-get`: Get a raw alert with its UUID.
+- `gcenter103-raw-alerts-file-get`: Get a file attached to an alert with its UUID.
+- `gcenter103-file-scan`: Scan a file on a selected engine. You must upload the file to scan before execution.
+- `gcenter103-file-scan-result-get`: Retrieve previous scan by its ID.
+- `gcenter103-assets-list`: List all assets.
+- `gcenter103-assets-alerts-get`: Retrieve alerts of a given asset.
+- `gcenter103-assets-get`: Retrieve specific asset data.
 
 
 ## Gem
@@ -8403,21 +8619,21 @@ Use Gem alerts as a trigger for the platform, to automate response to specific T
 
 **Commands:**
 
-- `gem-list-threats`: 
-- `gem-get-threat-details`: 
-- `gem-get-alert-details`: 
-- `gem-list-inventory-resources`: 
-- `gem-get-resource-details`: 
-- `gem-list-ips-by-entity`: 
-- `gem-list-services-by-entity`: 
-- `gem-list-events-by-entity`: 
-- `gem-list-accessing-entities`: 
-- `gem-list-using-entities`: 
-- `gem-list-events-on-entity`: 
-- `gem-list-accessing-ips`: 
-- `gem-update-threat-status`: 
-- `gem-run-action`: 
-- `gem-add-timeline-event`: 
+- `gem-list-threats`: List all threats detected in Gem.
+- `gem-get-threat-details`: Get details about a specific threat.
+- `gem-get-alert-details`: Get details about a specific alert.
+- `gem-list-inventory-resources`: List inventory resources in Gem.
+- `gem-get-resource-details`: Get details about a specific resource.
+- `gem-list-ips-by-entity`: List all source IP addresses used by an entity in a specific timeframe. The results are sorted by activity volume.
+- `gem-list-services-by-entity`: List all services accessed by an entity in a specific timeframe. The results are sorted by activity volume.
+- `gem-list-events-by-entity`: List all events performed by an entity in a specific timeframe. The results are sorted by activity volume.
+- `gem-list-accessing-entities`: List all entities that accessed an entity in a specific timeframe. The results are sorted by activity volume.
+- `gem-list-using-entities`: List all entities that used an entity in a specific timeframe. The results are sorted by activity volume.
+- `gem-list-events-on-entity`: List all events performed on an entity in a specific timeframe. The results are sorted by activity volume.
+- `gem-list-accessing-ips`: List all source IP addresses that accessed an entity in a specific timeframe. The results are sorted by activity volume.
+- `gem-update-threat-status`: Set a threat's status to open, in progress or resolved.
+- `gem-run-action`: Run an action on an entity.
+- `gem-add-timeline-event`: Add a timeline event to a threat.
 
 
 ## Gem Handle ec2
@@ -8453,7 +8669,7 @@ Use the Generic Export Indicators Service integration to provide an endpoint wit
 
 **Commands:**
 
-- `export-indicators-list-update`: 
+- `export-indicators-list-update`: Updates values stored in the List (only available On-Demand).
 
 
 ## Generic MCP
@@ -8465,8 +8681,8 @@ Use this integration to connect to an MCP server and automatically discover its 
 
 **Commands:**
 
-- `generic-mcp-generate-login-url`: 
-- `generic-mcp-auth-test`: 
+- `generic-mcp-generate-login-url`: Generate an authentication login URL.
+- `generic-mcp-auth-test`: Test the authentication configuration with the MCP server.
 
 
 ## Generic SQL
@@ -8476,6 +8692,11 @@ Use this integration to connect to an MCP server and automatically discover its 
 
 Generic SQL integration for the Databases: MySQL, PostgreSQL, Microsoft SQL Server, Oracle, Teradata and Trino
 
+**Commands:**
+
+- `query`: Running a sql query
+- `sql-command`: Running a sql query
+
 
 ## Genians
 
@@ -8483,6 +8704,11 @@ Generic SQL integration for the Databases: MySQL, PostgreSQL, Microsoft SQL Serv
 **Product:** Genians  
 
 Use the Genian NAC integration to block IP addresses using the assign tag. Genian NAC network sensing technology powered by Device Platform Intelligence (DPI) discovers and presents all detected devices’ business contextual and risk-related information along with their technical information without disturbing existing network infrastructure. The resulting intelligence enhances visibility and allows operators to detect and respond to any non-compliant or compromised devices in real time. With the result of comprehensive network visibility, Genian NAC can ensure compliance from all connected devices by leveraging Virtual In-Line Packet Inspection which operates at Layer 2. This technology has complete control over endpoint device traffic over TCP and UDP by eliminating the need for complex configurations and network changes
+
+**Commands:**
+
+- `genians-assign-ip-tag`: Assigns a tag to the Node specified.
+- `genians-unassign-ip-tag`: Removes the tag(s) from the Node specified.
 
 
 ## Get Code42 Employee Information
@@ -8510,6 +8736,10 @@ Enriches RaDark incident with detailed items
 
 **Type:** integration  
 **Product:** GitHub  
+**Commands:**
+
+- `GitHub-create-issue`: Deprecated. Use github-create-issue instead.
+
 
 ## GitHub IAM
 
@@ -8520,11 +8750,11 @@ Note: This integration should be used as part of our IAM premium pack. For furth
 
 **Commands:**
 
-- `iam-create-user`: 
-- `iam-update-user`: 
-- `iam-get-user`: 
-- `iam-disable-user`: 
-- `iam-enable-user`: 
+- `iam-create-user`: Creates a user.
+- `iam-update-user`: Updates an existing user with the data passed in the user-profile argument.
+- `iam-get-user`: Retrieves a single user resource.
+- `iam-disable-user`: Deletes an active user.
+- `iam-enable-user`: Create a deprovisioned user.
 
 
 ## Gitlab - Guest user permission change
@@ -8546,11 +8776,11 @@ This playbook investigates a "User Permissions Changed” alert by gathering use
 **Product:** GitLab  
 **Commands:**
 
-- `gitlab-version-get`: 
-- `gitlab-file-get`: 
-- `gitlab-file-create`: 
-- `gitlab-file-delete`: 
-- `gitlab-issue-list`: 
+- `gitlab-version-get`: Retrieve version information for this GitLab instance.
+- `gitlab-file-get`: Allows to receive information about file in repository like name, size, content.
+- `gitlab-file-create`: This allows you to create a single file. File path or entry_id must be specified.
+- `gitlab-file-delete`: Editing existing file in repository.
+- `gitlab-issue-list`: Get a list of a project's issues.
 
 
 ## GLIMPS Detect
@@ -8562,7 +8792,7 @@ Use the GLIMPS Detect Integration to send files to GLIMPS Malware and get result
 
 **Commands:**
 
-- `gdetect-send`: 
+- `gdetect-send`: send file to gDetect API.
 
 
 ## GLPI
@@ -8574,21 +8804,21 @@ GLPI open source ITSM solution This integration was integrated and tested with v
 
 **Commands:**
 
-- `glpi-create-user`: 
-- `glpi-delete-user`: 
-- `glpi-disable-user`: 
-- `glpi-enable-user`: 
-- `get-mapping-fields`: 
-- `get-modified-remote-data`: 
-- `glpi-get-username`: 
-- `glpi-delete-ticket`: 
-- `glpi-get-ticket`: 
-- `glpi-create-ticket`: 
-- `glpi-search`: 
-- `glpi-add-comment`: 
-- `glpi-upload-file`: 
-- `glpi-get-item`: 
-- `glpi-update-ticket`: 
+- `glpi-create-user`: Create a new GLPI user
+- `glpi-delete-user`: Delete GLPI user
+- `glpi-disable-user`: Disable GLPI user
+- `glpi-enable-user`: Enable GLPI user
+- `get-mapping-fields`: Return the list of fields for an incident type
+- `get-modified-remote-data`: Mirroring feature, use only for debug
+- `glpi-get-username`: Get username by user ID
+- `glpi-delete-ticket`: Delete GLPI ticket
+- `glpi-get-ticket`: Get ticket details by ticket ID
+- `glpi-create-ticket`: Create a GLPI ticket
+- `glpi-search`: Search GLPI items
+- `glpi-add-comment`: Add comment to ticket ID
+- `glpi-upload-file`: Upload document
+- `glpi-get-item`: Get item details by item type and item ID
+- `glpi-update-ticket`: Update a GLPI ticket
 
 
 ## GLPIIncidentStatus
@@ -8608,21 +8838,21 @@ Use the Gmail integration to search and process emails in your organization's Gm
 
 **Commands:**
 
-- `gmail-delete-user`: 
-- `gmail-get-tokens-for-user`: 
-- `gmail-get-user`: 
-- `gmail-get-user-roles`: 
-- `gmail-get-attachments`: 
-- `gmail-get-mail`: 
-- `gmail-search`: 
-- `gmail-search-all-mailboxes`: 
-- `gmail-list-users`: 
-- `gmail-list-labels`: 
-- `gmail-revoke-user-role`: 
-- `gmail-create-user`: 
-- `gmail-delete-mail`: 
-- `gmail-get-thread`: 
-- `gmail-move-mail`: 
+- `gmail-delete-user`: Deletes a Gmail user.
+- `gmail-get-tokens-for-user`: Lists all tokens associated with a specified user.
+- `gmail-get-user`: Gets information for a specified user.
+- `gmail-get-user-roles`: Retrieves a list of all Google roles for a specified user.
+- `gmail-get-attachments`: Retrieves attachments from a sent Gmail message.
+- `gmail-get-mail`: Retrieves the Gmail message sent to a specified user.
+- `gmail-search`: Searches for Gmail records for a specific Google user.
+- `gmail-search-all-mailboxes`: Searches the Gmail records for all Google users.
+- `gmail-list-users`: Lists all Google users in a domain.
+- `gmail-list-labels`: Lists all labels in the user's mailbox.
+- `gmail-revoke-user-role`: Revokes a role for a specified Google user.
+- `gmail-create-user`: Creates a new Gmail user.
+- `gmail-delete-mail`: Deletes an email in the user's mailbox.
+- `gmail-get-thread`: Returns all messages in a thread.
+- `gmail-move-mail`: Moves an email to a different folder.
 
 
 ## Gmail Single User
@@ -8634,7 +8864,8 @@ Use the Gmail Single User integration to send emails and fetch emails as inciden
 
 **Commands:**
 
-- `send-mail`: 
+- `send-mail`: Sends an email using Gmail.
+- `gmail-auth-link`: Starts the OAuth2 process. Gets a link to use to authenticate to Gmail.
 
 
 ## Google Chat via Webhook
@@ -8646,8 +8877,8 @@ Integration for sending notifications to a Google Chat space via Incoming Webhoo
 
 **Commands:**
 
-- `send-google-chat-message`: 
-- `send-google-chat-custom-card`: 
+- `send-google-chat-message`: Send a message to Google Chat Space via Incoming Webhook.
+- `send-google-chat-custom-card`: Send a customizable card to Google Chat Space via Incoming Webhook
 
 
 ## Google Docs
@@ -8659,9 +8890,9 @@ Use the Google Docs integration to create and modify Google Docs documents
 
 **Commands:**
 
-- `google-docs-get-document`: 
-- `google-docs-create-document`: 
-- `google-docs-update-document`: 
+- `google-docs-get-document`: Returns the document that matches the specified document ID.
+- `google-docs-create-document`: Creates a document.
+- `google-docs-update-document`: Updates the document with the specified document ID.
 
 
 ## Google Dorking
@@ -8673,7 +8904,7 @@ Automate the process of google dorking searches in order to detect leaked data
 
 **Commands:**
 
-- `google-dorking-search`: 
+- `google-dorking-search`: Use the google search engine to search a query.
 
 
 ## Google Dorking File Processing
@@ -8700,21 +8931,21 @@ Google Drive allows users to store files on their servers, synchronize files acr
 
 **Commands:**
 
-- `google-drive-create`: 
-- `google-drive-drive-create`: 
-- `google-drive-changes-list`: 
-- `google-drive-activity-list`: 
-- `google-drive-drives-list`: 
-- `google-drive-drive-get`: 
-- `google-drive-drive-delete`: 
-- `google-drive-files-list`: 
-- `google-drive-file-get`: 
-- `google-drive-file-upload`: 
-- `google-drive-file-download`: 
-- `google-drive-file-replace-existing`: 
-- `google-drive-file-delete`: 
-- `google-drive-file-permissions-list`: 
-- `google-drive-file-permission-create`: 
+- `google-drive-create`: Deprecated. Use the google-drive-drive-create command instead.
+- `google-drive-drive-create`: Creates a new Team Drive. The name argument specifies the name of the Team Drive. The specified user will be the first organizer. This shared drive/team drive f
+- `google-drive-changes-list`: Lists the changes for a user or shared drive.
+- `google-drive-activity-list`: Query past activity in Google Drive.
+- `google-drive-drives-list`: Lists the user's shared drives.
+- `google-drive-drive-get`: Gets a user shared drives.
+- `google-drive-drive-delete`: Deletes a shared drive.
+- `google-drive-files-list`: Lists the user's shared drives.
+- `google-drive-file-get`: Get a single file.
+- `google-drive-file-upload`: Creates a new file.
+- `google-drive-file-download`: Download a single file.
+- `google-drive-file-replace-existing`: Updates a file's content.
+- `google-drive-file-delete`: Permanently deletes a file owned by the user without moving it to the trash. If the file belongs to a shared drive the user must be an organizer on the parent. 
+- `google-drive-file-permissions-list`: Lists a file's or shared drive's permissions.
+- `google-drive-file-permission-create`: Creates a permission for a file or shared drive.
 
 
 ## Google Drive (Standard Connector)
@@ -8726,21 +8957,21 @@ Google Drive allows users to store files on their servers, synchronize files acr
 
 **Commands:**
 
-- `google-drive-create`: 
-- `google-drive-drive-create`: 
-- `google-drive-changes-list`: 
-- `google-drive-activity-list`: 
-- `google-drive-drives-list`: 
-- `google-drive-drive-get`: 
-- `google-drive-drive-delete`: 
-- `google-drive-files-list`: 
-- `google-drive-file-get`: 
-- `google-drive-file-upload`: 
-- `google-drive-file-download`: 
-- `google-drive-file-replace-existing`: 
-- `google-drive-file-delete`: 
-- `google-drive-file-permissions-list`: 
-- `google-drive-file-permission-create`: 
+- `google-drive-create`: Deprecated. Use the google-drive-drive-create command instead.
+- `google-drive-drive-create`: Creates a new Team Drive. The name argument specifies the name of the Team Drive. The specified user will be the first organizer. This shared drive/team drive f
+- `google-drive-changes-list`: Lists the changes for a user or shared drive.
+- `google-drive-activity-list`: Query past activity in Google Drive.
+- `google-drive-drives-list`: Lists the user's shared drives.
+- `google-drive-drive-get`: Gets a user shared drives.
+- `google-drive-drive-delete`: Deletes a shared drive.
+- `google-drive-files-list`: Lists the user's shared drives.
+- `google-drive-file-get`: Get a single file.
+- `google-drive-file-upload`: Creates a new file.
+- `google-drive-file-download`: Download a single file.
+- `google-drive-file-replace-existing`: Updates a file's content.
+- `google-drive-file-delete`: Permanently deletes a file owned by the user without moving it to the trash. If the file belongs to a shared drive the user must be an organizer on the parent. 
+- `google-drive-file-permissions-list`: Lists a file's or shared drive's permissions.
+- `google-drive-file-permission-create`: Creates a permission for a file or shared drive.
 
 
 ## Google Gemini
@@ -8752,7 +8983,7 @@ This integration provides access to Google Gemini's large language models for AI
 
 **Commands:**
 
-- `google-gemini-send-message`: 
+- `google-gemini-send-message`: Send a chat message to the Gemini AI model.
 
 
 ## Google Key Management Service
@@ -8764,21 +8995,21 @@ Use the Google Key Management Service API for CryptoKey management and encrypt/d
 
 **Commands:**
 
-- `google-kms-create-key`: 
-- `google-kms-symmetric-decrypt`: 
-- `google-kms-symmetric-encrypt`: 
-- `google-kms-get-key`: 
-- `google-kms-update-key`: 
-- `google-kms-destroy-key`: 
-- `google-kms-restore-key`: 
-- `google-kms-disable-key`: 
-- `google-kms-enable-key`: 
-- `google-kms-list-keys`: 
-- `google-kms-asymmetric-encrypt`: 
-- `google-kms-asymmetric-decrypt`: 
-- `google-kms-list-key-rings`: 
-- `google-kms-list-all-keys`: 
-- `google-kms-get-public-key`: 
+- `google-kms-create-key`: Creates a new CryptoKey within a KeyRing.
+- `google-kms-symmetric-decrypt`: Decrypts data that was protected by Encrypt.
+- `google-kms-symmetric-encrypt`: Encrypts data, so it can only be recovered by a call to Decrypt.
+- `google-kms-get-key`: Returns metadata for a given CryptoKey, and its primary CryptoKeyVersion.
+- `google-kms-update-key`: Updates a CryptoKey.
+- `google-kms-destroy-key`: Schedules a CryptoKeyVersion for destruction.
+- `google-kms-restore-key`: Restores a CryptoKeyVersion in the DESTROY_SCHEDULED state.
+- `google-kms-disable-key`: Disables a CryptoKeyVersion of a given CryptoKey.
+- `google-kms-enable-key`: Enables a CryptoKeyVersion of a given CryptoKey.
+- `google-kms-list-keys`: Lists all keys in key ring.
+- `google-kms-asymmetric-encrypt`: Encrypts data using a asymmetric CryptoKey
+- `google-kms-asymmetric-decrypt`: Decrypts data using an asymmetric CryptoKey.
+- `google-kms-list-key-rings`: Lists all KeyRings in a given location.
+- `google-kms-list-all-keys`: Lists all CryptoKeys across all KeyRings in a given location.
+- `google-kms-get-public-key`: Returns the public key from a given CryptoKey.
 
 
 ## Google Maps
@@ -8790,7 +9021,7 @@ Use the Google Maps API. This integration was integrated and tested with version
 
 **Commands:**
 
-- `google-maps-geocode`: 
+- `google-maps-geocode`: Returns the coordinates of the given physical address. Only the first result is returned (the most relevant, according to Google Maps).
 
 
 ## Google Safe Browsing v2
@@ -8799,6 +9030,10 @@ Use the Google Maps API. This integration was integrated and tested with version
 **Product:** Google Safe Browsing  
 
 Search Safe Browsing v4
+
+**Commands:**
+
+- `url`: Check URL Reputation
 
 
 ## Google SecOps Cases
@@ -8810,21 +9045,21 @@ Use the Google SecOps Cases integration to retrieve Cases as Incidents. This int
 
 **Commands:**
 
-- `gcb-case-list`: 
-- `gcb-case-get`: 
-- `gcb-case-update`: 
-- `gcb-case-tag-add`: 
-- `gcb-case-tag-remove`: 
-- `gcb-case-priority-change`: 
-- `gcb-case-stage-definition-list`: 
-- `gcb-case-stage-change`: 
-- `gcb-case-reopen`: 
-- `gcb-case-close-definition-list`: 
-- `gcb-case-close`: 
-- `gcb-case-assign`: 
-- `gcb-case-comment-list`: 
-- `gcb-case-comment-create`: 
-- `gcb-case-sla-pause`: 
+- `gcb-case-list`: Retrieve the list of cases.
+- `gcb-case-get`: Retrieve a specific case by its ID.
+- `gcb-case-update`: Update the properties of a case.
+- `gcb-case-tag-add`: Add the specified tags to the cases.
+- `gcb-case-tag-remove`: Remove the specified tag from a case.
+- `gcb-case-priority-change`: Change the priority of the specified cases.
+- `gcb-case-stage-definition-list`: Retrieve the list of case stage definitions configured in the instance.
+- `gcb-case-stage-change`: Change the workflow stage of the specified cases.
+- `gcb-case-reopen`: Reopen the specified cases.
+- `gcb-case-close-definition-list`: Retrieve the list of case close definitions configured in the instance.
+- `gcb-case-close`: Close the specified cases.
+- `gcb-case-assign`: Assign the specified cases to a specific analyst or SOC role.
+- `gcb-case-comment-list`: Retrieve the list of comments associated with the specified case.
+- `gcb-case-comment-create`: Add a comment to the specified case.
+- `gcb-case-sla-pause`: Pause the SLA timer for the specified case.
 
 
 ## Google SecOps v1 Alpha
@@ -8836,10 +9071,21 @@ Use the Google SecOps integration to retrieve IOC Domain matches as Incidents. T
 
 **Commands:**
 
-- `gcb-list-iocs`: 
-- `gcb-ioc-details`: 
-- `gcb-list-events`: 
-- `gcb-list-detections`: 
+- `gcb-list-iocs`: Lists the IOC Domain matches within your enterprise for the specified time interval. The indicator of compromise (IOC) domain matches lists for which the domain
+- `ip`: Checks the reputation of an IP address.
+- `domain`: Checks the reputation of a domain.
+- `gcb-ioc-details`: Accepts an artifact indicator and returns any threat intelligence associated with the artifact. The threat intelligence information is drawn from your enterpris
+- `gcb-list-events`: List all of the events discovered within your enterprise on a particular device within the specified time range. If you receive the maximum number of events you
+- `gcb-list-detections`: Return the detections for the specified version of a rule, the latest version of a rule, all versions of a rule, or all versions of all rules.
+- `gcb-list-rules`: List the latest versions of all Rules.
+- `gcb-create-rule`: Creates a new rule. By default the live rule status will be set to disabled.
+- `gcb-get-rule`: Retrieves the rule details of specified Rule ID or Version ID.
+- `gcb-delete-rule`: Deletes the rule specified by Rule ID.
+- `gcb-create-rule-version`: Creates a new version of an existing rule.
+- `gcb-change-rule-alerting-status`: Updates the alerting status for a rule specified by Rule ID.
+- `gcb-change-live-rule-status`: Updates the live rule status for a rule specified by Rule ID.
+- `gcb-start-retrohunt`: Initiate a retrohunt for the specified rule.
+- `gcb-get-retrohunt`: Get retrohunt for a specific version of rule.
 
 
 ## Google Sheets
@@ -8851,20 +9097,20 @@ Google Sheets is a spreadsheet program that is part of the free web-based Google
 
 **Commands:**
 
-- `google-sheets-spreadsheet-create`: 
-- `google-sheets-spreadsheet-get`: 
-- `google-sheets-sheet-create`: 
-- `google-sheets-sheet-duplicate`: 
-- `google-sheets-sheet-copy-to`: 
-- `google-sheets-sheet-delete`: 
-- `google-sheets-sheet-clear`: 
-- `google-sheets-range-delete`: 
-- `google-sheets-dimension-delete`: 
-- `google-sheets-data-paste`: 
-- `google-sheets-find-replace`: 
-- `google-sheets-value-update`: 
-- `google-sheets-value-append`: 
-- `google-sheets-spreadsheet-update`: 
+- `google-sheets-spreadsheet-create`: Create a new spreadsheet.
+- `google-sheets-spreadsheet-get`: Returns the spreadsheet of the given ID. If include_grid_data is set to true and no ranges given, will defaultly return the first 500 rows and 20 columns of the
+- `google-sheets-sheet-create`: Adds a new sheet. When a sheet is added at a given index, all subsequent sheet indexes are incremented.
+- `google-sheets-sheet-duplicate`: Duplicates the contents of a sheet.
+- `google-sheets-sheet-copy-to`: Copies a single sheet from a spreadsheet to another spreadsheet.
+- `google-sheets-sheet-delete`: Delete a sheet from a spreadsheet by ID.
+- `google-sheets-sheet-clear`: Clears values from a spreadsheet. The caller must specify the spreadsheet ID and range. Only values are cleared. All other properties of the cell (such as forma
+- `google-sheets-range-delete`: Deletes a range of cells, shifting other cells into the deleted area.
+- `google-sheets-dimension-delete`: Deletes the dimensions from the sheet. Note that the indexing starts from 0.
+- `google-sheets-data-paste`: Inserts data into the spreadsheet starting at the specified coordinate.
+- `google-sheets-find-replace`: Finds and replaces data in cells over a range, sheet, or all sheets.
+- `google-sheets-value-update`: Sets values in a range of a spreadsheet. The caller must specify the spreadsheet ID, range, and a valueInputOption.
+- `google-sheets-value-append`: Appends values to a spreadsheet. The input range is used to search for existing data and find a "table" within that range. Values will be appended to the next r
+- `google-sheets-spreadsheet-update`: This is a custom update command, used to apply any of the Google Sheets API options. Applies one or more updates to the spreadsheet. Each request is validated b
 
 
 ## Google Vault - Display Results
@@ -8951,7 +9197,7 @@ Image processing with Google Vision API
 
 **Commands:**
 
-- `google-vision-detect-logos`: 
+- `google-vision-detect-logos`: Detects brand logos in the given image.
 
 
 ## Google Workspace Admin
@@ -8963,21 +9209,21 @@ G Suite or Google Workspace Admin is an integration to perform an action on IT i
 
 **Commands:**
 
-- `gsuite-mobile-update`: 
-- `gsuite-mobile-delete`: 
-- `gsuite-user-alias-add`: 
-- `gsuite-user-create`: 
-- `gsuite-group-create`: 
-- `gsuite-role-assignment-list`: 
-- `gsuite-role-assignment-create`: 
-- `gsuite-role-create`: 
-- `gsuite-token-revoke`: 
-- `gsuite-user-signout`: 
-- `gsuite-datatransfer-list`: 
-- `gsuite-custom-user-schema-create`: 
-- `gsuite-custom-user-schema-update`: 
-- `gsuite-datatransfer-request-create`: 
-- `gsuite-user-update`: 
+- `gsuite-mobile-update`: Takes an action that affects a mobile device. For example, remotely wiping a device.
+- `gsuite-mobile-delete`: Removes a mobile device. Note that this does not break the device's sync, it simply removes it from the list of devices connected to the domain. If the device s
+- `gsuite-user-alias-add`: Adds an alias.
+- `gsuite-user-create`: Creates a user.
+- `gsuite-group-create`: Creates a group with a group name and its description.
+- `gsuite-role-assignment-list`: Retrieves a paginated list of all role assignments.
+- `gsuite-role-assignment-create`: Creates a role assignment.
+- `gsuite-role-create`: Creates a new role.
+- `gsuite-token-revoke`: Delete all access tokens issued by a user for an application.
+- `gsuite-user-signout`: Signs a user out of all web and device sessions and reset their sign-in cookies.
+- `gsuite-datatransfer-list`: Lists the transfers for a customer by source user, destination user, or status.
+- `gsuite-custom-user-schema-create`: Creates a custom user schema to add custom fields to user profiles. Note: field_raw_json has higher precedence when both field_raw_json and field_json_entry_id 
+- `gsuite-custom-user-schema-update`: Updates a custom user schema. Note: field_raw_json has higher precedence when both field_raw_json and field_json_entry_id are provided.
+- `gsuite-datatransfer-request-create`: Inserts a data transfer request.
+- `gsuite-user-update`: Updates a user.
 
 
 ## GoogleApps API and G Suite
@@ -8985,6 +9231,21 @@ G Suite or Google Workspace Admin is an integration to perform an action on IT i
 **Type:** integration  
 
 Use the GoogleApps API and G Suite integration to help administrators migrate to G Suite, create custom usage reports, and manage users, groups, and devices. NOTE: The googleapps-gmail commands are deprecated, to execute Gmail commands, use the Gmail integration
+
+**Commands:**
+
+- `googleapps-chrome-device-action`: Performs one of several actions on a Google Chrome device.
+- `googleapps-device-action`: Performs one of several actions on a Google device.
+- `googleapps-get-chrome-devices-for-user`: Lists all Google Chrome devices associated with a specified Google user.
+- `googleapps-get-devices-for-user`: Lists all devices associated with a specified Google user.
+- `googleapps-get-tokens-for-user`: Lists all tokens associated with a specified Google user.
+- `googleapps-get-user`: Retrieves information for a specified Google user.
+- `googleapps-get-user-roles`: Lists all available Google roles for a specified Google user.
+- `googleapps-gmail-get-attachment`: Retrieves a Gmail attachment sent to a specified Google user.
+- `googleapps-gmail-get-mail`: Retrieves a Gmail message sent to a specified Google user.
+- `googleapps-gmail-search`: Searches the Gmail records of a specified Google user.
+- `googleapps-list-users`: Lists all Google users.
+- `googleapps-revoke-user-role`: Revokes roles for a specified Google users.
 
 
 ## GoogleDriveApiModule
@@ -9065,21 +9326,21 @@ Grafana alerting service. This integration was integrated and tested with versio
 
 **Commands:**
 
-- `grafana-alerts-list`: 
-- `grafana-alert-pause`: 
-- `grafana-alert-unpause`: 
-- `grafana-users-search`: 
-- `grafana-user-teams-get`: 
-- `grafana-user-orgs-get`: 
-- `grafana-user-update`: 
-- `grafana-annotation-create`: 
-- `grafana-teams-search`: 
-- `grafana-team-members-list`: 
-- `grafana-user-add-to-team`: 
-- `grafana-user-remove-from-team`: 
-- `grafana-team-add`: 
-- `grafana-team-delete`: 
-- `grafana-org-create`: 
+- `grafana-alerts-list`: Gets alerts.
+- `grafana-alert-pause`: Pauses an alert by ID.
+- `grafana-alert-unpause`: Unpauses an alert by ID.
+- `grafana-users-search`: Gets users.
+- `grafana-user-teams-get`: Gets the user's teams by user ID.
+- `grafana-user-orgs-get`: Gets user's organizations by user ID.
+- `grafana-user-update`: Updates a user by user ID. Login or email is mandatory. If you change your own login information, you won't be able to continue querying as your username (login
+- `grafana-annotation-create`: Creates an annotation in the Grafana database. The dashboard_id and panel_id fields are optional. If they are not specified, a global annotation is created and 
+- `grafana-teams-search`: Gets teams.
+- `grafana-team-members-list`: Gets a list of all team members by team ID.
+- `grafana-user-add-to-team`: Adds a user to a team.
+- `grafana-user-remove-from-team`: Removes a user from a team.
+- `grafana-team-add`: Creates a new team.
+- `grafana-team-delete`: Deletes a team.
+- `grafana-org-create`: Creates an organization.
 
 
 ## GRAIncidentAnomaliesDisplay
@@ -9099,8 +9360,8 @@ Generic GraphQL client to interact with any GraphQL server API
 
 **Commands:**
 
-- `graphql-query`: 
-- `graphql-mutation`: 
+- `graphql-query`: Execute a query request to the GraphQL server.
+- `graphql-mutation`: Execute a mutation request to the GraphQL server.
 
 
 ## GRAUpdateAlertStatus
@@ -9151,21 +9412,21 @@ GravityZone provides secure access to incident and endpoint data and enables rem
 
 **Commands:**
 
-- `fetch-incidents`: 
-- `gz-endpoint-list`: 
-- `gz-endpoint-get`: 
-- `gz-endpoint-download-investigation-package`: 
-- `gz-endpoint-download-file`: 
-- `gz-endpoint-isolate`: 
-- `gz-endpoint-deisolate`: 
-- `gz-endpoint-kill-process`: 
-- `gz-endpoint-run-command`: 
-- `gz-endpoint-upload-file`: 
-- `gz-endpoint-list-by-running-process-hash`: 
-- `gz-endpoint-get-process-tree-by-hash`: 
-- `gz-incident-get`: 
-- `gz-incident-list`: 
-- `gz-incident-add-note`: 
+- `fetch-incidents`: Retrieves incidents from GravityZone Cloud.
+- `gz-endpoint-list`: Retrieves the list of managed endpoints.
+- `gz-endpoint-get`: Retrieves endpoint details by endpoint ID.
+- `gz-endpoint-download-investigation-package`: Collects and downloads an investigation package from an endpoint.
+- `gz-endpoint-download-file`: Downloads a file from an endpoint.
+- `gz-endpoint-isolate`: Isolates an endpoint from the network.
+- `gz-endpoint-deisolate`: Restores an isolated endpoint to the network.
+- `gz-endpoint-kill-process`: Terminates a process on an endpoint by process ID.
+- `gz-endpoint-run-command`: Runs a command on the endpoint. The applied policy must have Remote Shell enabled for this action to work.
+- `gz-endpoint-upload-file`: Uploads a file to an endpoint.
+- `gz-endpoint-list-by-running-process-hash`: Retrieves endpoints that are running processes with a specified hash. The API key and the applied policy must allow Live Search. Endpoints must be online. The c
+- `gz-endpoint-get-process-tree-by-hash`: Retrieves the process tree on an endpoint for a specified process hash. The applied policy must allow Live Search, and the endpoint must be online.
+- `gz-incident-get`: Retrieves incident details by ID.
+- `gz-incident-list`: Retrieves incidents within the last three days from all endpoints or a specific endpoint.
+- `gz-incident-add-note`: Adds a note to one or more incidents.
 
 
 ## Graylog
@@ -9177,14 +9438,14 @@ Integration with Graylog to search for logs and events This integration was inte
 
 **Commands:**
 
-- `graylog-cluster-status`: 
-- `graylog-cluster-node-jvm`: 
-- `graylog-cluster-inputstates`: 
-- `graylog-cluster-processing-status`: 
-- `graylog-indexer-cluster-health`: 
-- `graylog-search`: 
-- `graylog-events-search`: 
-- `graylog-search-absolute`: 
+- `graylog-cluster-status`: Get Cluster nodes status
+- `graylog-cluster-node-jvm`: Get JVM status of a node in cluster
+- `graylog-cluster-inputstates`: Get input states of the cluster
+- `graylog-cluster-processing-status`: Shows the processing status of the cluster
+- `graylog-indexer-cluster-health`: Get health of the indexer
+- `graylog-search`: Search for messages in a relative timerange, specified as seconds from now. Example: 300 means search from 5 minutes ago to now.
+- `graylog-events-search`: Events overview and search
+- `graylog-search-absolute`: Search with absolute times
 
 
 ## GreaterCidrNumAddresses
@@ -9209,12 +9470,12 @@ The only cloud-native security platform that stops targeted social engineering a
 
 **Commands:**
 
-- `gh-get-message`: 
-- `gh-search-message`: 
-- `gh-remediate-message`: 
-- `gh-revert-remediate-message`: 
-- `gh-get-policy`: 
-- `gh-set-policy`: 
+- `gh-get-message`: Return message details for the specified event
+- `gh-search-message`: Search for message based on filtering input
+- `gh-remediate-message`: Perform the specified remediation action on message
+- `gh-revert-remediate-message`: Revert the specified remediation action on the given message
+- `gh-get-policy`: Retrieve details about the policy specified
+- `gh-set-policy`: Retrieve details about the policy specified.
 
 
 ## GreyNoise
@@ -9226,13 +9487,15 @@ GreyNoise is a cybersecurity platform that collects and analyzes Internet-wide s
 
 **Commands:**
 
-- `greynoise-ip-quick-check`: 
-- `greynoise-query`: 
-- `greynoise-stats`: 
-- `greynoise-riot`: 
-- `greynoise-context`: 
-- `greynoise-similarity`: 
-- `greynoise-timeline`: 
+- `ip`: Runs reputation on IPs.
+- `greynoise-ip-quick-check`: Check whether a given IP address is "Internet background noise", or has been observed scanning or attacking devices across the Internet. Note: It checks against
+- `greynoise-query`: Get the information of IP based on the providence filters.
+- `greynoise-stats`: Get aggregate statistics for the top organizations, actors, tags, ASNs, countries, classifications, and operating systems of all the results of a given GNQL que
+- `greynoise-riot`: Identifies IPs from known benign services and organizations that commonly cause false positives in network security and threat intelligence products. The collec
+- `greynoise-context`: Identifies IPs that have been observed mass-scanning the internet.
+- `greynoise-similarity`: Identify IPs with a similar internet scanning profile.
+- `greynoise-timeline`: Get timeline activity for an IP address.
+- `cve`: Queries GreyNoise for CVE Vuln Intelligence.
 
 
 ## GreyNoise Community
@@ -9244,7 +9507,7 @@ GreyNoise tells security analysts what not to worry about. We do this by curatin
 
 **Commands:**
 
-- `greynoise-community-lookup`: 
+- `ip`: Queries IPs in the GreyNoise Community API.
 
 
 ## GridFieldSetup
@@ -9290,12 +9553,13 @@ THF Polygon is a Malware Detonation & Research platform designed for deep dynami
 
 **Commands:**
 
-- `polygon-upload-file`: 
-- `polygon-upload-url`: 
-- `polygon-analysis-info`: 
-- `polygon-export-report`: 
-- `polygon-export-pcap`: 
-- `polygon-export-video`: 
+- `polygon-upload-file`: Upload file for analysis
+- `polygon-upload-url`: Upload URL for analysis.
+- `polygon-analysis-info`: Get THF Polygon analysis info
+- `polygon-export-report`: Export an archive with THF Polygon report to War Room
+- `polygon-export-pcap`: Network activity dump export
+- `polygon-export-video`: Screen activity video export
+- `file`: Check file reputation
 
 
 ## GrrGetFiles
@@ -9357,9 +9621,10 @@ The GuardiCore v2 integration provides access to incident and endpoint (asset) i
 
 **Commands:**
 
-- `guardicore-search-asset`: 
-- `guardicore-get-incident`: 
-- `guardicore-get-incidents`: 
+- `guardicore-search-asset`: Display information about assets.
+- `guardicore-get-incident`: Display information about an incident.
+- `guardicore-get-incidents`: Display information about incidents.
+- `endpoint`: Endpoint command (uses guardicore-search-asset internally).
 
 
 ## Gurucul-GRA
@@ -9371,21 +9636,21 @@ Gurucul Risk Analytics (GRA) is a data science backed cloud native platform that
 
 **Commands:**
 
-- `gra-fetch-users`: 
-- `gra-fetch-active-resource-accounts`: 
-- `gra-fetch-active-datasource-accounts`: 
-- `gra-fetch-user-accounts`: 
-- `gra-fetch-resource-highrisk-accounts`: 
-- `gra-fetch-hpa`: 
-- `gra-fetch-resource-hpa`: 
-- `gra-fetch-orphan-accounts`: 
-- `gra-fetch-resource-orphan-accounts`: 
-- `gra-fetch-datasource-highrisk-accounts`: 
-- `gra-fetch-datasource-hpa`: 
-- `gra-fetch-datasource-orphan-accounts`: 
-- `gra-user-activities`: 
-- `gra-fetch-users-details`: 
-- `gra-cases`: 
+- `gra-fetch-users`: Retrieve List of All Users (Identities)
+- `!gra-fetch-active-resource-accounts`: Retrieve List of All Active Accounts for a Given Resource.
+- `gra-fetch-active-datasource-accounts`: Retrieve list of all active accounts for a specified data source.
+- `gra-fetch-user-accounts`: Retrieve List of All Active Accounts and Details for a Given User.
+- `gra-fetch-resource-highrisk-accounts`: Retrieve High Risk Accounts for a Given Resource
+- `!gra-fetch-hpa`: Retrieve List of All High Risk Privileged Accounts.
+- `gra-fetch-resource-hpa`: Retrieve all High Privileged Accounts for a Given Resource.
+- `gra-fetch-orphan-accounts`: Retrieve List of All Orphan / Rogue Accounts.
+- `gra-fetch-resource-orphan-accounts`: Retrieve All Orphan / Rogue Accounts for a Given Resource.
+- `gra-fetch-datasource-highrisk-accounts`: Retrieve high risk accounts for a specified data source.
+- `gra-fetch-datasource-hpa`: Retrieve high privileged accounts for a specified data source.
+- `gra-fetch-datasource-orphan-accounts`: Retrieve orphan / rogue accounts for a specified data source.
+- `gra-user-activities`: Retrieve activity for a specified user.
+- `gra-fetch-users-details`: get details of the user.
+- `gra-highRisk-users`: Retrieve list of all high risk users.
 
 
 ## GZipFile
@@ -9409,8 +9674,8 @@ HackerOne integration allows users to fetch reports by using the fetch incidents
 
 **Commands:**
 
-- `hackerone-report-list`: 
-- `hackerone-program-list`: 
+- `hackerone-report-list`: Retrieves all the reports based on program handle and provided arguments.
+- `hackerone-program-list`: Retrieves information about the programs in which the user is a member.
 
 
 ## HackerView Incident Management
@@ -9442,11 +9707,11 @@ From a war-room, query your Hackuity cockpit in order to seamlessly retrieve inf
 
 **Commands:**
 
-- `hackuity-search-findings`: 
-- `hackuity-search-vulndb-vulnerabilities`: 
-- `hackuity-search-provider-vulnerabilities`: 
-- `hackuity-dashboard-widgets`: 
-- `hackuity-dashboard-data`: 
+- `hackuity-search-findings`: Search for findings in Hackuity.
+- `hackuity-search-vulndb-vulnerabilities`: Search for vulndb vulnerabilities in Hackuity.
+- `hackuity-search-provider-vulnerabilities`: Search for provider vulnerabilities in Hackuity.
+- `hackuity-dashboard-widgets`: List the widgets in the default dashboard of the user.
+- `hackuity-dashboard-data`: Get the data of a dashboard widget
 
 
 ## Halcyon
@@ -9458,7 +9723,7 @@ Halcyon is a device management platform that helps organizations monitor, contro
 
 **Commands:**
 
-- `halcyon-get-events`: 
+- `halcyon-get-events`: This command is used for developing/debugging and is to be used with caution, as it can create events, leading to events duplication and API request limitation 
 
 
 ## Handle Darktrace Model Breach
@@ -9505,13 +9770,13 @@ Hashicorp Terraform provide infrastructure automation to provision and manage re
 
 **Commands:**
 
-- `terraform-runs-list`: 
-- `terraform-run-action`: 
-- `terraform-plan-get`: 
-- `terraform-policies-list`: 
-- `terraform-policy-set-list`: 
-- `terraform-policies-checks-list`: 
-- `terraform-get-events`: 
+- `terraform-runs-list`: List runs in a workspace.
+- `terraform-run-action`: Perform an action on a Terraform run. The available actions are: apply, cancel, discard, force-cancel, force-execute.
+- `terraform-plan-get`: Get the plan JSON file or the plan meta data.
+- `terraform-policies-list`: List the policies for an organization or get a specific policy.
+- `terraform-policy-set-list`: List the policy sets for an organization or get a specific policy set.
+- `terraform-policies-checks-list`: List the policy checks for a Terraform run.
+- `terraform-get-events`: Retrieves Terraform audit trail events. This command is supported in Cortex XSIAM only and is intended for development and debugging purposes, as it may produce
 
 
 ## HashiCorp Vault
@@ -9523,21 +9788,21 @@ Secure, store, and tightly control access to tokens, passwords, certificates, an
 
 **Commands:**
 
-- `hashicorp-list-secrets-engines`: 
-- `hashicorp-list-secrets`: 
-- `hashicorp-get-secret-metadata`: 
-- `hashicorp-delete-secret`: 
-- `hashicorp-undelete-secret`: 
-- `hashicorp-destroy-secret`: 
-- `hashicorp-disable-engine`: 
-- `hashicorp-enable-engine`: 
-- `hashicorp-list-policies`: 
-- `hashicorp-get-policy`: 
-- `hashicorp-seal-vault`: 
-- `hashicorp-unseal-vault`: 
-- `hashicorp-configure-engine`: 
-- `hashicorp-reset-configuration`: 
-- `hashicorp-create-token`: 
+- `hashicorp-list-secrets-engines`: List all secrets engines that exist in HashiCorp Vault.
+- `hashicorp-list-secrets`: List secrets (names) for a specified KV engine.
+- `hashicorp-get-secret-metadata`: Returns information about a specified secret in a specified KV V2 engine.
+- `hashicorp-delete-secret`: Deletes the data under a specified secret given the secret path. Performs a soft delete that allows you to run the hashicorp-undelete-secret command if necessar
+- `hashicorp-undelete-secret`: Undeletes (restores) a secret on HashiCorp (for KV V2 engine).
+- `hashicorp-destroy-secret`: Permanently deletes a secret (for KV V2 engine).
+- `hashicorp-disable-engine`: When a secrets engine is no longer needed, it can be disabled. All secrets under the engine are revoked and the corresponding vault data and configurations are 
+- `hashicorp-enable-engine`: ***!hashicorp-disable-engine path=secret Enables a new secrets engine at the specified path.
+- `hashicorp-list-policies`: Lists all configured policies.
+- `hashicorp-get-policy`: Get information for a policy.
+- `hashicorp-seal-vault`: If you suspect your data has been compromised, you can seal your vault to prevent access to your secrets.
+- `hashicorp-unseal-vault`: Use a single master key share to unseal the vault. If the master key shares threshold is met, the key will attempt to unseal the vault. Otherwise, this API must
+- `hashicorp-configure-engine`: Configure a secrets engine to fetch secrets from.
+- `hashicorp-reset-configuration`: Reset the engine configuration.
+- `hashicorp-create-token`: Create a new authentication token.
 
 
 ## Hatching Triage
@@ -9549,21 +9814,21 @@ Submit a high volume of samples to run in a sandbox and view reports This integr
 
 **Commands:**
 
-- `triage-query-samples`: 
-- `triage-submit-sample`: 
-- `triage-get-sample`: 
-- `triage-get-sample-summary`: 
-- `triage-delete-sample`: 
-- `triage-set-sample-profile`: 
-- `triage-get-static-report`: 
-- `triage-get-report-triage`: 
-- `triage-get-kernel-monitor`: 
-- `triage-get-pcap`: 
-- `triage-get-dumped-file`: 
-- `triage-get-users`: 
-- `triage-create-user`: 
-- `triage-delete-user`: 
-- `triage-create-api-key`: 
+- `triage-query-samples`: Get a list of all samples either private or public
+- `triage-submit-sample`: Submits a file or url for analysis
+- `triage-get-sample`: Pulls back basic information about the sample id given
+- `triage-get-sample-summary`: Gets a summary report of the sample id provided
+- `triage-delete-sample`: Deletes a sample from the sandbox
+- `triage-set-sample-profile`: When a sample is in the static_analysis status, a profile should be selected in order to continue.
+- `triage-get-static-report`: Get the static analysis of a sample
+- `triage-get-report-triage`: Retrieves the generated Triage behavioral report for a single task
+- `triage-get-kernel-monitor`: Retrieves the output of the kernel monitor
+- `triage-get-pcap`: Retrieves the PCAP of the analysis for further manual analysis
+- `triage-get-dumped-file`: Retrieves files dumped by the sample. The names can be found under the "dumped" section from the triage report output
+- `triage-get-users`: Return all users within the company as a paginated list. Returns a single user if a userID is provided
+- `triage-create-user`: Creates a new user and returns it. The user will become a member of the company the requesting user is a member of
+- `triage-delete-user`: Delete a user and all associated data, invalidating any sessions and removing their API keys. Any samples submitted by this user are kept
+- `triage-create-api-key`: Creates a new key can be used to make API calls on behalf of the specified user. The user should have been granted the access_api permission beforehand
 
 
 ## Have I Been Pwned? v2
@@ -9572,7 +9837,11 @@ Submit a high volume of samples to run in a sandbox and view reports This integr
 **Product:** Pwned  
 **Commands:**
 
-- `pwned-email`: 
+- `pwned-email`: Checks if an email address was compromised.
+- `pwned-domain`: Checks if a domain was compromised.
+- `email`: Checks if an email address was compromised.
+- `domain`: Checks if a domain was compromised.
+- `pwned-username`: Checks if a username was compromised.
 
 
 ## HealthCheck
@@ -9789,11 +10058,11 @@ This README contains the full documentation for your integration. You auto-gener
 
 **Commands:**
 
-- `iam-create-user`: 
-- `iam-update-user`: 
-- `iam-get-user`: 
-- `iam-disable-user`: 
-- `get-mapping-fields`: 
+- `iam-create-user`: Creates a user.
+- `iam-update-user`: Updates an existing user with the data passed in the user-profile argument.
+- `iam-get-user`: Retrieves a single user resource.
+- `iam-disable-user`: Disable an active user.
+- `get-mapping-fields`: Retrieves a User Profile schema, which holds all of the user fields within the application. Used for outgoing-mapping through the Get Schema option.
 
 
 ## Hello World v2
@@ -9802,7 +10071,7 @@ This README contains the full documentation for your integration. You auto-gener
 **Product:** HelloWorld  
 **Commands:**
 
-- `helloworld-say-hello`: 
+- `helloworld-say-hello`: Prints hello to a specified name.
 
 
 ## HelloWorld
@@ -9814,7 +10083,7 @@ This is the Hello World integration for getting started
 
 **Commands:**
 
-- `helloworld-say-hello`: 
+- `helloworld-say-hello`: Hello command - prints hello to anyone.
 
 
 ## Hey
@@ -9883,7 +10152,8 @@ Use the HostIo integration to enrich domains using the Host.io API. This integra
 
 **Commands:**
 
-- `hostio-domain-search`: 
+- `hostio-domain-search`: Returns a list of domains associated with a specific field, and the total number of these domains.
+- `domain`: Returns Domain information.
 
 
 ## HPE Aruba ClearPass
@@ -9895,14 +10165,14 @@ Aruba ClearPass Policy Manager provides role and device-based network access con
 
 **Commands:**
 
-- `aruba-clearpass-endpoints-list`: 
-- `aruba-clearpass-endpoint-update`: 
-- `aruba-clearpass-attributes-list`: 
-- `aruba-clearpass-attribute-create`: 
-- `aruba-clearpass-attribute-update`: 
-- `aruba-clearpass-attribute-delete`: 
-- `aruba-clearpass-active-sessions-list`: 
-- `aruba-clearpass-active-session-disconnect`: 
+- `aruba-clearpass-endpoints-list`: Get a list of endpoints. An endpoint device is an Internet-capable hardware device on a TCP/IP network (e.g. laptops, smart phones, tablets, etc.)
+- `aruba-clearpass-endpoint-update`: Updates some fields of an endpoint.
+- `aruba-clearpass-attributes-list`: Get a list of attributes. Attributes allows you to specify unique sets of criteria for local users, guest users, endpoints, and devices. If no arguments were gi
+- `aruba-clearpass-attribute-create`: Create a new attribute.
+- `aruba-clearpass-attribute-update`: Update some fields of an attribute by the attribute's ID.
+- `aruba-clearpass-attribute-delete`: Delete an attribute.
+- `aruba-clearpass-active-sessions-list`: Get a list of active sessions.
+- `aruba-clearpass-active-session-disconnect`: Disconnect active session.
 
 
 ## HtmlDifflabDynamic
@@ -10007,7 +10277,9 @@ Integration with Hudsonrock OSINT tools to check IP, Email or username usage
 
 **Commands:**
 
-- `hudsonrock-get-username`: 
+- `ip`: Send IP reputation query.
+- `email`: Send Email reputation query.
+- `hudsonrock-get-username`: Send username reputation query.
 
 
 ## Humio
@@ -10019,16 +10291,16 @@ Integration with Humio
 
 **Commands:**
 
-- `humio-query`: 
-- `humio-query-job`: 
-- `humio-poll`: 
-- `humio-delete-job`: 
-- `humio-list-alerts`: 
-- `humio-get-alert-by-id`: 
-- `humio-create-alert`: 
-- `humio-list-notifiers`: 
-- `humio-delete-alert`: 
-- `humio-get-notifier-by-id`: 
+- `humio-query`: Query the data from Humio
+- `humio-query-job`: Issue a query job to Humio
+- `humio-poll`: Issue poll command to Humio
+- `humio-delete-job`: Issue a job delete command to Humio
+- `humio-list-alerts`: List alerts from Humio
+- `humio-get-alert-by-id`: list alerts by id from Humio
+- `humio-create-alert`: Create an alert in Humio
+- `humio-list-notifiers`: List all notifiers in Humio
+- `humio-delete-alert`: Delete alert in Humio
+- `humio-get-notifier-by-id`: Get notifier from Humio by id
 
 
 ## Humio QueryJob Poll
@@ -10058,20 +10330,20 @@ HYAS Insight is a threat investigation and attribution solution that uses exclus
 
 **Commands:**
 
-- `hyas-get-passive-dns-records-by-indicator`: 
-- `hyas-get-dynamic-dns-records-by-indicator`: 
-- `hyas-get-whois-records-by-indicator`: 
-- `hyas-get-whois-current-records-by-domain`: 
-- `hyas-get-malware-samples-records-by-indicator`: 
-- `hyas-get-c2attribution-records-by-indicator`: 
-- `hyas-get-passive-hash-records-by-indicator`: 
-- `hyas-get-ssl-certificate-records-by-indicator`: 
-- `hyas-get-opensource-indicator-records-by-indicator`: 
-- `hyas-get-device-geo-records-by-ip-address`: 
-- `hyas-get-sinkhole-records-by-ipv4-address`: 
-- `hyas-get-malware-sample-information-by-hash`: 
-- `hyas-get-associated-ips-by-hash`: 
-- `hyas-get-associated-domains-by-hash`: 
+- `hyas-get-passive-dns-records-by-indicator`: Returns PassiveDNS records for the provided indicator value.
+- `hyas-get-dynamic-dns-records-by-indicator`: Returns DynamicDNS records for the provided indicator value.
+- `hyas-get-whois-records-by-indicator`: Returns WHOIS records for the provided indicator value.
+- `hyas-get-whois-current-records-by-domain`: Returns WHOIS Current records for the provided indicator value.
+- `hyas-get-malware-samples-records-by-indicator`: Returns Malware Sample records for the provided indicator value.
+- `hyas-get-c2attribution-records-by-indicator`: Return C2 Attribution records for the provided indicator value.
+- `hyas-get-passive-hash-records-by-indicator`: Return passive hash records for the provided indicator value.
+- `hyas-get-ssl-certificate-records-by-indicator`: Return SSL certificate records for the provided indicator value.
+- `hyas-get-opensource-indicator-records-by-indicator`: Return Open Source intel records for the provided indicator value.
+- `hyas-get-device-geo-records-by-ip-address`: Returns a list of mobile geolocation information
+- `hyas-get-sinkhole-records-by-ipv4-address`: Returns sinkhole information.
+- `hyas-get-malware-sample-information-by-hash`: Returns malware information.
+- `hyas-get-associated-ips-by-hash`: Returns associated IP's for the provided hash value.
+- `hyas-get-associated-domains-by-hash`: Returns associated Domain's for the provided hash value.
 
 
 ## IAMApiModule
@@ -10090,7 +10362,7 @@ This is the IBM MaaS360 Security integration for Cortex XSIAM
 
 **Commands:**
 
-- `ibm-maas360-security-get-events`: 
+- `ibm-maas360-security-get-events`: Gets events from IBM MaaS360 Security.
 
 
 ## IBM Security Guardium
@@ -10102,7 +10374,7 @@ IBM Security Guardium is a comprehensive data security platform that provides vi
 
 **Commands:**
 
-- `ibm-guardium-get-events`: 
+- `ibm-guardium-get-events`: Manual command to fetch and display events.
 
 
 ## IBM Security Verify
@@ -10114,7 +10386,7 @@ IBM Security Verify provides a secure and scalable solution for collecting and m
 
 **Commands:**
 
-- `ibm-security-verify-get-events`: 
+- `ibm-security-verify-get-events`: Retrieves events from IBM Security Verify.
 
 
 ## IBM X-Force Exchange v2
@@ -10123,6 +10395,17 @@ IBM Security Verify provides a secure and scalable solution for collecting and m
 **Product:** IBM X-Force Exchange  
 
 IBM X-Force Exchange lets you receive threat intelligence about applications, IP addresses, URls and hashes
+
+**Commands:**
+
+- `ip`: IP to check
+- `url`: Check the given URL reputation
+- `file`: Check file reputation
+- `domain`: Check domain reputation
+- `cve-search`: Search for details about the given CVE
+- `cve-latest`: Return the latest vulnerabilities found
+- `xfe-whois`: Gets information about the given host address
+- `xfe-search-cves`: Gets list of all vulnerabilities associated with the search term.
 
 
 ## iboss
@@ -10134,12 +10417,15 @@ Manage block lists, manage allow lists, and perform domain, IP, and/or URL reput
 
 **Commands:**
 
-- `iboss-add-entity-to-allow-list`: 
-- `iboss-add-entity-to-block-list`: 
-- `iboss-remove-entity-from-allow-list`: 
-- `iboss-remove-entity-from-block-list`: 
-- `iboss-add-entity-to-policy-layer-list`: 
-- `iboss-remove-entity-from-policy-layer-list`: 
+- `iboss-add-entity-to-allow-list`: Adds domains, IPs, and/or URLs to an allow list.
+- `iboss-add-entity-to-block-list`: Adds domains, IPs, and/or URLs to a block list.
+- `domain`: Lookup reputation for domain names.
+- `ip`: Lookup reputation data for IP addresses.
+- `iboss-remove-entity-from-allow-list`: Removes domains, IPs, and/or URLs from an allow list
+- `iboss-remove-entity-from-block-list`: Removes domains, IPs, and/or URLs to a block list.
+- `url`: Lookup reputation data for URLs.
+- `iboss-add-entity-to-policy-layer-list`: Add entity to policy layer list.
+- `iboss-remove-entity-from-policy-layer-list`: Remove entity from policy layer list.
 
 
 ## If-Elif
@@ -10197,8 +10483,9 @@ iLert is a modern uptime platform with advanced on-call and alerting features. A
 
 **Commands:**
 
-- `ilert-acknowledge-event`: 
-- `ilert-resolve-event`: 
+- `ilert-submit-event`: Creates a new event/incident in iLert (in order to use this command you have to enter the Integration Key in the integration settings)
+- `iLert-acknowledge-event`: Acknowledges an existing event in iLert
+- `ilert-resolve-event`: Resolves an existing event in iLert
 
 
 ## Image OCR
@@ -10210,7 +10497,7 @@ Use the Image OCR integration to extract text from images. The integration utili
 
 **Commands:**
 
-- `image-ocr-list-languages`: 
+- `image-ocr-list-languages`: Lists supported languages for which the integration can extract text.
 
 
 ## imagecompare
@@ -10232,8 +10519,8 @@ Impartner is the fastest-growing, most award-winning channel management solution
 
 **Commands:**
 
-- `impartner-get-account-list`: 
-- `impartner-get-account-id`: 
+- `impartner-get-account-list`: Get account IDs from Impartner
+- `impartner-get-account-id`: Get account details from Impartner
 
 
 ## Imperva Incapsula
@@ -10245,21 +10532,21 @@ Uses incapsula to manage sites and IPs
 
 **Commands:**
 
-- `incap-add-managed-account`: 
-- `incap-list-managed-accounts`: 
-- `incap-add-subaccount`: 
-- `incap-list-subaccounts`: 
-- `incap-get-account-status`: 
-- `incap-modify-account-configuration`: 
-- `incap-set-account-log-level`: 
-- `incap-test-account-s3-connection`: 
-- `incap-test-account-sftp-connection`: 
-- `incap-set-account-s3-log-storage`: 
-- `incap-set-account-sftp-log-storage`: 
-- `incap-set-account-default-log-storage`: 
-- `incap-get-account-login-token`: 
-- `incap-delete-managed-account`: 
-- `incap-delete-subaccount`: 
+- `incap-add-managed-account`: Use this operation to add a new account that should be managed by the account of the API client (the parent account). The new account will be configured accordi
+- `incap-list-managed-accounts`: Use this operation to get the list of accounts that are managed by account of the API client (the parent account).
+- `incap-add-subaccount`: Use this operation to add a new sub account to be managed by the account of the API client (the parent account).
+- `incap-list-subaccounts`: Use this operation to get a list of sub accounts that are managed by the account of the API client (the parent account).
+- `incap-get-account-status`: Use this operation to get information about the account of the API client or one of its managed accounts.
+- `incap-modify-account-configuration`: Use this operation to change the configuration of the account of the API client or one of its managed accounts.
+- `incap-set-account-log-level`: Use this operation to change the account log configuration.
+- `incap-test-account-s3-connection`: Use this operation to check that a connection can be created with your Amazon S3 bucket.
+- `incap-test-account-sftp-connection`: Use this operation to check that a connection can be created with your SFTP storage.
+- `incap-set-account-s3-log-storage`: Use this operation to configure your Amazon cloud storage. Once configured, Incapsula logs will be uploaded to the selected location.
+- `incap-set-account-sftp-log-storage`: Use this operation to configure your SFTP server storage. Once configured, Incapsula logs will be uploaded to the selected location.
+- `incap-set-account-default-log-storage`: Use this operation to have your logs saved on Incapsula servers. Once configured, the logs can be retrieved by API calls.
+- `incap-get-account-login-token`: Tokens are used instead of user/password based authentication to log in to the Incapsula management console. Use this operation to generate a token for an accou
+- `incap-delete-managed-account`: Use this operation to delete an account.
+- `incap-delete-subaccount`: Use this operation to delete a sub account.
 
 
 ## Imperva Skyfence
@@ -10271,8 +10558,8 @@ The Imperva Skyfence Cloud Gateway is a Cloud Access Security Broker (CASB) that
 
 **Commands:**
 
-- `imp-sf-list-endpoints`: 
-- `imp-sf-set-endpoint-status`: 
+- `imp-sf-list-endpoints`: Returns a list of, and basic details for, all managed and un-managed endpoints.
+- `imp-sf-set-endpoint-status`: Updates the status (enroll or revoke) of an endpoint. You can run this command on an endpoint with any status, but the most common use case is endpoints with a 
 
 
 ## Imperva WAF
@@ -10284,20 +10571,20 @@ Use the Imperva WAF integration to manage IP groups and Web security policies in
 
 **Commands:**
 
-- `imperva-waf-ip-group-list`: 
-- `imperva-waf-ip-group-list-entries`: 
-- `imperva-waf-ip-group-remove-entries`: 
-- `imperva-waf-sites-list`: 
-- `imperva-waf-server-group-list`: 
-- `imperva-waf-server-group-list-policies`: 
-- `imperva-waf-web-service-custom-policy-list`: 
-- `imperva-waf-web-service-custom-policy-get`: 
-- `imperva-waf-ip-group-create`: 
-- `imperva-waf-ip-group-update-entries`: 
-- `imperva-waf-ip-group-delete`: 
-- `imperva-waf-web-service-custom-policy-create`: 
-- `imperva-waf-web-service-custom-policy-update`: 
-- `imperva-waf-web-service-custom-policy-delete`: 
+- `imperva-waf-ip-group-list`: Get a list of existing IP Group names.
+- `imperva-waf-ip-group-list-entries`: Get a list of the entries in the requested IP group.
+- `imperva-waf-ip-group-remove-entries`: Remove all the entries from an IP Group indicated by group name.
+- `imperva-waf-sites-list`: Returns a list of the names of all sites in the system.
+- `imperva-waf-server-group-list`: Returns a list of all server group names under the site.
+- `imperva-waf-server-group-list-policies`: Get server groups applied web security policies.
+- `imperva-waf-web-service-custom-policy-list`: Returns a list of names of all Web Application Custom Policies in the system.
+- `imperva-waf-web-service-custom-policy-get`: Returns a Web Application Custom Policy indicated by policy name.
+- `imperva-waf-ip-group-create`: Create an IP Group.
+- `imperva-waf-ip-group-update-entries`: Add or remove rows in an IP Group indicated by ip Group Name.
+- `imperva-waf-ip-group-delete`: Delete a IP Group indicated by group name.
+- `imperva-waf-web-service-custom-policy-create`: Create a Web Service Custom Policy.
+- `imperva-waf-web-service-custom-policy-update`: Update a Web Service Custom Policy.
+- `imperva-waf-web-service-custom-policy-delete`: Delete a Web Service Custom Policy indicated by policy name.
 
 
 ## ImportMLModel
@@ -10571,7 +10858,13 @@ Optionally increases the incident severity to the new value if it is greater tha
 **Product:** Indeni  
 **Commands:**
 
-- `indeni-get-device-info`: 
+- `indeni-get-device-info`: get the device information
+- `indeni-get-alert-info`: get detailed alert info
+- `indeni-get-alert-summary`: gets summary of given alert type for all devices
+- `indeni-post-note`: Post a note to a given issue id
+- `indeni-archive-issue`: Archive an issue for the given alert id
+- `indeni-unarchive-issue`: Unarchive an existing issue
+- `indeni-get-notes`: Gets the notes from issue
 
 
 ## Indicator Enrichment - Censys
@@ -10652,12 +10945,12 @@ The Cortex Core - IOCs integration uses the Cortex API for detection and respons
 
 **Commands:**
 
-- `core-iocs-sync`: 
-- `core-iocs-push`: 
-- `core-iocs-set-sync-time`: 
-- `core-iocs-create-sync-file`: 
-- `core-iocs-enable`: 
-- `core-iocs-disable`: 
+- `core-iocs-sync`: Sync your IOC with Cortex and delete the previous version.
+- `core-iocs-push`: Push modified IOCs to Cortex.
+- `core-iocs-set-sync-time`: Set sync time manually (Do not use this command unless you unredstandard the consequences).
+- `core-iocs-create-sync-file`: Creates the sync file for the manual process. Run this command when instructed by the Cortex support team.
+- `core-iocs-enable`: Enables IOCs in the Cortex tenant.
+- `core-iocs-disable`: Disables IOCs in the Cortex tenant.
 
 
 ## Indicators-type
@@ -10689,21 +10982,21 @@ Identify whether the service is a "development" server. Development servers have
 **Product:** Infinipoint  
 **Commands:**
 
-- `infinipoint-get-vulnerable-devices`: 
-- `infinipoint-get-assets-programs`: 
-- `infinipoint-get-cve`: 
-- `infinipoint-get-device`: 
-- `infinipoint-get-tag`: 
-- `infinipoint-get-networks`: 
-- `infinipoint-get-assets-devices`: 
-- `infinipoint-get-assets-cloud`: 
-- `infinipoint-get-assets-users`: 
-- `infinipoint-get-action-results`: 
-- `infinipoint-get-queries`: 
-- `infinipoint-execute-action`: 
-- `infinipoint-get-non-compliance`: 
-- `infinipoint-get-device-details`: 
-- `infinipoint-get-compliance-status`: 
+- `infinipoint-get-vulnerable-devices`: Get Vulnerable Devices
+- `infinipoint-get-assets-programs`: infinipoint get assets programs
+- `infinipoint-get-cve`: infinipoint get cve
+- `infinipoint-get-device`: get device
+- `infinipoint-get-tag`: get tag
+- `infinipoint-get-networks`: get networks
+- `infinipoint-get-assets-devices`: get assets hardware
+- `infinipoint-get-assets-cloud`: get assets cloud
+- `infinipoint-get-assets-users`: get assets users
+- `infinipoint-get-action-results`: get action
+- `infinipoint-get-queries`: get queries
+- `infinipoint-execute-action`: run queries
+- `infinipoint-get-non-compliance`: get non compliance devices
+- `infinipoint-get-device-details`: get device details
+- `infinipoint-get-compliance-status`: get compliance status
 
 
 ## Infoblox NIOS
@@ -10715,7 +11008,21 @@ Infoblox NIOS enables you to receive metadata about IPs in your network and mana
 
 **Commands:**
 
-- `infoblox-get-ip`: 
+- `infoblox-get-ip`: Get IP information.
+- `infoblox-search-related-objects-by-ip`: Searches IP related objects by a given IP.
+- `infoblox-list-response-policy-zone-rules`: Lists all response policy rules that belong to the given response policy zone.
+- `infoblox-list-response-policy-zones`: List all response policy zones.
+- `infoblox-create-response-policy-zone`: Creates a response policy zone.
+- `infoblox-create-rpz-rule`: Creates a response policy rule.
+- `infoblox-create-a-substitute-record-rule`: Creates a substitute record rule.
+- `infoblox-create-aaaa-substitute-record-rule`: Creates a substitute rule for an AAAA record.
+- `infoblox-create-mx-substitute-record-rule`: Creates a substitute rule for the MX record.
+- `infoblox-create-naptr-substitute-record-rule`: Creates a substitute rule for a NAPTR record.
+- `infoblox-create-ptr-substitute-record-rule`: Creates a substitute rule of the PTR record.
+- `infoblox-create-srv-substitute-record-rule`: Creates a substitute rule of a SRV record.
+- `infoblox-create-txt-substitute-record-rule`: Create a substitute rule for a txt record.
+- `infoblox-create-ipv4-substitute-record-rule`: Create a substitute rule for an IPv4 rule.
+- `infoblox-create-ipv6-substitute-record-rule`: Creates a substitute of the IPv6 record rule.
 
 
 ## Infocyte
@@ -10727,16 +11034,16 @@ Infocyte can pivot off incidents to automate triage, validate events with forens
 
 **Commands:**
 
-- `infocyte-scan-host`: 
-- `infocyte-isolate-host`: 
-- `infocyte-restore-host`: 
-- `infocyte-kill-process`: 
-- `infocyte-run-response`: 
-- `infocyte-get-taskstatus`: 
-- `infocyte-get-scanresult`: 
-- `infocyte-get-hostscanresult`: 
-- `infocyte-get-responseresult`: 
-- `infocyte-get-alerts`: 
+- `infocyte-scan-host`: Kicks off a Scan (forensic collection) against an endpoint
+- `infocyte-isolate-host`: Isolates a host to only communicate to Infocyte and other security tools
+- `infocyte-restore-host`: Restore an isolated host
+- `infocyte-kill-process`: Kills a process on target endpoint
+- `infocyte-run-response`: Runs the named Infocyte extension on target host. Extensions are Infocyte script modules that run against a host or set of hosts to either collect additional da
+- `infocyte-get-taskstatus`: Gets status of an Infocyte task (scan, response action, etc.)
+- `infocyte-get-scanresult`: Retrieve metadata and results for a scan against multiple hosts
+- `infocyte-get-hostscanresult`: Retrieve results for a scan on a target host
+- `infocyte-get-responseresult`: Gets the results of a response action.
+- `infocyte-get-alerts`: Retrieve alert by alertId, since a lastAlertId, since LastRun (if no arguments provided)
 
 
 ## InRange
@@ -10831,21 +11138,21 @@ Use the Intezer v2 integration to detect and analyze malware, based on code reus
 
 **Commands:**
 
-- `intezer-analyze-by-hash`: 
-- `intezer-get-latest-report`: 
-- `intezer-analyze-by-file`: 
-- `intezer-get-endpoint-analysis-result`: 
-- `intezer-get-url-analysis-result`: 
-- `intezer-get-file-analysis-result`: 
-- `intezer-get-analysis-result`: 
-- `intezer-get-sub-analyses`: 
-- `intezer-get-family-info`: 
-- `intezer-get-analysis-code-reuse`: 
-- `intezer-get-analysis-metadata`: 
-- `intezer-get-analysis-iocs`: 
-- `intezer-submit-alert`: 
-- `intezer-submit-suspected-phishing-email`: 
-- `intezer-get-alert-result`: 
+- `intezer-analyze-by-hash`: Checks file reputation of the given hash, supports SHA256, SHA1 and MD5
+- `intezer-get-latest-report`: Checks file reputation of the given hash, supports SHA256, SHA1 and MD5 by looking at the latest available report
+- `intezer-analyze-by-file`: Checks file reputation for uploaded file (up to 150MB)
+- `intezer-get-endpoint-analysis-result`: Check the endpoint analysis status and get analysis result, supports polling.
+- `intezer-get-url-analysis-result`: Check the url analysis status and get analysis result, supports polling.
+- `intezer-get-file-analysis-result`: Check the file analysis status and get analysis result, supports polling.
+- `intezer-get-analysis-result`: Check the analysis status and get analysis result, support file and endpoint analysis
+- `intezer-get-sub-analyses`: Get a list of the analysis sub analyses
+- `intezer-get-family-info`: Get family information from Intezer Analyze
+- `intezer-get-analysis-code-reuse`: Get All code reuse report for an analysis or sub analysis To get the code reuse results of a sub analysis you also must specify the "parent analysis",
+- `intezer-get-analysis-metadata`: Get metadata for an analysis or sub analysis To get the metadata of a sub analysis you also must specify the "parent analysis",
+- `intezer-get-analysis-iocs`: Gets the list of network and files IOCs of a specific analysis id.
+- `intezer-submit-alert`: Submit a new alert, including the raw alert information, to Intezer for processing.
+- `intezer-submit-suspected-phishing-email`: Submit a suspicious phishing email in a raw format (.MSG or .EML) to Intezer for processing.
+- `intezer-get-alert-result`: Get an ingested alert triage and response information using alert ID.
 
 
 ## IntezerRunScanner
@@ -10896,21 +11203,21 @@ The Cortex Core IR integration uses the Cortex API for detection and response, b
 
 **Commands:**
 
-- `core-isolate-endpoint`: 
-- `core-unisolate-endpoint`: 
-- `core-get-endpoints`: 
-- `core-get-distribution-versions`: 
-- `core-create-distribution`: 
-- `core-get-distribution-url`: 
-- `core-get-create-distribution-status`: 
-- `core-get-audit-management-logs`: 
-- `core-get-audit-agent-reports`: 
-- `core-blocklist-files`: 
-- `core-allowlist-files`: 
-- `core-quarantine-files`: 
-- `core-get-quarantine-status`: 
-- `core-restore-file`: 
-- `core-endpoint-scan`: 
+- `core-isolate-endpoint`: Isolates the specified endpoint.
+- `core-unisolate-endpoint`: Reverses the isolation of an endpoint.
+- `core-get-endpoints`: Gets a list of endpoints, according to the passed filters. If there are no filters, all endpoints are returned. Filtering by multiple fields will be concatenate
+- `core-get-distribution-versions`: Gets a list of all the agent versions to use for creating a distribution list.
+- `core-create-distribution`: Creates an installation package. This is an asynchronous call that returns the distribution ID. This does not mean that the creation succeeded. To confirm that 
+- `core-get-distribution-url`: Gets the distribution URL for downloading the installation package.
+- `core-get-create-distribution-status`: Gets the status of the installation package.
+- `core-get-audit-management-logs`: Gets management logs. You can filter by multiple fields, which will be concatenated using the AND condition (OR is not supported). Maximum result set size is 10
+- `core-get-audit-agent-reports`: Gets agent event reports. You can filter by multiple fields, which are combined using an AND condition (OR is not supported). The maximum result set size is 100
+- `core-blocklist-files`: Blocks requested files that are not already on the block list or the allow list.
+- `core-allowlist-files`: Adds requested files to the allow list if they are not already on the block list or the allow list.
+- `core-quarantine-files`: Quarantines a file on selected endpoints. You can select up to 1000 endpoints.
+- `core-get-quarantine-status`: Retrieves the quarantine status of a selected file.
+- `core-restore-file`: Restores a quarantined file on the requested endpoints.
+- `core-endpoint-scan`: Runs a scan on a selected endpoint. To scan all endpoints, use the argument all=true. Scanning all endpoints may affect performance and cause latency.
 
 
 ## InvestigationDetailedSummaryParse
@@ -10991,6 +11298,10 @@ Enriches IP indicators with reputation data from multiple integrations and outpu
 **Product:** IP2LocationIO  
 
 IP2Location.io integration to query IP geolocation data
+
+**Commands:**
+
+- `ip`: Return IP information and reputation
 
 
 ## IPCalcCheckSubnetCollision
@@ -11073,6 +11384,10 @@ An Automation Script to return subnet network ID
 
 Use the IPinfo.io API to get data about an IP address
 
+**Commands:**
+
+- `ip`: Check IP reputation (when information is available, returns a JSON with details). Uses all configured Threat Intelligence feeds.
+
 
 ## IPNetwork
 
@@ -11104,6 +11419,10 @@ A context script for IP address entities
 **Product:** Ipstack  
 
 One of the leading IP to geolocation APIs and global IP database services
+
+**Commands:**
+
+- `ip`: Queries an IP address in ipstack.
 
 
 ## IPToHost
@@ -11169,16 +11488,16 @@ IRIS is a collaborative platform aiming to help incident responders to share tec
 
 **Commands:**
 
-- `iris-get-last-case-id`: 
-- `iris-get-all-cases`: 
-- `iris-close-case-id`: 
-- `iris-reopen-case-id`: 
-- `iris-change-case-state`: 
-- `iris-create-notes-group`: 
-- `iris-add-new-note-to-group`: 
-- `iris-get-list-of-groups-and-notes`: 
-- `iris-get-list-of-iocs`: 
-- `iris-get-ioc-content`: 
+- `iris-get-last-case-id`: IRIS Command to get the last case information
+- `iris-get-all-cases`: Return a list of all IRIS DFIR cases
+- `iris-close-case-id`: Close a specific case by ID.
+- `iris-reopen-case-id`: Reopen a specific case by ID.
+- `iris-change-case-state`: Change case state status
+- `iris-create-notes-group`: Creates notes group
+- `iris-add-new-note-to-group`: Add a new note to an existing group.
+- `iris-get-list-of-groups-and-notes`: Get a list of the notes and groups.
+- `iris-get-list-of-iocs`: Returns a list of IOCs as well as any existing linked with other cases.
+- `iris-get-ioc-content`: Fetch the content of an ioc.
 
 
 ## Ironscales
@@ -11190,9 +11509,9 @@ IRONSCALES, a self-learning email security platform integration
 
 **Commands:**
 
-- `ironscales-get-incident`: 
-- `ironscales-classify-incident`: 
-- `ironscales-get-open-incidents`: 
+- `ironscales-get-incident`: Get incident data by ID.
+- `ironscales-classify-incident`: Classify incident by ID.
+- `ironscales-get-open-incidents`: Get open incident ids.
 
 
 ## Ironscales-Classify-Incident
@@ -11207,6 +11526,13 @@ IRONSCALES, a self-learning email security platform integration
 
 Enrich IP, domain, URL and file-hash indicators with IsMalicious reputation, evidence and data-trust context. This integration uses the public IsMalicious REST API contract. Local validation uses synthetic provider responses and the real CommonServerPython framework; no production the platform. API checks consume the applicable account quota. Unknown hashes, delisted indicators and absent supported verdicts remain DBotScore 0; risk and confidence are separate fields. See the pack README for evidence interpretation and limits
 
+**Commands:**
+
+- `ip`: Enrich ip indicators with IsMalicious evidence. At most 50 values per command.
+- `domain`: Enrich domain indicators with IsMalicious evidence. At most 50 values per command.
+- `url`: Enrich url indicators with IsMalicious evidence. At most 50 values per command.
+- `file`: Enrich MD5, SHA1 or SHA256 hashes with IsMalicious evidence. At most 50 values per command.
+
 
 ## Ivanti Heat
 
@@ -11217,13 +11543,13 @@ Ivanti Heat service manager This integration was integrated and tested with vers
 
 **Commands:**
 
-- `ivanti-heat-objects-list`: 
-- `ivanti-heat-object-update`: 
-- `ivanti-heat-object-delete`: 
-- `ivanti-heat-object-attachment-download`: 
-- `ivanti-heat-object-attachment-upload`: 
-- `ivanti-heat-object-perform-action`: 
-- `ivanti-heat-object-create`: 
+- `ivanti-heat-objects-list`: Fetches business object records based on the defined filter values.
+- `ivanti-heat-object-update`: Update details of a business object such as a change, problem, or incident.
+- `ivanti-heat-object-delete`: Delete a business object such as a change, problem, or incident by its Record ID.
+- `ivanti-heat-object-attachment-download`: Get attachments from business objects by attachment ID.
+- `ivanti-heat-object-attachment-upload`: Upload attachments to business objects.
+- `ivanti-heat-object-perform-action`: Performs quick actions for a business object. For example, close, clone or resolve an incident or a problem.
+- `ivanti-heat-object-create`: create business objects available out-of-the-box, such as a Change, Problem, Incident, or any custom defined business object of your choice.
 
 
 ## IvantiHeatCloseIncidentExample
@@ -11282,9 +11608,9 @@ Fetches and manages incidents from iZOOlogic, enabling automated ingestion, inci
 
 **Commands:**
 
-- `izoologic-get-events`: 
-- `izoologic-incident-create`: 
-- `izoologic-incident-fetch`: 
+- `izoologic-get-events`: Gets events from iZOOlogic. Use this command for development and debugging only, as it may produce duplicate events, exceed API rate limits, or disrupt the fetc
+- `izoologic-incident-create`: Creates a new security incident in iZOOlogic.
+- `izoologic-incident-fetch`: Fetches incidents from iZOOlogic based on specified filters including date range, brand, incident type, and other criteria.
 
 
 ## Ja3er
@@ -11296,7 +11622,7 @@ Query the ja3er API for MD5 hashes of JA3 fingerprints
 
 **Commands:**
 
-- `ja3-search`: 
+- `ja3-search`: Search for "User-Agents" matching an MD5 hash of a JA3 fingerprint.
 
 
 ## JAMF v2
@@ -11308,21 +11634,21 @@ Enterprise Mobility Management (EMM) for Apple devices (Mac, iPhone, Apple TV, i
 
 **Commands:**
 
-- `jamf-get-computers`: 
-- `jamf-get-computers-basic-subset`: 
-- `jamf-get-computer-by-id`: 
-- `jamf-get-computer-by-match`: 
-- `jamf-get-computer-general-subset`: 
-- `jamf-get-computer-location-subset`: 
-- `jamf-get-computer-purchasing-subset`: 
-- `jamf-get-computer-peripherals-subset`: 
-- `jamf-get-computer-hardware-subset`: 
-- `jamf-get-computer-certificates-subset`: 
-- `jamf-get-computer-security-subset`: 
-- `jamf-get-computer-software-subset`: 
-- `jamf-get-computer-extension-attributes-subset`: 
-- `jamf-get-computer-groups-accounts-subset`: 
-- `jamf-get-computer-iphones-subset`: 
+- `jamf-get-computers`: Returns a list of all computers with their associated IDs. By default, returns the first 50 computers to the context (ID + name). This command is a replacement 
+- `jamf-get-computers-basic-subset`: Returns the “basic” subset for all of the computers. The “basic” subset includes: MAC address, model, UDID, name, department, building, serial number, username,
+- `jamf-get-computer-by-id`: Returns the "general" subset of a specific computer, e.g.: name, MAC address, IP, serial number, UDID, etc.
+- `jamf-get-computer-by-match`: Matches computers by specific characteristics using a filter query and returns general data on each of the computers.
+- `jamf-get-computer-general-subset`: Returns the general subset for a specific computer according to the given arguments.
+- `jamf-get-computer-location-subset`: Returns the location subset for a specific computer according to the given arguments.
+- `jamf-get-computer-purchasing-subset`: Returns the purchasing subset for a specific computer according to the given arguments.
+- `jamf-get-computer-peripherals-subset`: This command is deprecated and has no replacement.
+- `jamf-get-computer-hardware-subset`: Returns the hardware subset for a specific computer according to the given arguments.
+- `jamf-get-computer-certificates-subset`: Returns the certificates subset for a specific computer according to the given arguments.
+- `jamf-get-computer-security-subset`: Returns the security subset for a specific computer according to the given arguments.
+- `jamf-get-computer-software-subset`: Returns the software subset for a specific computer according to the given arguments.
+- `jamf-get-computer-extension-attributes-subset`: Returns the extension attributes subset for a specific computer according to the given arguments.
+- `jamf-get-computer-groups-accounts-subset`: Returns the groups accounts subset for a specific computer according to the given arguments.
+- `jamf-get-computer-iphones-subset`: This command is deprecated and has no replacement.
 
 
 ## JARM
@@ -11334,7 +11660,7 @@ Active TLS fingerprinting using JARM
 
 **Commands:**
 
-- `jarm-fingerprint`: 
+- `jarm-fingerprint`: Calculate JARM fingerprint by scanning host with multiple TLS packets.
 
 
 ## Jira Change Management
@@ -11449,9 +11775,9 @@ This integration ensures interaction with the JizoM API. This integration was in
 
 **Commands:**
 
-- `jizo-m-protocols-get`: 
-- `jizo-m-peers-get`: 
-- `jizo-m-query-records-get`: 
+- `jizo-m-protocols-get`: Get the list of alerts sorted by protocols.
+- `jizo-m-peers-get`: Get list of IP addresses connected to a specific one.
+- `jizo-m-query-records-get`: Retrieve all information available on Jizo M, mainly alerts.
 
 
 ## jmespath
@@ -11484,16 +11810,19 @@ Access the full set of possibilities the Joe Sandbox Cloud provides via RESTful 
 
 **Commands:**
 
-- `joe-is-online`: 
-- `joe-analysis-info`: 
-- `joe-list-analysis`: 
-- `joe-download-report`: 
-- `joe-download-sample`: 
-- `joe-list-lang-locales`: 
-- `joe-get-account-quota`: 
-- `joe-submission-info`: 
-- `joe-submit-sample`: 
-- `joe-submit-url`: 
+- `joe-is-online`: Check if the Joe Sandbox analysis server is online or in maintenance mode.
+- `joe-analysis-info`: Get information about an analysis.
+- `joe-list-analysis`: Lists all analyses.
+- `joe-download-report`: Download a resource belonging to a report. This can be the full report, dropped binaries, etc. See the integration README for the full list of supported report 
+- `joe-download-sample`: Download a sample.
+- `file`: Retrieves files information from Joe Security.
+- `url`: Retrieves URL information from Joe Security.
+- `joe-list–lia-countries`: Retrieve a list of localized internet anonymization countries.
+- `joe-list-lang-locales`: Retrieve a list of available language and locale combinations.
+- `joe-get-account-quota`: Retrieve the account quota.
+- `joe-submission-info`: Retrieve the submission info.
+- `joe-submit-sample`: Notice: Submitting indicators using this command might make the indicator data publicly available. See the vendor’s documentation for more details.
+- `joe-submit-url`: Notice: Submitting indicators using this command might make the indicator data publicly available. See the vendor’s documentation for more details.
 
 
 ## jq
@@ -11518,7 +11847,7 @@ A utility for testing incident fetching with mock JSON data
 
 **Commands:**
 
-- `json-sample-incident-generator-command`: 
+- `json-sample-incident-generator-command`: Read the provided JSON and return the results to the Context and Warroom. Can use key and value arg to change a JSON values if desired.
 
 
 ## Json2HtmlTable
@@ -11617,6 +11946,10 @@ Recursively un-escapes JSON data if escaped JSON is found
 
 Use the JsonWhoIs integration to enrich domain indicators
 
+**Commands:**
+
+- `whois`: Returns enriched data for Domains, URLs, and IP addresses.
+
 
 ## JWT
 
@@ -11627,9 +11960,9 @@ JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be t
 
 **Commands:**
 
-- `jwt-generate-access-token`: 
-- `jwt-generate-authentication-payload`: 
-- `jwt-decode-token`: 
+- `jwt-generate-access-token`: Generates a JWT authorization token with an optional scope and queries the API for an access token and then returns the received API access token
+- `jwt-generate-authentication-payload`: Generates a JWT authorization request payload by encoding the provided claims.
+- `jwt-decode-token`: A command to decode JWT tokens
 
 
 ## Kafka v3
@@ -11641,10 +11974,10 @@ Use the Kafka integration to manage messages and partitions and to fetch Kafka m
 
 **Commands:**
 
-- `kafka-print-topics`: 
-- `kafka-publish-msg`: 
-- `kafka-consume-msg`: 
-- `kafka-fetch-partitions`: 
+- `kafka-print-topics`: Prints all topics and their partitions.
+- `kafka-publish-msg`: Publishes a message to Kafka.
+- `kafka-consume-msg`: Consumes a single Kafka message.
+- `kafka-fetch-partitions`: Fetches partitions for a topic.
 
 
 ## Kaspersky Security Center (Beta)
@@ -11656,17 +11989,17 @@ The administration console for controlling all Kaspersky Lab security solutions 
 
 **Commands:**
 
-- `ksc-hosts-list`: 
-- `ksc-host-get`: 
-- `ksc-groups-list`: 
-- `ksc-group-add`: 
-- `ksc-group-delete`: 
-- `ksc-software-applications-list`: 
-- `ksc-software-patches-list`: 
-- `ksc-host-software-applications-list`: 
-- `ksc-host-software-patches-list`: 
-- `ksc-policies-list`: 
-- `ksc-policy-get`: 
+- `ksc-hosts-list`: Returns a list of hosts.
+- `ksc-host-get`: Returns details of a host
+- `ksc-groups-list`: Returns a list of groups.
+- `ksc-group-add`: Create new administration group.
+- `ksc-group-delete`: Deletes an administrative group.
+- `ksc-software-applications-list`: Returns limited attributes for all software applications.
+- `ksc-software-patches-list`: Returns limited attributes for all software application updates.
+- `ksc-host-software-applications-list`: Retrieve software applications for a host.
+- `ksc-host-software-patches-list`: Retrieves patches for a host.
+- `ksc-policies-list`: Returns policies located in specified group.
+- `ksc-policy-get`: Retrieves data for specified policy.
 
 
 ## Keeper Secrets Manager
@@ -11678,9 +12011,9 @@ Manage Secrets and Protect Sensitive Data through Keeper Vault. This integration
 
 **Commands:**
 
-- `ksm-find-files`: 
-- `ksm-find-records`: 
-- `ksm-get-field`: 
+- `ksm-find-files`: Search for records by full or partial file name match.
+- `ksm-find-records`: Search for records by full or partial title match.
+- `ksm-get-field`: Use this command to get field value from Keeper record.
 
 
 ## Keeper Security
@@ -11692,9 +12025,9 @@ Use this integration to fetch audit logs from Keeper Security Admin Console as X
 
 **Commands:**
 
-- `keeper-security-register-start`: 
-- `keeper-security-register-complete`: 
-- `keeper-security-register-test`: 
+- `keeper-security-register-start`: Use this command to start the registration process.
+- `keeper-security-register-complete`: Use this command to complete the registration process.
+- `keeper-security-register-test`: Use this command to test the connectivity of the instance.
 
 
 ## Kenna - Search and Handle Asset Vulnerabilities
@@ -11719,18 +12052,18 @@ Use the Kenna v2 integration to search and update vulnerabilities, schedule a ru
 
 **Commands:**
 
-- `kenna-search-vulnerabilities`: 
-- `kenna-run-connector`: 
-- `kenna-search-fixes`: 
-- `kenna-update-asset`: 
-- `kenna-update-vulnerability`: 
-- `kenna-get-connectors`: 
-- `kenna-search-assets`: 
-- `kenna-get-asset-vulnerabilities`: 
-- `kenna-add-tag`: 
-- `kenna-delete-tag`: 
-- `kenna-get-connector-runs`: 
-- `kenna-search-assets-by-external-id`: 
+- `kenna-search-vulnerabilities`: Searches for vulnerabilities in Kenna.
+- `kenna-run-connector`: Executes a run of the specified connector. If file based, it will use the most recently uploaded data file.
+- `kenna-search-fixes`: Filters fixes by a given set of vulnerability and asset parameters and returns the filtered fixes.
+- `kenna-update-asset`: Updates the attributes of a single asset.
+- `kenna-update-vulnerability`: Updates the attributes of a single vulnerability.
+- `kenna-get-connectors`: Returns all connectors.
+- `kenna-search-assets`: Searches for assets.
+- `kenna-get-asset-vulnerabilities`: Gets vulnerabilities of the specified asset.
+- `kenna-add-tag`: Adds a tag to the specified asset.
+- `kenna-delete-tag`: Deletes tags from the specified asset.
+- `kenna-get-connector-runs`: Returns JSON data on all the runs of a given connector.
+- `kenna-search-assets-by-external-id`: Search assets by external ID.
 
 
 ## KeylightCreateIssue
@@ -11755,21 +12088,21 @@ Use the Kibana integration to manage Elastic Security cases, detection alerts, r
 
 **Commands:**
 
-- `kibana-cases-find`: 
-- `kibana-case-alerts-find`: 
-- `kibana-alert-status-update`: 
-- `kibana-case-status-update`: 
-- `kibana-user-spaces-find`: 
-- `kibana-case-comments-find`: 
-- `kibana-case-delete`: 
-- `kibana-rule-delete`: 
-- `kibana-rule-details-search`: 
-- `kibana-case-comment-add`: 
-- `kibana-user-list-get`: 
-- `kibana-alert-assign`: 
-- `kibana-detection-alerts-list`: 
-- `kibana-alert-note-add`: 
-- `kibana-alerting-health-get`: 
+- `kibana-cases-find`: Lists cases in Kibana.
+- `kibana-case-alerts-find`: Returns information on the alerts of the input case in Kibana.
+- `kibana-alert-status-update`: Updates the status of an input alert.
+- `kibana-case-status-update`: Updates the status of an input case.
+- `kibana-user-spaces-find`: Gets the list of user spaces in Kibana.
+- `kibana-case-comments-find`: Finds comments for an input case ID.
+- `kibana-case-delete`: Deletes a case in Kibana based on case ID.
+- `kibana-rule-delete`: Deletes a rule in Kibana based on the input rule ID.
+- `kibana-rule-details-search`: Retrieves details about a detection rule in Kibana based on the input KQL filter.
+- `kibana-case-comment-add`: Adds a comment to a case in Kibana. The case ID and owner can be obtained from the "kibana-cases-find" command.
+- `kibana-user-list-get`: Searches for the list of users in Kibana and returns the users' UIDs.
+- `kibana-alert-assign`: Assigns an alert in Kibana to a user via user ID input.
+- `kibana-detection-alerts-list`: Searches for detection alerts in Kibana.
+- `kibana-alert-note-add`: Adds a note to an alert in Kibana.
+- `kibana-alerting-health-get`: Retrieves the health status of the Kibana alerting framework.
 
 
 ## KillProcessWrapper
@@ -11819,19 +12152,19 @@ KnowBe4's KSAT Console is a security awareness training and simulated phishing c
 **Product:** KOI  
 **Commands:**
 
-- `koi-get-events`: 
-- `koi-blocklist-get`: 
-- `koi-allowlist-get`: 
-- `koi-inventory-search`: 
-- `koi-policy-list`: 
-- `koi-inventory-item-get`: 
-- `koi-blocklist-items-add`: 
-- `koi-policy-status-update`: 
-- `koi-inventory-list`: 
-- `koi-inventory-item-endpoints-list`: 
-- `koi-blocklist-items-remove`: 
-- `koi-allowlist-items-remove`: 
-- `koi-allowlist-items-add`: 
+- `koi-get-events`: Gets events from KOI. This command is used for developing/debugging. Use with caution, as it can create events, leading to event duplication and exceeding API r
+- `koi-blocklist-get`: Retrieves all items in the blocklist.
+- `koi-allowlist-get`: Retrieves all items in the allowlist.
+- `koi-inventory-search`: Searches inventory items using advanced query builder filters. Provide a filter via the 'filter_json' argument (inline JSON string) or the 'filter_raw_json_entr
+- `koi-policy-list`: Retrieves a list of all policies. Use the 'page' and 'page_size' arguments to fetch a specific page, or use the 'limit' argument to auto-paginate and collect up
+- `koi-inventory-item-get`: Retrieves comprehensive details for a specific software item, extension, or package using its unique identifier, marketplace, and version.
+- `koi-blocklist-items-add`: Adds one or more items to the global blocklist. Provide either the 'item_id' and 'marketplace' arguments for a single item, or the 'items_list_raw_json_entry_id
+- `koi-policy-status-update`: Enables or disables a policy by ID.
+- `koi-inventory-list`: Retrieves a paginated list of items installed across your organization's endpoints. Supports extensive filtering by marketplace, platform, risk level, publisher
+- `koi-inventory-item-endpoints-list`: Retrieves a paginated list of endpoints that have a specific item installed.
+- `koi-blocklist-items-remove`: Removes one or more items from the global blocklist. Provide either the 'item_id' and 'marketplace' arguments for a single item, or the 'items_list_raw_json_ent
+- `koi-allowlist-items-remove`: Removes one or more items from the global allowlist. Provide either the 'item_id' and 'marketplace' arguments for a single item, or the 'items_list_raw_json_ent
+- `koi-allowlist-items-add`: Adds one or more items to the global allowlist. Provide either the 'item_id' and 'marketplace' arguments for a single item, or the 'items_list_raw_json_entry_id
 
 
 ## Koodous
@@ -11843,7 +12176,7 @@ Check Android app samples (APK) against Koodous API
 
 **Commands:**
 
-- `k-check-hash`: 
+- `k-check-hash`: Check APK sample.
 
 
 ## Lacework
@@ -11855,14 +12188,14 @@ Lacework provides end-to-end cloud security automation for AWS, Azure, and GCP w
 
 **Commands:**
 
-- `lw-get-alert-details`: 
-- `lw-get-aws-compliance-assessment`: 
-- `lw-get-azure-compliance-assessment`: 
-- `lw-get-gcp-compliance-assessment`: 
-- `lw-get-gcp-projects-by-organization`: 
-- `lw-get-compliance-report`: 
-- `lw-get-container-vulnerabilities`: 
-- `lw-get-host-vulnerabilities`: 
+- `lw-get-alert-details`: Fetch details for a specific Alert in Lacework.
+- `lw-get-aws-compliance-assessment`: Fetch the latest AWS compliance data from Lacework.
+- `lw-get-azure-compliance-assessment`: Fetch the latest Azure compliance data from Lacework.
+- `lw-get-gcp-compliance-assessment`: Fetch the latest GCP compliance data from Lacework.
+- `lw-get-gcp-projects-by-organization`: Fetch a list of GCP projects that are under an organization.
+- `lw-get-compliance-report`: Fetch a specified compliance report from Lacework.
+- `lw-get-container-vulnerabilities`: Fetch container vulnerability information from Lacework.
+- `lw-get-host-vulnerabilities`: Fetch host vulnerability information from Lacework.
 
 
 ## LanguageDetect
@@ -11886,9 +12219,9 @@ The Lansweeper integration allows users to retrieve the asset details. This inte
 
 **Commands:**
 
-- `ls-site-list`: 
-- `ls-ip-hunt`: 
-- `ls-mac-hunt`: 
+- `ls-site-list`: Retrieve a list of all sites to which an application has access.
+- `ls-ip-hunt`: Return a list of all assets associated with a given site and IP address.
+- `ls-mac-hunt`: Return a list of all assets associated with a given site and MAC address.
 
 
 ## LastArrayElement
@@ -11912,10 +12245,13 @@ This integration allow to interact with the Gatewatcher LastInfoSec product via 
 
 **Commands:**
 
-- `gw-lis-get-by-minute`: 
-- `gw-lis-get-by-value`: 
-- `gw-lis-leaked-email-by-domain`: 
-- `gw-lis-is-email-leaked`: 
+- `gw-lis-get-by-minute`: Retrieve the data from Gatewatcher CTI feed by minute. Max 1440 minutes.
+- `gw-lis-get-by-value`: Allows you to search for an IOC (url, hash, host) or a vulnerability in the Gatewatcher CTI database. If the data is known, only the IOC corresponding to the va
+- `gw-lis-leaked-email-by-domain`: Allows you to search for leaked emails via a domain in Gatewatcher's CTI database. If the data is found, a list of emails is returned. otherwise, nothing is ret
+- `gw-lis-is-email-leaked`: Allows you to search if a specific email was leaked in Gatewatcher's CTI database. If the data is found, the email is returned. otherwise, nothing is returned.
+- `url`: search IOCs for URLs in Gatewatcher's CTI database.
+- `file`: search IOCs for file hashes in Gatewatcher's CTI database.
+- `domain`: search IOCs for domains in Gatewatcher's CTI database.
 
 
 ## Launch Adhoc Command Generic - Ansible Automation Platform
@@ -11961,10 +12297,10 @@ Generic polling playbook to launch a specific job template. Returns the job stat
 **Product:** LDAP Authentication  
 **Commands:**
 
-- `ad-authenticate`: 
-- `ad-groups`: 
-- `ad-authenticate-and-roles`: 
-- `ad-entries-search`: 
+- `ad-authenticate`: Performs a simple bind operation on the LDAP server.
+- `ad-groups`: Fetches LDAP groups under a given base DN.
+- `ad-authenticate-and-roles`: Performs a simple bind operation on the LDAP server and returns the authenticated user's groups.
+- `ad-entries-search`: A generic LDAP search command.
 
 
 ## LessThanPercentage
@@ -11989,7 +12325,7 @@ An Integration with LGTM API This integration was integrated and tested with ver
 
 **Commands:**
 
-- `lgtm-add-project`: 
+- `lgtm-add-project`: Add a project to LGTM
 
 
 ## LinkIncidentsButton
@@ -12022,6 +12358,10 @@ Avoids DB version errors when simultaneously running multiple linked incidents
 
 **Type:** integration  
 **Product:** Linkshadow  
+**Commands:**
+
+- `Linkshadow-fetch-entity-anomalies`: Linkshadow returns the full incident details referenced by timeframe (default = 60min) in an API response. Use of this command will return the JSON structure of
+
 
 ## Linux
 
@@ -12032,11 +12372,11 @@ This integration enables the management of Linux hosts directly from platform us
 
 **Commands:**
 
-- `linux-alternatives`: 
-- `linux-at`: 
-- `linux-authorized-key`: 
-- `linux-capabilities`: 
-- `linux-cron`: 
+- `linux-alternatives`: Manages alternative programs for common commands Further documentation available at https://docs.ansible.com/ansible/2.9/modules/alternatives_module.html
+- `linux-at`: Schedule the execution of a command or script file via the at command Further documentation available at https://docs.ansible.com/ansible/2.9/modules/at_module.
+- `linux-authorized-key`: Adds or removes an SSH authorized key Further documentation available at https://docs.ansible.com/ansible/2.9/modules/authorized_key_module.html
+- `linux-capabilities`: Manage Linux capabilities Further documentation available at https://docs.ansible.com/ansible/2.9/modules/capabilities_module.html
+- `linux-cron`: Manage cron.d and crontab entries Further documentation available at https://docs.ansible.com/ansible/2.9/modules/cron_module.html
 
 
 ## List Device Events - Chronicle
@@ -12088,7 +12428,12 @@ Use the LockPath KeyLight integration to manage GRC tickets in the Keylight plat
 
 **Commands:**
 
-- `kl-get-component`: 
+- `kl-get-component`: Retrieves a component specified by ID or alias. If no parameters are specified, all components will be retrieved.
+- `kl-get-field-list`: Retrieves a detail field listing for a component specified by ID.
+- `kl-get-field`: Retrieves details for a field specified by ID.
+- `kl-get-record`: Returns the complete set of fields for a given record within a component.
+- `kl-get-records`: Retrieves the title/default field for a set of records within a chosen component. Filters may be applied to retrieve only the records meeting the selected crite
+- `kl-get-record-count`: Get the number of records for a specific component and filter.
 
 
 ## Logrhythm - Search query
@@ -12119,21 +12464,21 @@ LogRhythm security intelligence. This integration was integrated and tested with
 
 **Commands:**
 
-- `lr-execute-query`: 
-- `lr-get-hosts-by-entity`: 
-- `lr-add-host`: 
-- `lr-update-host-status`: 
-- `lr-get-persons`: 
-- `lr-get-networks`: 
-- `lr-get-hosts`: 
-- `lr-get-alarm-data`: 
-- `lr-get-alarm-events`: 
-- `lr-get-case-evidence`: 
-- `lr-execute-search-query`: 
-- `lr-get-query-result`: 
-- `lr-get-users`: 
-- `lr-get-logins`: 
-- `lr-get-privileges`: 
+- `lr-execute-query`: Executes a query for logs that match the query parameters.
+- `lr-get-hosts-by-entity`: Retrieves a list of hosts for a given entity, or an empty list if none is found.
+- `lr-add-host`: Add a new host to an entity.
+- `lr-update-host-status`: Updates an host status.
+- `lr-get-persons`: Retrieves a list of LogRhythm persons.
+- `lr-get-networks`: Retrieves a list of networks.
+- `lr-get-hosts`: Returns a list of hosts.
+- `lr-get-alarm-data`: Returns data for an alarm.
+- `lr-get-alarm-events`: Returns a list of events, by alarm ID.
+- `lr-get-case-evidence`: Execute evidence query for a specific case ID.
+- `lr-execute-search-query`: Execute search query to LogRhythm log database.
+- `lr-get-query-result`: Get search query result with task ID output from lr-execute-search-query command
+- `lr-get-users`: Returns a list of users
+- `lr-get-logins`: Returns a list of logins
+- `lr-get-privileges`: Returns the privileges of a given user.
 
 
 ## LogRhythmRest v2
@@ -12145,21 +12490,21 @@ LogRhythm security intelligence. This integration was integrated and tested with
 
 **Commands:**
 
-- `lr-alarms-list`: 
-- `lr-alarm-update`: 
-- `lr-alarm-add-comment`: 
-- `lr-alarm-history-list`: 
-- `lr-alarm-events-list`: 
-- `lr-alarm-summary`: 
-- `lr-alarm-drilldown`: 
-- `lr-get-alarm-details`: 
-- `lr-cases-list`: 
-- `lr-case-create`: 
-- `lr-case-update`: 
-- `lr-case-status-change`: 
-- `lr-case-evidence-list`: 
-- `lr-case-alarm-evidence-add`: 
-- `lr-case-note-evidence-add`: 
+- `lr-alarms-list`: Gets the details of the alarms using the filter criteria.
+- `lr-alarm-update`: Updates the alarm status and RBP based on the alarm ID supplied. alarm_status or rbp are required.
+- `lr-alarm-add-comment`: Updates the Alarm History table with comments in the Comments column based on the alarm ID supplied.
+- `lr-alarm-history-list`: Gets the alarm history details by ID and filter criteria.
+- `lr-alarm-events-list`: Gets a list of events for the specified alarm ID. Note: Currently, this command does not work as expected on LogRhythm's side. It always returns a list of one i
+- `lr-alarm-summary`: Get the alarm summary by the specified alarm ID.
+- `lr-alarm-drilldown`: Gets the drill-down logs per rule block for a specific alarm Id that fired associated with an AIE alarm.
+- `lr-get-alarm-details`: Get the details of an alarm by the specified alarm ID.
+- `lr-cases-list`: Get cases details using filter criteria.
+- `lr-case-create`: Create a new case.
+- `lr-case-update`: Update case information. For example, the case name, priority, and due date.
+- `lr-case-status-change`: Update the status of a case.
+- `lr-case-evidence-list`: Return a list of evidence summaries for a case.
+- `lr-case-alarm-evidence-add`: Add multiple alarms as evidence on a case.
+- `lr-case-note-evidence-add`: Add a note as evidence on a case.
 
 
 ## LogRhythmRestV2 - Search query
@@ -12187,7 +12532,8 @@ This playbook used generic polling to get query results using the command: lr-ex
 **Product:** Logz.io  
 **Commands:**
 
-- `logzio-search-logs`: 
+- `logzio-search-logs`: Returns logs from your Logz.io Operations account by Lucene query
+- `logzio-get-logs-by-event-id`: Fetches the logs that triggered a security event in Logz.io Cloud SIEM
 
 
 ## Lost / Stolen Device Playbook
@@ -12228,9 +12574,9 @@ Cognyte is a global leader in security analytics software that empowers governme
 
 **Commands:**
 
-- `luminar-get-indicators`: 
-- `luminar-get-leaked-records`: 
-- `luminar-reset-fetch-indicators`: 
+- `luminar-get-indicators`: Gets Luminar Indicators
+- `luminar-get-leaked-records`: Gets Luminar Leaked Records
+- `luminar-reset-fetch-indicators`: WARNING: This command will reset your fetch history.
 
 
 ## Lumu
@@ -12242,21 +12588,21 @@ SecOps operations - Reflect and manage the Lumu Incidents either from platform C
 
 **Commands:**
 
-- `lumu-retrieve-labels`: 
-- `lumu-retrieve-a-specific-label`: 
-- `lumu-retrieve-incidents`: 
-- `lumu-retrieve-a-specific-incident-details`: 
-- `lumu-retrieve-a-specific-incident-context`: 
-- `lumu-comment-a-specific-incident`: 
-- `lumu-retrieve-open-incidents`: 
-- `lumu-retrieve-muted-incidents`: 
-- `lumu-retrieve-closed-incidents`: 
-- `lumu-retrieve-endpoints-by-incident`: 
-- `lumu-mark-incident-as-read`: 
-- `lumu-mute-incident`: 
-- `lumu-unmute-incident`: 
-- `lumu-consult-incidents-updates-through-rest`: 
-- `lumu-close-incident`: 
+- `lumu-retrieve-labels`: Get a paginated list of all the labels created for the company and its details such as id, name and business relevance. The items are sorted by the label id in 
+- `lumu-retrieve-a-specific-label`: Get details such as id, name and business relevance from a specific label.
+- `lumu-retrieve-incidents`: Get a paginated list of incidents for the company. The items are listed by the most recent.
+- `lumu-retrieve-a-specific-incident-details`: Get details of a specific Incident.
+- `lumu-retrieve-a-specific-incident-context`: Get details of a specific Incident.
+- `lumu-comment-a-specific-incident`: Get a paginated list of open incidents for the company. The items are listed by the most recent.
+- `lumu-retrieve-open-incidents`: Get a paginated list of open incidents for the company. The items are listed by the most recent.
+- `lumu-retrieve-muted-incidents`: Get a paginated list of muted incidents for the company. The items are listed by the most recent.
+- `lumu-retrieve-closed-incidents`: Get a paginated list of closed incidents for the company. The items are listed by the most recent.
+- `lumu-retrieve-endpoints-by-incident`: Get a paginated summary of the endpoints affected by a specified incident.
+- `lumu-mark-incident-as-read`: This transaction does not require any additional body parameters.
+- `lumu-mute-incident`: To associate a specific user to this transaction, include the header Lumu-User-Id with the user id as a value. Read more.
+- `lumu-unmute-incident`: To associate a specific user to this transaction, include the header Lumu-User-Id with the user id as a value. Read more.
+- `lumu-consult-incidents-updates-through-rest`: Lumu provides an endpoint to consult real-time updates on incident operations through REST when Websocket is not available.
+- `lumu-close-incident`: To associate a specific user to this transaction, include the header Lumu-User-Id with the user id as a value. Read more.
 
 
 ## Lumu Secops
@@ -12268,21 +12614,21 @@ SecOps operations for the new Lumu Defender API. Fetch, investigate, and manage 
 
 **Commands:**
 
-- `lumusecops-retrieve-labels`: 
-- `lumusecops-retrieve-a-specific-label`: 
-- `lumusecops-get-all-incidents`: 
-- `lumusecops-get-open-incidents`: 
-- `lumusecops-get-muted-incidents`: 
-- `lumusecops-get-closed-incidents`: 
-- `lumusecops-get-incident-events-groupings`: 
-- `lumusecops-get-incident-details`: 
-- `lumusecops-mark-incident-as-read`: 
-- `lumusecops-begin-incident-work`: 
-- `lumusecops-comment-incident`: 
-- `lumusecops-mute-incident`: 
-- `lumusecops-unmute-incident`: 
-- `lumusecops-close-incident`: 
-- `lumusecops-consult-incidents-updates`: 
+- `lumusecops-retrieve-labels`: Gets a paginated list of all the labels created for the company and its details such as ID, name, and business relevance. The items are sorted by the label ID i
+- `lumusecops-retrieve-a-specific-label`: Gets details such as id, name and business relevance from a specific label.
+- `lumusecops-get-all-incidents`: Gets a paginated list of all incidents.
+- `lumusecops-get-open-incidents`: Gets a paginated list of open incidents.
+- `lumusecops-get-muted-incidents`: Gets a paginated list of muted incidents.
+- `lumusecops-get-closed-incidents`: Gets a paginated list of closed incidents.
+- `lumusecops-get-incident-events-groupings`: Retrieves event groupings for a specific incident.
+- `lumusecops-get-incident-details`: Gets details for a specific incident.
+- `lumusecops-mark-incident-as-read`: Marks an incident as read.
+- `lumusecops-begin-incident-work`: Begins work on an incident.
+- `lumusecops-comment-incident`: Adds a comment to an incident.
+- `lumusecops-mute-incident`: Mutes an incident.
+- `lumusecops-unmute-incident`: Unmutes an incident.
+- `lumusecops-close-incident`: Closes an incident.
+- `lumusecops-consult-incidents-updates`: Obtains real-time updates on incident operations.
 
 
 ## MAC Lease Lookup - Infoblox NIOS
@@ -12306,7 +12652,7 @@ Query MAC Vendors for vendor names when providing a MAC address. MAC Vendors mai
 
 **Commands:**
 
-- `macvendors-lookup-mac`: 
+- `macvendors-lookup-mac`: Resolves a MAC address to a vendor name.
 
 
 ## Magnet Automate Beta
@@ -12318,21 +12664,21 @@ Magnet Automate is an orchestration and automation platform that accelerates you
 
 **Commands:**
 
-- `mf-automate-custom-fields-list`: 
-- `mf-automate-case-create`: 
-- `mf-automate-cases-list`: 
-- `mf-automate-case-delete`: 
-- `mf-automate-case-cancel`: 
-- `mf-automate-workflow-run-start`: 
-- `mf-automate-workflow-run-list`: 
-- `mf-automate-workflow-run-delete`: 
-- `mf-automate-workflow-run-cancel`: 
-- `mf-automate-merge-workflow-run-start`: 
-- `mf-automate-workflow-list`: 
-- `mf-automate-workflow-delete`: 
-- `mf-automate-workflow-get`: 
-- `mf-automate-node-create`: 
-- `mf-automate-nodes-list`: 
+- `mf-automate-custom-fields-list`: Retrieves a list of custom fields for cases and evidence sources.
+- `mf-automate-case-create`: Creates a new case in Magnet Automate. Use mf-automate-custom-fields-list to get all available custom fields.
+- `mf-automate-cases-list`: Retrieves a list of all cases or information about a specific case.
+- `mf-automate-case-delete`: Deletes a specific case from Magnet Automate.
+- `mf-automate-case-cancel`: Cancels an ongoing case in Magnet Automate.
+- `mf-automate-workflow-run-start`: Starts a new workflow run and associates it with a specific case.
+- `mf-automate-workflow-run-list`: Retrieves a list of all workflow runs for a specific case or details of a specific run.
+- `mf-automate-workflow-run-delete`: Deletes a specific workflow run from a case.
+- `mf-automate-workflow-run-cancel`: Cancels a specific workflow run.
+- `mf-automate-merge-workflow-run-start`: Starts a merge workflow run for multiple existing workflow runs.
+- `mf-automate-workflow-list`: Retrieves a list of all available workflows.
+- `mf-automate-workflow-delete`: Deletes a specific workflow from Magnet Automate.
+- `mf-automate-workflow-get`: Retrieves detailed information and export data for a specific workflow. Use mf-automate-workflow-list to get all available workflows.
+- `mf-automate-node-create`: Creates a new node (agent) in Magnet Automate.
+- `mf-automate-nodes-list`: Retrieves a list of all available nodes (agents).
 
 
 ## Mail Listener v2
@@ -12341,9 +12687,9 @@ Magnet Automate is an orchestration and automation platform that accelerates you
 **Product:** Mail Listener  
 **Commands:**
 
-- `mail-listener-list-emails`: 
-- `mail-listener-get-email`: 
-- `mail-listener-get-email-as-eml`: 
+- `mail-listener-list-emails`: Fetch mails according to the configuration
+- `mail-listener-get-email`: Fetches an email by email ID
+- `mail-listener-get-email-as-eml`: Fetches an email by message ID and download it's eml file
 
 
 ## Malcore alert related file
@@ -12374,6 +12720,13 @@ Sets the indicators reputation to "suspicious" when the malicious ratio is above
 
 Analyze suspicious hashes, URLs, domains and IP addresses This integration was integrated and tested with version 1.1 of Maltiverse
 
+**Commands:**
+
+- `ip`: Checks the reputation of an IP address
+- `domain`: Checks the reputation of a Domain
+- `url`: Checks the reputation of an URL
+- `file`: Check the reputation of a file
+
 
 ## Malware SIEM Ingestion - Get Incident Data
 
@@ -12400,9 +12753,10 @@ MalwareBazaar is a project from abuse.ch with the goal of sharing malware sample
 
 **Commands:**
 
-- `malwarebazaar-download-sample`: 
-- `malwarebazaar-comment-add`: 
-- `malwarebazaar-samples-list`: 
+- `file`: Check if a particular malware sample is known to MalwareBazaar.
+- `malwarebazaar-download-sample`: Download a malware sample from MalwareBazaar. Any malware sample downloaded from MalwareBazaar is zipped and password protected using the password "infected" (w
+- `malwarebazaar-comment-add`: Add a comment for a malware sample.
+- `malwarebazaar-samples-list`: Retrieves a list of recent malware samples (maximum 1000) associated with a specific sample type. Note that you can either use the limit argument or the page an
 
 
 ## ManageEngine
@@ -12414,8 +12768,8 @@ ManageEngine Endpoint Central is a Unified Endpoint Management solution that hel
 
 **Commands:**
 
-- `manage-engine-test`: 
-- `manage-engine-get-events`: 
+- `manage-engine-test`: Tests connectivity of the server.
+- `manage-engine-get-events`: Manual command to fetch events and display them.
 
 
 ## ManageEngine PAM360
@@ -12427,16 +12781,16 @@ Use ManageEngine PAM360, a privileged access management solution to manage criti
 
 **Commands:**
 
-- `pam360-create-resource`: 
-- `pam360-create-account`: 
-- `pam360-update-resource`: 
-- `pam360-update-account`: 
-- `pam360-list-all-resources`: 
-- `pam360-list-all-accounts`: 
-- `pam360-fetch-account-details`: 
-- `pam360-fetch-resource-account-id`: 
-- `pam360-fetch-password`: 
-- `pam360-update-account-password`: 
+- `pam360-create-resource`: Creates a new resource.
+- `pam360-create-account`: Creates a new account under a specified resource.
+- `pam360-update-resource`: Updates the attributes of a resource such as name, type, URL, and description.
+- `pam360-update-account`: Updates the attributes an account such as name, password policy, and notes if applicable.
+- `pam360-list-all-resources`: Lists all resources owned by you and shared to you by other users.
+- `pam360-list-all-accounts`: Lists all accounts belonging to the resource.
+- `pam360-fetch-account-details`: Fetches the details of an account using the corresponding account ID.
+- `pam360-fetch-resource-account-id`: Fetches the IDs of the resources and accounts.
+- `pam360-fetch-password`: Fetches the account password using the Resource and Account IDs.
+- `pam360-update-account-password`: Updates the account password.
 
 
 ## ManageOOOusers
@@ -12463,11 +12817,11 @@ Integrate with Mandiant Advantage Attack Surface Management to import "issues" a
 
 **Commands:**
 
-- `attacksurfacemanagement-get-projects`: 
-- `attacksurfacemanagement-get-collections`: 
-- `fetch-incidents`: 
-- `get-remote-data`: 
-- `update-remote-system`: 
+- `attacksurfacemanagement-get-projects`: Retrieve a list of all accessible ASM projects.
+- `attacksurfacemanagement-get-collections`: Retrieve a list of collections for a specified project
+- `fetch-incidents`: Fetch Incidents
+- `get-remote-data`: Update a specific incident
+- `update-remote-system`: Update issue in Mandiant Advantage ASM
 
 
 ## Mandiant Automated Defense (Formerly Respond Software)
@@ -12479,11 +12833,11 @@ Disclaimer: Respond Software was recently acquired by FireEye and has rebranded 
 
 **Commands:**
 
-- `mad-get-incident`: 
-- `mad-close-incident`: 
-- `mad-assign-user`: 
-- `mad-remove-user`: 
-- `mad-get-escalations`: 
+- `mad-get-incident`: pull data for a specific incident from MAD. This command will only return an output of the incident data. it does not create a new incident
+- `mad-close-incident`: close an incident in Respond and provide feedback on that incident. If the incident is already closed, feedback can still be updated. Additional comments and an
+- `mad-assign-user`: assign a user to a Respond incident
+- `mad-remove-user`: unassign a user from a Respond incident
+- `mad-get-escalations`: Get escalation data associated with incident. In Respond, an 'escalation' is a specific event derived from a cybersecurity telemetry. Escalations are compiled t
 
 
 ## MapPattern
@@ -12687,21 +13041,21 @@ Mattermost is an open-source, self-hostable online chat service with file sharin
 
 **Commands:**
 
-- `mattermost-get-team`: 
-- `mattermost-list-channels`: 
-- `mattermost-list-private-channels-for-user`: 
-- `mattermost-create-channel`: 
-- `mattermost-add-channel-member`: 
-- `mattermost-remove-channel-member`: 
-- `mattermost-list-users`: 
-- `mattermost-send-file`: 
-- `send-notification`: 
-- `mattermost-close-channel`: 
-- `close-channel`: 
-- `mirror-investigation`: 
-- `close-channel`: 
-- `mattermost-mirror-investigation`: 
-- `mattermost-list-groups`: 
+- `mattermost-get-team`: Gets a team's details.
+- `mattermost-list-channels`: Lists channels.
+- `mattermost-list-private-channels-for-user`: Get all the private channels on a team for a user.
+- `mattermost-create-channel`: Creates a channel.
+- `mattermost-add-channel-member`: Adds a channel member.
+- `mattermost-remove-channel-member`: Removes a channel member.
+- `mattermost-list-users`: Lists users.
+- `mattermost-send-file`: Sends a file.
+- `send-notification`: Send a message using a chatbot app.
+- `mattermost-close-channel`: Closes a channel.
+- `close-channel`: Closes a mirrored MatterMost channel. If not provided, the mirrored investigation channel is archived (if the channel exists).
+- `mirror-investigation`: Mirrors the investigation between Mattermost and the the platform.
+- `close-channel`: Closes a mirrored Mattermost channel. If not provided, the mirrored investigation channel is archived (if the channel exists).
+- `mattermost-mirror-investigation`: Mirrors the investigation between Mattermost and the the platform.
+- `mattermost-list-groups`: Lists groups. Groups are available on Enterprise and Professional plans. Minimum server version: 5.11
 
 
 ## MattermostAskUser
@@ -12742,6 +13096,11 @@ Gets the maximum value from list e.g. ["25", "10", "25"] => "25"
 
 Use McAfee Database Activity Monitoring (DAM) Integration to fetch Alerts (incidents) and query Alerts. This integration was integrated and developed with version 4.6.x of McAfee DAM
 
+**Commands:**
+
+- `dam-get-alert-by-id`: Gets a DAM alert from McAfee Database Activity Monitoring by alert ID.
+- `dam-get-latest-by-rule`: Gets the latest DAM alerts by rule name.
+
 
 ## McAfee DXL
 
@@ -12749,6 +13108,14 @@ Use McAfee Database Activity Monitoring (DAM) Integration to fetch Alerts (incid
 **Product:** McAfee DXL  
 
 Use the McAfee DXL integration to connect and optimize security actions across multiple vendor products
+
+**Commands:**
+
+- `dxl-send-event`: Sends the specified event to the DXL fabric.
+- `dxl-push-ip`: Pushes an IP address to the DXL fabric.
+- `dxl-push-url`: Pushes the URL to the DXL fabric.
+- `dxl-push-domain`: Pushes a domain to the DXL fabric
+- `dxl-push-hash`: Pushes a file hash to the DXL fabric.
 
 
 ## McAfee ePO Endpoint Connectivity Diagnostics Playbook v2
@@ -12768,21 +13135,21 @@ McAfee ePolicy Orchestrator This integration was integrated and tested with vers
 
 **Commands:**
 
-- `epo-help`: 
-- `epo-get-latest-dat`: 
-- `epo-get-current-dat`: 
-- `epo-command`: 
-- `epo-update-client-dat`: 
-- `epo-update-repository`: 
-- `epo-get-system-tree-group`: 
-- `epo-find-systems`: 
-- `epo-find-system`: 
-- `epo-wakeup-agent`: 
-- `epo-apply-tag`: 
-- `epo-clear-tag`: 
-- `epo-list-tag`: 
-- `epo-get-tables`: 
-- `epo-query-table`: 
+- `epo-help`: Displays help (information) for ePO commands. If no command argument is specified, returns all ePO commands.
+- `epo-get-latest-dat`: Checks the latest available DAT file version in the public McAfee repository.
+- `epo-get-current-dat`: Checks the existing DAT file version in the ePO repository.
+- `epo-command`: Executes the ePO command. Receives the mandatory 'command' argument, and other optional arguments. Run the 'epo-help' command to get a list of available command
+- `epo-update-client-dat`: Runs a client task to update the DAT file on the given endpoints.
+- `epo-update-repository`: Triggers a server task in specific ePO servers to retrieve the latest signatures from the updated server.
+- `epo-get-system-tree-group`: Returns a system tree group.
+- `epo-find-systems`: Finds computers within a specified group in the McAfee ePO system tree.
+- `epo-find-system`: Finds systems in the McAfee ePO system tree.
+- `epo-wakeup-agent`: Wakes up an agent.
+- `epo-apply-tag`: Applies a tag to the specified host names.
+- `epo-clear-tag`: Clears a tag from the specified host names.
+- `epo-list-tag`: List tags that contain the searchText. If no searchText is specified, list all tags available in the ePO system.
+- `epo-get-tables`: Returns the ePO table of the table argument that is specified. If no table argument is specified, returns all ePO tables.
+- `epo-query-table`: Queries an ePO table.
 
 
 ## McAfee ESM v2
@@ -12794,21 +13161,21 @@ Run queries and receive alarms from Trellix (McAfee) ESM. This integration was t
 
 **Commands:**
 
-- `esm-fetch-fields`: 
-- `esm-search`: 
-- `esm-fetch-alarms`: 
-- `esm-get-case-list`: 
-- `esm-add-case`: 
-- `esm-edit-case`: 
-- `esm-get-case-statuses`: 
-- `esm-edit-case-status`: 
-- `esm-get-case-detail`: 
-- `esm-get-case-event-list`: 
-- `esm-add-case-status`: 
-- `esm-delete-case-status`: 
-- `esm-get-organization-list`: 
-- `esm-get-user-list`: 
-- `esm-acknowledge-alarms`: 
+- `esm-fetch-fields`: Gets all fields that can be used in query filters, including type information for each field
+- `esm-search`: Perform a query against Mcafee ESM SIEM
+- `esm-fetch-alarms`: Retrieves a list of triggered alarms.
+- `esm-get-case-list`: Gets a list of cases from McAfee ESM.
+- `esm-add-case`: Adds a case to the system.
+- `esm-edit-case`: Edit the details of an existing case.
+- `esm-get-case-statuses`: Gets a list of valid case statuses from the system.
+- `esm-edit-case-status`: Edits the status of a case.
+- `esm-get-case-detail`: Gets the details of an existing case.
+- `esm-get-case-event-list`: Gets case event details.
+- `esm-add-case-status`: Adds a status to the specified case.
+- `esm-delete-case-status`: Deletes the status of a case.
+- `esm-get-organization-list`: Gets a case organization.
+- `esm-get-user-list`: Gets a list of all users.
+- `esm-acknowledge-alarms`: Marks triggered alarms as acknowledged.
 
 
 ## McAfee NSM v2
@@ -12820,21 +13187,21 @@ McAfee Network Security Manager gives you real-time visibility and control over 
 
 **Commands:**
 
-- `nsm-list-domain-firewall-policy`: 
-- `nsm-get-firewall-policy`: 
-- `nsm-create-firewall-policy`: 
-- `nsm-update-firewall-policy`: 
-- `nsm-delete-firewall-policy`: 
-- `nsm-list-domain-rule-object`: 
-- `nsm-get-rule-object`: 
-- `nsm-create-rule-object`: 
-- `nsm-update-rule-object`: 
-- `nsm-delete-rule-object`: 
-- `nsm-get-alerts`: 
-- `nsm-get-alert-details`: 
-- `nsm-get-attacks`: 
-- `nsm-get-domains`: 
-- `nsm-get-sensors`: 
+- `nsm-list-domain-firewall-policy`: Gets the list of firewall policies defined in a particular domain.
+- `nsm-get-firewall-policy`: Gets the firewall policy details.
+- `nsm-create-firewall-policy`: Adds a new firewall policy and access rules. You have to provide at lease one of the source/destination rule objects. If you provide the id or type of the sourc
+- `nsm-update-firewall-policy`: Updates the firewall policy details. If the argument is_overwrite=true, the new values of the provided addresses will replace the existing values, otherwise the
+- `nsm-delete-firewall-policy`: Deletes the specified firewall policy.
+- `nsm-list-domain-rule-object`: Gets the list of rule objects defined in a particular domain.
+- `nsm-get-rule-object`: Gets the details of a rule object.
+- `nsm-create-rule-object`: Adds a new rule object.
+- `nsm-update-rule-object`: Updates a Rule object. In case of address rule update:
+- `nsm-delete-rule-object`: Deletes a rule object.
+- `nsm-get-alerts`: Retrieves the alerts.
+- `nsm-get-alert-details`: Retrieves the relevant alert details.
+- `nsm-get-attacks`: If an attack is given, the command returns the details for the specific attack. Otherwise, gets all available attack definitions in the Manager UI. This command
+- `nsm-get-domains`: If a domain ID is given, the command returns the details of the specific domain. Otherwise, gets all available domains.
+- `nsm-get-sensors`: Gets the list of sensors available in the specified domain. If the domain is not specified, details of all the sensors in all ADs will be provided.
 
 
 ## MCPApiModule
@@ -12868,7 +13235,7 @@ The cloud-based Menlo Security Isolation Platform (MSIP) eliminates the possibil
 
 **Commands:**
 
-- `menlo-security-get-events`: 
+- `menlo-security-get-events`: Manually fetch events from the Menlo Security Isolation Platform.
 
 
 ## Micro Focus Service Manager
@@ -12880,17 +13247,17 @@ Service Manager By Micro Focus (Formerly HPE Software)
 
 **Commands:**
 
-- `hpsm-update-incident`: 
-- `hpsm-create-incident`: 
-- `hpsm-list-incidents`: 
-- `hpsm-get-incident-by-id`: 
-- `hpsm-create-resource`: 
-- `hpsm-update-resource`: 
-- `hpsm-list-resources`: 
-- `hpsm-get-resource-by-id`: 
-- `hpsm-list-devices`: 
-- `hpsm-get-device`: 
-- `hpsm-create-request`: 
+- `hpsm-update-incident`: Updates existing incident (beta).
+- `hpsm-create-incident`: Creates a new incident.
+- `hpsm-list-incidents`: Returns all incidents.
+- `hpsm-get-incident-by-id`: Returns a single incident by ID. If no incident exists with the specified ID, an error will be returned.
+- `hpsm-create-resource`: Updates the existing resource (beta).
+- `hpsm-update-resource`: Creates a new resource.
+- `hpsm-list-resources`: Returns all resources (beta).
+- `hpsm-get-resource-by-id`: Returns a single resource by ID. If no resource exists with the specified ID, an error will be returned (beta).
+- `hpsm-list-devices`: Returns a list of devices, filtered according to query.
+- `hpsm-get-device`: Find and return a device by ID.
+- `hpsm-create-request`: Creates a new service request
 
 
 ## MicroFocus SMAX
@@ -12902,14 +13269,14 @@ Fetch SMAX incidents, requests and automate different SMAX case management actio
 
 **Commands:**
 
-- `microfocus-smax-get-entity`: 
-- `microfocus-smax-query-entities`: 
-- `microfocus-smax-create-entities`: 
-- `microfocus-smax-update-entities`: 
-- `microfocus-smax-create-incident`: 
-- `microfocus-smax-update-incident`: 
-- `microfocus-smax-create-request`: 
-- `microfocus-smax-update-request`: 
+- `microfocus-smax-get-entity`: Get any entity details
+- `microfocus-smax-query-entities`: Query entities' details using a collection query filter
+- `microfocus-smax-create-entities`: Create new entities
+- `microfocus-smax-update-entities`: Update entities
+- `microfocus-smax-create-incident`: Create a new incident
+- `microfocus-smax-update-incident`: Update an incident
+- `microfocus-smax-create-request`: Create a new request
+- `microfocus-smax-update-request`: Update a request
 
 
 ## Microsoft Endpoint Configuration Manager
@@ -12918,21 +13285,21 @@ Fetch SMAX incidents, requests and automate different SMAX case management actio
 **Product:** Microsoft Endpoint Configuration Manager  
 **Commands:**
 
-- `ms-ecm-user-last-log-on`: 
-- `ms-ecm-collection-list`: 
-- `ms-ecm-device-list`: 
-- `ms-ecm-script-list`: 
-- `ms-ecm-script-create`: 
-- `ms-ecm-script-invoke`: 
-- `ms-ecm-script-approve`: 
-- `ms-ecm-device-collection-create`: 
-- `ms-ecm-device-collection-members-add`: 
-- `ms-ecm-device-collection-include`: 
-- `ms-ecm-device-collection-exclude`: 
-- `ms-ecm-device-collection-members-by-query-add`: 
-- `ms-ecm-service-start`: 
-- `ms-ecm-service-restart`: 
-- `ms-ecm-service-stop`: 
+- `ms-ecm-user-last-log-on`: Gets the name of the last user who logged in to a given device.
+- `ms-ecm-collection-list`: Gets a Configuration Manager collection.
+- `ms-ecm-device-list`: Lists a Configuration Manager device.
+- `ms-ecm-script-list`: Gets Configuration Manager PowerShell scripts.
+- `ms-ecm-script-create`: Creates a new Powershell script.
+- `ms-ecm-script-invoke`: Invokes a script in the Configuration Manager.
+- `ms-ecm-script-approve`: Approves a Configuration Manager PowerShell script.
+- `ms-ecm-device-collection-create`: Creates a Configuration Manager collection.
+- `ms-ecm-device-collection-members-add`: Adds a direct rule membership to a device collection.
+- `ms-ecm-device-collection-include`: Adds an include collections membership rule to a device collection.
+- `ms-ecm-device-collection-exclude`: Adds an exclude membership rule to one or more Configuration Manager device collections.
+- `ms-ecm-device-collection-members-by-query-add`: Adds a query membership rule to one or more Configuration Manager device collections.
+- `ms-ecm-service-start`: Starts a service on a device or collection. (Implemented by creating and invoking the platform StartService script.)
+- `ms-ecm-service-restart`: Restarts a service on a device or collection. (Implemented by creating and invoking the platform RestartService script.)
+- `ms-ecm-service-stop`: Stops a service on a device or collection. (Implemented by creating and invoking the platform StopService script.)
 
 
 ## Microsoft Endpoint Manager (Intune)
@@ -12944,21 +13311,21 @@ Microsoft Intune is a Microsoft cloud-based management solution that provides fo
 
 **Commands:**
 
-- `msgraph-get-managed-device-by-id`: 
-- `msgraph-sync-device`: 
-- `msgraph-device-disable-lost-mode`: 
-- `msgraph-locate-device`: 
-- `msgraph-device-reboot-now`: 
-- `msgraph-device-shutdown`: 
-- `msgraph-device-bypass-activation-lock`: 
-- `msgraph-device-retire`: 
-- `msgraph-device-reset-passcode`: 
-- `msgraph-device-remote-lock`: 
-- `msgraph-device-request-remote-assistance`: 
-- `msgraph-device-recover-passcode`: 
-- `msgraph-logout-shared-apple-device-active-user`: 
-- `msgraph-delete-user-from-shared-apple-device`: 
-- `msgraph-windows-device-defender-update-signatures`: 
+- `msgraph-get-managed-device-by-id`: Get managed devices Note: physicalMemoryInBytes will return 0 by default since Microsoft hasn't updated the v1.0 schema with that information yet
+- `msgraph-sync-device`: Check the device with Intune, immediately receive pending actions and policies
+- `msgraph-device-disable-lost-mode`: Disable the lost mode of the device
+- `msgraph-locate-device`: Gets the GPS location of a device (iOS only)
+- `msgraph-device-reboot-now`: Immediately reboots the device
+- `msgraph-device-shutdown`: Immideately shuts down the device
+- `msgraph-device-bypass-activation-lock`: Removes the activation lock (iOS devices only)
+- `msgraph-device-retire`: Remove the device from intune management
+- `msgraph-device-reset-passcode`: Resets the passcode for the device
+- `msgraph-device-remote-lock`: Lock the device, to unlock the user will have to use the passcode
+- `msgraph-device-request-remote-assistance`: Request a remote access via TeamViewer
+- `msgraph-device-recover-passcode`: Recovers the passcode from the device
+- `msgraph-logout-shared-apple-device-active-user`: logs out the current user on a shared iPad device
+- `msgraph-delete-user-from-shared-apple-device`: deletes a user that you select from the local cache on a shared iPad device
+- `msgraph-windows-device-defender-update-signatures`: Forece update windows defender signatures
 
 
 ## Microsoft Graph Mail Single User
@@ -12970,21 +13337,21 @@ Microsoft Graph grants the platform. This integration was integrated and tested 
 
 **Commands:**
 
-- `msgraph-mail-create-draft`: 
-- `reply-mail`: 
-- `send-mail`: 
-- `msgraph-mail-reply-to`: 
-- `msgraph-mail-send-draft`: 
-- `msgraph-mail-test`: 
-- `msgraph-mail-auth-reset`: 
-- `msgraph-mail-list-emails`: 
-- `msgraph-mail-list-attachments`: 
-- `msgraph-mail-get-attachment`: 
-- `msgraph-mail-get-email-as-eml`: 
-- `msgraph-update-email-status`: 
-- `msgraph-mail-generate-login-url`: 
-- `msgraph-mail-create-folder`: 
-- `msgraph-mail-move-email`: 
+- `msgraph-mail-create-draft`: Creates a draft message in the specified user's mailbox.
+- `reply-mail`: Replies to an email using Graph Mail Single User.
+- `send-mail`: Sends an email using Microsoft Graph.
+- `msgraph-mail-reply-to`: The replies to the recipients of a message.
+- `msgraph-mail-send-draft`: Sends a draft email using Microsoft Graph.
+- `msgraph-mail-test`: Tests connectivity of the email.
+- `msgraph-mail-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
+- `msgraph-mail-list-emails`: Gets the properties of returned emails. Typically shows partial results, use the "page_size" and "pages_to_pull" arguments to get all results. This command list
+- `msgraph-mail-list-attachments`: Lists all attachments of an email.
+- `msgraph-mail-get-attachment`: Gets an attachment from the email.
+- `msgraph-mail-get-email-as-eml`: Retrieves an email message by message ID and uploads the content as an EML file.
+- `msgraph-update-email-status`: Update the status of an email to read / unread.
+- `msgraph-mail-generate-login-url`: Generate the login url used for Authorization code flow.
+- `msgraph-mail-create-folder`: Creates a new folder under the specified folder (parent).
+- `msgraph-mail-move-email`: Move a message to another folder. This operation creates a new copy of the message in the destination folder and deletes the original message. As a result, the 
 
 
 ## Microsoft Graph Search
@@ -12996,9 +13363,9 @@ Use the Microsoft Search API in Microsoft Graph to search content stored in OneD
 
 **Commands:**
 
-- `msgraph-search-test`: 
-- `msgraph-search-content`: 
-- `msgraph-search-generate-login-url`: 
+- `msgraph-search-test`: Tests connectivity.
+- `msgraph-search-content`: Use the Microsoft Search API in Microsoft Graph to search content stored in OneDrive or SharePoint: files, folders, lists, list items, or sites.
+- `msgraph-search-generate-login-url`: Generate the login url used for Authorization code flow.
 
 
 ## Microsoft Graph Security
@@ -13007,9 +13374,9 @@ Use the Microsoft Search API in Microsoft Graph to search content stored in OneD
 **Product:** Microsoft Graph Security  
 **Commands:**
 
-- `msg-auth-test`: 
-- `msg-search-alerts`: 
-- `msg-get-alert-details`: 
+- `msg-auth-test`: Tests connectivity to Microsoft Graph Security.
+- `msg-search-alerts`: List alerts (security issues) within a customer's tenant that Microsoft or partner security solutions have identified.
+- `msg-get-alert-details`: Get details for a specific alert.
 
 
 ## Microsoft Graph Teams (Standard Connector)
@@ -13021,7 +13388,7 @@ This integration is configured automatically as part of the Microsoft 365 Standa
 
 **Commands:**
 
-- `msgraph-teams-message-update-policy-violation`: 
+- `msgraph-teams-message-update-policy-violation`: Applies a data loss prevention (DLP) policy violation to a Microsoft Teams message. Targets a chat message, a channel message, or a channel reply.
 
 
 ## Microsoft Teams
@@ -13033,7 +13400,21 @@ Use the Microsoft Teams integration to send messages, notifications, and create 
 
 **Commands:**
 
-- `send-notification`: 
+- `send-notification`: Sends a message to the specified teams. To mention a user in the message, add a semicolon ";" at the end of the user mention. For example: @Bruce Willis;.
+- `mirror-investigation`: Mirrors the the platform. Supports only standard channels.
+- `close-channel`: Deletes the specified Microsoft Teams channel.
+- `microsoft-teams-integration-health`: Returns real-time and historical data on the integration status.
+- `microsoft-teams-ring-user`: Rings a user's Teams account. Note: This is a ring only! no media will play in case the generated call is answered.
+- `microsoft-teams-add-user-to-channel`: Adds a member (user) to a private/shared channel. For a comparison of Teams features for each channel type, see the Microsoft documentation: Channel feature com
+- `microsoft-teams-create-channel`: Creates a new channel in a Microsoft Teams team. For more information about the channels types, see the Microsoft documentation: standard, private, or shared ch
+- `microsoft-teams-create-meeting`: Creates a new meeting in Microsoft Teams.
+- `microsoft-teams-user-remove-from-channel`: Removes a member (user) from a private/shared channel.
+- `microsoft-teams-channel-user-list`: Retrieves a list of members from a channel.
+- `microsoft-teams-chat-create`: Creates a new chat.
+- `microsoft-teams-message-send-to-chat`: Sends a new chat message in the specified chat.
+- `microsoft-teams-chat-add-user`: Adds a member (user) to a group chat.
+- `microsoft-teams-chat-member-list`: Retrieves a list of members from a chat.
+- `microsoft-teams-chat-list`: Retrieves a list of chats that the consent user is a member of. If 'chat' is specified - retrieves this chat only.
 
 
 ## Microsoft Teams Management
@@ -13045,21 +13426,21 @@ Manage teams and members in Microsoft Teams
 
 **Commands:**
 
-- `microsoft-teams-auth-test`: 
-- `microsoft-teams-auth-start`: 
-- `microsoft-teams-auth-complete`: 
-- `microsoft-teams-auth-reset`: 
-- `microsoft-teams-team-create`: 
-- `microsoft-teams-team-create-from-group`: 
-- `microsoft-teams-teams-list`: 
-- `microsoft-teams-team-get`: 
-- `microsoft-teams-team-update`: 
-- `microsoft-teams-team-delete`: 
-- `microsoft-teams-members-list`: 
-- `microsoft-teams-member-get`: 
-- `microsoft-teams-member-add`: 
-- `microsoft-teams-member-remove`: 
-- `microsoft-teams-member-update`: 
+- `microsoft-teams-auth-test`: Tests the connectivity to Microsoft.
+- `microsoft-teams-auth-start`: Run this command to start the authorization process and follow the instructions in the command results.
+- `microsoft-teams-auth-complete`: Run this command to complete the authorization process. Should be used after running the microsoft-teams-auth-start command.
+- `microsoft-teams-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
+- `microsoft-teams-team-create`: Creates a new team.
+- `microsoft-teams-team-create-from-group`: Create a new team under a group. In order to create a team, the group must have a least one owner and the group cannot be of type Security.
+- `microsoft-teams-teams-list`: Returns all the groups that have teams in an organization.
+- `microsoft-teams-team-get`: Retrieve the properties and relationships of the specified team.
+- `microsoft-teams-team-update`: Update the properties of the specified team.
+- `microsoft-teams-team-delete`: Deletes a group. Note: it might take time for the team to disappear from the teams list.
+- `microsoft-teams-members-list`: Returns the members of the specified team.
+- `microsoft-teams-member-get`: Gets a member of a team.
+- `microsoft-teams-member-add`: Add a user to be a team member.
+- `microsoft-teams-member-remove`: Remove a member from the team.
+- `microsoft-teams-member-update`: Updates a team member.
 
 
 ## Microsoft Teams via Webhook
@@ -13071,7 +13452,7 @@ Integration for sending notifications to a Microsoft Teams channel via workflow.
 
 **Commands:**
 
-- `ms-teams-message`: 
+- `ms-teams-message`: Send a message to Microsoft Teams via Incoming Webhook.
 
 
 ## MicrosoftApiModule
@@ -13111,18 +13492,18 @@ An Integration with MinIO Object Storage This integration was integrated and tes
 
 **Commands:**
 
-- `minio-make-bucket`: 
-- `minio-remove-bucket`: 
-- `minio-list-buckets`: 
-- `minio-list-objects`: 
-- `minio-get-object`: 
-- `minio-stat-object`: 
-- `minio-remove-object`: 
-- `minio-fput-object`: 
-- `minio-put-object`: 
-- `minio-get-tags`: 
-- `minio-set-tag`: 
-- `minio-copy-object`: 
+- `minio-make-bucket`: Create a new bucket.
+- `minio-remove-bucket`: Remove an existing bucket.
+- `minio-list-buckets`: List All MinIO Buckets
+- `minio-list-objects`: Lists object information of a bucket.
+- `minio-get-object`: Gets data from offset to length of an object.
+- `minio-stat-object`: Get object information and metadata of an object.
+- `minio-remove-object`: Remove an object.
+- `minio-fput-object`: Uploads data from a file to an object in a bucket.
+- `minio-put-object`: Uploads data from a stream to an object in a bucket.
+- `minio-get-tags`: Get tags configuration of an object.
+- `minio-set-tag`: Set tags configuration to an object.
+- `minio-copy-object`: Create an object by server-side copying data from another object.
 
 
 ## MinList
@@ -13146,8 +13527,13 @@ Malware information sharing platform and threat sharing. Some changes have been 
 
 **Commands:**
 
-- `misp-search-events`: 
-- `misp-create-event`: 
+- `misp-search-events`: Search for events in MISP. This search command will return only information about the matched events. To get information about attributes, use the misp-search-a
+- `domain`: Checks the reputation of the given domain.
+- `email`: Checks the reputation of the given email address.
+- `file`: Checks the file reputation of the given hash.
+- `url`: Checks the reputation of the given URL.
+- `ip`: Checks the reputation of an IP address.
+- `misp-create-event`: Creates a new MISP event.
 
 
 ## MissingElements
@@ -13185,21 +13571,21 @@ Mitre Caldera can be used to test endpoint security solutions and assess a netwo
 
 **Commands:**
 
-- `caldera-create-fact`: 
-- `caldera-create-fact-source`: 
-- `caldera-create-adversary`: 
-- `caldera-create-agent`: 
-- `caldera-create-operation`: 
-- `caldera-create-objective`: 
-- `caldera-create-relationship`: 
-- `caldera-create-ability`: 
-- `caldera-create-potential-link`: 
-- `caldera-create-schedule`: 
-- `caldera-delete-agent`: 
-- `caldera-delete-fact-source`: 
-- `caldera-delete-operation`: 
-- `caldera-delete-facts`: 
-- `caldera-delete-relationships`: 
+- `caldera-create-fact`: Create a Fact
+- `caldera-create-fact-source`: Create a Fact Source.
+- `caldera-create-adversary`: Create a new adversary
+- `caldera-create-agent`: Create a new agent
+- `caldera-create-operation`: Create a new CALDERA operation record
+- `caldera-create-objective`: Create a new objective
+- `caldera-create-relationship`: Create a Relationship
+- `caldera-create-ability`: Creates a new ability.
+- `caldera-create-potential-link`: Creates a potential Link
+- `caldera-create-schedule`: Create Schedule
+- `caldera-delete-agent`: Delete an Agent
+- `caldera-delete-fact-source`: Delete an existing Fact Source.
+- `caldera-delete-operation`: Delete an operation by operation id
+- `caldera-delete-facts`: Delete One or More Facts
+- `caldera-delete-relationships`: Delete One or More Relationships
 
 
 ## MITREIndicatorsByOpenIncidentsV2
@@ -13231,21 +13617,21 @@ Rapidly detect, analyse and respond to security threats with mnemonic’s leadin
 
 **Commands:**
 
-- `argus-get-attachment`: 
-- `argus-add-case-tag`: 
-- `argus-list-case-tags`: 
-- `argus-add-comment`: 
-- `argus-list-case-comments`: 
-- `argus-advanced-case-search`: 
-- `argus-close-case`: 
-- `argus-create-case`: 
-- `argus-delete-case`: 
-- `argus-delete-comment`: 
-- `argus-edit-comment`: 
-- `argus-get-case-metadata-by-id`: 
-- `argus-list-case-attachments`: 
-- `argus-remove-case-tag-by-id`: 
-- `argus-remove-case-tag-by-key-value`: 
+- `argus-add-attachment Add attachment to case (Max 50 MB, should be an archive)`: Fetch specific attachment metadata
+- `argus-add-case-tag`: Adds a key, value tag to an Argus case
+- `argus-list-case-tags`: List tags attached to an Argus case
+- `argus-add-comment`: Add comment to an Argus case
+- `argus-list-case-comments`: List the comments of an Argus case
+- `argus-advanced-case-search`: Returns cases matching the defined case search criteria
+- `argus-close-case`: Close an Argus case
+- `argus-create-case`: Create Argus case
+- `argus-delete-case`: Mark existing case as deleted
+- `argus-delete-comment`: Mark existing comment as deleted
+- `argus-edit-comment`: Edit existing comment
+- `argus-get-case-metadata-by-id`: Returns the basic case descriptor for the case identified by ID
+- `argus-list-case-attachments`: List attachments for an existing case
+- `argus-remove-case-tag-by-id`: Remove existing tag by tag ID
+- `argus-remove-case-tag-by-key-value`: Remove existing tag with key, value matching
 
 
 ## MobileIronCLOUD
@@ -13254,15 +13640,15 @@ Rapidly detect, analyse and respond to security threats with mnemonic’s leadin
 **Product:** MobileIron-UEM  
 **Commands:**
 
-- `mobileiron-cloud-get-devices-data`: 
-- `mobileiron-cloud-get-device-by-mac`: 
-- `mobileiron-cloud-get-device-by-serial`: 
-- `mobileiron-cloud-unlock-device`: 
-- `mobileiron-cloud-retire-device`: 
-- `mobileiron-cloud-wipe-device`: 
-- `mobileiron-cloud-force-check-in`: 
-- `mobileiron-cloud-send-message`: 
-- `mobileiron-cloud-get-device-by-id`: 
+- `mobileiron-cloud-get-devices-data`: Gets all the devices based on a particular filter query. The command might execute multiple API calls depending on the amount of devices that would be returned.
+- `mobileiron-cloud-get-device-by-mac`: Gets a single device matching the provided mac address.
+- `mobileiron-cloud-get-device-by-serial`: Gets a single device matching the provided value for the device serial number.
+- `mobileiron-cloud-unlock-device`: Sends an unlock action to the device.
+- `mobileiron-cloud-retire-device`: Sends a retire action to the device.
+- `mobileiron-cloud-wipe-device`: Sends a wipe action to the device. This is a potentially destructive action as it will completely wipe the device.
+- `mobileiron-cloud-force-check-in`: Forces a check in to the particular device based on the device ID.
+- `mobileiron-cloud-send-message`: Sends a message to the device.
+- `mobileiron-cloud-get-device-by-id`: Returns the data for a particular device based on the device ID.
 
 
 ## MobileIronCORE
@@ -13274,21 +13660,21 @@ This integration was created and tested with version 11.0.0 of MobileIronCORE
 
 **Commands:**
 
-- `mobileiron-core-send-message`: 
-- `mobileiron-core-update-os`: 
-- `mobileiron-core-unlock-device-only`: 
-- `mobileiron-core-enable-voice-roaming`: 
-- `mobileiron-core-disable-voice-roaming`: 
-- `mobileiron-core-enable-data-roaming`: 
-- `mobileiron-core-disable-data-roaming`: 
-- `mobileiron-core-enable-personal-hotspot`: 
-- `mobileiron-core-disable-personal-hotspot`: 
-- `mobileiron-core-unlock-app-connect-container`: 
-- `mobileiron-core-retire-device`: 
-- `mobileiron-core-wipe-device`: 
-- `mobileiron-core-force-checkin`: 
-- `mobileiron-core-get-devices-data`: 
-- `mobileiron-core-get-device-by-uuid`: 
+- `mobileiron-core-send-message`: Sends a message to the particular device based on the device ID.
+- `mobileiron-core-update-os`: Updates the operating system on the particular device based on the device ID.
+- `mobileiron-core-unlock-device-only`: Unlocks the particular device based on the device ID.
+- `mobileiron-core-enable-voice-roaming`: Enables voice roaming on the particular device based on the device ID.
+- `mobileiron-core-disable-voice-roaming`: Disables voice roaming on the particular device based on the device ID.
+- `mobileiron-core-enable-data-roaming`: Enables data roaming on the particular device based on the device ID.
+- `mobileiron-core-disable-data-roaming`: Disables data roaming on the particular device based on the device ID.
+- `mobileiron-core-enable-personal-hotspot`: Enables a personal hotspot on the particular device based on the device ID.
+- `mobileiron-core-disable-personal-hotspot`: Disables a personal hotspot on the particular device based on the device ID.
+- `mobileiron-core-unlock-app-connect-container`: Unlocks an app connect container on the particular device based on the device ID.
+- `mobileiron-core-retire-device`: Retires a device based on the device ID.
+- `mobileiron-core-wipe-device`: Wipes a device based on the device ID.
+- `mobileiron-core-force-checkin`: Forces check in to the device based on the device ID.
+- `mobileiron-core-get-devices-data`: Gets a list of devices matching the provided query.
+- `mobileiron-core-get-device-by-uuid`: Gets a single device based on the device UUID.
 
 
 ## MockPlaybook
@@ -13336,8 +13722,8 @@ Collects Monday.com audit logs and activity events for Cortex XSIAM
 
 **Commands:**
 
-- `monday-generate-login-url`: 
-- `monday-auth-test`: 
+- `monday-generate-login-url`: Generate the login url used for Authorization code flow.
+- `monday-auth-test`: Run this command to test the connectivity to Monday.
 
 
 ## MongoDB
@@ -13346,7 +13732,16 @@ Collects Monday.com audit logs and activity events for Cortex XSIAM
 **Product:** MongoDB  
 **Commands:**
 
-- `mongodb-get-entry-by-id`: 
+- `mongodb-get-entry-by-id`: Get an entry from database by ID
+- `mongodb-query`: Searches for items by using the specified JSON query. Search by regex is supported.
+- `mongodb-insert`: Inserts an entry to the database
+- `mongodb-update`: Updates an entry in a collection
+- `mongodb-delete`: Deletes an entry from the database
+- `mongodb-list-collections`: Lists all collections in database
+- `mongodb-create-collection`: Creates a collection
+- `mongodb-drop-collection`: Drops a collection from the database
+- `mongodb-pipeline-query`: Searches for items by the specified JSON pipleline query.
+- `mongodb-bulk-update`: Bulk updates entries in a collection.
 
 
 ## MongoDB Atlas
@@ -13358,7 +13753,7 @@ MongoDB Atlas is an integration that supports fetching and managing alerts and e
 
 **Commands:**
 
-- `mongo-db-atlas-get-events`: 
+- `mongo-db-atlas-get-events`: Retrieves a list of events from the MongoDB Atlas instance.
 
 
 ## MongoDB Key Value Store
@@ -13367,7 +13762,13 @@ MongoDB Atlas is an integration that supports fetching and managing alerts and e
 **Product:** MongoDB  
 **Commands:**
 
-- `mongodb-write-key-value`: 
+- `mongodb-write-key-value`: Adds a key/value record for the incident. If the key exists, the existing value is overwritten.*
+- `mongodb-get-key-value`: Returns the value of the specified name/key of an incident.
+- `mongodb-list-key-values`: Lists the keys and their values for the specified incident.
+- `mongodb-delete-key`: Deletes the key/value record for an incident.
+- `mongodb-purge-entries`: Purges all keys/values for an incident. A common use case for this command is when closing an incident. This command clears the entries for the closed incident 
+- `mongodb-get-keys-number`: Returns the number of key/value pairs for an incident.
+- `mongodb-list-incidents`: Lists all incidents in the collection.
 
 
 ## MongoDB Log
@@ -13376,7 +13777,9 @@ MongoDB Atlas is an integration that supports fetching and managing alerts and e
 **Product:** MongoDB  
 **Commands:**
 
-- `mongodb-read-log`: 
+- `mongodb-read-log`: Returns all log entries.
+- `mongodb-write-log`: Adds a log entry.
+- `mongodb-logs-number`: Returns the number of log entries.
 
 
 ## MS-ISAC
@@ -13388,8 +13791,8 @@ This API queries alerts and alert data from the MS-ISAC API to enrich and query 
 
 **Commands:**
 
-- `msisac-get-alert`: 
-- `msisac-retrieve-cases`: 
+- `msisac-get-alert`: Retrieve alert data by its ID
+- `msisac-retrieve-cases`: Retrieves a list of MS-ISAC cases created since the given timestamp.
 
 
 ## MSEScoreWidget
@@ -13477,7 +13880,7 @@ Neosec is reinventing application security. Its pioneering SaaS platform gives s
 
 **Commands:**
 
-- `neosec-alert-status-set`: 
+- `neosec-alert-status-set`: Set alert status(Open, Closed)
 
 
 ## Netcraft
@@ -13489,21 +13892,21 @@ Netcraft takedown, submission and screenshot management
 
 **Commands:**
 
-- `netcraft-attack-report`: 
-- `netcraft-takedown-list`: 
-- `netcraft-takedown-update`: 
-- `netcraft-takedown-escalate`: 
-- `netcraft-takedown-note-create`: 
-- `netcraft-takedown-note-list`: 
-- `netcraft-attack-type-list`: 
-- `netcraft-submission-list`: 
-- `netcraft-file-report-submit`: 
-- `netcraft-submission-file-list`: 
-- `netcraft-file-screenshot-get`: 
-- `netcraft-email-report-submit`: 
-- `netcraft-submission-mail-get`: 
-- `netcraft-mail-screenshot-get`: 
-- `netcraft-url-report-submit`: 
+- `netcraft-attack-report`: Report a new attack or authorize an existing attack in the Takedown Service. If a takedown for the attack already exists in the Netcraft system it will be autho
+- `netcraft-takedown-list`: Get a list of takedown objects. Netcraft has a limit of 1,000,000 objects returned within a 24 hour period (moving time window) per email address.
+- `netcraft-takedown-update`: Update one or more fields related to a takedown.
+- `netcraft-takedown-escalate`: Escalate an automated takedown to a managed takedown. Only attacks that are in an authorized state can be escalated. The minimum access level required to escala
+- `netcraft-takedown-note-create`: Add a new note to an existing takedown.
+- `netcraft-takedown-note-list`: Retrieve details of notes that have been added to takedowns.
+- `netcraft-attack-type-list`: Get information on the attack types that are available under a given region.
+- `netcraft-submission-list`: Get basic information about a submissions.
+- `netcraft-file-report-submit`: Report files to Netcraft for analysis.
+- `netcraft-submission-file-list`: Get basic information about a submission's files. When a submission is archived this command will return an error with the message "this submission has been arc
+- `netcraft-file-screenshot-get`: Get a screenshot for a file associated with a submission.
+- `netcraft-email-report-submit`: Report email messages to Netcraft for analysis. The email will be examined for malicious attachments and URLs. Optionally, emails can be encrypted before upload
+- `netcraft-submission-mail-get`: Get basic information about a submission's email. When a submission is archived this command will return an error with the message "this submission has been arc
+- `netcraft-mail-screenshot-get`: Get a screenshot for the email associated with a submission.
+- `netcraft-url-report-submit`: Report URLs to Netcraft for analysis.
 
 
 ## NetQuest OMX
@@ -13515,12 +13918,12 @@ NetQuest’s products are high-capacity service nodes that help security teams a
 
 **Commands:**
 
-- `netquest-address-list-upload`: 
-- `netquest-address-list-optimize`: 
-- `netquest-address-list-create`: 
-- `netquest-address-list-rename`: 
-- `netquest-address-list-delete`: 
-- `get-events`: 
+- `netquest-address-list-upload`: Uploads a .txt file with the address list to the appliance. The appliance temporarily stores the file until it is saved to the Library and replaces any previous
+- `netquest-address-list-optimize`: Optimizes the updated address list. If the traffic elements are IP addresses, the integration will optimize the list by compressing IP addresses into CIDR group
+- `netquest-address-list-create`: Creates a new address list. This list will replace and override the old list entity.
+- `netquest-address-list-rename`: Renames an address list. This is only meant to change the name of the list. If you try to give the value of the new_name argument to an existing address list, t
+- `netquest-address-list-delete`: Deletes the address list of the name provided.
+- `get-events`: Gets events from NetQuest OMX. Each event is a report for the specified statistic type. Available only for Cortex XSIAM.
 
 
 ## Netscout Arbor Edge Defense
@@ -13532,21 +13935,21 @@ The Netscout Arbor Edge Defense (AED) integration enables you to block and allow
 
 **Commands:**
 
-- `na-ed-outbound-blacklisted-countries-list`: 
-- `na-ed-country-code-list`: 
-- `na-ed-outbound-blacklisted-countries-add`: 
-- `na-ed-outbound-blacklisted-countries-remove`: 
-- `na-ed-inbound-blacklisted-countries-list`: 
-- `na-ed-inbound-blacklisted-countries-add`: 
-- `na-ed-inbound-blacklisted-countries-remove`: 
-- `na-ed-outbound-blacklisted-hosts-list`: 
-- `na-ed-outbound-blacklisted-hosts-add`: 
-- `na-ed-outbound-blacklisted-hosts-replace`: 
-- `na-ed-outbound-blacklisted-hosts-remove`: 
-- `na-ed-outbound-whitelisted-hosts-list`: 
-- `na-ed-outbound-whitelisted-hosts-add`: 
-- `na-ed-outbound-whitelisted-hosts-replace`: 
-- `na-ed-protection-groups-update`: 
+- `na-ed-outbound-blacklisted-countries-list`: Gets the countries on the outbound block list. By default, 10 block listed countries are returned.
+- `na-ed-country-code-list`: Gets a country or list of countries (country name and ISO-standardized country code).
+- `na-ed-outbound-blacklisted-countries-add`: Adds one or more countries to the outbound block list.
+- `na-ed-outbound-blacklisted-countries-remove`: Removes one or more countries from the outbound block list.
+- `na-ed-inbound-blacklisted-countries-list`: Gets the inbound block listed countries. By default, 10 block listed countries are returned. To return block listed countries for specific protection groups, sp
+- `na-ed-inbound-blacklisted-countries-add`: Adds one or more countries to the inbound block list by pgid or cid.
+- `na-ed-inbound-blacklisted-countries-remove`: Removes one or more countries from the block list for a specific protection group or for all protection groups.
+- `na-ed-outbound-blacklisted-hosts-list`: Gets the outbound block listed hosts. By default, 10 block listed hosts are returned.
+- `na-ed-outbound-blacklisted-hosts-add`: Adds one or more hosts to the outbound block list.
+- `na-ed-outbound-blacklisted-hosts-replace`: Replaces all the hosts on the outbound block listed list.
+- `na-ed-outbound-blacklisted-hosts-remove`: Removes one or more hosts or CIDRS from the outbound block list.
+- `na-ed-outbound-whitelisted-hosts-list`: Gets the outbound allow listed hosts. By default, 10 hosts on allow list are returned.
+- `na-ed-outbound-whitelisted-hosts-add`: Adds one or more hosts to the outbound allow listed list.
+- `na-ed-outbound-whitelisted-hosts-replace`: Replaces all the hosts on the outbound allow listed list.
+- `na-ed-protection-groups-update`: Updates the settings for one or more protection groups.
 
 
 ## Netscout Arbor Sightline (Peakflow)
@@ -13558,15 +13961,15 @@ DDoS protection and network visibility. This integration was integrated and test
 
 **Commands:**
 
-- `na-sightline-alert-annotation-list`: 
-- `na-sightline-alert-list`: 
-- `na-sightline-mitigation-list`: 
-- `na-sightline-mitigation-create`: 
-- `na-sightline-mitigation-delete`: 
-- `na-sightline-mitigation-template-list`: 
-- `na-sightline-router-list`: 
-- `na-sightline-managed-object-list`: 
-- `na-sightline-tms-group-list`: 
+- `na-sightline-alert-annotation-list`: Lists the collection of annotations for a given alert.
+- `na-sightline-alert-list`: List all alerts. When an alert ID is given, only the relevant alert will be fetched.
+- `na-sightline-mitigation-list`: List all mitigations. When a mitigation ID is given, only the relevant mitigation will be fetched.
+- `na-sightline-mitigation-create`: Add a TMS or flowspec mitigation with the attributes and relationships passed in the JSON sub_object.
+- `na-sightline-mitigation-delete`: Delete a given mitigation.
+- `na-sightline-mitigation-template-list`: Get a list of available mitigation templates.
+- `na-sightline-router-list`: Get a list of available routers.
+- `na-sightline-managed-object-list`: Get a list of available managed objects.
+- `na-sightline-tms-group-list`: Get a list of available TMS groups.
 
 
 ## NetwitnessQuery
@@ -13639,8 +14042,8 @@ Nexthink helps IT teams deliver on the promise of the modern digital workplace. 
 
 **Commands:**
 
-- `nt-compliance-check`: 
-- `nt-endpoint-details`: 
+- `nt-compliance-check`: Verify antivirus/antispyware status.
+- `nt-endpoint-details`: Get endpoint details.
 
 
 ## NGFW Remove Offline TS Agent
@@ -13671,12 +14074,12 @@ National Vulnerability Database
 
 **Commands:**
 
-- `nvd-get-vulnerability`: 
-- `nvd-search-keyword`: 
-- `nvd-search-cvss`: 
-- `nvd-search-cwe`: 
-- `nvd-search-cpe`: 
-- `nvd-search-cve`: 
+- `nvd-get-vulnerability`: You can get latest vulnerabilities with given time from National Vulnerability Database.
+- `nvd-search-keyword`: The keyword parameter allows your application to retrieve records where a word or phrase is found in the vulnerability description or reference links.
+- `nvd-search-cvss`: CVSS refers to the scoring system used by NIST to assess the severity of vulnerabilities, https://www.first.org/cvss/. NVD provides base scores using the CVSS v
+- `nvd-search-cwe`: CWE refers to the classification of vulnerabilities at https://cwe.mitre.org/. NIST staff associate one or more CWE to each vulnerability during the analysis pr
+- `nvd-search-cpe`: NVD analysts identify which product or products are affected by each vulnerability. The set of associated products is known as the applicability statement of th
+- `nvd-search-cve`: Search specific CVE
 
 
 ## nmap
@@ -13688,7 +14091,7 @@ Run nmap scans with the given parameters. This integration was integrated and te
 
 **Commands:**
 
-- `nmap-scan`: 
+- `nmap-scan`: Scan targets with the given parameters.
 
 
 ## NMAP - Banner Check
@@ -13715,7 +14118,7 @@ Integrates with the NodeZero autonomous penetration testing platform to fetch we
 
 **Commands:**
 
-- `nodezero-get-weaknesses`: 
+- `nodezero-get-weaknesses`: Retrieves HIGH and CRITICAL weaknesses discovered by NodeZero pentests.
 
 
 ## NodeZero MCP
@@ -13727,10 +14130,10 @@ Use the NodeZero MCP integration to connect to the NodeZero MCP server and autom
 
 **Commands:**
 
-- `list-tools`: 
-- `call-tool`: 
-- `nodezero-mcp-generate-login-url`: 
-- `nodezero-mcp-auth-test`: 
+- `list-tools`: Retrieves a list of available tools on the NodeZero MCP server.
+- `call-tool`: Calls a specific tool on the NodeZero MCP server with optional input parameters.
+- `nodezero-mcp-generate-login-url`: Registers this integration with your NodeZero portal and generates a login URL. To authenticate through the NodeZero portal, follow the instructions that the co
+- `nodezero-mcp-auth-test`: Tests the OAuth authentication configuration with the NodeZero MCP server.
 
 
 ## NotInContextVerification
@@ -13756,15 +14159,15 @@ Nutanix Hypervisor abstracts and isolates the VMs and their programs from the un
 
 **Commands:**
 
-- `nutanix-hypervisor-hosts-list`: 
-- `nutanix-hypervisor-vms-list`: 
-- `nutanix-hypervisor-vm-powerstatus-change`: 
-- `nutanix-hypervisor-task-results-get`: 
-- `nutanix-hypervisor-alerts-list`: 
-- `nutanix-hypervisor-alert-acknowledge`: 
-- `nutanix-hypervisor-alert-resolve`: 
-- `nutanix-hypervisor-alerts-acknowledge-by-filter`: 
-- `nutanix-hypervisor-alerts-resolve-by-filter`: 
+- `nutanix-hypervisor-hosts-list`: Gets the list of physical hosts configured in the cluster.
+- `nutanix-hypervisor-vms-list`: Gets a list of virtual machines.
+- `nutanix-hypervisor-vm-powerstatus-change`: Sets the power state of a virtual machine. If the virtual machine is being powered on and no host is specified, the host with the most available CPU and memory 
+- `nutanix-hypervisor-task-results-get`: Returns the results of given tasks. If a task is not ready, its status will be returned.
+- `nutanix-hypervisor-alerts-list`: Gets the list of alerts generated in the cluster that matches the filters. Nutanix fetches the latest alerts created if there are more than the defined maximum 
+- `nutanix-hypervisor-alert-acknowledge`: Acknowledges the alert with the specified alert_id.
+- `nutanix-hypervisor-alert-resolve`: Resolves the alert with the specified alert_id. Alert ID is the 'id' field returned for alerts by command 'nutanix-hypervisor-alerts-list'
+- `nutanix-hypervisor-alerts-acknowledge-by-filter`: Acknowledges alerts using a filter.
+- `nutanix-hypervisor-alerts-resolve-by-filter`: Resolves alerts using a filter.
 
 
 ## O365 File Management (Onedrive/Sharepoint/Teams)
@@ -13776,21 +14179,21 @@ Use the O365 File Management (Onedrive/Sharepoint/Teams) integration to enable y
 
 **Commands:**
 
-- `msgraph-delete-file`: 
-- `msgraph-upload-new-file`: 
-- `msgraph-replace-existing-file`: 
-- `msgraph-create-new-folder`: 
-- `msgraph-list-drives-in-site`: 
-- `msgraph-list-drive-content`: 
-- `msgraph-list-sharepoint-sites`: 
-- `msgraph-download-file`: 
-- `msgraph-list-site-permissions`: 
-- `msgraph-create-site-permissions`: 
-- `msgraph-update-site-permissions`: 
-- `msgraph-delete-site-permissions`: 
-- `msgraph-files-auth-test`: 
-- `msgraph-files-generate-login-url`: 
-- `msgraph-files-auth-reset`: 
+- `msgraph-delete-file`: Deletes an item from OneDrive.
+- `msgraph-upload-new-file`: Uploads a file from the platform.
+- `msgraph-replace-existing-file`: Replaces the content of the file in the specified MS Graph resource.
+- `msgraph-create-new-folder`: Creates a new folder in a drive with the specified parent item or path.
+- `msgraph-list-drives-in-site`: Returns the list of document libraries (drives) available for a target site.
+- `msgraph-list-drive-content`: Returns a list of files and folders in the specified drive.
+- `msgraph-list-sharepoint-sites`: Returns a list of the tenant sites.
+- `msgraph-download-file`: Downloads the file contents of the drive item.
+- `msgraph-list-site-permissions`: List of apps with permissions for the site. If permission_id is provided, it will return the details of that permission.
+- `msgraph-create-site-permissions`: Create a new application permission for a site.
+- `msgraph-update-site-permissions`: Updates an existing permission for a site.
+- `msgraph-delete-site-permissions`: Deletes an app permission from a site.
+- `msgraph-files-auth-test`: Tests connectivity to Microsoft.
+- `msgraph-files-generate-login-url`: Generate the login URL used for Authorization code flow.
+- `msgraph-files-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
 
 
 ## O365 File Management (Onedrive/Sharepoint/Teams) (Standard Connector)
@@ -13802,21 +14205,21 @@ Use the O365 File Management (Onedrive/Sharepoint/Teams) integration to enable y
 
 **Commands:**
 
-- `msgraph-delete-file`: 
-- `msgraph-upload-new-file`: 
-- `msgraph-replace-existing-file`: 
-- `msgraph-create-new-folder`: 
-- `msgraph-list-drives-in-site`: 
-- `msgraph-list-drive-content`: 
-- `msgraph-list-sharepoint-sites`: 
-- `msgraph-download-file`: 
-- `msgraph-list-site-permissions`: 
-- `msgraph-create-site-permissions`: 
-- `msgraph-update-site-permissions`: 
-- `msgraph-delete-site-permissions`: 
-- `msgraph-files-auth-test`: 
-- `msgraph-files-generate-login-url`: 
-- `msgraph-files-auth-reset`: 
+- `msgraph-delete-file`: Deletes an item from OneDrive.
+- `msgraph-upload-new-file`: Uploads a file from the platform.
+- `msgraph-replace-existing-file`: Replaces the content of the file in the specified MS Graph resource.
+- `msgraph-create-new-folder`: Creates a new folder in a drive with the specified parent item or path.
+- `msgraph-list-drives-in-site`: Returns the list of document libraries (drives) available for a target site.
+- `msgraph-list-drive-content`: Returns a list of files and folders in the specified drive.
+- `msgraph-list-sharepoint-sites`: Returns a list of the tenant sites.
+- `msgraph-download-file`: Downloads the file contents of the drive item.
+- `msgraph-list-site-permissions`: List of apps with permissions for the site. If permission_id is provided, it will return the details of that permission.
+- `msgraph-create-site-permissions`: Create a new application permission for a site.
+- `msgraph-update-site-permissions`: Updates an existing permission for a site.
+- `msgraph-delete-site-permissions`: Deletes an app permission from a site.
+- `msgraph-files-auth-test`: Tests connectivity to Microsoft.
+- `msgraph-files-generate-login-url`: Generate the login URL used for Authorization code flow.
+- `msgraph-files-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
 
 
 ## O365 Message Trace
@@ -13828,10 +14231,10 @@ Message Trace enables tenant administrators to track the lifecycle of an email, 
 
 **Commands:**
 
-- `o365-message-trace-generate-login-url`: 
-- `o365-message-trace-auth-test`: 
-- `o365-message-trace-auth-reset`: 
-- `o365-message-trace-get-events`: 
+- `o365-message-trace-generate-login-url`: Generates the login URL for the authorization code flow.
+- `o365-message-trace-auth-test`: Tests connectivity to Microsoft.
+- `o365-message-trace-auth-reset`: Clears the saved access token / refresh token from the integration context, so on the next run a fresh authorization code (or client-credentials token) is reque
+- `o365-message-trace-get-events`: Retrieves Exchange Online Message Trace events. Use this command for development and debugging only, as it may produce duplicate events, exceed API rate limits,
 
 
 ## O365 Outlook Mail (Using Graph API)
@@ -13843,21 +14246,21 @@ Microsoft Graph lets your app get authorized access to a user's Outlook mail dat
 
 **Commands:**
 
-- `msgraph-mail-list-emails`: 
-- `msgraph-mail-get-email`: 
-- `msgraph-mail-delete-email`: 
-- `msgraph-mail-list-attachments`: 
-- `msgraph-mail-get-attachment`: 
-- `msgraph-mail-list-folders`: 
-- `msgraph-mail-list-child-folders`: 
-- `msgraph-mail-create-folder`: 
-- `msgraph-mail-update-folder`: 
-- `msgraph-mail-delete-folder`: 
-- `msgraph-mail-move-email`: 
-- `msgraph-mail-get-email-as-eml`: 
-- `msgraph-mail-create-draft`: 
-- `send-mail`: 
-- `msgraph-mail-reply-to`: 
+- `msgraph-mail-list-emails`: Gets the properties of returned emails. Typically shows partial results, use the "page_size" and "pages_to_pull" arguments to get all results.
+- `msgraph-mail-get-email`: Returns the properties of an email.
+- `msgraph-mail-delete-email`: Deletes an email.
+- `msgraph-mail-list-attachments`: Lists all of the attachments of given email
+- `msgraph-mail-get-attachment`: Gets an attachment from the email.
+- `msgraph-mail-list-folders`: Returns the mail folder list directly under the root folder.
+- `msgraph-mail-list-child-folders`: Returns the folder list under the specified folder.
+- `msgraph-mail-create-folder`: Creates a new folder under the specified folder (parent).
+- `msgraph-mail-update-folder`: Updates the properties of the specified folder.
+- `msgraph-mail-delete-folder`: Deletes the specified mail folder.
+- `msgraph-mail-move-email`: Moves a message to a different folder.
+- `msgraph-mail-get-email-as-eml`: Retrieves an email message by message ID and uploads the content as an EML file.
+- `msgraph-mail-create-draft`: Creates a draft message in the specified user's mailbox.
+- `send-mail`: Sends an email using Microsoft Graph. Note: The from argument needs to be specified when the Email address from which to fetch incidents parameter is missing.
+- `msgraph-mail-reply-to`: The replies to the recipients of a message.
 
 
 ## O365 Teams (Using Graph API)
@@ -13869,17 +14272,17 @@ Microsoft Graph lets your app get authorized access to a user's Teams app in a p
 
 **Commands:**
 
-- `msgraph-teams-list-chats`: 
-- `msgraph-teams-create-chat`: 
-- `msgraph-teams-get-chat`: 
-- `msgraph-teams-update-chat`: 
-- `msgraph-teams-list-members`: 
-- `msgraph-teams-add-member`: 
-- `msgraph-teams-list-messages`: 
-- `msgraph-teams-send-message`: 
-- `msgraph-teams-test`: 
-- `msgraph-teams-auth-reset`: 
-- `msgraph-teams-generate-login-url`: 
+- `msgraph-teams-list-chats`: Retrieve the list of chats that the user is part of.
+- `msgraph-teams-create-chat`: Create a new chat.
+- `msgraph-teams-get-chat`: Retrieve a single chat (without its messages).
+- `msgraph-teams-update-chat`: Update the properties of a chat object.
+- `msgraph-teams-list-members`: List all conversation members in a chat.
+- `msgraph-teams-add-member`: Add a conversationMember to a chat.
+- `msgraph-teams-list-messages`: Retrieve the list of messages in a chat.
+- `msgraph-teams-send-message`: Send a new message in a chat.
+- `msgraph-teams-test`: Tests connectivity to Microsoft Graph Teams.
+- `msgraph-teams-auth-reset`: Run this command if for some reason you need to rerun the authentication process.
+- `msgraph-teams-generate-login-url`: Generate the login url used for Authorization code flow.
 
 
 ## OctoxLabs
@@ -13891,21 +14294,21 @@ Octox Labs Cyber Security Asset Management platform This integration was integra
 
 **Commands:**
 
-- `octoxlabs-get-adapters`: 
-- `octoxlabs-get-connections`: 
-- `octoxlabs-get-discoveries`: 
-- `octoxlabs-get-last-discovery`: 
-- `octoxlabs-search-devices`: 
-- `octoxlabs-get-device`: 
-- `octoxlabs-get-queries`: 
-- `octoxlabs-get-query-by-id`: 
-- `octoxlabs-get-query-by-name`: 
-- `octoxlabs-get-user-by-username`: 
-- `octoxlabs-get-groups`: 
-- `octoxlabs-get-companies`: 
-- `octoxlabs-get-domain-by-domain-name`: 
-- `octoxlabs-get-company-by-id`: 
-- `octoxlabs-get-permissions`: 
+- `octoxlabs-get-adapters`: Fetch octoxlabs all adapters
+- `octoxlabs-get-connections`: Fetch octoxlabs connections
+- `octoxlabs-get-discoveries`: Fetch octoxlabs discoveries
+- `octoxlabs-get-last-discovery`: Get last success discovery
+- `octoxlabs-search-devices`: Search in your devices
+- `octoxlabs-get-device`: Fetch your device
+- `octoxlabs-get-queries`: Fetch your queries
+- `octoxlabs-get-query-by-id`: Fetch your queries by id
+- `octoxlabs-get-query-by-name`: Fetch your queries by id
+- `octoxlabs-get-user-by-username`: Fetch your Users by username
+- `octoxlabs-get-groups`: Fetch your Groups
+- `octoxlabs-get-companies`: Fetch your Companies
+- `octoxlabs-get-domain-by-domain-name`: Fetch your Domain by Domain name.
+- `octoxlabs-get-company-by-id`: Fetch your Company by id.
+- `octoxlabs-get-permissions`: Fetch your Permissions
 
 
 ## OktaApiModule
@@ -13946,13 +14349,13 @@ Integrate with open source LLMs using Ollama. With an instance of Ollama running
 
 **Commands:**
 
-- `ollama-list-models`: 
-- `ollama-model-pull`: 
-- `ollama-model-delete`: 
-- `ollama-conversation`: 
-- `ollama-model-info`: 
-- `ollama-model-create`: 
-- `ollama-generate`: 
+- `ollama-list-models`: Get a list of all available models
+- `ollama-model-pull`: Pull a model
+- `ollama-model-delete`: Delete a model
+- `ollama-conversation`: General chat command that tracks the conversation history in the Incident.
+- `ollama-model-info`: Show information for a specific model.
+- `ollama-model-create`: Create a new model from a Modelfile.
+- `ollama-generate`: Generate a response for a given prompt with a provided model. Conversation history IS NOT tracked.
 
 
 ## OnboardingIntegration
@@ -13964,11 +14367,11 @@ Creates mock email incidents using one of two randomly selected HTML templates. 
 
 **Commands:**
 
-- `demo-ip`: 
-- `demo-url`: 
-- `demo-domain`: 
-- `demo-file`: 
-- `demo-email`: 
+- `demo-ip`: Gets the simulated reputation of the IP address.
+- `demo-url`: Gets the simulated reputation of the URL address.
+- `demo-domain`: Gets the simulated reputation of the domain.
+- `demo-file`: Gets the simulated reputation of the file hash.
+- `demo-email`: Gets the simulated reputation of the email address.
 
 
 ## OpenAI GPT
@@ -13977,17 +14380,17 @@ Creates mock email incidents using one of two randomly selected HTML templates. 
 **Product:** OpenAI  
 **Commands:**
 
-- `gpt-send-message`: 
-- `gpt-check-email-body`: 
-- `gpt-check-email-header`: 
-- `gpt-analyze-email-header`: 
-- `gpt-analyze-email-body`: 
-- `gpt-create-soc-email-template`: 
-- `gpt-draft-soc-email`: 
-- `openai-get-events`: 
-- `gpt-create-response`: 
-- `gpt-list-models`: 
-- `gpt-create-moderation`: 
+- `gpt-send-message`: Send a message as a prompt to the GPT model.
+- `gpt-check-email-body`: Check email body for possible security issues.
+- `gpt-check-email-header`: Check email body for possible security issues.
+- `gpt-analyze-email-header`: Analyze email headers for potential security issues using the OpenAI Responses API. This command uses the Responses API which is recommended for all new project
+- `gpt-analyze-email-body`: Analyze email body for potential security risks using the OpenAI Responses API. This command uses the Responses API which is recommended for all new projects (i
+- `gpt-create-soc-email-template`: Create an email template out of the conversation context to be sent from the SOC.
+- `gpt-draft-soc-email`: Draft a SOC email template using the OpenAI Responses API. This command uses the Responses API which is recommended for all new projects (instead of gpt-create-
+- `openai-get-events`: Manually fetch a bounded batch of Audit and/or Compliance events for development/debugging. Does NOT advance the persisted last_run cursor, so it is safe to run
+- `gpt-create-response`: Sends a message to the OpenAI Responses API and receives the generated response. This command uses the Responses API which is recommended for all new projects (
+- `gpt-list-models`: Lists all models available to the configured API key. Lets users discover models per their actual API-key tier without redeploying the integration when OpenAI s
+- `gpt-create-moderation`: Runs text or an image through the OpenAI Moderations API and returns per-category flagging results. Exactly one of text, entry_id, or image_url must be provided
 
 
 ## OpenCVE
@@ -13999,15 +14402,16 @@ Ingests CVEs from an instance of OpenCVE
 
 **Commands:**
 
-- `opencve-latest`: 
-- `opencve-get-my-vendors`: 
-- `opencve-get-my-products`: 
-- `opencve-get-vendor-cves`: 
-- `opencve-get-product-cves`: 
-- `opencve-get-reports`: 
-- `opencve-get-alerts`: 
-- `opencve-get-products`: 
-- `opencve-get-vendors`: 
+- `opencve-latest`: Returns the latest updated CVEs from your reports.
+- `cve`: Returns CVE information by CVE ID.
+- `opencve-get-my-vendors`: List the vendors subscriptions of the authenticated user.
+- `opencve-get-my-products`: List the products subscriptions of the authenticated user.
+- `opencve-get-vendor-cves`: Get vendor CVEs.
+- `opencve-get-product-cves`: Get product CVEs.
+- `opencve-get-reports`: List the reports of the authenticated user or get a specific report.
+- `opencve-get-alerts`: List the alerts of a report or get the details of a specific alert.
+- `opencve-get-products`: List the products associated to a vendor or get a specific one.
+- `opencve-get-vendors`: List the products associated to a vendor or get a specific product of a vendor by specifying its name.
 
 
 ## OPNSense
@@ -14019,21 +14423,21 @@ Manage OPNsense Firewall. For more information see OPNsense documentation. OPNse
 
 **Commands:**
 
-- `opnsense-alias-list`: 
-- `opnsense-alias-add`: 
-- `opnsense-alias-del`: 
-- `opnsense-alias-mod`: 
-- `opnsense-alias-mod-additem`: 
-- `opnsense-alias-mod-delitem`: 
-- `opnsense-alias-get`: 
-- `opnsense-alias-get-uuid`: 
-- `opnsense-interfaces-list`: 
-- `opnsense-category-list`: 
-- `opnsense-category-add`: 
-- `opnsense-category-del`: 
-- `opnsense-category-get`: 
-- `opnsense-category-mod`: 
-- `opnsense-rule-list`: 
+- `opnsense-alias-list`: Get aliases list
+- `opnsense-alias-add`: Create new alias
+- `opnsense-alias-del`: Delete alias with uuid
+- `opnsense-alias-mod`: Modify an existing alias
+- `opnsense-alias-mod-additem`: Add item into existing alias
+- `opnsense-alias-mod-delitem`: Del item into existing alias
+- `opnsense-alias-get`: Get alias details
+- `opnsense-alias-get-uuid`: Get alias UUID
+- `opnsense-interfaces-list`: Get interfaces list
+- `opnsense-category-list`: Get categories list
+- `opnsense-category-add`: Create new category
+- `opnsense-category-del`: Delete category with uuid
+- `opnsense-category-get`: Get category details
+- `opnsense-category-mod`: Modify an axisting category
+- `opnsense-rule-list`: Get rules list
 
 
 ## OpsGenie v3
@@ -14045,18 +14449,18 @@ Integration with Atlassian OpsGenie. OpsGenie is a cloud-based service that enab
 
 **Commands:**
 
-- `opsgenie-create-alert`: 
-- `opsgenie-get-alerts`: 
-- `opsgenie-delete-alert`: 
-- `opsgenie-ack-alert`: 
-- `opsgenie-close-alert`: 
-- `opsgenie-assign-alert`: 
-- `opsgenie-add-responder-alert`: 
-- `opsgenie-get-escalations`: 
-- `opsgenie-escalate-alert`: 
-- `opsgenie-add-alert-tag`: 
-- `opsgenie-remove-alert-tag`: 
-- `opsgenie-get-alert-attachments`: 
+- `opsgenie-create-alert`: Create an alert in Opsgenie.
+- `opsgenie-get-alerts`: List the current alerts from OpsGenie.
+- `opsgenie-delete-alert`: Delete an alert from OpsGenie.
+- `opsgenie-ack-alert`: Acknowledge an alert in OpsGenie.
+- `opsgenie-close-alert`: Close an alert in OpsGenie.
+- `opsgenie-assign-alert`: Assign an OpsGenie alert.
+- `opsgenie-add-responder-alert`: Add a responder to an OpsGenie alert.
+- `opsgenie-get-escalations`: Get escalations from OpsGenie.
+- `opsgenie-escalate-alert`: Escalate an OpsGenie alert.
+- `opsgenie-add-alert-tag`: Add tag to the OpsGenie alert.
+- `opsgenie-remove-alert-tag`: Remove a tag from the OpsGenie alert.
+- `opsgenie-get-alert-attachments`: Get the attachments of the alert.
 
 
 ## Oracle IAM
@@ -14068,14 +14472,14 @@ Integrate with Oracle Identity Access Management service to execute CRUD (create
 
 **Commands:**
 
-- `iam-create-user`: 
-- `iam-get-user`: 
-- `iam-update-user`: 
-- `iam-disable-user`: 
-- `iam-create-group`: 
-- `iam-get-group`: 
-- `iam-delete-group`: 
-- `iam-update-group`: 
+- `iam-create-user`: Creates a user.
+- `iam-get-user`: Retrieves a single user resource.
+- `iam-update-user`: Updates an existing user with the data passed in the user-profile argument.
+- `iam-disable-user`: Disable an active user.
+- `iam-create-group`: Creates an empty group
+- `iam-get-group`: Retrieves the group information including members
+- `iam-delete-group`: Permanently removes a group.
+- `iam-update-group`: Updates an existing group resource. This command allows individual (or groups of) users to be added or removed from the group with a single operation. A maximum
 
 
 ## Orca
@@ -14087,7 +14491,7 @@ Agentless, Workload-Deep, Context-Aware Security and Compliance for AWS, Azure, 
 
 **Commands:**
 
-- `orca-get-alerts`: 
+- `orca-get-alerts`: Get the alerts on cloud assets
 
 
 ## OrionMalware
@@ -14099,8 +14503,8 @@ This is the Orion Malware integration. Analyzes hash and files with static and d
 
 **Commands:**
 
-- `hash-scan`: 
-- `file-scan`: 
+- `hash-scan`: Check hash value against Orion Malware database
+- `file-scan`: Detonate file in Orion Malware
 
 
 ## OSQueryBasicQuery
@@ -14160,6 +14564,22 @@ Adds zeros (0) to the beginning of the string, until the string reaches the spec
 **Product:** PagerDuty  
 
 Use the PagerDuty integration to manage schedules and on-call users. This integration was integrated and tested with PagerDuty API v2
+
+**Commands:**
+
+- `PagerDuty-get-all-schedules`: Receive all schedules from PagerDuty.
+- `PagerDuty-get-users-on-call`: Returns the names and details of on call users at a certain time or by specific schedule.
+- `PagerDuty-get-users-on-call-now`: Returns the names and details of current on call personnel.
+- `PagerDuty-incidents`: Shows incidents in PagerDuty. Default status parameters are triggered,acknowledged.
+- `PagerDuty-submit-event`: Creates a new event/incident in PagerDuty(In order to use this command you have to enter the Service Key in the integration settings).
+- `PagerDuty-get-contact-methods`: Get the contact methods of a given user.
+- `PagerDuty-get-users-notification`: Get the users notification rules.
+- `PagerDuty-resolve-event`: Resolves an existing event in PagerDuty.
+- `PagerDuty-acknowledge-event`: Acknowledges an existing event in PagerDuty.
+- `PagerDuty-get-incident-data`: Get data about a incident from PagerDuty.
+- `PagerDuty-get-service-keys`: Get Service keys for each of the services configured in the PagerDuty instance.
+- `PagerDuty-add-responders`: Add responders to an incident.
+- `PagerDuty-run-response-play`: Run a response play on PagerDuty (based on its UUID).
 
 
 ## PagerDutyAlertOnIncident
@@ -14247,9 +14667,9 @@ Retrieve and monitor internal security findings for your organization, and criti
 
 **Commands:**
 
-- `panorays-finding-list`: 
-- `panorays-supplier-finding-list`: 
-- `panorays-supplier-list`: 
+- `panorays-finding-list`: Lists your own organization's findings as detected by Panorays.
+- `panorays-supplier-finding-list`: Lists the findings detected by Panorays for a specific supplier (third party).
+- `panorays-supplier-list`: Lists the suppliers (third parties) in your Panorays portfolio.
 
 
 ## PanoraysCheckOlderDuplicate
@@ -14293,17 +14713,17 @@ Improve the effectiveness of your service provision and resources, and the quali
 
 **Commands:**
 
-- `hda-create-ticket`: 
-- `hda-list-tickets`: 
-- `hda-add-ticket-attachment`: 
-- `hda-list-ticket-attachments`: 
-- `hda-add-ticket-comment`: 
-- `hda-list-ticket-statuses`: 
-- `hda-change-ticket-status`: 
-- `hda-list-ticket-priorities`: 
-- `hda-get-ticket-history`: 
-- `hda-list-users`: 
-- `hda-list-groups`: 
+- `hda-create-ticket`: Create a new ticket.
+- `hda-list-tickets`: List tickets.
+- `hda-add-ticket-attachment`: Add an attachment to a ticket.
+- `hda-list-ticket-attachments`: List attachments for a ticket.
+- `hda-add-ticket-comment`: Add a comment to a ticket.
+- `hda-list-ticket-statuses`: List ticket statuses.
+- `hda-change-ticket-status`: Change the status of a ticket.
+- `hda-list-ticket-priorities`: List ticket priorities.
+- `hda-get-ticket-history`: Get ticket history.
+- `hda-list-users`: List users.
+- `hda-list-groups`: List groups.
 
 
 ## PDFUnlocker
@@ -14328,7 +14748,7 @@ The penfield-get-assignee command takes in necessary context data, and returns t
 
 **Commands:**
 
-- `penfield-get-assignee`: 
+- `penfield-get-assignee`: Calls the Penfield API and returns the analyst Penfield recommends assigning the incident to. This information is saved in the output, but the incident will not
 
 
 ## Penfield Assign
@@ -14357,7 +14777,9 @@ PenfieldAssign will use the PenfieldGetAssignee integration to determine who an 
 **Product:** Pentera  
 **Commands:**
 
-- `pentera-run-template-by-name`: 
+- `pentera-run-template-by-name`: Run a specific template by its name. Please add the template name in the parameters
+- `pentera-get-task-run-status`: Get the status of a task run by its task run id
+- `pentera-get-task-run-full-action-report`: Get the full action report of a task run
 
 
 ## Pentera Filter And Create Incident
@@ -14398,6 +14820,10 @@ Perform user actions such as link, close, etc., on selected incidents from a cam
 
 Gathers PerimeterX related data
 
+**Commands:**
+
+- `ip`: Gets the PerimeterX DBotScore decision for a particular IP
+
 
 ## Perplexity AI
 
@@ -14408,7 +14834,7 @@ Perplexity AI is a web search engine that uses a large language model to process
 
 **Commands:**
 
-- `deepresearch-chat`: 
+- `deepresearch-chat`: Send a chat message. You may need to increase the command timeout in "advanced settings" from the default 5 minutes.
 
 
 ## PFXAnalyzer
@@ -14453,21 +14879,21 @@ This integration was integrated and tested with Picus NG
 
 **Commands:**
 
-- `picus-get-access-token`: 
-- `picus-get-agent-list`: 
-- `picus-get-agent-detail`: 
-- `picus-create-simulation`: 
-- `picus-get-template-list`: 
-- `picus-get-integration-agent-list`: 
-- `picus-get-simulation-list`: 
-- `picus-simulate-now`: 
-- `picus-get-simulation-detail`: 
-- `picus-get-latest-simulation-result`: 
-- `picus-get-simulation-result`: 
-- `picus-get-simulation-threats`: 
-- `picus-get-simulation-actions`: 
-- `picus-get-mitigation-devices`: 
-- `picus-get-signature-list`: 
+- `picus-get-access-token`: OAuth2 protocol is used to authorize Refresh/Access tokens. To obtain the API, you should generate a refresh token and then request an access token using this c
+- `picus-get-agent-list`: This command returns the simulation agent list with agent name, id, status, agent type and platform information as in Picus platform > Agents.
+- `picus-get-agent-detail`: This command returns agent name, status, agent type, platform and also mitigation devices and attack modules using the agent ID.
+- `picus-create-simulation`: This command creates and runs a simulation as requested; scheduled or instant. You can create a simulation by giving your simulation a name and adding the templ
+- `picus-get-template-list`: This command returns template list that contains template name, id, description, content type, category as in Picus Platform> Threat Templates.
+- `picus-get-integration-agent-list`: This command returns the agent name, id, status, agent installation information and the token expiration information.
+- `picus-get-simulation-list`: This command returns the list of you latest simulation result overview as in Picus Platform > Simulations tab. Latest simulation run results are included.
+- `picus-simulate-now`: This command runs the existing simulation using the Simulation ID.
+- `picus-get-simulation-detail`: This command returns the information about a specific simulation.
+- `picus-get-latest-simulation-result`: This command returns detailed information about simulation results including Prevention and Detection result details for the latest simulation run.
+- `picus-get-simulation-result`: This command returns detailed information about simulation results including Prevention and Detection result details for a specific simulation run with run id.
+- `picus-get-simulation-threats`: This command returns simulation result based on threats. Threat result includes threat id and name, prevention result and action count.
+- `picus-get-simulation-actions`: This command returns simulation result based on action list using threat ID, simulation ID and simulation run ID.
+- `picus-get-mitigation-devices`: This command returns mitigation device information as obtained under Picus platform > Mitigation > Vendor Based Mitigations. Vendor based mitigation devices can
+- `picus-get-signature-list`: This command returns action based signature suggestions.
 
 
 ## PiHole
@@ -14479,21 +14905,21 @@ Pi-hole is a network-level advertisement and Internet tracker blocking applicati
 
 **Commands:**
 
-- `pihole-get-version`: 
-- `pihole-get-type`: 
-- `pihole-get-summaryraw`: 
-- `pihole-get-overtimedata10mins`: 
-- `pihole-get-topitems`: 
-- `pihole-get-topclients`: 
-- `pihole-get-forward-destinations`: 
-- `pihole-get-query-types`: 
-- `pihole-get-all-queries`: 
-- `pihole-status`: 
-- `pihole-enable`: 
-- `pihole-disable`: 
-- `pihole-get-versions`: 
-- `pihole-get-topclientsblocked`: 
-- `pihole-get-cache-info`: 
+- `pihole-get-version`: Returns the version of the API
+- `pihole-get-type`: Returns the backend used by the API (either PHP or FTL)
+- `pihole-get-summaryraw`: Gives statistics in raw format (no number formatting applied)
+- `pihole-get-overtimedata10mins`: Data needed for generating the domains/ads over time graph on the Pi-hole web dashboard
+- `pihole-get-topitems`: Data needed for generating the Top Domain and Top Advertisers Lists
+- `pihole-get-topclients`: Data needed for generating the Top Clients list
+- `pihole-get-forward-destinations`: Shows number of queries that have been forwarded and the target
+- `pihole-get-query-types`: Shows number of queries that the Pi-hole’s DNS server has processed
+- `pihole-get-all-queries`: Get DNS queries data
+- `pihole-status`: Show status of pihole action (enabled - disabled)
+- `pihole-enable`: Enable Pi-hole ad blocking
+- `pihole-disable`: used to disable pihole for certain amount of time
+- `pihole-get-versions`: Show versions of all components
+- `pihole-get-topclientsblocked`: Shows the top clients being blocked
+- `pihole-get-cache-info`: Show cache info
 
 
 ## PiHole v6
@@ -14505,21 +14931,21 @@ PiHole v6 integration using the new REST API. PiHole is a network-level advertis
 
 **Commands:**
 
-- `pihole-get-summary`: 
-- `pihole-get-top-domains`: 
-- `pihole-get-top-clients`: 
-- `pihole-get-upstreams`: 
-- `pihole-get-query-types`: 
-- `pihole-get-recent-blocked`: 
-- `pihole-get-history`: 
-- `pihole-get-history-clients`: 
-- `pihole-get-queries`: 
-- `pihole-get-blocking-status`: 
-- `pihole-set-blocking`: 
-- `pihole-get-domains`: 
-- `pihole-add-domain`: 
-- `pihole-delete-domain`: 
-- `pihole-get-version`: 
+- `pihole-get-summary`: Get overview of PiHole activity including query stats, client counts, and gravity info.
+- `pihole-get-top-domains`: Get top permitted or blocked domains.
+- `pihole-get-top-clients`: Get top clients by query count.
+- `pihole-get-upstreams`: Get metrics about upstream DNS destinations.
+- `pihole-get-query-types`: Get breakdown of DNS query types.
+- `pihole-get-recent-blocked`: Get most recently blocked domain(s).
+- `pihole-get-history`: Get activity graph data (queries over time).
+- `pihole-get-history-clients`: Get per-client activity graph data.
+- `pihole-get-queries`: Get DNS query log with optional filtering.
+- `pihole-get-blocking-status`: Get current PiHole blocking status.
+- `pihole-set-blocking`: Enable or disable PiHole blocking, optionally with a timer.
+- `pihole-get-domains`: Get domains from allow/deny lists. Filter by type and kind.
+- `pihole-add-domain`: Add a domain to allow/deny list.
+- `pihole-delete-domain`: Delete a domain from allow/deny list.
+- `pihole-get-version`: Get PiHole component versions.
 
 
 ## Ping
@@ -14543,7 +14969,7 @@ This integration will run a server that will listen for PingCastle XML reports. 
 
 **Commands:**
 
-- `pingcastle-get-report`: 
+- `pingcastle-get-report`: Get the Currently saved Ping Castle Report
 
 
 ## Pipl
@@ -14555,7 +14981,8 @@ Pipl provides a reputation for email addresses and identity solutions
 
 **Commands:**
 
-- `pipl-search`: 
+- `pipl-search`: Search for required query
+- `email`: Searches for information regarding given email address
 
 
 ## Polar Security
@@ -14567,13 +14994,13 @@ Polar Security, an innovator in technology that helps companies discover, contin
 
 **Commands:**
 
-- `polar-list-linked-vendors`: 
-- `polar-list-data-stores`: 
-- `polar-data-stores-summary`: 
-- `polar-list-vendors-data-stores`: 
-- `polar-get-data-store`: 
-- `polar-list-vendor-accessible-data-stores`: 
-- `polar-apply-label`: 
+- `polar-list-linked-vendors`: Get a list of all 3rd party vendors connected to your cloud workloads
+- `polar-list-data-stores`: List observed data stores
+- `polar-data-stores-summary`: Summarize your data stores by storage type, service provider, cloud location, etc.
+- `polar-list-vendors-data-stores`: Get a list of all data stores a specific 3rd party vendor can access. See whether they have sensitivities and with what role the access is made possible.
+- `polar-get-data-store`: Get a specific data store by its ID. Doesn't return anything above and beyond the polar-list-data-stores command, so no need to run it again if you've already r
+- `polar-list-vendor-accessible-data-stores`: List all data stores accessible by 3rd party vendors, along with which vendors have access.
+- `polar-apply-label`: Add or update a custom label to a data store
 
 
 ## PolySwarm
@@ -14585,11 +15012,15 @@ Real-time threat intelligence from a crowd-sourced network of security experts a
 
 **Commands:**
 
-- `polyswarm-get-report`: 
-- `url-scan`: 
-- `file-rescan`: 
-- `get-file`: 
-- `file-scan`: 
+- `polyswarm-get-report`: Returns a report using the UUID.
+- `file`: Queries PolySwarm for file reputation information.
+- `ip`: Queries PolySwarm for IP reputation information.
+- `url`: Queries PolySwarm for URL reputation information.
+- `domain`: Queries PolySwarm to retrieve domain reputation information.
+- `url-scan`: Uploads a URL to PolySwarm and retrieves the analysis results.
+- `file-rescan`: Rescans the uploaded artifact by hash.
+- `get-file`: Downloads a file hash from PolySwarm.
+- `file-scan`: Uploads a file to PolySwarm and retrieves the analysis results.
 
 
 ## Popular News
@@ -14598,6 +15029,11 @@ Real-time threat intelligence from a crowd-sourced network of security experts a
 **Product:** Popular Cybersecurity News  
 
 How to use this integration ? This integration was integrated and tested with version 1.0.0 of Popular News
+
+**Commands:**
+
+- `get-news-KrebsOnSecurity`: Get News from KrebsOnSecurity
+- `get-news-TheHackerNews`: Get News from TheHackerNews
 
 
 ## PopulateCriticalAssets
@@ -14646,7 +15082,7 @@ Postmark's spam API, Spamcheck, is a RESTfull interface to the Spam filter tool 
 
 **Commands:**
 
-- `postmark-spamcheck`: 
+- `postmark-spamcheck`: Check the spamscore of your email message
 
 
 ## Prepare your CTF
@@ -14701,12 +15137,12 @@ The Prisma Cloud DSPM(Data Security Posture Management) integration enhances the
 
 **Commands:**
 
-- `dspm-list-risk-findings`: 
-- `dspm-get-risk-finding-by-id`: 
-- `dspm-list-assets`: 
-- `dspm-get-asset-details`: 
-- `dspm-get-asset-files-by-id`: 
-- `dspm-get-list-of-asset-fields-by-id`: 
+- `dspm-list-risk-findings`: Retrieves risk findings matching the input criteria.
+- `dspm-get-risk-finding-by-id`: Retrieves the details of a risk for the provided risk ID.
+- `dspm-list-assets`: Retrieves a list of assets for the company.
+- `dspm-get-asset-details`: Retrieves details for the specified asset ID.
+- `dspm-get-asset-files-by-id`: Retrieves file details for the specified asset ID.
+- `dspm-get-list-of-asset-fields-by-id`: Return list of fields for structured assets such as RDS, Aurora, and BigQuery.
 
 
 ## PrismaAirsApiModule
@@ -14739,8 +15175,8 @@ Query Prometheus via its HTTP API (/api/v1/query). Supports a pipe-separated met
 
 **Commands:**
 
-- `prometheus-query`: 
-- `prometheus-raw`: 
+- `prometheus-query`: Query Prometheus instant vectors by metric name using a pipe-separated "fields" list. Builds {name=~"..."} (anchored by default) and calls /api/v1/query.
+- `prometheus-raw`: Run any raw Prometheus instant query string against /api/v1/query.
 
 
 ## ProvidesCommand
@@ -14778,8 +15214,11 @@ Enrich and analyze any domain, URL, or IP. Pivot to search on data points and li
 
 **Commands:**
 
-- `pulsedive-scan`: 
-- `pulsedive-scan-result`: 
+- `ip`: Return IP information and reputation
+- `domain`: Returns Domain information and reputation.
+- `url`: Returns URL information and reputation.
+- `pulsedive-scan`: Scan an indicator (IP/URL/Domain)
+- `pulsedive-scan-result`: Retrieve the Result
 
 
 ## QR Code Reader - goqr.me
@@ -14791,7 +15230,7 @@ Read QR Code from image file. This integration was integrated and tested with ve
 
 **Commands:**
 
-- `goqr-read-qr-code-from-file`: 
+- `goqr-read-qr-code-from-file`: Upload a PNG, GIF or JP(E)G image which is smaller than 1 MiB via the entry_id of the image file.
 
 
 ## qrcodereader
@@ -14841,7 +15280,7 @@ An example playbook on how to query Sigma rules from within TIM and query a SIEM
 **Product:** QueryAI  
 **Commands:**
 
-- `queryai-run-query`: 
+- `queryai-run-query`: Returns response for the query being run on Query.AI.
 
 
 ## Quest KACE Systems Management Appliance (Beta)
@@ -14853,13 +15292,13 @@ This is the Quest KACE integration. This integration was integrated and tested w
 
 **Commands:**
 
-- `kace-machines-list`: 
-- `kace-assets-list`: 
-- `kace-queues-list`: 
-- `kace-tickets-list`: 
-- `kace-ticket-create`: 
-- `kace-ticket-update`: 
-- `kace-ticket-delete`: 
+- `kace-machines-list`: Returns a list of all machines in system.
+- `kace-assets-list`: Returns a list of all assets in Quest KACE.
+- `kace-queues-list`: Returns a list of all queues in Quest KACE.
+- `kace-tickets-list`: Returns a list of all tickets in Quest KACE.
+- `kace-ticket-create`: Creates a new ticket to the system.
+- `kace-ticket-update`: Updates a ticket in the system.
+- `kace-ticket-delete`: Deletes the specified ticket.
 
 
 ## QutteraWebsiteMalwareScanner
@@ -14871,11 +15310,11 @@ Quttera Website Malware Scanner This integration was integrated and tested with 
 
 **Commands:**
 
-- `quttera-scan-start`: 
-- `quttera-rescan-status`: 
-- `quttera-scan-report`: 
-- `quttera-report-malware`: 
-- `quttera-status-blacklist`: 
+- `quttera-scan-start`: Start to scan a given domain
+- `quttera-rescan-status`: Retrieve status of submitted domain
+- `quttera-scan-report`: Retrieve report of submitted domain
+- `quttera-report-malware`: Retrieve url blacklist and reputation
+- `quttera-status-blacklist`: Retrieve domain blacklist and reputation
 
 
 ## RaDark
@@ -14887,9 +15326,9 @@ This integration enables you to fetch incidents and manage your RaDark monitor f
 
 **Commands:**
 
-- `radark-incident-get-items`: 
-- `radark-email-enrich`: 
-- `radark-item-handle`: 
+- `radark-incident-get-items`: Fetch all items for an incident by the given incident ID.
+- `radark-email-enrich`: Search a specific email address to get all exposed leaked credentials collected by RaDark.
+- `radark-item-handle`: Mark item as handled on RaDark.
 
 
 ## RankRemediationOwners
@@ -14932,10 +15371,11 @@ Converts URLs, PDF files, and emails to an image file or PDF file
 
 **Commands:**
 
-- `rasterize-email`: 
-- `rasterize-image`: 
-- `rasterize-pdf`: 
-- `rasterize-html`: 
+- `rasterize`: Converts the contents of a URL to an image file or a PDF file.
+- `rasterize-email`: Converts the body of an email to an image file or a PDF file.
+- `rasterize-image`: Converts an image file to a PDF file.
+- `rasterize-pdf`: Converts a PDF file to an image file.
+- `rasterize-html`: Converts an html file to a PDF or PNG file.
 
 
 ## RasterizeImageOriginal
@@ -14976,21 +15416,21 @@ Reco is the leader in SaaS & AI Security — securing AI sprawl across SaaS apps
 
 **Commands:**
 
-- `reco-add-comment-to-alert`: 
-- `reco-update-incident-timeline`: 
-- `reco-resolve-visibility-event`: 
-- `reco-get-risky-users`: 
-- `reco-add-risky-user-label`: 
-- `reco-add-leaving-org-user-label`: 
-- `reco-get-assets-user-has-access-to`: 
-- `reco-get-sensitive-assets-by-name`: 
-- `reco-get-sensitive-assets-by-id`: 
-- `reco-get-assets-by-id`: 
-- `reco-get-link-to-user-overview-page`: 
-- `reco-get-3rd-parties-accessible-to-data-list`: 
-- `reco-get-sensitive-assets-with-public-link`: 
-- `reco-get-files-shared-with-3rd-parties`: 
-- `reco-change-alert-status`: 
+- `reco-add-comment-to-alert`: Add a comment to an alert in Reco.
+- `reco-update-incident-timeline`: Add a comment to an incident timeline in Reco.
+- `reco-resolve-visibility-event`: Resolve an event in a Reco Finding.
+- `reco-get-risky-users`: List all accounts flagged as risky (auto-paginates all results).
+- `reco-add-risky-user-label`: Tag a user as risky in Reco.
+- `reco-add-leaving-org-user-label`: Tag a user as a departing employee in Reco.
+- `reco-get-assets-user-has-access-to`: List files a user has access to.
+- `reco-get-sensitive-assets-by-name`: Find sensitive assets by name.
+- `reco-get-sensitive-assets-by-id`: Find sensitive assets by ID.
+- `reco-get-assets-by-id`: Find any asset by ID.
+- `reco-get-link-to-user-overview-page`: Generate a deep link to the Reco UI overview page for an entity.
+- `reco-get-3rd-parties-accessible-to-data-list`: List third-party domains that have access to sensitive data.
+- `reco-get-sensitive-assets-with-public-link`: List sensitive assets exposed via a public link.
+- `reco-get-files-shared-with-3rd-parties`: List files shared with a specific third-party domain.
+- `reco-change-alert-status`: Update the status of a Reco alert.
 
 
 ## Reco - Reduce Risk - Google Publicly Exposed Files
@@ -15061,18 +15501,18 @@ A project management and issue tracking system that provides a web-based platfor
 **Commands:**
 
 - `redmine-issue-create`: 
-- `redmine-issue-list`: 
-- `redmine-issue-update`: 
-- `redmine-issue-get`: 
-- `redmine-issue-delete`: 
-- `redmine-issue-watcher-add`: 
-- `redmine-issue-watcher-remove`: 
-- `redmine-project-list`: 
-- `redmine-custom-field-list`: 
+- `redmine-issue-list`: Display a list of issues
+- `redmine-issue-update`: Update an existing issue. When attaching a file to an issue, include the entry ID in the request as file_entry_id=entry ID. To create a custom field, navigate t
+- `redmine-issue-get`: Show an issue by id
+- `redmine-issue-delete`: Delete an issue by its ID
+- `redmine-issue-watcher-add`: Add a watcher to the specified issue
+- `redmine-issue-watcher-remove`: Remove a watcher of an issue
+- `redmine-project-list`: Retrieve a list of all projects, including both public and private ones that the user has access to.
+- `redmine-custom-field-list`: Retrieve a list of all custom fields.
 - `redmine-user-id-list`: 
-- `redmine-priority-id-list`: 
-- `redmine-status-id-list`: 
-- `redmine-tracker-id-list`: 
+- `redmine-priority-id-list`: Returns a list of priorities (priority_name to priority_id).
+- `redmine-status-id-list`: Returns a list of statuses (status_name to status_id).
+- `redmine-tracker-id-list`: Returns a list of trackers (tracker_name to tracker_id).
 
 
 ## RegexExpand
@@ -15139,9 +15579,12 @@ RelayShield real-time identity-compromise and agent-security threat intelligence
 
 **Commands:**
 
-- `relayshield-mcp-registry-risk`: 
-- `relayshield-cert-expiry`: 
-- `relayshield-supply-chain`: 
+- `domain`: Check a domain for phishing-lookalike/typosquat risk, presence in RelayShield's criminal IOC corpus, and set a DBotScore.
+- `ip`: Check an IP address for reputation, malicious/suspicious votes, and set a DBotScore.
+- `email`: Check an email address for breach exposure and active stolen-session risk, and set a DBotScore.
+- `relayshield-mcp-registry-risk`: Assess an MCP server URL or package name for typosquat/supply-chain/registry risk before an agent connects to it.
+- `relayshield-cert-expiry`: Check a domain's TLS certificate expiry risk.
+- `relayshield-supply-chain`: Check up to 10 vendor domains (or emails) for combined breach/infostealer risk.
 
 
 ## RemediationPathRuleEvaluation
@@ -15220,7 +15663,7 @@ This package allows retrieving asset monitoring results from monitoring tasks th
 
 **Commands:**
 
-- `resecurity-get-task-monitor-results-data-breaches`: 
+- `resecurity-get-task-monitor-results-data-breaches`: Retrieve monitoring results from a specific monitor task
 
 
 ## ResolveGemAlert
@@ -15327,7 +15770,7 @@ ReversingLabs A1000 advanced Malware Analysis Platform
 
 **Commands:**
 
-- `reversinglabs-a1000-get-results`: 
+- `reversinglabs-a1000-get-results`: Retrieve sample analysis results
 
 
 ## ReversingLabs TitaniumScale
@@ -15336,7 +15779,7 @@ ReversingLabs A1000 advanced Malware Analysis Platform
 **Product:** ReversingLabs TitaniumScale  
 **Commands:**
 
-- `reversinglabs-titaniumscale-upload-sample-and-get-results`: 
+- `reversinglabs-titaniumscale-upload-sample-and-get-results`: Upload sample to TitaniumScale and retrieve analysis report.
 
 
 ## RiskSense
@@ -15345,7 +15788,15 @@ ReversingLabs A1000 advanced Malware Analysis Platform
 **Product:** RiskSense  
 **Commands:**
 
-- `risksense-get-hosts`: 
+- `risksense-get-hosts`: Gets details of the supplied host. The host details can be searched based on input parameters like fieldname (Host Name, IP Address, Criticality, etc), operator
+- `risksense-get-host-detail`: Gets in-depth details of a single host. This command accepts either hostname or host ID as an argument.
+- `risksense-get-unique-cves`: Looks up vulnerability details for the supplied host finding with its base score.
+- `risksense-get-unique-open-findings`: Finds unique open host findings.The open findings can be searched based on input parameters like fieldname (Severity, Title, Source etc), operator (EXACT, IN, L
+- `risksense-get-host-findings`: A detailed host finding view with the severity level. Displays vulnerability information like CVE, Threats associated with current findings and origin of findin
+- `risksense-get-apps`: Looks up the application details. The application details can be searched based on input parameters like fieldname (Name, Network, Address), operator (EXACT, IN
+- `risksense-get-host-finding-detail`: Gets in-depth details of a single host finding. The command accepts the host finding ID as an argument.
+- `risksense-get-app-detail`: Gets in-depth details of a single application. The command accepts an application ID as an argument.
+- `risksense-apply-tag`: Apply the new or existing tag to the asset, creates a new tag if it does not exist in RiskSense.
 
 
 ## Roksit DNS Security (DNSSense)
@@ -15354,6 +15805,10 @@ ReversingLabs A1000 advanced Malware Analysis Platform
 **Product:** Roksit DNS Security  
 
 This integration provides adding selected domains to the Roksit Secure DNS's Blacklisted Domain List through API . This integration was integrated and tested with version 1.0.0 of Roksit DNS Security (DNSSense)
+
+**Commands:**
+
+- `Roksit-add-to-blacklist`: This command adds a given domain to tha Roksit blacklist.
 
 
 ## RSA Archer v2
@@ -15365,21 +15820,21 @@ The RSA Archer GRC platform provides a common foundation for managing policies, 
 
 **Commands:**
 
-- `archer-search-applications`: 
-- `archer-get-application-fields`: 
-- `archer-get-field`: 
-- `archer-get-mapping-by-level`: 
-- `archer-get-record`: 
-- `archer-create-record`: 
-- `archer-delete-record`: 
-- `archer-update-record`: 
-- `archer-execute-statistic-search-by-report`: 
-- `archer-get-reports`: 
-- `archer-get-search-options-by-guid`: 
-- `archer-reset-cache`: 
-- `archer-get-valuelist`: 
-- `archer-upload-file`: 
-- `archer-get-file`: 
+- `archer-search-applications`: Gets application details or list of all applications.
+- `archer-get-application-fields`: Gets all application fields by application ID.
+- `archer-get-field`: Returns a mapping from list value name to list value ID.
+- `archer-get-mapping-by-level`: Returns a mapping of fields by level ID.
+- `archer-get-record`: Gets information about a content record in the given application.
+- `archer-create-record`: Creates a new content record in the given application.
+- `archer-delete-record`: Deletes an existing content record in the given application.
+- `archer-update-record`: Updates an existing content record in the given application. Note: When updating a record, make sure the values are sent through the fieldsToValues argument pro
+- `archer-execute-statistic-search-by-report`: Performs statistic search by report GUID.
+- `archer-get-reports`: Gets all reports from Archer.
+- `archer-get-search-options-by-guid`: Returns search criteria by report GUID.
+- `archer-reset-cache`: Resets Archer's integration cache. This cache is maintained in platform based on previous search results and must be cleared when field mappings no longer make 
+- `archer-get-valuelist`: Returns a list of values for a specified field, for example, fieldID=16114. This command is applicable only to value list fields (type 4) and will attempt to fe
+- `archer-upload-file`: Uploads a file to Archer. You can associate the file to a record by providing all of the following arguments:
+- `archer-get-file`: Downloads a file from Archer to the platform.
 
 
 ## RSA NetWitness Security Analytics
@@ -15391,21 +15846,21 @@ RSA Security Analytics is a distributed and modular system that enables highly f
 
 **Commands:**
 
-- `nw-login`: 
-- `fetch-incidents`: 
-- `netwitness-im-list-incidents`: 
-- `netwitness-im-login`: 
-- `netwitness-im-get-components`: 
-- `netwitness-im-get-events`: 
-- `netwitness-im-get-available-assignees`: 
-- `netwitness-im-create-incident`: 
-- `netwitness-im-add-events-to-incident`: 
-- `netwitness-im-update-incident`: 
-- `netwitness-im-get-alerts`: 
-- `netwitness-im-get-alert-details`: 
-- `netwitness-im-get-event-details`: 
-- `netwitness-im-get-incident-details`: 
-- `netwitness-im-get-alert-original`: 
+- `nw-login`: Logins to the system and returns valid sessionId
+- `fetch-incidents`: Simulates fetching incidents. Returns array of incidents from NetWitness.
+- `netwitness-im-list-incidents`: Fetches incidents by filter
+- `netwitness-im-login`: Logins to the system and returns valid sessionId
+- `netwitness-im-get-components`: Returns all the components in the system
+- `netwitness-im-get-events`: Returns all the events in defined time range
+- `netwitness-im-get-available-assignees`: Returns the available users to be assigned to incidents
+- `netwitness-im-create-incident`: Creating new incident
+- `netwitness-im-add-events-to-incident`: This command will add new events to existing incident
+- `netwitness-im-update-incident`: Updates incident
+- `netwitness-im-get-alerts`: Return all the alerts filtered by filter.
+- `netwitness-im-get-alert-details`: Return single alert by id
+- `netwitness-im-get-event-details`: Returns two entries. One is event details json and the second is
+- `netwitness-im-get-incident-details`: Returns incident json by id
+- `netwitness-im-get-alert-original`: Returns the original events which this alert contains
 
 
 ## RSA_DisplayMetasEvents
@@ -15433,21 +15888,21 @@ RSA NetWitness Platform provides systems Logs, Network, and endpoint visibility 
 
 **Commands:**
 
-- `rsa-nw-list-incidents`: 
-- `rsa-nw-update-incident`: 
-- `rsa-nw-remove-incident`: 
-- `rsa-nw-incident-add-journal-entry`: 
-- `rsa-nw-incident-list-alerts`: 
-- `rsa-nw-services-list`: 
-- `rsa-nw-hosts-list`: 
-- `rsa-nw-snapshots-list-for-host`: 
-- `rsa-nw-snapshot-details-get`: 
-- `rsa-nw-files-list`: 
-- `rsa-nw-scan-request`: 
-- `rsa-nw-scan-stop-request`: 
-- `rsa-nw-host-alerts-list`: 
-- `rsa-nw-file-alerts-list`: 
-- `rsa-nw-file-download`: 
+- `rsa-nw-list-incidents`: Retrieves a single incident by ID or multiple incidents by the date and time they were created using the start time ('since') or end time ('until'). You can lim
+- `rsa-nw-update-incident`: Updates incident status and assignee.
+- `rsa-nw-remove-incident`: Remove a single incident using the incident’s unique identifier.
+- `rsa-nw-incident-add-journal-entry`: Add a journal entry to an existing incident.
+- `rsa-nw-incident-list-alerts`: Retrieves all the alerts that are associated with an incident based on the incident ID. You can limit the results using the limit argument.
+- `rsa-nw-services-list`: Retrieves a list of all services, or filter by name.
+- `rsa-nw-hosts-list`: Lists all host information from a specific endpoint server. Filter the results using the supplied arguments (can be a list) or use the 'filter' argument. You ca
+- `endpoint`: Retrieves host information for a specific endpoint. To use this command, service ID must be set in the integration configuration.
+- `rsa-nw-snapshots-list-for-host`: Retrieve a list os snapshot IDs for a given host.
+- `rsa-nw-snapshot-details-get`: Provides snapshot details of the given host for the specified snapshot time. It is recommended to use categories to filter the results since this command return
+- `rsa-nw-files-list`: Lists all related file information from a specific endpoint server. You can limit the results using the limit argument or the page size argument.
+- `rsa-nw-scan-request`: Starts a scan for the host with the specified agent ID. Each scan produces a snapshot, the full details can be seen using the 'rsa-nw-snapshot-details-get' comm
+- `rsa-nw-scan-stop-request`: Stop a scan for the host with the specified agent ID.
+- `rsa-nw-host-alerts-list`: Gets all alerts triggered for a given host.
+- `rsa-nw-file-alerts-list`: Gets all alerts triggered for a given file.
 
 
 ## RSSWidget
@@ -15479,18 +15934,18 @@ Rundeck is a runbook automation for incident management, business continuity, an
 
 **Commands:**
 
-- `rundeck-projects-list`: 
-- `rundeck-jobs-list`: 
-- `rundeck-job-execute`: 
-- `rundeck-job-retry`: 
-- `rundeck-job-executions-query`: 
-- `rundeck-job-execution-output`: 
-- `rundeck-job-execution-abort`: 
-- `rundeck-adhoc-command-run`: 
-- `rundeck-adhoc-script-run`: 
-- `rundeck-adhoc-script-run-from-url`: 
-- `rundeck-webhooks-list`: 
-- `rundeck-webhook-event-send`: 
+- `rundeck-projects-list`: Gets all existing projects on the server.
+- `rundeck-jobs-list`: Gets a list of all the jobs that exist in a project.
+- `rundeck-job-execute`: Executes a new job.
+- `rundeck-job-retry`: Retry running a failed execution
+- `rundeck-job-executions-query`: Gets all executions based on the job or execution details.
+- `rundeck-job-execution-output`: Gets the metadata associated with the workflow step state.
+- `rundeck-job-execution-abort`: Aborts an active execution.
+- `rundeck-adhoc-command-run`: Executes shell commands in nodes.
+- `rundeck-adhoc-script-run`: Runs a script from file.
+- `rundeck-adhoc-script-run-from-url`: Runs a script downloaded from a URL.
+- `rundeck-webhooks-list`: Gets a list of all existing webhooks
+- `rundeck-webhook-event-send`: Send webhook event
 
 
 ## Rundeck-job-execute-Generic
@@ -15514,16 +15969,16 @@ RunZero is a network discovery and asset inventory platform that uncovers every 
 
 **Commands:**
 
-- `runzero-asset-search`: 
-- `runzero-asset-delete`: 
-- `runzero-service-search`: 
-- `runzero-service-delete`: 
-- `runzero-comment-add`: 
-- `runzero-tag-add`: 
-- `runzero-quota-get`: 
-- `runzero-tag-delete`: 
-- `runzero-wireless-lan-search`: 
-- `runzero-wireless-lan-delete`: 
+- `runzero-asset-search`: Get assets.
+- `runzero-asset-delete`: Bulk delete assets.
+- `runzero-service-search`: Get services.
+- `runzero-service-delete`: Delete a service.
+- `runzero-comment-add`: Add a comment or override an existing asset comment.
+- `runzero-tag-add`: Add tag or tags to the asset.
+- `runzero-quota-get`: Get information about the API key used. Type, Limit, usage etc.
+- `runzero-tag-delete`: Delete tags for specific asset.
+- `runzero-wireless-lan-search`: Get all wireless LANs.
+- `runzero-wireless-lan-delete`: Remove a wireless LAN.
 
 
 ## SafeBreach
@@ -15535,21 +15990,21 @@ For enterprises using SafeBreach and platform, integrating this package streamli
 
 **Commands:**
 
-- `safebreach-approve-simulator`: 
-- `safebreach-generate-api-key`: 
-- `safebreach-create-deployment`: 
-- `safebreach-create-user`: 
-- `safebreach-delete-api-key`: 
-- `safebreach-delete-deployment`: 
-- `safebreach-clear-integration-issues`: 
-- `safebreach-delete-scheduled-scenarios`: 
-- `safebreach-delete-simulator`: 
-- `safebreach-delete-test-with-id`: 
-- `safebreach-delete-user`: 
-- `safebreach-get-integration-issues`: 
-- `safebreach-get-running-simulations`: 
-- `safebreach-get-running-tests`: 
-- `safebreach-get-available-simulator-details`: 
+- `safebreach-approve-simulator`: This command approves the simulator with the specified simulator_id.
+- `safebreach-generate-api-key`: This command creates an API key with the name and optionally the description provided. The API key created will be shown on the Settings > API Keys page of Safe
+- `safebreach-create-deployment`: This command creates a deployment, grouping the list of simulators provided with a name and optionally a description.
+- `safebreach-create-user`: This command creates a user, including credentials and permissions.
+- `safebreach-delete-api-key`: This command deletes the API key with the name as specified in SafeBreach Management. It is not case sensitive.
+- `safebreach-delete-deployment`: This command deletes a deployment with the deployment_id (retrieved using the get-all-deployments command).
+- `safebreach-clear-integration-issues`: This command deletes connector-related errors and warnings for the specified connector_id (retrieved using the get-all-integration-issues command).
+- `safebreach-delete-scheduled-scenarios`: This command deletes the scheduled scenario with the specified schedule_id.
+- `safebreach-delete-simulator`: The provided command facilitates the deletion of a simulator identified by its unique ID.To obtain the respective simulator ID, execute the "safebreach-get-all-
+- `safebreach-delete-test-with-id`: This command deletes tests with given test ID.
+- `safebreach-delete-user`: This command deletes a user with given data.
+- `safebreach-get-integration-issues`: This command gives all integrations related issues and warning. this will show the integrations error and warnings which are generally displayed in installed in
+- `safebreach-get-running-simulations`: This command gets simulations which are in running or queued state.
+- `safebreach-get-running-tests`: This command gets tests which are in running state.
+- `safebreach-get-available-simulator-details`: This command to get all available simulators. if details is set to true then it retrieves simulator details like name, hostname, internal and external ips, type
 
 
 ## SafeNet Trusted Access - Add to Unusual Activity Group
@@ -15589,21 +16044,21 @@ Safewalk server integration This integration was integrated and tested with vers
 
 **Commands:**
 
-- `safewalk-get-transactionlog`: 
-- `safewalk-get-users`: 
-- `safewalk-get-ldap-users`: 
-- `safewalk-get-ldaps`: 
-- `safewalk-get-user-personalinformation`: 
-- `safewalk-set-user-personalinformation`: 
-- `safewalk-get-user-accessattempts`: 
-- `safewalk-delete-user-accessattempts`: 
-- `safewalk-get-user-tokens`: 
-- `safewalk-delete-user-token`: 
-- `safewalk-send-user-virtualtoken`: 
-- `safewalk-get-user-settings`: 
-- `safewalk-get-user-group`: 
-- `safewalk-add-user-group`: 
-- `safewalk-remove-user-group`: 
+- `safewalk-get-transactionlog`: Display transaction log.
+- `safewalk-get-users`: Search local users.
+- `safewalk-get-ldap-users`: Search LDAP users
+- `safewalk-get-ldaps`: Get LDAP configuration.
+- `safewalk-get-user-personalinformation`: Get users personal information.
+- `safewalk-set-user-personalinformation`: Set user personal information.
+- `safewalk-get-user-accessattempts`: Get user access attempts
+- `safewalk-delete-user-accessattempts`: Delete user access attempts
+- `safewalk-get-user-tokens`: Get user tokens
+- `safewalk-delete-user-token`: Delete user token.
+- `safewalk-send-user-virtualtoken`: Send user virtual token.
+- `safewalk-get-user-settings`: Get user settings.
+- `safewalk-get-user-group`: Get user group.
+- `safewalk-add-user-group`: Add user group.
+- `safewalk-remove-user-group`: Remove user group.
 
 
 ## Safewalk Reports
@@ -15615,17 +16070,17 @@ Safewalk server integration This integration was integrated and tested with vers
 
 **Commands:**
 
-- `safewalk-get-associated-users`: 
-- `safewalk-get-authentication-methods-distribution`: 
-- `safewalk-get-authentication-rate-per-device`: 
-- `safewalk-get-least-active-users`: 
-- `safewalk-get-licenses-inventory`: 
-- `safewalk-get-licenses-usage`: 
-- `safewalk-get-most-active-users`: 
-- `safewalk-get-physical-tokens-inventory`: 
-- `safewalk-get-registered-devices-distribution`: 
-- `safewalk-get-registration`: 
-- `safewalk-get-users-associations-indicators`: 
+- `safewalk-get-associated-users`: safewalk-get-associated-users
+- `safewalk-get-authentication-methods-distribution`: safewalk-get-authentication-methods-distribution
+- `safewalk-get-authentication-rate-per-device`: safewalk-get-authentication-rate-per-device
+- `safewalk-get-least-active-users`: safewalk-get-least-active-users
+- `safewalk-get-licenses-inventory`: safewalk-get-licenses-inventory
+- `safewalk-get-licenses-usage`: safewalk-get-licenses-usage
+- `safewalk-get-most-active-users`: safewalk-get-most-active-users
+- `safewalk-get-physical-tokens-inventory`: safewalk-get-physical-tokens-inventory
+- `safewalk-get-registered-devices-distribution`: safewalk-get-registered-devices-distribution
+- `safewalk-get-registration`: safewalk-get-registration
+- `safewalk-get-users-associations-indicators`: safewalk-get-users-associations-indicators
 
 
 ## Salesforce Fusion IAM
@@ -15637,10 +16092,10 @@ Integrate with Salesforce Fusion Identity Access Management service to execute C
 
 **Commands:**
 
-- `iam-create-user`: 
-- `iam-update-user`: 
-- `iam-get-user`: 
-- `iam-disable-user`: 
+- `iam-create-user`: Creates a user.
+- `iam-update-user`: Updates an existing user with the data passed in the user-profile argument.
+- `iam-get-user`: Retrieves a single user resource.
+- `iam-disable-user`: Disable an active user.
 
 
 ## Salesforce IAM
@@ -15652,11 +16107,11 @@ Integrate with Salesforce's services to perform Identity Lifecycle Management op
 
 **Commands:**
 
-- `iam-create-user`: 
-- `iam-update-user`: 
-- `iam-get-user`: 
-- `iam-disable-user`: 
-- `get-mapping-fields`: 
+- `iam-create-user`: Creates a user with specific settings and permissions in Salesforce, according to the configuration of the Salesforce integration and mapper - as explained in t
+- `iam-update-user`: Updates an existing user with the data passed in the user-profile argument.
+- `iam-get-user`: Retrieves a single user resource.
+- `iam-disable-user`: Disable an active user.
+- `get-mapping-fields`: Retrieves a User Profile schema which holds all of the user fields within the application. Used for outgoing-mapping through the Get Schema option.
 
 
 ## Salesforce v2
@@ -15668,21 +16123,21 @@ CRM Services
 
 **Commands:**
 
-- `salesforce-search`: 
-- `salesforce-query`: 
-- `salesforce-get-object`: 
-- `salesforce-update-object`: 
-- `salesforce-create-object`: 
-- `salesforce-push-comment`: 
-- `salesforce-get-case`: 
-- `salesforce-create-case`: 
-- `salesforce-update-case`: 
-- `salesforce-get-cases`: 
-- `salesforce-close-case`: 
-- `salesforce-push-comment-threads`: 
-- `salesforce-delete-case`: 
-- `salesforce-get-casecomment`: 
-- `salesforce-post-casecomment`: 
+- `salesforce-search`: Search records that contain values with the defined pattern.
+- `salesforce-query`: Queries Salesforce in SOQL format.
+- `salesforce-get-object`: Returns an object by its path.
+- `salesforce-update-object`: Updates object fields.
+- `salesforce-create-object`: Creates a new object.
+- `salesforce-push-comment`: Adds a comment to Chatter.
+- `salesforce-get-case`: Returns information on a case. All arguments are optional, but you must specify at least one argument for the command to execute successfully.
+- `salesforce-create-case`: Creates a new case.
+- `salesforce-update-case`: Updates case fields.
+- `salesforce-get-cases`: Returns all cases.
+- `salesforce-close-case`: Close a case
+- `salesforce-push-comment-threads`: Add the comment to the Chatter thread. Use this command only after salesforce-push-comment.
+- `salesforce-delete-case`: Deletes a case.
+- `salesforce-get-casecomment`: Returns a comment through the case number.
+- `salesforce-post-casecomment`: The post comment through the case number.
 
 
 ## SalesforceAskUser
@@ -15732,8 +16187,8 @@ Integrate with SAP's services to execute get and disable operations for employee
 
 **Commands:**
 
-- `iam-get-user`: 
-- `iam-disable-user`: 
+- `iam-get-user`: Retrieves a single user resource.
+- `iam-disable-user`: Disable an active user.
 
 
 ## SAP BTP (Business Technology Platform)
@@ -15742,7 +16197,7 @@ Integrate with SAP's services to execute get and disable operations for employee
 **Product:** SAP BTP (Business Technology Platform)  
 **Commands:**
 
-- `sap-btp-get-events`: 
+- `sap-btp-get-events`: Retrieve audit log events from SAP BTP manually. This command is used for developing/debugging and is to be used with caution, as it can create events, leading 
 
 
 ## Schedule Task and Poll
@@ -15853,14 +16308,14 @@ Use SecneurX Analysis pack to provide threat analysts and incident response team
 
 **Commands:**
 
-- `snx-analysis-get-verdict`: 
-- `snx-analysis-get-completed`: 
-- `snx-analysis-get-pending`: 
-- `snx-analysis-get-status`: 
-- `snx-analysis-submit-file`: 
-- `snx-analysis-submit-url`: 
-- `snx-analysis-get-report`: 
-- `snx-analysis-get-quota`: 
+- `snx-analysis-get-verdict`: Get verdict summary report of the analyzed sample
+- `snx-analysis-get-completed`: Get the list of submitted samples whose status is marked as "Completed"
+- `snx-analysis-get-pending`: Get the list of submitted samples that are still in pending state
+- `snx-analysis-get-status`: Get the status of all the submitted samples
+- `snx-analysis-submit-file`: Submit a file for Analysis
+- `snx-analysis-submit-url`: Submit the URL for Analysis
+- `snx-analysis-get-report`: Get the detailed report of the analyzed sample.
+- `snx-analysis-get-quota`: Get the API Key quota usage details.
 
 
 ## SecurityScorecard
@@ -15872,21 +16327,21 @@ Provides commands to access SecurityScorecard's API. This integration was integr
 
 **Commands:**
 
-- `securityscorecard-portfolios-list`: 
-- `securityscorecard-portfolio-list-companies`: 
-- `securityscorecard-company-score-get`: 
-- `securityscorecard-company-factor-score-get`: 
-- `securityscorecard-company-history-score-get`: 
-- `securityscorecard-company-history-factor-score-get`: 
-- `securityscorecard-alert-grade-change-create`: 
-- `securityscorecard-alert-score-threshold-create`: 
-- `securityscorecard-alert-delete`: 
-- `securityscorecard-alerts-list`: 
-- `securityscorecard-company-services-get`: 
-- `securityscorecard-company-events-get`: 
-- `securityscorecard-company-findings-get`: 
-- `securityscorecard-issue-metadata`: 
-- `securityscorecard-alert-rules-list`: 
+- `securityscorecard-portfolios-list`: List all Portfolios.
+- `securityscorecard-portfolio-list-companies`: Lists all companies in Portfolio.
+- `securityscorecard-company-score-get`: Retrieve company overall score.
+- `securityscorecard-company-factor-score-get`: Retrieve company factor score.
+- `securityscorecard-company-history-score-get`: Retrieve company historical scores.
+- `securityscorecard-company-history-factor-score-get`: Retrieve company historical factor scores.
+- `securityscorecard-alert-grade-change-create`: Create alert based on grade.
+- `securityscorecard-alert-score-threshold-create`: Create alert based threshold met.
+- `securityscorecard-alert-delete`: Delete an alert.
+- `securityscorecard-alerts-list`: List alerts triggered in the last week.
+- `securityscorecard-company-services-get`: Retrieve the service providers of a domain.
+- `securityscorecard-company-events-get`: Retrieve a company's historical events.
+- `securityscorecard-company-findings-get`: Retrieve an issue_type's historical findings in a scorecard.
+- `securityscorecard-issue-metadata`: Retrieve metadata for an issue type, including description and recommendation.
+- `securityscorecard-alert-rules-list`: List alert subscriptions for the user.
 
 
 ## SecurityTrails
@@ -15898,15 +16353,16 @@ This integration provides API access to the SecurityTrails platform. This integr
 
 **Commands:**
 
-- `securitytrails-get-subdomains`: 
-- `securitytrails-get-tags`: 
-- `securitytrails-get-company-associated-ips`: 
-- `securitytrails-get-dns-history`: 
-- `securitytrails-get-ip-neighbors`: 
-- `securitytrails-statistics-domain`: 
-- `securitytrails-search-ip`: 
-- `securitytrails-get-ip-whois`: 
-- `securitytrails-sql-get-next`: 
+- `securitytrails-get-subdomains`: Returns child and sibling subdomains for a given hostname.
+- `securitytrails-get-tags`: Returns tags for a given hostname
+- `securitytrails-get-company-associated-ips`: Returns associated IPs for a company domain. The data is based on whois data with the names matched to the domains.
+- `securitytrails-get-dns-history`: Lists out specific historical information about the given hostname parameter. In addition of fetching the historical data for a particular type, the count stati
+- `securitytrails-get-ip-neighbors`: Returns the neighbors in any given IP level range and essentially allows you to explore closeby IP addresses. It will divide the range into 16 groups. Example: 
+- `securitytrails-statistics-domain`: Domain statistics
+- `securitytrails-search-ip`: Search for IP addresses. A maximum of 10000 results can be retrieved.
+- `securitytrails-get-ip-whois`: Returns IPs information based on whois information.
+- `domain`: Provides data enrichment for domains.
+- `securitytrails-sql-get-next`: Retrieves the next page of results returned from a SQL query where the results exceeded the last page.
 
 
 ## Securonix
@@ -15915,7 +16371,21 @@ This integration provides API access to the SecurityTrails platform. This integr
 **Product:** Securonix  
 **Commands:**
 
-- `securonix-list-workflows`: 
+- `securonix-list-workflows`: Gets a list of all available workflows.
+- `securonix-get-default-assignee-for-workflow`: Gets the default assignee for the specified workflow.
+- `securonix-list-possible-threat-actions`: Gets a list available threat actions.
+- `securonix-list-policies`: Gets a list of all policies.
+- `securonix-list-resource-groups`: Gets a list of resource groups.
+- `securonix-list-users`: Gets a list of users.
+- `securonix-list-activity-data`: Gets a list of activity data for the specified resource group.
+- `securonix-list-violation-data`: Gets a list activity data for an account name.
+- `securonix-list-incidents`: Gets a list of incidents.
+- `securonix-get-incident`: Gets details of the specified incident.
+- `securonix-get-incident-status`: Gets the status of the specified incident.
+- `securonix-get-incident-workflow`: Gets the workflow of the specified incident.
+- `securonix-get-incident-available-actions`: Gets a list of available actions for the specified incident.
+- `securonix-perform-action-on-incident`: Performs an action on the specified incident.
+- `securonix-add-comment-to-incident`: Adds a comment to the specified incident.
 
 
 ## SecuronixGetViolations
@@ -15935,21 +16405,21 @@ Fetch alerts and events from SEKOIA.IO XDR. To use this integration, please crea
 
 **Commands:**
 
-- `sekoia-xdr-list-alerts`: 
-- `sekoia-xdr-get-alert`: 
-- `sekoia-xdr-events-execute-query`: 
-- `sekoia-xdr-events-status-query`: 
-- `sekoia-xdr-events-results-query`: 
-- `sekoia-xdr-search-events`: 
-- `sekoia-xdr-update-status-alert`: 
-- `sekoia-xdr-post-comment-alert`: 
-- `sekoia-xdr-get-comments`: 
-- `sekoia-xdr-get-workflow-alert`: 
-- `sekoia-xdr-get-cases-alert`: 
-- `sekoia-xdr-get-asset`: 
-- `get-remote-data`: 
-- `get-modified-remote-data`: 
-- `get-mapping-fields`: 
+- `sekoia-xdr-list-alerts`: Command to retrieve a list of Alerts from Sekoia XDR.
+- `sekoia-xdr-get-alert`: Command to retrieve a specific alert by uuid or short_id from Sekoia XDR.
+- `sekoia-xdr-events-execute-query`: Command to create an event search job on Sekoia XDR, after this execute "sekoia-xdr-status-events-query" to see the status of the query job and "sekoia-xdr-resu
+- `sekoia-xdr-events-status-query`: Command to query the status of the search job on Sekoia XDR.
+- `sekoia-xdr-events-results-query`: Command to retrieve the events from the search job "sekoia-xdr-execute-events-query" previously done on Sekoia XDR.
+- `sekoia-xdr-search-events`: Command to search and retrieve the events from an alert. This is a combination of 3 commands: sekoia-xdr-events-execute-query, sekoia-xdr-events-status-query an
+- `sekoia-xdr-update-status-alert`: Command to update the status of a specific Alert by uuid or short_id.
+- `sekoia-xdr-post-comment-alert`: Command to post comments to alerts in Sekoia XDR.
+- `sekoia-xdr-get-comments`: Command to get all the comments from an alert in Sekoia XDR.
+- `sekoia-xdr-get-workflow-alert`: Command to get the possible transitions of status on the alert.
+- `sekoia-xdr-get-cases-alert`: Command to retrieve the cases related to an Alert from Sekoia XDR. If a case_id is given, returns the information about it, and if not it will give all cases in
+- `sekoia-xdr-get-asset`: Get an asset by its UUID from Sekoia XDR.
+- `get-remote-data`: This command gets new information about the incidents in the remote system and updates existing incidents in the platform.
+- `get-modified-remote-data`: available from the platform.1.0. This command queries for incidents that were modified since the last update.
+- `get-mapping-fields`: This command pulls the remote schema for the different incident types, and their associated incident fields, from the remote system.
 
 
 ## SekoiaXDRAddComment
@@ -16012,21 +16482,21 @@ SendGrid provides a cloud-based service that assists businesses with email deliv
 
 **Commands:**
 
-- `sg-send-email`: 
-- `sg-get-global-email-stats`: 
-- `sg-get-category-stats`: 
-- `sg-get-all-categories-stats`: 
-- `sg-list-categories`: 
-- `sg-create-batch-id`: 
-- `sg-scheduled-status-change`: 
-- `sg-retrieve-all-scheduled-sends`: 
-- `sg-retrieve-scheduled-send`: 
-- `sg-update-scheduled-send`: 
-- `sg-delete-scheduled-send`: 
-- `sg-get-email-activity-list`: 
-- `sg-get-all-lists`: 
-- `sg-get-list-by-id`: 
-- `sg-create-list`: 
+- `sg-send-email`: Send an email.
+- `sg-get-global-email-stats`: Retrieves all of your global email statistics between a given date range.
+- `sg-get-category-stats`: Retrieves all of your email statistics for each of your categories.
+- `sg-get-all-categories-stats`: Retrieves the total sum of each email statistic for every category over the given date range. By default it returns only 5 categories. Use limit= argument to de
+- `sg-list-categories`: Retrieves a list of all of your categories.
+- `sg-create-batch-id`: Generates a new batch ID.
+- `sg-scheduled-status-change`: Cancel or pause a scheduled send associated with a batch ID.
+- `sg-retrieve-all-scheduled-sends`: Retrieves all cancelled and paused scheduled send information.
+- `sg-retrieve-scheduled-send`: Retrieves the cancel/paused scheduled send information for a specific batch id.
+- `sg-update-scheduled-send`: Update the status of a scheduled send for the given batch id.
+- `sg-delete-scheduled-send`: Delete the cancellation/pause of a scheduled send.
+- `sg-get-email-activity-list`: Retrieves the email activity list associated with the messages matching your query. If no query provided, it returns a list of most recent emails you've sent. N
+- `sg-get-all-lists`: Retrieves all of your recipient lists. If you don't have any lists, an empty array will be returned.
+- `sg-get-list-by-id`: Retrieves a single recipient list.
+- `sg-create-list`: Creates a new contacts list
 
 
 ## Sepio
@@ -16035,13 +16505,13 @@ SendGrid provides a cloud-based service that assists businesses with email deliv
 **Product:** Sepio  
 **Commands:**
 
-- `sepio-query-agents`: 
-- `sepio-query-peripherals`: 
-- `sepio-query-switches`: 
-- `sepio-query-switch-ports`: 
-- `sepio-query-system-events`: 
-- `sepio-set-agent-mode`: 
-- `sepio-set-peripherals-mode`: 
+- `sepio-query-agents`: Get Agents
+- `sepio-query-peripherals`: Get Peripherals
+- `sepio-query-switches`: Get Switches
+- `sepio-query-switch-ports`: Get Switch Ports
+- `sepio-query-system-events`: Get Events
+- `sepio-set-agent-mode`: Set Agent Mode
+- `sepio-set-peripherals-mode`: Set Agent Peripherals Mode
 
 
 ## Serenety
@@ -16053,7 +16523,7 @@ XMCO Serenety
 
 **Commands:**
 
-- `fetch-incidents`: 
+- `fetch-incidents`: Fetch the Serenety lerts from XMCO LePortail
 
 
 ## Server Message Block (SMB) v2
@@ -16065,12 +16535,12 @@ Files and Directories management with an SMB server. Supports SMB2 and SMB3 prot
 
 **Commands:**
 
-- `smb-download`: 
-- `smb-upload`: 
-- `smb-directory-list`: 
-- `smb-file-remove`: 
-- `smb-directory-create`: 
-- `smb-directory-remove`: 
+- `smb-download`: Downloads a file from the server.
+- `smb-upload`: Uploads a file to the server.
+- `smb-directory-list`: Returns a list containing the names of the entries in the directory given by path.
+- `smb-file-remove`: Removes a file from the server.
+- `smb-directory-create`: Creates a new directory under the given path.
+- `smb-directory-remove`: Removes a directory from the given path.
 
 
 ## ServerLogs
@@ -16098,17 +16568,17 @@ IT Service Management
 
 **Commands:**
 
-- `service-desk-plus-requests-list`: 
-- `service-desk-plus-request-delete`: 
-- `service-desk-plus-request-create`: 
-- `service-desk-plus-request-update`: 
-- `service-desk-plus-request-assign`: 
-- `service-desk-plus-request-pickup`: 
-- `service-desk-plus-linked-request-list`: 
-- `service-desk-plus-request-resolution-add`: 
-- `service-desk-plus-request-resolutions-list`: 
-- `service-desk-plus-generate-refresh-token`: 
-- `service-desk-plus-link-request-modify`: 
+- `service-desk-plus-requests-list`: View the details of requests. If no parameters are given the details of all requests will be shown.
+- `service-desk-plus-request-delete`: Deletes the request with the specified ID. To delete multiple IDs, pass a comma-separated list (string) of the IDs of the requests.
+- `service-desk-plus-request-create`: Create new requests
+- `service-desk-plus-request-update`: Update the request with the given request id.
+- `service-desk-plus-request-assign`: Assigns the request with the given request id to a technician/group
+- `service-desk-plus-request-pickup`: Allows the technician to pickup the request with the given request id on his name.
+- `service-desk-plus-linked-request-list`: Gets a list with all the linked requests under a request
+- `service-desk-plus-request-resolution-add`: Adds a resolution to the given request
+- `service-desk-plus-request-resolutions-list`: Gets the resolution to the given request
+- `service-desk-plus-generate-refresh-token`: This function generates the refresh token that should be used in the instance configurations
+- `service-desk-plus-link-request-modify`: Link or Unlink multiple commands
 
 
 ## Service Desk Plus - Generic Polling
@@ -16153,14 +16623,14 @@ ServiceNow CMDB is a service‑centric foundation that proactively analyzes serv
 
 **Commands:**
 
-- `servicenow-cmdb-records-list`: 
-- `servicenow-cmdb-record-get-by-id`: 
-- `servicenow-cmdb-record-create`: 
-- `servicenow-cmdb-record-update`: 
-- `servicenow-cmdb-record-add-relations`: 
-- `servicenow-cmdb-record-delete-relations`: 
-- `servicenow-cmdb-oauth-login`: 
-- `servicenow-cmdb-oauth-test`: 
+- `servicenow-cmdb-records-list`: Query records for a CMDB class.
+- `servicenow-cmdb-record-get-by-id`: Query attributes and relationship information for a specific record.
+- `servicenow-cmdb-record-create`: Create a record with associated relations and attributes.
+- `servicenow-cmdb-record-update`: Update a record with the given attributes.
+- `servicenow-cmdb-record-add-relations`: Add a new relation to an existing record.
+- `servicenow-cmdb-record-delete-relations`: Delete a relation of an existing record.
+- `servicenow-cmdb-oauth-login`: This function should be used once before running any command when using OAuth authorization.
+- `servicenow-cmdb-oauth-test`: Test the instance configuration when using OAuth authorization.
 
 
 ## ServiceNow CMDB Search
@@ -16187,10 +16657,10 @@ Integrate with ServiceNow's services to perform Identity Lifecycle Management op
 
 **Commands:**
 
-- `iam-create-user`: 
-- `iam-update-user`: 
-- `iam-get-user`: 
-- `iam-disable-user`: 
+- `iam-create-user`: Creates a user.
+- `iam-update-user`: Updates an existing user with the data passed in the user-profile argument.
+- `iam-get-user`: Retrieves a single user resource.
+- `iam-disable-user`: Disable an active user.
 
 
 ## ServiceNow MCP
@@ -16202,8 +16672,8 @@ Use this integration to connect securely with a ServiceNow Model Context Protoco
 
 **Commands:**
 
-- `servicenow-mcp-auth-test`: 
-- `servicenow-mcp-generate-login-url`: 
+- `servicenow-mcp-auth-test`: Test the authentication configuration with the MCP server.
+- `servicenow-mcp-generate-login-url`: Generate an authentication login URL.
 
 
 ## ServiceNow v2
@@ -16215,21 +16685,21 @@ IT service management. Cortex interfaces with ServiceNow to help streamline secu
 
 **Commands:**
 
-- `servicenow-login`: 
-- `servicenow-test`: 
-- `servicenow-get-ticket`: 
-- `servicenow-create-ticket`: 
-- `servicenow-update-ticket`: 
-- `servicenow-delete-ticket`: 
-- `servicenow-query-tickets`: 
-- `servicenow-add-link`: 
-- `servicenow-add-comment`: 
-- `servicenow-upload-file`: 
-- `servicenow-delete-file`: 
-- `servicenow-get-record`: 
-- `servicenow-query-table`: 
-- `servicenow-create-record`: 
-- `servicenow-update-record`: 
+- `servicenow-login`: This function should be used once before running any command when using OAuth authentication.
+- `servicenow-test`: Test the instance configuration when using OAuth authorization.
+- `servicenow-get-ticket`: Retrieves ticket information by ticket ID.
+- `servicenow-create-ticket`: Creates new ServiceNow ticket.
+- `servicenow-update-ticket`: Updates the specified ticket.
+- `servicenow-delete-ticket`: Deletes a ticket from ServiceNow.
+- `servicenow-query-tickets`: Retrieves ticket information according to the supplied query.
+- `servicenow-add-link`: Adds a link to the specified ticket.
+- `servicenow-add-comment`: Adds a comment to the specified ticket, by ticket ID.
+- `servicenow-upload-file`: Uploads a file to the specified ticket.
+- `servicenow-delete-file`: Delete an attachment from a ticket.
+- `servicenow-get-record`: Retrieves record information, by record ID.
+- `servicenow-query-table`: Queries the specified table in ServiceNow.
+- `servicenow-create-record`: Creates a new record in the specified ServiceNow table.
+- `servicenow-update-record`: Updates a record in the specified ServiceNow table.
 
 
 ## ServiceNowApiModule
@@ -16359,9 +16829,9 @@ Integrate ShiftLeft CORE code analysis platform with the platform. This integrat
 
 **Commands:**
 
-- `shiftleft-list-apps`: 
-- `shiftleft-list-app-findings`: 
-- `shiftleft-list-app-secrets`: 
+- `shiftleft-list-apps`: Return list of apps.
+- `shiftleft-list-app-findings`: Return list of app findings.
+- `shiftleft-list-app-secrets`: Return list of app secrets.
 
 
 ## Shodan v2
@@ -16373,9 +16843,11 @@ Shodan is a search engine for Internet-connected devices. Unlike traditional sea
 
 **Commands:**
 
-- `shodan-search-count`: 
-- `shodan-scan-ip`: 
-- `shodan-scan-internet`: 
+- `search`: Searches Shodan using facets to get summary information on properties.
+- `ip`: Returns all services that have been found on the IP address of the searched host.
+- `shodan-search-count`: Returns the total number of results that match only the specified query or facet settings. This command does not return host results. This command does not cons
+- `shodan-scan-ip`: Requests Shodan to crawl a network.
+- `shodan-scan-internet`: Requests for Shodan to perform a scan on the specified port and protocol.
 
 
 ## SiemApiModule
@@ -16414,6 +16886,11 @@ Allows converting a Sigma Rule indicator into a SIEM query
 
 SIGNL4 offers critical alerting, incident response and service dispatching for operating critical infrastructure. It alerts you persistently via app push, SMS text, voice calls, and email including tracking, escalation, on-call duty scheduling and collaboration
 
+**Commands:**
+
+- `signl4_alert`: Sends a mobile alert to a SIGNL4 team.
+- `signl4_close_alert`: Close a SIGNL4 alert.
+
 
 ## Signum
 
@@ -16424,7 +16901,7 @@ Signum password expiry notification
 
 **Commands:**
 
-- `signum-list-domain-users`: 
+- `signum-list-domain-users`: List domain users by domain ID.
 
 
 ## SilentPush
@@ -16436,47 +16913,21 @@ The Silent Push Platform uses first-party data and a proprietary scanning engine
 
 **Commands:**
 
-- `silentpush-add-feed`: 
-- `silentpush-add-feed-tags`: 
-- `silentpush-add-indicators`: 
-- `silentpush-add-indicator-tags`: 
-- `silentpush-bulk-enrich`: 
-- `silentpush-density-lookup`: 
-- `silentpush-forward-padns-lookup`: 
-- `silentpush-get-asns-for-domain`: 
-- `silentpush-get-data-exports`: 
-- `silentpush-get-domain-certificates`: 
+- `silentpush-add-feed`: Add the new feed.
+- `silentpush-add-feed-tags`: Add indicators to the feed.
+- `silentpush-add-indicators`: Add indicators to the feed.
+- `silentpush-add-indicator-tags`: Updates tags to the indicators.
+- `silentpush-bulk-enrich`: Enriches IPs or Domains in a bulk.
+- `silentpush-density-lookup`: Queries granular DNS/IP parameters (e.g., NS servers, MX servers, IPaddresses, ASNs) for density information.
+- `silentpush-forward-padns-lookup`: Performs a forward PADNS lookup using various filtering parameters.
+- `silentpush-get-asns-for-domain`: Retrieves Autonomous System Numbers (ASNs) associated with a domain.
+- `silentpush-get-data-exports`: Runs the threat check on the specified export type.
+- `silentpush-get-domain-certificates`: Get certificate data collected from domain scanning.
 - `silentpush-get-enrichment-data`: 
-- `silentpush-get-enrichment-data`: 
-- `silentpush-get-nameserver-reputation`: 
-- `silentpush-get-subnet-reputation`: 
-- `silentpush-ip-diversity-lookup`: 
-
-
-## SilentPush
-
-**Type:** integration  
-**Product:** Silent Push  
-
-The Silent Push Platform uses first-party data and a proprietary scanning engine to enrich global DNS data with risk and reputation scoring, giving security teams the ability to join the dots across the entire IPv4 and IPv6 range, and identify adversary infrastructure before an attack is launched. The content pack integrates with the Silent Push system to gain insights into domain/IP information, reputations, enrichment, and infratag-related details. It also provides functionality to live-scan URLs and take screenshots of them. Additionally, it allows fetching future attack feeds from the Silent Push system. This integration was integrated and tested with version 4.2 of SilentPush
-
-**Commands:**
-
-- `silentpush-density-lookup`: 
-- `silentpush-forward-padns-lookup`: 
-- `silentpush-get-asn-reputation`: 
-- `silentpush-get-asn-takedown-reputation`: 
-- `silentpush-get-asns-for-domain`: 
-- `silentpush-get-domain-certificates`: 
-- `silentpush-get-enrichment-data`: 
-- `silentpush-get-future-attack-indicators`: 
-- `silentpush-get-ipv4-reputation`: 
-- `silentpush-get-job-status`: 
-- `silentpush-get-nameserver-reputation`: 
-- `silentpush-get-subnet-reputation`: 
-- `silentpush-list-domain-information`: 
-- `silentpush-list-domain-infratags`: 
-- `silentpush-list-ip-information`: 
+- `silentpush-get-enrichment-data`: Retrieves comprehensive enrichment information for a given resource (domain, IPv4, or IPv6).
+- `silentpush-get-nameserver-reputation`: Retrieves historical reputation data for a specified nameserver, including reputation scores and optional detailed calculation information.
+- `silentpush-get-subnet-reputation`: Retrieves the reputation history for a specific subnet.
+- `silentpush-ip-diversity-lookup`: Get IP diversity (number of IP addresses pointed to over time) for the query to qtype.
 
 
 ## Silverfort
@@ -16488,10 +16939,10 @@ Silverfort protects organizations from data breaches by delivering strong authen
 
 **Commands:**
 
-- `silverfort-get-user-risk`: 
-- `silverfort-get-resource-risk`: 
-- `silverfort-update-user-risk`: 
-- `silverfort-update-resource-risk`: 
+- `silverfort-get-user-risk`: User risk commands - get the user entity risk.
+- `silverfort-get-resource-risk`: Gets the resource entity risk information.
+- `silverfort-update-user-risk`: Updates the user entity risk.
+- `silverfort-update-resource-risk`: Update the resource entity risk.
 
 
 ## Skyhigh Secure Web Gateway (On Prem)
@@ -16503,14 +16954,14 @@ Manages the block and allow lists within Skyhigh Secure Web Gateway. This integr
 
 **Commands:**
 
-- `swg-get-available-lists`: 
-- `swg-get-list`: 
-- `swg-get-list-entry`: 
-- `swg-insert-entry`: 
-- `swg-delete-entry`: 
-- `swg-modify-list`: 
-- `swg-create-list`: 
-- `swg-delete-list`: 
+- `swg-get-available-lists`: Get all available lists.
+- `swg-get-list`: Retrieve a specific list.
+- `swg-get-list-entry`: Retrieve a specific entry from a list.
+- `swg-insert-entry`: Insert a new entry to a list.
+- `swg-delete-entry`: Insert a new entry to a list.
+- `swg-modify-list`: Overwrites the complete XML configuration of a list.
+- `swg-create-list`: Create a new list.
+- `swg-delete-list`: Delete a list.
 
 
 ## Skyhigh Security
@@ -16522,11 +16973,11 @@ Skyhigh Security is a cloud-based, multi-tenant service that enables Cloud Disco
 
 **Commands:**
 
-- `skyhigh-security-incident-query`: 
-- `skyhigh-security-incident-status-update`: 
-- `skyhigh-security-anomaly-activity-list`: 
-- `skyhigh-security-policy-dictionary-list`: 
-- `skyhigh-security-policy-dictionary-update`: 
+- `skyhigh-security-incident-query`: Retrieves a list of incidents in ascending time modified order.
+- `skyhigh-security-incident-status-update`: Update status of single/multiple incidents.
+- `skyhigh-security-anomaly-activity-list`: Fetches activities for a given anomaly ID.
+- `skyhigh-security-policy-dictionary-list`: List existing policy dictionaries.
+- `skyhigh-security-policy-dictionary-update`: Adds new content to an existing policy dictionary.
 
 
 ## Slack IAM
@@ -16538,14 +16989,14 @@ Note: This integration should be used as part of our Identity Lifecycle Manageme
 
 **Commands:**
 
-- `iam-create-user`: 
-- `iam-update-user`: 
-- `iam-get-user`: 
-- `iam-disable-user`: 
-- `iam-create-group`: 
-- `iam-get-group`: 
-- `iam-delete-group`: 
-- `iam-update-group`: 
+- `iam-create-user`: Creates a user.
+- `iam-update-user`: Updates an existing user with the data passed in the user-profile argument.
+- `iam-get-user`: Retrieves a single user resource.
+- `iam-disable-user`: Disable an active user.
+- `iam-create-group`: Creates an empty group
+- `iam-get-group`: Retrieves the group information including members
+- `iam-delete-group`: Permanently removes a group.
+- `iam-update-group`: Updates an existing group resource. This command allows individual (or groups of) users to be added or removed from the group with a single operation. A max of 
 
 
 ## Slack v3
@@ -16557,21 +17008,21 @@ Send messages and notifications to your Slack team. This integration was integra
 
 **Commands:**
 
-- `mirror-investigation`: 
-- `send-notification`: 
-- `close-channel`: 
-- `slack-send-file`: 
-- `slack-set-channel-topic`: 
-- `slack-create-channel`: 
-- `slack-invite-to-channel`: 
-- `slack-kick-from-channel`: 
-- `slack-rename-channel`: 
-- `slack-get-user-details`: 
-- `slack-edit-message`: 
-- `slack-pin-message`: 
-- `slack-get-integration-context`: 
-- `slack-user-session-reset`: 
-- `slack-list-channels`: 
+- `mirror-investigation`: Mirrors the investigation between Slack and the the platform.
+- `send-notification`: Sends a message to a user, group, or channel.
+- `close-channel`: Archives a Slack channel.
+- `slack-send-file`: Sends a file to a user, channel, or group. If not specified, the file is sent to the mirrored investigation channel (if the channel exists).
+- `slack-set-channel-topic`: Sets the topic for a channel.
+- `slack-create-channel`: Creates a channel in Slack.
+- `slack-invite-to-channel`: Invites users to join a channel.
+- `slack-kick-from-channel`: Removes users from the specified channel.
+- `slack-rename-channel`: Renames a channel in Slack.
+- `slack-get-user-details`: Get details about a specified user.
+- `slack-edit-message`: Edit an existing Slack message.
+- `slack-pin-message`: Pins a selected message to the given channel.
+- `slack-get-integration-context`: Returns the integration context as a file. Use this command for debug purposes only.
+- `slack-user-session-reset`: Reset user session token in Slack.
+- `slack-list-channels`: List all of the channels in the organization workspace. This command required scopes depend on the type of channel-like object you're working with. To use the c
 
 
 ## SMIME Messaging
@@ -16583,9 +17034,9 @@ Use the S/MIME (Secure Multipurpose Internet Mail Extensions) integration to sen
 
 **Commands:**
 
-- `smime-verify-sign`: 
-- `smime-decrypt-email-body`: 
-- `smime-sign-and-encrypt`: 
+- `smime-verify-sign`: Verifies the signature.
+- `smime-decrypt-email-body`: Decrypts the message body.
+- `smime-sign-and-encrypt`: Encrypts and signs an email message with S/MIME protocol by using a public RSA certificate.
 
 
 ## Smokescreen IllusionBLACK
@@ -16597,7 +17048,14 @@ Smokescreen IllusionBLACK is a deception-based threat defense platform designed 
 
 **Commands:**
 
-- `illusionblack-get-ad-decoys`: 
+- `illusionblack-get-ad-decoys`: Gets a list of Active Directory decoys.
+- `illusionblack-get-network-decoys`: Gets a list of Network decoys.
+- `illusionblack-get-ti-decoys`: Gets a list of Threat Intel decoys.
+- `illusionblack-is-host-decoy`: Checks if a host or IP address is a network decoy.
+- `illusionblack-is-user-decoy`: Checks if an Active Directory user is a decoy.
+- `illusionblack-is-subdomain-decoy`: Checks if a subdomain is a Threat Intel decoy.
+- `illusionblack-get-events`: Gets events from IllusionBLACK.
+- `illusionblack-get-event-by-id`: Gets a single event by the event ID.
 
 
 ## SnmpDetection
@@ -16622,8 +17080,8 @@ SOC Framework Pack Manager — internal HTTP layer used by the SOCFWPackManager 
 
 **Commands:**
 
-- `socfw-install-pack`: 
-- `socfw-catalog-url-get`: 
+- `socfw-install-pack`: Downloads a SOC Framework pack ZIP from the supplied URL and installs it on the tenant. After the upload the command reads the installed pack version back from 
+- `socfw-catalog-url-get`: Returns the SOC Framework pack catalog URL configured on this instance. Called by the SOCFWPackManager script so the catalog location is set once on the instanc
 
 
 ## SOCFWPackManager
@@ -16635,8 +17093,8 @@ The SOC Framework bootloader for Cortex XSIAM. Lists the SOC Framework pack cata
 
 **Commands:**
 
-- `socfw-install-pack`: 
-- `socfw-catalog-url-get`: 
+- `socfw-install-pack`: Downloads a SOC Framework pack ZIP from the supplied URL and installs it on the tenant. After the upload the command reads the installed pack version back from 
+- `socfw-catalog-url-get`: Returns the SOC Framework pack catalog URL configured on this instance. Called by the SOCFWPackManager script so the catalog location is set once on the instanc
 
 **Inputs:**
 
@@ -16671,8 +17129,8 @@ Fetches SOCRadar incidents with desired parameters so that relevant actions over
 
 **Commands:**
 
-- `socradar-mark-incident-fp`: 
-- `socradar-mark-incident-resolved`: 
+- `socradar-mark-incident-fp`: Marks incident as false positive in SOCRadar platform.
+- `socradar-mark-incident-resolved`: Marks incident as resolved in SOCRadar platform.
 
 
 ## SOCRadar Incidents Multi-Tenant
@@ -16684,13 +17142,13 @@ Fetch and manage security incidents from multiple companies using SOCRadar's Mul
 
 **Commands:**
 
-- `socradar-change-alarm-status`: 
-- `socradar-mark-false-positive`: 
-- `socradar-mark-resolved`: 
-- `socradar-add-comment`: 
-- `socradar-add-assignee`: 
-- `socradar-add-tag`: 
-- `socradar-test-fetch`: 
+- `socradar-change-alarm-status`: Change the status of one or more alarms.
+- `socradar-mark-false-positive`: Mark an alarm as false positive.
+- `socradar-mark-resolved`: Mark an alarm as resolved.
+- `socradar-add-comment`: Add a comment to an alarm.
+- `socradar-add-assignee`: Add the assignee(s) of an alarm.
+- `socradar-add-tag`: Add or remove a tag from an alarm.
+- `socradar-test-fetch`: Test incident fetching to verify alarms are available and date parsing works correctly.
 
 
 ## SOCRadar Incidents v4
@@ -16715,7 +17173,7 @@ Enrich indicators (IP, Domain, URL, Hash) by obtaining reputation information vi
 
 **Commands:**
 
-- `socradar-bulk-check`: 
+- `socradar-bulk-check`: 🎯 NEW FEATURE - Bulk check reputation for mixed list of indicators with automatic entity type detection.
 
 
 ## SOCRadar Takedown
@@ -16727,10 +17185,10 @@ Submit and monitor takedown requests for phishing domains, impersonating account
 
 **Commands:**
 
-- `socradar-submit-phishing-domain`: 
-- `socradar-submit-social-media-impersonation`: 
-- `socradar-submit-source-code-leak`: 
-- `socradar-submit-rogue-app`: 
+- `socradar-submit-phishing-domain`: Submits a takedown request for a phishing domain or URL
+- `socradar-submit-social-media-impersonation`: Submits a takedown request for an impersonating social media account
+- `socradar-submit-source-code-leak`: Submits a takedown request for leaked source code
+- `socradar-submit-rogue-app`: Submits a takedown request for a rogue mobile app
 
 
 ## SOCRadar ThreatFusion
@@ -16742,9 +17200,12 @@ Enrich indicators by obtaining enhanced information and reputation via ThreatFus
 
 **Commands:**
 
-- `socradar-score-ip`: 
-- `socradar-score-domain`: 
-- `socradar-score-hash`: 
+- `ip`: Scores provided IP entities' reputation in SOCRadar ThreatFusion.
+- `domain`: Scores provided domain entities' reputation in SOCRadar ThreatFusion.
+- `file`: Scores provided hash entities' reputation in SOCRadar ThreatFusion.
+- `socradar-score-ip`: Scores provided IP entity's reputation in SOCRadar ThreatFusion.
+- `socradar-score-domain`: Scores provided domain entity's reputation in SOCRadar ThreatFusion.
+- `socradar-score-hash`: Scores provided hash entity's reputation in SOCRadar ThreatFusion.
 
 
 ## SolarWinds
@@ -16756,9 +17217,9 @@ The SolarWinds integration interacts with the SWIS API to allow users to fetch a
 
 **Commands:**
 
-- `swis-event-list`: 
-- `swis-alert-list`: 
-- `swis-query`: 
+- `swis-event-list`: Retrieves a list of events on the filter values provided in the command arguments.
+- `swis-alert-list`: Retrieves a list of alerts based on the filter values provided in the command arguments.
+- `swis-query`: Executes a query request. Click here to navigate to the guidelines to generate a query. SolarWinds Information Service schema can be found here.
 
 
 ## Sophos Central
@@ -16770,21 +17231,21 @@ The unified console for managing Sophos products
 
 **Commands:**
 
-- `sophos-central-alert-list`: 
-- `sophos-central-alert-get`: 
-- `sophos-central-alert-action`: 
-- `sophos-central-alert-search`: 
-- `sophos-central-endpoint-list`: 
-- `sophos-central-endpoint-scan`: 
-- `sophos-central-endpoint-tamper-get`: 
-- `sophos-central-endpoint-tamper-update`: 
-- `sophos-central-allowed-item-list`: 
-- `sophos-central-allowed-item-get`: 
-- `sophos-central-allowed-item-add`: 
-- `sophos-central-allowed-item-update`: 
-- `sophos-central-allowed-item-delete`: 
-- `sophos-central-blocked-item-list`: 
-- `sophos-central-blocked-item-get`: 
+- `sophos-central-alert-list`: List alerts.
+- `sophos-central-alert-get`: Get a single alert by ID.
+- `sophos-central-alert-action`: Take an action against alerts.
+- `sophos-central-alert-search`: Get alerts matching request.
+- `sophos-central-endpoint-list`: List all endpoints for a tenant.
+- `sophos-central-endpoint-scan`: Scan endpoints of a tenant.
+- `sophos-central-endpoint-tamper-get`: Get tamper protection information for one or more endpoints. Potentially harmful because of the password.
+- `sophos-central-endpoint-tamper-update`: Update tamper protection information for one or more endpoints. Potentially Harmful because of the password.
+- `sophos-central-allowed-item-list`: List all allowed items.
+- `sophos-central-allowed-item-get`: Get a single allowed item by ID.
+- `sophos-central-allowed-item-add`: Add a new allowed item.
+- `sophos-central-allowed-item-update`: Update an existing allowed item.
+- `sophos-central-allowed-item-delete`: Delete an existing allowed item.
+- `sophos-central-blocked-item-list`: Get all blocked items.
+- `sophos-central-blocked-item-get`: Get a single blocked item by ID.
 
 
 ## Spamcop
@@ -16793,6 +17254,10 @@ The unified console for managing Sophos products
 **Product:** Spamcop  
 
 SpamCop is an email spam reporting service. The integration allows checking the reputation of an IP address. This integration was integrated and tested with Spamcop
+
+**Commands:**
+
+- `ip`: Get IP details from Spamcop service
 
 
 ## SpecterOps BloodHound Enterprise
@@ -16804,9 +17269,9 @@ This integration enables automated retrieval of attack path findings from BloodH
 
 **Commands:**
 
-- `bloodhound-object-id-get`: 
-- `bloodhound-asset-info-get`: 
-- `bloodhound-path-exist`: 
+- `bloodhound-object-id-get`: Fetches the object ID using the object name.
+- `bloodhound-asset-info-get`: Fetches asset information using the object ID.
+- `bloodhound-path-exist`: Checks if a path exists between the two nodes.
 
 
 ## SpecterOpsBloodHoundEnterprise
@@ -16818,9 +17283,9 @@ Automated playbook that enriches BloodHound Enterprise attack path incidents wit
 
 **Commands:**
 
-- `bloodhound-object-id-get`: 
-- `bloodhound-asset-info-get`: 
-- `bloodhound-path-exist`: 
+- `bloodhound-object-id-get`: Fetches the object ID using the object name.
+- `bloodhound-asset-info-get`: Fetches asset information using the object ID.
+- `bloodhound-path-exist`: Checks if a path exists between the two nodes.
 
 
 ## SSDeepReputation
@@ -16868,9 +17333,9 @@ Analyze a host or a URL
 
 **Commands:**
 
-- `ssl-labs-register-email`: 
-- `ssl-labs-info`: 
-- `ssl-labs-analyze`: 
+- `ssl-labs-register-email`: Register for Scan API initiation and result fetching
+- `ssl-labs-info`: Check the availability of the SSL Labs servers, retrieve the engine and criteria version, and initialize the maximum number of concurrent assessments.
+- `ssl-labs-analyze`: Invoke assessments.
 
 
 ## SSL_Certificate_Verification
@@ -16937,8 +17402,8 @@ Use the Stairwell Inception integration to enrich data in platform using Stairwe
 
 **Commands:**
 
-- `inception-file-enrichment`: 
-- `inception-variant-discovery`: 
+- `inception-file-enrichment`: Enrich files using file hash (MD5, SHA1, SHA256) with Stairwell's knowledge.
+- `inception-variant-discovery`: Hunt for variants using a SHA256 across all files you have access to, including your environments and Stairwell's malware feeds.
 
 
 ## Stamus
@@ -16950,9 +17415,9 @@ Use the Stairwell Inception integration to enrich data in platform using Stairwe
 
 **Commands:**
 
-- `stamus-check-ioc`: 
-- `stamus-get-host-insight`: 
-- `stamus-get-doc-events`: 
+- `stamus-check-ioc`: [Get events with IOC key/value filter]
+- `stamus-get-host-insight`: [Get Host Insights information]
+- `stamus-get-doc-events`: [Get events for a Declaration of Compromise using the Stamus ID]
 
 
 ## Stamus Networks - Get Extra Data
@@ -16987,10 +17452,10 @@ Fetches and mirrors in Cases from Stellar Cyber to platform. In addition, provid
 
 **Commands:**
 
-- `stellar-get-alert`: 
-- `stellar-update-case`: 
-- `get-remote-data`: 
-- `get-modified-remote-data`: 
+- `stellar-get-alert`: Retrieve an alert from Stellar Cyber.
+- `stellar-update-case`: Update the severity, status, assignee, or tags of a Case in Stellar Cyber.
+- `get-remote-data`: Gets remote data from a remote incident. This method is only used for debugging purposes and will not update the current incident.
+- `get-modified-remote-data`: Available from the platform.1.0. This command queries for incidents that were modified since the last update. This method is only used for debugging purposes.
 
 
 ## StixCreator
@@ -17186,9 +17651,9 @@ The script gets the pack name as input and suggests an available branch name, fo
 **Product:** Superna Zero Trust  
 **Commands:**
 
-- `superna-zt-snapshot-critical-paths`: 
-- `superna-zt-lockout-user`: 
-- `superna-zt-unlock-user`: 
+- `superna-zt-snapshot-critical-paths`: Create a snapshot of Superna critical paths for ransomware rapid recovery.
+- `superna-zt-lockout-user`: Lock out a user from NAS storage access.
+- `superna-zt-unlock-user`: Unlock a user from NAS storage access.
 
 
 ## Superna Zero Trust Request User Storage Lockout
@@ -17240,20 +17705,20 @@ Symantec Data Loss Prevention enables you to discover, monitor and protect your 
 
 **Commands:**
 
-- `symantec-dlp-list-incidents`: 
-- `symantec-dlp-get-incident-details`: 
-- `symantec-dlp-update-incident`: 
-- `symantec-dlp-list-incident-status`: 
-- `symantec-dlp-get-incident-history`: 
-- `symantec-dlp-list-remediation-status`: 
-- `symantec-dlp-get-incident-original-message`: 
-- `symantec-dlp-get-report-filters`: 
-- `symantec-dlp-list-users`: 
-- `symantec-dlp-get-sender-recipient-pattern`: 
-- `symantec-dlp-list-sender-recipient-patterns`: 
-- `symantec-dlp-update-sender-pattern`: 
-- `symantec-dlp-update-recipient-pattern`: 
-- `symantec-dlp-get-message-body`: 
+- `symantec-dlp-list-incidents`: Returns a list of incidents.
+- `symantec-dlp-get-incident-details`: Returns details of the specified incident.
+- `symantec-dlp-update-incident`: Updates the details of a specific incident.
+- `symantec-dlp-list-incident-status`: Returns a list of the custom status values defined in the Symantec DLP deployment.
+- `symantec-dlp-get-incident-history`: Returns the history of the specified incident.
+- `symantec-dlp-list-remediation-status`: Returns a list of the remediation status values defined in the Symantec DLP deployment.
+- `symantec-dlp-get-incident-original-message`: Fetches the original message from an incident. Requires SDLP 15.8.
+- `symantec-dlp-get-report-filters`: Retrieves the filter criteria for a saved search in the Enforce console by report ID. Requires SDLP 16.0.
+- `symantec-dlp-list-users`: Returns details for all SDLP users from the Enforce console. Requires SDLP 16.0.
+- `symantec-dlp-get-sender-recipient-pattern`: Returns a sender/recipient pattern. Requires SDLP 16.0.
+- `symantec-dlp-list-sender-recipient-patterns`: Returns a list of all sender/recipient patterns from the Enforce console. Requires SDLP 16.0.
+- `symantec-dlp-update-sender-pattern`: Updates a sender pattern in the Enforce console. Requires SDLP 16.0.
+- `symantec-dlp-update-recipient-pattern`: Updates a recipient pattern in the Enforce console. Requires SDLP 16.0.
+- `symantec-dlp-get-message-body`: Returns the message body from the Enforce console by incident ID. Requires SDLP 16.0.
 
 
 ## Symantec Endpoint Security (ICDM)
@@ -17265,9 +17730,13 @@ Query the Symantec Endpoint Security Cloud Portal (ICDM). This integration was i
 
 **Commands:**
 
-- `symantec-protection-file`: 
-- `symantec-protection-network`: 
-- `symantec-protection-cve`: 
+- `file`: Get file reputation for given SHA256.
+- `ip`: Get ip reputation.
+- `url`: Get reputation for given url.
+- `domain`: Get reputation for given domain.
+- `symantec-protection-file`: Get information whether a given file has been blocked by any Symantec technologies.
+- `symantec-protection-network`: Get information whether given domain or ip has been blocked by any Symantec technologies.
+- `symantec-protection-cve`: Get returns information whether a given CVE has been blocked by any Symantec technologies.
 
 
 ## Synapse
@@ -17279,13 +17748,17 @@ Synapse intelligence analysis platform. This integration was integrated and test
 
 **Commands:**
 
-- `synapse-storm-query`: 
-- `synapse-list-users`: 
-- `synapse-list-roles`: 
-- `synapse-create-user`: 
-- `synapse-create-role`: 
-- `synapse-grant-user-role`: 
-- `synapse-query-model`: 
+- `ip`: Returns IP information and reputation.
+- `url`: Returns URL information and reputation.
+- `domain`: Returns Domain information and reputation.
+- `file`: Returns File information and reputation.
+- `synapse-storm-query`: Execute a Synapse Storm query.
+- `synapse-list-users`: Lists current users in Synapse Cortex.
+- `synapse-list-roles`: Lists current roles in Synapse Cortex.
+- `synapse-create-user`: Create a new Synapse user.
+- `synapse-create-role`: Create a new Synapse role.
+- `synapse-grant-user-role`: Grants a user access to role based perrmissions.
+- `synapse-query-model`: Query the Synapse data model and return details for given type or form (i.e. "inet:ipv4" for an IPv4 IP address).
 
 
 ## Synchronize Incident Closure - Cyberhaven
@@ -17305,21 +17778,21 @@ SysAid is a robust IT management system designed to meet all of the needs of an 
 
 **Commands:**
 
-- `sysaid-table-list`: 
-- `sysaid-asset-list`: 
-- `sysaid-asset-search`: 
-- `sysaid-filter-list`: 
-- `sysaid-user-list`: 
-- `sysaid-user-search`: 
-- `sysaid-service-record-list`: 
-- `sysaid-service-record-search`: 
-- `sysaid-service-record-update`: 
-- `sysaid-service-record-close`: 
-- `sysaid-service-record-template-get`: 
-- `sysaid-service-record-create`: 
-- `sysaid-service-record-delete`: 
-- `sysaid-service-record-attach-file`: 
-- `sysaid-service-record-get-file`: 
+- `sysaid-table-list`: Retrieve all lists (tables) related to a specific entity, or a specific list from an entity.
+- `sysaid-asset-list`: List all assets or get a specific asset by ID. Cortex recommends filtering the results by the desired fields.
+- `sysaid-asset-search`: Get information about a specific asset. Cortex recommends filtering the results by the desired fields.
+- `sysaid-filter-list`: List all filters. Cortex recommends filtering the results by the desired fields.
+- `sysaid-user-list`: Get list of users in SysAid. Cortex recommends filtering the results by the desired fields.
+- `sysaid-user-search`: Get information about a specific asset. Cortex recommends filtering the results by the desired fields.
+- `sysaid-service-record-list`: List all service requests. Cortex recommends filtering the results by the desired fields.
+- `sysaid-service-record-search`: Search by a query through all service records. Cortex recommends filtering the results by the desired fields.
+- `sysaid-service-record-update`: The valid statuses can be retrieved using the "sysaid-table-list" command.
+- `sysaid-service-record-close`: Close a service record. Sets the service record status to the default Close status, as defined in the Help Desk settings.
+- `sysaid-service-record-template-get`: Gets the template of a service record. Cortex recommends filtering the results by the desired fields.
+- `sysaid-service-record-create`: Create a new service record and return the newly created service record. The valid statuses can be retrieved using the "sysaid-table-list" command. Cortex recom
+- `sysaid-service-record-delete`: Delete one or more service records.
+- `sysaid-service-record-attach-file`: Add an attachment to a service record.
+- `sysaid-service-record-get-file`: Download an attachment to a service record.
 
 
 ## Syslog Sender
@@ -17328,7 +17801,9 @@ SysAid is a robust IT management system designed to meet all of the needs of an 
 **Product:** Syslog  
 **Commands:**
 
-- `mirror-investigation`: 
+- `mirror-investigation`: Mirrors the investigation's War Room to syslog.
+- `send-notification`: Sends a message to syslog.
+- `syslog-send`: Send a message to Syslog
 
 
 ## TaegisXDR v2
@@ -17337,21 +17812,21 @@ SysAid is a robust IT management system designed to meet all of the needs of an 
 **Product:** Secureworks  
 **Commands:**
 
-- `taegis-add-evidence-to-investigation`: 
-- `taegis-archive-investigation`: 
-- `taegis-create-comment`: 
-- `taegis-create-investigation`: 
-- `taegis-create-sharelink`: 
-- `taegis-execute-playbook`: 
-- `taegis-fetch-alerts`: 
-- `taegis-fetch-assets`: 
-- `taegis-fetch-comment`: 
-- `taegis-fetch-comments`: 
-- `taegis-fetch-endpoint`: 
-- `taegis-fetch-investigation`: 
-- `taegis-fetch-investigation-alerts`: 
-- `taegis-fetch-playbook-execution`: 
-- `taegis-fetch-users`: 
+- `!taegis-add-evidence-to-investigation`: 
+- `!taegis-archive-investigation`: 
+- `!taegis-create-comment`: 
+- `!taegis-create-investigation`: 
+- `!taegis-create-sharelink`: 
+- `!taegis-execute-playbook`: 
+- `!taegis-fetch-alerts`: 
+- `!taegis-fetch-assets`: 
+- `!taegis-fetch-comment`: 
+- `!taegis-create-comments`: 
+- `!taegis-fetch-endpoint`: 
+- `!taegis-fetch-investigation`: 
+- `!taegis-fetch-investigation-alerts`: 
+- `!taegis-fetch-playbook-execution`: 
+- `!taegis-fetch-users`: 
 
 
 ## Tag massive and internal IOCs to avoid EDL listing
@@ -17421,7 +17896,7 @@ Tavily is a web service that provides real-time web search and retrieval capabil
 
 **Commands:**
 
-- `tavily-extract`: 
+- `tavily-extract`: Extract web page content from a specified URL.
 
 
 ## TAXII2 Server
@@ -17430,8 +17905,8 @@ Tavily is a web service that provides real-time web search and retrieval capabil
 **Product:** TAXII Server  
 **Commands:**
 
-- `taxii-server-list-collections`: 
-- `taxii-server-info`: 
+- `taxii-server-list-collections`: Returns all the collections.
+- `taxii-server-info`: Returns the TAXII server info, default URL, title, etc.
 
 
 ## TAXII2ApiModule
@@ -17450,7 +17925,8 @@ Team Cymru provides various service options dedicated to mapping IP numbers to B
 
 **Commands:**
 
-- `cymru-bulk-whois`: 
+- `ip`: Checks the reputation of an IP address.
+- `cymru-bulk-whois`: Checks the reputation of a CSV list of IPv4 addresses within a file. Note: Results for queries exceeding 10,000 IPs may take more than a minute given a moderate
 
 
 ## Team Cymru Scout
@@ -17459,9 +17935,10 @@ Team Cymru provides various service options dedicated to mapping IP numbers to B
 **Product:** Team Cymru  
 **Commands:**
 
-- `scout-api-usage`: 
-- `scout-indicator-search`: 
-- `scout-ip-list`: 
+- `scout-api-usage`: Returns all the information on used queries and remaining queries with the query limit.
+- `ip`: Return all the detailed information available for the given IP address.
+- `scout-indicator-search`: Return the summary information available for the given domain or IP address using Scout query language.
+- `scout-ip-list`: Returns the summary information available for the given list of IP addresses.
 
 
 ## Tenzai
@@ -17473,9 +17950,9 @@ Validate Cortex ASM-discovered exposures with Tenzai's agentic penetration testi
 
 **Commands:**
 
-- `tenzai-create-scan`: 
-- `tenzai-get-scan`: 
-- `tenzai-get-scan-result`: 
+- `tenzai-create-scan`: Create a Tenzai agentic scan for a Cortex ASM-discovered exposure. Finds or creates a Tenzai application for the target domain, then triggers an EXTERNAL_LEAD s
+- `tenzai-get-scan`: Poll the status of a Tenzai scan until it reaches a terminal state (Complete or Error).
+- `tenzai-get-scan-result`: Fetch the verdict and evidence of a completed Tenzai scan.
 
 
 ## Tenzai Agentic Issue Validation
@@ -17517,7 +17994,7 @@ Tessian is an email security platform that allows organizations to protect their
 
 **Commands:**
 
-- `tessian-list-events`: 
+- `tessian-list-events`: This command allows you to pull Tessian event data into your platform instance.
 
 
 ## TextFromHTML
@@ -17546,21 +18023,21 @@ Manage secrets and protect sensitive data through Thales CipherTrust security pl
 
 **Commands:**
 
-- `ciphertrust-csr-generate`: 
-- `ciphertrust-certificate-issue`: 
-- `ciphertrust-certificate-list`: 
-- `ciphertrust-certificate-resume`: 
-- `ciphertrust-certificate-revoke`: 
-- `ciphertrust-external-ca-delete`: 
-- `ciphertrust-external-ca-list`: 
-- `ciphertrust-external-ca-update`: 
-- `ciphertrust-external-ca-upload`: 
-- `ciphertrust-group-create`: 
-- `ciphertrust-group-delete`: 
-- `ciphertrust-group-list`: 
-- `ciphertrust-group-update`: 
-- `ciphertrust-local-ca-create`: 
-- `ciphertrust-local-ca-delete`: 
+- `ciphertrust-csr-generate`: Creates a Certificate Signing Request (CSR) and its corresponding private key. This API does not store any state on the server as everything is returned in the 
+- `ciphertrust-certificate-issue`: Issues a certificate by signing the provided CSR with the CA. This is typically used to issue server, client or intermediate CA certificates. Either duration or
+- `ciphertrust-certificate-list`: Returns a list of certificates issued by the specified CA. The results can be filtered, using the command arguments.
+- `ciphertrust-certificate-resume`: Certificate can be resumed only if it is revoked with reason certificateHold.
+- `ciphertrust-certificate-revoke`: Revoke certificate with a given specific reason.
+- `ciphertrust-external-ca-delete`: Deletes an external CA certificate.
+- `ciphertrust-external-ca-list`: Returns a list of external CA certificates. The results can be filtered, using the command arguments.
+- `ciphertrust-external-ca-update`: Update an external CA.
+- `ciphertrust-external-ca-upload`: Uploads an external CA certificate. These certificates can later be trusted by services inside the system for verification of client certificates. The uploaded 
+- `ciphertrust-group-create`: Create a new group. The group name is required.
+- `ciphertrust-group-delete`: Deletes a group given the group name.
+- `ciphertrust-group-list`: Returns a list of group Command arguments can be used to filter the results. Groups can be filtered for user or client membership. Connection filter applies onl
+- `ciphertrust-group-update`: Update the properties of a group given the group name.
+- `ciphertrust-local-ca-create`: Creates a pending local CA. This operation returns a CSR that either can be self-signed by calling the ciphertrust-local-ca-self-sign command or signed by anoth
+- `ciphertrust-local-ca-delete`: Deletes a local CA certificate.
 
 
 ## Thales SafeNet Trusted Access
@@ -17572,11 +18049,11 @@ This integration enables you to process alerts from SafeNet Trusted Access (STA)
 
 **Commands:**
 
-- `sta-get-user-list`: 
-- `sta-get-user-info`: 
-- `sta-create-user`: 
-- `sta-update-user-info`: 
-- `sta-delete-user`: 
+- `sta-get-user-list`: Get list of users in the tenant.
+- `sta-get-user-info`: Get the profile information for a specific user.
+- `sta-create-user`: Create a new user in the tenant.
+- `sta-update-user-info`: Update the profile for a specific user.
+- `sta-delete-user`: Delete a user from the tenant.
 
 
 ## TheHive Project
@@ -17588,20 +18065,20 @@ Integration with The Hive Project Security Incident Response Platform. This inte
 
 **Commands:**
 
-- `thehive-list-cases`: 
-- `thehive-get-case`: 
-- `thehive-update-case`: 
-- `thehive-create-case`: 
-- `thehive-create-task`: 
-- `thehive-remove-case`: 
-- `thehive-merge-cases`: 
-- `thehive-get-case-tasks`: 
-- `thehive-get-task`: 
-- `thehive-update-task`: 
-- `thehive-update-observable`: 
-- `get-mapping-fields`: 
-- `thehive-get-version`: 
-- `get-modified-remote-data`: 
+- `thehive-list-cases`: List cases.
+- `thehive-get-case`: Get a case
+- `thehive-update-case`: Update a case
+- `thehive-create-case`: Create a new case
+- `thehive-create-task`: Create a new task
+- `thehive-remove-case`: Removes a case
+- `thehive-merge-cases`: Merges 2 cases
+- `thehive-get-case-tasks`: Get the tasks of a case
+- `thehive-get-task`: Get a specific task.
+- `thehive-update-task`: Updates a task.
+- `thehive-update-observable`: Update an observable.
+- `get-mapping-fields`: Returns the list of fields.
+- `thehive-get-version`: Displays the version of TheHive Project.
+- `get-modified-remote-data`: Gets the list of incidents that were modified since the last update time. Note that this method is here for debugging purposes. The get-modified-remote-data com
 
 
 ## ThousandEyes
@@ -17613,10 +18090,10 @@ This Integration is used to fetch-incidents via “Active alerts”, get alert d
 
 **Commands:**
 
-- `thousandeyes-get-alerts`: 
-- `thousandeyes-get-alert`: 
-- `thousandeyes-get-agents`: 
-- `thousandeyes-get-agent`: 
+- `thousandeyes-get-alerts`: Fetches all the alerts.
+- `thousandeyes-get-alert`: Fetches a given alert.
+- `thousandeyes-get-agents`: Fetches all agents.
+- `thousandeyes-get-agent`: Fetches a given agent.
 
 
 ## ThreeDigitAlphaCountryCodeToCountryName
@@ -17705,21 +18182,21 @@ TOPdesk’s Enterprise Service Management software (ESM) lets your service teams
 
 **Commands:**
 
-- `topdesk-subcategories-list`: 
-- `topdesk-categories-list`: 
-- `topdesk-entry-types-list`: 
-- `topdesk-call-types-list`: 
-- `topdesk-deescalation-reasons-list`: 
-- `topdesk-escalation-reasons-list`: 
-- `topdesk-archiving-reasons-list`: 
-- `topdesk-persons-list`: 
-- `topdesk-operators-list`: 
-- `topdesk-branches-list`: 
-- `topdesk-incidents-list`: 
-- `topdesk-incident-actions`: 
-- `topdesk-incident-create`: 
-- `topdesk-incident-update`: 
-- `topdesk-incident-escalate`: 
+- `topdesk-subcategories-list`: Get list of subcategories.
+- `topdesk-categories-list`: Get list of categories.
+- `topdesk-entry-types-list`: Get list of entry types.
+- `topdesk-call-types-list`: Get list of entry types.
+- `topdesk-deescalation-reasons-list`: Get list of deescalation reasons.
+- `topdesk-escalation-reasons-list`: Get list of escalation reasons.
+- `topdesk-archiving-reasons-list`: Get list of archiving reasons.
+- `topdesk-persons-list`: Get list of persons.
+- `topdesk-operators-list`: Get list of operators.
+- `topdesk-branches-list`: Get list of branches.
+- `topdesk-incidents-list`: Get list of incidents.
+- `topdesk-incident-actions-list`: List all actions for specific incident
+- `topdesk-incident-create`: Create an incident in TOPdesk.
+- `topdesk-incident-update`: Update an incident in TOPdesk.
+- `topdesk-incident-escalate`: Escalate an incident in TOPdesk.
 
 
 ## TopMaliciousRatioIndicators
@@ -17754,6 +18231,11 @@ Converts an array in to a table display. Usually, from the context
 
 **Type:** integration  
 **Product:** Traceable  
+**Commands:**
+
+- `list_incident_cache`: List the entries present in the Traceable instance cache.
+- `purge_incident_cache`: Delete all entries in the incident cache.
+
 
 ## Trello
 
@@ -17764,11 +18246,11 @@ Interact with the Trello task manager This integration was integrated and tested
 
 **Commands:**
 
-- `trello-list-boards`: 
-- `trello-list-lists`: 
-- `trello-create-card`: 
-- `trello-delete-card`: 
-- `trello-add-comment`: 
+- `trello-list-boards`: List the boards available to the provided API Key
+- `trello-list-lists`: List all the lists associated with the trello board.
+- `trello-create-card`: Create a new card.
+- `trello-delete-card`: Delete a card
+- `trello-add-comment`: Add a comment to a Trello card
 
 
 ## TrendAI Vision One™
@@ -17780,21 +18262,21 @@ Support and maintenance for this integration are provided by the author. Please 
 
 **Commands:**
 
-- `trendmicro-visionone-add-to-block-list`: 
-- `trendmicro-visionone-remove-from-block-list`: 
-- `trendmicro-visionone-quarantine-email-message`: 
-- `trendmicro-visionone-delete-email-message`: 
-- `trendmicro-visionone-isolate-endpoint`: 
-- `trendmicro-visionone-restore-endpoint-connection`: 
-- `trendmicro-visionone-add-objects-to-exception-list`: 
-- `trendmicro-visionone-delete-objects-from-exception-list`: 
-- `trendmicro-visionone-add-objects-to-suspicious-list`: 
-- `trendmicro-visionone-delete-objects-from-suspicious-list`: 
-- `trendmicro-visionone-get-endpoint-info`: 
-- `trendmicro-visionone-terminate-process`: 
-- `trendmicro-visionone-get-file-analysis-status`: 
-- `trendmicro-visionone-get-file-analysis-report`: 
-- `trendmicro-visionone-collect-forensic-file`: 
+- `trendmicro-visionone-add-to-block-list`: Adds a file SHA-1, IP address, domain, or URL object to the User-Defined Suspicious Objects List, which blocks the objects on subsequent detections
+- `trendmicro-visionone-remove-from-block-list`: Removes a file SHA-1, IP address, domain, or URL from the User-Defined Suspicious Objects List
+- `trendmicro-visionone-quarantine-email-message`: Moves a message from a mailbox to the quarantine folder
+- `trendmicro-visionone-delete-email-message`: Deletes a message from a mailbox
+- `trendmicro-visionone-isolate-endpoint`: Disconnects an endpoint from the network (but allows communication with the managing TrendAI™ product)
+- `trendmicro-visionone-restore-endpoint-connection`: Restores network connectivity to an endpoint that applied the "isolate endpoint" action
+- `trendmicro-visionone-add-objects-to-exception-list`: Adds domains, file SHA-1 values, IP addresses, or URLs to the Exception List and prevents these objects from being added to the Suspicious Object List
+- `trendmicro-visionone-delete-objects-from-exception-list`: Deletes domains, file SHA-1 values, IP addresses, or URLs from the Exception List.
+- `trendmicro-visionone-add-objects-to-suspicious-list`: Adds domains, file SHA-1 values, IP addresses, or URLs to the Suspicious Object List.
+- `trendmicro-visionone-delete-objects-from-suspicious-list`: Deletes domains, file SHA-1 values, IP addresses, or URLs from the Suspicious Object List
+- `trendmicro-visionone-get-endpoint-info`: Retrieves information about a specific endpoint
+- `trendmicro-visionone-terminate-process`: Terminates a process that is running on an endpoint
+- `trendmicro-visionone-get-file-analysis-status`: Retrieves the status of a sandbox analysis submission
+- `trendmicro-visionone-get-file-analysis-report`: Retrieves the analysis report, investigation package, or Suspicious Object List of a submitted file
+- `trendmicro-visionone-collect-forensic-file`: Compresses a file on an endpoint in a password-protected archive and then sends the archive to the XDR service platform
 
 
 ## TrendAI Vision One™ v3
@@ -17806,21 +18288,21 @@ TrendAI Vision One™ is a purpose-built threat defense platform that provides a
 
 **Commands:**
 
-- `trendmicro-visionone-enable-user-account`: 
-- `trendmicro-visionone-disable-user-account`: 
-- `trendmicro-visionone-force-signout`: 
-- `trendmicro-visionone-force-password-reset`: 
-- `trendmicro-visionone-add-to-block-list`: 
-- `trendmicro-visionone-remove-from-block-list`: 
-- `trendmicro-visionone-quarantine-email-message`: 
-- `trendmicro-visionone-delete-email-message`: 
-- `trendmicro-visionone-restore-email-message`: 
-- `trendmicro-visionone-isolate-endpoint`: 
-- `trendmicro-visionone-restore-endpoint-connection`: 
-- `trendmicro-visionone-add-objects-to-exception-list`: 
-- `trendmicro-visionone-delete-objects-from-exception-list`: 
-- `trendmicro-visionone-add-objects-to-suspicious-list`: 
-- `trendmicro-visionone-delete-objects-from-suspicious-list`: 
+- `trendmicro-visionone-enable-user-account`: Allows the user to sign in to new application and browser sessions. Supported IAM systems -> Azure AD and Active Directory (on-premises).
+- `trendmicro-visionone-disable-user-account`: Signs the user out of all active application and browser sessions, and prevents the user from signing in any new session. Supported IAM systems -> Azure AD and 
+- `trendmicro-visionone-force-signout`: Signs the user out of all active application and browser sessions. Supported IAM systems -> Azure AD.
+- `trendmicro-visionone-force-password-reset`: Signs the user out of all active application and browser sessions, and forces the user to create a new password during the next sign-in attempt. Supported IAM s
+- `trendmicro-visionone-add-to-block-list`: Adds a domain, ip, file_sha1, url, sender_mail_address to the User-Defined Suspicious Objects List, which blocks the objects on subsequent detections.
+- `trendmicro-visionone-remove-from-block-list`: Removes a domain, ip, file_sha1, url, sender_mail_address from the User-Defined Suspicious Objects List.
+- `trendmicro-visionone-quarantine-email-message`: Moves a message from a mailbox to the quarantine folder.
+- `trendmicro-visionone-delete-email-message`: Deletes a message from a mailbox.
+- `trendmicro-visionone-restore-email-message`: Restores a quarantined message. Deleted messages cannot be restored.
+- `trendmicro-visionone-isolate-endpoint`: Disconnects an endpoint from the network (but allows communication with the managing TrendAI™ product).
+- `trendmicro-visionone-restore-endpoint-connection`: Restores network connectivity to an endpoint that applied the "isolate endpoint" action.
+- `trendmicro-visionone-add-objects-to-exception-list`: Adds domain, ip, url, file_sha1, file_sha256, sender_mail_address to the Exception List and prevents these objects from being added to the Suspicious Object Lis
+- `trendmicro-visionone-delete-objects-from-exception-list`: Deletes domain, ip, url, file_sha1, file_sha256, sender_mail_address from the Exception List.
+- `trendmicro-visionone-add-objects-to-suspicious-list`: Adds domain, ip, url, file_sha1, file_sha256, sender_mail_address to the Suspicious Object List.
+- `trendmicro-visionone-delete-objects-from-suspicious-list`: Deletes domain, ip, url, file_sha1, file_sha256, sender_mail_address from the Suspicious Object List.
 
 
 ## TrendAI™ Apex One
@@ -17832,18 +18314,18 @@ TrendAI™ Apex One central automation to manage agents and User-Defined Suspici
 
 **Commands:**
 
-- `trendmicro-apex-udso-list`: 
-- `trendmicro-apex-udso-add`: 
-- `trendmicro-apex-udso-delete`: 
-- `trendmicro-apex-isolate`: 
-- `trendmicro-apex-restore`: 
-- `trendmicro-apex-list-logs`: 
-- `trendmicro-apex-udso-file-add`: 
-- `trendmicro-apex-managed-servers-list`: 
-- `trendmicro-apex-security-agents-list`: 
-- `trendmicro-apex-endpoint-sensors-list`: 
-- `trendmicro-apex-historical-investigation-create`: 
-- `trendmicro-apex-investigation-result-list`: 
+- `trendmicro-apex-udso-list`: Retrieve a list of User-Defined Suspicious Objects from the Apex One Central server.
+- `trendmicro-apex-udso-add`: Add suspicious file SHA-1, IP address, domain, or URL objects to the User-Defined Suspicious Object list.
+- `trendmicro-apex-udso-delete`: Delete suspicious file SHA-1, IP address, domain, or URL objects from the User-Defined Suspicious Object list.
+- `trendmicro-apex-isolate`: Isolate an agent from the network
+- `trendmicro-apex-restore`: Restore an isolated agent connection to the network.
+- `trendmicro-apex-list-logs`: Retrieves a maximum of 1000 logs of detection types from the server. The Pattern Update Status and Engine Update Status log types returns all logs (no maximum) 
+- `trendmicro-apex-udso-file-add`: Adds the uploaded file information to the User-Defined Suspicious Objects list. If the file already exists, it will be updated with the new arguments.
+- `trendmicro-apex-managed-servers-list`: Retrieves a list of managed product servers reporting to Apex One Central.
+- `trendmicro-apex-security-agents-list`: Retrieves a list of Security Agents.
+- `trendmicro-apex-endpoint-sensors-list`: Retrieves a list of Security Agents with the Endpoint Sensor feature enabled.
+- `trendmicro-apex-historical-investigation-create`: Creates a new historical investigation on all Security Agents with Endpoint Sensor enabled using the specified criteria, search operator, and match condition.
+- `trendmicro-apex-investigation-result-list`: Retrieves a list of all investigation results.
 
 
 ## TrendAI™ Deep Security™
@@ -17855,21 +18337,21 @@ TrendAI™ Deep Security™ This integration was integrated and tested with vers
 
 **Commands:**
 
-- `trendmicro-create-computer`: 
-- `trendmicro-search-computers`: 
-- `trendmicro-get-computer`: 
-- `trendmicro-list-computers`: 
-- `trendmicro-modify-computer`: 
-- `trendmicro-delete-computer`: 
-- `trendmicro-get-computer-setting`: 
-- `trendmicro-modify-computer-setting`: 
-- `trendmicro-reset-computer-setting`: 
-- `trendmicro-list-computer-groups`: 
-- `trendmicro-create-computer-group`: 
-- `trendmicro-search-computer-groups`: 
-- `trendmicro-get-computer-group`: 
-- `trendmicro-modify-computer-group`: 
-- `trendmicro-delete-computer-group`: 
+- `trendmicro-create-computer`: Create a new computer
+- `trendmicro-search-computers`: Search for specific computers by some field name with a certain type. Every field has a specific type. It can be a simple type like a string, a numeric or a boo
+- `trendmicro-get-computer`: Get information about a certain computer
+- `trendmicro-list-computers`: Get information of all existing computers
+- `trendmicro-modify-computer`: Modify properties of a certain computer
+- `trendmicro-delete-computer`: Delete a certain computer
+- `trendmicro-get-computer-setting`: Get information about a setting of a certain computer
+- `trendmicro-modify-computer-setting`: Modify a setting of a certain computer
+- `trendmicro-reset-computer-setting`: Reset a setting of certain computer to its default value.
+- `trendmicro-list-computer-groups`: Get information about all existing computer groups
+- `trendmicro-create-computer-group`: Create a new computer group
+- `trendmicro-search-computer-groups`: Search for specific computer groups by some field name with a certain type. Every field has a specific type. It can be a simple type like a string, a numeric or
+- `trendmicro-get-computer-group`: Get information of a certain computer group
+- `trendmicro-modify-computer-group`: Modify the properties of a certain computer group
+- `trendmicro-delete-computer-group`: Delete a certain computer group
 
 
 ## Tripwire
@@ -17881,10 +18363,10 @@ Tripwire is a file integrity management (FIM), FIM monitors files and folders on
 
 **Commands:**
 
-- `tripwire-versions-list`: 
-- `tripwire-rules-list`: 
-- `tripwire-elements-list`: 
-- `tripwire-nodes-list`: 
+- `tripwire-versions-list`: Returns all Element Versions that meet the search critiera.
+- `tripwire-rules-list`: Returns a list of all rules or those that match the provided filter criteria.
+- `tripwire-elements-list`: Returns a list of all elements or those that match the provided criteria.
+- `tripwire-nodes-list`: Returns a list of all nodes or those that match the provided filter criteria.
 
 
 ## TrustwaveFusion
@@ -17896,15 +18378,15 @@ The Trustwave Fusion platform connects your organization’s digital footprint t
 
 **Commands:**
 
-- `trustwave-get-ticket`: 
-- `trustwave-search-tickets`: 
-- `trustwave-add-ticket-comment`: 
-- `trustwave-close-ticket`: 
-- `trustwave-get-updated-tickets`: 
-- `trustwave-search-findings`: 
-- `trustwave-get-finding`: 
-- `trustwave-get-asset`: 
-- `trustwave-search-assets`: 
+- `trustwave-get-ticket`: Get a single ticket
+- `trustwave-search-tickets`: Search tickets
+- `trustwave-add-ticket-comment`: Add a comment to a ticket
+- `trustwave-close-ticket`: Close a ticket
+- `trustwave-get-updated-tickets`: Get updated tickets.
+- `trustwave-search-findings`: Search for Findings
+- `trustwave-get-finding`: Get a Finding
+- `trustwave-get-asset`: Get an Asset
+- `trustwave-search-assets`: Search for Assets
 
 
 ## Tufin
@@ -17913,7 +18395,16 @@ The Trustwave Fusion platform connects your organization’s digital footprint t
 **Product:** Tufin  
 **Commands:**
 
-- `tufin-search-topology`: 
+- `tufin-search-topology`: Search the Tufin Topology Map
+- `tufin-search-topology-image`: Search the Tufin Topology Map, returning an image
+- `tufin-object-resolve`: Resolve IP address to Network Object
+- `tufin-policy-search`: Search the policies of all devices managed by Tufin
+- `tufin-get-zone-for-ip`: Match the IP address to the assigned Tufin Zone
+- `tufin-submit-change-request`: Submit a change request to SecureChange
+- `tufin-search-devices`: Search SecureTrack devices
+- `tufin-get-change-info`: Get information on a SecureChange Ticket (Ticket ID retrieved from Tufin UI)
+- `tufin-search-applications`: Search SecureApp applications
+- `tufin-search-application-connections`: Get SecureApp application connections
 
 
 ## Tufin - Enrich IP Address(es)
@@ -17974,19 +18465,19 @@ TwinWave analyzes URLs and files to detect credential phishing and malware threa
 
 **Commands:**
 
-- `twinwave-submit-url`: 
-- `twinwave-submit-file`: 
-- `twinwave-resubmit-job`: 
-- `twinwave-get-job-summary`: 
-- `twinwave-wait-job`: 
-- `twinwave-download-job-pdf`: 
-- `twinwave-get-job-normalized-forensics`: 
-- `twinwave-get-task-normalized-forensics`: 
-- `twinwave-get-task-raw-forensics`: 
-- `twinwave-download-submitted-resource`: 
-- `twinwave-get-engines`: 
-- `twinwave-search-across-jobs-and-resources`: 
-- `twinwave-get-temp-artifact-url`: 
+- `twinwave-submit-url`: Submit New URL for Scanning.
+- `twinwave-submit-file`: Submit File for Scanning.
+- `twinwave-resubmit-job`: Resubmit a Job
+- `twinwave-get-job-summary`: Get Job Summary
+- `twinwave-wait-job`: Wait for a Twinwave job to complete and return its final summary and score. This command uses polling and requires the platform.2.0 or later.
+- `twinwave-download-job-pdf`: Download a completed job's PDF report to the War Room.
+- `twinwave-get-job-normalized-forensics`: Get a Job's Normalized Forensics
+- `twinwave-get-task-normalized-forensics`: Get a Task's Normalized Forensics
+- `twinwave-get-task-raw-forensics`: Get a Task's Raw Forensics
+- `twinwave-download-submitted-resource`: Download the Submitted Resource.
+- `twinwave-get-engines`: List Available Engines
+- `twinwave-search-across-jobs-and-resources`: Search Across Jobs and Resources
+- `twinwave-get-temp-artifact-url`: Get a Temporary Artifact URL
 
 
 ## Twitter v2
@@ -17998,8 +18489,8 @@ Twitter integration provides access to searching recent Tweets (in last 7 days) 
 
 **Commands:**
 
-- `twitter-tweet-search`: 
-- `twitter-user-get`: 
+- `twitter-tweet-search`: This command will search for Tweets from the last 7 days and return all information available.
+- `twitter-user-get`: Lookup users by name to display information about them. Search multiple users simultaneously by separating them by commas. Ex: 'name='user1,user2,user3'
 
 
 ## TypeSafe Jev
@@ -18011,11 +18502,11 @@ Use TypeSafe Jev typed judgments and calibrated probabilities in Cortex XSIAM an
 
 **Commands:**
 
-- `jev-evaluate`: 
-- `jev-noul`: 
-- `jev-choice`: 
-- `jev-score`: 
-- `jev-list-models`: 
+- `jev-evaluate`: Evaluate a state against one or more typed TypeSafe questions in a single request.
+- `jev-noul`: Evaluate one yes/no judgment and return the probability that the answer is yes.
+- `jev-choice`: Select one option from a defined set and return the complete probability distribution.
+- `jev-score`: Score state against ordered levels and return the weighted score and probability distribution.
+- `jev-list-models`: List model aliases available to the configured TypeSafe account.
 
 
 ## UltraMSG
@@ -18027,7 +18518,7 @@ This is the UltraMSG integration for getting started made by Trustnet
 
 **Commands:**
 
-- `send-whatsapp`: 
+- `send-whatsapp`: Send WhatsApp Message
 
 
 ## Unblock Indicator - Infoblox NIOS
@@ -18091,13 +18582,13 @@ This integration is intended to aid companies in integrating with the Stealth Ec
 
 **Commands:**
 
-- `stealth-isolate-machine`: 
-- `stealth-unisolate-machine`: 
-- `stealth-get-stealth-roles`: 
-- `stealth-isolate-user`: 
-- `stealth-unisolate-user`: 
-- `stealth-isolate-machine-and-user`: 
-- `stealth-unisolate-machine-and-user`: 
+- `stealth-isolate-machine`: This is the command which will isolate an endpoint from the Stealth Network
+- `stealth-unisolate-machine`: This is the command which will un-isolate an endpoint from Stealth Network
+- `stealth-get-stealth-roles`: Retrieve roles from Stealth Network
+- `stealth-isolate-user`: This is the command which will isolate an user from the Stealth Network
+- `stealth-unisolate-user`: This is the command which will un-isolate an user from Stealth Network
+- `stealth-isolate-machine-and-user`: This is the command which will isolate an endpoint and user from the Stealth Network
+- `stealth-unisolate-machine-and-user`: This is the command which will un-isolate an endpoint and user from Stealth Network
 
 
 ## UnitTest
@@ -18207,7 +18698,7 @@ Unpacks a file using the fileName or entryID to specify a file. Files unpacked w
 **Product:** UnshortenMe  
 **Commands:**
 
-- `unshorten-me-unshorten-url`: 
+- `unshorten-me-unshorten-url`: Unshortens a given URL.
 
 
 ## UnzipFile
@@ -18277,7 +18768,21 @@ This sub-playbook takes the entryId of a vendor-generated vulnerability report C
 **Product:** Uptycs  
 **Commands:**
 
-- `uptycs-get-assets`: 
+- `uptycs-get-assets`: return assets enrolled with Uptycs
+- `uptycs-run-query`: enter a SQL query to run against your Uptycs database. A list of tables can be found at osquery.io/schema, or by using the query "select * from information_sche
+- `uptycs-get-alerts`: return alerts from Uptycs DB
+- `uptycs-get-alert-rules`: retrieve a list of alert rules
+- `uptycs-get-event-rules`: retrieve a list of event rules
+- `uptycs-get-events`: return events from Uptycs DB
+- `uptycs-get-process-open-sockets`: find processes which opened a socket
+- `uptycs-get-process-information`: get information for a particular process
+- `uptycs-get-process-child-processes`: get all the child processes for a given parent process
+- `uptycs-get-processes`: find processes which are running or have run on a registered Uptycs asset
+- `uptycs-get-process-open-files`: find processes which have opened files
+- `uptycs-set-alert-status`: Set the status of an alert to new, assigned, resolved, or closed
+- `uptycs-set-asset-tag`: Sets a tag on a particular asset
+- `uptycs-get-user-information`: get info for an Uptycs user
+- `uptycs-get-threat-indicators`: get Uptycs threat indicators
 
 
 ## Uptycs - Bad IP Incident
@@ -18353,7 +18858,10 @@ URLhaus leverages abuse.ch and shares malicious URLs that are being used for mal
 
 **Commands:**
 
-- `urlhaus-download-sample`: 
+- `url`: Retrieves URL information from URLhaus.
+- `domain`: Retrieves domain information from URLhaus.
+- `file`: Retrieves file information from URLhaus.
+- `urlhaus-download-sample`: Downloads a malware sample from URLhaus.
 
 
 ## URLNumberOfAds
@@ -18417,11 +18925,11 @@ USTA is an Cyber Intelligence Platform that responds directly and effectively to
 
 **Commands:**
 
-- `usta-get-malicious-urls`: 
-- `usta-get-phishing-sites`: 
-- `usta-get-stolen-client-accounts`: 
-- `usta-get-ip-address`: 
-- `usta-search-specific-identity-leaks`: 
+- `usta-get-malicious-urls`: You can get malicious URLs with this command
+- `usta-get-phishing-sites`: You can get phishing sites with this command
+- `usta-get-stolen-client-accounts`: You can access stolen customer accounts via Stolen-Client-accounts API.
+- `usta-get-ip-address`: If you want to get more detailed information about specific IP Address, you can use this command.
+- `usta-search-specific-identity-leaks`: With this command, you can search specific identity number that hashed in leaks
 
 
 ## UtilAnyResults
@@ -18445,10 +18953,10 @@ Streamline alerts and related forensic information from Varonis DSP This integra
 
 **Commands:**
 
-- `varonis-get-alerts`: 
-- `varonis-update-alert-status`: 
-- `varonis-close-alert`: 
-- `varonis-get-alerted-events`: 
+- `varonis-get-alerts`: Get alerts from Varonis DA
+- `varonis-update-alert-status`: Update alert status
+- `varonis-close-alert`: Close the alert
+- `varonis-get-alerted-events`: Get events applied to specific alerts
 
 
 ## Varonis SaaS
@@ -18460,13 +18968,13 @@ Streamline alerts and related forensic information from Varonis SaaS
 
 **Commands:**
 
-- `varonis-get-threat-models`: 
-- `varonis-get-alerts`: 
-- `varonis-get-alerted-events`: 
-- `varonis-alert-add-note`: 
-- `varonis-update-alert-status`: 
-- `varonis-close-alert`: 
-- `get-mapping-fields`: 
+- `varonis-get-threat-models`: Get Varonis threat models
+- `varonis-get-alerts`: Get alerts from Varonis DA
+- `varonis-get-alerted-events`: Get events applied to specific alerts
+- `varonis-alert-add-note`: Add note to alerts
+- `varonis-update-alert-status`: Update alert status
+- `varonis-close-alert`: Close the alert
+- `get-mapping-fields`: Returns the list of fields to map in outgoing mirroring. This command is only used for debugging purposes.
 
 
 ## varonis-alert-post-processing
@@ -18486,21 +18994,21 @@ This integration allows to create incidents based on Vectra Accounts/Hosts/Detec
 
 **Commands:**
 
-- `vectra-search-accounts`: 
-- `vectra-search-hosts`: 
-- `vectra-search-detections`: 
-- `vectra-search-assignments`: 
-- `vectra-search-users`: 
-- `vectra-search-outcomes`: 
-- `vectra-account-describe`: 
-- `vectra-account-add-tags`: 
-- `vectra-account-del-tags`: 
-- `vectra-account-tag-list`: 
-- `vectra-account-note-add`: 
-- `vectra-account-note-update`: 
-- `vectra-account-note-remove`: 
-- `vectra-account-note-list`: 
-- `vectra-account-markall-detections-asfixed`: 
+- `vectra-search-accounts`: Returns a list of Account objects. All search attributes will be cumulative unless you're using the search_query_only one, in that case, only this one will be t
+- `vectra-search-hosts`: Returns a list of Host objects. All search attributes will be cumulative unless you're using the search_query_only one, in that case, only this one will be take
+- `vectra-search-detections`: Returns a list of Detection objects. All search attributes will be cumulative unless you're using the search_query_only one, in that case, only this one will be
+- `vectra-search-assignments`: Return a list of assignments. By default already resolved assignment are not returned.
+- `vectra-search-users`: Returns a list of Vectra Users. All search attributes will be cumulative.
+- `vectra-search-outcomes`: Returns a list of assignment outcomes.
+- `vectra-account-describe`: Returns a single Account details
+- `vectra-account-add-tags`: Add tags to an Account
+- `vectra-account-del-tags`: Delete tags from an Account
+- `vectra-account-tag-list`: Returns a list of tags for a specified account.
+- `vectra-account-note-add`: Add a note to the account.
+- `vectra-account-note-update`: Update a note in the account.
+- `vectra-account-note-remove`: Remove a note from the account.
+- `vectra-account-note-list`: List all notes of the specific account.
+- `vectra-account-markall-detections-asfixed`: Mark active detections as fixed by providing the ID of the account in the argument.
 
 
 ## Vectra RUX - Network Detection & Response
@@ -18512,21 +19020,21 @@ This integration allows the security operations center to create and manage inci
 
 **Commands:**
 
-- `vectra-detections-mark-asclosed`: 
-- `vectra-user-list`: 
-- `vectra-entity-list`: 
-- `vectra-entity-describe`: 
-- `vectra-entity-detection-list`: 
-- `vectra-detection-describe`: 
-- `vectra-entity-note-add`: 
-- `vectra-entity-note-update`: 
-- `vectra-entity-note-remove`: 
-- `vectra-entity-tag-add`: 
-- `vectra-entity-tag-remove`: 
-- `vectra-entity-tag-list`: 
-- `vectra-entity-assignment-add`: 
-- `vectra-entity-assignment-update`: 
-- `vectra-detection-pcap-download`: 
+- `vectra-detections-mark-asclosed`: Mark detections as closed with provided detection IDs in the argument.
+- `vectra-user-list`: Returns a list of users.
+- `vectra-entity-list`: Returns a list of entities.
+- `vectra-entity-describe`: Describes an entity by ID.
+- `vectra-entity-detection-list`: Returns a list of detections for a specified entity.
+- `vectra-detection-describe`: Returns a list of detections for the specified detection ID(s).
+- `vectra-entity-note-add`: Add a note to the entity.
+- `vectra-entity-note-update`: Update a note in the entity.
+- `vectra-entity-note-remove`: Remove a note from the entity.
+- `vectra-entity-tag-add`: Add tags in the entity.
+- `vectra-entity-tag-remove`: Remove tags from the entity.
+- `vectra-entity-tag-list`: Returns a list of tags for a specified entity.
+- `vectra-entity-assignment-add`: Add an assignment for the entity.
+- `vectra-entity-assignment-update`: Update an assignment in the entity.
+- `vectra-detection-pcap-download`: Download pcap of the detection.
 
 
 ## Vectra XDR
@@ -18535,21 +19043,21 @@ This integration allows the security operations center to create and manage inci
 **Product:** Vectra XDR  
 **Commands:**
 
-- `vectra-user-list`: 
-- `vectra-entity-list`: 
-- `vectra-entity-describe`: 
-- `vectra-entity-detection-list`: 
-- `vectra-detection-describe`: 
-- `vectra-entity-note-add`: 
-- `vectra-detection-note-add`: 
-- `vectra-entity-note-update`: 
-- `vectra-detection-note-update`: 
-- `vectra-entity-note-remove`: 
-- `vectra-detection-note-remove`: 
-- `vectra-detections-mark-fixed`: 
-- `vectra-detections-unmark-fixed`: 
-- `vectra-entity-tag-add`: 
-- `vectra-entity-tag-remove`: 
+- `vectra-user-list`: Returns a list of users.
+- `vectra-entity-list`: Returns a list of entities.
+- `vectra-entity-describe`: Describes an entity by ID.
+- `vectra-entity-detection-list`: Returns a list of detections for a specified entity.
+- `vectra-detection-describe`: Returns a list of detections for the specified detection ID(s).
+- `vectra-entity-note-add`: Add a note to the entity.
+- `vectra-detection-note-add`: Add a note to the detection.
+- `vectra-entity-note-update`: Update a note in the entity.
+- `vectra-detection-note-update`: Update a note in the detection.
+- `vectra-entity-note-remove`: Remove a note from the entity.
+- `vectra-detection-note-remove`: Remove a note from the detection.
+- `vectra-detections-mark-fixed`: Mark detection as fixed with provided detection IDs in argument.
+- `vectra-detections-unmark-fixed`: Unmark detection as fixed with provided detection IDs in argument.
+- `vectra-entity-tag-add`: Add tags in the entity.
+- `vectra-entity-tag-remove`: Remove tags from the entity.
 
 
 ## VectraDetectCloseDuplicateIncidents
@@ -18658,17 +19166,17 @@ Vega integration for fetching alerts and incidents from the Vega platform
 
 **Commands:**
 
-- `vega-get-alert-events`: 
-- `vega-get-alert-metadata`: 
-- `vega-set-detections-state`: 
-- `vega-update-detections`: 
-- `vega-update-alert`: 
-- `vega-update-incident`: 
-- `vega-reconcile-incidents`: 
-- `get-remote-data`: 
-- `get-modified-remote-data`: 
-- `update-remote-system`: 
-- `get-mapping-fields`: 
+- `vega-get-alert-events`: Fetch aggregated alert events for up to 10 Vega alerts using internal API pagination, then return the requested display page as a markdown table and CustomField
+- `vega-get-alert-metadata`: Return Vega alert metadata to the War Room. Pass one incident_id to load the alerts related to that Vega incident. When run from a Vega Incident without inciden
+- `vega-set-detections-state`: Set the state for one or more Vega detections.
+- `vega-update-detections`: Update severity, status, state, and/or tags for one or more Vega detections using the updateDetections GraphQL mutation.
+- `vega-update-alert`: Immediately update Vega alert status, severity, verdict, verdict reasoning, assignees, and/or comment on the Vega platform and sync the open the platform.
+- `vega-update-incident`: Immediately update Vega incident user status, verdict, verdict reasoning, severity, assignee emails, and/or comment on the Vega platform and sync the open the p
+- `vega-reconcile-incidents`: Compare selected Vega alert and incident UUIDs with the platform. Only selected entities are queried. Paste the lists into a Vega instance that has Fetch alerts
+- `get-remote-data`: Gets remote data from a remote Vega alert or incident. Used for debugging incoming mirroring.
+- `get-modified-remote-data`: Gets Vega alert and incident IDs modified since the last update time. Used for debugging incoming mirroring.
+- `update-remote-system`: Pushes the platform.
+- `get-mapping-fields`: Returns the outgoing mirroring fields for Vega Alert and Vega Incident investigations.
 
 
 ## Vercara UltraDNS
@@ -18680,7 +19188,7 @@ This integration fetches DNS configuration audit logs from Vercara UltraDNS plat
 
 **Commands:**
 
-- `vercara-ultradns-get-events`: 
+- `vercara-ultradns-get-events`: Gets audit events from Vercara UltraDNS. Manual command to fetch and display events. This command is used for developing/debugging and is to be used with cautio
 
 
 ## VerdictResult
@@ -18700,21 +19208,21 @@ Versa Director is a virtualization and service creation platform that simplifies
 
 **Commands:**
 
-- `vd-auth-start`: 
-- `vd-auth-test`: 
-- `vd-predefined-application-list`: 
-- `vd-appliance-user-modified-application-list`: 
-- `vd-template-user-modified-application-list`: 
-- `vd-appliance-user-defined-application-list`: 
-- `vd-template-user-defined-application-list`: 
-- `vd-appliance-address-object-delete`: 
-- `vd-appliance-address-object-edit`: 
-- `vd-appliance-address-object-create`: 
-- `vd-appliance-address-object-list`: 
-- `vd-template-address-object-delete`: 
-- `vd-template-address-object-edit`: 
-- `vd-template-address-object-create`: 
-- `vd-template-address-object-list`: 
+- `vd-auth-start`: Obtain an access token from the API client. If Client ID and Client Secret were not passed as parameters or arguments, a new Auth Client will be created.
+- `vd-auth-test`: Run a connectivity test to verify that the OAuth process worked.
+- `vd-predefined-application-list`: List all user predefined application objects.
+- `vd-appliance-user-modified-application-list`: List all user modified predefined application objects associated with a specific organization and appliance (device).
+- `vd-template-user-modified-application-list`: List all user modified predefined application objects associated with a specific organization and template.
+- `vd-appliance-user-defined-application-list`: List all user defined application objects associated with a specific organization and appliance (device).
+- `vd-template-user-defined-application-list`: List all user defined application objects associated with a specific organization and template.
+- `vd-appliance-address-object-delete`: Delete an address object associated with a specific organization and appliance (device).
+- `vd-appliance-address-object-edit`: Edit an address object associated with a specific organization and appliance (device).
+- `vd-appliance-address-object-create`: Create an address object associated with a specific organization and appliance (device).
+- `vd-appliance-address-object-list`: List all address objects associated with a specific organization and appliance (device).
+- `vd-template-address-object-delete`: Delete an address object associated with a specific organization and template.
+- `vd-template-address-object-edit`: Create an address object associated with a specific organization and template.
+- `vd-template-address-object-create`: Create an address object associated with a specific organization and template.
+- `vd-template-address-object-list`: List all address objects associated with a specific organization and template.
 
 
 ## Viper
@@ -18726,8 +19234,8 @@ Viper is a binary analysis and management framework
 
 **Commands:**
 
-- `viper-download`: 
-- `viper-search`: 
+- `viper-download`: Download a sample with file hash
+- `viper-search`: Search for sample with file hash
 
 
 ## VMRay
@@ -18739,21 +19247,21 @@ This integration enables users to design playbooks that involve analyzing a file
 
 **Commands:**
 
-- `vmray-upload-sample`: 
-- `vmray-upload-url`: 
-- `vmray-get-analysis-by-sample`: 
-- `vmray-get-job-by-sample`: 
-- `vmray-get-submission`: 
-- `vmray-get-sample`: 
-- `vmray-get-sample-by-hash`: 
-- `vmray-get-threat-indicators`: 
-- `vmray-add-tag`: 
-- `vmray-delete-tag`: 
-- `vmray-get-iocs`: 
-- `vmray-get-job-by-id`: 
-- `vmray-get-summary`: 
-- `vmray-get-screenshots`: 
-- `vmray-get-license-usage-verdicts`: 
+- `vmray-upload-sample`: Submits a sample to VMRay for analysis.
+- `vmray-upload-url`: Submits a URL for analysis.
+- `vmray-get-analysis-by-sample`: Retrieves all analysis details for a specified sample.
+- `vmray-get-job-by-sample`: Retrieves details for all jobs for a specified sample.
+- `vmray-get-submission`: Retrieves the results of a submission.
+- `vmray-get-sample`: Retrieves a sample using the sample ID.
+- `vmray-get-sample-by-hash`: Retrieves sample information by hash.
+- `vmray-get-threat-indicators`: Retrieves threat indicators (VTI).
+- `vmray-add-tag`: Adds a tag to an analysis and/or a submission.
+- `vmray-delete-tag`: Deletes tags from an analysis and/or a submission.
+- `vmray-get-iocs`: Retrieves Indicators of Compromise for a specified sample.
+- `vmray-get-job-by-id`: Retrieves a job by job ID.
+- `vmray-get-summary`: Retrieves the Summary JSON v2 for a specific analysis.
+- `vmray-get-screenshots`: Retrieves screenshots taken during a specific dynamic analysis. The screenshots are stored with file names like 'analysis_5_screenshot_2.png'. In this example, 
+- `vmray-get-license-usage-verdicts`: Gets the usage of verdicts from VMRay.
 
 
 ## VMware
@@ -18765,21 +19273,21 @@ VMware vCenter server is a centralized management application that lets you mana
 
 **Commands:**
 
-- `vmware-get-vms`: 
-- `vmware-poweron`: 
-- `vmware-poweroff`: 
-- `vmware-hard-reboot`: 
-- `vmware-suspend`: 
-- `vmware-soft-reboot`: 
-- `vmware-create-snapshot`: 
-- `vmware-revert-snapshot`: 
-- `vmware-get-events`: 
-- `vmware-change-nic-state`: 
-- `vmware-list-vms-by-tag`: 
-- `vmware-create-vm`: 
-- `vmware-clone-vm`: 
-- `vmware-relocate-vm`: 
-- `vmware-delete-vm`: 
+- `vmware-get-vms`: Returns all virtual machines on a system.
+- `vmware-poweron`: Powers on a powered-off or suspended virtual machine.
+- `vmware-poweroff`: Powers off a powered-on or suspended virtual machine.
+- `vmware-hard-reboot`: Reboots a powered-on virtual machine.
+- `vmware-suspend`: Suspends a powered-on virtual machine.
+- `vmware-soft-reboot`: Issues a command to the guest operating system asking it to perform a reboot.
+- `vmware-create-snapshot`: Creates a VM snapshot.
+- `vmware-revert-snapshot`: Reverts VM to snapshot.
+- `vmware-get-events`: Gets events of a VM.
+- `vmware-change-nic-state`: Changes the state of a VM NIC.
+- `vmware-list-vms-by-tag`: Lists all virtual storage objects attached to the tag.
+- `vmware-create-vm`: Creates a new virtual machine in the current folder and attaches it to the specified resource pool. This operation creates a virtual machine, instead of cloning
+- `vmware-clone-vm`: Creates a clone of this virtual machine. If the virtual machine is used as a template, this method corresponds to the deploy command.
+- `vmware-relocate-vm`: Relocates a virtual machine to a specified location.
+- `vmware-delete-vm`: Destroys this object, deleting its contents and removing it from its parent folder (if any).
 
 
 ## VMware Workspace ONE UEM (AirWatch MDM)
@@ -18791,9 +19299,9 @@ VMware Workspace ONE UEM integration allows users to search enrolled corporate o
 
 **Commands:**
 
-- `vmwuem-devices-search`: 
-- `vmwuem-device-get`: 
-- `vmwuem-device-os-updates-list`: 
+- `vmwuem-devices-search`: Searches device(s) using the query information provided.
+- `vmwuem-device-get`: Get basic information about the device.
+- `vmwuem-device-os-updates-list`: Retrieves a list of all available OS and software updates for the specified device.
 
 
 ## WALLIX Bastion
@@ -18805,21 +19313,21 @@ Centralized Control and Monitoring of Privileged Access to Sensitive Assets. Thi
 
 **Commands:**
 
-- `wab-add-session-target-to-target-group`: 
-- `wab-add-password-target-to-target-group`: 
-- `wab-add-restriction-to-target-group`: 
-- `wab-add-timeframe-period`: 
-- `wab-add-global-domain`: 
-- `wab-get-account-references`: 
-- `wab-get-account-reference`: 
-- `wab-change-password-or-ssh-key-of-account`: 
-- `wab-get-all-accounts`: 
-- `wab-get-one-account`: 
-- `wab-delete-account`: 
-- `wab-get-application-account-credentials`: 
-- `wab-add-credential-to-application-account`: 
-- `wab-get-application-account-credential`: 
-- `wab-edit-credential-of-application-account`: 
+- `wab-add-session-target-to-target-group`: Add a target account to a target group
+- `wab-add-password-target-to-target-group`: Add a password checkout account to a target group
+- `wab-add-restriction-to-target-group`: Add a restriction in a targetgroup category: Target Group Restrictions.
+- `wab-add-timeframe-period`: Add a period to a timeframe category: Timeframes.
+- `wab-add-global-domain`: Add a global domain category: Domains
+- `wab-get-account-references`: Get account references category: Account References
+- `wab-get-account-reference`: Get account reference category: Account References
+- `wab-change-password-or-ssh-key-of-account`: Change password or SSH key of an account and propagate changes on the target host. If the body is empty, an automatic password change is performed: the password
+- `wab-get-all-accounts`: Get all accounts category: Accounts
+- `wab-get-one-account`: Get one account category: Accounts
+- `wab-delete-account`: Delete an account category: Accounts
+- `wab-get-application-account-credentials`: Get the application account credentials category: Application Account Credentials
+- `wab-add-credential-to-application-account`: Add a credential to an application account on a local domain category: Application Account Credentials
+- `wab-get-application-account-credential`: Get the application account credential category: Application Account Credentials
+- `wab-edit-credential-of-application-account`: Edit a credential of an application account on a local domain category: Application Account Credentials
 
 
 ## Web File Repository
@@ -18831,17 +19339,17 @@ Simple web server with a file uploading console to store small files. Helps make
 
 **Commands:**
 
-- `wfr-status`: 
-- `wfr-cleanup`: 
-- `wfr-upload-as-file`: 
-- `wfr-upload-file`: 
-- `wfr-upload-files`: 
-- `wfr-list-files`: 
-- `wfr-remove-files`: 
-- `wfr-download-file`: 
-- `wfr-download-as-text`: 
-- `wfr-archive-zip`: 
-- `wfr-reset`: 
+- `wfr-status`: Get the service status
+- `wfr-cleanup`: Remove all the files from the repository
+- `wfr-upload-as-file`: Upload a file from data to the repository.
+- `wfr-upload-file`: Upload a file to the repository
+- `wfr-upload-files`: Upload files to the repository
+- `wfr-list-files`: List files in the repository
+- `wfr-remove-files`: Remove files from the repository
+- `wfr-download-file`: Download a file from the repository
+- `wfr-download-as-text`: Retrieve the file data from the repository into the context.
+- `wfr-archive-zip`: Download a file to which all the files are archived
+- `wfr-reset`: Reset the repository data
 
 
 ## WebScraper
@@ -18895,30 +19403,18 @@ CVE-2021-32648 vulnerability has a CVSS score of 9.1 and was found in octobercms
 - `AutoBlockIndicators`: Should the given indicators be automatically blocked, or should the user be given the option to choose?If set to True - no prompt will appea
 
 
-## WhisperGate and HermeticWiper & CVE-2021-32648
-
-**Type:** playbook  
-**Product:** WhisperGate and HermeticWiper & CVE-2021-32648  
-
-CVE-2021-32648 vulnerability has a CVSS score of 9.1 and was found in octobercms, which is a CMS platform based on the Laravel PHP Framework. In affected versions of the october/system package an attacker can request an account password reset and then gain access to the account using a specially crafted request. The issue has been patched in Build 472 and v1.1.5. The playbook includes the following tasks: Mitigations: More information: UNIT42 Blog - Ongoing Russia and Ukraine Cyber Conflict Russia-Ukraine Cyberattacks: How to Protect Against Related Cyberthreats Including DDoS, HermeticWiper, Gamaredon and Website Defacement Microsoft Blog CVE-2021-32648 NVD Note: This is a beta playbook, which lets you implement and test pre-release software. Since the playbook is beta, it might contain bugs. Updates to the pack during the beta phase might include non-backward compatible features. We appreciate your feedback on the quality and usability of the pack to help us identify issues, fix them, and continually improve
-
-**Inputs:**
-
-- `PlaybookDescription`: The playbook description for Rapid Breach Response layout.
-- `BlockIndicatorsAutomatically`: Whether to block the indicators automatically or not.
-- `CollectedIndicatorsSeverity`: The verdict of the collected indicators. Default is "Malicious". Other options can be "Suspicious" and "Unknown".
-- `RelatedCVE`: The WhisperGate malware related CVE.
-- `RunXQLHuntingQueries`: Whether to perform XQL hunting queries. Default is "False".
-- `UserVerification`: Possible values: True/False.\nWhether to provide user verification for blocking IPs. \n\nFalse - No prompt will be displayed to the user.\nT
-- `AutoBlockIndicators`: Should the given indicators be automatically blocked, or should the user be given the option to choose?If set to True - no prompt will appea
-
-
 ## Whois
 
 **Type:** integration  
 **Product:** Whois  
 
 Provides data enrichment for domains. This integration was integrated and tested with version 1.0 of Whois
+
+**Commands:**
+
+- `whois`: Provides data enrichment for domains. This pack relies on free services for WHOIS information. As with many free services, the availability is not guaranteed. F
+- `domain`: Provides data enrichment for domains.
+- `ip`: Provides data enrichment for ips.
 
 
 ## WidgetNoOp
@@ -18957,21 +19453,21 @@ Agentless, context-aware and full-stack security and compliance across AWS, Azur
 
 **Commands:**
 
-- `wiz-get-issue`: 
-- `wiz-get-issues`: 
-- `wiz-get-resource`: 
-- `wiz-get-resources`: 
-- `wiz-issue-in-progress`: 
-- `wiz-reopen-issue`: 
-- `wiz-reject-issue`: 
-- `wiz-resolve-issue`: 
-- `wiz-set-issue-note`: 
-- `wiz-clear-issue-note`: 
-- `wiz-get-issue-evidence`: 
-- `wiz-rescan-machine-disk`: 
-- `wiz-set-issue-due-date`: 
-- `wiz-clear-issue-due-date`: 
-- `wiz-get-project-team`: 
+- `wiz-get-issue`: Get the details for a Wiz Issue ID.
+- `wiz-get-issues`: Get the issues on cloud resources.
+- `wiz-get-resource`: Get Details of a resource. You should pass exactly one of resource_id, resource_name. When searching by name, results are limited to 500 records.
+- `wiz-get-resources`: Get details of multiple resources based on various filters.
+- `wiz-issue-in-progress`: Set a Wiz Issue to in progress.
+- `wiz-reopen-issue`: Re-open an Issue.
+- `wiz-reject-issue`: Reject a Wiz Issue. Not supported for THREAT_DETECTION issues.
+- `wiz-resolve-issue`: Resolve a Wiz Issue.
+- `wiz-set-issue-note`: Set (append) a note to an Issue.
+- `wiz-clear-issue-note`: Clears a note from an Issue.
+- `wiz-get-issue-evidence`: Get the evidence from an Issue.
+- `wiz-rescan-machine-disk`: Deprecated
+- `wiz-set-issue-due-date`: Set a due date for an Issue.
+- `wiz-clear-issue-due-date`: Clear a due date for an Issue.
+- `wiz-get-project-team`: Get the Project Owners and Security Champions details.
 
 
 ## WizDefend
@@ -18983,15 +19479,15 @@ Agentless cloud security platform for detecting and addressing cloud issues, det
 
 **Commands:**
 
-- `wiz-defend-get-detections`: 
-- `wiz-defend-get-detection`: 
-- `wiz-defend-get-threat`: 
-- `wiz-defend-get-threats`: 
-- `wiz-defend-reopen-threat`: 
-- `wiz-defend-resolve-threat`: 
-- `wiz-defend-set-threat-in-progress`: 
-- `wiz-defend-set-threat-comment`: 
-- `wiz-defend-clear-threat-comments`: 
+- `wiz-defend-get-detections`: Retrieve Wiz security detections based on specified filters.
+- `wiz-defend-get-detection`: Retrieve detailed information about a specific Wiz detection by ID.
+- `wiz-defend-get-threat`: Retrieve detailed information about a specific Wiz threat by issue ID.
+- `wiz-defend-get-threats`: Retrieve Wiz threats based on specified filters.
+- `wiz-defend-reopen-threat`: Reopen a Wiz Threat.
+- `wiz-defend-resolve-threat`: Resolve a Wiz Threat.
+- `wiz-defend-set-threat-in-progress`: Set a Wiz Threat to in progress.
+- `wiz-defend-set-threat-comment`: Set a comment on a Wiz Threat.
+- `wiz-defend-clear-threat-comments`: Clear all the comments from a Wiz Threat.
 
 
 ## Wolken ITSM
@@ -19003,11 +19499,11 @@ Use The Wolken IT Service Management (ITSM) solution to modernize the way you ma
 
 **Commands:**
 
-- `wolken-add-internal-notes`: 
-- `wolken-get-access-token`: 
-- `wolken-post-api-v1-incidents-add-attachments`: 
-- `wolken-post-api-v1-incidents-by-incident-id`: 
-- `wolken-put-api-v1-incidents-cancel`: 
+- `wolken-add-internal-notes`: Used to add Internal Notes in the specified incident
+- `wolken-get-access-token`: Use to get access token and save it in integration context . Refresh Token saved in integration context will be used to create new access token after expiration
+- `wolken-post-api-v1-incidents-add-attachments`: Add Attachment to the specified Incident Id using entry Id
+- `wolken-post-api-v1-incidents-by-incident-id`: Update an existing incident
+- `wolken-put-api-v1-incidents-cancel`: Cancel an Incident
 
 
 ## Wordpress
@@ -19019,21 +19515,21 @@ The WordPress REST API provides an interface for applications to interact with y
 
 **Commands:**
 
-- `wordpress-url-request`: 
-- `wordpress-list-posts`: 
-- `wordpress-get-post`: 
-- `wordpress-create-post`: 
-- `wordpress-update-post`: 
-- `wordpress-delete-post`: 
-- `wordpress-list-categories`: 
-- `wordpress-create-category`: 
-- `wordpress-get-category`: 
-- `wordpress-update-category`: 
-- `wordpress-delete-category`: 
-- `wordpress-list-tags`: 
-- `wordpress-create-tag`: 
-- `wordpress-get-tag`: 
-- `wordpress-update-tag`: 
+- `wordpress-url-request`: Get information from a custom URL
+- `wordpress-list-posts`: Lists all posts
+- `wordpress-get-post`: Retrieve a specific post record.
+- `wordpress-create-post`: Create a post
+- `wordpress-update-post`: Update a post
+- `wordpress-delete-post`: Delete a post
+- `wordpress-list-categories`: List categories
+- `wordpress-create-category`: Create a category
+- `wordpress-get-category`: Retrieve a category
+- `wordpress-update-category`: Update a category
+- `wordpress-delete-category`: Delete a category
+- `wordpress-list-tags`: Lists all tags
+- `wordpress-create-tag`: Create a tag
+- `wordpress-get-tag`: Retrieves a tag
+- `wordpress-update-tag`: Update a tag
 
 
 ## Workday
@@ -19045,7 +19541,7 @@ Workday offers enterprise-level software solutions for financial management, hum
 
 **Commands:**
 
-- `workday-list-workers`: 
+- `workday-list-workers`: List workers command - Returns information for specified workers.
 
 
 ## Workday IAM
@@ -19057,7 +19553,7 @@ Use the Workday IAM Integration as part of the IAM premium pack. For more inform
 
 **Commands:**
 
-- `workday-iam-get-full-report`: 
+- `workday-iam-get-full-report`: Gets the report entries from Workday.
 
 
 ## Workday IAM Event Generator (Beta)
@@ -19069,11 +19565,11 @@ Generates mock reports and events for Workday IAM. Use these for testing and dev
 
 **Commands:**
 
-- `workday-generate-hire-event`: 
-- `workday-generate-update-event`: 
-- `workday-generate-rehire-event`: 
-- `workday-generate-terminate-event`: 
-- `initialize-context`: 
+- `workday-generate-hire-event`: Generate workday new hire event.
+- `workday-generate-update-event`: Generate workday update event.
+- `workday-generate-rehire-event`: Generate workday rehire event.
+- `workday-generate-terminate-event`: Generate workday terminate event.
+- `initialize-context`: Reset the integration context to fetch the first run reports.
 
 
 ## XM Cyber
@@ -19085,13 +19581,14 @@ The XM Cyber integration creates unique incidents with valuable data collected d
 
 **Commands:**
 
-- `xmcyber-affected-critical-assets-list`: 
-- `xmcyber-affected-entities-list`: 
-- `xmcyber-version-supported`: 
-- `xmcyber-version-get`: 
-- `xmcyber-enrich-from-ip`: 
-- `xmcyber-enrich-from-hostname`: 
-- `xmcyber-enrich-from-fields`: 
+- `xmcyber-affected-critical-assets-list`: List critical assets at risk from an entity and the complexity of the attack
+- `xmcyber-affected-entities-list`: List all entities at risk from an entity and the complexity of the attack
+- `xmcyber-version-supported`: Check if current XM version supports Cortex platform integration
+- `xmcyber-version-get`: Get current xm version
+- `xmcyber-enrich-from-ip`: Return data on Entity by IP from XM Cyber
+- `xmcyber-enrich-from-entityId`: Return data on Entity by entityId from XM Cyber
+- `xmcyber-enrich-from-hostname`: Return data on Entity by hostname from XM Cyber
+- `xmcyber-enrich-from-fields`: Return data on an XM entity
 
 
 ## XM Cyber CEM
@@ -19103,10 +19600,10 @@ The XM Cyber integration connects XM Cyber's Continuous Exposure Management (CEM
 
 **Commands:**
 
-- `xmcyber-enrich-incident`: 
-- `xmcyber-push-breach-point`: 
-- `xmcyber-remove-breach-point`: 
-- `xmcyber-calculate-risk-score`: 
+- `xmcyber-enrich-incident`: Enriches Hostname and User entities on the SOAR platform by using information available in the XM Cyber platform.
+- `xmcyber-push-breach-point`: Adds a breach point label to the specified entities based on defined criteria and pushes the label as an Imported Attribute to XM Cyber CEM's platform.
+- `xmcyber-remove-breach-point`: Removes a breach point label from the specified entities in XM Cyber CEM's platform.
+- `xmcyber-calculate-risk-score`: Calculates the overall risk score for entities based on their Compromise Risk Score and Choke Point Score from XM Cyber enrichment data.
 
 
 ## xMatters
@@ -19118,9 +19615,9 @@ This is an integration for using xMatters. This integration was integrated and t
 
 **Commands:**
 
-- `xm-trigger-workflow`: 
-- `xm-get-events`: 
-- `xm-get-event`: 
+- `xm-trigger-workflow`: sends the event to xMatters
+- `xm-get-events`: Get events from xMatters.
+- `xm-get-event`: Get a single event from xMatters.
 
 
 ## xMatters - Example Conditional Actions
@@ -19205,7 +19702,16 @@ Allow integration with Zabbix api
 
 **Commands:**
 
+- `zabbix-execute-command`: Execute command on Zabbix API
 - `zabbix-execute-command`: 
+- `zabbix-hostgroup-get`: Get host groups
+- `zabbix-hostgroup-get`: 
+- `zabbix-host-get`: Get hosts
+- `zabbix-host-get`: 
+- `zabbix-trigger-get`: Get triggers
+- `zabbix-trigger-get`: 
+- `zabbix-event-get`: Get events
+- `zabbix-event-get`: 
 
 
 ## Zafran API
@@ -19217,9 +19723,9 @@ In today’s complex security landscape, resource-constrained teams struggle to 
 
 **Commands:**
 
-- `zafran-mitigation-performed`: 
-- `zafran-mitigations-export`: 
-- `zafran-mitigations-performed`: 
+- `zafran-mitigation-performed`: Update on mitigations performed
+- `zafran-mitigations-export`: Export recommended mitigations
+- `zafran-mitigations-performed`: Update on mitigations performed
 
 
 ## ZeroFox
@@ -19231,21 +19737,21 @@ Cloud-based SaaS to detect risks found on social media and digital channels. Thi
 
 **Commands:**
 
-- `zerofox-get-alert`: 
-- `zerofox-alert-user-assignment`: 
-- `zerofox-close-alert`: 
-- `zerofox-alert-request-takedown`: 
-- `zerofox-modify-alert-tags`: 
-- `zerofox-list-alerts`: 
-- `zerofox-create-entity`: 
-- `zerofox-alert-cancel-takedown`: 
-- `zerofox-open-alert`: 
-- `zerofox-list-entities`: 
-- `zerofox-get-entity-types`: 
-- `zerofox-get-policy-types`: 
-- `zerofox-modify-alert-notes`: 
-- `zerofox-submit-threat`: 
-- `zerofox-send-alert-attachment`: 
+- `zerofox-get-alert`: Fetches an alert by ID.
+- `zerofox-alert-user-assignment`: Assigns an alert to a user.
+- `zerofox-close-alert`: Closes an alert.
+- `zerofox-alert-request-takedown`: Requests a takedown of a specified alert.
+- `zerofox-modify-alert-tags`: Adds tags to and or removes tags from a specified alert.
+- `zerofox-list-alerts`: Returns alerts that match user-defined or default filters and parameters. By default, no filters are applied and the results are sorted by timestamp.
+- `zerofox-create-entity`: Creates a new entity associated with the company of the authorized user.
+- `zerofox-alert-cancel-takedown`: Cancels a takedown of a specified alert.
+- `zerofox-open-alert`: Opens an alert.
+- `zerofox-list-entities`: Lists all entities associated with the company of the authorized user.
+- `zerofox-get-entity-types`: Shows a table of all entity type names and IDs in the War Room.
+- `zerofox-get-policy-types`: Shows a table of all policy type names and IDs in the War Room.
+- `zerofox-modify-alert-notes`: Modify the notes of a specified alert.
+- `zerofox-submit-threat`: Submits potential threats into the ZF alert registry for disruption.
+- `zerofox-send-alert-attachment`: Sends an attachment to a specified alert.
 
 
 ## ZeroFox Key Incidents
@@ -19257,7 +19763,7 @@ Cloud-based SaaS to detect risks found on social media and digital channels. Thi
 
 **Commands:**
 
-- `zerofox-get-key-incident-attachment`: 
+- `zerofox-get-key-incident-attachment`: Fetches a Key Incident Attachment by ID and uploads it to the current investigation War Room.
 
 
 ## Zerohack XDR
@@ -19269,7 +19775,7 @@ The companion integration for Zerohack XDR. Current versions allow the user to c
 
 **Commands:**
 
-- `zerohack-get-latest-incident`: 
+- `zerohack-get-latest-incident`: Fetch a single incident of your choice of severity level to study the incidents structure before you start continously fecthing incidents.
 
 
 ## ZeroTrustAnalyticsPlatform
@@ -19281,9 +19787,9 @@ Zero Trust Analytics Platform (ZTAP) is the underlying investigation platform an
 
 **Commands:**
 
-- `get-mapping-fields`: 
-- `get-remote-data`: 
-- `ztap-get-alert-entries`: 
+- `get-mapping-fields`: Get mapping fields from remote incident.
+- `get-remote-data`: Get remote data from a remote incident. This command should only be called manually for debugging purposes.
+- `ztap-get-alert-entries`: Get the entries data from a remote incident.
 
 
 ## Zimperium
@@ -19295,14 +19801,15 @@ Zimperium is a mobile security platform that generates alerts based on anomalous
 
 **Commands:**
 
-- `zimperium-events-search`: 
-- `zimperium-users-search`: 
-- `zimperium-user-get-by-id`: 
-- `zimperium-devices-search`: 
-- `zimperium-device-get-by-id`: 
-- `zimperium-devices-get-last-updated`: 
-- `zimperium-app-classification-get`: 
-- `zimperium-report-get`: 
+- `zimperium-events-search`: Search events.
+- `zimperium-users-search`: Search users.
+- `zimperium-user-get-by-id`: Retrieves details for a single user by object ID.
+- `zimperium-devices-search`: Search devices.
+- `zimperium-device-get-by-id`: Retrieves details for a single device.
+- `zimperium-devices-get-last-updated`: Retrieves devices from Greater than Last Updated.
+- `zimperium-app-classification-get`: Retrieves application classification.
+- `zimperium-report-get`: Gets a report.
+- `file`: Checks the reputation of an app in Zimperium.
 
 
 ## Zimperium v2
@@ -19314,21 +19821,21 @@ Fetch and investigate mobile security alerts, generated based on anomalous or un
 
 **Commands:**
 
-- `zimperium-users-search`: 
-- `zimperium-devices-search`: 
-- `zimperium-report-get`: 
-- `zimperium-app-version-list`: 
-- `zimperium-get-devices-by-cve`: 
-- `zimperium-devices-os-version`: 
-- `zimperium-get-cves-by-device`: 
-- `zimperium-vulnerability-get`: 
-- `zimperium-policy-group-list`: 
-- `zimperium-policy-privacy-get`: 
-- `zimperium-policy-threat-get`: 
-- `zimperium-policy-phishing-get`: 
-- `zimperium-policy-app-settings-get`: 
-- `zimperium-policy-device-inactivity-list`: 
-- `zimperium-policy-device-inactivity-get`: 
+- `zimperium-users-search`: Search users. Only a user created as a "Team admin" is authorized to perform this request. Also, it will only get information about the teams that this user is 
+- `zimperium-devices-search`: Search devices.
+- `zimperium-report-get`: Gets a report.
+- `zimperium-threat-search`: 
+- `zimperium-app-version-list`: List the app versions.
+- `zimperium-get-devices-by-cve`: Gets a devices associated with a specific CVE.
+- `zimperium-devices-os-version`: Gets devices associated with a specific operating system version.
+- `zimperium-get-cves-by-device`: Gets the CVEs associated with a specific device.
+- `zimperium-vulnerability-get`: Gets the vulnerabilities.
+- `zimperium-policy-group-list`: Get policy groups.
+- `zimperium-policy-privacy-get`: Get a privacy policy by its identifier.
+- `zimperium-policy-threat-get`: Get a threat policy by its identifier.
+- `zimperium-policy-phishing-get`: Get a phishing policy by its identifier.
+- `zimperium-policy-app-settings-get`: List the app versions.
+- `zimperium-policy-device-inactivity-list`: Get the policy device inactivity list.
 
 
 ## ZipFile
@@ -19368,21 +19875,21 @@ Use the Zoom integration manage your Zoom users and meetings This integration wa
 
 **Commands:**
 
-- `zoom-create-user`: 
-- `zoom-create-meeting`: 
-- `zoom-fetch-recording`: 
-- `zoom-list-users`: 
-- `zoom-delete-user`: 
-- `zoom-meeting-get`: 
-- `zoom-meeting-list`: 
-- `zoom-list-user-channels`: 
-- `zoom-create-channel`: 
-- `zoom-delete-channel`: 
-- `zoom-update-channel`: 
-- `zoom-invite-to-channel`: 
-- `zoom-remove-from-channel`: 
-- `zoom-send-file`: 
-- `zoom-send-message`: 
+- `zoom-create-user`: Create a new user in zoom account
+- `zoom-create-meeting`: Create a new zoom meeting (scheduled ,instant, or recurring)
+- `zoom-fetch-recording`: Get meeting record and save as file in the warroom
+- `zoom-list-users`: List the existing users
+- `zoom-delete-user`: Delete a user from Zoom
+- `zoom-meeting-get`: Get the information of an existing zoom meeting
+- `zoom-meeting-list`: Show all the meetings of a given user. Note: only scheduled and unexpired meetings will appear.
+- `zoom-list-user-channels`: List the existing channels
+- `zoom-create-channel`: Creates a channel for a user
+- `zoom-delete-channel`: Deletes a specific Zoom channel
+- `zoom-update-channel`: Update an existing channel in a Zoom account.
+- `zoom-invite-to-channel`: Invites members that are in a user's contact list to a channel. A channel can have one or multiple members. The maximum number of members that can be added at o
+- `zoom-remove-from-channel`: Removes a member from a chat channel. A channel can have one or more members.
+- `zoom-send-file`: Sends a file on Zoom to either an individual user in your contact list or a channel of which you are a member.
+- `zoom-send-message`: Sends chat messages on Zoom to either an individual user who is in your contact list or to a channel of which you are a member.
 
 
 ## Zoom Mail
@@ -19394,13 +19901,13 @@ Enables interaction with the Zoom Mail API
 
 **Commands:**
 
-- `zoom-mail-email-move-trash`: 
-- `zoom-mail-email-list`: 
-- `zoom-mail-thread-list`: 
-- `zoom-mail-email-attachment-get`: 
-- `zoom-mail-send-email`: 
-- `zoom-mail-mailbox-profile-get`: 
-- `zoom-mail-user-list`: 
+- `zoom-mail-email-move-trash`: Move a message to the trash.
+- `zoom-mail-email-list`: Lists the messages in the user's mailbox.
+- `zoom-mail-thread-list`: Get an email thread.
+- `zoom-mail-email-attachment-get`: Get an email attachment.
+- `zoom-mail-send-email`: Sends an email message with support for plain text, HTML, and attachments.
+- `zoom-mail-mailbox-profile-get`: Retrieves the mailbox profile.
+- `zoom-mail-user-list`: Lists the available users.
 
 
 ## Zoom_IAM
@@ -19412,10 +19919,10 @@ An Identity and Access Management integration template. This integration was int
 
 **Commands:**
 
-- `iam-disable-user`: 
-- `iam-enable-user`: 
-- `iam-get-user`: 
-- `get-mapping-fields`: 
+- `iam-disable-user`: Disable an active user.
+- `iam-enable-user`: Enable a deactivated user.
+- `iam-get-user`: Retrieves a single user resource.
+- `get-mapping-fields`: Retrieves a User Profile schema, which holds all of the user fields within the application. Used for outgoing-mapping through the Get Schema option.
 
 
 ## ZoomApiModule

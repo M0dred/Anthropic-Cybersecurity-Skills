@@ -39,8 +39,12 @@ ACTI provides intelligence regarding security threats and vulnerabilities. This 
 
 **Commands:**
 
-- `acti-get-ioc-by-uuid`: 
-- `acti-get-fundamentals-by-uuid`: 
+- `ip`: Checks the reputation of the given IP address.
+- `domain`: Checks the reputation of the given domain.
+- `url`: Checks the reputation of the given URL.
+- `acti-get-ioc-by-uuid`: Checks reputation of a specific indicator(URL/IP/Domain) uuid.
+- `acti-get-fundamentals-by-uuid`: Checks reputation of a specific Malware Family/ Threat Campaign/ Threat Group/ Threat Actor.
+- `acti-getThreatIntelReport`: Fetches Intelligence Alerts & Intelligence Reports.
 
 
 ## ACTI Vulnerability Query
@@ -52,7 +56,7 @@ Accenture CTI provides intelligence regarding security threats and vulnerabiliti
 
 **Commands:**
 
-- `acti-vuln`: 
+- `acti-vuln`: Checks the reputation of the given common vulnerabilities and exposures ID.
 
 
 ## Active Directory - Get User Manager Details
@@ -77,8 +81,21 @@ The Active Directory Query integration enables you to access and manage Active D
 
 **Commands:**
 
-- `ad-expire-password`: 
-- `ad-modify-password-never-expire`: 
+- `ad-expire-password`: Expires the password of an Active Directory user.
+- `ad-modify-password-never-expire`: Modifies the AD account attribute "Password Never Expire".
+- `ad-create-user`: Creates an Active Directory user. This command requires a secure connection (SSL,TLS).
+- `ad-search`: Runs Active Directory queries.
+- `ad-add-to-group`: Adds an Active Directory user or computer to a group.
+- `ad-remove-from-group`: Removes an Active Directory user or computer from a group.
+- `ad-update-user`: Updates attributes of an existing Active Directory user.
+- `ad-delete-user`: Deletes an Active Directory user.
+- `ad-create-contact`: Creates an Active Directory contact.
+- `ad-update-contact`: Updates attributes of an existing Active Directory contact.
+- `ad-disable-account`: Disables an Active Directory user account.
+- `ad-enable-account`: Enables a previously disabled Active Directory account.
+- `ad-unlock-account`: Unlocks a previously locked Active Directory user account.
+- `ad-set-new-password`: Sets a new password for an Active Directory user. This command requires a secure connection (SSL,TLS).
+- `ad-modify-computer-ou`: Modifies the computer organizational unit within a domain.
 
 
 ## ActiveMQ
@@ -87,7 +104,8 @@ The Active Directory Query integration enables you to access and manage Active D
 **Product:** ActiveMQ  
 **Commands:**
 
-- `activemq-send`: 
+- `activemq-send`: Sends a message to the specified destination.
+- `activemq-subscribe`: Subscribes to and reads messages from a topic or queue. Must provide either queue-name or topic-name. You can't provide both.
 
 
 ## ADGetUser
@@ -130,21 +148,21 @@ Use Anomali ThreatStream to query and submit threats. Some changes have been mad
 
 **Commands:**
 
-- `threatstream-email-reputation`: 
-- `threatstream-get-passive-dns`: 
-- `threatstream-import-indicator-with-approval`: 
-- `threatstream-import-indicator-without-approval`: 
-- `threatstream-get-model-list`: 
-- `threatstream-get-model-description`: 
-- `threatstream-get-indicators-by-model`: 
-- `threatstream-submit-to-sandbox`: 
-- `threatstream-get-analysis-status`: 
-- `threatstream-analysis-report`: 
-- `threatstream-get-indicators`: 
-- `threatstream-add-tag-to-model`: 
-- `threatstream-create-model`: 
-- `threatstream-update-model`: 
-- `threatstream-supported-platforms`: 
+- `ip`: Checks the reputation of the given IP address.
+- `domain`: Checks the reputation of the given domain name.
+- `file`: Checks the reputation of the given hash of the file.
+- `threatstream-email-reputation`: Checks the reputation of the given email address.
+- `threatstream-get-passive-dns`: Returns enrichment data for Domain or IP for available observables.
+- `threatstream-import-indicator-with-approval`: Imports indicators (observables) into ThreatStream. The imported data must be approved using the ThreatStream UI. The data can be imported using one of three me
+- `threatstream-import-indicator-without-approval`: Imports indicators (observables) into ThreatStream. Approval is not required for the imported data. You must have the Approve Intel user permission to import wi
+- `threatstream-get-model-list`: Returns a list of threat models.
+- `threatstream-get-model-description`: Returns an HTML file with a description of the threat model.
+- `threatstream-get-indicators-by-model`: Returns a list of indicators associated with the specified model and ID of the model.
+- `threatstream-submit-to-sandbox`: Submits a file or URL to the ThreatStream-hosted sandbox for detonation.
+- `threatstream-get-analysis-status`: Returns the current status of the report submitted to the sandbox. The report ID is returned from the threatstream-submit-to-sandbox command.
+- `threatstream-analysis-report`: Returns the report of a file or URL submitted to the sandbox.
+- `threatstream-get-indicators`: Return filtered indicators from ThreatStream. If a query is defined, it overrides all other arguments that were passed to the command.
+- `threatstream-add-tag-to-model`: Adds tags to intelligence to filter for related entities.
 
 
 ## ARIA Packet Intelligence
@@ -156,21 +174,21 @@ The ARIA Cybesecurity Solutions Software-Defined Security (SDS) platform integra
 
 **Commands:**
 
+- `aria-block-conversation`: Creates a rule that drops all packets that match the specified 5-tuple values.
 - `aria-block-conversation`: 
-- `aria-block-conversation`: 
+- `aria-unblock-conversation`: Deletes a named rule from the 5-tuple logic block. This allows the previously blocked conversation to resume.
 - `aria-unblock-conversation`: 
-- `aria-unblock-conversation`: 
+- `aria-record-conversation`: Creates a rule that redirects a conversation that matches 5-tuple values to the Packet Recorder. Packets are tagged with the VID specified in the instance.
 - `aria-record-conversation`: 
-- `aria-record-conversation`: 
+- `aria-stop-recording-conversation`: Removes the named rule from the 5-tuple block. This stops redirecting traffic to the Packet Recorder.
 - `aria-stop-recording-conversation`: 
-- `aria-stop-recording-conversation`: 
+- `aria-alert-conversation`: Adds a rule that generates an alert when a conversation that matches the specified 5-tuple values is detected.
 - `aria-alert-conversation`: 
-- `aria-alert-conversation`: 
+- `aria-mute-alert-conversation`: Removes a named rule from the 5-tuple logic block, disabling the alerts.
 - `aria-mute-alert-conversation`: 
-- `aria-mute-alert-conversation`: 
+- `aria-block-dest-port`: Creates a rule that blocks packets destined for one or more specified ports.
 - `aria-block-dest-port`: 
-- `aria-block-dest-port`: 
-- `aria-unblock-dest-port`: 
+- `aria-unblock-dest-port`: Removes a named rule from the destination port logic block. This allows the previously blocked traffic to resume.
 
 
 ## ATD - Detonate File
@@ -230,12 +248,12 @@ Blueliv ThreatCompass systematically looks for information about companies,produ
 
 **Commands:**
 
-- `blueliv-resource-all`: 
-- `blueliv-resource-search`: 
-- `blueliv-resource-set-read-status`: 
-- `blueliv-resource-assign-rating`: 
-- `blueliv-resource-fav`: 
-- `blueliv-resource-set-tlp`: 
+- `blueliv-resource-all`: Recovers all resources from the module.
+- `blueliv-resource-search`: Search for a specific resource.
+- `blueliv-resource-set-read-status`: Mark the result as read or not.
+- `blueliv-resource-assign-rating`: Assign tating to a given result.
+- `blueliv-resource-fav`: Changes the favourite status of a resource.
+- `blueliv-resource-set-tlp`: Sets a new TLP status to a given resource.
 
 
 ## Blueliv ThreatContext
@@ -247,17 +265,17 @@ The Threat Context module provides SOC, Incident Response and Threat Intelligenc
 
 **Commands:**
 
-- `blueliv-authenticate`: 
-- `blueliv-tc-malware`: 
-- `blueliv-tc-indicator-ip`: 
-- `blueliv-tc-cve`: 
-- `blueliv-tc-indicator-fqdn`: 
-- `blueliv-tc-indicator-cs`: 
-- `blueliv-tc-threat-actor`: 
-- `blueliv-tc-campaign`: 
-- `blueliv-tc-attack-pattern`: 
-- `blueliv-tc-tool`: 
-- `blueliv-tc-signature`: 
+- `blueliv-authenticate`: Authenticate and get the API token
+- `blueliv-tc-malware`: Gets information about malware by ID
+- `blueliv-tc-indicator-ip`: Gets information about an IP
+- `blueliv-tc-cve`: Gets information about CVE
+- `blueliv-tc-indicator-fqdn`: Gets information about FQDN
+- `blueliv-tc-indicator-cs`: Gets information about a Crime Server
+- `blueliv-tc-threat-actor`: Gets information about a Threat Actor
+- `blueliv-tc-campaign`: Gets information about a Campaign
+- `blueliv-tc-attack-pattern`: Gets information about a Attack Pattern
+- `blueliv-tc-tool`: Gets information about a Tool
+- `blueliv-tc-signature`: Gets information about a Signature
 
 
 ## Brandefense Digital Risk Protection Services
@@ -266,6 +284,24 @@ The Threat Context module provides SOC, Incident Response and Threat Intelligenc
 **Product:** Brandefense Digital Risk Protection Services  
 
 Brandefense is a SaaS platform offering Digital Risk Protection Services (DRPS), External Attack Surface Management (EASM), and Actionable Threat Intelligence. This integration connects the platform, brand monitoring, and phishing response operations
+
+**Commands:**
+
+- `ip`: Investigate an IP address against Brandefense threat intelligence.
+- `domain`: Investigate a domain against Brandefense threat intelligence.
+- `url`: Investigate a URL against Brandefense threat intelligence.
+- `file`: Investigate a file hash against Brandefense threat intelligence.
+- `brandefense_get_incidents`: Get Brandefense incidents with optional filtering by status, module, category, and time period.
+- `brandefense_get_incident_detail`: Get detailed information for a specific Brandefense incident.
+- `brandefense_change_incident_status`: Change the status of a Brandefense incident.
+- `brandefense_incident_indicators`: Get indicators associated with a Brandefense incident.
+- `brandefense_get_incident_relatives`: Get related incidents for a specific Brandefense incident.
+- `threat_search`: Perform a CTI threat search and poll for results using ScheduledCommand.
+- `brandefense_get_intelligences`: Get Brandefense intelligence reports with optional filtering.
+- `brandefense_get_intelligence_detail`: Get detailed information for a specific intelligence report.
+- `brandefense_intelligence_indicators`: Get indicators associated with a Brandefense intelligence report.
+- `brandefense_get_intelligence_rules`: Get rules associated with a Brandefense intelligence report.
+- `brandefense_get_assets`: Get list of monitored assets from Brandefense.
 
 
 ## Check Point Threat Emulation (SandBlast)
@@ -277,10 +313,11 @@ Threat Emulation performs remote analysis by uploading files to a virtual SandBo
 
 **Commands:**
 
-- `sandblast-query`: 
-- `sandblast-upload`: 
-- `sandblast-download`: 
-- `sandblast-quota`: 
+- `file`: Runs reputation on files.
+- `sandblast-query`: Use the Query API to have a client application look for either the analysis report of a specific file on the Check Point Threat Prevention service databases or 
+- `sandblast-upload`: Use the Upload API to have a client application request that Check Point Threat Prevention modules scan and analyze a file. When you upload a file to the servic
+- `sandblast-download`: Use the Download API to download a scanned file from the ThreatCloud according to the file ID.
+- `sandblast-quota`: Use the Quote API to have a client application get the current license and quota status of the API Key that you use in the authorization of the other APIs. For 
 
 
 ## Cofense Intelligence v2
@@ -292,8 +329,13 @@ Use the Cofense Intelligence integration to check the reputation of domains, URL
 
 **Commands:**
 
-- `cofense-search`: 
-- `cofense-threat-report-get`: 
+- `ip`: Checks the reputation of an IP address.
+- `cofense-search`: Retrieves a specific threat or a list of threats based on the filter values provided in the command arguments.
+- `file`: Checks the reputation of a file hash.
+- `email`: Checks the reputation of an email address.
+- `url`: Checks the reputation of a URL.
+- `domain`: Checks the reputation of the domain.
+- `cofense-threat-report-get`: Downloads threat report provided by cofense intelligence of an indicator for the given unique report id.
 
 
 ## Compare Process Execution Arguments To LOLBAS Patterns
@@ -546,7 +588,7 @@ Cybersixgill automatically collects intelligence in real-time on all items that 
 
 **Commands:**
 
-- `cybersixgill-update-alert-status`: 
+- `cybersixgill-update-alert-status`: updates the existing actionable alert status
 
 
 ## CybersixgillActionableAlertStatusUpdate
@@ -566,12 +608,12 @@ This integration enables your organization to efficiently collect, analyze, and 
 
 **Commands:**
 
-- `cypho-get-incident`: 
-- `cypho-assign-incident`: 
-- `cypho-add-comment`: 
-- `cypho-update-severity`: 
-- `cypho-download-attachment`: 
-- `cypho-approve-dismiss-issue`: 
+- `cypho-get-incident`: Retrieves the full details of a specific security incident from Cypho using its unique ticket_id. This command returns the raw response from the Cypho API, incl
+- `cypho-assign-incident`: Assign a Cypho issue to an analyst by constructing their email from the given username and domain. The incident is assigned and updated with this user’s email.
+- `cypho-add-comment`: This command sends a comment as the status_reason parameter and attributes it to a user constructed from the provided username and domain. It is used to log inv
+- `cypho-update-severity`: Updates the severity level of a specific Cypho issue using its unique ticket ID. This command is used to escalate or de-escalate the risk level ("Low", "Moderat
+- `cypho-download-attachment`: Downloads one or more attachments from a Cypho incident using the incident's unique "ticket_id". The command retrieves the attachment URLs from the issue and re
+- `cypho-approve-dismiss-issue`: Approves or dismisses a Cypho issue based on the provided ticket ID, user email, and approval decision.
 
 
 ## CyphoAddCommentButton
@@ -685,21 +727,21 @@ The Cyware Intel Exchange integration allows users to fetch threat intelligence 
 
 **Commands:**
 
-- `ctix-create-tag`: 
-- `ctix-get-tags`: 
-- `ctix-disable-or-enable-tags`: 
-- `ctix-allowed-iocs`: 
-- `ctix-get-allowed-iocs`: 
-- `ctix-remove-allowed-ioc`: 
-- `ctix-get-threat-data`: 
-- `ctix-get-saved-searches`: 
-- `ctix-get-server-collections`: 
-- `ctix-get-actions`: 
-- `ctix-add-indicator-as-false-positive`: 
-- `ctix-ioc-manual-review`: 
-- `ctix-deprecate-ioc`: 
-- `ctix-add-analyst-tlp`: 
-- `ctix-add-analyst-score`: 
+- `ctix-create-tag`: Create a new tag in the Cyware Intel Exchange platform
+- `ctix-get-tags`: Get a paginated list of tags.
+- `ctix-disable-or-enable-tags`: Enable or disable tags in the Cyware Intel Exchange platform.
+- `ctix-allowed-iocs`: Add a list of same type IOCs to the allowed list.
+- `ctix-get-allowed-iocs`: Get a paginated list of allowed IOCs.
+- `ctix-remove-allowed-ioc`: Removes an allowed IOC using the specified ID.
+- `ctix-get-threat-data`: Command for querying and listing threat data.
+- `ctix-get-saved-searches`: List saved searches with pagination.
+- `ctix-get-server-collections`: List source collections with pagination.
+- `ctix-get-actions`: List enrichment tools.
+- `ctix-add-indicator-as-false-positive`: Marks indicators as false positive in bulk.
+- `ctix-ioc-manual-review`: Add IOCs to manual review in bulk.
+- `ctix-deprecate-ioc`: Deprecates IOCs in bulk
+- `ctix-add-analyst-tlp`: Add analyst TLP
+- `ctix-add-analyst-score`: Add analyst score for threat data.
 
 
 ## Darkfeed IOC detonation and proactive blocking
@@ -803,21 +845,21 @@ Digital Shadows monitors and manages an organization's digital risk across the w
 
 **Commands:**
 
-- `ds-get-breach-reviews`: 
-- `ds-snapshot-breach-status`: 
-- `ds-find-breach-records`: 
-- `ds-get-breach-summary`: 
-- `ds-find-breach-usernames`: 
-- `ds-get-breach`: 
-- `ds-get-breach-records`: 
-- `ds-find-data-breaches`: 
-- `ds-get-incident`: 
-- `ds-get-incident-reviews`: 
-- `ds-snapshot-incident-review`: 
-- `ds-find-incidents-filtered`: 
-- `ds-get-incidents-summary`: 
-- `ds-get-apt-report`: 
-- `ds-get-intelligence-incident`: 
+- `ds-get-breach-reviews`: Retrieve all review updates for a given data breach record
+- `ds-snapshot-breach-status`: Snapshot the review status of a data breach record
+- `ds-find-breach-records`: Find data breach records
+- `ds-get-breach-summary`: Summary of all data breaches for the current client
+- `ds-find-breach-usernames`: Find unique usernames found across all data breaches
+- `ds-get-breach`: Retrieve a data breach by its id
+- `ds-get-breach-records`: Find data breach records
+- `ds-find-data-breaches`: Find data breaches
+- `ds-get-incident`: Retrieve an incident by its id
+- `ds-get-incident-reviews`: Retrieve all review updates for a given incident
+- `ds-snapshot-incident-review`: Snapshot the review status of an incident
+- `ds-find-incidents-filtered`: Find incidents with filtering options
+- `ds-get-incidents-summary`: Aggregated summary of incident information used to generate reports/statistics
+- `ds-get-apt-report`: Retrieve details of the specified APT report
+- `ds-get-intelligence-incident`: Retrieve an intelligence incident by its id
 
 
 ## Digital Shadows - Domain Alert Intelligence (Automated)
@@ -878,16 +920,21 @@ Threat Intelligence Platform that connects and interprets intelligence data from
 
 **Commands:**
 
-- `eclecticiq-get-entity`: 
-- `eclecticiq-create-sighting`: 
-- `eclecticiq-create-indicator`: 
-- `eclecticiq-get-entity-by-id`: 
-- `eclecticiq-request-get`: 
-- `eclecticiq-request-post`: 
-- `eclecticiq-request-put`: 
-- `eclecticiq-request-patch`: 
-- `eclecticiq-request-delete`: 
-- `eclecticiq-get-indicators`: 
+- `ip`: Get reputation of IP address observable.
+- `url`: Gets the reputation of a URL observable.
+- `file`: Gets the reputation of a file hash observable.
+- `eclecticiq-get-entity`: Query EIC for entity.
+- `email`: Gets the reputation of an email address observable.
+- `domain`: Gets the reputation of a domain observable.
+- `eclecticiq-create-sighting`: Create a sighting entity on EIC. Must contain at least one observable.
+- `eclecticiq-create-indicator`: Create an indicator entity on EIC. Must contain at least one observable.
+- `eclecticiq-get-entity-by-id`: Query EclecticIQ Intelligence Center for entity by its ID.
+- `eclecticiq-request-get`: Make HTTP GET request to EclecticIQ Intelligence Center.
+- `eclecticiq-request-post`: Make HTTP POST request to EclecticIQ Intelligence Center.
+- `eclecticiq-request-put`: Make HTTP PUT request to EclecticIQ Intelligence Center.
+- `eclecticiq-request-patch`: Make HTTP PATCH request to EclecticIQ Intelligence Center.
+- `eclecticiq-request-delete`: Make HTTP DELETE request to EclecticIQ Intelligence Center.
+- `eclecticiq-get-indicators`: Get last block of Indicators from configured to fetch Outgoing feed.
 
 
 ## Email Collection by Enriched Domain - Google Threat Intelligence
@@ -948,7 +995,7 @@ Real-Time Threat Intelligence Feeds provide data on the different stages of the 
 
 **Commands:**
 
-- `domaintools-get-indicators`: 
+- `domaintools-get-indicators`: Gets indicators from the feed.
 
 
 ## Fighting Ursa Luring Targets With Car For Sale
@@ -986,11 +1033,11 @@ FireEye Detection On Demand is a threat detection service delivered as an API fo
 
 **Commands:**
 
-- `fireeye-dod-get-hashes`: 
-- `fireeye-dod-submit-file`: 
-- `fireeye-dod-submit-urls`: 
-- `fireeye-dod-get-reports`: 
-- `fireeye-dod-get-report-url`: 
+- `fireeye-dod-get-hashes`: Queries FireEye Detection on Demand reports for the provided md5 hashes
+- `fireeye-dod-submit-file`: Submits file to FireEye Detection on Demand for analysis
+- `fireeye-dod-submit-urls`: Submits URLs to FireEye Detection on Demand for analysis
+- `fireeye-dod-get-reports`: Retrieves one or more reports of file scans
+- `fireeye-dod-get-report-url`: Generates a pre-signed URL for a report
 
 
 ## Get Email From Email Gateway - Proofpoint Protection Server
@@ -1069,21 +1116,21 @@ This script prevents duplication of existing incidents
 **Product:** Gigamon ThreatINSIGHT  
 **Commands:**
 
-- `insight-get-sensors`: 
-- `insight-get-devices`: 
-- `insight-get-tasks`: 
-- `insight-create-task`: 
-- `insight-get-telemetry-events`: 
-- `insight-get-telemetry-packetstats`: 
-- `insight-get-telemetry-network`: 
-- `insight-get-entity-summary`: 
-- `insight-get-entity-pdns`: 
-- `insight-get-entity-dhcp`: 
-- `insight-get-entity-file`: 
-- `insight-get-detections`: 
-- `insight-get-detection-rules`: 
-- `insight-resolve-detection`: 
-- `insight-get-detection-rule-events`: 
+- `insight-get-sensors`: Get a list of all sensors.
+- `insight-get-devices`: Get a list of all devices.
+- `insight-get-tasks`: Get a list of all the PCAP tasks.
+- `insight-create-task`: Create a new PCAP task.
+- `insight-get-telemetry-events`: Get event telemetry data grouped by time.
+- `insight-get-telemetry-packetstats`: Get packetstats telemetry data grouped by time.
+- `insight-get-telemetry-network`: Get network telemetry data grouped by time
+- `insight-get-entity-summary`: Get summary information about an IP or domain.
+- `insight-get-entity-pdns`: Get passive DNS information about an IP or domain.
+- `insight-get-entity-dhcp`: Get DHCP information about an IP address.
+- `insight-get-entity-file`: Get information about a file.
+- `insight-get-detections`: Get a list of detections.
+- `insight-get-detection-rules`: Get a list of detection rules.
+- `insight-resolve-detection`: Resolve a specific detection.
+- `insight-get-detection-rule-events`: Get a list of the events that matched on a specific rule.
 
 
 ## Google Threat Intelligence
@@ -1095,21 +1142,21 @@ This integration analyzes suspicious hashes, URLs, domains, and IP addresses
 
 **Commands:**
 
-- `url-scan`: 
-- `gti-comments-add`: 
-- `gti-file-scan-upload-url`: 
-- `gti-comments-delete`: 
-- `gti-comments-get`: 
-- `gti-comments-get-by-id`: 
-- `gti-search`: 
-- `gti-file-sandbox-report`: 
-- `gti-passive-dns-data`: 
-- `gti-analysis-get`: 
-- `gti-file-sigma-analysis`: 
-- `gti-privatescanning-file`: 
-- `gti-privatescanning-file-scan`: 
-- `gti-privatescanning-analysis-get`: 
-- `gti-curated-threat-actors-get`: 
+- `ip`: Checks the reputation of an IP address.
+- `url`: Checks the reputation of a URL.
+- `domain\`: Checks the reputation of a domain.
+- `cve`: Retrieves CVE information from Google Threat Intelligence.
+- `url-scan`: Scans a specified URL. Use the gti-analysis-get command to get the scan results.
+- `gti-comments-add`: Adds comments to files and URLs.
+- `gti-file-scan-upload-url`: Premium API. Get a special URL for files larger than 32 MB.
+- `gti-comments-delete`: Delete a comment.
+- `gti-comments-get`: Retrieves comments for a given resource.
+- `gti-comments-get-by-id`: Retrieves a comment by comment ID.
+- `gti-search`: Search for an indicator in GoogleThreatIntelligence.
+- `gti-file-sandbox-report`: Retrieves a behavioral relationship of the given file hash.
+- `gti-passive-dns-data`: Returns passive DNS records by indicator.
+- `gti-analysis-get`: Retrieves resolutions of the given IP.
+- `gti-file-sigma-analysis`: Retrieves result of the last Sigma analysis.
 
 
 ## Google Threat Intelligence - ASM Issues
@@ -1121,9 +1168,9 @@ This integration allows the creation of incidents based on ASM Issues from Googl
 
 **Commands:**
 
-- `gti-asm-issue-list`: 
-- `gti-asm-issue-get`: 
-- `gti-asm-issue-status-update`: 
+- `gti-asm-issue-list`: Search the ASM Issues with provided filter arguments.
+- `gti-asm-issue-get`: Get a particular ASM Issue by ID.
+- `gti-asm-issue-status-update`: Update the status of an ASM Issue.
 
 
 ## Google Threat Intelligence - DTM Alerts
@@ -1135,9 +1182,9 @@ This integration allows the creation of incidents based on DTM Alerts from Googl
 
 **Commands:**
 
-- `gti-dtm-alert-list`: 
-- `gti-dtm-alert-get`: 
-- `gti-dtm-alert-status-update`: 
+- `gti-dtm-alert-list`: Search the DTM Alerts with provided filter arguments.
+- `gti-dtm-alert-get`: Get a particular DTM Alert by ID.
+- `gti-dtm-alert-status-update`: Update the status of DTM alert.
 
 
 ## Google Threat Intelligence - Relevance System Alerts
@@ -1149,9 +1196,9 @@ This integration allows the creation of incidents based on RS Alerts from Google
 
 **Commands:**
 
-- `gti-rs-alert-list`: 
-- `gti-rs-alert-get`: 
-- `gti-rs-alert-status-update`: 
+- `gti-rs-alert-list`: List the RS Alerts with provided filter arguments.
+- `gti-rs-alert-get`: Get a particular RS Alert by ID.
+- `gti-rs-alert-status-update`: Update the status of an RS Alert.
 
 
 ## Group-IB Digital Risk Protection
@@ -1163,11 +1210,11 @@ Pack helps to integrate Group-IB Digital Risk Protection and get violations inci
 
 **Commands:**
 
-- `gibdrp-get-brands`: 
-- `gibdrp-get-subscriptions`: 
-- `gibdrp-get-violation-by-id`: 
-- `gibdrp-change-violation-status`: 
-- `gibdrp-create-violation`: 
+- `gibdrp-get-brands`: Receive all configured brands.
+- `gibdrp-get-subscriptions`: Receive all configured subscriptions.
+- `gibdrp-get-violation-by-id`: Getting a single violation by its ID.
+- `gibdrp-change-violation-status`: Approves or rejects a single violation pending customer review (approveState under_review). Reports whether the instance wants the incident closed after an appr
+- `gibdrp-create-violation`: Creates one or more violations in the Group-IB DRP portal. Fails with an error entry if the DRP API rejects every submitted item; a partial success reports both
 
 
 ## Group-IB Threat Intelligence
@@ -1179,21 +1226,21 @@ Pack helps to integrate Group-IB Threat Intelligence and get incidents directly 
 
 **Commands:**
 
-- `gibti-get-compromised-account-info`: 
-- `gibti-get-compromised-breached-info`: 
-- `gibti-get-compromised-mule-info`: 
-- `gibti-get-compromised-spd-info`: 
-- `gibti-get-osi-git-leak-info`: 
-- `gibti-get-osi-public-leak-info`: 
-- `gibti-get-osi-vulnerability-info`: 
-- `gibti-get-attacks-ddos-info`: 
-- `gibti-get-attacks-deface-info`: 
-- `gibti-get-phishing-kit-info`: 
-- `gibti-get-threat-info`: 
-- `gibti-get-threat-actor-info`: 
-- `gibti-get-suspicious-ip-tor-node-info`: 
-- `gibti-get-suspicious-ip-open-proxy-info`: 
-- `gibti-get-suspicious-ip-socks-proxy-info`: 
+- `gibti-get-compromised-account-info`: Command performs Group-IB event lookup in compromised/account collection with provided ID.
+- `gibti-get-compromised-breached-info`: Command performs Group-IB event lookup in compromised/breached collection with provided ID.
+- `gibti-get-compromised-mule-info`: Command performs Group-IB event lookup in compromised/mule collection with provided ID.
+- `gibti-get-compromised-spd-info`: Command performs Group-IB event lookup in compromised/spd (suspicious payment details) collection with provided ID. Returns payment-related observables (e.g. cr
+- `gibti-get-osi-git-leak-info`: Command performs Group-IB event lookup in osi/git_leak collection with provided ID.
+- `gibti-get-osi-public-leak-info`: Command performs Group-IB event lookup in osi/public_leak collection with provided ID.
+- `gibti-get-osi-vulnerability-info`: Command performs Group-IB event lookup in osi/vulnerability collection with provided ID.
+- `gibti-get-attacks-ddos-info`: Command performs Group-IB event lookup in attacks/ddos collection with provided ID.
+- `gibti-get-attacks-deface-info`: Command performs Group-IB event lookup in attacks/deface collection with provided ID.
+- `gibti-get-phishing-kit-info`: Command performs Group-IB event lookup in attacks/phishing_kit collection with provided ID.
+- `gibti-get-threat-info`: Command performs Group-IB event lookup in hi/threat (or in apt/threat if the APT flag is true) collection with provided ID.
+- `gibti-get-threat-actor-info`: Command performs Group-IB event lookup in hi/threat_actor (or in apt/threat_actor if the APT flag is true) collection with provided ID.
+- `gibti-get-suspicious-ip-tor-node-info`: Command performs Group-IB event lookup in suspicious_ip/tor_node collection with provided ID.
+- `gibti-get-suspicious-ip-open-proxy-info`: Command performs Group-IB event lookup in suspicious_ip/open_proxy collection with provided ID.
+- `gibti-get-suspicious-ip-socks-proxy-info`: Command performs Group-IB event lookup in suspicious_ip/socks_proxy collection with provided ID.
 
 
 ## Handle TD events
@@ -1218,7 +1265,7 @@ This integration fetches alerts from iManage Threat Manager, an AI-driven securi
 
 **Commands:**
 
-- `imanage-threat-manager-get-events`: 
+- `imanage-threat-manager-get-events`: Fetches events from iManage Threat Manager. This manual command is used for developing or debugging and should be used with caution, as it can create events, le
 
 
 ## Indicator Enrichment - Infoblox Cloud
@@ -1260,14 +1307,15 @@ Infoblox Threat Defense with DDI integration leverages DNS as the first line of 
 
 **Commands:**
 
-- `bloxone-td-dossier-lookup-get`: 
-- `bloxone-td-dossier-source-list`: 
-- `bloxone-td-lookalike-domain-list`: 
-- `infobloxcloud-block-ip`: 
-- `infobloxcloud-unblock-ip`: 
-- `infobloxcloud-block-domain`: 
-- `infobloxcloud-unblock-domain`: 
-- `infobloxcloud-customlist-indicator-remove`: 
+- `bloxone-td-dossier-lookup-get`: The Dossier Lookup API returns detailed information on the specified indicator from the requested sources.
+- `bloxone-td-dossier-source-list`: Get available Dossier sources.
+- `bloxone-td-lookalike-domain-list`: Get lookalike domain lists.
+- `infobloxcloud-block-ip`: The given IP addresses will be added to the provided block list.
+- `infobloxcloud-unblock-ip`: The given IP addresses will be added to the provided allow list.
+- `infobloxcloud-block-domain`: The given domains will be added to the provided block list.
+- `infobloxcloud-unblock-domain`: The given domains will be added to the provided allow list.
+- `infobloxcloud-customlist-indicator-remove`: The given indicators will be removed from the provided custom list.
+- `ip`: Gets the comprehensive IP reputation and threat intelligence from Infoblox Threat Defense, including threat indicators, IPAM address information, and standard I
 
 
 ## Intel471 Credentials
@@ -1279,7 +1327,7 @@ Fetches leaked credentials from the Intel471 Credentials API (/credentials/strea
 
 **Commands:**
 
-- `intel471-credentials-get-indicators`: 
+- `intel471-credentials-get-indicators`: Gets a preview of indicators that the feed would pull on the next run (no state is persisted).
 
 
 ## IP Enrichment - External - RST Threat Feed
@@ -1315,15 +1363,18 @@ This playbook enriches IP addresses with the dossier, TIDE and asset data using 
 **Product:** IPQualityScore (IPQS) Threat Risk Scoring  
 **Commands:**
 
-- `ipqs-ip-reputation`: 
-- `ipqs-email-reputation`: 
-- `ipqs-url-reputation`: 
-- `ipqs-phone-reputation`: 
-- `ipqs-username-leaked`: 
-- `ipqs-password-leaked`: 
-- `ipqs-email-leaked`: 
-- `ipqs-file-scan`: 
-- `ipqs-url-file-scan`: 
+- `ipqs-ip-reputation`: Runs reputation on IPs.
+- `ip`: Deprecated. Use ipqs-ip-reputation instead.
+- `ipqs-email-reputation`: Runs reputation on email addresses.
+- `email`: Deprecated. Use ipqs-email-reputation instead.
+- `ipqs-url-reputation`: Runs reputation on URLs.
+- `url`: Deprecated. Use ipqs-url-reputation instead.
+- `ipqs-phone-reputation`: Runs validation and reputation on phone numbers.
+- `ipqs-username-leaked`: Checks if a username has been exposed in known data breaches.
+- `ipqs-password-leaked`: Checks if a password has been exposed in known data breaches.
+- `ipqs-email-leaked`: Checks if an email address has been exposed in known data breaches.
+- `ipqs-file-scan`: Uploads a file and scans it using the IPQualityScore Malware File Scanner API. First attempts a cached lookup by file hash; if not cached, the file is submitted
+- `ipqs-url-file-scan`: Submits a URL to the IPQualityScore Malware File Scanner API. First attempts a cached lookup; if not cached, the URL is submitted for scanning. Polls for result
 
 
 ## Malwarebytes
@@ -1332,7 +1383,21 @@ This playbook enriches IP addresses with the dossier, TIDE and asset data using 
 **Product:** ThreatDown  
 **Commands:**
 
-- `malwarebytes-scan-and-remediate`: 
+- `malwarebytes-scan-and-remediate`: Initiate Scan and Remediate action on an endpoint based on IP or Hostname.
+- `malwarebytes-scan-and-report`: Initiate Scan and report action on an endpoint based on IP or Hostname.
+- `malwarebytes-isolate-endpoint`: Initiate Isolation action on an endpoint based on IP or Hostname. This action isolate an endpoint by Process, Network and Desktop.
+- `malwarebytes-isolate-process`: Initiate Process Isolation action on an endpoint based on IP or Hostname.
+- `malwarebytes-isolate-desktop`: Initiate Desktop Isolation action on an endpoint based on IP or Hostname.
+- `malwarebytes-isolate-network`: Initiate Network Isolation action on an endpoint based on IP or Hostname.
+- `malwarebytes-deisolate-endpoint`: Initiate Deisolation action on an endpoint based on IP or Hostname. This action deisolate an endpoint by Process, Network and Desktop.
+- `malwarebytes-list-endpoints`: List all/online/offline endpoints available in the Malwarebytes Cloud.
+- `malwarebytes-list-endpoint-info`: Lists more granular information about an endpoint.
+- `malwarebytes-get-scan-detections`: Lists detections from an endpoint for the scans initiated from the platform.
+- `malwarebytes-get-job-status`: Lists scan/isolation/deisolation status of the endpoint for the scan/isolation/deisolation initated from the platform.
+- `malwarebytes-open-sa-incident`: Open Suspicious Activity for investigation in Malwarebytes Cloud. Use malwarebytes-get-sa-activities command to get machine and detection ID.
+- `malwarebytes-remediate-sa-incident`: Remediate Suspicious Activity from Malwarebytes Cloud. Use malwarebytes-get-sa-activities command to get machine and detection ID.
+- `malwarebytes-close-sa-incident`: Close Suspicious Activity Incident in Malwarebytes Cloud. Use malwarebytes-get-sa-activities command to get machine and detection ID.
+- `malwarebytes-get-sa-activities`: Lists all suspicious activities from hostname value and list all the hostnames from path of file.
 
 
 ## Mandiant Advantage Threat Intelligence
@@ -1344,10 +1409,15 @@ Enrich Indicators of Compromise, and fetch information about Actors, Malware Fam
 
 **Commands:**
 
-- `mati-get-indicator`: 
-- `mati-get-actor`: 
-- `mati-get-malware`: 
-- `mati-get-campaign`: 
+- `mati-get-indicator`: Get information about a single Indicator of Compromise from Mandiant
+- `mati-get-actor`: Get information about a Threat Actor from Mandiant
+- `mati-get-malware`: Get information about a Malware Family from Mandiant
+- `file`: Retrieve information about a File Hash from Mandiant
+- `ip`: Retrieve information about an IP Address from Mandiant
+- `url`: Retrieve information about a URL from Mandiant
+- `domain`: Retrieve information about an FQDN from Mandiant
+- `cve`: Retrieve information about a Vulnerability (by CVE) from Mandiant
+- `mati-get-campaign`: Retrieve information about a Campaign from Mandiant
 
 
 ## Mandiant Enrich
@@ -1359,9 +1429,14 @@ Enrich Indicators of Compromise using the platform, and create indicators for Th
 
 **Commands:**
 
-- `mati-get-actor`: 
-- `mati-get-malware`: 
-- `mati-get-campaign`: 
+- `file`: Get information about a file hash from Mandiant.
+- `ip`: Get information about an IP address from Mandiant.
+- `url`: Get information about a URL from Mandiant.
+- `domain`: Get information about a domain from Mandiant.
+- `cve`: Get information about a CVE from Mandiant.
+- `mati-get-actor`: Get information about a Threat Actor from Mandiant.
+- `mati-get-malware`: Get information about a Malware Family from Mandiant.
+- `mati-get-campaign`: Retrieve information about a Campaign from Mandiant.
 
 
 ## MAR - Endpoint data collection
@@ -1385,8 +1460,9 @@ Use the McAfee Threat Intelligence Exchange (TIE) integration to get file reputa
 
 **Commands:**
 
-- `tie-set-file-reputation`: 
-- `tie-file-references`: 
+- `file`: Retrieves the reputations for the specified hashes. Can be "MD5", "SHA1", or "SHA256".
+- `tie-set-file-reputation`: Sets the “Enterprise” reputation (trust level, filename, and comment) of the specified hashes. Hashes that represent the same file can have a different "Enterpr
+- `tie-file-references`: Retrieves the set of systems which have referenced (typically executed) the specified hashes.
 
 
 ## MITRE ATT&CK - Courses of Action
@@ -1775,8 +1851,8 @@ Retrieve alerts and recommendations from NTT CTS This integration was integrated
 
 **Commands:**
 
-- `ntt-cyber-threat-sensor-poll-blobs`: 
-- `ntt-cyber-threat-sensor-fetch-blobs`: 
+- `ntt-cyber-threat-sensor-poll-blobs`: Check if blobs is available
+- `ntt-cyber-threat-sensor-fetch-blobs`: Collecting blobs, most commonly pcap from an incident
 
 
 ## OpenCTI
@@ -1788,21 +1864,21 @@ Manages indicators from OpenCTI. This integration was tested with version 5.12.1
 
 **Commands:**
 
-- `opencti-get-indicators`: 
-- `opencti-indicator-delete`: 
-- `opencti-indicator-field-update`: 
-- `opencti-indicator-create`: 
-- `opencti-indicator-field-add`: 
-- `opencti-indicator-field-remove`: 
-- `opencti-indicator-create`: 
-- `opencti-label-list`: 
-- `opencti-label-create`: 
-- `opencti-external-reference-create`: 
-- `opencti-marking-definition-list`: 
-- `opencti-relationship-create`: 
-- `opencti-incident-delete`: 
-- `opencti-incident-create`: 
-- `opencti-observable-field-add`: 
+- `opencti-get-indicators`: Get indicators in OpenCTI.
+- `opencti-indicator-delete`: Delete indicator.
+- `opencti-indicator-field-update`: Update the indicator field. The fields that can be updated are: score, description.
+- `opencti-indicator-create`: Create new indicator.
+- `opencti-indicator-field-add`: Add a field to the indicator. Fields that can be added are marking definition and label.
+- `opencti-indicator-field-remove`: Remove indicator field value. Fields which values can be removed are marking definition and label.
+- `opencti-indicator-create`: Create a new indicator in OpenCTI.
+- `opencti-label-list`: Get list of all labels.
+- `opencti-label-create`: Create a new label.
+- `opencti-external-reference-create`: Create external reference.
+- `opencti-marking-definition-list`: Get a list of all marking definitions.
+- `opencti-relationship-create`: Create new relationship.
+- `opencti-incident-delete`: Delete incident.
+- `opencti-incident-create`: Create new incident.
+- `opencti-observable-field-add`: Add a field to the observable. Fields that can be added are marking definition and label.
 
 
 ## OpenCTI Create Indicator
@@ -1833,10 +1909,12 @@ Use the Palo Alto Networks Threat Vault to research the latest threats (vulnerab
 
 **Commands:**
 
-- `threatvault-threat-signature-get`: 
-- `threatvault-release-note-get`: 
-- `threatvault-threat-batch-search`: 
-- `threatvault-threat-search`: 
+- `file`: Checks the reputation of an antivirus in Threat Vault.
+- `cve`: Checks the reputation of CVE in Threat Vault.
+- `threatvault-threat-signature-get`: Gets the antivirus or anti-spyware or files signature.
+- `threatvault-release-note-get`: Retrieves the release notes information by version.
+- `threatvault-threat-batch-search`: Retrieves the threats signature metadata by ID, name, or sample hash (sha256 or md5) in batch mode. Batch limit is 100 entries.
+- `threatvault-threat-search`: Retrieves threat metadata. The nature of the query is determined by the query parameter you provide.
 
 
 ## PAN-OS - Apply Security Profile to Policy Rule
@@ -1989,18 +2067,18 @@ Proofpoint email security appliance. This integration was integrated and tested 
 
 **Commands:**
 
-- `proofpoint-pps-smart-search`: 
-- `proofpoint-pps-quarantine-messages-list`: 
-- `proofpoint-pps-quarantine-message-release`: 
-- `proofpoint-pps-quarantine-message-resubmit`: 
-- `proofpoint-pps-quarantine-message-forward`: 
-- `proofpoint-pps-quarantine-message-move`: 
-- `proofpoint-pps-quarantine-message-delete`: 
-- `proofpoint-pps-quarantine-message-download`: 
-- `proofpoint-pps-get-user`: 
-- `proofpoint-pps-create-user`: 
-- `proofpoint-pps-modify-user`: 
-- `proofpoint-pps-delete-user`: 
+- `proofpoint-pps-smart-search`: Trace and analyze information about messages after they have been filtered by the Proofpoint Protection Server.
+- `proofpoint-pps-quarantine-messages-list`: Search for quarantined messages.
+- `proofpoint-pps-quarantine-message-release`: Releases the message to the email infrastructure without further scanning. The message remains in the folder and is moved to the deleted_folder if specified.
+- `proofpoint-pps-quarantine-message-resubmit`: Resubmits the message to the filtering modules. The message is removed from the folder and is moved to any folder.
+- `proofpoint-pps-quarantine-message-forward`: Forwards the message to another recipient. The message remains in the folder and will be moved to the deleted_folder if specified.
+- `proofpoint-pps-quarantine-message-move`: Moves the message to the specified target folder.
+- `proofpoint-pps-quarantine-message-delete`: Deletes the message from the quarantine folder. The message is removed from its folder and is moved to the deleted_folder if specified.
+- `proofpoint-pps-quarantine-message-download`: Downloads an email message's raw data.
+- `proofpoint-pps-get-user`: Gets the end user resource with the specified email address or UID.
+- `proofpoint-pps-create-user`: Creates a new end user resource with the specified email address.
+- `proofpoint-pps-modify-user`: Modifies a user profile.
+- `proofpoint-pps-delete-user`: Delete a user profile.
 
 
 ## Proofpoint Threat Protection
@@ -2012,16 +2090,16 @@ Threat Protection APIs are REST APIs that allow Proofpoint On Demand customers t
 
 **Commands:**
 
-- `proofpoint-tp-blocklist-get`: 
-- `proofpoint-tp-blocklist-add-or-delete-entry`: 
-- `proofpoint-tp-safelist-get`: 
-- `proofpoint-tp-safelist-add-or-delete-entry`: 
-- `proofpoint-tp-blocklist-list`: 
-- `proofpoint-tp-blocklist-add-entry`: 
-- `proofpoint-tp-blocklist-delete-entry`: 
-- `proofpoint-tp-safelist-list`: 
-- `proofpoint-tp-safelist-add-entry`: 
-- `proofpoint-tp-safelist-delete-entry`: 
+- `proofpoint-tp-blocklist-get`: Get all entries in the Organizational Block List.
+- `proofpoint-tp-blocklist-add-or-delete-entry`: Add/Delete entry from the Organizational Block List.
+- `proofpoint-tp-safelist-get`: Get all entries in the Organizational Safe List.
+- `proofpoint-tp-safelist-add-or-delete-entry`: Add To/Delete From the Organizational Safe List.
+- `proofpoint-tp-blocklist-list`: Get entries from the Organizational Block List.
+- `proofpoint-tp-blocklist-add-entry`: Add an entry to the Organizational Block List.
+- `proofpoint-tp-blocklist-delete-entry`: Delete an entry from the Organizational Block List.
+- `proofpoint-tp-safelist-list`: Get entries from the Organizational Safe List.
+- `proofpoint-tp-safelist-add-entry`: Add an entry to the Organizational Safe List.
+- `proofpoint-tp-safelist-delete-entry`: Delete an entry from the Organizational Safe List.
 
 
 ## Proofpoint Threat Response
@@ -2033,21 +2111,21 @@ Use the Proofpoint Threat Response integration to orchestrate and automate incid
 
 **Commands:**
 
-- `proofpoint-tr-get-list`: 
-- `proofpoint-tr-add-to-list`: 
-- `proofpoint-tr-block-ip`: 
-- `proofpoint-tr-block-domain`: 
-- `proofpoint-tr-search-indicator`: 
-- `proofpoint-tr-delete-indicator`: 
-- `proofpoint-tr-block-url`: 
-- `proofpoint-tr-block-hash`: 
-- `proofpoint-tr-list-incidents`: 
-- `proofpoint-tr-get-incident`: 
-- `proofpoint-tr-update-incident-comment`: 
-- `proofpoint-tr-add-user-to-incident`: 
-- `proofpoint-tr-ingest-alert`: 
-- `proofpoint-tr-close-incident`: 
-- `proofpoint-tr-verify-quarantine`: 
+- `proofpoint-tr-get-list`: Gets items for the specified list.
+- `proofpoint-tr-add-to-list`: Adds a member to the specified list.
+- `proofpoint-tr-block-ip`: Adds the supplied IP addresses to the specified IP block list.
+- `proofpoint-tr-block-domain`: Adds the supplied domains to the specified block list.
+- `proofpoint-tr-search-indicator`: Returns indicators from the specified list, according to the defined filter.
+- `proofpoint-tr-delete-indicator`: Deletes an indicator from the specified list.
+- `proofpoint-tr-block-url`: Adds the supplied URLs to the specified URL block list.
+- `proofpoint-tr-block-hash`: Adds the supplied file hashes to the specified file hash block list.
+- `proofpoint-tr-list-incidents`: Retrieves all incident metadata from Threat Response by specifying filter criteria such as the state of the incident or time of closure.
+- `proofpoint-tr-get-incident`: Retrieves incident metadata from Threat Response.
+- `proofpoint-tr-update-incident-comment`: Adds comments to an existing Threat Response incident, by incident ID.
+- `proofpoint-tr-add-user-to-incident`: Assigns a user to an incident as a target or attacker.
+- `proofpoint-tr-ingest-alert`: Ingest an alert into Threat Response.
+- `proofpoint-tr-close-incident`: Close an incident
+- `proofpoint-tr-verify-quarantine`: Verify if an email has been quarantined.
 
 
 ## PublishThreatIntelReport
@@ -2069,6 +2147,10 @@ Sets a Threat Intel Report as published
 
 Qintel’s Patch Management Intelligence (PMI) product simplifies the vulnerability management process by providing vital context around reported Common Vulnerabilities and Exposures. With this integration, users can query PMI to surface CVEs that are known by Qintel to be leveraged by eCrime and Nation State adversaries. This integration was integrated and tested with version 0.16.0 of PMI
 
+**Commands:**
+
+- `cve`: Queries Qintel for CVE intelligence
+
 
 ## Qintel QSentry
 
@@ -2076,6 +2158,10 @@ Qintel’s Patch Management Intelligence (PMI) product simplifies the vulnerabil
 **Product:** Qintel  
 
 QSentry queries help measure the likelihood that a user is masking their identity using publicly or privately available proxy or VPN services. The returns also flag any known fraud associations. QSentry aggregates data from Qintel’s proprietary Deep and DarkWeb research, as well as from commercially available anonymization services. This integration was integrated and tested with version 4.0 of Qintel QSentry
+
+**Commands:**
+
+- `ip`: Queries Qintel for IP reputation data
 
 
 ## Qintel QWatch
@@ -2087,7 +2173,7 @@ Qintel's QWatch system contains credentials obtained from dump sites, hacker col
 
 **Commands:**
 
-- `qintel-qwatch-exposures`: 
+- `qintel-qwatch-exposures`: Search QWatch for exposed credentials
 
 
 ## Rapid7 - Threat Command (IntSights)
@@ -2099,21 +2185,21 @@ Rapid7 Insight - Threat Command allows managing alerts, CVEs, IOCs, and assets b
 
 **Commands:**
 
-- `threat-command-cyber-term-list`: 
-- `threat-command-cyber-term-cve-list`: 
-- `threat-command-cyber-term-ioc-list`: 
-- `threat-command-source-list`: 
-- `threat-command-source-document-create`: 
-- `threat-command-source-document-delete`: 
-- `threat-command-source-document-ioc-create`: 
-- `threat-command-ioc-search`: 
-- `threat-command-ioc-tags-add`: 
-- `threat-command-account-whitelist-update`: 
-- `threat-command-account-whitelist-remove`: 
-- `threat-command-ioc-blocklist-add`: 
-- `threat-command-ioc-blocklist-remove`: 
-- `threat-command-ioc-severity-update`: 
-- `threat-command-ioc-comment-add`: 
+- `threat-command-cyber-term-list`: List cyber terms by filter.
+- `threat-command-cyber-term-cve-list`: List cyber term CVEs by cyber term ID.
+- `threat-command-cyber-term-ioc-list`: List cyber term IOCs by cyber term ID.
+- `threat-command-source-list`: Gets lists of IOC document sources.
+- `threat-command-source-document-create`: Adds a new IOC source document. At least one IOC is required.
+- `threat-command-source-document-delete`: Deletes an existing IOC source document.
+- `threat-command-source-document-ioc-create`: Create new IOCs to existing IOC source documents. At least one IOC is required.
+- `threat-command-ioc-search`: Gets IOC details by value or IOC's full enrichment data. While using the enrichment flag, the command is scheduled and allows us to get full enrichment data. No
+- `threat-command-ioc-tags-add`: Adds user tags to IOCs. This enables you to classify IOCs and later search for all IOCs with a specific tag. There is no indication of success or failure for th
+- `threat-command-account-whitelist-update`: You can add an IOC to your user whitelist (even if it is already on the system whitelist). If you change your mind, you can then revert that decision to rely ag
+- `threat-command-account-whitelist-remove`: Reverts IOC values to the system-default whitelist status. The ETP Suite automatically whitelists certain IOCs, such as company assets. You can override this de
+- `threat-command-ioc-blocklist-add`: Adds an IOC to an internal Remediation Blocklist. By sending the blocklist to security devices, you can block the IOCs. At least one IOC is required.
+- `threat-command-ioc-blocklist-remove`: Removes IOC values from the Remediation blocklist. There is no indication of success or failure for this command. The user has to choose a correct and existing 
+- `threat-command-ioc-severity-update`: Changes the severity of existing IOCs for the requester account (overrides the system severity). At least one IOC is required.
+- `threat-command-ioc-comment-add`: Adds comments to IOCs. At least one IOC is required.
 
 
 ## Recorded Future - Lists
@@ -2125,10 +2211,10 @@ Search and manage watchlists in Recorded Future This integration was integrated 
 
 **Commands:**
 
-- `recordedfuture-lists-search`: 
-- `recordedfuture-lists-add-entities`: 
-- `recordedfuture-lists-remove-entities`: 
-- `recordedfuture-lists-entities`: 
+- `recordedfuture-lists-search`: Search for lists in Recorded Future
+- `recordedfuture-lists-add-entities`: Add entities to a list, separate entities by commas. "NOTE:" if entity type is specified, only one entity type can be added with each action. When adding IDs us
+- `recordedfuture-lists-remove-entities`: Remove entities from a list. Separate entities with commas. "NOTE:" If entity type is specified, only one entity type can be added with each action. When adding
+- `recordedfuture-lists-entities`: Get the entities that are currently in the given lists.
 
 
 ## Recorded Future - Playbook Alerts
@@ -2140,9 +2226,9 @@ Fetch & triage Recorded Future Playbook Alerts
 
 **Commands:**
 
-- `recordedfuture-playbook-alerts-search`: 
-- `recordedfuture-playbook-alerts-details`: 
-- `recordedfuture-playbook-alerts-update`: 
+- `recordedfuture-playbook-alerts-search`: Search playbook alerts based on filters.
+- `recordedfuture-playbook-alerts-details`: Get Playbook alert details by ID.
+- `recordedfuture-playbook-alerts-update`: Update the status of one or multiple Playbook alerts
 
 
 ## Recorded Future - Threat Actor Search
@@ -2166,11 +2252,11 @@ Fetch and triage Recorded Future Classic Alerts and Recorded Future Playbook Ale
 
 **Commands:**
 
-- `rf-alerts`: 
-- `rf-alert-lookup`: 
-- `rf-alert-update`: 
-- `rf-alert-rules`: 
-- `rf-alert-images`: 
+- `rf-alerts`: List Classic or Playbook alerts.
+- `rf-alert-lookup`: Look up a single Recorded Future alert by ID.
+- `rf-alert-update`: Update an alert in the Recorded Future platform.
+- `rf-alert-rules`: Search for alert rule IDs.
+- `rf-alert-images`: Fetch alert images and attach to incident in context Files.
 
 
 ## Recorded Future Attack Surface Intelligence
@@ -2179,7 +2265,7 @@ Fetch and triage Recorded Future Classic Alerts and Recorded Future Playbook Ale
 **Product:** Recorded Future Attack Surface Intelligence  
 **Commands:**
 
-- `asi-project-issues-fetch`: 
+- `asi-project-issues-fetch`: Fetches all the current or added issues.
 
 
 ## Recorded Future CVE Intelligence
@@ -2299,8 +2385,8 @@ File reputation using Recorded Future SOAR Enrichment
 **Product:** Recorded Future Identity  
 **Commands:**
 
-- `recordedfuture-identity-search`: 
-- `recordedfuture-identity-lookup`: 
+- `recordedfuture-identity-search`: Search for identities in the Recorded Future dataset.
+- `recordedfuture-identity-lookup`: Get detailed information regarding identities.
 
 
 ## Recorded Future Identity - Create Incident (sub)
@@ -2475,15 +2561,20 @@ Unique threat intel technology that automatically serves up relevant insights in
 
 **Commands:**
 
-- `recordedfuture-threat-assessment`: 
-- `recordedfuture-intelligence`: 
-- `recordedfuture-links`: 
-- `recordedfuture-single-alert`: 
-- `recordedfuture-alerts`: 
-- `recordedfuture-alert-rules`: 
-- `recordedfuture-alert-set-status`: 
-- `recordedfuture-alert-set-note`: 
-- `recordedfuture-malware-search`: 
+- `domain`: Gets a quick indicator of the risk associated with a domain.
+- `ip`: Gets a quick indicator of the risk associated with an IP address.
+- `file`: Gets a quick indicator of the risk associated with a file.
+- `cve`: Gets a quick indicator of the risk associated with a CVE.
+- `url`: Gets a quick indicator of the risk associated with a URL.
+- `recordedfuture-threat-assessment`: Get an indicator of the risk based on context.
+- `recordedfuture-intelligence`: Get threat intelligence for an IP, Domain, CVE, URL, File or Malware.
+- `recordedfuture-links`: Get Insikt Group Research Links for an IP, Domain, CVE, URL, File, or Malware.
+- `recordedfuture-single-alert`: Get detailed information from vulnerability, typosquat and credential alerts.
+- `recordedfuture-alerts`: Gets details on alerts configured and generated by Recorded Future by alert rule ID and/or time range.
+- `recordedfuture-alert-rules`: Search for alert rule IDs.
+- `recordedfuture-alert-set-status`: Set alert into predefined status.
+- `recordedfuture-alert-set-note`: Set a note for the alert in Recorded Future.
+- `recordedfuture-malware-search`: Search for a malware by specified filters.
 
 
 ## Recorded Future Vulnerability
@@ -2530,7 +2621,7 @@ ReliaQuest GreyMatter DR monitors and manages an organization's digital risk acr
 
 **Commands:**
 
-- `ds-search`: 
+- `ds-search`: Perform a general search against incidents, threats closed sources, etc.
 
 
 ## ReliaquestTakedown
@@ -2542,11 +2633,11 @@ This is Reliaquest DRP Takedown integration. It enables platform user to create 
 
 **Commands:**
 
-- `rq-takedown-create`: 
-- `rq-takedown-list-brand`: 
-- `rq-takedown-create-comment`: 
-- `rq-takedown-upload-attachment`: 
-- `rq-takedown-download-attachment`: 
+- `rq-takedown-create`: Create takedown command takes brand id, type, target and portal shortcode (optional) and returns the created takedown in response.
+- `rq-takedown-list-brand`: Returns list of allowed brand details for takedown.
+- `rq-takedown-create-comment`: Create comment for a takedown.
+- `rq-takedown-upload-attachment`: Uploads attachment for takedown.
+- `rq-takedown-download-attachment`: Downloads attachment for takedown.
 
 
 ## Retrieve Alert Attachments - Rapid7 ThreatCommand
@@ -2625,7 +2716,7 @@ SecneurX provides real-time threat intelligence that protects companies against 
 
 **Commands:**
 
-- `snxfeeds-get-indicators`: 
+- `snxfeeds-get-indicators`: Retrieves a limited number of the indicators.
 
 
 ## SEKOIAIntelligenceCenter
@@ -2634,6 +2725,17 @@ SecneurX provides real-time threat intelligence that protects companies against 
 **Product:** SEKOIAIntelligenceCenter  
 
 Fetch Indicator and Observables from SEKOIA.IO Intelligence Center. To use this integration, please create an API Key with the right permissions. This integration was integrated and tested with version 2.20220712 of SEKOIA.IO Intelligence Center
+
+**Commands:**
+
+- `GetObservable`: Query SEKOIA.IO Intelligence Center for information about this observable.
+- `GetIndicator`: Query SEKOIA.IO Intelligence Center for information about this indicator. No information is returned if the value is not a known by SEKOIA.IO as an indicator (I
+- `ip`: Query SEKOIA.IO Intelligence Center for information about this indicator. No information is returned if the value is not a known by SEKOIA.IO as an indicator (I
+- `url`: Query SEKOIA.IO Intelligence Center for information about this indicator. No information is returned if the value is not a known by SEKOIA.IO as an indicator (I
+- `domain`: Query SEKOIA.IO Intelligence Center for information about this indicator. No information is returned if the value is not a known by SEKOIA.IO as an indicator (I
+- `file`: Query SEKOIA.IO Intelligence Center for information about this indicator. No information is returned if the value is not a known by SEKOIA.IO as an indicator (I
+- `email`: Query SEKOIA.IO Intelligence Center for information about this indicator. No information is returned if the value is not a known by SEKOIA.IO as an indicator (I
+- `GetIndicatorContext`: Query SEKOIA.IO Intelligence Center for context around this indicator
 
 
 ## SEPCheckOutdatedEndpoints
@@ -2657,7 +2759,9 @@ Leverage the power of Sixgill to supercharge the platform. Enrich IOCs such as d
 
 **Commands:**
 
-- `sixgill-get-actor`: 
+- `ip`: Returns information and a reputation for each IP in the input list.
+- `url`: Returns information and a reputation for each URL in the input list.
+- `sixgill-get-actor`: Returns information and a reputation for each actor in the input list.
 
 
 ## Sixgill DarkFeed Threat Intelligence
@@ -2666,6 +2770,10 @@ Leverage the power of Sixgill to supercharge the platform. Enrich IOCs such as d
 **Product:** Sixgill Darkfeed - Annual Subscription  
 
 Sixgill's premium underground intelligence collection capabilities, real-time collection and advanced warnings of IOCs help you keep your edge against unknown threats. This integration was integrated and tested with Sixgill clients
+
+**Commands:**
+
+- `sixgill-get-indicators`: Fetching Sixgill DarkFeed indicators
 
 
 ## SixgillSearchIndicators
@@ -2685,21 +2793,21 @@ Symantec EDR (On Prem) endpoints help to detect threats in your network by filte
 
 **Commands:**
 
-- `symantec-edr-endpoint-isolate`: 
-- `symantec-edr-domain-file-association-list`: 
-- `symantec-edr-endpoint-domain-association-list`: 
-- `symantec-edr-endpoint-file-association-list`: 
-- `symantec-edr-domain-instance-list`: 
-- `symantec-edr-endpoint-instance-list`: 
-- `symantec-edr-file-instance-list`: 
-- `symantec-edr-system-activity-list`: 
-- `symantec-edr-audit-event-list`: 
-- `symantec-edr-event-list`: 
-- `symantec-edr-incident-event-list`: 
-- `symantec-edr-incident-list`: 
-- `symantec-edr-incident-comment-get`: 
-- `symantec-edr-deny-list-policy-get`: 
-- `symantec-edr-allow-list-policy-get`: 
+- `symantec-edr-endpoint-isolate`: Isolates or quarantines endpoints by cutting connections that the endpoint(s) has to internal networks and external networks, based on the endpoint device IDs.
+- `symantec-edr-domain-file-association-list`: List of domain and file association.
+- `symantec-edr-endpoint-domain-association-list`: List of endpoint and domain association.
+- `symantec-edr-endpoint-file-association-list`: List of domain and file association.
+- `symantec-edr-domain-instance-list`: Get domain instances.
+- `symantec-edr-endpoint-instance-list`: Get endpoint instances.
+- `symantec-edr-file-instance-list`: Get File Instances
+- `symantec-edr-system-activity-list`: Get system activities or logs.
+- `symantec-edr-audit-event-list`: Get Audit Events
+- `symantec-edr-event-list`: Get events or system alerts from EDR on-premise.
+- `symantec-edr-incident-event-list`: Get events for incidents.
+- `symantec-edr-incident-list`: Get incidents from Symantec EDR on-premise API.
+- `symantec-edr-incident-comment-get`: Get incident comments based on incident UUID.
+- `symantec-edr-deny-list-policy-get`: Get deny list policies.
+- `symantec-edr-allow-list-policy-get`: Get allow list policies.
 
 
 ## Symantec Endpoint Protection v2
@@ -2711,19 +2819,19 @@ Query the Symantec Endpoint Protection Manager using the official REST API
 
 **Commands:**
 
-- `sep-endpoints-info`: 
-- `sep-groups-info`: 
-- `sep-system-info`: 
-- `sep-command-status`: 
-- `sep-client-content`: 
-- `sep-list-policies`: 
-- `sep-assign-policy`: 
-- `sep-list-locations`: 
-- `sep-endpoint-quarantine`: 
-- `sep-scan-endpoint`: 
-- `sep-update-endpoint-content`: 
-- `sep-move-client-to-group`: 
-- `sep-identify-old-clients`: 
+- `sep-endpoints-info`: Returns information about endpoints.
+- `sep-groups-info`: Returns information about groups.
+- `sep-system-info`: Returns information about the system, such as version or AV definition.
+- `sep-command-status`: Retrieves the status of a command.
+- `sep-client-content`: Retrieves the content of the client.
+- `sep-list-policies`: Retrieves a list of existing policies.
+- `sep-assign-policy`: Assigns an existing policy to a specified location.
+- `sep-list-locations`: Retrieves a list of location IDs for a specified group.
+- `sep-endpoint-quarantine`: Quarantines an endpoint according to its policy.
+- `sep-scan-endpoint`: Scans an endpoint.
+- `sep-update-endpoint-content`: Updates the content of a specified client.
+- `sep-move-client-to-group`: Moves a client to a group.
+- `sep-identify-old-clients`: Get endpoints for a running version that is different than the target version or the desired version (if specified).
 
 
 ## Sysdig Response Actions
@@ -2735,12 +2843,12 @@ This is an integration that will use Sysdig agent to respond to malicious activi
 
 **Commands:**
 
-- `execute-response-action`: 
-- `create-system-capture`: 
-- `get-capture-file`: 
-- `get-action-execution`: 
-- `sysdig-agent-info-get`: 
-- `sysdig-customer-info-get`: 
+- `execute-response-action`: Executes response actions through the Sysdig API. Each action type requires a specific set of parameters.
+- `create-system-capture`: Triggers a system capture, recording all system calls at the host level.
+- `get-capture-file`: Gets a system capture based on the capture ID.
+- `get-action-execution`: Gets the status and information of a triggered action execution.
+- `sysdig-agent-info-get`: Resolves a host MAC address to its Sysdig agent details (agent ID, customer ID, hostname). The result is cached per MAC address.
+- `sysdig-customer-info-get`: Gets the Sysdig customer ID and name. The result is cached per integration instance.
 
 
 ## Sysdig Trigger System Capture
@@ -2760,7 +2868,21 @@ Tanium Threat Response - This Integration works with Tanium Threat Response vers
 
 **Commands:**
 
-- `tanium-tr-get-intel-doc-by-id`: 
+- `tanium-tr-get-intel-doc-by-id`: Returns an intel document object based on ID.
+- `tanium-tr-list-intel-docs`: Returns a list of all intel documents.
+- `tanium-tr-list-alerts`: Returns a list of all alerts.
+- `tanium-tr-get-alert-by-id`: Returns an alert object based on alert ID.
+- `tanium-tr-alert-update-state`: Updates the state of a single alert.
+- `tanium-tr-list-snapshots-by-connection`: Returns all snapshots of a single connection.
+- `tanium-tr-create-snapshot`: Captures a new snapshot by connection name.
+- `tanium-tr-delete-snapshot`: Deletes a snapshot by connection name and snapshot ID.
+- `tanium-tr-list-local-snapshots-by-connection`: Returns all local snapshots of a single connection.
+- `tanium-tr-delete-local-snapshot`: Deletes a local snapshot by directory name and file name.
+- `tanium-tr-list-connections`: Returns all connections.
+- `tanium-tr-get-connection-by-name`: Returns a connection object based on connection name.
+- `tanium-tr-create-connection`: Creates a local or remote connection.
+- `tanium-tr-delete-connection`: Deletes a connection by connection name.
+- `tanium-tr-list-labels`: Returns all available labels in the system.
 
 
 ## Tanium Threat Response v2
@@ -2772,21 +2894,21 @@ Use the Tanium Threat Response integration to manage endpoints processes, eviden
 
 **Commands:**
 
-- `tanium-tr-get-intel-doc-by-id`: 
-- `tanium-tr-list-intel-docs`: 
-- `tanium-tr-list-alerts`: 
-- `tanium-tr-get-alert-by-id`: 
-- `tanium-tr-alert-update-state`: 
-- `tanium-tr-create-snapshot`: 
-- `tanium-tr-delete-snapshot`: 
-- `tanium-tr-list-snapshots`: 
-- `tanium-tr-delete-local-snapshot`: 
-- `tanium-tr-list-connections`: 
-- `tanium-tr-create-connection`: 
-- `tanium-tr-delete-connection`: 
-- `tanium-tr-close-connection`: 
-- `tanium-tr-list-labels`: 
-- `tanium-tr-get-label-by-id`: 
+- `tanium-tr-get-intel-doc-by-id`: Returns an intel document object based on ID.
+- `tanium-tr-list-intel-docs`: Returns a list of all intel documents.
+- `tanium-tr-list-alerts`: Returns a list of all alerts.
+- `tanium-tr-get-alert-by-id`: Returns an alert object based on alert ID.
+- `tanium-tr-alert-update-state`: Updates the state of the specified alerts.
+- `tanium-tr-create-snapshot`: Captures a new snapshot by connection id.
+- `tanium-tr-delete-snapshot`: Deletes a snapshot by connection name and snapshot ID.
+- `tanium-tr-list-snapshots`: Returns all local snapshots of a single connection.
+- `tanium-tr-delete-local-snapshot`: Deletes a local snapshot by connection id.
+- `tanium-tr-list-connections`: Returns all connections.
+- `tanium-tr-create-connection`: Creates a local or remote connection.
+- `tanium-tr-delete-connection`: Deletes a connection by connection id.
+- `tanium-tr-close-connection`: Closes a connection by connection id.
+- `tanium-tr-list-labels`: Returns all available labels in the system.
+- `tanium-tr-get-label-by-id`: Returns a label object based on label ID.
 
 
 ## ThreatConnect v3
@@ -2798,21 +2920,21 @@ ThreatConnect's integration is a intelligence-driven security operations solutio
 
 **Commands:**
 
-- `tc-owners`: 
-- `tc-indicators`: 
-- `tc-get-tags`: 
-- `tc-tag-indicator`: 
-- `tc-get-indicator`: 
-- `tc-get-indicators-by-tag`: 
-- `tc-add-indicator`: 
-- `tc-create-incident`: 
-- `tc-incident-associate-indicator`: 
-- `tc-get-incident-associate-indicators`: 
-- `tc-update-indicator`: 
-- `tc-delete-indicator-tag`: 
-- `tc-delete-indicator`: 
-- `tc-create-campaign`: 
-- `tc-create-event`: 
+- `ip`: Searches for an indicator of type IP address.
+- `url`: Searches for an indicator of type URL.
+- `file`: Searches for an indicator of type file.
+- `tc-owners`: Retrieves all owners for the current account.
+- `tc-indicators`: Retrieves a list of all indicators.
+- `tc-get-tags`: Returns a list of all ThreatConnect tags.
+- `tc-tag-indicator`: Adds a tag to an existing indicator.
+- `tc-get-indicator`: Retrieves information about an indicator.
+- `tc-get-indicators-by-tag`: Fetches all indicators that have a tag.
+- `tc-add-indicator`: Adds a new indicator to ThreatConnect.
+- `tc-create-incident`: Creates a new incident group.
+- `tc-incident-associate-indicator`: Associates an indicator with an existing incident. The indicator must exist before running this command. To add an indicator, run the tc-add-indicator command.
+- `domain`: Searches for an indicator of type domain.
+- `tc-get-incident-associate-indicators`: Returns indicators that are related to a specific incident.
+- `tc-update-indicator`: Updates the indicator in ThreatConnect.
 
 
 ## ThreatExchange v2
@@ -2824,11 +2946,15 @@ Receive threat intelligence about applications, IP addresses, URLs, and hashes. 
 
 **Commands:**
 
-- `threatexchange-query`: 
-- `threatexchange-members`: 
-- `threatexchange-tags-search`: 
-- `threatexchange-tagged-objects-list`: 
-- `threatexchange-object-get-by-id`: 
+- `file`: Checks the file reputation of the given hash.
+- `ip`: Checks the reputation of the given IP address.
+- `url`: Checks URL Reputation
+- `domain`: Checks domain reputation.
+- `threatexchange-query`: Searches for subjective opinions on indicators of compromise stored in ThreatExchange.
+- `threatexchange-members`: Returns a list of current members of the ThreatExchange, alphabetized by application name. Each application may also include an optional contact email address. 
+- `threatexchange-tags-search`: Enables searching for tags in ThreatExchange. With this call you can search for ThreatTag objects by text.
+- `threatexchange-tagged-objects-list`: Gets a list of tagged objects for a specific ThreatTag.
+- `threatexchange-object-get-by-id`: Gets ThreatExchange object by ID.
 
 
 ## ThreatIntelManagementGetIncidentsPerFeed
@@ -2845,6 +2971,12 @@ Total number of incidents per OOTB feed. This automation runs using the default 
 **Product:** ThreatMiner  
 
 Data Mining for Threat Intelligence
+
+**Commands:**
+
+- `domain`: Retrieves data from ThreatMiner about a specified domain.
+- `ip`: Retrieves data from ThreatMiner about a specified IP address.
+- `file`: Retrieves data from ThreatMiner about a specified file.
 
 
 ## ThreatstreamBuildIocImportJson
@@ -2875,21 +3007,21 @@ ThreatZone malware analysis sandboxing. This integration was integrated and test
 
 **Commands:**
 
-- `tz-sandbox-upload-sample`: 
-- `tz-static-upload-sample`: 
-- `tz-cdr-upload-sample`: 
-- `tz-url-analysis`: 
-- `tz-get-result`: 
-- `tz-get-indicator-result`: 
-- `tz-get-ioc-result`: 
-- `tz-get-yara-result`: 
-- `tz-get-artifact-result`: 
-- `tz-get-config-result`: 
-- `tz-get-sanitized`: 
-- `tz-download-html-report`: 
-- `tz-get-metafields`: 
-- `tz-get-environments`: 
-- `tz-list-network-configs`: 
+- `tz-sandbox-upload-sample`: Submits a sample to ThreatZone for sandbox analysis.
+- `tz-static-upload-sample`: Submits a sample to ThreatZone for static analysis.
+- `tz-cdr-upload-sample`: Submits a sample to ThreatZone for CDR.
+- `tz-url-analysis`: Submits a URL to ThreatZone for analysis.
+- `tz-get-result`: Retrieve the analysis result from ThreatZone.
+- `tz-get-indicator-result`: Retrieves dynamic behaviour indicators for a submission from ThreatZone.
+- `tz-get-ioc-result`: Retrieves Indicators of Compromise for a submission from ThreatZone.
+- `tz-get-yara-result`: Retrieves YARA rules matched during analysis. Use tz-download-yara-rule for the generated rule file.
+- `tz-get-artifact-result`: Retrieves analysis artifacts for a submission from ThreatZone.
+- `tz-get-config-result`: Retrieves configuration extractor results for a submission from ThreatZone.
+- `tz-get-sanitized`: Downloads a sanitized file from the ThreatZone API and uploads it to the War Room.
+- `tz-download-html-report`: Downloads the HTML report for a submission and uploads it to the War Room.
+- `tz-get-metafields`: Retrieves available ThreatZone metafields, optionally filtered by scan type.
+- `tz-get-environments`: Retrieves available ThreatZone sandbox environments.
+- `tz-list-network-configs`: Lists network configurations available to the current ThreatZone workspace.
 
 
 ## Unblock Indicator - Infoblox Cloud
@@ -2913,6 +3045,13 @@ This playbook unblocks the given IP or domain by adding it to the given allow ty
 **Product:** Unit 42 Threat Intelligence by Palo Alto Networks  
 
 Enrich indicators with Unit 42 threat intelligence context including verdicts, threat object associations, and relationships
+
+**Commands:**
+
+- `ip`: Enrich an IP address with Unit 42 threat intelligence context.
+- `domain`: Enrich a domain with Unit 42 threat intelligence context.
+- `url`: Enrich a URL with Unit 42 threat intelligence context.
+- `file`: Enrich a file hash with Unit 42 threat intelligence context.
 
 
 ## UnpublishThreatIntelReport
@@ -2975,7 +3114,7 @@ USTAv4 Account Takeover Prevention is designed to collect compromised credential
 
 **Commands:**
 
-- `usta-atp-search-username`: 
+- `usta-atp-search-username`: Search for compromised credentials by username
 
 
 ## USTAv4 Stolen Credit Cards
@@ -2987,7 +3126,7 @@ This integration offers organizations the ability to track stolen credit card da
 
 **Commands:**
 
-- `usta-scc-search`: 
+- `usta-scc-search`: Search for stolen credit card number
 
 
 ## XDR Best Practice Assessment
