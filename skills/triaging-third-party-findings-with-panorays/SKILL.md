@@ -1,7 +1,7 @@
 ---
 name: triaging-third-party-findings-with-panorays
 description: >-
-  Triages a Panorays "Self Company" finding incident end-to-end without depending on any specific external ITSM tool. Flow. Covers 1 vendor variants: Panorays. Use when triaging third party findings with panorays must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: triaging, third, party, findings, with, panorays, vulnerability management. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Triages a Panorays "Self Company" finding incident end-to-end without depending on any specific external ITSM tool. Flow. Covers 1 vendor variants: Panorays. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: triaging, third, party, findings, with, panorays, vulnerability management. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: vulnerability-management
 tags:
@@ -77,11 +77,10 @@ Inputs:
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-curl -sS "https://api.panorays.com/v1/findings?status=open" \
-  -H "Authorization: Bearer $PANORAYS_TOKEN"
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

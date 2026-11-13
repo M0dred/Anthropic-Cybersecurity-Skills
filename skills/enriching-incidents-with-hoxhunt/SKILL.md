@@ -1,7 +1,7 @@
 ---
 name: enriching-incidents-with-hoxhunt
 description: >-
-  Enriches the incidents pulled from Hoxhunt with additional information. Covers 1 vendor variants: Hoxhunt. Use when enriching incidents with hoxhunt must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: enriching, incidents, with, hoxhunt, phishing defense. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Enriches the incidents pulled from Hoxhunt with additional information. Covers 1 vendor variants: Hoxhunt. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: enriching, incidents, with, hoxhunt, phishing defense. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: phishing-defense
 tags:
@@ -69,11 +69,10 @@ Enriches the incidents pulled from Hoxhunt with additional information.
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-curl -sS "https://api.hoxhunt.com/v1/incidents?status=open" \
-  -H "Authorization: Bearer $HOXHUNT_TOKEN"
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

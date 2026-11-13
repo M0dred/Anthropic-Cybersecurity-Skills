@@ -1,7 +1,7 @@
 ---
 name: detonating-files-with-crowdstrike-sandbox
 description: >-
-  Uploads, detonates, and analyzes files for the CrowdStrike Falcon Intelligence Sandbox. Covers 1 vendor variants: CrowdStrike Falcon Intelligence Sandbox. Use when detonating files with crowdstrike sandbox must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: detonating, files, with, crowdstrike, sandbox, malware analysis. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Uploads, detonates, and analyzes files for the CrowdStrike Falcon Intelligence Sandbox. Covers 1 vendor variants: CrowdStrike Falcon Intelligence Sandbox. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: detonating, files, with, crowdstrike, sandbox, malware analysis. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: malware-analysis
 tags:

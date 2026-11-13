@@ -1,7 +1,7 @@
 ---
 name: enriching-assets-with-riskiq
 description: >-
-  Receives indicators from its parent playbook and enriches the basic information and the detected CVEs for the "RiskIQAsset" type of indicators. This playbook needs to be used with caution as it might use up the integrations' API license when running for large amounts of indicators. Supported Integrations. Covers 2 vendor variants: RiskIQ Digital Footprint. Use when enriching assets with riskiq must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: enriching, assets, with, riskiq, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Receives indicators from its parent playbook and enriches the basic information and the detected CVEs for the "RiskIQAsset" type of indicators. This playbook needs to be used with caution as it might use up the integrations' API license when running for large amounts of indicators. Supported Integrations. Covers 2 vendor variants: RiskIQ Digital Footprint. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: enriching, assets, with, riskiq, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: threat-intelligence
 tags:
@@ -91,11 +91,10 @@ Inputs:
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-curl -sS "https://api.passivetotal.org/v2/dns/passive?query=evil.example" \
-  -u "$RISKIQ_USER:$RISKIQ_KEY"
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

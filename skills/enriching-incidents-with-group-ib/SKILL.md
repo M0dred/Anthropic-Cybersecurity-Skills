@@ -1,7 +1,7 @@
 ---
 name: enriching-incidents-with-group-ib
 description: >-
-  Handles postprocessing of violation incidents detected by Group-IB Digital Risk Protection. A violation incident is closed when the work on the violation is over: as Resolved when Group-IB DRP reports the violation as resolved (taken down; older API versions spell it solved) or legal (handed to legal), and as False Positive when DRP found it false (false_status) or the customer rejected it. Approving a violation. Covers 2 vendor variants: Group-IB Digital Risk Protection, Group-IB Threat Intelligence. Use when enriching incidents with group ib must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: enriching, incidents, with, group, ib, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Handles postprocessing of violation incidents detected by Group-IB Digital Risk Protection. A violation incident is closed when the work on the violation is over: as Resolved when Group-IB DRP reports the violation as resolved (taken down; older API versions spell it solved) or legal (handed to legal), and as False Positive when DRP found it false (false_status) or the customer rejected it. Approving a violation. Covers 2 vendor variants: Group-IB Digital Risk Protection, Group-IB Threat Intelligence. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: enriching, incidents, with, group, ib, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: threat-intelligence
 tags:
@@ -75,11 +75,10 @@ Obtains additional information on the threat actor involved in the incident and 
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-curl -sS "https://api.group-ib.com/v1/indicators?query=evil.example" \
-  -H "Authorization: Bearer $GROUPIB_TOKEN"
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

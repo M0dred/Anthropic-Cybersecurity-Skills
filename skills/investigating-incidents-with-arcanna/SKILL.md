@@ -1,7 +1,7 @@
 ---
 name: investigating-incidents-with-arcanna
 description: >-
-  Takes incident data and sends it to Arcanna.Ai for ML inference and automated decision. Covers 2 vendor variants: ArcannaAI. Use when investigating incidents with arcanna must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: investigating, incidents, with, arcanna, incident response. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Takes incident data and sends it to Arcanna.Ai for ML inference and automated decision. Covers 2 vendor variants: ArcannaAI. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: investigating, incidents, with, arcanna, incident response. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: incident-response
 tags:
@@ -83,12 +83,10 @@ Inputs:
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-# Enrich every entity in an incident
-python3 scripts/agent.py --type ip --value 203.0.113.10
-python3 scripts/agent.py --type domain --value evil.example
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

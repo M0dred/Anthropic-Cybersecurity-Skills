@@ -1,7 +1,7 @@
 ---
 name: scanning-domains-with-c2sec
 description: >-
-  Launches a C2sec scan by domain name and waits for the scan to finish by polling its status in pre-defined intervals. Covers 1 vendor variants: C2sec irisk. Use when scanning domains with c2sec must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: scanning, domains, with, c2sec, vulnerability management. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Launches a C2sec scan by domain name and waits for the scan to finish by polling its status in pre-defined intervals. Covers 1 vendor variants: C2sec irisk. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: scanning, domains, with, c2sec, vulnerability management. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: vulnerability-management
 tags:

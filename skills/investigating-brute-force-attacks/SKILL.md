@@ -1,7 +1,7 @@
 ---
 name: investigating-brute-force-attacks
 description: >-
-  Investigates a "Brute Force" incident by gathering user and IP information, and calculating the incident severity based on the gathered information and information received from the user. It then performs remediation. This is done based on the phases for handling an incident as they are described in the SANS Institute â€˜Incident Handlerâ€™s Handbookâ€™ by Patrick Kral. The playbook handles the following. Covers 3 vendor variants: Brute Force, CyberArk Identity, SANS. Use when investigating brute force attacks must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: investigating, brute, force, attacks, incident response. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Investigates a "Brute Force" incident by gathering user and IP information, and calculating the incident severity based on the gathered information and information received from the user. It then performs remediation. This is done based on the phases for handling an incident as they are described in the SANS Institute â€˜Incident Handlerâ€™s Handbookâ€™ by Patrick Kral. The playbook handles the following. Covers 3 vendor variants: Brute Force, CyberArk Identity, SANS. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: investigating, brute, force, attacks, incident response. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: incident-response
 tags:
@@ -65,7 +65,7 @@ State the verdict, the confidence, and the recommended containment.
 
 Source pack: SANS
 
-Investigates a "Brute Force" incident by gathering user and IP information, and calculating the incident severity based on the gathered information and information received from the user. It then performs remediation. This is done based on the phases for handling an incident as they are described in the SANS Institute â€˜Incident Handlerâ€™s Handbookâ€™ by Patrick Kral. The playbook handles the following use-cases: Used Sub-playbooks: ***Disclaimer: This playbook does not ensure compliance to SANS regulations.
+Investigates a "Brute Force" incident by gathering user and IP information, and calculating the incident severity based on the gathered information and information received from the user. It then performs remediation. This is done based on the phases for handling an incident as they are described in the SANS Institute â€˜Incident Handlerâ€™s Handbookâ€™ by Patrick Kral. The playbook handles the following use-cases: : ***Disclaimer: This playbook does not ensure compliance to SANS regulations.
 
 Inputs:
 
@@ -82,7 +82,7 @@ Inputs:
 
 Source pack: Brute Force
 
-Investigates a "Brute Force" incident by gathering user and IP information, calculating the incident severity based on the gathered information and information received from the user, and performs remediation. The playbook handles the following use-cases: Used Sub-playbooks.
+Investigates a "Brute Force" incident by gathering user and IP information, calculating the incident severity based on the gathered information and information received from the user, and performs remediation. The playbook handles the following use-cases.
 
 Inputs:
 
@@ -99,7 +99,7 @@ Inputs:
 
 Source pack: CyberArk Identity
 
-Investigates a “Brute Force” incident by gathering user and IP information and performs remediation based on the information gathered and received from the user. Used Sub-playbooks: If you wish to link this playbook to the relevant alerts automatically, we recommend using the following filters when configuring the playbook triggers: Alert Source = Correlation AND Alert Name = CyberArk Failed Logins.
+Investigates a “Brute Force” incident by gathering user and IP information and performs remediation based on the information gathered and received from the user. : If you wish to link this playbook to the relevant alerts automatically, we recommend using the following filters when configuring the playbook triggers: Alert Source = Correlation AND Alert Name = CyberArk Failed Logins.
 
 Inputs:
 
@@ -108,12 +108,10 @@ Inputs:
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-# Count failed logons by source
-az monitor log-analytics query -w "$WORKSPACE" --analytics-query \
-  "SecurityEvent | where EventID == 4625 | summarize count() by IpAddress, Account | where count_ > 10"
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

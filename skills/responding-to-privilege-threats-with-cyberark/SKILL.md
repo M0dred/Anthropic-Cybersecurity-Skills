@@ -1,7 +1,7 @@
 ---
 name: responding-to-privilege-threats-with-cyberark
 description: >-
-  Deactivates a specific CyberArk EPM SOC risk plan for a specific endpoint. This reverts all security settings to the baseline EPM policies active prior to the SOC response action. Covers 2 vendor variants: CyberArk Endpoint Privilege Manager. Use when responding to privilege threats with cyberark must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: responding, to, privilege, threats, with, cyberark, identity access management. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Deactivates a specific CyberArk EPM SOC risk plan for a specific endpoint. This reverts all security settings to the baseline EPM policies active prior to the SOC response action. Covers 2 vendor variants: CyberArk Endpoint Privilege Manager. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: responding, to, privilege, threats, with, cyberark, identity access management. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: identity-access-management
 tags:
@@ -86,11 +86,10 @@ Inputs:
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-curl -sS "https://<epm>/api/agents?filter=computerName:WEB-01" \
-  -H "Authorization: Bearer $EPM_TOKEN"
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

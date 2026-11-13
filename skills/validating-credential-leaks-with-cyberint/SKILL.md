@@ -1,7 +1,7 @@
 ---
 name: validating-credential-leaks-with-cyberint
 description: >-
-  Validates and responds to leaked employee or customer credentials reported by Cyberint Argos. The playbook looks up leaked credentials for the configured company domain, escalates the incident when exposed credentials are found, and drives an automated or semi-automated remediation flow (reset sessions, force password reset, or disable the account in the identity provider), followed by user and SOC notification.. Covers 2 vendor variants: Cyberint. Use when validating credential leaks with cyberint must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: validating, credential, leaks, with, cyberint, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Validates and responds to leaked employee or customer credentials reported by Cyberint Argos. The playbook looks up leaked credentials for the configured company domain, escalates the incident when exposed credentials are found, and drives an automated or semi-automated remediation flow (reset sessions, force password reset, or disable the account in the identity provider), followed by user and SOC notification.. Covers 2 vendor variants: Cyberint. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: validating, credential, leaks, with, cyberint, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: threat-intelligence
 tags:
@@ -90,12 +90,10 @@ Inputs:
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-# Check a credential against a breach corpus
-curl -sS "https://haveibeenpwned.com/api/v3/breachedaccount/user@example.com" \
-  -H "hibp-api-key: $HIBP_KEY"
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

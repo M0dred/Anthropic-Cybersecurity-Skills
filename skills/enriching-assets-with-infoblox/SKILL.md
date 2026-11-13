@@ -1,7 +1,7 @@
 ---
 name: enriching-assets-with-infoblox
 description: >-
-  Is used to initiate the incident response. This playbook runs when an incident is selected for investigation. It will change the state from pending to active and it will list the available indicators, events, assets, and comments from Infoblox corresponding to the incident. If incident severity is found to be higher than or equivalent to medium, it will create a ServiceNow incident otherwise the given incident. Covers 3 vendor variants: Infoblox Threat Defense with DDI. Use when enriching assets with infoblox must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: enriching, assets, with, infoblox, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Is used to initiate the incident response. This playbook runs when an incident is selected for investigation. It will change the state from pending to active and it will list the available indicators, events, assets, and comments from Infoblox corresponding to the incident. If incident severity is found to be higher than or equivalent to medium, it will create a ServiceNow incident otherwise the given incident. Covers 3 vendor variants: Infoblox Threat Defense with DDI. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: enriching, assets, with, infoblox, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: threat-intelligence
 tags:
@@ -100,11 +100,10 @@ Inputs:
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-curl -sS "https://<infoblox>/wapi/v2.12/record:host?_return_fields=name,ipv4addrs" \
-  -H "Authorization: Basic $INFOBLOX_AUTH"
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

@@ -1,7 +1,7 @@
 ---
 name: enriching-incidents-with-cybertotal
 description: >-
-  Automatically enriches indicators (including IPs, URLs, domains; MD5, SHA-1, and SHA-256 file hashes). Playbook input: the indicators you want to enrich. Playbook output: detection engine results, positive detections, detection ratios; as well as severity, confidence, and threat scores. Covers 1 vendor variants: CyberTotal. Use when enriching incidents with cybertotal must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: enriching, incidents, with, cybertotal, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Automatically enriches indicators (including IPs, URLs, domains; MD5, SHA-1, and SHA-256 file hashes). Playbook input: the indicators you want to enrich. Playbook output: detection engine results, positive detections, detection ratios; as well as severity, confidence, and threat scores. Covers 1 vendor variants: CyberTotal. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: enriching, incidents, with, cybertotal, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: threat-intelligence
 tags:
@@ -79,11 +79,10 @@ Inputs:
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-curl -sS "https://api.cybertotal.com/v1/ip/203.0.113.10" \
-  -H "Authorization: Bearer $CYBERTOTAL_TOKEN"
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

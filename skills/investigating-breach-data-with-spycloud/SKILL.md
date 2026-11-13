@@ -1,7 +1,7 @@
 ---
 name: investigating-breach-data-with-spycloud
 description: >-
-  Enables the investigation of SpyCloud Breach incidents. This playbook can be used to perform the below actions. Please note that the playbook provides a basic skeleton for the following actions users need to implement the logic according to their needs. Covers 2 vendor variants: SpyCloud Enterprise Protection. Use when investigating breach data with spycloud must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: investigating, breach, data, with, spycloud, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Enables the investigation of SpyCloud Breach incidents. This playbook can be used to perform the below actions. Please note that the playbook provides a basic skeleton for the following actions users need to implement the logic according to their needs. Covers 2 vendor variants: SpyCloud Enterprise Protection. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: investigating, breach, data, with, spycloud, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: threat-intelligence
 tags:

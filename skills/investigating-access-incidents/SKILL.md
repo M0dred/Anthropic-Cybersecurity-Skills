@@ -1,7 +1,7 @@
 ---
 name: investigating-access-incidents
 description: >-
-  Investigates an access incident by gathering user and IP information, and handling the incident based on the stages in "Handling an incident - Computer Security Incident Handling Guide" by NIST. Used Sub-playbooks. Covers 3 vendor variants: Access Investigation, IBM QRadar, NIST. Use when investigating access incidents must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: investigating, access, incidents, incident response. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Investigates an access incident by gathering user and IP information, and handling the incident based on the stages in "Handling an incident - Computer Security Incident Handling Guide" by NIST. Covers 3 vendor variants: Access Investigation, IBM QRadar, NIST. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: investigating, access, incidents, incident response. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: incident-response
 tags:
@@ -65,7 +65,7 @@ State the verdict, the confidence, and the recommended containment.
 
 Source pack: NIST
 
-Investigates an access incident by gathering user and IP information, and handling the incident based on the stages in "Handling an incident - Computer Security Incident Handling Guide" by NIST. Used Sub-playbooks.
+Investigates an access incident by gathering user and IP information, and handling the incident based on the stages in "Handling an incident - Computer Security Incident Handling Guide" by NIST.
 
 Inputs:
 
@@ -99,12 +99,10 @@ Investigates an Access incident by gathering user and IP address information. Th
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-# Correlate access events for a user and source IP
-az monitor log-analytics query -w "$WORKSPACE" --analytics-query \
-  "SigninLogs | where UserPrincipalName == 'user@example.com' | where IPAddress == '203.0.113.10' | project TimeGenerated, ResultType, AppDisplayName"
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

@@ -1,7 +1,7 @@
 ---
 name: responding-to-root-usage-with-gem
 description: >-
-  Find all the users who might’ve performed the actions using root (via the source IP), validate it with them using Slack and resolve the alert in case these actions were planned. Covers 1 vendor variants: Gem. Use when responding to root usage with gem must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: responding, to, root, usage, with, gem, endpoint security. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Find all the users who might’ve performed the actions using root (via the source IP), validate it with them using Slack and resolve the alert in case these actions were planned. Covers 1 vendor variants: Gem. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: responding, to, root, usage, with, gem, endpoint security. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: endpoint-security
 tags:
@@ -69,12 +69,10 @@ Find all the users who might’ve performed the actions using root (via the sour
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-# Identify the process and user behind a root-usage alert
-ps -eo pid,ppid,user,comm,args --sort=-%cpu | head -20
-last -i | head -20
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

@@ -1,7 +1,7 @@
 ---
 name: investigating-network-alerts-with-tufin
 description: >-
-  Example Playbook utilizing the Tufin integration to enrich a network alert and perform containment, if needed. Requires the following incident details: Source IP, Destination IP, Destination Ports. Covers 1 vendor variants: Tufin. Use when investigating network alerts with tufin must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: investigating, network, alerts, with, tufin, network security. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Example Playbook utilizing the Tufin integration to enrich a network alert and perform containment, if needed. Requires the following incident details: Source IP, Destination IP, Destination Ports. Covers 1 vendor variants: Tufin. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: investigating, network, alerts, with, tufin, network security. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: network-security
 tags:
@@ -69,11 +69,10 @@ Example Playbook utilizing the Tufin integration to enrich a network alert and p
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-curl -sS "https://<tufin>/securetrack/api/topology/network_zones" \
-  -H "Authorization: Basic $TUFIN_AUTH"
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

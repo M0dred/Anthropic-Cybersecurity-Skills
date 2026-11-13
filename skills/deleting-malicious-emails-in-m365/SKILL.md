@@ -1,7 +1,7 @@
 ---
 name: deleting-malicious-emails-in-m365
 description: >-
-  Runs a compliance search in Exchange Server 2016, and delete the results. Covers 9 vendor variants: Exchange 2016 Compliance Search, Gmail, Microsoft Exchange Online, Microsoft Graph Security, Office 365 and Azure (Audit Log). Use when deleting malicious emails in m365 must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: deleting, malicious, emails, in, m365, phishing defense. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Runs a compliance search in Exchange Server 2016, and delete the results. Covers 9 vendor variants: Exchange 2016 Compliance Search, Gmail, Microsoft Exchange Online, Microsoft Graph Security, Office 365 and Azure (Audit Log). Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: deleting, malicious, emails, in, m365, phishing defense. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: phishing-defense
 tags:

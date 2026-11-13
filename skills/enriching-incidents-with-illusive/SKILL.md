@@ -1,7 +1,7 @@
 ---
 name: enriching-incidents-with-illusive
 description: >-
-  Is used for automatic enrichment of incidents in the organization network, with Illusive's set of forensics and data. Covers 1 vendor variants: Illusive Networks. Use when enriching incidents with illusive must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: enriching, incidents, with, illusive, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Is used for automatic enrichment of incidents in the organization network, with Illusive's set of forensics and data. Covers 1 vendor variants: Illusive Networks. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: enriching, incidents, with, illusive, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: threat-intelligence
 tags:
@@ -76,11 +76,10 @@ Inputs:
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-curl -sS "https://<illusive>/api/v1/incidents?status=open" \
-  -H "Authorization: Bearer $ILLUSIVE_TOKEN"
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

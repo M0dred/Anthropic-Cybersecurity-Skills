@@ -1,7 +1,7 @@
 ---
 name: responding-to-dark-web-credential-leaks
 description: >-
-  Gets the affected username of a Bechtle Dark Web Scan issue, then sends an email for human confirmation if the affected user should be blocked. Covers 1 vendor variants: Bechtle Dark Web Scan. Use when responding to dark web credential leaks must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: responding, to, dark, web, credential, leaks, identity access management. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Gets the affected username of a Bechtle Dark Web Scan issue, then sends an email for human confirmation if the affected user should be blocked. Covers 1 vendor variants: Bechtle Dark Web Scan. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: responding, to, dark, web, credential, leaks, identity access management. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: identity-access-management
 tags:
@@ -78,12 +78,10 @@ Inputs:
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-# Check a credential against a breach corpus
-curl -sS "https://haveibeenpwned.com/api/v3/breachedaccount/user@example.com" \
-  -H "hibp-api-key: $HIBP_KEY"
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

@@ -1,7 +1,7 @@
 ---
 name: responding-to-vectra-detections
 description: >-
-  Is called from the Process Incident - Vectra Detect playbook. It will fetch all active detections for the entity under investigation. It will then assign the entity to a user; if an assignment already exists, it will update that assignment and add a note in Vectra. Covers 4 vendor variants: Vectra AI, Vectra XDR. Use when responding to vectra detections must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: responding, to, vectra, detections, endpoint security. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Is called from the Process Incident - Vectra Detect playbook. It will fetch all active detections for the entity under investigation. It will then assign the entity to a user; if an assignment already exists, it will update that assignment and add a note in Vectra. Covers 4 vendor variants: Vectra AI, Vectra XDR. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: responding, to, vectra, detections, endpoint security. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: endpoint-security
 tags:
@@ -102,11 +102,10 @@ Is used to initiate the processing of an incident. This playbook runs when a pen
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-curl -sS "https://<vectra>/api/v2/detections?state=active" \
-  -H "Authorization: Token $VECTRA_TOKEN"
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

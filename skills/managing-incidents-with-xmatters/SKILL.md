@@ -1,7 +1,7 @@
 ---
 name: managing-incidents-with-xmatters
 description: >-
-  Trigger an xMatters workflow to notify a user for a response. This playbook would be used as a sub-playbook to notify an xMatters Group or User and then wait for a response. The user's response is passed as an output to the playbook for use in a parent playbook for branching. See the xMatters - Example Conditional Actions playbook for an example. Covers 1 vendor variants: xMatters. Use when managing incidents with xmatters must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: managing, incidents, with, xmatters, incident response. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Trigger an xMatters workflow to notify a user for a response. This playbook would be used as a to notify an xMatters Group or User and then wait for a response. The user's response is passed as an output to the playbook for use in a parent playbook for branching. See the xMatters - Example Conditional Actions playbook for an example. Covers 1 vendor variants: xMatters. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: managing, incidents, with, xmatters, incident response. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: incident-response
 tags:
@@ -65,7 +65,7 @@ Write the decision log and the exit criteria.
 
 Source pack: xMatters
 
-Trigger an xMatters workflow to notify a user for a response. This playbook would be used as a sub-playbook to notify an xMatters Group or User and then wait for a response. The user's response is passed as an output to the playbook for use in a parent playbook for branching. See the xMatters - Example Conditional Actions playbook for an example.
+Trigger an xMatters workflow to notify a user for a response. This playbook would be used as a to notify an xMatters Group or User and then wait for a response. The user's response is passed as an output to the playbook for use in a parent playbook for branching. See the xMatters - Example Conditional Actions playbook for an example.
 
 Inputs:
 
@@ -76,12 +76,10 @@ Inputs:
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-curl -sS -X POST "https://<org>.xmatters.com/api/xm/1/events" \
-  -H "Authorization: Bearer $XMATTERS_TOKEN" -H "Content-Type: application/json" \
-  -d '{"eventType":"incident","priority":"high","description":"INC-1234"}'
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

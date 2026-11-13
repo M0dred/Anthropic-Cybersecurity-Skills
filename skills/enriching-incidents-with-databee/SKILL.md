@@ -1,7 +1,7 @@
 ---
 name: enriching-incidents-with-databee
 description: >-
-  Implements enriching incidents with databee. Covers 1 vendor variants: DataBee. Use when enriching incidents with databee must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: enriching, incidents, with, databee, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Implements enriching incidents with databee. Covers 1 vendor variants: DataBee. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: enriching, incidents, with, databee, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: threat-intelligence
 tags:
@@ -73,11 +73,10 @@ Inputs:
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-curl -sS "https://api.databee.io/v1/events?query=user@example.com" \
-  -H "Authorization: Bearer $DATABEE_TOKEN"
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

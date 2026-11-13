@@ -1,7 +1,7 @@
 ---
 name: scanning-files-with-yara
 description: >-
-  A playbook to run YARA scan against uploaded file. To run the playbook, provide the YARA rule content and the entry ID of the file you intend to scan. Covers 1 vendor variants: Yara. Use when scanning files with yara must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: scanning, files, with, yara, malware analysis. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  A playbook to run YARA scan against uploaded file. To run the playbook, provide the YARA rule content and the entry ID of the file you intend to scan. Covers 1 vendor variants: Yara. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: scanning, files, with, yara, malware analysis. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: malware-analysis
 tags:

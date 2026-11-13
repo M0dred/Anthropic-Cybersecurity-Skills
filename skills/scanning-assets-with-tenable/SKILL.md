@@ -1,7 +1,7 @@
 ---
 name: scanning-assets-with-tenable
 description: >-
-  Given the IP address this playbook enriches Tenable.io information relevant to ASM alerts. Covers 4 vendor variants: Cortex Attack Surface Management, RiskIQ Digital Footprint, Tenable Vulnerability Management (formerly Tenable.io), Tenable.sc. Use when scanning assets with tenable must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: scanning, assets, with, tenable, vulnerability management. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Given the IP address this playbook enriches Tenable.io information relevant to ASM alerts. Covers 4 vendor variants: Cortex Attack Surface Management, RiskIQ Digital Footprint, Tenable Vulnerability Management (formerly Tenable.io), Tenable.sc. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: scanning, assets, with, tenable, vulnerability management. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: vulnerability-management
 tags:
@@ -108,13 +108,10 @@ Inputs:
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-curl -sS -X POST "https://<tenable>/scans" \
-  -H "X-ApiKeys: accessKey=$TIO_ACCESS;secretKey=$TIO_SECRET" \
-  -H "Content-Type: application/json" \
-  -d '{"uuid":"<template-uuid>","settings":{"name":"INC-1234","text_targets":"203.0.113.10"}}'
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

@@ -1,7 +1,7 @@
 ---
 name: enriching-email-events-with-proofpoint
 description: >-
-  Enriches Proofpoint Targeted Attack Protection (TAP) incidents with forensic evidence. By utilizing the 'proofpoint-get-forensics' command, the playbook retrieves forensic evidence based on the campaign ID and threat ID detected in the Proofpoint TAP incidents. Covers 1 vendor variants: Proofpoint TAP. Use when enriching email events with proofpoint must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: enriching, email, events, with, proofpoint, phishing defense. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Enriches Proofpoint Targeted Attack Protection (TAP) incidents with forensic evidence. By utilizing the 'proofpoint-get-forensics' command, the playbook retrieves forensic evidence based on the campaign ID and threat ID detected in the Proofpoint TAP incidents. Covers 1 vendor variants: Proofpoint TAP. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: enriching, email, events, with, proofpoint, phishing defense. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: phishing-defense
 tags:

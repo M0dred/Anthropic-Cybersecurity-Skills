@@ -1,7 +1,7 @@
 ---
 name: hunting-with-logzio
 description: >-
-  Handles a Logz.io Alert by retrieving the events that generated it. Covers 2 vendor variants: Logz.io. Use when hunting with logzio must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: hunting, with, logzio, threat hunting. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Handles a Logz.io Alert by retrieving the events that generated it. Covers 2 vendor variants: Logz.io. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: hunting, with, logzio, threat hunting. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: threat-hunting
 tags:
@@ -90,12 +90,10 @@ Inputs:
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-curl -sS -X POST "https://api.logz.io/v1/search" \
-  -H "X-API-TOKEN: $LOGZIO_TOKEN" -H "Content-Type: application/json" \
-  -d '{"query":"evil.example","timeRange":{"from":"now-24h","to":"now"}}'
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

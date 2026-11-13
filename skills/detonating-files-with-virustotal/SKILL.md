@@ -1,7 +1,7 @@
 ---
 name: detonating-files-with-virustotal
 description: >-
-  Detonate a private file through VirusTotal Private Scanning service See files through the eyes of VirusTotal without uploading them to the main threat corpus, keeping them entirely private. Static, dynamic, network and similarity analysis included, as well as automated threat intel enrichment, but NOT multi-antivirus analysis. More information: Get Private Scanning. Covers 1 vendor variants: VirusTotal. Use when detonating files with virustotal must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: detonating, files, with, virustotal, malware analysis. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Detonate a private file through VirusTotal Private Scanning service See files through the eyes of VirusTotal without uploading them to the main threat corpus, keeping them entirely private. Static, dynamic, network and similarity analysis included, as well as automated threat intel enrichment, but NOT multi-antivirus analysis. More information: Get Private Scanning. Covers 1 vendor variants: VirusTotal. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: detonating, files, with, virustotal, malware analysis. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: malware-analysis
 tags:

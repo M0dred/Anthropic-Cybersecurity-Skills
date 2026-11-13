@@ -1,7 +1,7 @@
 ---
 name: scanning-assets-with-pentera
 description: >-
-  Will run a pentera task given the Pentera task name. It will generate the full action report that contains all the actions that Pentera made during the scan, and will create incidents according to the filters in the Pentera Filter and Create incidents playbook. Covers 2 vendor variants: Pentera. Use when scanning assets with pentera must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: scanning, assets, with, pentera, vulnerability management. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Will run a pentera task given the Pentera task name. It will generate the full action report that contains all the actions that Pentera made during the scan, and will create incidents according to the filters in the Pentera Filter and Create incidents playbook. Covers 2 vendor variants: Pentera. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: scanning, assets, with, pentera, vulnerability management. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: vulnerability-management
 tags:
@@ -83,12 +83,10 @@ Inputs:
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-curl -sS -X POST "https://<pentera>/api/v1/scans" \
-  -H "Authorization: Bearer $PENTERA_TOKEN" -H "Content-Type: application/json" \
-  -d '{"name":"INC-1234","targets":["203.0.113.10"]}'
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

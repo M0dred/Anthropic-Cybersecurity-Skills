@@ -1,7 +1,7 @@
 ---
 name: investigating-identity-exposures-with-recorded-future
 description: >-
-  Was developed as a template response when an Identity Exposure Playbook Alert has been triggered. Covers 1 vendor variants: Recorded Future Identity. Use when investigating identity exposures with recorded future must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: investigating, identity, exposures, with, recorded, future, identity access management. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Was developed as a template response when an Identity Exposure Playbook Alert has been triggered. Covers 1 vendor variants: Recorded Future Identity. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: investigating, identity, exposures, with, recorded, future, identity access management. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: identity-access-management
 tags:

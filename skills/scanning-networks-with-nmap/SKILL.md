@@ -1,7 +1,7 @@
 ---
 name: scanning-networks-with-nmap
 description: >-
-  Sub-playbook that conducts a single port NMAP scan and returns results to the parent playbook. Covers 1 vendor variants: Nmap. Use when scanning networks with nmap must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: scanning, networks, with, nmap, network security. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  That conducts a single port NMAP scan and returns results to the parent playbook. Covers 1 vendor variants: Nmap. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: scanning, networks, with, nmap, network security. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: network-security
 tags:
@@ -65,7 +65,7 @@ Write the change, the approver, the verification, and the rollback.
 
 Source pack: Nmap
 
-Sub-playbook that conducts a single port NMAP scan and returns results to the parent playbook.
+That conducts a single port NMAP scan and returns results to the parent playbook.
 
 Inputs:
 
@@ -75,11 +75,10 @@ Inputs:
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-nmap -Pn -sS -p- --min-rate 1000 -oA scan-203.0.113.10 203.0.113.10
-nmap -Pn -sV -p 22,80,443 -oA scan-services 203.0.113.10
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

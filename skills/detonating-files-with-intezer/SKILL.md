@@ -1,7 +1,7 @@
 ---
 name: detonating-files-with-intezer
 description: >-
-  Analyzes the given file hash on Intezer Analyze and enriches the file reputation. Supports SHA256, SHA1, and MD5 hashes. Covers 2 vendor variants: Intezer. Use when detonating files with intezer must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: detonating, files, with, intezer, malware analysis. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Analyzes the given file hash on Intezer Analyze and enriches the file reputation. Supports SHA256, SHA1, and MD5 hashes. Covers 2 vendor variants: Intezer. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: detonating, files, with, intezer, malware analysis. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: malware-analysis
 tags:

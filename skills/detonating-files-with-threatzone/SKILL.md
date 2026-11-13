@@ -1,7 +1,7 @@
 ---
 name: detonating-files-with-threatzone
 description: >-
-  Analyzes one file using the ThreatZone sandbox integration. Returns relevant reports to the War Room and file reputations to the context data. Dynamic Scan Extensions: exe, docx, dochtml, docm, doc, rtf, ps1, bat, cmd, xlw, xltx, xltm, xls, xlsx, odc, csv, xlshtml. Covers 2 vendor variants: ThreatZone. Use when detonating files with threatzone must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: detonating, files, with, threatzone, malware analysis. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Analyzes one file using the ThreatZone sandbox integration. Returns relevant reports to the War Room and file reputations to the context data. Dynamic Scan Extensions: exe, docx, dochtml, docm, doc, rtf, ps1, bat, cmd, xlw, xltx, xltm, xls, xlsx, odc, csv, xlshtml. Covers 2 vendor variants: ThreatZone. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: detonating, files, with, threatzone, malware analysis. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: malware-analysis
 tags:

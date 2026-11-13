@@ -1,7 +1,7 @@
 ---
 name: scanning-assets-with-digital-defense
 description: >-
-  Pulls IP addresses from the detail value of an incident and check if that asset has been scanned within the past 60 days. If not then it will then prompt the user to perform a scan on the asset. Covers 1 vendor variants: Digital Defense Frontline VM. Use when scanning assets with digital defense must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: scanning, assets, with, digital, defense, vulnerability management. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Pulls IP addresses from the detail value of an incident and check if that asset has been scanned within the past 60 days. If not then it will then prompt the user to perform a scan on the asset. Covers 1 vendor variants: Digital Defense Frontline VM. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: scanning, assets, with, digital, defense, vulnerability management. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: vulnerability-management
 tags:
@@ -69,11 +69,10 @@ Pulls IP addresses from the detail value of an incident and check if that asset 
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-curl -sS "https://api.digitaldefense.com/v1/assets?ip=203.0.113.10" \
-  -H "Authorization: Bearer $DD_TOKEN"
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

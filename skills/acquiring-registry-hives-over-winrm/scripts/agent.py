@@ -35,9 +35,14 @@ WINRM = {
 def run(cmd, dry):
     if dry:
         return {"cmd": cmd, "dry_run": True, "returncode": 0}
-    p = subprocess.run(cmd, shell=isinstance(cmd, str), capture_output=True, text=True, timeout=300)
-    return {"cmd": cmd, "returncode": p.returncode, "stdout": p.stdout[-1000:],
-            "stderr": p.stderr[-1000:]}
+    try:
+        p = subprocess.run(cmd, shell=isinstance(cmd, str), capture_output=True, text=True, timeout=300)
+        return {"cmd": cmd, "returncode": p.returncode, "stdout": p.stdout[-1000:],
+                "stderr": p.stderr[-1000:]}
+    except FileNotFoundError:
+        return {"cmd": cmd, "returncode": 127, "error": f"not found: {cmd[0] if isinstance(cmd, str) else cmd[0]}"}
+    except subprocess.TimeoutExpired:
+        return {"cmd": cmd, "returncode": 124, "error": "timeout"}
 
 
 def hash_dir(path):

@@ -54,9 +54,14 @@ def run(platform, query, dry):
                "-d", "query_expression=" + query]
     else:
         return {"query": query, "error": "no runner configured for this platform"}
-    p = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
-    return {"query": query, "returncode": p.returncode, "stdout": p.stdout[-3000:],
-            "stderr": p.stderr[-1000:]}
+    try:
+        p = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+        return {"query": query, "returncode": p.returncode, "stdout": p.stdout[-3000:],
+                "stderr": p.stderr[-1000:]}
+    except FileNotFoundError:
+        return {"query": query, "returncode": 127, "error": f"not found: {cmd[0]}"}
+    except subprocess.TimeoutExpired:
+        return {"query": query, "returncode": 124, "error": "timeout"}
 
 
 def main(config=None):

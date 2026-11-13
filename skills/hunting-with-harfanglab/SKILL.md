@@ -1,7 +1,7 @@
 ---
 name: hunting-with-harfanglab
 description: >-
-  Allows is triggered by the Hurukai - Process Indicators - Manual Review playbook. It allows to search for IOC sightings in the HarfangLab EDR and tag sighted IOCs accordingly for manual review. All IOCs are tagged in order to be further inserted into a HarfangLab EDR IOC source. Covers 1 vendor variants: HarfangLab EDR. Use when hunting with harfanglab must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: hunting, with, harfanglab, endpoint security. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Allows is triggered by the Hurukai - Process Indicators - Manual Review playbook. It allows to search for IOC sightings in the HarfangLab EDR and tag sighted IOCs accordingly for manual review. All IOCs are tagged in order to be further inserted into a HarfangLab EDR IOC source. Covers 1 vendor variants: HarfangLab EDR. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: hunting, with, harfanglab, endpoint security. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: endpoint-security
 tags:
@@ -73,11 +73,10 @@ Inputs:
 
 ## Platform Commands
 
-The commands below are the platform-native equivalents for this procedure.
-
 ```bash
-curl -sS "https://<harfanglab>/api/v1/endpoint/agents?hostname=WEB-01" \
-  -H "Authorization: Bearer $HL_TOKEN"
+# Generic REST call with a bearer token
+curl -sS -X GET "https://api.example.com/v1/resource" \
+  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
 ```
 
 ## Verification

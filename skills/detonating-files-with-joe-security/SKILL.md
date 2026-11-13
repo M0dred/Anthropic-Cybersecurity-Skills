@@ -1,7 +1,7 @@
 ---
 name: detonating-files-with-joe-security
 description: >-
-  Detonates one or more files using the Joe Security - Joe Sandbox integration. Returns relevant reports to the War Room and file reputations to the context data. All file types are supported. Covers 1 vendor variants: Joe Security. Use when detonating files with joe security must be executed through a specific vendor product, or when the vendor-neutral procedure needs the exact API or console steps. Keywords: detonating, files, with, joe, security, malware analysis. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Detonates one or more files using the Joe Security - Joe Sandbox integration. Returns relevant reports to the War Room and file reputations to the context data. All file types are supported. Covers 1 vendor variants: Joe Security. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: detonating, files, with, joe, security, malware analysis. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: malware-analysis
 tags:
