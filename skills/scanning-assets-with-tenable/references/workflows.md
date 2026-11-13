@@ -3,11 +3,11 @@
 ## Decision sequence
 
 ```
-1. Confirm the finding
-2. Plan the change
-3. Apply
-4. Verify
-5. Record
+1. Preserve the artifact
+2. Parse
+3. Extract
+4. Normalize
+5. Report
 ```
 
 ## Record template

@@ -50,12 +50,10 @@ RF monitoring for wireless intrusion detection and policy enforcement. Visit  fo
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `bastille-get-device-events`: 
+- `bastille-get-zone-events`: 
+- `bastille-add-device-tag`: 
+- `bastille-remove-device-tag`: 
 
 
 ## Calculate Severity - Cortex XDR Risky Assets
@@ -77,21 +75,21 @@ Calculates a severity for the incident based on the involvement of risky users o
 **Product:** Check Point Firewall  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `checkpoint-host-list`: 
+- `checkpoint-host-get`: 
+- `checkpoint-host-add`: 
+- `checkpoint-host-update`: 
+- `checkpoint-host-delete`: 
+- `checkpoint-group-list`: 
+- `checkpoint-group-get`: 
+- `checkpoint-group-add`: 
+- `checkpoint-group-update`: 
+- `checkpoint-group-delete`: 
+- `checkpoint-address-range-list`: 
+- `checkpoint-address-range-add`: 
+- `checkpoint-address-range-update`: 
+- `checkpoint-address-range-delete`: 
+- `checkpoint-threat-indicator-list`: 
 
 
 ## Cisco Secure Network Analytics (Stealthwatch)
@@ -103,21 +101,17 @@ Scalable visibility and security analytics. This integration was integrated and 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cisco-stealthwatch-query-flows-initialize`: 
+- `cisco-stealthwatch-query-flows-status`: 
+- `cisco-stealthwatch-query-flows-results`: 
+- `cisco-stealthwatch-list-tags`: 
+- `cisco-stealthwatch-get-tag`: 
+- `cisco-stealthwatch-list-tenants`: 
+- `cisco-stealthwatch-get-tag-hourly-traffic-report`: 
+- `cisco-stealthwatch-get-top-alarming-tags`: 
+- `cisco-stealthwatch-list-security-events-initialize`: 
+- `cisco-stealthwatch-list-security-events-status`: 
+- `cisco-stealthwatch-list-security-events-results`: 
 
 
 ## CombineSeverity
@@ -329,21 +323,21 @@ Cortex XDR - XQL Query Engine enables you to run XQL queries on your data source
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `xdr-xql-generic-query`: 
+- `xdr-xql-get-quota`: 
+- `xdr-xql-get-query-results`: 
+- `xdr-xql-file-event-query`: 
+- `xdr-xql-process-event-query`: 
+- `xdr-xql-dll-module-query`: 
+- `xdr-xql-network-connection-query`: 
+- `xdr-xql-registry-query`: 
+- `xdr-xql-event-log-query`: 
+- `xdr-xql-dns-query`: 
+- `xdr-xql-file-dropper-query`: 
+- `xdr-xql-process-instance-network-activity-query`: 
+- `xdr-xql-process-causality-network-activity-query`: 
+- `xdr-xql-library-list`: 
+- `xdr-xql-library-create`: 
 
 
 ## Cortex XDR Alerts Handling v2
@@ -804,21 +798,21 @@ Use the F5 ASM integration to read information and to manage F5 firewall. This i
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `f5-asm-policy-list`: 
+- `f5-asm-policy-create`: 
+- `f5-asm-policy-apply`: 
+- `f5-asm-policy-export-file`: 
+- `f5-asm-policy-methods-list`: 
+- `f5-asm-policy-file-types-list`: 
+- `f5-asm-policy-methods-add`: 
+- `f5-asm-policy-methods-update`: 
+- `f5-asm-policy-methods-delete`: 
+- `f5-asm-policy-file-types-add`: 
+- `f5-asm-policy-file-types-update`: 
+- `f5-asm-policy-file-types-delete`: 
+- `f5-asm-policy-delete`: 
+- `f5-asm-policy-hostnames-list`: 
+- `f5-asm-policy-hostnames-add`: 
 
 
 ## F5 firewall
@@ -827,10 +821,6 @@ Use the F5 ASM integration to read information and to manage F5 firewall. This i
 **Product:** F5 firewall  
 
 Use the F5 Firewall integration to manage your F5 firewall rules
-
-**Commands:**
-
-- `None`: 
 
 
 ## Fidelis Elevate Network
@@ -842,7 +832,7 @@ Automate Detection and Response to Network Threats and data leakage in your orga
 
 **Commands:**
 
-- `None`: 
+- `fidelis-get-alert`: 
 
 
 ## FireEye NX
@@ -854,14 +844,11 @@ FireEye Network Security is an effective cyber threat protection solution that h
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `fireeye-nx-get-alerts`: 
+- `fireeye-nx-get-artifacts-metadata-by-alert`: 
+- `fireeye-nx-get-artifacts-by-alert`: 
+- `fireeye-nx-get-reports`: 
+- `fireeye-nx-get-events`: 
 
 
 ## Illusive - Incident Escalation
@@ -902,8 +889,8 @@ This playbook is used for retrieving an extensive view over a detected incident 
 **Product:** Illusive Networks  
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `illusive-get-forensics-timeline`: 
+- `illusive-get-asm-host-insight`: 
 
 
 ## iot-security-alert-post-processing
@@ -993,21 +980,16 @@ Creates, modifies, or deletes a Netskope private application (ZTNA/NPA) "segment
 **Product:** Netskope  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `netskope-event-list`: 
+- `netskope-alert-list`: 
+- `netskope-quarantined-file-list`: 
+- `netskope-quarantined-file-get`: 
+- `netskope-quarantined-file-update`: 
+- `netskope-url-list-update`: 
+- `netskope-file-hash-list-update`: 
+- `netskope-client-list`: 
+- `netskope-host-associated-user-list`: 
+- `netskope-user-associated-host-list`: 
 
 
 ## Netskope (API v2)
@@ -1019,21 +1001,19 @@ Netskope API v2 provides a powerful interface for managing and monitoring Netsko
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `netskope-alert-list`: 
+- `netskope-event-list`: 
+- `netskope-url-list-update`: 
+- `netskope-url-list-create`: 
+- `netskope-url-lists-list`: 
+- `netskope-url-list-delete`: 
+- `netskope-client-list`: 
+- `netskope-url-list-add`: 
+- `netskope-incident-dlp-list`: 
+- `get-mapping-fields`: 
+- `update-remote-system`: 
+- `get-remote-data`: 
+- `get-modified-remote-data`: 
 
 
 ## NetskopeBuildProtocolsJson
@@ -1161,12 +1141,11 @@ The Nozomi Networks integration enables the collection of alert and asset inform
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `nozomi-find-assets`: 
+- `nozomi-close-incidents-as-security`: 
+- `nozomi-close-incidents-as-change`: 
+- `nozomi-query`: 
+- `nozomi-find-ip-by-mac`: 
 
 
 ## Palo Alto Networks AIOps
@@ -1178,7 +1157,7 @@ Palo Alto Networks Best Practice Assessment (BPA) analyzes NGFW and Panorama con
 
 **Commands:**
 
-- `None`: 
+- `aiops-bpa-report-generate`: 
 
 
 ## Palo Alto Networks Automatic SLR
@@ -1188,10 +1167,6 @@ Palo Alto Networks Best Practice Assessment (BPA) analyzes NGFW and Panorama con
 
 Use the Palo Alto Networks NGFW API to automatically generate a Security Lifecycle Review (SLR) Report
 
-**Commands:**
-
-- `None`: 
-
 
 ## Palo Alto Networks Cortex XDR - Investigation and Response
 
@@ -1199,10 +1174,6 @@ Use the Palo Alto Networks NGFW API to automatically generate a Security Lifecyc
 **Product:** Cortex XDR by Palo Alto Networks  
 
 Cortex XDR is the world's first detection and response app that natively integrates network, endpoint, and cloud data to stop sophisticated attacks. This integration was integrated and tested with version 2.6.5 of Cortex XDR - IR. <~PLATFORM> Note: On the Cortex Platform, this integration is used to connect to a different Cortex XDR/XSIAM tenant. Configuring the Server URL parameter with the URL of the tenant this integration instance is running on is not supported - the integration will fail to run. For actions on the local tenant, use the built-in Cortex Platform commands instead. </~PLATFORM>
-
-**Commands:**
-
-- `None`: 
 
 
 ## Palo Alto Networks Device Security
@@ -1214,18 +1185,13 @@ Use the Palo Alto Networks Device Security integration to fetch alerts and vulne
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `device-security-get-device`: 
+- `device-security-get-device-by-ip`: 
+- `device-security-list-devices`: 
+- `device-security-list-alerts`: 
+- `device-security-list-vulns`: 
+- `device-security-resolve-alert`: 
+- `device-security-resolve-vuln`: 
 
 
 ## Palo Alto Networks Enterprise DLP
@@ -1237,12 +1203,11 @@ Palo Alto Networks Enterprise DLP discovers and protects company data across eve
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `pan-dlp-get-report`: 
+- `pan-dlp-update-incident`: 
+- `pan-dlp-exemption-eligible`: 
+- `pan-dlp-slack-message`: 
+- `pan-dlp-reset-last-run`: 
 
 
 ## Palo Alto Networks IoT
@@ -1254,13 +1219,13 @@ This is the Palo Alto Networks IoT integration (previously Zingbox). This integr
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iot-security-get-device`: 
+- `iot-security-list-devices`: 
+- `iot-security-list-alerts`: 
+- `iot-security-list-vulns`: 
+- `iot-security-resolve-alert`: 
+- `iot-security-resolve-vuln`: 
+- `iot-security-get-device-by-ip`: 
 
 
 ## Palo Alto Networks PAN-OS
@@ -1272,21 +1237,21 @@ This integration supports both Palo Alto Networks Panorama and Palo Alto Network
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `pan-os`: 
+- `pan-os-get-predefined-threats-list`: 
+- `pan-os-commit`: 
+- `pan-os-push-to-device-group`: 
+- `pan-os-list-addresses`: 
+- `pan-os-get-address`: 
+- `pan-os-create-address`: 
+- `pan-os-delete-address`: 
+- `pan-os-list-address-groups`: 
+- `pan-os-get-address-group`: 
+- `pan-os-create-address-group`: 
+- `pan-os-block-vulnerability`: 
+- `pan-os-delete-address-group`: 
+- `pan-os-edit-address-group`: 
+- `pan-os-list-services`: 
 
 
 ## Palo Alto Networks Security Advisories (Beta)
@@ -1298,8 +1263,7 @@ Queries the public repository of PAN-OS CVEs. This integration was integrated an
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `pan-advisories-get-advisories`: 
 
 
 ## Palo Alto Networks WildFire Reports
@@ -1311,7 +1275,7 @@ Generates a Palo Alto Networks WildFire PDF report. This integration is set up b
 
 **Commands:**
 
-- `None`: 
+- `internal-wildfire-get-report`: 
 
 
 ## Palo Alto Networks WildFire v2
@@ -1323,21 +1287,14 @@ Use the Palo Alto Networks Wildfire integration to automatically identify unknow
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `wildfire-upload`: 
+- `wildfire-upload-file-url`: 
+- `wildfire-report`: 
+- `wildfire-get-verdict`: 
+- `wildfire-get-verdicts`: 
+- `wildfire-upload-url`: 
+- `wildfire-get-sample`: 
+- `wildfire-get-url-webartifacts`: 
 
 
 ## PAN-OS - Add Anti-Spyware Security Profile To Rule
@@ -1605,15 +1562,12 @@ Automate your AppID Adoption by using this integration together with your Palo A
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `pan-os-po-get-stats`: 
+- `pan-os-po-no-apps`: 
+- `pan-os-po-unused-apps`: 
+- `pan-os-po-get-rules`: 
+- `pan-os-po-app-and-usage`: 
+- `pan-os-get-dag`: 
 
 
 ## PAN-OS Query Logs For Indicators
@@ -1894,18 +1848,12 @@ Use the SaaS Security integration to protect against cloud‑based threats by
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `saas-security-incidents-get`: 
+- `saas-security-incident-get-by-id`: 
+- `saas-security-incident-state-update`: 
+- `saas-security-get-apps`: 
+- `saas-security-asset-remediate`: 
+- `saas-security-remediation-status-get`: 
 
 
 ## Saas Security - Incident Processor
@@ -1944,21 +1892,21 @@ On-Premise firewall by Sophos enables you to manage your firewall, respond to th
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `sophos-firewall-rule-list`: 
+- `sophos-firewall-rule-get`: 
+- `sophos-firewall-rule-add`: 
+- `sophos-firewall-rule-update`: 
+- `sophos-firewall-rule-delete`: 
+- `sophos-firewall-rule-group-list`: 
+- `sophos-firewall-rule-group-get`: 
+- `sophos-firewall-rule-group-add`: 
+- `sophos-firewall-rule-group-update`: 
+- `sophos-firewall-rule-group-delete`: 
+- `sophos-firewall-url-group-list`: 
+- `sophos-firewall-url-group-get`: 
+- `sophos-firewall-url-group-add`: 
+- `sophos-firewall-url-group-update`: 
+- `sophos-firewall-url-group-delete`: 
 
 
 ## Sync Threat Intel to Destination Profile - Netskope
@@ -2089,9 +2037,7 @@ This is the Zero Networks event collector integration for Cortex XSIAM
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `zero-networks-segment-get-events`: 
 
 
 ## Zscaler Internet Access
@@ -2103,21 +2049,17 @@ Zscaler is a cloud security solution built for performance and flexible scalabil
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `zscaler-blacklist-url`: 
+- `zscaler-undo-blacklist-url`: 
+- `zscaler-whitelist-url`: 
+- `zscaler-undo-whitelist-url`: 
+- `zscaler-undo-whitelist-ip`: 
+- `zscaler-whitelist-ip`: 
+- `zscaler-undo-blacklist-ip`: 
+- `zscaler-blacklist-ip`: 
+- `zscaler-category-add-url`: 
+- `zscaler-category-add-ip`: 
+- `zscaler-category-remove-url`: 
 
 
 ## Zscaler Internet Access via ZIdentity
@@ -2129,19 +2071,19 @@ This integration uses ZIdentity OAuth 2.0 client credentials to authenticate wit
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `zia-denylist-list`: 
+- `zia-denylist-update`: 
+- `zia-allowlist-list`: 
+- `zia-allowlist-update`: 
+- `zia-category-list`: 
+- `zia-category-update`: 
+- `zia-url-quota-get`: 
+- `zia-ip-destination-group-list`: 
+- `zia-ip-destination-group-update`: 
+- `zia-ip-destination-group-add`: 
+- `zia-ip-destination-group-delete`: 
+- `zia-user-list`: 
+- `zia-user-update`: 
+- `zia-groups-list`: 
+- `zia-departments-list`: 
 

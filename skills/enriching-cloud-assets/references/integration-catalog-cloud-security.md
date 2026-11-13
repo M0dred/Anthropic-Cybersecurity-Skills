@@ -12,21 +12,21 @@ Support for AWS cloud This integration was integrated and tested with version 1.
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-s3-public-access-block-update`: 
+- `aws-s3-bucket-delete`: 
+- `aws-s3-bucket-objects-list`: 
+- `aws-s3-bucket-objects-list-v2`: 
+- `aws-s3-bucket-acl-put`: 
+- `aws-s3-bucket-logging-put`: 
+- `aws-s3-bucket-versioning-put`: 
+- `aws-s3-bucket-policy-put`: 
+- `aws-s3-bucket-website-delete`: 
+- `aws-s3-bucket-ownership-controls-put`: 
+- `aws-s3-bucket-website-get`: 
+- `aws-s3-bucket-acl-get`: 
+- `aws-iam-account-password-policy-get`: 
+- `aws-iam-account-password-policy-update`: 
+- `aws-iam-role-policy-put`: 
 
 
 ## Analyze URL - ReversingLabs TitaniumCloud
@@ -50,7 +50,7 @@ This integration enables the management of Alibaba Cloud Elastic Compute Service
 
 **Commands:**
 
-- `None`: 
+- `ali-instance`: 
 
 
 ## Ansible Azure
@@ -62,7 +62,7 @@ This integration enables the management of Azure Services using Ansible modules.
 
 **Commands:**
 
-- `None`: 
+- `azure-rm-autoscale`: 
 
 
 ## Ansible HCloud
@@ -74,9 +74,9 @@ This integration enables the management of Hetzner Cloud environments using Ansi
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `hcloud-datacenter-info`: 
+- `hcloud-floating-ip-info`: 
+- `hcloud-image-info`: 
 
 
 ## Atlassian Cloud MCP
@@ -88,8 +88,8 @@ Use this integration to connect securely with an Atlassian Cloud Model Context P
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `atlassian-cloud-mcp-auth-test`: 
+- `atlassian-cloud-mcp-generate-login-url`: 
 
 
 ## Atlassian Confluence Cloud
@@ -101,21 +101,21 @@ Atlassian Confluence Cloud allows users to interact with confluence entities lik
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `confluence-cloud-space-create`: 
+- `confluence-cloud-content-create`: 
+- `confluence-cloud-comment-create`: 
+- `confluence-cloud-space-list`: 
+- `confluence-cloud-content-list`: 
+- `confluence-cloud-content-delete`: 
+- `confluence-cloud-content-update`: 
+- `confluence-cloud-content-search`: 
+- `confluence-cloud-user-list`: 
+- `confluence-cloud-group-list`: 
+- `confluence-cloud-get-events`: 
+- `confluence-cloud-content-get`: 
+- `confluence-cloud-oauth-start`: 
+- `confluence-cloud-oauth-complete`: 
+- `confluence-cloud-oauth-test`: 
 
 
 ## AWS - AccessAnalyzer
@@ -127,18 +127,13 @@ Amazon Web Services IAM Access Analyzer For detailed instructions about setting 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-access-analyzer-list-analyzers`: 
+- `aws-access-analyzer-list-analyzed-resource`: 
+- `aws-access-analyzer-list-findings`: 
+- `aws-access-analyzer-get-analyzed-resource`: 
+- `aws-access-analyzer-get-finding`: 
+- `aws-access-analyzer-start-resource-scan`: 
+- `aws-access-analyzer-update-findings`: 
 
 
 ## AWS - ACM
@@ -150,12 +145,12 @@ Amazon Web Services Certificate Manager Service (ACM) For more information regar
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-acm-describe-certificate`: 
+- `aws-acm-list-certificates`: 
+- `aws-acm-add-tags-to-certificate`: 
+- `aws-acm-remove-tags-from-certificate`: 
+- `aws-acm-list-tags-for-certificate`: 
+- `aws-acm-get-certificate`: 
 
 
 ## AWS - Athena
@@ -167,11 +162,11 @@ Amazon Web Services Athena
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-athena-execute-query`: 
+- `aws-athena-start-query`: 
+- `aws-athena-stop-query`: 
+- `aws-athena-get-query-execution`: 
+- `aws-athena-get-query-results`: 
 
 
 ## AWS - CloudTrail
@@ -183,14 +178,14 @@ Amazon Web Services CloudTrail. This integration was integrated and tested with 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-cloudtrail-create-trail`: 
+- `aws-cloudtrail-delete-trail`: 
+- `aws-cloudtrail-describe-trails`: 
+- `aws-cloudtrail-update-trail`: 
+- `aws-cloudtrail-start-logging`: 
+- `aws-cloudtrail-stop-logging`: 
+- `aws-cloudtrail-lookup-events`: 
+- `aws-cloudtrail-get-trail-status`: 
 
 
 ## AWS - EC2
@@ -202,21 +197,21 @@ Amazon Web Services Elastic Compute Cloud (EC2)
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-ec2-describe-instances`: 
+- `aws-ec2-describe-iam-instance-profile-associations`: 
+- `aws-ec2-describe-images`: 
+- `aws-ec2-describe-regions`: 
+- `aws-ec2-describe-addresses`: 
+- `aws-ec2-describe-snapshots`: 
+- `aws-ec2-describe-launch-templates`: 
+- `aws-ec2-describe-key-pairs`: 
+- `aws-ec2-describe-volumes`: 
+- `aws-ec2-describe-volumes`: 
+- `aws-ec2-describe-vpcs`: 
+- `aws-ec2-describe-subnets`: 
+- `aws-ec2-describe-security-groups`: 
+- `aws-ec2-allocate-address`: 
+- `aws-ec2-associate-address`: 
 
 
 ## AWS - GuardDuty
@@ -228,21 +223,21 @@ Amazon Web Services Guard Duty Service (gd) Use this integration to detect and m
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-gd-create-detector`: 
+- `aws-gd-delete-detector`: 
+- `aws-gd-get-detector`: 
+- `aws-gd-update-detector`: 
+- `aws-gd-create-ip-set`: 
+- `aws-gd-delete-ip-set`: 
+- `aws-gd-list-detectors`: 
+- `aws-gd-update-ip-set`: 
+- `aws-gd-get-ip-set`: 
+- `aws-gd-list-ip-sets`: 
+- `aws-gd-create-threatintel-set`: 
+- `aws-gd-delete-threatintel-set`: 
+- `aws-gd-get-threatintel-set`: 
+- `aws-gd-list-threatintel-sets`: 
+- `aws-gd-update-threatintel-set`: 
 
 
 ## AWS - IAM (user lifecycle management)
@@ -254,21 +249,14 @@ Integrate with AWS-ILM Identity Access Management service to execute CRUD (creat
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iam-create-user`: 
+- `iam-update-user`: 
+- `iam-get-user`: 
+- `iam-disable-user`: 
+- `iam-get-group`: 
+- `iam-create-group`: 
+- `iam-update-group`: 
+- `iam-delete-group`: 
 
 
 ## AWS - IAM Identity Center
@@ -280,21 +268,21 @@ Amazon Web Services Identity and Access Management Identity Center(IAM) For deta
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-iam-identitycenter-create-user`: 
+- `aws-iam-identitycenter-get-user`: 
+- `aws-iam-identitycenter-list-users`: 
+- `aws-iam-identitycenter-list-groups`: 
+- `aws-iam-identitycenter-list-groups-for-user`: 
+- `aws-iam-identitycenter-add-user-to-group`: 
+- `aws-iam-identitycenter-get-group`: 
+- `aws-iam-identitycenter-get-user-by-email`: 
+- `aws-iam-identitycenter-list-memberships`: 
+- `aws-iam-identitycenter-delete-user`: 
+- `aws-iam-identitycenter-delete-group`: 
+- `aws-iam-identitycenter-create-group`: 
+- `aws-iam-identitycenter-update-group`: 
+- `aws-iam-identitycenter-update-user`: 
+- `aws-iam-identitycenter-delete-group-membership`: 
 
 
 ## AWS - Identity and Access Management
@@ -306,21 +294,21 @@ Amazon Web Services Identity and Access Management (IAM) For detailed instructio
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-iam-create-user`: 
+- `aws-iam-get-user`: 
+- `aws-iam-list-users`: 
+- `aws-iam-update-user`: 
+- `aws-iam-delete-user`: 
+- `aws-iam-update-login-profile`: 
+- `aws-iam-create-group`: 
+- `aws-iam-list-groups`: 
+- `aws-iam-list-groups-for-user`: 
+- `aws-iam-add-user-to-group`: 
+- `aws-iam-create-access-key`: 
+- `aws-iam-update-access-key`: 
+- `aws-iam-list-access-keys-for-user`: 
+- `aws-iam-list-policies`: 
+- `aws-iam-list-roles`: 
 
 
 ## AWS - Lambda
@@ -332,21 +320,21 @@ Amazon Web Services Serverless Compute service (lambda) This integration was int
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-lambda-get-function`: 
+- `aws-lambda-list-functions`: 
+- `aws-lambda-list-aliases`: 
+- `aws-lambda-invoke`: 
+- `aws-lambda-get-account-settings`: 
+- `aws-lambda-get-policy`: 
+- `aws-lambda-list-versions-by-function`: 
+- `aws-lambda-get-function-url-config`: 
+- `aws-lambda-get-function-configuration`: 
+- `aws-lambda-delete-function-url-config`: 
+- `aws-lambda-delete-function`: 
+- `aws-lambda-create-function`: 
+- `aws-lambda-publish-layer-version`: 
+- `aws-lambda-list-layer-version`: 
+- `aws-lambda-delete-layer-version`: 
 
 
 ## AWS - Organizations
@@ -358,21 +346,21 @@ Manage Amazon Web Services accounts and their resources. For AWS Organizations q
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-org-root-list`: 
+- `aws-org-children-list`: 
+- `aws-org-parent-list`: 
+- `aws-org-organization-unit-get`: 
+- `aws-org-account-list`: 
+- `aws-org-organization-get`: 
+- `aws-org-organization-unit-create`: 
+- `aws-org-organization-unit-rename`: 
+- `aws-org-organization-unit-delete`: 
+- `aws-org-policy-list`: 
+- `aws-org-policy-get`: 
+- `aws-org-policy-attach`: 
+- `aws-org-policy-target-list`: 
+- `aws-org-target-policy-list`: 
+- `aws-org-policy-delete`: 
 
 
 ## AWS - Route53
@@ -384,13 +372,13 @@ Amazon Web Services Managed Cloud DNS Service
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-route53-create-record`: 
+- `aws-route53-delete-record`: 
+- `aws-route53-list-hosted-zones`: 
+- `aws-route53-list-resource-record-sets`: 
+- `aws-route53-waiter-resource-record-sets-changed`: 
+- `aws-route53-test-dns-answer`: 
+- `aws-route53-upsert-record`: 
 
 
 ## AWS - S3
@@ -402,18 +390,18 @@ Amazon Web Services Simple Storage Service (S3). This integration was integrated
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-s3-create-bucket`: 
+- `aws-s3-delete-bucket`: 
+- `aws-s3-list-buckets`: 
+- `aws-s3-get-bucket-policy`: 
+- `aws-s3-delete-bucket-policy`: 
+- `aws-s3-download-file`: 
+- `aws-s3-list-bucket-objects`: 
+- `aws-s3-put-bucket-policy`: 
+- `aws-s3-upload-file`: 
+- `aws-s3-get-public-access-block`: 
+- `aws-s3-put-public-access-block`: 
+- `aws-s3-get-bucket-encryption`: 
 
 
 ## AWS - Security Hub
@@ -422,9 +410,8 @@ Amazon Web Services Simple Storage Service (S3). This integration was integrated
 **Product:** AWS - Security Hub  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-securityhub-disable-security-hub`: 
+- `aws-securityhub-batch-update-findings`: 
 
 
 ## AWS - Security Hub v2
@@ -436,14 +423,13 @@ Unified security and compliance findings management using the AWS Security Hub V
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-securityhub-v2-security-hub-enable`: 
+- `aws-securityhub-v2-security-hub-disable`: 
+- `aws-securityhub-v2-findings-get`: 
+- `aws-securityhub-v2-findings-batch-update`: 
+- `get-remote-data`: 
+- `get-mapping-fields`: 
+- `update-remote-system`: 
 
 
 ## AWS - SNS
@@ -455,9 +441,9 @@ Amazon Web Services Simple Notification Service (SNS) For more information regar
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-sns-create-subscription`: 
+- `aws-sns-send-message`: 
+- `aws-sns-delete-topic`: 
 
 
 ## AWS - SQS
@@ -469,12 +455,12 @@ Amazon Web Services Simple Queuing Service (SQS) For more information regarding 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-sqs-get-queue-url`: 
+- `aws-sqs-list-queues`: 
+- `aws-sqs-send-message`: 
+- `aws-sqs-create-queue`: 
+- `aws-sqs-delete-queue`: 
+- `aws-sqs-purge-queue`: 
 
 
 ## AWS - System Manager
@@ -486,21 +472,21 @@ AWS Systems Manager is the operations hub for your AWS applications and resource
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-ssm-tag-add`: 
+- `aws-ssm-tag-remove`: 
+- `aws-ssm-tag-list`: 
+- `aws-ssm-inventory-list`: 
+- `aws-ssm-inventory-entry-list`: 
+- `aws-ssm-association-list`: 
+- `aws-ssm-association-get`: 
+- `aws-ssm-association-version-list`: 
+- `aws-ssm-document-list`: 
+- `aws-ssm-document-get`: 
+- `aws-ssm-automation-execution-run`: 
+- `aws-ssm-automation-execution-cancel`: 
+- `aws-ssm-automation-execution-list`: 
+- `aws-ssm-command-list`: 
+- `aws-ssm-command-run`: 
 
 
 ## AWS - Unclaimed S3 Bucket Validation
@@ -524,21 +510,21 @@ AWS Network Firewall is a stateful, managed, network firewall and intrusion dete
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-network-firewall-associate-firewall-policy`: 
+- `aws-network-firewall-associate-subnets`: 
+- `aws-network-firewall-create-firewall`: 
+- `aws-network-firewall-create-firewall-policy`: 
+- `aws-network-firewall-create-rule-group`: 
+- `aws-network-firewall-delete-firewall`: 
+- `aws-network-firewall-delete-firewall-policy`: 
+- `aws-network-firewall-delete-resource-policy`: 
+- `aws-network-firewall-delete-rule-group`: 
+- `aws-network-firewall-describe-firewall`: 
+- `aws-network-firewall-describe-firewall-policy`: 
+- `aws-network-firewall-describe-logging-configuration`: 
+- `aws-network-firewall-describe-resource-policy`: 
+- `aws-network-firewall-describe-rule-group`: 
+- `aws-network-firewall-disassociate-subnets`: 
 
 
 ## AWS Sagemaker
@@ -550,7 +536,7 @@ AWS Sagemaker - the platform
 
 **Commands:**
 
-- `None`: 
+- `predict-phishing`: 
 
 
 ## Aws Secrets Manager
@@ -562,14 +548,7 @@ AWS Secrets Manager helps you to securely encrypt, store, and retrieve credentia
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-secrets-manager-secret-list`: 
 
 
 ## AWS-EKS
@@ -581,18 +560,12 @@ The AWS EKS integration allows for the management and operation of Amazon Elasti
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-eks-list-clusters`: 
+- `aws-eks-update-cluster-config`: 
+- `aws-eks-describe-cluster`: 
+- `aws-eks-create-access-entry`: 
+- `aws-eks-associate-access-policy`: 
+- `aws-eks-update-access-entry`: 
 
 
 ## AWS-WAF
@@ -604,21 +577,21 @@ Amazon Web Services Web Application Firewall (WAF)
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-waf-ip-set-create`: 
+- `aws-waf-ip-set-get`: 
+- `aws-waf-ip-set-update`: 
+- `aws-waf-ip-set-list`: 
+- `aws-waf-ip-set-delete`: 
+- `aws-waf-regex-set-create`: 
+- `aws-waf-regex-set-get`: 
+- `aws-waf-regex-set-update`: 
+- `aws-waf-regex-set-list`: 
+- `aws-waf-regex-set-delete`: 
+- `aws-waf-rule-group-list`: 
+- `aws-waf-rule-group-get`: 
+- `aws-waf-rule-group-delete`: 
+- `aws-waf-rule-group-create`: 
+- `aws-waf-ip-rule-create`: 
 
 
 ## AWSAccountHierarchy
@@ -727,21 +700,21 @@ Cloud integrations are installed from the Data Sources page. To configure a clou
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-nsg-security-rule-update`: 
+- `azure-storage-accounts-list`: 
+- `azure-storage-blob-containers-list`: 
+- `azure-storage-account-update`: 
+- `azure-storage-blob-service-properties-set`: 
+- `azure-policy-assignment-create`: 
+- `azure-postgres-config-set`: 
+- `azure-webapp-config-set`: 
+- `azure-webapp-auth-update`: 
+- `azure-mysql-flexible-server-param-set`: 
+- `azure-monitor-log-profile-update`: 
+- `azure-disk-update`: 
+- `azure-webapp-update`: 
+- `azure-acr-update`: 
+- `azure-postgres-server-update`: 
 
 
 ## Azure Compute v2
@@ -753,21 +726,19 @@ You can use this integration to create and manage Azure Virtual Machines. This i
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-vm-list-instances`: 
+- `azure-vm-start-instance`: 
+- `azure-vm-poweroff-instance`: 
+- `azure-vm-get-instance-details`: 
+- `azure-vm-create-instance`: 
+- `azure-list-resource-groups`: 
+- `azure-vm-delete-instance`: 
+- `azure-list-subscriptions`: 
+- `azure-vm-get-nic-details`: 
+- `azure-vm-get-public-ip-details`: 
+- `azure-vm-get-all-public-ip-details`: 
+- `azure-vm-create-nic`: 
+- `azure-vm-auth-reset`: 
 
 
 ## Azure Data Explorer
@@ -779,20 +750,15 @@ Use the Azure Data Explorer integration to collect and analyze data inside Azure
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-data-explorer-search-query-execute`: 
+- `azure-data-explorer-search-query-list`: 
+- `azure-data-explorer-running-search-query-list`: 
+- `azure-data-explorer-running-search-query-cancel`: 
+- `azure-data-explorer-auth-start`: 
+- `azure-data-explorer-auth-complete`: 
+- `azure-data-explorer-auth-reset`: 
+- `azure-data-explorer-auth-test`: 
+- `azure-data-explorer-generate-login-url`: 
 
 
 ## Azure Firewall
@@ -804,21 +770,21 @@ Azure Firewall is a cloud-native and intelligent network firewall security servi
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-firewall-auth-test`: 
+- `azure-firewall-auth-start`: 
+- `azure-firewall-auth-complete`: 
+- `azure-firewall-auth-reset`: 
+- `azure-firewall-list`: 
+- `azure-firewall-get`: 
+- `azure-firewall-rule-collection-list`: 
+- `azure-firewall-rule-list`: 
+- `azure-firewall-rule-get`: 
+- `azure-firewall-policy-create`: 
+- `azure-firewall-policy-update`: 
+- `azure-firewall-policy-get`: 
+- `azure-firewall-policy-delete`: 
+- `azure-firewall-policy-list`: 
+- `azure-firewall-policy-attach`: 
 
 
 ## Azure Key Vault
@@ -830,21 +796,21 @@ Use the Azure Key Vault integration to safeguard and manage cryptographic keys a
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-key-vault-create-update`: 
+- `azure-key-vault-delete`: 
+- `azure-key-vault-get`: 
+- `azure-key-vault-list`: 
+- `azure-key-vault-access-policy-update`: 
+- `azure-key-vault-key-get`: 
+- `azure-key-vault-key-list`: 
+- `azure-key-vault-key-delete`: 
+- `azure-key-vault-secret-get`: 
+- `azure-key-vault-secret-list`: 
+- `azure-key-vault-secret-delete`: 
+- `azure-key-vault-certificate-get`: 
+- `azure-key-vault-certificate-list`: 
+- `azure-key-vault-certificate-policy-get`: 
+- `azure-key-vault-subscriptions-list`: 
 
 
 ## Azure Kubernetes Services
@@ -856,20 +822,15 @@ Deploy and manage containerized applications with a fully managed Kubernetes ser
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-ks-auth-test`: 
+- `azure-ks-auth-start`: 
+- `azure-ks-auth-complete`: 
+- `azure-ks-auth-reset`: 
+- `azure-ks-clusters-list`: 
+- `azure-ks-cluster-addon-update`: 
+- `azure-ks-generate-login-url`: 
+- `azure-ks-resource-group-list`: 
+- `azure-ks-subscriptions-list`: 
 
 
 ## Azure Log Analytics
@@ -881,7 +842,7 @@ Log Analytics is a service that helps you collect and analyze data generated by 
 
 **Commands:**
 
-- `None`: 
+- `azure-log-analytics-execute-query`: 
 
 
 ## Azure Log Analytics - Query From Saved Search
@@ -906,21 +867,21 @@ Azure network security groups are used to filter network traffic to and from Azu
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-nsg-security-groups-list`: 
+- `azure-nsg-security-rules-list`: 
+- `azure-nsg-auth-test`: 
+- `azure-nsg-auth-start`: 
+- `azure-nsg-auth-complete`: 
+- `azure-nsg-auth-reset`: 
+- `azure-nsg-security-rule-delete`: 
+- `azure-nsg-security-rule-create`: 
+- `azure-nsg-security-rule-update`: 
+- `azure-nsg-security-rule-get`: 
+- `azure-nsg-generate-login-url`: 
+- `azure-nsg-subscriptions-list`: 
+- `azure-nsg-resource-group-list`: 
+- `azure-nsg-network-interfaces-create`: 
+- `azure-nsg-virtual-networks-list`: 
 
 
 ## Azure Open AI Service
@@ -932,7 +893,7 @@ Azure Open AI ServiceAI
 
 **Commands:**
 
-- `None`: 
+- `azure-openai-send-message`: 
 
 
 ## Azure Resource Graph
@@ -944,9 +905,9 @@ Azure Resource Graph is an Azure service designed to extend Azure Resource Manag
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-rg-list-operations`: 
+- `azure-rg-query`: 
+- `azure-rg-auth-reset`: 
 
 
 ## Azure Risky Users
@@ -958,21 +919,16 @@ Azure Risky Users provides access to all at-risk users and risk detections in Az
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-risky-users-auth-test`: 
+- `azure-risky-users-auth-start`: 
+- `azure-risky-users-auth-complete`: 
+- `azure-risky-users-auth-reset`: 
+- `azure-risky-users-list`: 
+- `azure-risky-user-get`: 
+- `azure-risky-users-risk-detections-list`: 
+- `azure-risky-users-risk-detection-get`: 
+- `azure-risky-users-confirm-safe`: 
+- `azure-risky-users-confirm-compromise`: 
 
 
 ## Azure SQL Management
@@ -984,21 +940,21 @@ Microsoft Azure SQL Management Integration manages the Auditing and Threat Polic
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-sql-auth-start`: 
+- `azure-sql-auth-complete`: 
+- `azure-sql-auth-reset`: 
+- `azure-sql-auth-test`: 
+- `azure-sql-servers-list`: 
+- `azure-sql-db-list`: 
+- `azure-sql-db-audit-policy-list`: 
+- `azure-sql-db-threat-policy-get`: 
+- `azure-sql-db-audit-policy-create-update`: 
+- `azure-sql-db-threat-policy-create-update`: 
+- `azure-sql-generate-login-url`: 
+- `azure-sql-subscriptions-list`: 
+- `azure-sql-resource-group-list`: 
+- `azure-sql-firewall-rule-list`: 
+- `azure-sql-firewall-rule-create-update`: 
 
 
 ## Azure Storage Container
@@ -1010,21 +966,21 @@ Create and Manage Azure Storage Container services. This integration was integra
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-storage-container-list`: 
+- `azure-storage-container-create`: 
+- `azure-storage-container-property-get`: 
+- `azure-storage-container-delete`: 
+- `azure-storage-container-blob-list`: 
+- `azure-storage-container-blob-create`: 
+- `azure-storage-container-blob-update`: 
+- `azure-storage-container-blob-get`: 
+- `azure-storage-container-blob-tag-get`: 
+- `azure-storage-container-blob-tag-set`: 
+- `azure-storage-container-blob-delete`: 
+- `azure-storage-container-blob-property-get`: 
+- `azure-storage-container-blob-property-set`: 
+- `azure-storage-container-sas-create`: 
+- `azure-storage-container-block-public-access`: 
 
 
 ## Azure Storage FileShare
@@ -1036,18 +992,15 @@ Create and Manage Azure FileShare Files and Directories. This integration was in
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-storage-fileshare-create`: 
+- `azure-storage-fileshare-delete`: 
+- `azure-storage-fileshare-list`: 
+- `azure-storage-fileshare-content-list`: 
+- `azure-storage-fileshare-directory-create`: 
+- `azure-storage-fileshare-directory-delete`: 
+- `azure-storage-fileshare-file-create`: 
+- `azure-storage-fileshare-file-get`: 
+- `azure-storage-fileshare-file-delete`: 
 
 
 ## Azure Storage Management
@@ -1059,21 +1012,21 @@ This integration enables you to deploy and manage storage accounts and blob serv
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-storage-auth-test`: 
+- `azure-storage-auth-start`: 
+- `azure-storage-auth-complete`: 
+- `azure-storage-auth-reset`: 
+- `azure-storage-account-list`: 
+- `azure-storage-account-create-update`: 
+- `azure-storage-blob-service-properties-get`: 
+- `azure-storage-blob-service-properties-set`: 
+- `azure-storage-blob-containers-create`: 
+- `azure-storage-blob-containers-update`: 
+- `azure-storage-blob-containers-list`: 
+- `azure-storage-blob-container-delete`: 
+- `azure-storage-generate-login-url`: 
+- `azure-storage-subscriptions-list`: 
+- `azure-storage-resource-group-list`: 
 
 
 ## Azure Storage Queue
@@ -1085,20 +1038,16 @@ Create and Manage Azure Storage Queues and Messages. This integration was integr
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-storage-queue-list`: 
+- `azure-storage-queue-create`: 
+- `azure-storage-queue-delete`: 
+- `azure-storage-queue-message-create`: 
+- `azure-storage-queue-message-get`: 
+- `azure-storage-queue-message-peek`: 
+- `azure-storage-queue-message-dequeue`: 
+- `azure-storage-queue-message-update`: 
+- `azure-storage-queue-message-delete`: 
+- `azure-storage-queue-message-clear`: 
 
 
 ## Azure Storage Table
@@ -1110,17 +1059,14 @@ Create and Manage Azure Storage Tables and Entities. This integration was integr
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-storage-table-create`: 
+- `azure-storage-table-delete`: 
+- `azure-storage-table-query`: 
+- `azure-storage-table-entity-insert`: 
+- `azure-storage-table-entity-update`: 
+- `azure-storage-table-entity-replace`: 
+- `azure-storage-table-entity-query`: 
+- `azure-storage-table-entity-delete`: 
 
 
 ## Azure Web Application Firewall
@@ -1132,21 +1078,21 @@ The Azure WAF (Web Application Firewall) integration provides centralized protec
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-waf-policies-get`: 
+- `azure-waf-policies-list-all-in-subscription`: 
+- `azure-waf-policy-update-or-create`: 
+- `azure-waf-policy-delete`: 
+- `azure-waf-front-door-policies-list`: 
+- `azure-waf-front-door-policies-list-all-in-subscription`: 
+- `azure-waf-front-door-policy-update-or-create`: 
+- `azure-waf-front-door-policy-delete`: 
+- `azure-waf-auth-start`: 
+- `azure-waf-auth-complete`: 
+- `azure-waf-auth-reset`: 
+- `azure-waf-auth-test`: 
+- `azure-waf-generate-login-url`: 
+- `azure-waf-subscriptions-list`: 
+- `azure-waf-resource-group-list`: 
 
 
 ## AzureDevOps
@@ -1158,14 +1104,12 @@ Manage Git repositories in Azure DevOps Services. Integration capabilities inclu
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-devops-auth-test`: 
+- `azure-devops-generate-login-url`: 
+- `azure-devops-auth-start`: 
+- `azure-devops-auth-complete`: 
+- `azure-devops-auth-reset`: 
+- `get-mapping-fields`: 
 
 
 ## AzureFindAvailableNSGPriorities
@@ -1225,7 +1169,7 @@ Use this playbook to search processes in Carbon Black Enterprise EDR. This playb
 **Product:** Carbon Black Cloud Enterprise EDR  
 **Commands:**
 
-- `None`: 
+- `cb-eedr-alert-workflow-update`: 
 
 
 ## Check Point Dome9 (CloudGuard)
@@ -1237,21 +1181,21 @@ Dome9 integration allows to easily manage the security and compliance of the pub
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `dome9-access-lease-list`: 
+- `dome9-access-lease-delete`: 
+- `dome9-access-lease-invitation-list`: 
+- `dome9-access-lease-invitation-delete`: 
+- `dome9-findings-search`: 
+- `dome9-ip-list-create`: 
+- `dome9-ip-list-update`: 
+- `dome9-ip-list-get`: 
+- `dome9-ip-list-delete`: 
+- `dome9-ip-list-metadata-list`: 
+- `dome9-ip-list-metadata-create`: 
+- `dome9-ip-list-metadata-update`: 
+- `dome9-ip-list-metadata-delete`: 
+- `dome9-compliance-remediation-get`: 
+- `dome9-compliance-remediation-create`: 
 
 
 ## Cisco Umbrella Cloud Security v2
@@ -1263,17 +1207,13 @@ Cisco Umbrella is a cloud security platform providing the first line of defense 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `umbrella-destinations-list`: 
+- `umbrella-destination-add`: 
+- `umbrella-destination-delete`: 
+- `umbrella-destination-lists-list`: 
+- `umbrella-destination-list-create`: 
+- `umbrella-destination-list-update`: 
+- `umbrella-destination-list-delete`: 
 
 
 ## Cloud Credentials Rotation - AWS
@@ -1353,10 +1293,10 @@ Use the CloudConvert integration to convert your files to the required format. T
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cloudconvert-upload`: 
+- `cloudconvert-convert`: 
+- `cloudconvert-check-status`: 
+- `cloudconvert-download`: 
 
 
 ## CloudConvert - Convert File
@@ -1383,8 +1323,8 @@ Use this integration to connect securely with a Cloudflare Model Context Protoco
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `cloudflare-mcp-generate-login-url`: 
+- `cloudflare-mcp-auth-test`: 
 
 
 ## Cloudflare WAF
@@ -1396,21 +1336,21 @@ Cloudflare WAF integration allows customers to manage firewall rules, filters, a
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cloudflare-waf-firewall-rule-create`: 
+- `cloudflare-waf-firewall-rule-update`: 
+- `cloudflare-waf-firewall-rule-delete`: 
+- `cloudflare-waf-firewall-rule-list`: 
+- `cloudflare-waf-filter-create`: 
+- `cloudflare-waf-filter-update`: 
+- `cloudflare-waf-filter-delete`: 
+- `cloudflare-waf-filter-list`: 
+- `cloudflare-waf-zone-list`: 
+- `cloudflare-waf-ip-list-create`: 
+- `cloudflare-waf-ip-list-delete`: 
+- `cloudflare-waf-ip-lists-list`: 
+- `cloudflare-waf-ip-list-item-create`: 
+- `cloudflare-waf-ip-list-item-update`: 
+- `cloudflare-waf-ip-list-item-delete`: 
 
 
 ## Cloudflare Zero Trust
@@ -1422,7 +1362,7 @@ Cloudflare provides network and security products for consumers and businesses, 
 
 **Commands:**
 
-- `None`: 
+- `cloudflare-zero-trust-get-events`: 
 
 
 ## CloudShare (Beta)
@@ -1434,21 +1374,21 @@ This integration is a BETA that covers the API commands from CloudShare
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cloudshare-get-envs`: 
+- `cloudshare-get-projects`: 
+- `cloudshare-get-project`: 
+- `cloudshare-get-project-policies`: 
+- `cloudshare-get-project-blueprints`: 
+- `cloudshare-get-project-blueprint`: 
+- `cloudshare-get-classes`: 
+- `cloudshare-get-class`: 
+- `cloudshare-delete-class`: 
+- `cloudshare-delete-class-environments`: 
+- `cloudshare-get-classes-countries`: 
+- `cloudshare-get-classes-customfields`: 
+- `cloudshare-get-classes-detailed`: 
+- `cloudshare-get-classes-instructors`: 
+- `cloudshare-create-class`: 
 
 
 ## Commvault Cloud
@@ -1460,13 +1400,13 @@ Commvault Cloud provides pre-built integrations, automation workflows, and playb
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `commvault-security-set-disable-data-aging`: 
+- `commvault-security-get-generate-token`: 
+- `commvault-security-get-access-token-from-keyvault`: 
+- `commvault-security-set-disable-saml-provider`: 
+- `commvault-security-get-copy-files-list-to-war-room`: 
+- `commvault-security-set-disable-user`: 
+- `commvault-security-set-cleanroom-add-vm-to-recovery-group`: 
 
 
 ## Cortex XDR - Cloud Enrichment
@@ -1488,21 +1428,21 @@ This playbook is responsible for collecting data from Cortex XDR detector and en
 **Product:** Datadog Cloud SIEM  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `datadog-event-create`: 
+- `datadog-event-list`: 
+- `datadog-tag-list`: 
+- `datadog-host-tag-create`: 
+- `datadog-host-tag-get`: 
+- `datadog-host-tag-update`: 
+- `datadog-host-tag-delete`: 
+- `datadog-active-metric-list`: 
+- `datadog-metric-search`: 
+- `datadog-metric-metadata-get`: 
+- `datadog-metric-metadata-update`: 
+- `datadog-incident-create`: 
+- `datadog-incident-delete`: 
+- `datadog-incident-update`: 
+- `datadog-incident-list`: 
 
 
 ## Datadog Cloud SIEM
@@ -1514,7 +1454,7 @@ Datadog Cloud SIEM integration for the platform. This integration allows securit
 
 **Commands:**
 
-- `None`: 
+- `datadog-get-signal`: 
 
 
 ## DatadogSyncIncidentFields
@@ -1608,21 +1548,21 @@ This playbook automates the removal of an AWS Lambda function and its associated
 **Product:** GCP IAM  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gcp-iam-projects-get`: 
+- `gcp-iam-project-iam-policy-get`: 
+- `gcp-iam-project-iam-permission-test`: 
+- `gcp-iam-project-iam-member-add`: 
+- `gcp-iam-project-iam-member-remove`: 
+- `gcp-iam-project-iam-policy-set`: 
+- `gcp-iam-project-iam-policy-create`: 
+- `gcp-iam-folders-get`: 
+- `gcp-iam-folder-iam-policy-get`: 
+- `gcp-iam-folder-iam-permission-test`: 
+- `gcp-iam-folder-iam-member-add`: 
+- `gcp-iam-folder-iam-member-remove`: 
+- `gcp-iam-folder-iam-policy-set`: 
+- `gcp-iam-folder-iam-policy-create`: 
+- `gcp-iam-organizations-get`: 
 
 
 ## GCPOffendingFirewallRule
@@ -1662,7 +1602,7 @@ Fetch audit events to see changes within a Genesys Cloud organization. This inte
 
 **Commands:**
 
-- `None`: 
+- `genesys-cloud-get-events`: 
 
 
 ## Google Cloud Compute
@@ -1674,7 +1614,7 @@ Google Compute Engine delivers virtual machines running in Google's innovative d
 
 **Commands:**
 
-- `None`: 
+- `gcp-compute-insert-instance`: 
 
 
 ## Google Cloud Functions
@@ -1686,7 +1626,7 @@ Google Cloud Functions is an event-driven serverless compute platform that enabl
 
 **Commands:**
 
-- `None`: 
+- `google-cloud-functions-list`: 
 
 
 ## Google Cloud Logging
@@ -1698,9 +1638,7 @@ With Google Cloud Logging, users can centralize all their logs in a single locat
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gcp-logging-log-entries-list`: 
 
 
 ## Google Cloud Platform
@@ -1712,21 +1650,21 @@ The GCP Integration automates management and security configurations for Compute
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gcp-compute-firewall-patch`: 
+- `gcp-storage-bucket-policy-delete`: 
+- `gcp-compute-subnet-update`: 
+- `gcp-container-cluster-security-update`: 
+- `gcp-gke-cluster-legacy-abac-auth-set`: 
+- `gcp-gke-clusters-list`: 
+- `gcp-gke-cluster-get`: 
+- `gcp-gke-node-pools-list`: 
+- `gcp-gke-node-pool-get`: 
+- `gcp-gke-node-pool-management-set`: 
+- `gcp-gke-operations-list`: 
+- `gcp-gke-operation-get`: 
+- `gcp-gke-operation-cancel`: 
+- `gcp-storage-bucket-metadata-update`: 
+- `gcp-iam-project-policy-binding-remove`: 
 
 
 ## Google Cloud Pub/Sub
@@ -1738,7 +1676,7 @@ Google Cloud Pub / Sub is a fully-managed real-time messaging service that allow
 
 **Commands:**
 
-- `None`: 
+- `gcp-pubsub-topics-list`: 
 
 
 ## Google Cloud SCC
@@ -1750,21 +1688,19 @@ Security Command Center is a security and risk management platform for Google Cl
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `google-cloud-scc-asset-list`: 
+- `google-cloud-scc-finding-list`: 
+- `google-cloud-scc-finding-update`: 
+- `google-cloud-scc-asset-resource-list`: 
+- `google-cloud-scc-asset-owner-get`: 
+- `google-cloud-scc-finding-state-update`: 
+- `google-cloud-scc-v2-finding-list`: 
+- `google-cloud-scc-v2-finding-update`: 
+- `google-cloud-scc-v2-finding-state-update`: 
+- `google-cloud-scc-finding-mute`: 
+- `google-cloud-scc-finding-unmute`: 
+- `google-cloud-scc-mute-rule-get`: 
+- `google-cloud-scc-mute-rule-create`: 
 
 
 ## GoogleCloudSCCMuteFinding
@@ -1830,7 +1766,7 @@ Unified security management and advanced threat protection across hybrid cloud w
 
 **Commands:**
 
-- `None`: 
+- `azure-sc-list-alert`: 
 
 
 ## Microsoft Defender for Cloud Apps
@@ -1842,21 +1778,17 @@ Microsoft Cloud App Security is a multimode Cloud Access Security Broker (CASB).
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `microsoft-cas-auth-start`: 
+- `microsoft-cas-auth-complete`: 
+- `microsoft-cas-auth-reset`: 
+- `microsoft-cas-auth-test`: 
+- `microsoft-cas-alerts-list`: 
+- `microsoft-cas-alert-close-benign`: 
+- `microsoft-cas-alert-close-true-positive`: 
+- `microsoft-cas-alert-close-false-positive`: 
+- `microsoft-cas-activities-list`: 
+- `microsoft-cas-files-list`: 
+- `microsoft-cas-users-accounts-list`: 
 
 
 ## Microsoft Management Activity API (O365 Azure Events)
@@ -1868,7 +1800,7 @@ The Microsoft Management Activity API integration enables you to subscribe or un
 
 **Commands:**
 
-- `None`: 
+- `ms-management-activity-start-subscription`: 
 
 
 ## Microsoft Policy And Compliance (Audit Log)
@@ -1880,8 +1812,7 @@ Use the integration to get logs from the O365 service
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `o365-auditlog-search`: 
 
 
 ## Palo Alto Networks - Prisma Cloud Compute
@@ -1893,21 +1824,21 @@ Prisma™ Cloud Compute Edition delivers cloud workload protection (CWPP) for mo
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `prisma-cloud-compute-profile-host-list`: 
+- `prisma-cloud-compute-profile-container-list`: 
+- `prisma-cloud-compute-profile-container-hosts-list`: 
+- `prisma-cloud-compute-profile-container-forensic-list`: 
+- `prisma-cloud-compute-host-forensic-list`: 
+- `prisma-cloud-compute-console-version-info`: 
+- `prisma-cloud-compute-custom-feeds-ip-list`: 
+- `prisma-cloud-compute-custom-feeds-ip-add`: 
+- `prisma-cloud-compute-custom-feeds-ip-remove`: 
+- `prisma-cloud-compute-custom-feeds-malware-list`: 
+- `prisma-cloud-compute-custom-feeds-malware-add`: 
+- `prisma-cloud-compute-defenders-list`: 
+- `prisma-cloud-compute-collections-list`: 
+- `prisma-cloud-compute-container-namespace-list`: 
+- `prisma-cloud-compute-images-scan-list`: 
 
 
 ## Palo Alto Networks - Strata Cloud Manager
@@ -1919,21 +1850,21 @@ Provides commands for interaction with Prisma SASE API. This integration was int
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `prisma-sase-security-rule-create`: 
+- `prisma-sase-security-rule-list`: 
+- `prisma-sase-candidate-config-push`: 
+- `prisma-sase-security-rule-update`: 
+- `prisma-sase-address-object-update`: 
+- `prisma-sase-config-job-list`: 
+- `prisma-sase-security-rule-delete`: 
+- `prisma-sase-address-object-create`: 
+- `prisma-sase-address-object-delete`: 
+- `prisma-sase-address-object-list`: 
+- `prisma-sase-tag-list`: 
+- `prisma-sase-tag-create`: 
+- `prisma-sase-tag-update`: 
+- `prisma-sase-tag-delete`: 
+- `prisma-sase-address-group-list`: 
 
 
 ## Palo Alto Networks Prisma AIRS - AI Red Teaming
@@ -1945,21 +1876,21 @@ Discover and remediate AI application vulnerabilities with Palo Alto Networks Pr
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `prisma-airs-redteam-targets-list`: 
+- `prisma-airs-redteam-targets-create`: 
+- `prisma-airs-redteam-targets-get`: 
+- `prisma-airs-redteam-targets-update`: 
+- `prisma-airs-redteam-targets-delete`: 
+- `prisma-airs-redteam-targets-probe`: 
+- `prisma-airs-redteam-targets-profile`: 
+- `prisma-airs-redteam-targets-update-profile`: 
+- `prisma-airs-redteam-targets-metadata`: 
+- `prisma-airs-redteam-targets-validate-auth`: 
+- `prisma-airs-redteam-targets-templates`: 
+- `prisma-airs-redteam-targets-error-logs`: 
+- `prisma-airs-redteam-scan-error-logs`: 
+- `prisma-airs-redteam-dashboard-scan-statistics`: 
+- `prisma-airs-redteam-dashboard-score-trend`: 
 
 
 ## Palo Alto Networks Prisma AIRS - AI Runtime Security
@@ -1971,7 +1902,7 @@ Integrate with Palo Alto Networks Prisma AIRS for AI security capabilities inclu
 
 **Commands:**
 
-- `None`: 
+- `prisma-airs-runtime-scan`: 
 
 
 ## Palo Alto Networks Prisma AIRS - AI Supply Chain Security
@@ -1983,21 +1914,21 @@ Scan and govern AI models with Palo Alto Networks Prisma AIRS AI Supply Chain Se
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `prisma-airs-model-security-scans-list`: 
+- `prisma-airs-model-security-scans-create`: 
+- `prisma-airs-model-security-scans-get`: 
+- `prisma-airs-model-security-scans-violations`: 
+- `prisma-airs-model-security-labels-keys`: 
+- `prisma-airs-model-security-labels-values`: 
+- `prisma-airs-model-security-labels-add`: 
+- `prisma-airs-model-security-labels-set`: 
+- `prisma-airs-model-security-labels-delete`: 
+- `prisma-airs-model-security-scans-evaluation`: 
+- `prisma-airs-model-security-scans-violation`: 
+- `prisma-airs-model-security-scans-files`: 
+- `prisma-airs-model-security-scans-evaluations`: 
+- `prisma-airs-model-security-models-list`: 
+- `prisma-airs-model-security-models-get`: 
 
 
 ## PCComputeContainerComplianceIssuesButton
@@ -2045,7 +1976,7 @@ This script runs the "prisma-cloud-compute-images-scan-list" command for a speci
 **Product:** Palo Alto Networks - Strata Cloud Manager  
 **Commands:**
 
-- `None`: 
+- `prisma-access-logout-user`: 
 
 
 ## Prisma Access - Logout User
@@ -2441,21 +2372,16 @@ Prisma Cloud secures infrastructure, workloads and applications, across the enti
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `prisma-cloud-alert-dismiss`: 
+- `prisma-cloud-alert-get-details`: 
+- `prisma-cloud-alert-filter-list`: 
+- `prisma-cloud-remediation-command-list`: 
+- `prisma-cloud-alert-remediate`: 
+- `prisma-cloud-alert-reopen`: 
+- `prisma-cloud-alert-search`: 
+- `prisma-cloud-config-search`: 
+- `prisma-cloud-event-search`: 
+- `prisma-cloud-network-search`: 
 
 
 ## Prisma SASE - Add IPs to Static Address Group
@@ -2556,14 +2482,10 @@ Note: This integration should be used as part of our Identity Lifecycle Manageme
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iam-create-user`: 
+- `iam-update-user`: 
+- `iam-get-user`: 
+- `iam-disable-user`: 
 
 
 ## PrismaCloudAttribution
@@ -2666,10 +2588,8 @@ Fetches Proofpoint Cloud Threat Response (CTR) incidents into the platform, and 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `proofpoint-ctr-incidents-list`: 
+- `proofpoint-ctr-incident-get`: 
 
 
 ## Radware Cloud DDoS Protection Services
@@ -2681,7 +2601,7 @@ Radware Cloud Service provides customers and partners with the ability to progra
 
 **Commands:**
 
-- `None`: 
+- `radware-cloud-ddos-protection-services-get-events`: 
 
 
 ## Rapid7 InsightVM Cloud
@@ -2693,15 +2613,15 @@ InsightVM is a Vulnerability Management Tool which Scan your Network, Eliminate 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `insightvm-cloud-get-asset`: 
+- `insightvm-cloud-get-scan`: 
+- `insightvm-cloud-get-scan-engines`: 
+- `insightvm-cloud-get-health-check`: 
+- `insightvm-cloud-search-assets`: 
+- `insightvm-cloud-last-sites`: 
+- `insightvm-cloud-search-vulnerabilities`: 
+- `insightvm-cloud-start-scan`: 
+- `insightvm-cloud-stop-scan`: 
 
 
 ## ReversingLabs TitaniumCloud v2
@@ -2713,7 +2633,7 @@ ReversingLabs TitaniumCloud provides threat analysis data from various Reversing
 
 **Commands:**
 
-- `None`: 
+- `reversinglabs-titaniumcloud-file-reputation`: 
 
 
 ## Rubrik Data Object Discovery - Rubrik Polaris
@@ -2834,21 +2754,21 @@ The Rubrik Security Cloud integration will fetch the Rubrik Anomaly Event and is
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `rubrik-radar-analysis-status`: 
+- `rubrik-sonar-sensitive-hits`: 
+- `rubrik-cdm-cluster-location`: 
+- `rubrik-cdm-cluster-connection-state`: 
+- `rubrik-polaris-object-search`: 
+- `rubrik-sonar-policies-list`: 
+- `rubrik-sonar-policy-analyzer-groups-list`: 
+- `rubrik-polaris-vm-object-metadata-get`: 
+- `rubrik-polaris-vm-objects-list`: 
+- `rubrik-sonar-ondemand-scan`: 
+- `rubrik-sonar-ondemand-scan-status`: 
+- `rubrik-polaris-vm-object-snapshot-list`: 
+- `rubrik-sonar-ondemand-scan-result`: 
+- `rubrik-radar-anomaly-csv-analysis`: 
+- `rubrik-sonar-csv-download`: 
 
 
 ## Rubrik Sensitive Data Object Discovery - Rubrik Security Cloud
@@ -3134,8 +3054,7 @@ Use the SAP Cloud for Customer C4C integration to fetch events from SAP Cloud AP
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `sap-cloud-get-events`: 
 
 
 ## Saviynt Enterprise Identity Cloud
@@ -3147,7 +3066,7 @@ Collector for Saviynt Enterprise Identity Cloud (EIC) audit logs using Analytics
 
 **Commands:**
 
-- `None`: 
+- `saviynt-eic-get-events`: 
 
 
 ## Spring Core and Cloud Function SpEL RCEs
@@ -3176,16 +3095,11 @@ With the SpyCloud integration, data from breaches can be pulled and further proc
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `spycloud-list-breaches`: 
+- `spycloud-get-breach-data`: 
+- `spycloud-domain-data`: 
+- `spycloud-email-data`: 
+- `spycloud-watchlist-data`: 
 
 
 ## SpyCloud Enterprise Protection Enrichment
@@ -3194,21 +3108,18 @@ With the SpyCloud integration, data from breaches can be pulled and further proc
 **Product:** SpyCloud Enterprise Protection  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `spycloud-breach-catalog-list`: 
+- `spycloud-breach-catalog-get`: 
+- `spycloud-domain-data-get`: 
+- `spycloud-username-data-get`: 
+- `spycloud-ip-address-data-get`: 
+- `spycloud-email-data-get`: 
+- `spycloud-password-data-get`: 
+- `spycloud-watchlist-data-list`: 
+- `spycloud-compass-device-data-get`: 
+- `spycloud-compass-data-list`: 
+- `spycloud-compass-device-list`: 
+- `spycloud-compass-application-data-get`: 
 
 
 ## Sumo Logic Cloud SIEM
@@ -3220,21 +3131,20 @@ Freeing the analyst with autonomous decisions. This integration was integrated a
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `sumologic-sec-insight-get-details`: 
+- `sumologic-sec-insight-get-comments`: 
+- `sumologic-sec-insight-get-comments`: 
+- `sumologic-sec-signal-get-details`: 
+- `sumologic-sec-entity-get-details`: 
+- `sumologic-sec-insight-search`: 
+- `sumologic-sec-signal-search`: 
+- `sumologic-sec-entity-search`: 
+- `sumologic-sec-insight-set-status`: 
+- `sumologic-sec-match-list-get`: 
+- `sumologic-sec-match-list-update`: 
+- `sumologic-sec-threat-intel-search-indicators`: 
+- `sumologic-sec-threat-intel-get-sources`: 
+- `sumologic-sec-threat-intel-update-source`: 
 
 
 ## Sumo Logic Cloud SIEM - Link Signal Incidents
@@ -3268,7 +3178,7 @@ This is a wrapper around the setIndicators script
 **Product:** Trellix Email Security - Cloud  
 **Commands:**
 
-- `None`: 
+- `fireeye-etp-search-messages`: 
 
 
 ## Trend Micro CAS - Take Action On Emails
@@ -3313,21 +3223,14 @@ Use TrendAI™ Cloud App Security integration to protect against ransomware, phi
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `trendmicro-cas-security-events-list`: 
+- `trendmicro-cas-email-sweep`: 
+- `trendmicro-cas-user-take-action`: 
+- `trendmicro-cas-email-take-action`: 
+- `trendmicro-cas-user-action-result-query`: 
+- `trendmicro-cas-email-action-result-query`: 
+- `trendmicro-cas-blocked-lists-get`: 
+- `trendmicro-cas-blocked-lists-update`: 
 
 
 ## URL Reputation - ReversingLabs TitaniumCloud
@@ -3348,7 +3251,7 @@ Get reputation data for the submitted URL. Required TitaniumCloud API rights: TC
 **Product:** WootCloud  
 **Commands:**
 
-- `None`: 
+- `wootcloud-get-pkt-alerts`: 
 
 
 ## XCloud Alert Enrichment

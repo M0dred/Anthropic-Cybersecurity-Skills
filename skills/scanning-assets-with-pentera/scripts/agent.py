@@ -1,93 +1,136 @@
 #!/usr/bin/env python3
-"""Remediation runtime: plan, apply, and verify a configuration fix."""
+"""Analysis runtime: parse an artifact, extract facts, and emit a JSON record."""
 from __future__ import annotations
 
 import argparse
+import email
+import email.policy
+import hashlib
 import json
+import os
+import re
 import subprocess
 import sys
+import zipfile
+from email.header import decode_header, make_header
 
 CONFIG = {
  "skill": "scanning-assets-with-pentera",
  "description": "scanning assets with pentera",
- "platforms": [
-  "aws"
- ],
- "issues": [
-  "cloudtrail"
- ]
+ "mode": "auto"
 }
-FIXES = {
-    ("aws", "cloudtrail"): [
-        ["aws", "cloudtrail", "update-trail", "--name", "management-trail",
-         "--is-multi-region-trail", "--enable-log-file-validation"]],
-    ("aws", "ec2"): [
-        ["aws", "ec2", "modify-instance-attribute", "--instance-id", "i-0123456789abcdef0",
-         "--no-source-dest-check"]],
-    ("aws", "iam"): [
-        ["aws", "iam", "update-account-password-policy", "--minimum-password-length", "14",
-         "--require-symbols", "--require-numbers", "--require-uppercase-characters",
-         "--require-lowercase-characters", "--password-reuse-prevention", "24"]],
-    ("azure", "aks"): [
-        ["az", "aks", "update", "-g", "rg-prod", "-n", "aks-prod", "--enable-managed-identity",
-         "--enable-azure-rbac"]],
-    ("azure", "storage"): [
-        ["az", "storage", "account", "update", "-g", "rg-prod", "-n", "mystorage",
-         "--https-only", "true", "--min-tls-version", "TLS1_2",
-         "--allow-blob-public-access", "false"]],
-    ("gcp", "vpc"): [
-        ["gcloud", "compute", "firewall-rules", "update", "allow-ssh",
-         "--source-ranges", "10.0.0.0/8"]],
-    ("kubernetes", "compliance"): [
-        ["kubectl", "label", "namespace", "default", "pod-security.kubernetes.io/enforce=restricted"]],
-    ("okta", "account"): [
-        ["sh", "-c", "curl -sS -X POST https://$OKTA_ORG.okta.com/api/v1/users/$USER_ID/lifecycle/suspend -H 'Authorization: SSWS $OKTA_TOKEN'"]],
-    ("ad", "account"): [
-        ["powershell", "-Command", "Disable-ADAccount -Identity jdoe"]],
-}
-VERIFY = {
-    "aws": ["aws", "cloudtrail", "describe-trails"],
-    "azure": ["az", "storage", "account", "show", "-g", "rg-prod", "-n", "mystorage"],
-    "gcp": ["gcloud", "compute", "firewall-rules", "list"],
-    "kubernetes": ["kubectl", "get", "ns", "--show-labels"],
-    "okta": ["sh", "-c", "curl -sS https://$OKTA_ORG.okta.com/api/v1/users/$USER_ID -H 'Authorization: SSWS $OKTA_TOKEN'"],
-    "ad": ["powershell", "-Command", "Get-ADUser -Identity jdoe | Select-Object Enabled"],
-}
+URL_RE = re.compile(r"https?://[^\s\"'<>\)\]]+", re.I)
+EMAIL_RE = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
+IP_RE = re.compile(r"\b(?:(?:25[0-5]|2[0-4]\d|1?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|1?\d?\d)\b")
+HASH_RE = re.compile(r"\b[a-fA-F0-9]{32}\b|\b[a-fA-F0-9]{40}\b|\b[a-fA-F0-9]{64}\b")
+CVE_RE = re.compile(r"\bCVE-\d{4}-\d{4,7}\b", re.I)
+DOMAIN_RE = re.compile(r"\b(?:[a-zA-Z0-9](?:[a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,63}\b")
+BASE64_RUN = re.compile(r"[A-Za-z0-9+/]{40,}={0,2}")
 
 
-def run(cmd, dry):
-    if dry:
-        return {"argv": cmd, "dry_run": True, "returncode": 0}
-    try:
-        p = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
-        return {"argv": cmd, "returncode": p.returncode, "stdout": p.stdout[-1500:],
-                "stderr": p.stderr[-1000:]}
-    except FileNotFoundError:
-        return {"argv": cmd, "returncode": 127, "error": f"not found: {cmd[0]}"}
+def read(path, mode):
+    if mode == "auto":
+        ext = os.path.splitext(path)[1].lower()
+        mode = {".html": "html", ".htm": "html", ".docx": "docx", ".xlsx": "xlsx",
+                ".pdf": "pdf", ".eml": "email", ".msg": "email", ".pcap": "pcap",
+                ".pcapng": "pcap", ".json": "json", ".csv": "csv"}.get(ext, "binary"
+                if ext in (".exe", ".dll", ".bin", ".so", ".elf") else "text")
+    if mode == "html":
+        raw = open(path, "rb").read().decode("utf-8", "replace")
+        raw = re.sub(r"<script[^>]*>.*?</script>", " ", raw, flags=re.S | re.I)
+        raw = re.sub(r"<style[^>]*>.*?</style>", " ", raw, flags=re.S | re.I)
+        return re.sub(r"<[^>]+>", " ", raw)
+    if mode in ("docx", "xlsx"):
+        out = []
+        with zipfile.ZipFile(path) as zf:
+            for name in zf.namelist():
+                if name.endswith(".xml") and ("document" in name or "sharedStrings" in name
+                                              or "header" in name or "footer" in name):
+                    out.append(re.sub(r"<[^>]+>", " ", zf.read(name).decode("utf-8", "replace")))
+        return "\n".join(out)
+    if mode == "pdf":
+        try:
+            return subprocess.run(["pdftotext", "-layout", path, "-"],
+                                  capture_output=True, text=True, timeout=120).stdout
+        except (FileNotFoundError, subprocess.TimeoutExpired):
+            raw = open(path, "rb").read()
+            return " ".join(x.decode("latin-1", "ignore") for x in re.findall(rb"[\x20-\x7e]{6,}", raw))
+    if mode == "email":
+        with open(path, "rb") as fh:
+            msg = email.message_from_bytes(fh.read(), policy=email.policy.default)
+        parts = []
+        for part in msg.walk():
+            if part.get_content_type() in ("text/plain", "text/html"):
+                payload = part.get_payload(decode=True) or b""
+                parts.append(payload.decode(part.get_content_charset() or "utf-8", "replace"))
+        return "\n".join(parts)
+    if mode == "binary":
+        raw = open(path, "rb").read()
+        return "\n".join(x.decode("ascii", "ignore") for x in re.findall(rb"[\x20-\x7e]{6,}", raw))
+    return open(path, "rb").read().decode("utf-8", "replace")
+
+
+def email_record(path):
+    with open(path, "rb") as fh:
+        msg = email.message_from_bytes(fh.read(), policy=email.policy.default)
+    def dec(v):
+        try:
+            return str(make_header(decode_header(v))) if v else ""
+        except Exception:  # noqa: BLE001
+            return v or ""
+    auth = {}
+    joined = " ".join(msg.get_all("Authentication-Results") or [])
+    for mech in ("spf", "dkim", "dmarc"):
+        m = re.search(rf"\b{mech}\s*=\s*([a-z]+)", joined, re.I)
+        auth[mech] = m.group(1).lower() if m else "none"
+    attachments = []
+    for part in msg.walk():
+        name = part.get_filename()
+        if name:
+            payload = part.get_payload(decode=True) or b""
+            attachments.append({"name": dec(name), "size": len(payload),
+                                "sha256": hashlib.sha256(payload).hexdigest()})
+    return {"headers": {"from": dec(msg.get("From")), "to": dec(msg.get("To")),
+                        "subject": dec(msg.get("Subject")), "reply_to": dec(msg.get("Reply-To")),
+                        "return_path": dec(msg.get("Return-Path")),
+                        "message_id": dec(msg.get("Message-ID")),
+                        "received": [dec(v) for v in (msg.get_all("Received") or [])]},
+            "auth": auth, "attachments": attachments}
+
+
+def extract(text):
+    clean = BASE64_RUN.sub(" ", text)
+    return {"urls": sorted({u.rstrip(".,;") for u in URL_RE.findall(clean)}),
+            "emails": sorted(set(EMAIL_RE.findall(clean))),
+            "ips": sorted(set(IP_RE.findall(clean))),
+            "domains": sorted({d for d in DOMAIN_RE.findall(clean) if not IP_RE.match(d)}),
+            "hashes": sorted(set(HASH_RE.findall(clean))),
+            "cves": sorted(set(CVE_RE.findall(clean)))}
 
 
 def main(config=None):
     cfg = config or CONFIG
-    ap = argparse.ArgumentParser(description=cfg.get("description", "remediation"))
-    ap.add_argument("--platform", default=(cfg.get("platforms") or ["aws"])[0],
-                    choices=cfg.get("platforms") or ["aws"])
-    ap.add_argument("--issue", default=(cfg.get("issues") or ["cloudtrail"])[0],
-                    choices=cfg.get("issues") or ["cloudtrail"])
-    ap.add_argument("--apply", action="store_true")
-    ap.add_argument("--json", action="store_true")
+    ap = argparse.ArgumentParser(description=cfg.get("description", "analysis"))
+    ap.add_argument("--input", required=True)
+    ap.add_argument("--mode", default=cfg.get("mode", "auto"),
+                    choices=["auto", "text", "html", "docx", "xlsx", "pdf", "email",
+                             "binary", "json", "csv"])
+    ap.add_argument("--out")
     args = ap.parse_args()
-    cmds = FIXES.get((args.platform, args.issue), [])
-    if not cmds:
-        print(json.dumps({"error": "no fix mapped", "platform": args.platform,
-                          "issue": args.issue}, indent=1))
-        sys.exit(2)
-    results = [run(c, not args.apply) for c in cmds]
-    verify = run(VERIFY.get(args.platform, ["true"]), not args.apply)
-    out = {"skill": cfg.get("skill", ""), "platform": args.platform, "issue": args.issue,
-           "applied": args.apply, "results": results, "verify": verify,
-           "ok": all(r.get("returncode", 0) == 0 for r in results)}
-    print(json.dumps(out, indent=1))
-    sys.exit(0 if out["ok"] else 1)
+    digest = hashlib.sha256(open(args.input, "rb").read()).hexdigest()
+    text = read(args.input, args.mode)
+    record = {"skill": cfg.get("skill", ""), "file": os.path.basename(args.input),
+              "sha256": digest, "mode": args.mode,
+              "size": os.path.getsize(args.input),
+              "indicators": extract(text), "text_sample": text[:4000]}
+    if args.mode in ("email", "auto") and args.input.lower().endswith((".eml", ".msg")):
+        record["email"] = email_record(args.input)
+    out = json.dumps(record, indent=1)
+    if args.out:
+        open(args.out, "w", encoding="utf-8").write(out)
+        print(json.dumps({"written": args.out}, indent=1))
+    else:
+        print(out)
 
 
 if __name__ == "__main__":

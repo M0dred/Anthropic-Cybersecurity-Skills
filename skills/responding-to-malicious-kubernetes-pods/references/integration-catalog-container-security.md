@@ -12,7 +12,7 @@ This integration enables the management of Kubernetes environments using Ansible
 
 **Commands:**
 
-- `None`: 
+- `k8s-k8s`: 
 
 
 ## Google Kubernetes Engine
@@ -24,19 +24,19 @@ The Google Kubernetes Engine integration is used for building and managing conta
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gcloud-clusters-list`: 
+- `gcloud-clusters-describe`: 
+- `gcloud-clusters-set-muster-auth`: 
+- `gcloud-clusters-set-addons`: 
+- `gcloud-clusters-set-legacy-auth`: 
+- `gcloud-clusters-set-master-authorized-network`: 
+- `gcloud-clusters-set-k8s-stackdriver`: 
+- `gcloud-clusters-set-binary-auth`: 
+- `gcloud-clusters-set-intra-node-visibility`: 
+- `gcloud-node-pool-list`: 
+- `gcloud-node-pool-describe`: 
+- `gcloud-node-pool-set-management`: 
+- `gcloud-operations-list`: 
+- `gcloud-operations-describe`: 
+- `gcloud-operations-cancel`: 
 

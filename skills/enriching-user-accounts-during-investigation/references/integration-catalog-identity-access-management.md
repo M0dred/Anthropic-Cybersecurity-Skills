@@ -27,8 +27,7 @@ The CyberArk Central Credential Provider (CCP) provides a secure safe in which t
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `cyberark-aim-list-credentials`: 
 
 
 ## CyberArk Certificate Manager
@@ -40,8 +39,8 @@ Retrieves information about certificates stored in Venafi
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `venafi-get-certificates`: 
+- `venafi-get-certificate-details`: 
 
 
 ## CyberArk EPM SOC Response
@@ -53,8 +52,8 @@ Use the CyberArk EPM integration to activate and deactivate CyberArk EPM risk pl
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `cyberarkepm-activate-risk-plan`: 
+- `cyberarkepm-deactivate-risk-plan`: 
 
 **Inputs:**
 
@@ -68,7 +67,7 @@ Use the CyberArk EPM integration to activate and deactivate CyberArk EPM risk pl
 **Product:** CyberArk  
 **Commands:**
 
-- `None`: 
+- `cyberark-isp-get-events`: 
 
 
 ## CyberArk PAM
@@ -80,21 +79,21 @@ Use the CyberArk Privileged Access Management (PAM) solution to manage users, sa
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cyberark-pas-user-add`: 
+- `cyberark-pas-user-update`: 
+- `cyberark-pas-user-delete`: 
+- `cyberark-pas-users-list`: 
+- `cyberark-pas-user-activate`: 
+- `cyberark-pas-safes-list`: 
+- `cyberark-pas-safe-get-by-name`: 
+- `cyberark-pas-safe-add`: 
+- `cyberark-pas-safe-update`: 
+- `cyberark-pas-safe-delete`: 
+- `cyberark-pas-safe-members-list`: 
+- `cyberark-pas-safe-member-add`: 
+- `cyberark-pas-safe-member-update`: 
+- `cyberark-pas-account-add`: 
+- `cyberark-pas-account-update`: 
 
 
 ## Entra ID Identity And Access
@@ -106,21 +105,21 @@ Use the Entra ID Identity And Access (formerly Azure Active Directory Identity A
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `msgraph-identity-auth-start`: 
+- `msgraph-identity-auth-complete`: 
+- `msgraph-identity-auth-reset`: 
+- `msgraph-identity-auth-test`: 
+- `msgraph-identity-directory-roles-list`: 
+- `msgraph-identity-directory-role-activate`: 
+- `msgraph-identity-directory-role-members-list`: 
+- `msgraph-identity-directory-role-member-add`: 
+- `msgraph-identity-directory-role-member-remove`: 
+- `msgraph-identity-ip-named-locations-create`: 
+- `msgraph-identity-ip-named-locations-get`: 
+- `msgraph-identity-ip-named-locations-delete`: 
+- `msgraph-identity-ip-named-locations-update`: 
+- `msgraph-identity-ip-named-locations-update`: 
+- `msgraph-identity-protection-risks-list`: 
 
 
 ## IAMInitOktaUser
@@ -151,7 +150,7 @@ Integration with Okta's cloud-based identity management service
 
 **Commands:**
 
-- `None`: 
+- `okta-unlock-user`: 
 
 
 ## Okta ASA
@@ -163,7 +162,7 @@ Okta Advanced Server Access integration for Cortex XSIAM allows you to fetch log
 
 **Commands:**
 
-- `None`: 
+- `okta-asa-get-events`: 
 
 
 ## Okta IAM
@@ -175,17 +174,17 @@ Integrate with Okta's Identity Access Management service to execute CRUD operati
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iam-create-user`: 
+- `iam-update-user`: 
+- `iam-get-user`: 
+- `iam-disable-user`: 
+- `okta-get-assigned-user-for-app`: 
+- `okta-list-applications`: 
+- `okta-list-user-applications`: 
+- `okta-iam-get-configuration`: 
+- `okta-iam-set-configuration`: 
+- `iam-get-group`: 
+- `okta-get-logs`: 
 
 
 ## Okta IAM (Standard Connector)
@@ -197,17 +196,17 @@ Integrate with Okta's Identity Access Management service to execute CRUD operati
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iam-create-user`: 
+- `iam-update-user`: 
+- `iam-get-user`: 
+- `iam-disable-user`: 
+- `okta-get-assigned-user-for-app`: 
+- `okta-list-applications`: 
+- `okta-list-user-applications`: 
+- `okta-iam-get-configuration`: 
+- `okta-iam-set-configuration`: 
+- `iam-get-group`: 
+- `okta-get-logs`: 
 
 
 ## Okta v2
@@ -219,7 +218,7 @@ Integration with Okta's cloud-based identity management service
 
 **Commands:**
 
-- `None`: 
+- `okta-unlock-user`: 
 
 
 ## PingOne
@@ -231,21 +230,19 @@ Integrates with the PingOne Management API to unlock, create, delete and update 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `pingone-unlock-user`: 
+- `pingone-deactivate-user`: 
+- `pingone-activate-user`: 
+- `pingone-set-password`: 
+- `pingone-password-force-change`: 
+- `pingone-read-password-state`: 
+- `pingone-add-to-group`: 
+- `pingone-remove-from-group`: 
+- `pingone-get-groups`: 
+- `pingone-get-user`: 
+- `pingone-create-user`: 
+- `pingone-update-user`: 
+- `pingone-delete-user`: 
 
 
 ## SailPoint IdentityIQ
@@ -257,21 +254,18 @@ SailPoint IdentityIQ context pack enables platform customers to utilize the deep
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `identityiq-search-identities`: 
+- `identityiq-get-policyviolations`: 
+- `identityiq-get-taskresults`: 
+- `identityiq-get-accounts`: 
+- `identityiq-disable-account`: 
+- `identityiq-enable-account`: 
+- `identityiq-delete-account`: 
+- `identitytiq-get-launched-workflows`: 
+- `identityiq-get-roles`: 
+- `identityiq-get-entitlements`: 
+- `identityiq-get-alerts`: 
+- `identityiq-create-alert`: 
 
 
 ## SailPoint IdentityIQ Disable User Account Access
@@ -295,19 +289,13 @@ SailPoint IdentityNow This integration was integrated and tested with SailPoint 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `identitynow-search-identities`: 
+- `identitynow-get-accounts`: 
+- `identitynow-get-accountactivities`: 
+- `identitynow-search-accessprofiles`: 
+- `identitynow-search-roles`: 
+- `identitynow-search-entitlements`: 
+- `identitynow-search-events`: 
+- `identitynow-request-grant`: 
+- `identitynow-request-revoke`: 
 

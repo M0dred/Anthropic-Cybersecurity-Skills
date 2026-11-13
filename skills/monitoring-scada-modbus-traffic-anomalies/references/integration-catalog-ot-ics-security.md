@@ -25,21 +25,14 @@ Query Indicators of Compromise in AlienVault OTX
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `alienvault-search-ipv6`: 
+- `alienvault-search-hostname`: 
+- `alienvault-search-cve`: 
+- `alienvault-get-related-urls-by-indicator`: 
+- `alienvault-get-related-hashes-by-indicator`: 
+- `alienvault-get-passive-dns-data-by-indicator`: 
+- `alienvault-search-pulses`: 
+- `alienvault-get-pulse-details`: 
 
 
 ## Auto Add Assets - RiskIQ Digital Footprint
@@ -116,7 +109,7 @@ Use the Claroty CTD integration to manage assets and alerts. This integration wa
 
 **Commands:**
 
-- `None`: 
+- `claroty-get-assets`: 
 
 
 ## Claroty Incident
@@ -186,20 +179,9 @@ CyberTotal is a cloud-based threat intelligence service developed by CyCraft. Th
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cybertotal-ip-whois`: 
+- `cybertotal-url-whois`: 
+- `cybertotal-domain-whois`: 
 
 
 ## CyberTotal Whois - CyCraft
@@ -276,14 +258,10 @@ HYAS Protect is a generational leap forward utilizing authoritative knowledge of
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `hyas-get-domain-verdict`: 
+- `hyas-get-ip-verdict`: 
+- `hyas-get-fqdn-verdict`: 
+- `hyas-get-nameserver-verdict`: 
 
 
 ## Integration Troubleshooting
@@ -327,10 +305,6 @@ Adds the IP Address(es) to allow list after checking if it should be added to al
 
 The LINE API Integration is used for sending a message to LINE Group. This integration was integrated and tested with LINE version 7.0.3 of LINENotify
 
-**Commands:**
-
-- `None`: 
-
 
 ## OTRS
 
@@ -341,7 +315,7 @@ Service management suite that comprises ticketing, workflow automation, and noti
 
 **Commands:**
 
-- `None`: 
+- `otrs-get-ticket`: 
 
 
 ## PassiveTotal v2
@@ -353,21 +327,21 @@ Analyze and understand threat infrastructure from a variety of sources-passive D
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `pt-whois-search`: 
+- `pt-get-components`: 
+- `pt-get-trackers`: 
+- `pt-get-pdns-details`: 
+- `pt-ssl-cert-search`: 
+- `pt-get-host-pairs`: 
+- `pt-get-services`: 
+- `pt-get-whois`: 
+- `pt-get-cookies`: 
+- `pt-get-articles`: 
+- `pt-get-data-card`: 
+- `pt-get-reputation`: 
+- `pt-list-intel-profiles`: 
+- `pt-list-intel-profile-indicators`: 
+- `pt-list-my-attack-surface-insights`: 
 
 
 ## PowerShell Remoting (Beta)
@@ -379,14 +353,13 @@ PowerShell Remoting is a comprehensive built-in remoting subsystem that is a par
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ps-remote-command`: 
+- `ps-remote-download-file`: 
+- `ps-remote-upload-file`: 
+- `ps-remote-etl-create-start`: 
+- `ps-remote-etl-create-stop`: 
+- `ps-remote-export-registry`: 
+- `ps-remote-export-mft`: 
 
 
 ## PTEnrich
@@ -410,11 +383,8 @@ This integration transfers files between the platform. Some changes have been ma
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `copy-to`: 
+- `copy-from`: 
 
 
 ## Reset User Password via Chatbot
@@ -445,21 +415,12 @@ RiskIQ Digital Footprint integration enables your security team to manage assets
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `df-asset-connections`: 
+- `df-asset-changes-summary`: 
+- `df-asset-changes`: 
+- `df-get-asset`: 
+- `df-add-assets`: 
+- `df-update-assets`: 
 
 
 ## RiskIQDigitalFootprintAssetDetailsWidgetScript
@@ -617,10 +578,6 @@ Set widgets to custom layout in Domain, Email and RiskIQ Asset type of indicator
 
 Uses screenshot machine to get a screenshot
 
-**Commands:**
-
-- `None`: 
-
 
 ## TroubleshootAggregateResults
 
@@ -766,21 +723,20 @@ This integration analyzes suspicious hashes, URLs, domains, and IP addresses. Th
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `url-scan`: 
+- `vt-comments-add`: 
+- `vt-file-scan-upload-url`: 
+- `vt-comments-delete`: 
+- `vt-comments-get`: 
+- `vt-comments-get-by-id`: 
+- `vt-search`: 
+- `vt-file-sandbox-report`: 
+- `vt-passive-dns-data`: 
+- `vt-analysis-get`: 
+- `vt-file-sigma-analysis`: 
+- `vt-privatescanning-file`: 
+- `vt-privatescanning-file-scan`: 
+- `vt-privatescanning-analysis-get`: 
 
 
 ## VirusTotal - Premium (API v3)
@@ -792,21 +748,21 @@ Use the premium API capabilities of VirusTotal to analyze retro hunts, read live
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `vt-private-download-file`: 
+- `vt-private-zip-create`: 
+- `vt-private-zip-get`: 
+- `vt-private-zip-download`: 
+- `vt-private-file-sandbox-pcap`: 
+- `vt-private-intelligence-search`: 
+- `vt-private-search-file`: 
+- `vt-private-livehunt-rules-get-by-id`: 
+- `vt-private-livehunt-rules-list`: 
+- `vt-private-livehunt-rules-create`: 
+- `vt-private-livehunt-rules-update`: 
+- `vt-private-livehunt-rules-delete`: 
+- `vt-private-livehunt-notifications-list`: 
+- `vt-private-livehunt-notifications-files-list`: 
+- `vt-private-livehunt-notifications-files-get-by-hash`: 
 
 
 ## Windows Remote Management (Beta)
@@ -818,8 +774,8 @@ Uses the Python pywinrm library and commands to execute either a process or usin
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `winrm-run-process`: 
+- `winrm-run-powershell`: 
 
 
 ## xDome
@@ -831,7 +787,7 @@ Use the xDome integration to manage assets and alerts. This integration was inte
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `xdome-get-device-alert-relations`: 
+- `xdome-set-status-for-device-alert-relations`: 
+- `xdome-get-device-vulnerability-relations`: 
 

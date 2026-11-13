@@ -1,7 +1,7 @@
 ---
 name: scanning-assets-with-qualys
 description: >-
-  Given the IP address this playbook enriches information from Qualys assets. Covers 3 vendor variants: Cortex Attack Surface Management, Qualys. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: scanning, assets, with, qualys, vulnerability management. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Launches a PC scan and fetches the scan when it's ready. Covers 3 vendor variants: Cortex Attack Surface Management, Qualys. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: scanning, assets, with, qualys, vulnerability management. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: vulnerability-management
 tags:
@@ -39,25 +39,25 @@ mitre_attack:
 
 ## Workflow
 
-### Step 1: Confirm the finding
+### Step 1: Preserve the artifact
 
-Reproduce the misconfiguration from the platform's own API or CLI.
+Hash it before analysis and work on a copy.
 
-### Step 2: Plan the change
+### Step 2: Parse
 
-Generate the exact command or template diff, and review it before applying.
+Use the artifact-specific parser; record the tool and version.
 
-### Step 3: Apply
+### Step 3: Extract
 
-Execute with the least privilege that accomplishes the fix, and capture the response.
+Pull the fields that matter for the investigation, keeping context for each.
 
-### Step 4: Verify
+### Step 4: Normalize
 
-Re-read the resource state and confirm it matches the expected secure state.
+Map to the shared schema, de-duplicate, and mark confidence.
 
-### Step 5: Record
+### Step 5: Report
 
-Write the change, the approver, the verification, and the rollback.
+Write findings with the evidence path, the commands used, and the limits of the analysis.
 
 ## Vendor Variants
 
@@ -115,17 +115,17 @@ curl -sS -X GET "https://api.example.com/v1/resource" \
 
 ## Verification
 
-- The resource state matches the expected secure state.
-- The change did not break dependent services.
-- The rollback is documented and tested.
-- The finding is closed with the evidence attached.
+- The artifact hash in the report matches the source.
+- A second run produces the same findings.
+- Every finding cites the field or byte range it came from.
+- The report states what the analysis could not see.
 
 ## Common Pitfalls
 
-- Applying a fix without a dry run.
-- Breaking a dependent service.
-- Fixing one resource and leaving the pattern elsewhere.
-- No rollback for a change that cannot be reversed.
+- Analyzing the original instead of a copy.
+- Claiming content that is encrypted or truncated.
+- Dropping context when de-duplicating.
+- No tool version, so the result is not reproducible.
 
 ## References
 

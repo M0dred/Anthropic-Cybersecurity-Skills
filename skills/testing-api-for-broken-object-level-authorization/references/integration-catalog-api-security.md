@@ -12,21 +12,19 @@ APIVoid wraps up a number of services such as ipvoid & urlvoid
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `apivoid-ip`: 
+- `apivoid-domain`: 
+- `apivoid-url`: 
+- `apivoid-dns-lookup`: 
+- `apivoid-ssl-info`: 
+- `apivoid-email-verify`: 
+- `apivoid-threatlog`: 
+- `apivoid-parked-domain`: 
+- `apivoid-domain-age`: 
+- `apivoid-url-to-image`: 
+- `apivoid-url-to-pdf`: 
+- `apivoid-url-to-html`: 
+- `apivoid-site-trustworthiness`: 
 
 
 ## Core REST API
@@ -35,20 +33,19 @@ APIVoid wraps up a number of services such as ipvoid & urlvoid
 **Product:** Cortex REST API  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `core-api-post`: 
+- `core-api-get`: 
+- `core-api-put`: 
+- `core-api-patch`: 
+- `core-api-delete`: 
+- `core-api-download`: 
+- `core-api-multipart`: 
+- `core-delete-incidents`: 
+- `core-api-install-packs`: 
+- `core-api-file-upload`: 
+- `core-api-file-delete`: 
+- `core-api-file-attachment-delete`: 
+- `core-api-file-check`: 
 
 
 ## Google Apigee
@@ -60,7 +57,7 @@ Apigee is Google Cloud's native API management platform that can be used to buil
 
 **Commands:**
 
-- `None`: 
+- `google-apigee-get-events`: 
 
 
 ## Illumio Core
@@ -72,21 +69,18 @@ Connects to Illumio Core APIs to perform investigative and restorative actions. 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `illumio-traffic-analysis`: 
+- `illumio-virtual-service-create`: 
+- `illumio-service-binding-create`: 
+- `illumio-object-provision`: 
+- `illumio-workload-get`: 
+- `illumio-workloads-list`: 
+- `illumio-enforcement-boundary-create`: 
+- `illumio-enforcement-mode-update`: 
+- `illumio-ip-list-get`: 
+- `illumio-ip-lists-get`: 
+- `illumio-ruleset-create`: 
+- `illumio-rule-create`: 
 
 
 ## IP-API
@@ -95,10 +89,6 @@ Connects to Illumio Core APIs to perform investigative and restorative actions. 
 **Product:** IP-API  
 
 This integration will enrich IP addresses from IP-API with data about the geolocation, as well as a determination of the IP address being associated with a mobile device, hosting or proxy. Revers DNS is also returned. This service is available for free (with a throttle) - or paid. This integration was integrated and tested with IP-API
-
-**Commands:**
-
-- `None`: 
 
 
 ## Microsoft Graph API
@@ -110,13 +100,12 @@ Use the Microsoft Graph API integration to interact with Microsoft APIs that do 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `msgraph-api-auth-start`: 
+- `msgraph-api-auth-complete`: 
+- `msgraph-api-test`: 
+- `msgraph-api-request`: 
+- `msgraph-api-auth-reset`: 
+- `msgraph-api-generate-login-url`: 
 
 
 ## RapidBreachResponse-CompletedTasksCount-Widget
@@ -196,8 +185,7 @@ Enrich indicators using the Spur Context API. This integration was integrated an
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `spur-context-api-enrich`: 
 
 
 ## Update enforcement mode - Illumio

@@ -12,8 +12,7 @@ Fetch events about actions performed by 1Password users within a specific accoun
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `one-password-get-events`: 
 
 
 ## 1Touch.io's Inventa Connector
@@ -25,20 +24,20 @@ Use the Inventa integration to generate DSAR reports within Inventa instance and
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `inventa-get-datasubjects`: 
+- `inventa-get-sources`: 
+- `inventa-get-sources-piis`: 
+- `inventa-get-dsar-transactions`: 
+- `inventa-get-dsar-files`: 
+- `inventa-get-dsar-databases`: 
+- `inventa-get-datasubject-details`: 
+- `inventa-get-dsar-dataassets`: 
+- `inventa-get-dsar-piis`: 
+- `inventa-get-entities`: 
+- `inventa-get-datasubject-id-from-ticket`: 
+- `inventa-get-datasubject-id`: 
+- `inventa-create-ticket`: 
+- `inventa-validate-incident-inputs`: 
 
 
 ## 3CXDesktopApp Supply Chain Attack
@@ -82,21 +81,21 @@ Abnormal Security detects the whole spectrum of email attacks, from vendor email
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `abnormal-security-check-case-action-status`: 
+- `abnormal-security-check-threat-action-status`: 
+- `abnormal-security-download-threat-log-csv`: 
+- `abnormal-security-list-abuse-mailbox-campaigns`: 
+- `abnormal-security-list-abnormal-cases`: 
+- `abnormal-security-list-threats`: 
+- `abnormal-security-get-threat`: 
+- `abnormal-security-get-abnormal-case`: 
+- `abnormal-security-get-abuse-mailbox-campaign`: 
+- `abnormal-security-get-employee-identity-analysis`: 
+- `abnormal-security-get-employee-information`: 
+- `abnormal-security-get-employee-last-30-days-login-csv`: 
+- `abnormal-security-get-latest-threat-intel-feed`: 
+- `abnormal-security-manage-threat`: 
+- `abnormal-security-manage-abnormal-case`: 
 
 
 ## Absolute
@@ -108,21 +107,21 @@ Absolute is an adaptive endpoint security solution that delivers device security
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `absolute-custom-device-field-list`: 
+- `absolute-custom-device-field-update`: 
+- `absolute-device-freeze-request`: 
+- `absolute-device-remove-freeze-request`: 
+- `absolute-device-freeze-request-get`: 
+- `absolute-device-freeze-message-list`: 
+- `absolute-device-freeze-message-create`: 
+- `absolute-device-freeze-message-update`: 
+- `absolute-device-freeze-message-delete`: 
+- `absolute-device-unenroll`: 
+- `absolute-device-application-list`: 
+- `absolute-device-list`: 
+- `absolute-device-get`: 
+- `absolute-device-location-get`: 
+- `absolute-device-get-events`: 
 
 
 ## AbuseIPDBPopulateIndicators
@@ -148,13 +147,13 @@ Acalvio ShadowPlex is a comprehensive Autonomous Deception Platform that offers 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `acalvio-is-deception-host`: 
+- `acalvio-is-deception-user`: 
+- `acalvio-is-deception-file`: 
+- `acalvio-mute-deception-host`: 
+- `acalvio-unmute-deception-host`: 
+- `acalvio-mute-deception-on-endpoint`: 
+- `acalvio-unmute-deception-on-endpoint`: 
 
 
 ## Add Employees to Departing Employee Watchlist
@@ -198,11 +197,10 @@ AdminByRequest is a Privileged Access Management (PAM) solution that enables sec
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `adminbyrequest-get-events`: 
+- `adminbyrequest-list-requests`: 
+- `adminbyrequest-request-deny`: 
+- `adminbyrequest-request-approve`: 
 
 
 ## AfterRelativeDate
@@ -227,10 +225,10 @@ Use the Aha! integration to list and manage the platform. This integration was i
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aha-get-features`: 
+- `aha-edit-feature`: 
+- `aha-get-ideas`: 
+- `aha-edit-idea`: 
 
 
 ## Akamai Prolexic
@@ -242,8 +240,7 @@ Collects DDoS detection critical events and general events from Akamai Prolexic 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `akamai-prolexic-get-events`: 
 
 
 ## Akamai WAF
@@ -255,21 +252,21 @@ Use the Akamai WAF integration to manage common sets of lists used by various Ak
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `akamai-check-group`: 
+- `akamai-create-group`: 
+- `akamai-create-enrollment`: 
+- `akamai-list-enrollments`: 
+- `akamai-create-domain`: 
+- `akamai-update-property`: 
+- `akamai-get-change`: 
+- `akamai-update-change`: 
+- `akamai-get-enrollment-by-cn`: 
+- `akamai-list-groups`: 
+- `akamai-get-group`: 
+- `akamai-get-client-list`: 
+- `akamai-create-client-list`: 
+- `akamai-deprecate-client-list`: 
+- `akamai-activate-client-list`: 
 
 
 ## Akamai WAF - Activate Network Lists
@@ -296,7 +293,7 @@ Algosec AppViz, Firewall Analyzer (AFA) and FireFlow(AFF)
 
 **Commands:**
 
-- `None`: 
+- `algosec-get-ticket`: 
 
 
 ## AlgosecGetApplications
@@ -350,10 +347,8 @@ This is an API to get stock prices etc
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `alphavantage-stock-data-get`: 
+- `alphavantage-stock-history-get`: 
 
 
 ## Amazon DynamoDB
@@ -365,21 +360,21 @@ Amazon DynamoDB Amazon DynamoDB is a fully managed NoSQL database service that p
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-dynamodb-batch-get-item`: 
+- `aws-dynamodb-batch-write-item`: 
+- `aws-dynamodb-create-backup`: 
+- `aws-dynamodb-create-global-table`: 
+- `aws-dynamodb-create-table`: 
+- `aws-dynamodb-delete-backup`: 
+- `aws-dynamodb-delete-item`: 
+- `aws-dynamodb-delete-table`: 
+- `aws-dynamodb-describe-backup`: 
+- `aws-dynamodb-describe-continuous-backups`: 
+- `aws-dynamodb-describe-endpoints`: 
+- `aws-dynamodb-describe-global-table`: 
+- `aws-dynamodb-describe-global-table-settings`: 
+- `aws-dynamodb-describe-limits`: 
+- `aws-dynamodb-describe-table`: 
 
 
 ## Amazon Security Lake
@@ -391,15 +386,15 @@ Amazon Security Lake is a fully managed security data lake service. This integra
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aws-security-lake-query-execute`: 
+- `aws-security-lake-data-catalogs-list`: 
+- `aws-security-lake-databases-list`: 
+- `aws-security-lake-table-metadata-list`: 
+- `aws-security-lake-user-mfalogin-query`: 
+- `aws-security-lake-source-ip-query`: 
+- `aws-security-lake-guardduty-activity-query`: 
+- `aws-security-lake-data-sources-list`: 
+- `aws-security-lake-data-lakes-list`: 
 
 
 ## AMP
@@ -409,10 +404,6 @@ Amazon Security Lake is a fully managed security data lake service. This integra
 
 Uses CISCO AMP Endpoint This integration was integrated and tested with API version v1 of AMP
 
-**Commands:**
-
-- `None`: 
-
 
 ## Analyst1
 
@@ -420,21 +411,21 @@ Uses CISCO AMP Endpoint This integration was integrated and tested with API vers
 **Product:** Analyst1  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `analyst1-enrich-string`: 
+- `analyst1-enrich-ipv6`: 
+- `analyst1-enrich-mutex`: 
+- `analyst1-enrich-http-request`: 
+- `analyst1-evidence-submit`: 
+- `analyst1-evidence-status`: 
+- `analyst1-evidence-search`: 
+- `analyst1-evidence-file-fetch`: 
+- `analyst1-batch-check`: 
+- `analyst1-batch-check-post`: 
+- `analyst1-indicator-by-id`: 
+- `analyst1-get-sensor-config`: 
+- `analyst1-get-sensor-taskings`: 
+- `analyst1-get-sensor-diff`: 
+- `analyst1-get-sensors`: 
 
 
 ## Anomali Match
@@ -446,15 +437,9 @@ Use Anomali Match to search indicators and enrich domains
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `anomali-enterprise-retro-forensic-search`: 
+- `anomali-enterprise-retro-forensic-search-results`: 
+- `anomali-enterprise-dga-domain-status`: 
 
 
 ## Anomali Security Analytics Alerts
@@ -466,10 +451,10 @@ The Anomali Security Analytics pack allows users to manage security alerts by in
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `anomali-security-analytics-search-job-create`: 
+- `anomali-security-analytics-search-job-status`: 
+- `anomali-security-analytics-search-job-results`: 
+- `anomali-security-analytics-alert-update`: 
 
 
 ## Ansible ACME
@@ -481,8 +466,8 @@ Automatic Certificate Management Environment on Linux hosts management using Ans
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `acme-account`: 
+- `acme-account-info`: 
 
 
 ## Ansible Automation Platform
@@ -494,21 +479,21 @@ Scale IT automation, manage complex deployments, and speed productivity. This in
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ansible-tower-inventories-list`: 
+- `ansible-tower-hosts-list`: 
+- `ansible-tower-host-create`: 
+- `ansible-tower-host-delete`: 
+- `ansible-tower-job-templates-list`: 
+- `ansible-tower-credentials-list`: 
+- `ansible-tower-job-launch`: 
+- `ansible-tower-job-relaunch`: 
+- `ansible-tower-job-cancel`: 
+- `ansible-tower-job-stdout`: 
+- `ansible-tower-job-status`: 
+- `ansible-tower-job-events-list`: 
+- `ansible-tower-adhoc-command-launch`: 
+- `ansible-tower-adhoc-command-relaunch`: 
+- `ansible-tower-adhoc-command-cancel`: 
 
 
 ## Ansible Cisco IOS
@@ -520,21 +505,21 @@ This integration enables the management of Cisco IOS Switches and Routers direct
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ios-banner`: 
+- `ios-bgp`: 
+- `ios-command`: 
+- `ios-l2-interfaces`: 
+- `ios-l3-interfaces`: 
+- `ios-lacp`: 
+- `ios-lacp-interfaces`: 
+- `ios-lag-interfaces`: 
+- `ios-linkagg`: 
+- `ios-lldp`: 
+- `ios-lldp-global`: 
+- `ios-lldp-interfaces`: 
+- `ios-logging`: 
+- `ios-ntp`: 
+- `ios-ping`: 
 
 
 ## Ansible Cisco NXOS
@@ -546,21 +531,21 @@ This integration enables the management of Cisco NXOS Switches and Routers direc
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `nxos-aaa-server`: 
+- `nxos-aaa-server-host`: 
+- `nxos-acl-interface`: 
+- `nxos-banner`: 
+- `nxos-bfd-global`: 
+- `nxos-bfd-interfaces`: 
+- `nxos-bgp`: 
+- `nxos-bgp-af`: 
+- `nxos-bgp-neighbor`: 
+- `nxos-bgp-neighbor-af`: 
+- `nxos-command`: 
+- `nxos-evpn-vni`: 
+- `nxos-facts`: 
+- `nxos-gir`: 
+- `nxos-gir-profile-management`: 
 
 
 ## Ansible DNS
@@ -572,7 +557,7 @@ This integration enables the management of DNS Records directly from platform us
 
 **Commands:**
 
-- `None`: 
+- `dns-nsupdate`: 
 
 
 ## Ansible Microsoft Windows
@@ -584,10 +569,10 @@ This integration enables the management of Microsoft Windows hosts directly from
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `win-gather-facts`: 
+- `win-acl`: 
+- `win-acl-inheritance`: 
+- `win-audit-policy-system`: 
 
 
 ## Ansible OpenSSL
@@ -599,8 +584,8 @@ This integration enables the management of certificates on Linux hosts directly 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `openssl-certificate`: 
+- `openssl-certificate-info`: 
 
 
 ## Ansible VMware
@@ -612,7 +597,7 @@ This integration enables the management of VMware vCenter and ESXi hosts directl
 
 **Commands:**
 
-- `None`: 
+- `vmware-about-info`: 
 
 
 ## Anthropic Claude
@@ -624,21 +609,21 @@ Designed to assist security professionals with security investigations, threat h
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `claude-send-message`: 
+- `claude-check-email-header`: 
+- `claude-check-email-body`: 
+- `claude-create-soc-email-template`: 
+- `claude-list-chats`: 
+- `claude-list-groups`: 
+- `claude-get-events`: 
+- `claude-list-roles`: 
+- `claude-list-projects`: 
+- `claude-list-project-attachments`: 
+- `claude-list-organization-users`: 
+- `claude-list-role-permissions`: 
+- `claude-list-group-members`: 
+- `claude-get-project-document`: 
+- `claude-list-organizations`: 
 
 
 ## Anthropic Claude (Standard Connector)
@@ -650,10 +635,8 @@ This integration is configured automatically as part of the Anthropic Claude Sta
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `claude-chat-file-delete`: 
+- `claude-project-document-delete`: 
 
 
 ## AnthropicClaudeApiModule
@@ -672,19 +655,19 @@ ANY.RUN is a cloud-based sandbox with interactive access
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `anyrun-detonate-file-windows`: 
+- `anyrun-detonate-url-windows`: 
+- `anyrun-detonate-file-linux`: 
+- `anyrun-detonate-url-linux`: 
+- `anyrun-detonate-file-android`: 
+- `anyrun-detonate-url-android`: 
+- `anyrun-get-user-limits`: 
+- `anyrun-get-analysis-history`: 
+- `anyrun-delete-task`: 
+- `anyrun-get-analysis-report`: 
+- `anyrun-download-analysis-pcap`: 
+- `anyrun-download-analysis-sample`: 
+- `anyrun-get-analysis-verdict`: 
 
 
 ## ANY.RUN TI Lookup
@@ -696,11 +679,7 @@ TI Lookup is a searchable database of IOCs, IOAs, IOBs, and events for threat hu
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `anyrun-get-intelligence`: 
 
 
 ## AnyLlmAddResultsConvo
@@ -1154,21 +1133,21 @@ Retrieval Augmented Generation (RAG) with LLM and Vector DB that can be local fo
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `anyllm-document-upload-file`: 
+- `anyllm-document-upload-link`: 
+- `anyllm-document-upload-text`: 
+- `anyllm-workspace-new`: 
+- `anyllm-workspace-delete`: 
+- `anyllm-workspace-list`: 
+- `anyllm-workspace-get`: 
+- `anyllm-workspace-settings`: 
+- `anyllm-workspace-add-embedding`: 
+- `anyllm-workspace-delete-embedding`: 
+- `anyllm-document-createfolder`: 
+- `anyllm-document-move`: 
+- `anyllm-document-delete`: 
+- `anyllm-workspace-chat`: 
+- `anyllm-workspace-stream-chat`: 
 
 
 ## appNovi
@@ -1180,11 +1159,11 @@ Search across meshed network, security, and business data in appNovi to make eff
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `search-appnovi-components`: 
+- `search-appnovi-connected`: 
+- `search-appnovi-cve`: 
+- `search-appnovi-component-property`: 
+- `search-appnovi-server-by-ip`: 
 
 
 ## appNovi-MAC-Address-Lookup
@@ -1220,9 +1199,8 @@ Arcanna integration for using the power of AI in SOC This integration was integr
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `arcanna-get-jobs`: 
+- `arcanna-send-event`: 
 
 
 ## ArcannaFeedbackPostProcessing
@@ -1270,21 +1248,20 @@ ArcSight ESM is a security information and event management (SIEM) product. It c
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `as-get-all-cases`: 
+- `as-get-case`: 
+- `as-get-matrix-data`: 
+- `as-add-entries`: 
+- `as-clear-entries`: 
+- `as-get-entries`: 
+- `as-get-security-events`: 
+- `as-get-case-event-ids`: 
+- `as-update-case`: 
+- `as-get-all-query-viewers`: 
+- `as-case-delete`: 
+- `as-get-query-viewer-results`: 
+- `as-fetch-incidents`: 
+- `as-delete-entries`: 
 
 
 ## ArcusTeam
@@ -1296,7 +1273,7 @@ The ArcusTeam API allows the user to inspect connected devices' attack surface. 
 
 **Commands:**
 
-- `None`: 
+- `arcusteam-get-devices`: 
 
 
 ## Arduino
@@ -1308,9 +1285,9 @@ Connects to and controls an Arduino pin system using the network
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `arduino-set-pin`: 
+- `arduino-get-pin`: 
+- `arduino-send-data`: 
 
 
 ## Arkime
@@ -1322,21 +1299,19 @@ Arkime (formerly Moloch) is a large scale, open source, indexed packet capture a
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `arkime-connection-list`: 
+- `arkime-connection-csv-get`: 
+- `arkime-session-pcap-get`: 
+- `arkime-session-csv-get`: 
+- `arkime-session-list`: 
+- `arkime-unique-field-list`: 
+- `arkime-multi-unique-field-list`: 
+- `arkime-field-list`: 
+- `arkime-spigraph-get`: 
+- `arkime-spiview-get`: 
+- `arkime-session-tag-add`: 
+- `arkime-session-tag-remove`: 
+- `arkime-pcap-file-list`: 
 
 
 ## Armis
@@ -1348,9 +1323,8 @@ Use the Armis integration to search alerts and devices, tag and untag devices, a
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `armis-search-alerts`: 
+- `armis-update-alert-status`: 
 
 
 ## Armorblox
@@ -1362,8 +1336,8 @@ Armorblox is an API-based platform that stops targeted email attacks, protects s
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `armorblox-check-remediation-action`: 
+- `fetch-incidents`: 
 
 
 ## Armorblox Needs Review
@@ -1420,9 +1394,9 @@ Integrate Asimily Insight to ingest security anomalies, CVEs, and leverage detai
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `asimily-get-asset-details`: 
+- `asimily-get-asset-anomalies`: 
+- `asimily-get-asset-vulnerabilities`: 
 
 
 ## AsimilyExtraAssetContextData
@@ -1474,7 +1448,7 @@ Use the Ataya Harmony integration, we can achieve the security access control wh
 
 **Commands:**
 
-- `None`: 
+- `ataya-assign-user`: 
 
 
 ## Atlassian Confluence Server
@@ -1486,14 +1460,14 @@ Atlassian Confluence Server API. This integration was integrated and tested with
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `confluence-create-space`: 
+- `confluence-create-content`: 
+- `confluence-list-spaces`: 
+- `confluence-get-content`: 
+- `confluence-get-page-as-pdf`: 
+- `confluence-delete-content`: 
+- `confluence-update-content`: 
+- `confluence-search-content`: 
 
 
 ## Atlassian IAM
@@ -1505,14 +1479,10 @@ Note: This integration should be used as part of our IAM premium pack. For furth
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iam-create-user`: 
+- `iam-update-user`: 
+- `iam-get-user`: 
+- `iam-disable-user`: 
 
 
 ## Atlassian Jira Service Management
@@ -1524,21 +1494,21 @@ Use this integration to manage Jira objects and attach files to Jira objects fro
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `jira-asset-object-schema-list`: 
+- `jira-asset-object-type-list`: 
+- `jira-asset-object-type-attribute-list`: 
+- `jira-asset-object-create`: 
+- `jira-asset-object-update`: 
+- `jira-asset-object-delete`: 
+- `jira-asset-object-get`: 
+- `jira-asset-object-search`: 
+- `jira-asset-attribute-json-create`: 
+- `jira-asset-comment-create`: 
+- `jira-asset-connected-ticket-list`: 
+- `jira-asset-comment-list`: 
+- `jira-asset-attachment-add`: 
+- `jira-asset-attachment-list`: 
+- `jira-asset-attachment-remove`: 
 
 
 ## Atlassian Jira v3
@@ -1550,21 +1520,21 @@ Use the Jira integration to manage issues and create the platform. From the plat
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `jira-issue-get-attachment`: 
+- `jira-delete-issue`: 
+- `jira-get-specific-field`: 
+- `jira-issue-add-link`: 
+- `jira-get-id-by-attribute`: 
+- `jira-issue-query`: 
+- `jira-get-id-offset`: 
+- `jira-issue-add-comment`: 
+- `jira-issue-upload-file`: 
+- `jira-issue-delete-file`: 
+- `jira-list-transitions`: 
+- `jira-edit-issue`: 
+- `jira-issue-assign`: 
+- `jira-create-issue`: 
+- `jira-get-issue`: 
 
 
 ## AtlassianApiModule
@@ -1581,10 +1551,6 @@ This API module provides shared OAuth 2.0 authentication functionality for Atlas
 
 Use the AttackIQ integration to simulate a platform that provides validations for security controls, responses, and remediation exercises. This integration was integrated and tested with AttackIQ FireDrill v2.15.96
 
-**Commands:**
-
-- `None`: 
-
 
 ## Augur Security
 
@@ -1595,10 +1561,10 @@ Leverage Augur's preemptive threat intelligence for actionable data against pers
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `augur-get-indicators`: 
+- `augur-get-file-hash-context`: 
+- `augur-get-host-context`: 
+- `augur-get-ip-context`: 
 
 
 ## Automox
@@ -1610,21 +1576,21 @@ Use the Automox integration to create device groups, update devices, run policie
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `automox-devices-list`: 
+- `automox-organizations-list`: 
+- `automox-organization-users-list`: 
+- `automox-vulnerability-sync-batch-action`: 
+- `automox-vulnerability-sync-task-action`: 
+- `automox-vulnerability-sync-batch-get`: 
+- `automox-vulnerability-sync-batches-list`: 
+- `automox-vulnerability-sync-tasks-list`: 
+- `automox-vulnerability-sync-file-upload`: 
+- `automox-policies-list`: 
+- `automox-command-run`: 
+- `automox-device-delete`: 
+- `automox-device-update`: 
+- `automox-groups-list`: 
+- `automox-group-create`: 
 
 
 ## Axonius
@@ -1636,21 +1602,21 @@ This integration is for fetching information about assets in Axonius. This integ
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `axonius-get-devices-by-savedquery`: 
+- `axonius-get-devices-by-aql`: 
+- `axonius-get-users-by-aql`: 
+- `axonius-get-users-by-savedquery`: 
+- `axonius-get-users-by-mail`: 
+- `axonius-get-users-by-mail-regex`: 
+- `axonius-get-users-by-username`: 
+- `axonius-get-users-by-username-regex`: 
+- `axonius-get-devices-by-hostname`: 
+- `axonius-get-devices-by-hostname-regex`: 
+- `axonius-get-devices-by-ip`: 
+- `axonius-get-devices-by-ip-regex`: 
+- `axonius-get-devices-by-mac`: 
+- `axonius-get-devices-by-mac-regex`: 
+- `axonius-add-note`: 
 
 
 ## Barracuda Reputation Block List (BRBL)
@@ -1659,11 +1625,6 @@ This integration is for fetching information about assets in Axonius. This integ
 **Product:** Barracuda  
 
 This integration enables reputation checks against IPs from Barracuda Reputation Block List (BRBL) This integration was integrated and tested with Barracuda Reputation Block List (BRBL)
-
-**Commands:**
-
-- `None`: 
-- `None`: 
 
 
 ## Base64Decode
@@ -1758,12 +1719,12 @@ The dark web scan integration notifies you if login credentials to your company 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `darkwebscan-getcompanies`: 
+- `darkwebscan-getleaks`: 
+- `darkwebscan-getosint`: 
+- `darkwebscan-getemailsecurity`: 
+- `darkwebscan-getwaf`: 
+- `darkwebscan-resetcontext`: 
 
 
 ## BeforeRelativeDate
@@ -1816,8 +1777,8 @@ Use this integration to handle Beyond Trust authorization requests through platf
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `bt-authorize-ticket`: 
+- `bt-get-ticket`: 
 
 
 ## BeyondTrust Privilege Management Cloud
@@ -1826,7 +1787,7 @@ Use this integration to handle Beyond Trust authorization requests through platf
 **Product:** BeyondTrust  
 **Commands:**
 
-- `None`: 
+- `beyondtrust-pm-cloud-get-events`: 
 
 
 ## BeyondTrust Retrieve Credentials
@@ -1843,8 +1804,8 @@ Playbook for retrieving credentials for BeyondTrust Password Safe
 **Product:** Binalyze AIR  
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `binalyze-air-isolate`: 
+- `binalyze-air-acquire`: 
 
 
 ## Binalyze AIR Extended
@@ -1856,21 +1817,21 @@ Manage Binalyze AIR forensic acquisition, endpoint isolation, triage, cases, tas
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `binalyze-air-isolate`: 
+- `binalyze-air-acquire`: 
+- `binalyze-air-create-case`: 
+- `binalyze-air-get-case`: 
+- `binalyze-air-list-cases`: 
+- `binalyze-air-close-case`: 
+- `binalyze-air-get-case-tasks`: 
+- `binalyze-air-get-case-endpoints`: 
+- `binalyze-air-get-case-activities`: 
+- `binalyze-air-list-assets`: 
+- `binalyze-air-get-asset`: 
+- `binalyze-air-get-asset-by-hostname`: 
+- `binalyze-air-get-asset-tasks`: 
+- `binalyze-air-get-task`: 
+- `binalyze-air-list-tasks`: 
 
 
 ## BinarySearchPy
@@ -1890,21 +1851,21 @@ Bitbucket Cloud is a Git-based code and CI/CD tool optimized for teams using Jir
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `bitbucket-project-list`: 
+- `bitbucket-open-branch-list`: 
+- `bitbucket-branch-get`: 
+- `bitbucket-branch-create`: 
+- `bitbucket-branch-delete`: 
+- `bitbucket-commit-create`: 
+- `bitbucket-commit-list`: 
+- `bitbucket-file-delete`: 
+- `bitbucket-raw-file-get`: 
+- `bitbucket-issue-create`: 
+- `bitbucket-issue-list`: 
+- `bitbucket-issue-update`: 
+- `bitbucket-pull-request-create`: 
+- `bitbucket-pull-request-update`: 
+- `bitbucket-pull-request-list`: 
 
 
 ## Bitsight for Security Performance Management
@@ -1916,12 +1877,9 @@ Use the "Bitsight for Security Performance Management" Integration to get compan
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `bitsight-company-details-get`: 
+- `bitsight-company-findings-get`: 
+- `bitsight-companies-guid-get`: 
 
 
 ## Bitwarden Password Manager
@@ -1933,7 +1891,7 @@ This integration collects event logs from Bitwarden Password Manager to Cortex X
 
 **Commands:**
 
-- `None`: 
+- `bitwarden-get-events`: 
 
 
 ## Block Indicator - Infoblox NIOS
@@ -2015,21 +1973,21 @@ BMC Helix ITSM integration enables customers to manage service request, incident
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `bmc-itsm-user-list`: 
+- `bmc-itsm-company-list`: 
+- `bmc-itsm-service-request-definition-list`: 
+- `bmc-itsm-ticket-list`: 
+- `bmc-itsm-service-request-create`: 
+- `bmc-itsm-service-request-update`: 
+- `bmc-itsm-incident-update`: 
+- `bmc-itsm-ticket-delete`: 
+- `bmc-itsm-incident-create`: 
+- `bmc-itsm-change-request-create`: 
+- `bmc-itsm-change-request-update`: 
+- `bmc-itsm-task-create`: 
+- `bmc-itsm-task-update`: 
+- `bmc-itsm-problem-investigation-create`: 
+- `bmc-itsm-problem-investigation-update`: 
 
 
 ## BMC Helix Remedyforce
@@ -2041,21 +1999,21 @@ BMC Helix Remedyforce integration allows customers to create/update service requ
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `bmc-remedy-service-request-definition-get`: 
+- `bmc-remedy-note-create`: 
+- `bmc-remedy-service-request-update`: 
+- `bmc-remedy-service-request-create`: 
+- `bmc-remedy-template-details-get`: 
+- `bmc-remedy-impact-details-get`: 
+- `bmc-remedy-service-offering-details-get`: 
+- `bmc-remedy-incident-create`: 
+- `bmc-remedy-incident-update`: 
+- `bmc-remedy-asset-details-get`: 
+- `bmc-remedy-account-details-get`: 
+- `bmc-remedy-status-details-get`: 
+- `bmc-remedy-urgency-details-get`: 
+- `bmc-remedy-category-details-get`: 
+- `bmc-remedy-queue-details-get`: 
 
 
 ## BMCHelixRemedyforceCreateIncident
@@ -2102,13 +2060,11 @@ This script is used to simplify the process of creating a service request in BMC
 **Product:** Bonusly  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `bonusly-list-bonuses`: 
+- `bonusly-create-bonus`: 
+- `bonusly-get-bonus`: 
+- `bonusly-update-bonus`: 
+- `bonusly-delete-bonus`: 
 
 
 ## Bonusly - AutoGratitude
@@ -2132,21 +2088,21 @@ Manage Box users This integration was integrated and tested with API version 2.0
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `box-search-content`: 
+- `box-find-file-folder-by-share-link`: 
+- `box-get-shared-link-by-file`: 
+- `box-create-file-share-link`: 
+- `box-update-file-share-link`: 
+- `box-remove-file-share-link`: 
+- `box-get-shared-link-by-folder`: 
+- `box-create-folder-share-link`: 
+- `box-update-folder-share-link`: 
+- `box-remove-folder-share-link`: 
+- `box-get-folder`: 
+- `box-list-folder-items`: 
+- `box-folder-create`: 
+- `box-file-delete`: 
+- `box-list-users`: 
 
 
 ## BreachConfirmationHTML
@@ -2166,10 +2122,10 @@ Automate your privacy Incident Response workflow through the BreachRx platform. 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `breachrx-incident-create`: 
+- `breachrx-incident-actions-get`: 
+- `breachrx-incident-import`: 
+- `breachrx-incident-get`: 
 
 
 ## BreachRx - Create Incident and get Active Tasks
@@ -2206,21 +2162,13 @@ Automate data collection. Process data at cloud speed. Analyze with purpose. Thi
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cado-create-project`: 
+- `cado-list-project`: 
+- `cado-get-pipeline`: 
+- `cado-list-ec2`: 
+- `cado-list-s3`: 
+- `cado-trigger-ec2`: 
+- `cado-trigger-s3`: 
 
 
 ## Calculate Severity - GreyNoise
@@ -2277,14 +2225,10 @@ You can use this integration to automate different Camlytics surveillance analys
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `camlytics-get-channels`: 
+- `camlytics-get-events-totals-by-rule`: 
+- `camlytics-get-events-totals-by-type`: 
+- `camlytics-get-events`: 
 
 
 ## Cape Sandbox
@@ -2293,17 +2237,17 @@ You can use this integration to automate different Camlytics surveillance analys
 **Product:** Cape Sandbox  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cape-file-submit`: 
+- `cape-file-view`: 
+- `cape-sample-download`: 
+- `cape-url-submit`: 
+- `cape-task-delete`: 
+- `cape-tasks-list`: 
+- `cape-task-report-get`: 
+- `cape-pcap-file-download`: 
+- `cape-task-screenshot-download`: 
+- `cape-machines-list`: 
+- `cape-cuckoo-status-get`: 
 
 
 ## CaseMgmtAnalystTools
@@ -2347,7 +2291,7 @@ Celonis Event Collector is an integration that supports fetching audit log event
 
 **Commands:**
 
-- `None`: 
+- `celonis-get-events`: 
 
 
 ## Censys Platform
@@ -2359,21 +2303,11 @@ Built on the industry’s most comprehensive Internet Map, the Censys Platform d
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cen-view`: 
+- `cen-search`: 
+- `cen-host-history-list`: 
+- `cen-rescan`: 
+- `cen-related-infrastructure-list`: 
 
 
 ## Centrify Vault
@@ -2385,18 +2319,18 @@ Leverage the Centrify Vault integration to create and manage Secrets
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `centrify-retrieve-secrets`: 
+- `centrify-retrieve-secret-by-secretid`: 
+- `centrify-create-secretfolder`: 
+- `centrify-create-secret`: 
+- `centrify-create-set`: 
+- `centrify-retrieve-folders`: 
+- `centrify-delete-folder`: 
+- `centrify-delete-secret`: 
+- `centrify-delete-secret-by-secretid`: 
+- `centrify-add-secret-to-set`: 
+- `centrify-retrieve-sets`: 
+- `centrify-delete-set`: 
 
 
 ## Change Management
@@ -2442,12 +2376,10 @@ Cyberint provides intelligence-driven digital risk protection. This integration 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cyberint-alerts-fetch`: 
+- `cyberint-alerts-status-update`: 
+- `cyberint-alerts-get-attachment`: 
+- `cyberint-alerts-analysis-report`: 
 
 
 ## Check Point EM Takedowns
@@ -2459,8 +2391,8 @@ Use the Cyberint Takedowns integration to manage takedowns requests
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `cyberint-retrieve-takedowns`: 
+- `cyberint-takedown-url`: 
 
 
 ## Check Point Harmony Endpoint
@@ -2472,21 +2404,21 @@ Checkpoint Harmony Endpoint provides a complete endpoint security solution built
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `harmony-ep-job-status-get`: 
+- `harmony-ep-ioc-list`: 
+- `harmony-ep-ioc-update`: 
+- `harmony-ep-ioc-create`: 
+- `harmony-ep-ioc-delete`: 
+- `harmony-ep-policy-rule-assignments-get`: 
+- `harmony-ep-policy-rule-assignments-add`: 
+- `harmony-ep-policy-rule-assignments-remove`: 
+- `harmony-ep-policy-rule-install`: 
+- `harmony-ep-policy-rule-modifications-get`: 
+- `harmony-ep-policy-rule-metadata-list`: 
+- `harmony-ep-push-operation-status-list`: 
+- `harmony-ep-push-operation-get`: 
+- `harmony-ep-push-operation-abort`: 
+- `harmony-ep-anti-malware-scan`: 
 
 
 ## Check Point Network Detection and Response (Infinity NDR)
@@ -2498,7 +2430,7 @@ Collect network security events from Check Point Infinity NDR for your secured S
 
 **Commands:**
 
-- `None`: 
+- `check-point-ndr-fetch-insights`: 
 
 
 ## Check Point XDR
@@ -2510,9 +2442,9 @@ The Check Point XDR (Extended Detection and Response) integration allows you to 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `fetch-incidents`: 
+- `get-mapping-fields`: 
+- `update-remote-system`: 
 
 
 ## Cherwell
@@ -2524,21 +2456,19 @@ Cloud-based IT service management solution This integration was integrated and t
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cherwell-create-business-object`: 
+- `cherwell-update-business-object`: 
+- `cherwell-delete-business-object`: 
+- `cherwell-get-business-object`: 
+- `cherwell-download-attachments`: 
+- `cherwell-upload-attachment`: 
+- `cherwell-link-business-objects`: 
+- `cherwell-unlink-business-objects`: 
+- `cherwell-get-attachments-info`: 
+- `cherwell-remove-attachment`: 
+- `cherwell-query-business-object`: 
+- `cherwell-get-field-info`: 
+- `cherwell-run-saved-search`: 
 
 
 ## CherwellCreateIncident
@@ -2631,7 +2561,7 @@ This script is an example script of how to update an incident in Cherwell. The s
 **Product:** Google SecOps  
 **Commands:**
 
-- `None`: 
+- `gcb-list-iocs`: 
 
 
 ## ChronicleAssetEventsForHostnameWidgetScript
@@ -2759,21 +2689,21 @@ CimTrak platform integration
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `get-events`: 
+- `file-analysis-by-hash`: 
+- `file-analysis-by-objectdetail-id`: 
+- `check-file-against-trusted-file-registry-by-hash`: 
+- `promote-authoritative-baseline-files`: 
+- `demote-authoritative-baseline-files`: 
+- `update-task-disposition`: 
+- `get-tickets`: 
+- `get-ticket-tasks`: 
+- `add-ticket`: 
+- `update-ticket`: 
+- `add-ticket-comment`: 
+- `add-hash-allow-list`: 
+- `add-hash-deny-list`: 
+- `delete-hash-allow-list`: 
 
 
 ## CIRCL CVE Search
@@ -2785,7 +2715,7 @@ Searches for CVE information using circl.lu
 
 **Commands:**
 
-- `None`: 
+- `cve-latest`: 
 
 
 ## CircleCI
@@ -2797,15 +2727,11 @@ Gets the details of the CircleCI workflows; including the details of the last ru
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `circleci-workflows-list`: 
+- `circleci-artifacts-list`: 
+- `circleci-workflow-jobs-list`: 
+- `circleci-workflow-last-runs`: 
+- `circleci-trigger-workflow`: 
 
 
 ## CIRCLEHashlookup
@@ -2817,9 +2743,9 @@ CIRCL hash lookup is a public API to lookup hash values against known database o
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `circl-info`: 
+- `circl-bulk-sha1`: 
+- `circl-top`: 
 
 
 ## Cisco AMP v2
@@ -2831,21 +2757,21 @@ Cisco Advanced Malware Protection software is designed to prevent, detect, and h
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cisco-amp-computer-list`: 
+- `cisco-amp-computer-trajectory-list`: 
+- `cisco-amp-computer-user-activity-list`: 
+- `cisco-amp-computer-user-trajectory-list`: 
+- `cisco-amp-computer-vulnerabilities-list`: 
+- `cisco-amp-computer-move`: 
+- `cisco-amp-computer-delete`: 
+- `cisco-amp-computer-activity-list`: 
+- `cisco-amp-computer-isolation-feature-availability-get`: 
+- `cisco-amp-computer-isolation-get`: 
+- `cisco-amp-computer-isolation-create`: 
+- `cisco-amp-computer-isolation-delete`: 
+- `cisco-amp-event-list`: 
+- `cisco-amp-event-type-list`: 
+- `cisco-amp-file-list-list`: 
 
 
 ## Cisco AppDynamics
@@ -2857,7 +2783,7 @@ AppDynamics enables you to automate incident management, gain real-time performa
 
 **Commands:**
 
-- `None`: 
+- `cisco-appdynamics-get-events`: 
 
 
 ## Cisco ASA
@@ -2869,21 +2795,21 @@ Use the Cisco Adaptive Security Appliance Software integration to manage interfa
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cisco-asa-list-network-object-group`: 
+- `cisco-asa-list-local-user-group`: 
+- `cisco-asa-list-local-user`: 
+- `cisco-asa-list-time-range`: 
+- `cisco-asa-list-security-object-group`: 
+- `cisco-asa-list-user-object`: 
+- `cisco-asa-write-memory`: 
+- `cisco-asa-list-rules`: 
+- `cisco-asa-backup`: 
+- `cisco-asa-get-rule-by-id`: 
+- `cisco-asa-create-rule`: 
+- `cisco-asa-delete-rule`: 
+- `cisco-asa-edit-rule`: 
+- `cisco-asa-list-network-objects`: 
+- `cisco-asa-create-network-object`: 
 
 
 ## Cisco ESA
@@ -2895,21 +2821,21 @@ The Cisco Email Security Appliance is an email security gateway product. It is d
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cisco-esa-spam-quarantine-message-search`: 
+- `cisco-esa-spam-quarantine-message-get`: 
+- `cisco-esa-spam-quarantine-message-release`: 
+- `cisco-esa-spam-quarantine-message-delete`: 
+- `cisco-esa-list-entry-get`: 
+- `cisco-esa-list-entry-add`: 
+- `cisco-esa-list-entry-append`: 
+- `cisco-esa-list-entry-edit`: 
+- `cisco-esa-list-entry-delete`: 
+- `cisco-esa-message-search`: 
+- `cisco-esa-message-details-get`: 
+- `cisco-esa-message-amp-details-get`: 
+- `cisco-esa-message-dlp-details-get`: 
+- `cisco-esa-message-url-details-get`: 
+- `cisco-esa-report-get`: 
 
 
 ## Cisco ETD Connector
@@ -2921,7 +2847,7 @@ Fetches Cisco Email Threat Defense (ETD) message events and creates incidents. T
 
 **Commands:**
 
-- `None`: 
+- `cisco-etd-move-message`: 
 
 
 ## Cisco Firepower
@@ -2930,7 +2856,7 @@ Fetches Cisco Email Threat Defense (ETD) message events and creates incidents. T
 **Product:** Cisco Firepower  
 **Commands:**
 
-- `None`: 
+- `ciscofp-list-zones`: 
 
 
 ## Cisco FirePower- Append network group object
@@ -2958,15 +2884,11 @@ Cisco Meraki is a cloud-managed IT company that simplifies networking, security,
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `meraki-organization-list`: 
+- `meraki-network-list`: 
+- `meraki-organization-license-state-list`: 
+- `meraki-organization-inventory-list`: 
+- `meraki-device-claim`: 
 
 
 ## Cisco Secure Malware Analytics (Threat Grid) v2
@@ -2978,21 +2900,21 @@ Query and upload samples to Cisco threat grid. This integration was integrated a
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `threat-grid-sample-list`: 
+- `threat-grid-sample-upload`: 
+- `threat-grid-submissions-search`: 
+- `threat-grid-sample-summary-get`: 
+- `threat-grid-who-am-i`: 
+- `threat-grid-rate-limit-get`: 
+- `threat-grid-feed-specific-get`: 
+- `threat-grid-ip-search`: 
+- `threat-grid-analysis-annotations-get`: 
+- `threat-grid-url-search`: 
+- `threat-grid-feeds-artifact`: 
+- `threat-grid-feeds-domain`: 
+- `threat-grid-feeds-url`: 
+- `threat-grid-feeds-ip`: 
+- `threat-grid-feeds-network-stream`: 
 
 
 ## Cisco Security Management Appliance
@@ -3004,21 +2926,21 @@ The Security Management Appliance (SMA) is used to centralize services from Emai
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cisco-sma-spam-quarantine-message-search`: 
+- `cisco-sma-spam-quarantine-message-get`: 
+- `cisco-sma-spam-quarantine-message-release`: 
+- `cisco-sma-spam-quarantine-message-delete`: 
+- `cisco-sma-list-entry-get`: 
+- `cisco-sma-list-entry-add`: 
+- `cisco-sma-list-entry-append`: 
+- `cisco-sma-list-entry-edit`: 
+- `cisco-sma-list-entry-delete`: 
+- `cisco-sma-message-search`: 
+- `cisco-sma-message-details-get`: 
+- `cisco-sma-message-amp-details-get`: 
+- `cisco-sma-message-dlp-details-get`: 
+- `cisco-sma-message-url-details-get`: 
+- `cisco-sma-report-get`: 
 
 
 ## Cisco ThousandEyes
@@ -3030,7 +2952,7 @@ This is the Cisco ThousandEyes event collector integration for Cortex XSIAM. Thi
 
 **Commands:**
 
-- `None`: 
+- `cisco-thousandeyes-get-events`: 
 
 
 ## Cisco Umbrella Enforcement
@@ -3042,10 +2964,9 @@ Add and remove domains in Cisco OpenDNS. This integration was integrated and tes
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `umbrella-domain-event-add`: 
+- `umbrella-domains-list`: 
+- `umbrella-domain-delete`: 
 
 
 ## Cisco Umbrella Investigate
@@ -3057,21 +2978,21 @@ Cisco Umbrella Investigate enable you to research domains, IPs, and URLs observe
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `umbrella-domain-categorization`: 
+- `umbrella-domain-search`: 
+- `umbrella-domain-co-occurrences`: 
+- `umbrella-domain-related`: 
+- `umbrella-domain-security`: 
+- `umbrella-get-domain-risk-score`: 
+- `umbrella-list-resource-record`: 
+- `umbrella-list-domain-subdomain`: 
+- `umbrella-get-ip-bgp`: 
+- `umbrella-get-asn-bgp`: 
+- `umbrella-get-whois-for-domain`: 
+- `umbrella-get-domain-whois-history`: 
+- `umbrella-get-nameserver-whois`: 
+- `umbrella-get-email-whois`: 
+- `umbrella-get-regex-whois`: 
 
 
 ## Cisco Umbrella Reporting
@@ -3080,21 +3001,15 @@ Cisco Umbrella Investigate enable you to research domains, IPs, and URLs observe
 **Product:** Cisco Umbrella Reporting  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `umbrella-reporting-destination-list`: 
+- `umbrella-reporting-category-list`: 
+- `umbrella-reporting-identity-list`: 
+- `umbrella-reporting-event-type-list`: 
+- `umbrella-reporting-file-list`: 
+- `umbrella-reporting-threat-list`: 
+- `umbrella-reporting-activity-list`: 
+- `umbrella-reporting-activity-get`: 
+- `umbrella-reporting-summary-list`: 
 
 
 ## Cisco Webex Teams
@@ -3106,21 +3021,21 @@ Send messages, create rooms and more, via the Cisco Spark API. This integration 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cisco-spark-list-people`: 
+- `cisco-spark-create-person`: 
+- `cisco-spark-get-person-details`: 
+- `cisco-spark-update-person`: 
+- `cisco-spark-delete-person`: 
+- `cisco-spark-get-own-details`: 
+- `cisco-spark-list-rooms`: 
+- `cisco-spark-create-room`: 
+- `cisco-spark-get-room-details`: 
+- `cisco-spark-update-room`: 
+- `cisco-spark-delete-room`: 
+- `cisco-spark-list-memberships`: 
+- `cisco-spark-create-membership`: 
+- `cisco-spark-get-membership-details`: 
+- `cisco-spark-update-membership`: 
 
 
 ## Cisco WSA v2
@@ -3132,21 +3047,21 @@ Cisco Secure Web Appliance protects your organization by automatically blocking 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cisco-wsa-access-policy-list`: 
+- `cisco-wsa-access-policy-create`: 
+- `cisco-wsa-access-policy-update`: 
+- `cisco-wsa-access-policy-protocols-user-agents-update`: 
+- `cisco-wsa-access-policy-url-filtering-update`: 
+- `cisco-wsa-access-policy-applications-update`: 
+- `cisco-wsa-access-policy-objects-update`: 
+- `cisco-wsa-access-policy-anti-malware-update`: 
+- `cisco-wsa-access-policy-delete`: 
+- `cisco-wsa-domain-map-list`: 
+- `cisco-wsa-domain-map-create`: 
+- `cisco-wsa-domain-map-update`: 
+- `cisco-wsa-domain-map-delete`: 
+- `cisco-wsa-identification-profiles-list`: 
+- `cisco-wsa-identification-profiles-create`: 
 
 
 ## Citrix Cloud
@@ -3155,7 +3070,7 @@ Cisco Secure Web Appliance protects your organization by automatically blocking 
 **Product:** Citrix  
 **Commands:**
 
-- `None`: 
+- `citrix-cloud-get-events`: 
 
 
 ## Citrix DaaS
@@ -3167,7 +3082,7 @@ Citrix DaaS simplifies the delivery and management of Citrix technologies
 
 **Commands:**
 
-- `None`: 
+- `citrix-daas-get-events`: 
 
 
 ## Clarizen IAM
@@ -3179,14 +3094,10 @@ Integrate with Clarizen's Identity Access Management service to execute CRUD ope
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iam-create-user`: 
+- `iam-update-user`: 
+- `iam-get-user`: 
+- `iam-disable-user`: 
 
 
 ## clear-user-session
@@ -3213,8 +3124,8 @@ This is the ClickSend integration for make a phonecall from platform made by Tru
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `clicksend-text-to-voice`: 
+- `clicksend-voice-history`: 
 
 
 ## Code42
@@ -3226,21 +3137,21 @@ Use the Code42 integration to identify potential data exfiltration from insider 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `code42-file-events-search`: 
+- `code42-alert-get`: 
+- `code42-alert-update`: 
+- `code42-alert-resolve`: 
+- `code42-user-create`: 
+- `code42-user-block`: 
+- `code42-user-deactivate`: 
+- `code42-user-unblock`: 
+- `code42-user-reactivate`: 
+- `code42-legalhold-add-user`: 
+- `code42-legalhold-remove-user`: 
+- `code42-download-file`: 
+- `code42-download-file-by-xfc-id`: 
+- `code42-watchlists-list`: 
+- `code42-watchlists-add-user`: 
 
 
 ## Code42 Exfiltration Playbook
@@ -3338,16 +3249,13 @@ Use the Cofense Triage integration to ingest reported phishing indicators. This 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cofense-search-reports`: 
+- `cofense-search-inbox-reports`: 
+- `cofense-get-attachment`: 
+- `cofense-get-reporter`: 
+- `cofense-get-report-by-id`: 
+- `cofense-get-report-png-by-id`: 
+- `cofense-get-threat-indicators`: 
 
 
 ## Cofense Triage v3
@@ -3359,21 +3267,21 @@ The Cofense Triage v3 integration uses the Cofense Triage v2 API (previous integ
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cofense-threat-indicator-list`: 
+- `cofense-report-list`: 
+- `cofense-report-download`: 
+- `cofense-report-categorize`: 
+- `cofense-report-attachment-payload-list`: 
+- `cofense-report-attachment-list`: 
+- `cofense-report-attachment-download`: 
+- `cofense-category-list`: 
+- `cofense-rule-list`: 
+- `cofense-url-list`: 
+- `cofense-threat-indicator-create`: 
+- `cofense-reporter-list`: 
+- `cofense-integration-submission-get`: 
+- `cofense-attachment-payload-list`: 
+- `cofense-comment-list`: 
 
 
 ## Cofense Vision
@@ -3385,17 +3293,13 @@ The Cofense Vision integration provides commands to initiate advanced search job
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cofense-message-token-get`: 
+- `cofense-message-metadata-get`: 
+- `cofense-message-get`: 
+- `cofense-message-attachment-get`: 
+- `cofense-quarantine-jobs-list`: 
+- `cofense-quarantine-job-create`: 
+- `cofense-quarantine-job-delete`: 
 
 
 ## CofenseTriageReportDownload
@@ -3431,12 +3335,9 @@ The Cognni connector offers a quick and simple integration with the platform. Wi
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cognni-get-event`: 
+- `cognni-get-insight`: 
+- `cognni-fetch-insights`: 
 
 
 ## CohesityHelios
@@ -3448,9 +3349,9 @@ Integrate with Cohesity Helios services to fetch alerts and take remedial action
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cohesity-helios-get-ransomware-alerts`: 
+- `cohesity-helios-ignore-anomalous-object`: 
+- `cohesity-helios-restore-latest-clean-snapshot`: 
 
 
 ## commentsToContext
@@ -3563,10 +3464,10 @@ Concentric’s Semantic Intelligence™ solution discovers and protects business
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `concentricai-get-file-details`: 
+- `concentricai-get-users-overview`: 
+- `concentricai-get-user-details`: 
+- `concentricai-get-file-sharing-details`: 
 
 
 ## ConcentricAI Demo Playbook
@@ -3617,13 +3518,9 @@ This script is grants a user the permissions needed to create a Teams meeting. I
 **Product:** Confluera  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `confluera-fetch-detections`: 
+- `confluera-fetch-progressions`: 
+- `confluera-fetch-trail-details`: 
 
 
 ## ConflueraDetectionsCount
@@ -3832,7 +3729,7 @@ To use the COOC API logic, run the following command to import the COOCApiModule
 **Product:** Coralogix  
 **Commands:**
 
-- `None`: 
+- `coralogix-search`: 
 
 
 ## CoreXQLApiModule
@@ -3943,21 +3840,16 @@ Integration to pull assets and other ASM related information. This integration w
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `asm-list-external-service`: 
+- `asm-get-external-service`: 
+- `asm-list-external-ip-address-range`: 
+- `asm-get-external-ip-address-range`: 
+- `asm-list-asset-internet-exposure`: 
+- `asm-get-asset-internet-exposure`: 
+- `asm-list-remediation-rule`: 
+- `asm-start-remediation-confirmation-scan`: 
+- `asm-get-remediation-confirmation-scan-status`: 
+- `asm-get-attack-surface-rule`: 
 
 
 ## Cortex EM - ServiceNow CMDB
@@ -3984,7 +3876,7 @@ This integration uses the Cortex API to access all the core services and capabil
 
 **Commands:**
 
-- `None`: 
+- `core-get-asset-details`: 
 
 
 ## Cortex XDR - CVE-2025-31324 - SAP NetWeaver Visual Composer
@@ -4030,11 +3922,11 @@ This integration is a Mock customized only for the Capture The Flag challenge
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `get-mapping-fields`: 
+- `xdr-get-incident-extra-data-ctf`: 
+- `xdr-endpoint-isolate-ctf`: 
+- `xdr-file-retrieve-ctf`: 
+- `xdr-get-alerts-ctf`: 
 
 
 ## Cortex XDR - Possible External RDP Brute-Force CTF
@@ -4097,21 +3989,21 @@ Integration to pull assets and other ASM related information. This integration w
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `asm-list-external-service`: 
+- `asm-get-external-service`: 
+- `asm-list-external-ip-address-range`: 
+- `asm-get-external-ip-address-range`: 
+- `asm-list-asset-internet-exposure`: 
+- `asm-get-asset-internet-exposure`: 
+- `asm-list-alerts`: 
+- `asm-get-attack-surface-rule`: 
+- `asm-tag-asset-assign`: 
+- `asm-tag-asset-remove`: 
+- `asm-tag-range-assign`: 
+- `asm-tag-range-remove`: 
+- `asm-list-incidents`: 
+- `asm-get-incident`: 
+- `asm-update-incident`: 
 
 
 ## CounterCraft Deception Director
@@ -4120,7 +4012,7 @@ Integration to pull assets and other ASM related information. This integration w
 **Product:** CounterCraft Deception Director  
 **Commands:**
 
-- `None`: 
+- `countercraft-list-campaigns`: 
 
 
 ## CounterTack
@@ -4132,21 +4024,21 @@ CounterTack empowers endpoint security teams to assure endpoint protection for I
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `countertack-get-endpoints`: 
+- `countertack-get-behaviors`: 
+- `countertack-get-endpoint`: 
+- `countertack-get-behavior`: 
+- `countertack-get-endpoint-tags`: 
+- `countertack-add-tags`: 
+- `countertack-delete-tags`: 
+- `countertack-add-behavior-tags`: 
+- `countertack-delete-behavior-tags`: 
+- `countertack-endpoint-quarantine`: 
+- `countertack-disable-quarantine`: 
+- `countertack-extract-file`: 
+- `countertack-delete-file`: 
+- `countertack-get-all-files`: 
+- `countertack-get-endpoint-files`: 
 
 
 ## Covalence For Security Providers
@@ -4158,21 +4050,20 @@ Triggers by any alert from endpoint, cloud, and network security monitoring, wit
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cov-secpr-list-alerts`: 
+- `cov-secpr-list-sensors`: 
+- `cov-secpr-get-sensor`: 
+- `cov-secpr-connections-summary-ip`: 
+- `cov-secpr-connections-summary-port`: 
+- `cov-secpr-list-dns-resolutions`: 
+- `cov-secpr-list-internal-networks`: 
+- `cov-secpr-set-internal-networks`: 
+- `cov-secpr-list-endpoint-agents`: 
+- `cov-secpr-find-endpoint-agents-by-user`: 
+- `cov-secpr-find-endpoint-agents-by-uuid`: 
+- `cov-secpr-search-endpoint-process`: 
+- `cov-secpr-search-endpoint-installed-software`: 
+- `cov-secpr-list-organizations`: 
 
 
 ## Covalence Managed Security
@@ -4184,18 +4075,13 @@ Triggers by triaged alerts from endpoint, cloud, and network security monitoring
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cov-mgsec-get-aro`: 
+- `cov-mgsec-list-org`: 
+- `cov-mgsec-transition-aro`: 
+- `cov-mgsec-transition-aro`: 
+- `cov-mgsec-broker-cloud-action-by-aro`: 
+- `cov-mgsec-broker-endpoint-action-by-aro`: 
+- `cov-mgsec-broker-ping`: 
 
 
 ## Create Jira Issue
@@ -4241,8 +4127,8 @@ CreateIncidents fetches incident created manually
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `create-test-incident-from-file`: 
+- `create-test-incident-from-raw-json`: 
 
 
 ## Cribl Search
@@ -4254,21 +4140,15 @@ Cribl Search is a search solution that allows you to query, retrieve, and manage
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cribl-search-query`: 
+- `cribl-search-status`: 
+- `cribl-search-result`: 
+- `cribl-search-job-create`: 
+- `cribl-search-job-list`: 
+- `cribl-search-job-update`: 
+- `cribl-search-job-delete`: 
+- `cribl-search-dataset-list`: 
+- `cribl-saved-search-list`: 
 
 
 ## Criminal_IP_Check_Malicious_Domain
@@ -4316,18 +4196,18 @@ Criminal IP is a comprehensive cyber threat intelligence solution that provides 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `criminal-ip-ip-report`: 
+- `criminal-ip-check-malicious-ip`: 
+- `criminal-ip-check-last-scan-date`: 
+- `criminal-ip-domain-quick-scan`: 
+- `criminal-ip-domain-lite-scan`: 
+- `criminal-ip-domain-lite-scan-status`: 
+- `criminal-ip-domain-lite-scan-result`: 
+- `criminal-ip-domain-full-scan`: 
+- `criminal-ip-domain-full-scan-status`: 
+- `criminal-ip-domain-full-scan-result`: 
+- `criminal-ip-domain-full-scan-make-email-body`: 
+- `criminal-ip-micro-asm`: 
 
 
 ## CrowdSec
@@ -4336,10 +4216,6 @@ Criminal IP is a comprehensive cyber threat intelligence solution that provides 
 **Product:** CrowdSec  
 
 Identify Malicious IP addresses with the CrowdSec CTI API
-
-**Commands:**
-
-- `None`: 
 
 
 ## CrowdStrikeApiModule
@@ -4368,11 +4244,6 @@ Verifies that a cryptocurrency address is valid and only returns the address if 
 
 Cryptocurrency will help classify Cryptocurrency indicators as suspicious when ingested
 
-**Commands:**
-
-- `None`: 
-- `None`: 
-
 
 ## Cryptosim
 
@@ -4383,7 +4254,7 @@ CRYPTOSIM meets the SIEM needs of corporations by its unique correlation engine 
 
 **Commands:**
 
-- `None`: 
+- `cryptosim-get-correlation-alerts`: 
 
 
 ## CSCDomainManager
@@ -4395,15 +4266,10 @@ CSCDomainManager uses rules-based technology, customizable reporting, granular u
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `csc-domains-search`: 
+- `csc-domains-availability-check`: 
+- `csc-domains-configuration-list`: 
+- `csc-domains-configuration-search`: 
 
 
 ## CSCFraudProtection
@@ -4415,21 +4281,21 @@ This is an anti fraud external api for organizations. This integration was integ
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `csc-controldetectionflowbyeventidandaction`: 
+- `csc-fetchthephishkitdatawithticketid`: 
+- `csc-fetchthescreenshotdatawithticketid`: 
+- `csc-gethtmlsourcecodeforaticket`: 
+- `csc-getlistofbrands`: 
+- `csc-getlistoffraudtypes`: 
+- `csc-listofworklogsforticketid`: 
+- `csc-listtakedownevents`: 
+- `csc-listtakedowneventswithfilters`: 
+- `csc-performanactiononasingletarget`: 
+- `csc-retrieveeventscreenshotwitheventid`: 
+- `csc-getfilteredlistofmonitoringresultsspecifiedtime`: 
+- `csc-retrievelistofdetectionswithinspecifiedtimeframe`: 
+- `csc-getlistofmonitoringresultsspecifiedtime`: 
+- `csc-retrievephishkitwitheventid`: 
 
 
 ## CSCTakedowns
@@ -4441,13 +4307,13 @@ This is a CSCTakedowns api for organizations. This integration was integrated an
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `csctakedowns-fetchthephishkitdatawithticketid`: 
+- `csctakedowns-fetchthescreenshotdatawithticketid`: 
+- `csctakedowns-gethtmlsourcecodeforaticket`: 
+- `csctakedowns-listofworklogsforticketid`: 
+- `csctakedowns-listtakedownevents`: 
+- `csctakedowns-listtakedowneventswithfilters`: 
+- `csctakedowns-updatetheactionwithticketid`: 
 
 
 ## CSVFeedApiModule
@@ -4482,16 +4348,15 @@ Take action on incidents derived from CTM360 CBS threat intelligence that is dir
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ctm360-cbs-incident-list`: 
+- `ctm360-cbs-incident-close`: 
+- `ctm360-cbs-incident-request-takedown`: 
+- `get-mapping-fields`: 
+- `ctm360-cbs-incident-details`: 
+- `ctm360-cbs-incident-retrieve-screenshots`: 
+- `get-remote-data`: 
+- `get-modified-remote-data`: 
+- `update-remote-system`: 
 
 
 ## CTM360 HackerView
@@ -4503,13 +4368,13 @@ External Attack Surface Management platform, which combines automated asset disc
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ctm360-hv-incident-list`: 
+- `ctm360-hv-incident-status-change`: 
+- `get-mapping-fields`: 
+- `ctm360-hv-incident-details`: 
+- `get-remote-data`: 
+- `get-modified-remote-data`: 
+- `update-remote-system`: 
 
 
 ## CuckooDisplayReport
@@ -4550,7 +4415,7 @@ Custom Indicator Demo is a demo integration that demonstrates the usage of the C
 
 **Commands:**
 
-- `None`: 
+- `test-custom-indicator`: 
 
 
 ## Cut
@@ -4750,20 +4615,16 @@ CybelAngel receives reports from the CybelAngel platform, which specializes in e
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cybelangel-get-events`: 
+- `cybelangel-report-status-update`: 
+- `cybelangel-report-get`: 
+- `cybelangel-report-remediation-request-create`: 
+- `cybelangel-report-attachment-get`: 
+- `cybelangel-archive-report-by-id-get`: 
+- `cybelangel-mirror-report-get`: 
+- `cybelangel-report-comment-create`: 
+- `cybelangel-report-list`: 
+- `cybelangel-report-comments-get`: 
 
 
 ## CybelAngel EASM
@@ -4775,14 +4636,13 @@ This integration enables the platform, allowing security teams to monitor and re
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cybelangel-get-report-by-id`: 
+- `cybelangel-get-report-attachment`: 
+- `cybelangel-remediate`: 
+- `cybelangel-get-comments`: 
+- `cybelangel-post-comment`: 
+- `cybelangel-update-status`: 
+- `cybelangel-get-report-pdf`: 
 
 
 ## CyberBlindspot Incident Management
@@ -4826,8 +4686,8 @@ CyberChef is a web-application developed by GCHQ that's been called the “Cyber
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `cyberchef-bake`: 
+- `cyberchef-magic`: 
 
 
 ## Cyberhaven
@@ -4839,14 +4699,10 @@ Fetches DLP incidents from the Cyberhaven data security platform and enables inv
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cyberhaven-incident-list`: 
+- `cyberhaven-incident-update`: 
+- `cyberhaven-event-details-get`: 
+- `cyberhaven-event-lineage-get`: 
 
 
 ## CyberhavenIncidentRefresh
@@ -4870,12 +4726,8 @@ Vulnerabilities management This integration was integrated and tested with versi
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cyberpion-get-domain-action-items`: 
+- `cyberpion-get-domain-state`: 
 
 
 ## Cyberpion Domain State
@@ -4895,21 +4747,19 @@ Find, prioritize, and fix vulnerabilities on your IT & OT assets. This integrati
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cyberwatch-list-cves`: 
+- `cyberwatch-fetch-cve`: 
+- `cyberwatch-list-assets`: 
+- `cyberwatch-fetch-asset`: 
+- `cyberwatch-fetch-asset-fulldetails`: 
+- `cyberwatch-list-securityissues`: 
+- `cyberwatch-fetch-securityissue`: 
+- `cyberwatch-list-sysadmin-assets`: 
+- `cyberwatch-fetch-sysadmin-asset`: 
+- `cyberwatch-list-compliance-assets`: 
+- `cyberwatch-fetch-compliance-asset`: 
+- `cyberwatch-send-declarative-data-asset`: 
+- `cyberwatch-get-declarative-data-asset`: 
 
 
 ## Cyble Vision Alert V2
@@ -4929,11 +4779,11 @@ Cyble Events for Vision Users. Must have Vision API access to use the threat int
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cyble-vision-subscribed-services`: 
+- `cyble-vision-fetch-iocs`: 
+- `cyble-vision-fetch-alerts`: 
+- `cyble-vision-fetch-alert-groups`: 
+- `update-alert-data`: 
 
 
 ## CyCognito
@@ -4945,19 +4795,12 @@ The CyCognito integration fetches issues discovered by the CyCognito platform, t
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cycognito-issue-get`: 
+- `cycognito-asset-get`: 
+- `cycognito-asset-investigation-status-change`: 
+- `cycognito-issue-investigation-status-change`: 
+- `cycognito-issues-list`: 
+- `cycognito-assets-list`: 
 
 
 ## CyCognitoGetEndpoints
@@ -4977,18 +4820,14 @@ Cymptom is a Breach and Attack Simulation solution that revolutionizes the exist
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `cymptom-get-mitigations`: 
+- `cymptom-get-users-with-cracked-passwords`: 
 
 
 ## Cymulate
 
 **Type:** integration  
 **Product:** Cymulate  
-**Commands:**
-
-- `None`: 
-
 
 ## Cymulate IOC Findings Mitigation
 
@@ -5007,9 +4846,8 @@ Cyren Inbox Security is an innovative solution that safeguards Office 365 mailbo
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cyren-resolve-and-remediate`: 
+- `cyren-reset-sample-fetch`: 
 
 
 ## Cyren Inbox Security Default
@@ -5057,21 +4895,17 @@ Stay ahead of cyber threats with Darkmon TIP - real-time threat intelligence fro
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `dmontip-global-search`: 
+- `dmontip-get-compromised`: 
+- `dmontip-get-vpn`: 
+- `dmontip-get-proxy`: 
+- `dmontip-get-cve`: 
+- `dmontip-get-nrd`: 
+- `dmontip-get-tbf`: 
+- `dmontip-get-ransomware`: 
+- `dmontip-get-landscape`: 
+- `dmontip-get-boardprotection`: 
+- `dmontip-get-boardemails`: 
 
 
 ## Darkmon - Block IOC
@@ -5317,16 +5151,13 @@ Darktrace is a Cyber AI platform for threat detection and response across cloud,
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `darktrace-get-external-endpoint-details`: 
+- `darktrace-get-device-connection-info`: 
+- `darktrace-run-advanced-search-analysis`: 
+- `darktrace-post-to-watched-list`: 
+- `darktrace-get-tagged-devices`: 
+- `darktrace-get-tags-for-device`: 
+- `darktrace-post-tag-to-device`: 
 
 
 ## Darktrace AI Analyst
@@ -5338,12 +5169,11 @@ Darktrace is a Cyber AI platform for threat detection and response across cloud,
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `darktrace-get-ai-analyst-incident-event`: 
+- `darktrace-get-comments-for-ai-analyst-incident-event`: 
+- `darktrace-post-comment-to-ai-analyst-incident-event`: 
+- `darktrace-acknowledge-ai-analyst-incident-event`: 
+- `darktrace-unacknowledge-ai-analyst-incident-event`: 
 
 
 ## Darktrace ASM
@@ -5355,21 +5185,15 @@ Darktrace is a Cyber AI platform for threat detection and response across cloud,
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `darktrace-asm-get-risk`: 
+- `darktrace-asm-get-asset`: 
+- `darktrace-asm-mitigate-risk`: 
+- `darktrace-asm-post-comment`: 
+- `darktrace-asm-edit-comment`: 
+- `darktrace-asm-delete-comment`: 
+- `darktrace-asm-create-tag`: 
+- `darktrace-asm-assign-tag`: 
+- `darktrace-asm-unassign-tag`: 
 
 
 ## Darktrace ASM Basic Risk Handler
@@ -5405,18 +5229,14 @@ Darktrace is a Cyber AI platform for threat detection and response across cloud,
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `darktrace-get-model-breach`: 
+- `darktrace-get-model-breach-comments`: 
+- `darktrace-acknowledge-model-breach`: 
+- `darktrace-unacknowledge-model-breach`: 
+- `darktrace-get-model-breach-connections`: 
+- `darktrace-get-model`: 
+- `darktrace-get-model-component`: 
+- `darktrace-post-comment-to-model-breach`: 
 
 
 ## DataBee
@@ -5428,14 +5248,9 @@ DataBee, from Comcast Technology Solutions, is a cloud-native security and compl
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `databee-device-search`: 
+- `databee-user-search`: 
+- `databee-finding-search`: 
 
 
 ## Databricks
@@ -5447,21 +5262,21 @@ Comprehensive integration with Databricks workspace APIs for managing clusters, 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `databricks-cluster-get`: 
+- `databricks-cluster-list`: 
+- `databricks-cluster-create`: 
+- `databricks-cluster-edit`: 
+- `databricks-cluster-delete`: 
+- `databricks-cluster-permanent-delete`: 
+- `databricks-cluster-start`: 
+- `databricks-cluster-restart`: 
+- `databricks-cluster-resize`: 
+- `databricks-cluster-pin`: 
+- `databricks-cluster-unpin`: 
+- `databricks-cluster-change-owner`: 
+- `databricks-cluster-list-zones`: 
+- `databricks-cluster-update`: 
+- `databricks-cluster-policy-get`: 
 
 
 ## Dataminr Pulse
@@ -5470,13 +5285,9 @@ Comprehensive integration with Databricks workspace APIs for managing clusters, 
 **Product:** Dataminr Pulse  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `dataminrpulse-watchlists-get`: 
+- `dataminrpulse-alerts-get`: 
+- `dataminrpulse-related-alerts-get`: 
 
 
 ## Dataminr Pulse - ReGenAI
@@ -5485,11 +5296,8 @@ Comprehensive integration with Databricks workspace APIs for managing clusters, 
 **Product:** Dataminr Pulse  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `dataminrpulse-watchlists-get`: 
+- `dataminrpulse-alerts-get`: 
 
 
 ## DataminrPulseCVSSColor
@@ -5646,7 +5454,7 @@ Integration to provide connectivity to IBM DB2 using the python ibm_db2 library.
 
 **Commands:**
 
-- `None`: 
+- `db2-query`: 
 
 
 ## DBotAverageScore
@@ -5823,8 +5631,8 @@ DeCYFIR API's provides External Threat Landscape Management insights. This integ
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `decyfir-takedown-initiate`: 
+- `decyfir-takedown-list`: 
 
 
 ## DeCYFIR - v1
@@ -5841,7 +5649,7 @@ DeCYFIR API's provides External Threat Landscape Management insights
 **Product:** DeepInstinct  
 **Commands:**
 
-- `None`: 
+- `deepinstinct-get-device`: 
 
 
 ## DeepInstinct v3
@@ -5853,21 +5661,21 @@ Deep Instinct is a prevention-first approach to stopping ransomware and other ma
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `deepinstinctv3-get-device`: 
+- `deepinstinctv3-get-events`: 
+- `deepinstinctv3-get-suspicious-events`: 
+- `deepinstinctv3-get-all-groups`: 
+- `deepinstinctv3-get-all-policies`: 
+- `deepinstinctv3-add-hash-to-deny-list`: 
+- `deepinstinctv3-add-hash-to-allow-list`: 
+- `deepinstinctv3-remove-hash-from-deny-list`: 
+- `deepinstinctv3-remove-hash-from-allow-list`: 
+- `deepinstinctv3-add-devices-to-group`: 
+- `deepinstinctv3-remove-devices-from-group`: 
+- `deepinstinctv3-delete-files-remotely`: 
+- `deepinstinctv3-terminate-processes`: 
+- `deepinstinctv3-close-events`: 
+- `deepinstinctv3-disable-device`: 
 
 
 ## DeepL
@@ -5879,11 +5687,11 @@ This integration uses DeepL ( to translate text or files This integration was in
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `deepl-usage`: 
+- `deepl-translate-text`: 
+- `deepl-submit-document`: 
+- `deepl-check-document-status`: 
+- `deepl-get-document`: 
 
 
 ## Defang
@@ -5923,8 +5731,7 @@ This integration allows you to check if your personal information such as your e
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `dehashed-search`: 
 
 
 ## Delete Custom Content
@@ -5949,7 +5756,7 @@ Manage credentials for applications, databases, CI/CD tools, and services withou
 
 **Commands:**
 
-- `None`: 
+- `dsv-secret-get`: 
 
 
 ## DelineaSS
@@ -5961,21 +5768,21 @@ Secret Server and Platform is the fully featured Privileged Account Management (
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `delinea-secret-password-get`: 
+- `delinea-secret-username-get`: 
+- `delinea-secret-search-name`: 
+- `delinea-secret-password-update`: 
+- `delinea-secret-checkout`: 
+- `delinea-secret-checkin`: 
+- `delinea-folder-create`: 
+- `delinea-folder-search`: 
+- `delinea-secret-get`: 
+- `delinea-secret-search`: 
+- `delinea-folder-update`: 
+- `delinea-secret-create`: 
+- `delinea-secret-delete`: 
+- `delinea-secret-server-user-create`: 
+- `delinea-secret-server-user-search`: 
 
 
 ## Departing Employee Auto-Add
@@ -6475,13 +6282,10 @@ Detonates a URL using the VMRay sandbox integration
 **Product:** Devo  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `devo-run-query`: 
+- `devo-get-alerts`: 
+- `devo-multi-table-query`: 
+- `devo-write-to-table`: 
 
 
 ## DFIRe
@@ -6493,21 +6297,21 @@ DFIRe is a self-hosted Digital Forensics and Incident Response (DFIR) case manag
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `dfire-search`: 
+- `dfire-case-type-list`: 
+- `dfire-case-list`: 
+- `dfire-case-get`: 
+- `dfire-case-create`: 
+- `dfire-case-update`: 
+- `dfire-case-delete`: 
+- `dfire-case-note-list`: 
+- `dfire-case-note-create`: 
+- `dfire-indicator-list`: 
+- `dfire-indicator-get`: 
+- `dfire-indicator-create`: 
+- `dfire-indicator-update`: 
+- `dfire-indicator-delete`: 
+- `dfire-item-type-list`: 
 
 
 ## Dig
@@ -6533,8 +6337,8 @@ Use the Digital Defense Frontline VM to identify and evaluate the security and b
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `frontline-get-assets`: 
+- `frontline-scan-asset`: 
 
 
 ## Digital Defense FrontlineVM - Old Vulnerabilities Found
@@ -6566,7 +6370,7 @@ This integration was integrated and tested with version 2.11.0 of Digital Guardi
 
 **Commands:**
 
-- `None`: 
+- `digitalguardian-add-watchlist-entry`: 
 
 
 ## Digital Guardian Demo Playbook
@@ -6622,8 +6426,8 @@ This is the Discord integration for sending Messages from platform to Discord se
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `discord-send-message`: 
+- `discord-get-message`: 
 
 
 ## DNSOverHttps
@@ -6635,8 +6439,7 @@ Query dns names over https from Cloudflare or Google
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `doh-resolve`: 
 
 
 ## Docker Engine API
@@ -6648,21 +6451,21 @@ The Engine API is an HTTP API served by Docker Engine. It is the API the Docker 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `docker-build-prune`: 
+- `docker-config-create`: 
+- `docker-config-inspect`: 
+- `docker-config-list`: 
+- `docker-container-changes`: 
+- `docker-container-create`: 
+- `docker-container-delete`: 
+- `docker-container-inspect`: 
+- `docker-container-list`: 
+- `docker-container-stats`: 
+- `docker-container-top`: 
+- `docker-image-create`: 
+- `docker-image-delete`: 
+- `docker-image-history`: 
+- `docker-image-inspect`: 
 
 
 ## DockerHardeningCheck
@@ -6692,12 +6495,10 @@ Docusign is a leading provider of electronic signature technology, allowing indi
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `docusign-generate-consent-url`: 
+- `docusign-auth-test`: 
+- `docusign-get-events`: 
+- `docusign-reset-access-token`: 
 
 
 ## domain-enrichment
@@ -6779,19 +6580,15 @@ Together, DomainTools and the platform, web crawl, SSL and infrastructure data. 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `domaintoolsiris-investigate`: 
+- `domaintoolsiris-enrich`: 
+- `domaintoolsiris-analytics`: 
+- `domaintoolsiris-threat-profile`: 
+- `domaintoolsiris-pivot`: 
+- `domaintools-whois-history`: 
+- `domaintools-hosting-history`: 
+- `domaintools-reverse-whois`: 
+- `domaintools-whois`: 
 
 
 ## DomainTools Iris Detect
@@ -6803,21 +6600,17 @@ Iris Detect is an Internet infrastructure detection, monitoring, and enforcement
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `domaintools-iris-detect-escalate-domains`: 
+- `domaintools-iris-detect-blocklist-domains`: 
+- `domaintools-iris-detect-watch-domains`: 
+- `domaintools-iris-detect-ignore-domains`: 
+- `domaintools-iris-detect-get-monitors-list`: 
+- `domaintools-iris-detect-get-new-domains`: 
+- `domaintools-iris-detect-get-watched-domains`: 
+- `domaintools-iris-detect-get-ignored-domains`: 
+- `domaintools-iris-detect-get-escalated-domains`: 
+- `domaintools-iris-detect-get-blocklist-domains`: 
+- `domaintools-iris-detect-reset-fetch-indicators`: 
 
 
 ## DomainTools Iris Risk Score
@@ -6851,21 +6644,16 @@ Doppel is a Modern Digital Risk Protection Solution, that detects the phishing a
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `doppel-get-alert`: 
+- `doppel-create-alert`: 
+- `doppel-update-alert`: 
+- `doppel-create-abuse-alert`: 
+- `doppel-get-alert-screenshot`: 
+- `doppel-get-alerts`: 
+- `get-mapping-fields`: 
+- `update-remote-system`: 
+- `get-remote-data`: 
+- `get-modified-remote-data`: 
 
 
 ## Doppel Screenshot Preview
@@ -6901,7 +6689,7 @@ Custom integration designed to pull in reports from the Dragos Worldview API as 
 
 **Commands:**
 
-- `None`: 
+- `dragos-get-indicators`: 
 
 
 ## DrawRelatedIncidentsCanvas
@@ -6929,10 +6717,10 @@ Drift integration to fetch, modify, create and delete contacts within the Drift 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `drift-get-contact`: 
+- `drift-update-contact`: 
+- `drift-delete-contact`: 
+- `drift-post-contact`: 
 
 
 ## DropBox - Massive scale operations on files
@@ -7052,18 +6840,18 @@ DUO for admins. Must have access to the admin api in order to use this. This int
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `duoadmin-get-authentication-logs-by-user`: 
+- `duoadmin-dissociate-device-from-user`: 
+- `duoadmin-delete-u2f-token`: 
+- `duoadmin-get-users`: 
+- `duoadmin-get-devices-by-user`: 
+- `duoadmin-get-u2f-tokens-by-user`: 
+- `duoadmin-get-devices`: 
+- `duoadmin-associate-device-to-user`: 
+- `duoadmin-get-admins`: 
+- `duoadmin-get-bypass-codes`: 
+- `duoadmin-modify-admin`: 
+- `duoadmin-modify-user`: 
 
 
 ## DuoAuth
@@ -7075,7 +6863,7 @@ The Duo Auth API lets developers integrate with Duo Security's platform at a low
 
 **Commands:**
 
-- `None`: 
+- `duoauth-push-notification`: 
 
 
 ## DuoPush
@@ -7101,21 +6889,21 @@ Cloud-based continuous vulnerability management and penetration testing solution
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `edgescan-host-get-hosts`: 
+- `edgescan-host-get`: 
+- `edgescan-host-get-export`: 
+- `edgescan-host-get-query`: 
+- `edgescan-host-update`: 
+- `edgescan-asset-get-assets`: 
+- `edgescan-asset-get`: 
+- `edgescan-asset-get-query`: 
+- `edgescan-asset-create`: 
+- `edgescan-asset-update`: 
+- `edgescan-asset-delete`: 
+- `edgescan-user-get-users`: 
+- `edgescan-user-get`: 
+- `edgescan-user-get-query`: 
+- `edgescan-user-create`: 
 
 
 ## EditServerConfig
@@ -7141,9 +6929,9 @@ This integration can monitor EDLs by emailing the content of an EDL as a zipped 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `get-edl-contents`: 
+- `email-edl-contents`: 
+- `check-status`: 
 
 
 ## Endace
@@ -7155,7 +6943,7 @@ The EndaceProbe Analytics Platform provides 100% accurate, continuous packet cap
 
 **Commands:**
 
-- `None`: 
+- `endace-create-search`: 
 
 
 ## Enrich Custom IOCs - Dataminr Pulse
@@ -7210,19 +6998,18 @@ Use the Entra ID Applications integration (formerly Azure Active Directory Appli
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `msgraph-apps-auth-start`: 
+- `msgraph-apps-auth-complete`: 
+- `msgraph-apps-auth-reset`: 
+- `msgraph-apps-auth-test`: 
+- `msgraph-apps-service-principal-list`: 
+- `msgraph-apps-service-principal-remove`: 
+- `msgraph-apps-service-principal-get`: 
+- `msgraph-apps-service-principal-update`: 
+- `msgraph-apps-service-principal-password-add`: 
+- `msgraph-apps-service-principal-password-remove`: 
+- `msgraph-apps-service-principal-unlock-configuration`: 
+- `msgraph-apps-service-principal-lock-configuration`: 
 
 
 ## Entra ID Users
@@ -7234,21 +7021,21 @@ The Entra ID Users integration (formerly Azure Active Directory Users) is a Unif
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `msgraph-user-account-disable`: 
+- `msgraph-user-unblock`: 
+- `msgraph-user-update`: 
+- `msgraph-user-delete`: 
+- `msgraph-user-create`: 
+- `msgraph-user-get`: 
+- `msgraph-user-list`: 
+- `msgraph-direct-reports`: 
+- `msgraph-user-get-manager`: 
+- `msgraph-user-assign-manager`: 
+- `msgraph-user-change-password`: 
+- `msgraph-user-test`: 
+- `msgraph-user-session-revoke`: 
+- `msgraph-user-generate-login-url`: 
+- `msgraph-user-auth-reset`: 
 
 
 ## Envoy IAM
@@ -7260,10 +7047,10 @@ Integrate with Envoy Identity Access Management services to execute CRUD operati
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iam-create-user`: 
+- `iam-update-user`: 
+- `iam-get-user`: 
+- `iam-disable-user`: 
 
 
 ## EPOFindSystem
@@ -7323,21 +7110,21 @@ Use the EWS Extension Online Powershell v3 integration to get information about 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ews-mailbox-list`: 
+- `ews-cas-mailbox-list`: 
+- `ews-mailbox-permission-list`: 
+- `ews-recipient-permission-list`: 
+- `ews-recipient-list`: 
+- `ews-new-tenant-allow-block-list-items`: 
+- `ews-get-tenant-allow-block-list-items`: 
+- `ews-get-tenant-allow-block-list-count`: 
+- `ews-remove-tenant-allow-block-list-items`: 
+- `ews-export-quarantinemessage`: 
+- `ews-get-quarantinemessage`: 
+- `ews-release-quarantinemessage`: 
+- `ews-junk-rules-get`: 
+- `ews-junk-rules-set`: 
+- `ews-global-junk-rules-set`: 
 
 
 ## EWS v2
@@ -7349,21 +7136,21 @@ Exchange Web Services (EWS) provides the functionality to enable client applicat
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ews-get-attachment`: 
+- `ews-delete-attachment`: 
+- `ews-get-searchable-mailboxes`: 
+- `ews-search-mailboxes`: 
+- `ews-move-item`: 
+- `ews-delete-items`: 
+- `ews-search-mailbox`: 
+- `ews-get-contacts`: 
+- `ews-resolve-name`: 
+- `ews-get-out-of-office`: 
+- `ews-recover-messages`: 
+- `ews-create-folder`: 
+- `ews-mark-item-as-junk`: 
+- `ews-find-folders`: 
+- `ews-get-items-from-folder`: 
 
 
 ## EWSApiModule
@@ -7382,21 +7169,21 @@ The Exabeam Security Management Platform provides end-to-end detection, User Eve
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `exabeam-get-notable-users`: 
+- `exabeam-get-watchlists`: 
+- `exabeam-get-peer-groups`: 
+- `exabeam-get-user-info`: 
+- `exabeam-get-user-labels`: 
+- `exabeam-get-user-sessions`: 
+- `exabeam-delete-watchlist`: 
+- `exabeam-get-asset-data`: 
+- `exabeam-get-session-info-by-id`: 
+- `exabeam-list-top-domains`: 
+- `exabeam-list-triggered-rules`: 
+- `exabeam-get-asset-info`: 
+- `exabeam-list-asset-timeline-next-events`: 
+- `exabeam-list-security-alerts-by-asset`: 
+- `exabeam-search-rules`: 
 
 
 ## Exabeam Data Lake
@@ -7408,8 +7195,7 @@ Exabeam Data Lake provides a searchable log management system. Data Lake is used
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `exabeam-data-lake-search`: 
 
 
 ## Exabeam Security Operations Platform
@@ -7421,20 +7207,18 @@ Exabeam Security Operations Platform offers a centralized and scalable platform 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `exabeam-platform-event-search`: 
+- `exabeam-platform-table-record-list`: 
+- `exabeam-platform-table-record-create`: 
+- `exabeam-platform-alert-search`: 
+- `exabeam-platform-context-table-delete`: 
+- `exabeam-platform-context-table-list`: 
+- `exabeam-platform-case-search`: 
+- `exabeam-platform-get-events`: 
+- `exabeam-get-threat-summary`: 
+- `exabeam-update-case-details`: 
+- `exabeam-platform-list-case-notes`: 
+- `exabeam-platform-create-case-note`: 
 
 
 ## Example-Delinea-Folder Operations
@@ -7494,14 +7278,10 @@ Note: This integration should be used as part of our Identity Lifecycle Manageme
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iam-create-user`: 
+- `iam-update-user`: 
+- `iam-get-user`: 
+- `iam-disable-user`: 
 
 
 ## ExifRead
@@ -7668,10 +7448,6 @@ Exposes the incident owner into IncidentOwner context key
 
 Use the Exterro package to integrate with the Exterro FTK platform enabling the automation of case/evidence management and endpoint collection. Documentation for the integration was provided by FTK Connect
 
-**Commands:**
-
-- `None`: 
-
 
 ## ExtFilter
 
@@ -7737,21 +7513,20 @@ ExtraHop Reveal(x) for the platform, real-time threat detections backed by machi
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `extrahop-watchlist-get`: 
+- `extrahop-peers-get`: 
+- `extrahop-devices-search`: 
+- `extrahop-protocols-get`: 
+- `extrahop-activity-map-get`: 
+- `extrahop-alert-rules-get`: 
+- `extrahop-packets-search`: 
+- `extrahop-devices-tag`: 
+- `extrahop-alert-rule-create`: 
+- `extrahop-ticket-track`: 
+- `extrahop-alert-rule-edit`: 
+- `extrahop-watchlist-edit`: 
+- `extrahop-metrics-list`: 
+- `extrahop-detections-list`: 
 
 
 ## ExtraHopTrackIncidents
@@ -7771,21 +7546,17 @@ Manages F5 LTM This integration was integrated and tested with version 16.1.0 of
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `f5-ltm-get-pools`: 
+- `f5-ltm-get-pool`: 
+- `f5-ltm-get-pool-members`: 
+- `f5-ltm-get-nodes`: 
+- `f5-ltm-get-node`: 
+- `f5-ltm-disable-node`: 
+- `f5-ltm-enable-node`: 
+- `f5-ltm-get-pool-member-stats`: 
+- `f5-ltm-get-node-stats`: 
+- `f5-ltm-get-node-by-address`: 
+- `f5-ltm-get-pool-by-node`: 
 
 
 ## F5 Silverline
@@ -7797,10 +7568,9 @@ F5 Silverline Threat Intelligence is a cloud-based service incorporating externa
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `f5-silverline-ip-objects-list`: 
+- `f5-silverline-ip-object-add`: 
+- `f5-silverline-ip-object-delete`: 
 
 
 ## FailedInstances
@@ -7820,8 +7590,8 @@ This integration uses Farsight Security’s DNSDB solution to interactively look
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `dnsdb-rdata`: 
+- `dnsdb-rrset`: 
 
 
 ## Farsight DNSDB v2
@@ -7833,18 +7603,12 @@ Farsight Security DNSDB® is the world’s largest DNS intelligence database tha
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `dnsdb-flex`: 
+- `dnsdb-rdata`: 
+- `dnsdb-summarize-rdata`: 
+- `dnsdb-rrset`: 
+- `dnsdb-summarize-rrset`: 
+- `dnsdb-rate-limit`: 
 
 
 ## FeedIntegrationErrorWidget
@@ -7869,7 +7633,7 @@ Widget script to view information about the relationship between an indicator, e
 **Product:** Fidelis Endpoint  
 **Commands:**
 
-- `None`: 
+- `fidelis-endpoint-list-alerts`: 
 
 
 ## File Analysis - ReversingLabs A1000
@@ -7965,7 +7729,7 @@ Manage FileOrbis operations. This integration was integrated and tested with ver
 
 **Commands:**
 
-- `None`: 
+- `fileorbis-change-user-status`: 
 
 
 ## FileReputation
@@ -8015,21 +7779,17 @@ FireEye Central Management (CM Series) is the FireEye threat intelligence hub. I
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `fireeye-cm-get-alerts`: 
+- `fireeye-cm-get-alert-details`: 
+- `fireeye-cm-alert-acknowledge`: 
+- `fireeye-cm-get-artifacts-by-uuid`: 
+- `fireeye-cm-get-artifacts-metadata-by-uuid`: 
+- `fireeye-cm-get-events`: 
+- `fireeye-cm-get-quarantined-emails`: 
+- `fireeye-cm-release-quarantined-emails`: 
+- `fireeye-cm-delete-quarantined-emails`: 
+- `fireeye-cm-download-quarantined-emails`: 
+- `fireeye-cm-get-reports`: 
 
 
 ## FireEye Endpoint Security (HX) v2
@@ -8041,21 +7801,21 @@ FireEye Endpoint Security is an integrated solution that detects what others mis
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `fireeye-hx-get-host-information`: 
+- `fireeye-hx-get-all-hosts-information`: 
+- `fireeye-hx-host-containment`: 
+- `fireeye-hx-cancel-containment`: 
+- `fireeye-hx-initiate-data-acquisition`: 
+- `fireeye-hx-get-host-set-information`: 
+- `fireeye-hx-list-policy`: 
+- `fireeye-hx-list-host-set-policy`: 
+- `fireeye-hx-list-containment`: 
+- `fireeye-hx-search-list`: 
+- `fireeye-hx-search-stop`: 
+- `fireeye-hx-search-result-get`: 
+- `fireeye-hx-search`: 
+- `fireeye-hx-get-alert`: 
+- `fireeye-hx-suppress-alert`: 
 
 
 ## FireEye Helix
@@ -8064,10 +7824,6 @@ FireEye Endpoint Security is an integrated solution that detects what others mis
 **Product:** FireEye Helix  
 
 Use the FireEye Helix integration to integrate security tools and arguments with next-generation SIEM, orchestration and threat intelligence tools such as alert management, search, analysis, investigations and reporting. In order to configure this integration you must have a FireEye customer ID. Your customer ID will placed in the FireEye Helix URL of your FireEye Helix app after /helix/id/. e.g. for the following URL  the customer ID is "helixid". The API key can be found and generated in the API KEYS section. You can navigate to it from your FireEye Helix app home page by clicking on the user icon on the top right, and choosing HELIX Settings. You'll be redirected to the HELIX Settings page, where API KEYS can be found
-
-**Commands:**
-
-- `None`: 
 
 
 ## FireEye Helix Archive Search
@@ -8137,10 +7893,10 @@ FireMon Security Manager delivers comprehensive rule lifecycle management to hel
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `firemon-user-authentication`: 
+- `firemon-create-pp-ticket`: 
+- `firemon-pca`: 
+- `firemon-secmgr-secrule-search`: 
 
 
 ## FirstArrayElement
@@ -8164,21 +7920,21 @@ Use the Flashpoint Ignite integration to reduce business risk. Ignite allows use
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `flashpoint-ignite-intelligence-report-search`: 
+- `flashpoint-ignite-compromised-credentials-list`: 
+- `flashpoint-ignite-event-list`: 
+- `flashpoint-ignite-event-get`: 
+- `flashpoint-ignite-intelligence-report-get`: 
+- `flashpoint-ignite-intelligence-related-report-list`: 
+- `flashpoint-ignite-alert-list`: 
+- `flashpoint-ignite-common-lookup`: 
+- `flashpoint-ignite-indicator-get`: 
+- `flashpoint-ignite-vulnerability-get`: 
+- `flashpoint-ignite-vulnerability-list`: 
+- `flashpoint-ignite-vulnerability-library-list`: 
+- `flashpoint-ignite-vulnerability-package-list`: 
+- `flashpoint-ignite-vendor-list`: 
+- `flashpoint-ignite-product-list`: 
 
 
 ## FlashpointCreateThreatIntelReport
@@ -8222,21 +7978,21 @@ Forcepoint SMC provides unified, centralized management of all models of Forcepo
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `forcepoint-smc-ip-list-create`: 
+- `forcepoint-smc-ip-list-update`: 
+- `forcepoint-smc-ip-list-list`: 
+- `forcepoint-smc-ip-list-delete`: 
+- `forcepoint-smc-host-list`: 
+- `forcepoint-smc-host-create`: 
+- `forcepoint-smc-host-update`: 
+- `forcepoint-smc-host-delete`: 
+- `forcepoint-smc-domain-create`: 
+- `forcepoint-smc-domain-list`: 
+- `forcepoint-smc-domain-delete`: 
+- `forcepoint-smc-policy-template-list`: 
+- `forcepoint-smc-firewall-policy-list`: 
+- `forcepoint-smc-firewall-policy-create`: 
+- `forcepoint-smc-firewall-policy-delete`: 
 
 
 ## Forescout EyeInspect
@@ -8245,21 +8001,15 @@ Forcepoint SMC provides unified, centralized management of all models of Forcepo
 **Product:** Forescout EyeInspect  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `forescout-ei-host-list`: 
+- `forescout-ei-link-list`: 
+- `forescout-ei-vulnerability-info-get`: 
+- `forescout-ei-alert-list`: 
+- `forescout-ei-alert-pcap-get`: 
+- `forescout-ei-sensor-list`: 
+- `forescout-ei-sensor-module-list`: 
+- `forescout-ei-sensor-module-update`: 
+- `forescout-ei-sensor-module-delete`: 
 
 
 ## ForescoutEyeInspectButtonGetVulnerabilityInfo
@@ -8291,15 +8041,15 @@ Manage Secrets and Protect Confidential Data using Fortanix Data Security Manage
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `fortanix-list-secrets`: 
+- `fortanix-get-secret-metadata`: 
+- `fortanix-fetch-secret`: 
+- `fortanix-new-secret`: 
+- `fortanix-rotate-secret`: 
+- `fortanix-delete-secret`: 
+- `fortanix-invoke-plugin`: 
+- `fortanix-encrypt`: 
+- `fortanix-decrypt`: 
 
 
 ## FortiAuthenticator
@@ -8311,10 +8061,8 @@ FortiAuthenticator provides centralized authentication services. Seamless secure
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `fortiauthenticator-get-user`: 
+- `fortiauthenticator-update-user`: 
 
 
 ## FortiGate
@@ -8326,9 +8074,8 @@ FortiGate provides flawless convergence that can scale to any location: remote o
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `fortigate-list-firewall-address-ipv4s`: 
+- `fortigate-create-firewall-address-ipv4`: 
 
 
 ## FortiMail
@@ -8340,21 +8087,21 @@ FortiMail is a comprehensive email security solution by Fortinet, offering advan
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `fortimail-ip-group-create`: 
+- `fortimail-ip-group-update`: 
+- `fortimail-ip-group-delete`: 
+- `fortimail-ip-group-list`: 
+- `fortimail-ip-group-member-add`: 
+- `fortimail-ip-group-member-replace`: 
+- `fortimail-ip-group-member-delete`: 
+- `fortimail-ip-group-member-list`: 
+- `fortimail-email-group-create`: 
+- `fortimail-email-group-update`: 
+- `fortimail-email-group-delete`: 
+- `fortimail-email-group-list`: 
+- `fortimail-email-group-member-add`: 
+- `fortimail-email-group-member-replace`: 
+- `fortimail-email-group-member-delete`: 
 
 
 ## FortiManager
@@ -8366,21 +8113,21 @@ FortiManager is a single console central management system that manages Fortinet
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `fortimanager-devices-list`: 
+- `fortimanager-device-groups-list`: 
+- `fortimanager-address-list`: 
+- `fortimanager-address-create`: 
+- `fortimanager-address-update`: 
+- `fortimanager-address-delete`: 
+- `fortimanager-address-group-list`: 
+- `fortimanager-address-group-create`: 
+- `fortimanager-address-group-update`: 
+- `fortimanager-address-group-delete`: 
+- `fortimanager-service-categories-list`: 
+- `fortimanager-service-group-list`: 
+- `fortimanager-service-group-create`: 
+- `fortimanager-service-group-update`: 
+- `fortimanager-service-group-delete`: 
 
 
 ## FortiSandbox - Loop for Job Submissions
@@ -8433,9 +8180,7 @@ FortiSandbox is an advanced security tool that goes beyond standard sandboxing. 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `fortisandbox-submission-file-upload`: 
 
 
 ## Fortiweb VM
@@ -8447,21 +8192,21 @@ Fortiweb VM integration allows to manage WAF policies and block cookies, URLs, a
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `fortiwebvm-protected-hostname-group-create`: 
+- `fortiwebvm-protected-hostname-group-update`: 
+- `fortiwebvm-protected-hostname-group-list`: 
+- `fortiwebvm-protected-hostname-member-create`: 
+- `fortiwebvm-protected-hostname-member-update`: 
+- `fortiwebvm-protected-hostname-member-list`: 
+- `fortiwebvm-protected-hostname-member-delete`: 
+- `fortiwebvm-protected-hostname-group-delete`: 
+- `fortiwebvm-ip-list-group-create`: 
+- `fortiwebvm-ip-list-group-update`: 
+- `fortiwebvm-ip-list-group-list`: 
+- `fortiwebvm-ip-list-member-create`: 
+- `fortiwebvm-ip-list-member-update`: 
+- `fortiwebvm-ip-list-member-list`: 
+- `fortiwebvm-ip-list-member-delete`: 
 
 
 ## FPDeleteRule
@@ -8508,21 +8253,16 @@ Manage incidents via the Fraudwatch API. FraudWatch International provides a ful
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `fraudwatch-incidents-list`: 
+- `fraudwatch-incident-report`: 
+- `fraudwatch-incident-update`: 
+- `fraudwatch-incident-get-by-identifier`: 
+- `fraudwatch-incident-forensic-get`: 
+- `fraudwatch-incident-contact-emails-list`: 
+- `fraudwatch-incident-messages-add`: 
+- `fraudwatch-incident-urls-add`: 
+- `fraudwatch-incident-attachment-upload`: 
+- `fraudwatch-brands-list`: 
 
 
 ## Freshworks Freshservice
@@ -8534,21 +8274,21 @@ Freshservice is a service management solution that allows customers to manage se
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `freshservice-ticket-list`: 
+- `freshservice-ticket-create`: 
+- `freshservice-ticket-update`: 
+- `freshservice-ticket-delete`: 
+- `freshservice-ticket-task-list`: 
+- `freshservice-ticket-task-create`: 
+- `freshservice-ticket-task-update`: 
+- `freshservice-ticket-task-delete`: 
+- `freshservice-ticket-conversation-list`: 
+- `freshservice-ticket-conversation-reply-create`: 
+- `freshservice-ticket-conversation-note-create`: 
+- `freshservice-ticket-conversation-update`: 
+- `freshservice-ticket-conversation-delete`: 
+- `freshservice-problem-list`: 
+- `freshservice-problem-create`: 
 
 
 ## FTP
@@ -8560,9 +8300,9 @@ FTP integration to download or upload files to a remote FTP server. Please note 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ftp-ls`: 
+- `ftp-put`: 
+- `ftp-get`: 
 
 
 ## G Suite Auditor
@@ -8574,9 +8314,7 @@ G Suite Auditor is an integration that receives audit logs from G Suite's differ
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gsuite-activity-search`: 
 
 
 ## G Suite Security Alert Center
@@ -8588,19 +8326,12 @@ G Suite Security Alert Center allows users to fetch different alert types such a
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gsac-alert-list`: 
+- `gsac-alert-get`: 
+- `gsac-alert-feedback-create`: 
+- `gsac-alert-feedback-list`: 
+- `gsac-alert-delete`: 
+- `gsac-alert-recover`: 
 
 
 ## Gamma
@@ -8612,9 +8343,9 @@ Gamma Enterprise DLP provides 1-click automatic discovery and remediation of dat
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gamma-get-violation-list`: 
+- `gamma-get-violation`: 
+- `gamma-update-violation`: 
 
 
 ## GatewatcherAlertEngine
@@ -8634,7 +8365,7 @@ This integration allows, via about twenty commands, to interact with the GCenter
 
 **Commands:**
 
-- `None`: 
+- `gw-get-alert`: 
 
 
 ## GCenter 103
@@ -8646,21 +8377,21 @@ This integration fetch events generated by the GCenter appliance. This integrati
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gcenter103-alerts-list`: 
+- `gcenter103-alerts-get`: 
+- `gcenter103-alerts-note-add`: 
+- `gcenter103-alerts-note-remove`: 
+- `gcenter103-alerts-tags-get`: 
+- `gcenter103-alerts-tags-add`: 
+- `gcenter103-alerts-tags-remove`: 
+- `gcenter103-alerts-status-update`: 
+- `gcenter103-raw-alerts-get`: 
+- `gcenter103-raw-alerts-file-get`: 
+- `gcenter103-file-scan`: 
+- `gcenter103-file-scan-result-get`: 
+- `gcenter103-assets-list`: 
+- `gcenter103-assets-alerts-get`: 
+- `gcenter103-assets-get`: 
 
 
 ## Gem
@@ -8672,21 +8403,21 @@ Use Gem alerts as a trigger for the platform, to automate response to specific T
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gem-list-threats`: 
+- `gem-get-threat-details`: 
+- `gem-get-alert-details`: 
+- `gem-list-inventory-resources`: 
+- `gem-get-resource-details`: 
+- `gem-list-ips-by-entity`: 
+- `gem-list-services-by-entity`: 
+- `gem-list-events-by-entity`: 
+- `gem-list-accessing-entities`: 
+- `gem-list-using-entities`: 
+- `gem-list-events-on-entity`: 
+- `gem-list-accessing-ips`: 
+- `gem-update-threat-status`: 
+- `gem-run-action`: 
+- `gem-add-timeline-event`: 
 
 
 ## Gem Handle ec2
@@ -8722,7 +8453,7 @@ Use the Generic Export Indicators Service integration to provide an endpoint wit
 
 **Commands:**
 
-- `None`: 
+- `export-indicators-list-update`: 
 
 
 ## Generic MCP
@@ -8734,8 +8465,8 @@ Use this integration to connect to an MCP server and automatically discover its 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `generic-mcp-generate-login-url`: 
+- `generic-mcp-auth-test`: 
 
 
 ## Generic SQL
@@ -8745,10 +8476,6 @@ Use this integration to connect to an MCP server and automatically discover its 
 
 Generic SQL integration for the Databases: MySQL, PostgreSQL, Microsoft SQL Server, Oracle, Teradata and Trino
 
-**Commands:**
-
-- `None`: 
-
 
 ## Genians
 
@@ -8756,11 +8483,6 @@ Generic SQL integration for the Databases: MySQL, PostgreSQL, Microsoft SQL Serv
 **Product:** Genians  
 
 Use the Genian NAC integration to block IP addresses using the assign tag. Genian NAC network sensing technology powered by Device Platform Intelligence (DPI) discovers and presents all detected devices’ business contextual and risk-related information along with their technical information without disturbing existing network infrastructure. The resulting intelligence enhances visibility and allows operators to detect and respond to any non-compliant or compromised devices in real time. With the result of comprehensive network visibility, Genian NAC can ensure compliance from all connected devices by leveraging Virtual In-Line Packet Inspection which operates at Layer 2. This technology has complete control over endpoint device traffic over TCP and UDP by eliminating the need for complex configurations and network changes
-
-**Commands:**
-
-- `None`: 
-- `None`: 
 
 
 ## Get Code42 Employee Information
@@ -8788,10 +8510,6 @@ Enriches RaDark incident with detailed items
 
 **Type:** integration  
 **Product:** GitHub  
-**Commands:**
-
-- `None`: 
-
 
 ## GitHub IAM
 
@@ -8802,16 +8520,11 @@ Note: This integration should be used as part of our IAM premium pack. For furth
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iam-create-user`: 
+- `iam-update-user`: 
+- `iam-get-user`: 
+- `iam-disable-user`: 
+- `iam-enable-user`: 
 
 
 ## Gitlab - Guest user permission change
@@ -8833,11 +8546,11 @@ This playbook investigates a "User Permissions Changed” alert by gathering use
 **Product:** GitLab  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gitlab-version-get`: 
+- `gitlab-file-get`: 
+- `gitlab-file-create`: 
+- `gitlab-file-delete`: 
+- `gitlab-issue-list`: 
 
 
 ## GLIMPS Detect
@@ -8849,7 +8562,7 @@ Use the GLIMPS Detect Integration to send files to GLIMPS Malware and get result
 
 **Commands:**
 
-- `None`: 
+- `gdetect-send`: 
 
 
 ## GLPI
@@ -8861,21 +8574,21 @@ GLPI open source ITSM solution This integration was integrated and tested with v
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `glpi-create-user`: 
+- `glpi-delete-user`: 
+- `glpi-disable-user`: 
+- `glpi-enable-user`: 
+- `get-mapping-fields`: 
+- `get-modified-remote-data`: 
+- `glpi-get-username`: 
+- `glpi-delete-ticket`: 
+- `glpi-get-ticket`: 
+- `glpi-create-ticket`: 
+- `glpi-search`: 
+- `glpi-add-comment`: 
+- `glpi-upload-file`: 
+- `glpi-get-item`: 
+- `glpi-update-ticket`: 
 
 
 ## GLPIIncidentStatus
@@ -8895,21 +8608,21 @@ Use the Gmail integration to search and process emails in your organization's Gm
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gmail-delete-user`: 
+- `gmail-get-tokens-for-user`: 
+- `gmail-get-user`: 
+- `gmail-get-user-roles`: 
+- `gmail-get-attachments`: 
+- `gmail-get-mail`: 
+- `gmail-search`: 
+- `gmail-search-all-mailboxes`: 
+- `gmail-list-users`: 
+- `gmail-list-labels`: 
+- `gmail-revoke-user-role`: 
+- `gmail-create-user`: 
+- `gmail-delete-mail`: 
+- `gmail-get-thread`: 
+- `gmail-move-mail`: 
 
 
 ## Gmail Single User
@@ -8921,7 +8634,7 @@ Use the Gmail Single User integration to send emails and fetch emails as inciden
 
 **Commands:**
 
-- `None`: 
+- `send-mail`: 
 
 
 ## Google Chat via Webhook
@@ -8933,8 +8646,8 @@ Integration for sending notifications to a Google Chat space via Incoming Webhoo
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `send-google-chat-message`: 
+- `send-google-chat-custom-card`: 
 
 
 ## Google Docs
@@ -8946,12 +8659,9 @@ Use the Google Docs integration to create and modify Google Docs documents
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `google-docs-get-document`: 
+- `google-docs-create-document`: 
+- `google-docs-update-document`: 
 
 
 ## Google Dorking
@@ -8963,7 +8673,7 @@ Automate the process of google dorking searches in order to detect leaked data
 
 **Commands:**
 
-- `None`: 
+- `google-dorking-search`: 
 
 
 ## Google Dorking File Processing
@@ -8990,21 +8700,21 @@ Google Drive allows users to store files on their servers, synchronize files acr
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `google-drive-create`: 
+- `google-drive-drive-create`: 
+- `google-drive-changes-list`: 
+- `google-drive-activity-list`: 
+- `google-drive-drives-list`: 
+- `google-drive-drive-get`: 
+- `google-drive-drive-delete`: 
+- `google-drive-files-list`: 
+- `google-drive-file-get`: 
+- `google-drive-file-upload`: 
+- `google-drive-file-download`: 
+- `google-drive-file-replace-existing`: 
+- `google-drive-file-delete`: 
+- `google-drive-file-permissions-list`: 
+- `google-drive-file-permission-create`: 
 
 
 ## Google Drive (Standard Connector)
@@ -9016,21 +8726,21 @@ Google Drive allows users to store files on their servers, synchronize files acr
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `google-drive-create`: 
+- `google-drive-drive-create`: 
+- `google-drive-changes-list`: 
+- `google-drive-activity-list`: 
+- `google-drive-drives-list`: 
+- `google-drive-drive-get`: 
+- `google-drive-drive-delete`: 
+- `google-drive-files-list`: 
+- `google-drive-file-get`: 
+- `google-drive-file-upload`: 
+- `google-drive-file-download`: 
+- `google-drive-file-replace-existing`: 
+- `google-drive-file-delete`: 
+- `google-drive-file-permissions-list`: 
+- `google-drive-file-permission-create`: 
 
 
 ## Google Gemini
@@ -9042,7 +8752,7 @@ This integration provides access to Google Gemini's large language models for AI
 
 **Commands:**
 
-- `None`: 
+- `google-gemini-send-message`: 
 
 
 ## Google Key Management Service
@@ -9054,21 +8764,21 @@ Use the Google Key Management Service API for CryptoKey management and encrypt/d
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `google-kms-create-key`: 
+- `google-kms-symmetric-decrypt`: 
+- `google-kms-symmetric-encrypt`: 
+- `google-kms-get-key`: 
+- `google-kms-update-key`: 
+- `google-kms-destroy-key`: 
+- `google-kms-restore-key`: 
+- `google-kms-disable-key`: 
+- `google-kms-enable-key`: 
+- `google-kms-list-keys`: 
+- `google-kms-asymmetric-encrypt`: 
+- `google-kms-asymmetric-decrypt`: 
+- `google-kms-list-key-rings`: 
+- `google-kms-list-all-keys`: 
+- `google-kms-get-public-key`: 
 
 
 ## Google Maps
@@ -9080,8 +8790,7 @@ Use the Google Maps API. This integration was integrated and tested with version
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `google-maps-geocode`: 
 
 
 ## Google Safe Browsing v2
@@ -9090,11 +8799,6 @@ Use the Google Maps API. This integration was integrated and tested with version
 **Product:** Google Safe Browsing  
 
 Search Safe Browsing v4
-
-**Commands:**
-
-- `None`: 
-- `None`: 
 
 
 ## Google SecOps Cases
@@ -9106,21 +8810,21 @@ Use the Google SecOps Cases integration to retrieve Cases as Incidents. This int
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gcb-case-list`: 
+- `gcb-case-get`: 
+- `gcb-case-update`: 
+- `gcb-case-tag-add`: 
+- `gcb-case-tag-remove`: 
+- `gcb-case-priority-change`: 
+- `gcb-case-stage-definition-list`: 
+- `gcb-case-stage-change`: 
+- `gcb-case-reopen`: 
+- `gcb-case-close-definition-list`: 
+- `gcb-case-close`: 
+- `gcb-case-assign`: 
+- `gcb-case-comment-list`: 
+- `gcb-case-comment-create`: 
+- `gcb-case-sla-pause`: 
 
 
 ## Google SecOps v1 Alpha
@@ -9132,17 +8836,10 @@ Use the Google SecOps integration to retrieve IOC Domain matches as Incidents. T
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gcb-list-iocs`: 
+- `gcb-ioc-details`: 
+- `gcb-list-events`: 
+- `gcb-list-detections`: 
 
 
 ## Google Sheets
@@ -9154,21 +8851,20 @@ Google Sheets is a spreadsheet program that is part of the free web-based Google
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `google-sheets-spreadsheet-create`: 
+- `google-sheets-spreadsheet-get`: 
+- `google-sheets-sheet-create`: 
+- `google-sheets-sheet-duplicate`: 
+- `google-sheets-sheet-copy-to`: 
+- `google-sheets-sheet-delete`: 
+- `google-sheets-sheet-clear`: 
+- `google-sheets-range-delete`: 
+- `google-sheets-dimension-delete`: 
+- `google-sheets-data-paste`: 
+- `google-sheets-find-replace`: 
+- `google-sheets-value-update`: 
+- `google-sheets-value-append`: 
+- `google-sheets-spreadsheet-update`: 
 
 
 ## Google Vault - Display Results
@@ -9255,7 +8951,7 @@ Image processing with Google Vision API
 
 **Commands:**
 
-- `None`: 
+- `google-vision-detect-logos`: 
 
 
 ## Google Workspace Admin
@@ -9267,21 +8963,21 @@ G Suite or Google Workspace Admin is an integration to perform an action on IT i
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gsuite-mobile-update`: 
+- `gsuite-mobile-delete`: 
+- `gsuite-user-alias-add`: 
+- `gsuite-user-create`: 
+- `gsuite-group-create`: 
+- `gsuite-role-assignment-list`: 
+- `gsuite-role-assignment-create`: 
+- `gsuite-role-create`: 
+- `gsuite-token-revoke`: 
+- `gsuite-user-signout`: 
+- `gsuite-datatransfer-list`: 
+- `gsuite-custom-user-schema-create`: 
+- `gsuite-custom-user-schema-update`: 
+- `gsuite-datatransfer-request-create`: 
+- `gsuite-user-update`: 
 
 
 ## GoogleApps API and G Suite
@@ -9289,10 +8985,6 @@ G Suite or Google Workspace Admin is an integration to perform an action on IT i
 **Type:** integration  
 
 Use the GoogleApps API and G Suite integration to help administrators migrate to G Suite, create custom usage reports, and manage users, groups, and devices. NOTE: The googleapps-gmail commands are deprecated, to execute Gmail commands, use the Gmail integration
-
-**Commands:**
-
-- `None`: 
 
 
 ## GoogleDriveApiModule
@@ -9373,21 +9065,21 @@ Grafana alerting service. This integration was integrated and tested with versio
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `grafana-alerts-list`: 
+- `grafana-alert-pause`: 
+- `grafana-alert-unpause`: 
+- `grafana-users-search`: 
+- `grafana-user-teams-get`: 
+- `grafana-user-orgs-get`: 
+- `grafana-user-update`: 
+- `grafana-annotation-create`: 
+- `grafana-teams-search`: 
+- `grafana-team-members-list`: 
+- `grafana-user-add-to-team`: 
+- `grafana-user-remove-from-team`: 
+- `grafana-team-add`: 
+- `grafana-team-delete`: 
+- `grafana-org-create`: 
 
 
 ## GRAIncidentAnomaliesDisplay
@@ -9407,10 +9099,8 @@ Generic GraphQL client to interact with any GraphQL server API
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `graphql-query`: 
+- `graphql-mutation`: 
 
 
 ## GRAUpdateAlertStatus
@@ -9461,21 +9151,21 @@ GravityZone provides secure access to incident and endpoint data and enables rem
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `fetch-incidents`: 
+- `gz-endpoint-list`: 
+- `gz-endpoint-get`: 
+- `gz-endpoint-download-investigation-package`: 
+- `gz-endpoint-download-file`: 
+- `gz-endpoint-isolate`: 
+- `gz-endpoint-deisolate`: 
+- `gz-endpoint-kill-process`: 
+- `gz-endpoint-run-command`: 
+- `gz-endpoint-upload-file`: 
+- `gz-endpoint-list-by-running-process-hash`: 
+- `gz-endpoint-get-process-tree-by-hash`: 
+- `gz-incident-get`: 
+- `gz-incident-list`: 
+- `gz-incident-add-note`: 
 
 
 ## Graylog
@@ -9487,21 +9177,14 @@ Integration with Graylog to search for logs and events This integration was inte
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `graylog-cluster-status`: 
+- `graylog-cluster-node-jvm`: 
+- `graylog-cluster-inputstates`: 
+- `graylog-cluster-processing-status`: 
+- `graylog-indexer-cluster-health`: 
+- `graylog-search`: 
+- `graylog-events-search`: 
+- `graylog-search-absolute`: 
 
 
 ## GreaterCidrNumAddresses
@@ -9526,14 +9209,12 @@ The only cloud-native security platform that stops targeted social engineering a
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gh-get-message`: 
+- `gh-search-message`: 
+- `gh-remediate-message`: 
+- `gh-revert-remediate-message`: 
+- `gh-get-policy`: 
+- `gh-set-policy`: 
 
 
 ## GreyNoise
@@ -9545,21 +9226,13 @@ GreyNoise is a cybersecurity platform that collects and analyzes Internet-wide s
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `greynoise-ip-quick-check`: 
+- `greynoise-query`: 
+- `greynoise-stats`: 
+- `greynoise-riot`: 
+- `greynoise-context`: 
+- `greynoise-similarity`: 
+- `greynoise-timeline`: 
 
 
 ## GreyNoise Community
@@ -9571,11 +9244,7 @@ GreyNoise tells security analysts what not to worry about. We do this by curatin
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `greynoise-community-lookup`: 
 
 
 ## GridFieldSetup
@@ -9621,15 +9290,12 @@ THF Polygon is a Malware Detonation & Research platform designed for deep dynami
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `polygon-upload-file`: 
+- `polygon-upload-url`: 
+- `polygon-analysis-info`: 
+- `polygon-export-report`: 
+- `polygon-export-pcap`: 
+- `polygon-export-video`: 
 
 
 ## GrrGetFiles
@@ -9691,14 +9357,9 @@ The GuardiCore v2 integration provides access to incident and endpoint (asset) i
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `guardicore-search-asset`: 
+- `guardicore-get-incident`: 
+- `guardicore-get-incidents`: 
 
 
 ## Gurucul-GRA
@@ -9710,21 +9371,21 @@ Gurucul Risk Analytics (GRA) is a data science backed cloud native platform that
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gra-fetch-users`: 
+- `gra-fetch-active-resource-accounts`: 
+- `gra-fetch-active-datasource-accounts`: 
+- `gra-fetch-user-accounts`: 
+- `gra-fetch-resource-highrisk-accounts`: 
+- `gra-fetch-hpa`: 
+- `gra-fetch-resource-hpa`: 
+- `gra-fetch-orphan-accounts`: 
+- `gra-fetch-resource-orphan-accounts`: 
+- `gra-fetch-datasource-highrisk-accounts`: 
+- `gra-fetch-datasource-hpa`: 
+- `gra-fetch-datasource-orphan-accounts`: 
+- `gra-user-activities`: 
+- `gra-fetch-users-details`: 
+- `gra-cases`: 
 
 
 ## GZipFile
@@ -9748,10 +9409,8 @@ HackerOne integration allows users to fetch reports by using the fetch incidents
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `hackerone-report-list`: 
+- `hackerone-program-list`: 
 
 
 ## HackerView Incident Management
@@ -9783,16 +9442,11 @@ From a war-room, query your Hackuity cockpit in order to seamlessly retrieve inf
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `hackuity-search-findings`: 
+- `hackuity-search-vulndb-vulnerabilities`: 
+- `hackuity-search-provider-vulnerabilities`: 
+- `hackuity-dashboard-widgets`: 
+- `hackuity-dashboard-data`: 
 
 
 ## Halcyon
@@ -9804,7 +9458,7 @@ Halcyon is a device management platform that helps organizations monitor, contro
 
 **Commands:**
 
-- `None`: 
+- `halcyon-get-events`: 
 
 
 ## Handle Darktrace Model Breach
@@ -9851,19 +9505,13 @@ Hashicorp Terraform provide infrastructure automation to provision and manage re
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `terraform-runs-list`: 
+- `terraform-run-action`: 
+- `terraform-plan-get`: 
+- `terraform-policies-list`: 
+- `terraform-policy-set-list`: 
+- `terraform-policies-checks-list`: 
+- `terraform-get-events`: 
 
 
 ## HashiCorp Vault
@@ -9875,21 +9523,21 @@ Secure, store, and tightly control access to tokens, passwords, certificates, an
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `hashicorp-list-secrets-engines`: 
+- `hashicorp-list-secrets`: 
+- `hashicorp-get-secret-metadata`: 
+- `hashicorp-delete-secret`: 
+- `hashicorp-undelete-secret`: 
+- `hashicorp-destroy-secret`: 
+- `hashicorp-disable-engine`: 
+- `hashicorp-enable-engine`: 
+- `hashicorp-list-policies`: 
+- `hashicorp-get-policy`: 
+- `hashicorp-seal-vault`: 
+- `hashicorp-unseal-vault`: 
+- `hashicorp-configure-engine`: 
+- `hashicorp-reset-configuration`: 
+- `hashicorp-create-token`: 
 
 
 ## Hatching Triage
@@ -9901,21 +9549,21 @@ Submit a high volume of samples to run in a sandbox and view reports This integr
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `triage-query-samples`: 
+- `triage-submit-sample`: 
+- `triage-get-sample`: 
+- `triage-get-sample-summary`: 
+- `triage-delete-sample`: 
+- `triage-set-sample-profile`: 
+- `triage-get-static-report`: 
+- `triage-get-report-triage`: 
+- `triage-get-kernel-monitor`: 
+- `triage-get-pcap`: 
+- `triage-get-dumped-file`: 
+- `triage-get-users`: 
+- `triage-create-user`: 
+- `triage-delete-user`: 
+- `triage-create-api-key`: 
 
 
 ## Have I Been Pwned? v2
@@ -9924,7 +9572,7 @@ Submit a high volume of samples to run in a sandbox and view reports This integr
 **Product:** Pwned  
 **Commands:**
 
-- `None`: 
+- `pwned-email`: 
 
 
 ## HealthCheck
@@ -10141,11 +9789,11 @@ This README contains the full documentation for your integration. You auto-gener
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iam-create-user`: 
+- `iam-update-user`: 
+- `iam-get-user`: 
+- `iam-disable-user`: 
+- `get-mapping-fields`: 
 
 
 ## Hello World v2
@@ -10154,7 +9802,7 @@ This README contains the full documentation for your integration. You auto-gener
 **Product:** HelloWorld  
 **Commands:**
 
-- `None`: 
+- `helloworld-say-hello`: 
 
 
 ## HelloWorld
@@ -10166,7 +9814,7 @@ This is the Hello World integration for getting started
 
 **Commands:**
 
-- `None`: 
+- `helloworld-say-hello`: 
 
 
 ## Hey
@@ -10235,10 +9883,7 @@ Use the HostIo integration to enrich domains using the Host.io API. This integra
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `hostio-domain-search`: 
 
 
 ## HPE Aruba ClearPass
@@ -10250,19 +9895,14 @@ Aruba ClearPass Policy Manager provides role and device-based network access con
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aruba-clearpass-endpoints-list`: 
+- `aruba-clearpass-endpoint-update`: 
+- `aruba-clearpass-attributes-list`: 
+- `aruba-clearpass-attribute-create`: 
+- `aruba-clearpass-attribute-update`: 
+- `aruba-clearpass-attribute-delete`: 
+- `aruba-clearpass-active-sessions-list`: 
+- `aruba-clearpass-active-session-disconnect`: 
 
 
 ## HtmlDifflabDynamic
@@ -10367,9 +10007,7 @@ Integration with Hudsonrock OSINT tools to check IP, Email or username usage
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `hudsonrock-get-username`: 
 
 
 ## Humio
@@ -10381,21 +10019,16 @@ Integration with Humio
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `humio-query`: 
+- `humio-query-job`: 
+- `humio-poll`: 
+- `humio-delete-job`: 
+- `humio-list-alerts`: 
+- `humio-get-alert-by-id`: 
+- `humio-create-alert`: 
+- `humio-list-notifiers`: 
+- `humio-delete-alert`: 
+- `humio-get-notifier-by-id`: 
 
 
 ## Humio QueryJob Poll
@@ -10425,21 +10058,20 @@ HYAS Insight is a threat investigation and attribution solution that uses exclus
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `hyas-get-passive-dns-records-by-indicator`: 
+- `hyas-get-dynamic-dns-records-by-indicator`: 
+- `hyas-get-whois-records-by-indicator`: 
+- `hyas-get-whois-current-records-by-domain`: 
+- `hyas-get-malware-samples-records-by-indicator`: 
+- `hyas-get-c2attribution-records-by-indicator`: 
+- `hyas-get-passive-hash-records-by-indicator`: 
+- `hyas-get-ssl-certificate-records-by-indicator`: 
+- `hyas-get-opensource-indicator-records-by-indicator`: 
+- `hyas-get-device-geo-records-by-ip-address`: 
+- `hyas-get-sinkhole-records-by-ipv4-address`: 
+- `hyas-get-malware-sample-information-by-hash`: 
+- `hyas-get-associated-ips-by-hash`: 
+- `hyas-get-associated-domains-by-hash`: 
 
 
 ## IAMApiModule
@@ -10458,8 +10090,7 @@ This is the IBM MaaS360 Security integration for Cortex XSIAM
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `ibm-maas360-security-get-events`: 
 
 
 ## IBM Security Guardium
@@ -10471,8 +10102,7 @@ IBM Security Guardium is a comprehensive data security platform that provides vi
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `ibm-guardium-get-events`: 
 
 
 ## IBM Security Verify
@@ -10484,7 +10114,7 @@ IBM Security Verify provides a secure and scalable solution for collecting and m
 
 **Commands:**
 
-- `None`: 
+- `ibm-security-verify-get-events`: 
 
 
 ## IBM X-Force Exchange v2
@@ -10493,10 +10123,6 @@ IBM Security Verify provides a secure and scalable solution for collecting and m
 **Product:** IBM X-Force Exchange  
 
 IBM X-Force Exchange lets you receive threat intelligence about applications, IP addresses, URls and hashes
-
-**Commands:**
-
-- `None`: 
 
 
 ## iboss
@@ -10508,18 +10134,12 @@ Manage block lists, manage allow lists, and perform domain, IP, and/or URL reput
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iboss-add-entity-to-allow-list`: 
+- `iboss-add-entity-to-block-list`: 
+- `iboss-remove-entity-from-allow-list`: 
+- `iboss-remove-entity-from-block-list`: 
+- `iboss-add-entity-to-policy-layer-list`: 
+- `iboss-remove-entity-from-policy-layer-list`: 
 
 
 ## If-Elif
@@ -10577,9 +10197,8 @@ iLert is a modern uptime platform with advanced on-call and alerting features. A
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ilert-acknowledge-event`: 
+- `ilert-resolve-event`: 
 
 
 ## Image OCR
@@ -10591,7 +10210,7 @@ Use the Image OCR integration to extract text from images. The integration utili
 
 **Commands:**
 
-- `None`: 
+- `image-ocr-list-languages`: 
 
 
 ## imagecompare
@@ -10613,10 +10232,8 @@ Impartner is the fastest-growing, most award-winning channel management solution
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `impartner-get-account-list`: 
+- `impartner-get-account-id`: 
 
 
 ## Imperva Incapsula
@@ -10628,21 +10245,21 @@ Uses incapsula to manage sites and IPs
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `incap-add-managed-account`: 
+- `incap-list-managed-accounts`: 
+- `incap-add-subaccount`: 
+- `incap-list-subaccounts`: 
+- `incap-get-account-status`: 
+- `incap-modify-account-configuration`: 
+- `incap-set-account-log-level`: 
+- `incap-test-account-s3-connection`: 
+- `incap-test-account-sftp-connection`: 
+- `incap-set-account-s3-log-storage`: 
+- `incap-set-account-sftp-log-storage`: 
+- `incap-set-account-default-log-storage`: 
+- `incap-get-account-login-token`: 
+- `incap-delete-managed-account`: 
+- `incap-delete-subaccount`: 
 
 
 ## Imperva Skyfence
@@ -10654,8 +10271,8 @@ The Imperva Skyfence Cloud Gateway is a Cloud Access Security Broker (CASB) that
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `imp-sf-list-endpoints`: 
+- `imp-sf-set-endpoint-status`: 
 
 
 ## Imperva WAF
@@ -10667,21 +10284,20 @@ Use the Imperva WAF integration to manage IP groups and Web security policies in
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `imperva-waf-ip-group-list`: 
+- `imperva-waf-ip-group-list-entries`: 
+- `imperva-waf-ip-group-remove-entries`: 
+- `imperva-waf-sites-list`: 
+- `imperva-waf-server-group-list`: 
+- `imperva-waf-server-group-list-policies`: 
+- `imperva-waf-web-service-custom-policy-list`: 
+- `imperva-waf-web-service-custom-policy-get`: 
+- `imperva-waf-ip-group-create`: 
+- `imperva-waf-ip-group-update-entries`: 
+- `imperva-waf-ip-group-delete`: 
+- `imperva-waf-web-service-custom-policy-create`: 
+- `imperva-waf-web-service-custom-policy-update`: 
+- `imperva-waf-web-service-custom-policy-delete`: 
 
 
 ## ImportMLModel
@@ -10955,7 +10571,7 @@ Optionally increases the incident severity to the new value if it is greater tha
 **Product:** Indeni  
 **Commands:**
 
-- `None`: 
+- `indeni-get-device-info`: 
 
 
 ## Indicator Enrichment - Censys
@@ -11036,12 +10652,12 @@ The Cortex Core - IOCs integration uses the Cortex API for detection and respons
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `core-iocs-sync`: 
+- `core-iocs-push`: 
+- `core-iocs-set-sync-time`: 
+- `core-iocs-create-sync-file`: 
+- `core-iocs-enable`: 
+- `core-iocs-disable`: 
 
 
 ## Indicators-type
@@ -11073,21 +10689,21 @@ Identify whether the service is a "development" server. Development servers have
 **Product:** Infinipoint  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `infinipoint-get-vulnerable-devices`: 
+- `infinipoint-get-assets-programs`: 
+- `infinipoint-get-cve`: 
+- `infinipoint-get-device`: 
+- `infinipoint-get-tag`: 
+- `infinipoint-get-networks`: 
+- `infinipoint-get-assets-devices`: 
+- `infinipoint-get-assets-cloud`: 
+- `infinipoint-get-assets-users`: 
+- `infinipoint-get-action-results`: 
+- `infinipoint-get-queries`: 
+- `infinipoint-execute-action`: 
+- `infinipoint-get-non-compliance`: 
+- `infinipoint-get-device-details`: 
+- `infinipoint-get-compliance-status`: 
 
 
 ## Infoblox NIOS
@@ -11099,7 +10715,7 @@ Infoblox NIOS enables you to receive metadata about IPs in your network and mana
 
 **Commands:**
 
-- `None`: 
+- `infoblox-get-ip`: 
 
 
 ## Infocyte
@@ -11111,16 +10727,16 @@ Infocyte can pivot off incidents to automate triage, validate events with forens
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `infocyte-scan-host`: 
+- `infocyte-isolate-host`: 
+- `infocyte-restore-host`: 
+- `infocyte-kill-process`: 
+- `infocyte-run-response`: 
+- `infocyte-get-taskstatus`: 
+- `infocyte-get-scanresult`: 
+- `infocyte-get-hostscanresult`: 
+- `infocyte-get-responseresult`: 
+- `infocyte-get-alerts`: 
 
 
 ## InRange
@@ -11215,21 +10831,21 @@ Use the Intezer v2 integration to detect and analyze malware, based on code reus
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `intezer-analyze-by-hash`: 
+- `intezer-get-latest-report`: 
+- `intezer-analyze-by-file`: 
+- `intezer-get-endpoint-analysis-result`: 
+- `intezer-get-url-analysis-result`: 
+- `intezer-get-file-analysis-result`: 
+- `intezer-get-analysis-result`: 
+- `intezer-get-sub-analyses`: 
+- `intezer-get-family-info`: 
+- `intezer-get-analysis-code-reuse`: 
+- `intezer-get-analysis-metadata`: 
+- `intezer-get-analysis-iocs`: 
+- `intezer-submit-alert`: 
+- `intezer-submit-suspected-phishing-email`: 
+- `intezer-get-alert-result`: 
 
 
 ## IntezerRunScanner
@@ -11280,21 +10896,21 @@ The Cortex Core IR integration uses the Cortex API for detection and response, b
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `core-isolate-endpoint`: 
+- `core-unisolate-endpoint`: 
+- `core-get-endpoints`: 
+- `core-get-distribution-versions`: 
+- `core-create-distribution`: 
+- `core-get-distribution-url`: 
+- `core-get-create-distribution-status`: 
+- `core-get-audit-management-logs`: 
+- `core-get-audit-agent-reports`: 
+- `core-blocklist-files`: 
+- `core-allowlist-files`: 
+- `core-quarantine-files`: 
+- `core-get-quarantine-status`: 
+- `core-restore-file`: 
+- `core-endpoint-scan`: 
 
 
 ## InvestigationDetailedSummaryParse
@@ -11375,10 +10991,6 @@ Enriches IP indicators with reputation data from multiple integrations and outpu
 **Product:** IP2LocationIO  
 
 IP2Location.io integration to query IP geolocation data
-
-**Commands:**
-
-- `None`: 
 
 
 ## IPCalcCheckSubnetCollision
@@ -11461,11 +11073,6 @@ An Automation Script to return subnet network ID
 
 Use the IPinfo.io API to get data about an IP address
 
-**Commands:**
-
-- `None`: 
-- `None`: 
-
 
 ## IPNetwork
 
@@ -11497,10 +11104,6 @@ A context script for IP address entities
 **Product:** Ipstack  
 
 One of the leading IP to geolocation APIs and global IP database services
-
-**Commands:**
-
-- `None`: 
 
 
 ## IPToHost
@@ -11566,21 +11169,16 @@ IRIS is a collaborative platform aiming to help incident responders to share tec
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iris-get-last-case-id`: 
+- `iris-get-all-cases`: 
+- `iris-close-case-id`: 
+- `iris-reopen-case-id`: 
+- `iris-change-case-state`: 
+- `iris-create-notes-group`: 
+- `iris-add-new-note-to-group`: 
+- `iris-get-list-of-groups-and-notes`: 
+- `iris-get-list-of-iocs`: 
+- `iris-get-ioc-content`: 
 
 
 ## Ironscales
@@ -11592,9 +11190,9 @@ IRONSCALES, a self-learning email security platform integration
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ironscales-get-incident`: 
+- `ironscales-classify-incident`: 
+- `ironscales-get-open-incidents`: 
 
 
 ## Ironscales-Classify-Incident
@@ -11609,13 +11207,6 @@ IRONSCALES, a self-learning email security platform integration
 
 Enrich IP, domain, URL and file-hash indicators with IsMalicious reputation, evidence and data-trust context. This integration uses the public IsMalicious REST API contract. Local validation uses synthetic provider responses and the real CommonServerPython framework; no production the platform. API checks consume the applicable account quota. Unknown hashes, delisted indicators and absent supported verdicts remain DBotScore 0; risk and confidence are separate fields. See the pack README for evidence interpretation and limits
 
-**Commands:**
-
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-
 
 ## Ivanti Heat
 
@@ -11626,16 +11217,13 @@ Ivanti Heat service manager This integration was integrated and tested with vers
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ivanti-heat-objects-list`: 
+- `ivanti-heat-object-update`: 
+- `ivanti-heat-object-delete`: 
+- `ivanti-heat-object-attachment-download`: 
+- `ivanti-heat-object-attachment-upload`: 
+- `ivanti-heat-object-perform-action`: 
+- `ivanti-heat-object-create`: 
 
 
 ## IvantiHeatCloseIncidentExample
@@ -11694,12 +11282,9 @@ Fetches and manages incidents from iZOOlogic, enabling automated ingestion, inci
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `izoologic-get-events`: 
+- `izoologic-incident-create`: 
+- `izoologic-incident-fetch`: 
 
 
 ## Ja3er
@@ -11711,8 +11296,7 @@ Query the ja3er API for MD5 hashes of JA3 fingerprints
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `ja3-search`: 
 
 
 ## JAMF v2
@@ -11724,21 +11308,21 @@ Enterprise Mobility Management (EMM) for Apple devices (Mac, iPhone, Apple TV, i
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `jamf-get-computers`: 
+- `jamf-get-computers-basic-subset`: 
+- `jamf-get-computer-by-id`: 
+- `jamf-get-computer-by-match`: 
+- `jamf-get-computer-general-subset`: 
+- `jamf-get-computer-location-subset`: 
+- `jamf-get-computer-purchasing-subset`: 
+- `jamf-get-computer-peripherals-subset`: 
+- `jamf-get-computer-hardware-subset`: 
+- `jamf-get-computer-certificates-subset`: 
+- `jamf-get-computer-security-subset`: 
+- `jamf-get-computer-software-subset`: 
+- `jamf-get-computer-extension-attributes-subset`: 
+- `jamf-get-computer-groups-accounts-subset`: 
+- `jamf-get-computer-iphones-subset`: 
 
 
 ## JARM
@@ -11750,8 +11334,7 @@ Active TLS fingerprinting using JARM
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `jarm-fingerprint`: 
 
 
 ## Jira Change Management
@@ -11866,9 +11449,9 @@ This integration ensures interaction with the JizoM API. This integration was in
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `jizo-m-protocols-get`: 
+- `jizo-m-peers-get`: 
+- `jizo-m-query-records-get`: 
 
 
 ## jmespath
@@ -11901,21 +11484,16 @@ Access the full set of possibilities the Joe Sandbox Cloud provides via RESTful 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `joe-is-online`: 
+- `joe-analysis-info`: 
+- `joe-list-analysis`: 
+- `joe-download-report`: 
+- `joe-download-sample`: 
+- `joe-list-lang-locales`: 
+- `joe-get-account-quota`: 
+- `joe-submission-info`: 
+- `joe-submit-sample`: 
+- `joe-submit-url`: 
 
 
 ## jq
@@ -11940,8 +11518,7 @@ A utility for testing incident fetching with mock JSON data
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `json-sample-incident-generator-command`: 
 
 
 ## Json2HtmlTable
@@ -12040,10 +11617,6 @@ Recursively un-escapes JSON data if escaped JSON is found
 
 Use the JsonWhoIs integration to enrich domain indicators
 
-**Commands:**
-
-- `None`: 
-
 
 ## JWT
 
@@ -12054,12 +11627,9 @@ JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be t
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `jwt-generate-access-token`: 
+- `jwt-generate-authentication-payload`: 
+- `jwt-decode-token`: 
 
 
 ## Kafka v3
@@ -12071,11 +11641,10 @@ Use the Kafka integration to manage messages and partitions and to fetch Kafka m
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `kafka-print-topics`: 
+- `kafka-publish-msg`: 
+- `kafka-consume-msg`: 
+- `kafka-fetch-partitions`: 
 
 
 ## Kaspersky Security Center (Beta)
@@ -12087,21 +11656,17 @@ The administration console for controlling all Kaspersky Lab security solutions 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ksc-hosts-list`: 
+- `ksc-host-get`: 
+- `ksc-groups-list`: 
+- `ksc-group-add`: 
+- `ksc-group-delete`: 
+- `ksc-software-applications-list`: 
+- `ksc-software-patches-list`: 
+- `ksc-host-software-applications-list`: 
+- `ksc-host-software-patches-list`: 
+- `ksc-policies-list`: 
+- `ksc-policy-get`: 
 
 
 ## Keeper Secrets Manager
@@ -12113,13 +11678,9 @@ Manage Secrets and Protect Sensitive Data through Keeper Vault. This integration
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ksm-find-files`: 
+- `ksm-find-records`: 
+- `ksm-get-field`: 
 
 
 ## Keeper Security
@@ -12131,9 +11692,9 @@ Use this integration to fetch audit logs from Keeper Security Admin Console as X
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `keeper-security-register-start`: 
+- `keeper-security-register-complete`: 
+- `keeper-security-register-test`: 
 
 
 ## Kenna - Search and Handle Asset Vulnerabilities
@@ -12158,21 +11719,18 @@ Use the Kenna v2 integration to search and update vulnerabilities, schedule a ru
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `kenna-search-vulnerabilities`: 
+- `kenna-run-connector`: 
+- `kenna-search-fixes`: 
+- `kenna-update-asset`: 
+- `kenna-update-vulnerability`: 
+- `kenna-get-connectors`: 
+- `kenna-search-assets`: 
+- `kenna-get-asset-vulnerabilities`: 
+- `kenna-add-tag`: 
+- `kenna-delete-tag`: 
+- `kenna-get-connector-runs`: 
+- `kenna-search-assets-by-external-id`: 
 
 
 ## KeylightCreateIssue
@@ -12197,21 +11755,21 @@ Use the Kibana integration to manage Elastic Security cases, detection alerts, r
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `kibana-cases-find`: 
+- `kibana-case-alerts-find`: 
+- `kibana-alert-status-update`: 
+- `kibana-case-status-update`: 
+- `kibana-user-spaces-find`: 
+- `kibana-case-comments-find`: 
+- `kibana-case-delete`: 
+- `kibana-rule-delete`: 
+- `kibana-rule-details-search`: 
+- `kibana-case-comment-add`: 
+- `kibana-user-list-get`: 
+- `kibana-alert-assign`: 
+- `kibana-detection-alerts-list`: 
+- `kibana-alert-note-add`: 
+- `kibana-alerting-health-get`: 
 
 
 ## KillProcessWrapper
@@ -12238,21 +11796,21 @@ KnowBe4's KSAT Console is a security awareness training and simulated phishing c
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `kmsat-account-info-list`: 
+- `kmsat-account-risk-score-history`: 
+- `kmsat-groups-list`: 
+- `kmsat-account-risk-score-history`: 
+- `kmsat-groups-risk-score-history`: 
+- `kmsat-groups-members`: 
+- `kmsat-users-risk-score-history`: 
+- `kmsat-phishing-security-tests`: 
+- `kmsat-phishing-security-tests-recipients`: 
+- `kmsat-phishing-security-tests-failed-recipients`: 
+- `kmsat-phishing-campaign-security-tests`: 
+- `kmsat-training-campaigns`: 
+- `kmsat-training-enrollments`: 
+- `kmsat-user-event-list`: 
+- `kmsat-user-events-list`: 
 
 
 ## KOI
@@ -12261,21 +11819,19 @@ KnowBe4's KSAT Console is a security awareness training and simulated phishing c
 **Product:** KOI  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `koi-get-events`: 
+- `koi-blocklist-get`: 
+- `koi-allowlist-get`: 
+- `koi-inventory-search`: 
+- `koi-policy-list`: 
+- `koi-inventory-item-get`: 
+- `koi-blocklist-items-add`: 
+- `koi-policy-status-update`: 
+- `koi-inventory-list`: 
+- `koi-inventory-item-endpoints-list`: 
+- `koi-blocklist-items-remove`: 
+- `koi-allowlist-items-remove`: 
+- `koi-allowlist-items-add`: 
 
 
 ## Koodous
@@ -12287,7 +11843,7 @@ Check Android app samples (APK) against Koodous API
 
 **Commands:**
 
-- `None`: 
+- `k-check-hash`: 
 
 
 ## Lacework
@@ -12299,14 +11855,14 @@ Lacework provides end-to-end cloud security automation for AWS, Azure, and GCP w
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `lw-get-alert-details`: 
+- `lw-get-aws-compliance-assessment`: 
+- `lw-get-azure-compliance-assessment`: 
+- `lw-get-gcp-compliance-assessment`: 
+- `lw-get-gcp-projects-by-organization`: 
+- `lw-get-compliance-report`: 
+- `lw-get-container-vulnerabilities`: 
+- `lw-get-host-vulnerabilities`: 
 
 
 ## LanguageDetect
@@ -12330,12 +11886,9 @@ The Lansweeper integration allows users to retrieve the asset details. This inte
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ls-site-list`: 
+- `ls-ip-hunt`: 
+- `ls-mac-hunt`: 
 
 
 ## LastArrayElement
@@ -12359,20 +11912,10 @@ This integration allow to interact with the Gatewatcher LastInfoSec product via 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gw-lis-get-by-minute`: 
+- `gw-lis-get-by-value`: 
+- `gw-lis-leaked-email-by-domain`: 
+- `gw-lis-is-email-leaked`: 
 
 
 ## Launch Adhoc Command Generic - Ansible Automation Platform
@@ -12418,10 +11961,10 @@ Generic polling playbook to launch a specific job template. Returns the job stat
 **Product:** LDAP Authentication  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ad-authenticate`: 
+- `ad-groups`: 
+- `ad-authenticate-and-roles`: 
+- `ad-entries-search`: 
 
 
 ## LessThanPercentage
@@ -12446,7 +11989,7 @@ An Integration with LGTM API This integration was integrated and tested with ver
 
 **Commands:**
 
-- `None`: 
+- `lgtm-add-project`: 
 
 
 ## LinkIncidentsButton
@@ -12479,10 +12022,6 @@ Avoids DB version errors when simultaneously running multiple linked incidents
 
 **Type:** integration  
 **Product:** Linkshadow  
-**Commands:**
-
-- `None`: 
-
 
 ## Linux
 
@@ -12493,11 +12032,11 @@ This integration enables the management of Linux hosts directly from platform us
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `linux-alternatives`: 
+- `linux-at`: 
+- `linux-authorized-key`: 
+- `linux-capabilities`: 
+- `linux-cron`: 
 
 
 ## List Device Events - Chronicle
@@ -12549,7 +12088,7 @@ Use the LockPath KeyLight integration to manage GRC tickets in the Keylight plat
 
 **Commands:**
 
-- `None`: 
+- `kl-get-component`: 
 
 
 ## Logrhythm - Search query
@@ -12580,21 +12119,21 @@ LogRhythm security intelligence. This integration was integrated and tested with
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `lr-execute-query`: 
+- `lr-get-hosts-by-entity`: 
+- `lr-add-host`: 
+- `lr-update-host-status`: 
+- `lr-get-persons`: 
+- `lr-get-networks`: 
+- `lr-get-hosts`: 
+- `lr-get-alarm-data`: 
+- `lr-get-alarm-events`: 
+- `lr-get-case-evidence`: 
+- `lr-execute-search-query`: 
+- `lr-get-query-result`: 
+- `lr-get-users`: 
+- `lr-get-logins`: 
+- `lr-get-privileges`: 
 
 
 ## LogRhythmRest v2
@@ -12606,21 +12145,21 @@ LogRhythm security intelligence. This integration was integrated and tested with
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `lr-alarms-list`: 
+- `lr-alarm-update`: 
+- `lr-alarm-add-comment`: 
+- `lr-alarm-history-list`: 
+- `lr-alarm-events-list`: 
+- `lr-alarm-summary`: 
+- `lr-alarm-drilldown`: 
+- `lr-get-alarm-details`: 
+- `lr-cases-list`: 
+- `lr-case-create`: 
+- `lr-case-update`: 
+- `lr-case-status-change`: 
+- `lr-case-evidence-list`: 
+- `lr-case-alarm-evidence-add`: 
+- `lr-case-note-evidence-add`: 
 
 
 ## LogRhythmRestV2 - Search query
@@ -12648,7 +12187,7 @@ This playbook used generic polling to get query results using the command: lr-ex
 **Product:** Logz.io  
 **Commands:**
 
-- `None`: 
+- `logzio-search-logs`: 
 
 
 ## Lost / Stolen Device Playbook
@@ -12689,11 +12228,9 @@ Cognyte is a global leader in security analytics software that empowers governme
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `luminar-get-indicators`: 
+- `luminar-get-leaked-records`: 
+- `luminar-reset-fetch-indicators`: 
 
 
 ## Lumu
@@ -12705,21 +12242,21 @@ SecOps operations - Reflect and manage the Lumu Incidents either from platform C
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `lumu-retrieve-labels`: 
+- `lumu-retrieve-a-specific-label`: 
+- `lumu-retrieve-incidents`: 
+- `lumu-retrieve-a-specific-incident-details`: 
+- `lumu-retrieve-a-specific-incident-context`: 
+- `lumu-comment-a-specific-incident`: 
+- `lumu-retrieve-open-incidents`: 
+- `lumu-retrieve-muted-incidents`: 
+- `lumu-retrieve-closed-incidents`: 
+- `lumu-retrieve-endpoints-by-incident`: 
+- `lumu-mark-incident-as-read`: 
+- `lumu-mute-incident`: 
+- `lumu-unmute-incident`: 
+- `lumu-consult-incidents-updates-through-rest`: 
+- `lumu-close-incident`: 
 
 
 ## Lumu Secops
@@ -12731,21 +12268,21 @@ SecOps operations for the new Lumu Defender API. Fetch, investigate, and manage 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `lumusecops-retrieve-labels`: 
+- `lumusecops-retrieve-a-specific-label`: 
+- `lumusecops-get-all-incidents`: 
+- `lumusecops-get-open-incidents`: 
+- `lumusecops-get-muted-incidents`: 
+- `lumusecops-get-closed-incidents`: 
+- `lumusecops-get-incident-events-groupings`: 
+- `lumusecops-get-incident-details`: 
+- `lumusecops-mark-incident-as-read`: 
+- `lumusecops-begin-incident-work`: 
+- `lumusecops-comment-incident`: 
+- `lumusecops-mute-incident`: 
+- `lumusecops-unmute-incident`: 
+- `lumusecops-close-incident`: 
+- `lumusecops-consult-incidents-updates`: 
 
 
 ## MAC Lease Lookup - Infoblox NIOS
@@ -12769,7 +12306,7 @@ Query MAC Vendors for vendor names when providing a MAC address. MAC Vendors mai
 
 **Commands:**
 
-- `None`: 
+- `macvendors-lookup-mac`: 
 
 
 ## Magnet Automate Beta
@@ -12781,21 +12318,21 @@ Magnet Automate is an orchestration and automation platform that accelerates you
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `mf-automate-custom-fields-list`: 
+- `mf-automate-case-create`: 
+- `mf-automate-cases-list`: 
+- `mf-automate-case-delete`: 
+- `mf-automate-case-cancel`: 
+- `mf-automate-workflow-run-start`: 
+- `mf-automate-workflow-run-list`: 
+- `mf-automate-workflow-run-delete`: 
+- `mf-automate-workflow-run-cancel`: 
+- `mf-automate-merge-workflow-run-start`: 
+- `mf-automate-workflow-list`: 
+- `mf-automate-workflow-delete`: 
+- `mf-automate-workflow-get`: 
+- `mf-automate-node-create`: 
+- `mf-automate-nodes-list`: 
 
 
 ## Mail Listener v2
@@ -12804,11 +12341,9 @@ Magnet Automate is an orchestration and automation platform that accelerates you
 **Product:** Mail Listener  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `mail-listener-list-emails`: 
+- `mail-listener-get-email`: 
+- `mail-listener-get-email-as-eml`: 
 
 
 ## Malcore alert related file
@@ -12839,10 +12374,6 @@ Sets the indicators reputation to "suspicious" when the malicious ratio is above
 
 Analyze suspicious hashes, URLs, domains and IP addresses This integration was integrated and tested with version 1.1 of Maltiverse
 
-**Commands:**
-
-- `None`: 
-
 
 ## Malware SIEM Ingestion - Get Incident Data
 
@@ -12869,12 +12400,9 @@ MalwareBazaar is a project from abuse.ch with the goal of sharing malware sample
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `malwarebazaar-download-sample`: 
+- `malwarebazaar-comment-add`: 
+- `malwarebazaar-samples-list`: 
 
 
 ## ManageEngine
@@ -12886,8 +12414,8 @@ ManageEngine Endpoint Central is a Unified Endpoint Management solution that hel
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `manage-engine-test`: 
+- `manage-engine-get-events`: 
 
 
 ## ManageEngine PAM360
@@ -12899,16 +12427,16 @@ Use ManageEngine PAM360, a privileged access management solution to manage criti
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `pam360-create-resource`: 
+- `pam360-create-account`: 
+- `pam360-update-resource`: 
+- `pam360-update-account`: 
+- `pam360-list-all-resources`: 
+- `pam360-list-all-accounts`: 
+- `pam360-fetch-account-details`: 
+- `pam360-fetch-resource-account-id`: 
+- `pam360-fetch-password`: 
+- `pam360-update-account-password`: 
 
 
 ## ManageOOOusers
@@ -12935,13 +12463,11 @@ Integrate with Mandiant Advantage Attack Surface Management to import "issues" a
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `attacksurfacemanagement-get-projects`: 
+- `attacksurfacemanagement-get-collections`: 
+- `fetch-incidents`: 
+- `get-remote-data`: 
+- `update-remote-system`: 
 
 
 ## Mandiant Automated Defense (Formerly Respond Software)
@@ -12953,11 +12479,11 @@ Disclaimer: Respond Software was recently acquired by FireEye and has rebranded 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `mad-get-incident`: 
+- `mad-close-incident`: 
+- `mad-assign-user`: 
+- `mad-remove-user`: 
+- `mad-get-escalations`: 
 
 
 ## MapPattern
@@ -13161,21 +12687,21 @@ Mattermost is an open-source, self-hostable online chat service with file sharin
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `mattermost-get-team`: 
+- `mattermost-list-channels`: 
+- `mattermost-list-private-channels-for-user`: 
+- `mattermost-create-channel`: 
+- `mattermost-add-channel-member`: 
+- `mattermost-remove-channel-member`: 
+- `mattermost-list-users`: 
+- `mattermost-send-file`: 
+- `send-notification`: 
+- `mattermost-close-channel`: 
+- `close-channel`: 
+- `mirror-investigation`: 
+- `close-channel`: 
+- `mattermost-mirror-investigation`: 
+- `mattermost-list-groups`: 
 
 
 ## MattermostAskUser
@@ -13216,10 +12742,6 @@ Gets the maximum value from list e.g. ["25", "10", "25"] => "25"
 
 Use McAfee Database Activity Monitoring (DAM) Integration to fetch Alerts (incidents) and query Alerts. This integration was integrated and developed with version 4.6.x of McAfee DAM
 
-**Commands:**
-
-- `None`: 
-
 
 ## McAfee DXL
 
@@ -13227,10 +12749,6 @@ Use McAfee Database Activity Monitoring (DAM) Integration to fetch Alerts (incid
 **Product:** McAfee DXL  
 
 Use the McAfee DXL integration to connect and optimize security actions across multiple vendor products
-
-**Commands:**
-
-- `None`: 
 
 
 ## McAfee ePO Endpoint Connectivity Diagnostics Playbook v2
@@ -13250,21 +12768,21 @@ McAfee ePolicy Orchestrator This integration was integrated and tested with vers
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `epo-help`: 
+- `epo-get-latest-dat`: 
+- `epo-get-current-dat`: 
+- `epo-command`: 
+- `epo-update-client-dat`: 
+- `epo-update-repository`: 
+- `epo-get-system-tree-group`: 
+- `epo-find-systems`: 
+- `epo-find-system`: 
+- `epo-wakeup-agent`: 
+- `epo-apply-tag`: 
+- `epo-clear-tag`: 
+- `epo-list-tag`: 
+- `epo-get-tables`: 
+- `epo-query-table`: 
 
 
 ## McAfee ESM v2
@@ -13276,21 +12794,21 @@ Run queries and receive alarms from Trellix (McAfee) ESM. This integration was t
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `esm-fetch-fields`: 
+- `esm-search`: 
+- `esm-fetch-alarms`: 
+- `esm-get-case-list`: 
+- `esm-add-case`: 
+- `esm-edit-case`: 
+- `esm-get-case-statuses`: 
+- `esm-edit-case-status`: 
+- `esm-get-case-detail`: 
+- `esm-get-case-event-list`: 
+- `esm-add-case-status`: 
+- `esm-delete-case-status`: 
+- `esm-get-organization-list`: 
+- `esm-get-user-list`: 
+- `esm-acknowledge-alarms`: 
 
 
 ## McAfee NSM v2
@@ -13302,21 +12820,21 @@ McAfee Network Security Manager gives you real-time visibility and control over 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `nsm-list-domain-firewall-policy`: 
+- `nsm-get-firewall-policy`: 
+- `nsm-create-firewall-policy`: 
+- `nsm-update-firewall-policy`: 
+- `nsm-delete-firewall-policy`: 
+- `nsm-list-domain-rule-object`: 
+- `nsm-get-rule-object`: 
+- `nsm-create-rule-object`: 
+- `nsm-update-rule-object`: 
+- `nsm-delete-rule-object`: 
+- `nsm-get-alerts`: 
+- `nsm-get-alert-details`: 
+- `nsm-get-attacks`: 
+- `nsm-get-domains`: 
+- `nsm-get-sensors`: 
 
 
 ## MCPApiModule
@@ -13350,7 +12868,7 @@ The cloud-based Menlo Security Isolation Platform (MSIP) eliminates the possibil
 
 **Commands:**
 
-- `None`: 
+- `menlo-security-get-events`: 
 
 
 ## Micro Focus Service Manager
@@ -13362,17 +12880,17 @@ Service Manager By Micro Focus (Formerly HPE Software)
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `hpsm-update-incident`: 
+- `hpsm-create-incident`: 
+- `hpsm-list-incidents`: 
+- `hpsm-get-incident-by-id`: 
+- `hpsm-create-resource`: 
+- `hpsm-update-resource`: 
+- `hpsm-list-resources`: 
+- `hpsm-get-resource-by-id`: 
+- `hpsm-list-devices`: 
+- `hpsm-get-device`: 
+- `hpsm-create-request`: 
 
 
 ## MicroFocus SMAX
@@ -13384,21 +12902,14 @@ Fetch SMAX incidents, requests and automate different SMAX case management actio
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `microfocus-smax-get-entity`: 
+- `microfocus-smax-query-entities`: 
+- `microfocus-smax-create-entities`: 
+- `microfocus-smax-update-entities`: 
+- `microfocus-smax-create-incident`: 
+- `microfocus-smax-update-incident`: 
+- `microfocus-smax-create-request`: 
+- `microfocus-smax-update-request`: 
 
 
 ## Microsoft Endpoint Configuration Manager
@@ -13407,21 +12918,21 @@ Fetch SMAX incidents, requests and automate different SMAX case management actio
 **Product:** Microsoft Endpoint Configuration Manager  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ms-ecm-user-last-log-on`: 
+- `ms-ecm-collection-list`: 
+- `ms-ecm-device-list`: 
+- `ms-ecm-script-list`: 
+- `ms-ecm-script-create`: 
+- `ms-ecm-script-invoke`: 
+- `ms-ecm-script-approve`: 
+- `ms-ecm-device-collection-create`: 
+- `ms-ecm-device-collection-members-add`: 
+- `ms-ecm-device-collection-include`: 
+- `ms-ecm-device-collection-exclude`: 
+- `ms-ecm-device-collection-members-by-query-add`: 
+- `ms-ecm-service-start`: 
+- `ms-ecm-service-restart`: 
+- `ms-ecm-service-stop`: 
 
 
 ## Microsoft Endpoint Manager (Intune)
@@ -13433,21 +12944,21 @@ Microsoft Intune is a Microsoft cloud-based management solution that provides fo
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `msgraph-get-managed-device-by-id`: 
+- `msgraph-sync-device`: 
+- `msgraph-device-disable-lost-mode`: 
+- `msgraph-locate-device`: 
+- `msgraph-device-reboot-now`: 
+- `msgraph-device-shutdown`: 
+- `msgraph-device-bypass-activation-lock`: 
+- `msgraph-device-retire`: 
+- `msgraph-device-reset-passcode`: 
+- `msgraph-device-remote-lock`: 
+- `msgraph-device-request-remote-assistance`: 
+- `msgraph-device-recover-passcode`: 
+- `msgraph-logout-shared-apple-device-active-user`: 
+- `msgraph-delete-user-from-shared-apple-device`: 
+- `msgraph-windows-device-defender-update-signatures`: 
 
 
 ## Microsoft Graph Mail Single User
@@ -13459,21 +12970,21 @@ Microsoft Graph grants the platform. This integration was integrated and tested 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `msgraph-mail-create-draft`: 
+- `reply-mail`: 
+- `send-mail`: 
+- `msgraph-mail-reply-to`: 
+- `msgraph-mail-send-draft`: 
+- `msgraph-mail-test`: 
+- `msgraph-mail-auth-reset`: 
+- `msgraph-mail-list-emails`: 
+- `msgraph-mail-list-attachments`: 
+- `msgraph-mail-get-attachment`: 
+- `msgraph-mail-get-email-as-eml`: 
+- `msgraph-update-email-status`: 
+- `msgraph-mail-generate-login-url`: 
+- `msgraph-mail-create-folder`: 
+- `msgraph-mail-move-email`: 
 
 
 ## Microsoft Graph Search
@@ -13485,9 +12996,9 @@ Use the Microsoft Search API in Microsoft Graph to search content stored in OneD
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `msgraph-search-test`: 
+- `msgraph-search-content`: 
+- `msgraph-search-generate-login-url`: 
 
 
 ## Microsoft Graph Security
@@ -13496,10 +13007,9 @@ Use the Microsoft Search API in Microsoft Graph to search content stored in OneD
 **Product:** Microsoft Graph Security  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `msg-auth-test`: 
+- `msg-search-alerts`: 
+- `msg-get-alert-details`: 
 
 
 ## Microsoft Graph Teams (Standard Connector)
@@ -13511,8 +13021,7 @@ This integration is configured automatically as part of the Microsoft 365 Standa
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `msgraph-teams-message-update-policy-violation`: 
 
 
 ## Microsoft Teams
@@ -13524,7 +13033,7 @@ Use the Microsoft Teams integration to send messages, notifications, and create 
 
 **Commands:**
 
-- `None`: 
+- `send-notification`: 
 
 
 ## Microsoft Teams Management
@@ -13536,21 +13045,21 @@ Manage teams and members in Microsoft Teams
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `microsoft-teams-auth-test`: 
+- `microsoft-teams-auth-start`: 
+- `microsoft-teams-auth-complete`: 
+- `microsoft-teams-auth-reset`: 
+- `microsoft-teams-team-create`: 
+- `microsoft-teams-team-create-from-group`: 
+- `microsoft-teams-teams-list`: 
+- `microsoft-teams-team-get`: 
+- `microsoft-teams-team-update`: 
+- `microsoft-teams-team-delete`: 
+- `microsoft-teams-members-list`: 
+- `microsoft-teams-member-get`: 
+- `microsoft-teams-member-add`: 
+- `microsoft-teams-member-remove`: 
+- `microsoft-teams-member-update`: 
 
 
 ## Microsoft Teams via Webhook
@@ -13562,7 +13071,7 @@ Integration for sending notifications to a Microsoft Teams channel via workflow.
 
 **Commands:**
 
-- `None`: 
+- `ms-teams-message`: 
 
 
 ## MicrosoftApiModule
@@ -13602,21 +13111,18 @@ An Integration with MinIO Object Storage This integration was integrated and tes
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `minio-make-bucket`: 
+- `minio-remove-bucket`: 
+- `minio-list-buckets`: 
+- `minio-list-objects`: 
+- `minio-get-object`: 
+- `minio-stat-object`: 
+- `minio-remove-object`: 
+- `minio-fput-object`: 
+- `minio-put-object`: 
+- `minio-get-tags`: 
+- `minio-set-tag`: 
+- `minio-copy-object`: 
 
 
 ## MinList
@@ -13640,21 +13146,8 @@ Malware information sharing platform and threat sharing. Some changes have been 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `misp-search-events`: 
+- `misp-create-event`: 
 
 
 ## MissingElements
@@ -13692,21 +13185,21 @@ Mitre Caldera can be used to test endpoint security solutions and assess a netwo
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `caldera-create-fact`: 
+- `caldera-create-fact-source`: 
+- `caldera-create-adversary`: 
+- `caldera-create-agent`: 
+- `caldera-create-operation`: 
+- `caldera-create-objective`: 
+- `caldera-create-relationship`: 
+- `caldera-create-ability`: 
+- `caldera-create-potential-link`: 
+- `caldera-create-schedule`: 
+- `caldera-delete-agent`: 
+- `caldera-delete-fact-source`: 
+- `caldera-delete-operation`: 
+- `caldera-delete-facts`: 
+- `caldera-delete-relationships`: 
 
 
 ## MITREIndicatorsByOpenIncidentsV2
@@ -13738,21 +13231,21 @@ Rapidly detect, analyse and respond to security threats with mnemonic’s leadin
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `argus-get-attachment`: 
+- `argus-add-case-tag`: 
+- `argus-list-case-tags`: 
+- `argus-add-comment`: 
+- `argus-list-case-comments`: 
+- `argus-advanced-case-search`: 
+- `argus-close-case`: 
+- `argus-create-case`: 
+- `argus-delete-case`: 
+- `argus-delete-comment`: 
+- `argus-edit-comment`: 
+- `argus-get-case-metadata-by-id`: 
+- `argus-list-case-attachments`: 
+- `argus-remove-case-tag-by-id`: 
+- `argus-remove-case-tag-by-key-value`: 
 
 
 ## MobileIronCLOUD
@@ -13761,15 +13254,15 @@ Rapidly detect, analyse and respond to security threats with mnemonic’s leadin
 **Product:** MobileIron-UEM  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `mobileiron-cloud-get-devices-data`: 
+- `mobileiron-cloud-get-device-by-mac`: 
+- `mobileiron-cloud-get-device-by-serial`: 
+- `mobileiron-cloud-unlock-device`: 
+- `mobileiron-cloud-retire-device`: 
+- `mobileiron-cloud-wipe-device`: 
+- `mobileiron-cloud-force-check-in`: 
+- `mobileiron-cloud-send-message`: 
+- `mobileiron-cloud-get-device-by-id`: 
 
 
 ## MobileIronCORE
@@ -13781,21 +13274,21 @@ This integration was created and tested with version 11.0.0 of MobileIronCORE
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `mobileiron-core-send-message`: 
+- `mobileiron-core-update-os`: 
+- `mobileiron-core-unlock-device-only`: 
+- `mobileiron-core-enable-voice-roaming`: 
+- `mobileiron-core-disable-voice-roaming`: 
+- `mobileiron-core-enable-data-roaming`: 
+- `mobileiron-core-disable-data-roaming`: 
+- `mobileiron-core-enable-personal-hotspot`: 
+- `mobileiron-core-disable-personal-hotspot`: 
+- `mobileiron-core-unlock-app-connect-container`: 
+- `mobileiron-core-retire-device`: 
+- `mobileiron-core-wipe-device`: 
+- `mobileiron-core-force-checkin`: 
+- `mobileiron-core-get-devices-data`: 
+- `mobileiron-core-get-device-by-uuid`: 
 
 
 ## MockPlaybook
@@ -13843,9 +13336,8 @@ Collects Monday.com audit logs and activity events for Cortex XSIAM
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `monday-generate-login-url`: 
+- `monday-auth-test`: 
 
 
 ## MongoDB
@@ -13854,7 +13346,7 @@ Collects Monday.com audit logs and activity events for Cortex XSIAM
 **Product:** MongoDB  
 **Commands:**
 
-- `None`: 
+- `mongodb-get-entry-by-id`: 
 
 
 ## MongoDB Atlas
@@ -13866,7 +13358,7 @@ MongoDB Atlas is an integration that supports fetching and managing alerts and e
 
 **Commands:**
 
-- `None`: 
+- `mongo-db-atlas-get-events`: 
 
 
 ## MongoDB Key Value Store
@@ -13875,7 +13367,7 @@ MongoDB Atlas is an integration that supports fetching and managing alerts and e
 **Product:** MongoDB  
 **Commands:**
 
-- `None`: 
+- `mongodb-write-key-value`: 
 
 
 ## MongoDB Log
@@ -13884,7 +13376,7 @@ MongoDB Atlas is an integration that supports fetching and managing alerts and e
 **Product:** MongoDB  
 **Commands:**
 
-- `None`: 
+- `mongodb-read-log`: 
 
 
 ## MS-ISAC
@@ -13896,8 +13388,8 @@ This API queries alerts and alert data from the MS-ISAC API to enrich and query 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `msisac-get-alert`: 
+- `msisac-retrieve-cases`: 
 
 
 ## MSEScoreWidget
@@ -13973,7 +13465,7 @@ This is the Ncurion integration for getting started. This integration was integr
 
 **Commands:**
 
-- `None`: 
+- `ncurion-get-log-list`: 
 
 
 ## Neosec
@@ -13985,7 +13477,7 @@ Neosec is reinventing application security. Its pioneering SaaS platform gives s
 
 **Commands:**
 
-- `None`: 
+- `neosec-alert-status-set`: 
 
 
 ## Netcraft
@@ -13997,21 +13489,21 @@ Netcraft takedown, submission and screenshot management
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `netcraft-attack-report`: 
+- `netcraft-takedown-list`: 
+- `netcraft-takedown-update`: 
+- `netcraft-takedown-escalate`: 
+- `netcraft-takedown-note-create`: 
+- `netcraft-takedown-note-list`: 
+- `netcraft-attack-type-list`: 
+- `netcraft-submission-list`: 
+- `netcraft-file-report-submit`: 
+- `netcraft-submission-file-list`: 
+- `netcraft-file-screenshot-get`: 
+- `netcraft-email-report-submit`: 
+- `netcraft-submission-mail-get`: 
+- `netcraft-mail-screenshot-get`: 
+- `netcraft-url-report-submit`: 
 
 
 ## NetQuest OMX
@@ -14023,12 +13515,12 @@ NetQuest’s products are high-capacity service nodes that help security teams a
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `netquest-address-list-upload`: 
+- `netquest-address-list-optimize`: 
+- `netquest-address-list-create`: 
+- `netquest-address-list-rename`: 
+- `netquest-address-list-delete`: 
+- `get-events`: 
 
 
 ## Netscout Arbor Edge Defense
@@ -14040,21 +13532,21 @@ The Netscout Arbor Edge Defense (AED) integration enables you to block and allow
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `na-ed-outbound-blacklisted-countries-list`: 
+- `na-ed-country-code-list`: 
+- `na-ed-outbound-blacklisted-countries-add`: 
+- `na-ed-outbound-blacklisted-countries-remove`: 
+- `na-ed-inbound-blacklisted-countries-list`: 
+- `na-ed-inbound-blacklisted-countries-add`: 
+- `na-ed-inbound-blacklisted-countries-remove`: 
+- `na-ed-outbound-blacklisted-hosts-list`: 
+- `na-ed-outbound-blacklisted-hosts-add`: 
+- `na-ed-outbound-blacklisted-hosts-replace`: 
+- `na-ed-outbound-blacklisted-hosts-remove`: 
+- `na-ed-outbound-whitelisted-hosts-list`: 
+- `na-ed-outbound-whitelisted-hosts-add`: 
+- `na-ed-outbound-whitelisted-hosts-replace`: 
+- `na-ed-protection-groups-update`: 
 
 
 ## Netscout Arbor Sightline (Peakflow)
@@ -14066,21 +13558,15 @@ DDoS protection and network visibility. This integration was integrated and test
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `na-sightline-alert-annotation-list`: 
+- `na-sightline-alert-list`: 
+- `na-sightline-mitigation-list`: 
+- `na-sightline-mitigation-create`: 
+- `na-sightline-mitigation-delete`: 
+- `na-sightline-mitigation-template-list`: 
+- `na-sightline-router-list`: 
+- `na-sightline-managed-object-list`: 
+- `na-sightline-tms-group-list`: 
 
 
 ## NetwitnessQuery
@@ -14153,8 +13639,8 @@ Nexthink helps IT teams deliver on the promise of the modern digital workplace. 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `nt-compliance-check`: 
+- `nt-endpoint-details`: 
 
 
 ## NGFW Remove Offline TS Agent
@@ -14185,12 +13671,12 @@ National Vulnerability Database
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `nvd-get-vulnerability`: 
+- `nvd-search-keyword`: 
+- `nvd-search-cvss`: 
+- `nvd-search-cwe`: 
+- `nvd-search-cpe`: 
+- `nvd-search-cve`: 
 
 
 ## nmap
@@ -14202,7 +13688,7 @@ Run nmap scans with the given parameters. This integration was integrated and te
 
 **Commands:**
 
-- `None`: 
+- `nmap-scan`: 
 
 
 ## NMAP - Banner Check
@@ -14229,8 +13715,7 @@ Integrates with the NodeZero autonomous penetration testing platform to fetch we
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `nodezero-get-weaknesses`: 
 
 
 ## NodeZero MCP
@@ -14242,11 +13727,10 @@ Use the NodeZero MCP integration to connect to the NodeZero MCP server and autom
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `list-tools`: 
+- `call-tool`: 
+- `nodezero-mcp-generate-login-url`: 
+- `nodezero-mcp-auth-test`: 
 
 
 ## NotInContextVerification
@@ -14272,21 +13756,15 @@ Nutanix Hypervisor abstracts and isolates the VMs and their programs from the un
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `nutanix-hypervisor-hosts-list`: 
+- `nutanix-hypervisor-vms-list`: 
+- `nutanix-hypervisor-vm-powerstatus-change`: 
+- `nutanix-hypervisor-task-results-get`: 
+- `nutanix-hypervisor-alerts-list`: 
+- `nutanix-hypervisor-alert-acknowledge`: 
+- `nutanix-hypervisor-alert-resolve`: 
+- `nutanix-hypervisor-alerts-acknowledge-by-filter`: 
+- `nutanix-hypervisor-alerts-resolve-by-filter`: 
 
 
 ## O365 File Management (Onedrive/Sharepoint/Teams)
@@ -14298,21 +13776,21 @@ Use the O365 File Management (Onedrive/Sharepoint/Teams) integration to enable y
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `msgraph-delete-file`: 
+- `msgraph-upload-new-file`: 
+- `msgraph-replace-existing-file`: 
+- `msgraph-create-new-folder`: 
+- `msgraph-list-drives-in-site`: 
+- `msgraph-list-drive-content`: 
+- `msgraph-list-sharepoint-sites`: 
+- `msgraph-download-file`: 
+- `msgraph-list-site-permissions`: 
+- `msgraph-create-site-permissions`: 
+- `msgraph-update-site-permissions`: 
+- `msgraph-delete-site-permissions`: 
+- `msgraph-files-auth-test`: 
+- `msgraph-files-generate-login-url`: 
+- `msgraph-files-auth-reset`: 
 
 
 ## O365 File Management (Onedrive/Sharepoint/Teams) (Standard Connector)
@@ -14324,21 +13802,21 @@ Use the O365 File Management (Onedrive/Sharepoint/Teams) integration to enable y
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `msgraph-delete-file`: 
+- `msgraph-upload-new-file`: 
+- `msgraph-replace-existing-file`: 
+- `msgraph-create-new-folder`: 
+- `msgraph-list-drives-in-site`: 
+- `msgraph-list-drive-content`: 
+- `msgraph-list-sharepoint-sites`: 
+- `msgraph-download-file`: 
+- `msgraph-list-site-permissions`: 
+- `msgraph-create-site-permissions`: 
+- `msgraph-update-site-permissions`: 
+- `msgraph-delete-site-permissions`: 
+- `msgraph-files-auth-test`: 
+- `msgraph-files-generate-login-url`: 
+- `msgraph-files-auth-reset`: 
 
 
 ## O365 Message Trace
@@ -14350,11 +13828,10 @@ Message Trace enables tenant administrators to track the lifecycle of an email, 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `o365-message-trace-generate-login-url`: 
+- `o365-message-trace-auth-test`: 
+- `o365-message-trace-auth-reset`: 
+- `o365-message-trace-get-events`: 
 
 
 ## O365 Outlook Mail (Using Graph API)
@@ -14366,21 +13843,21 @@ Microsoft Graph lets your app get authorized access to a user's Outlook mail dat
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `msgraph-mail-list-emails`: 
+- `msgraph-mail-get-email`: 
+- `msgraph-mail-delete-email`: 
+- `msgraph-mail-list-attachments`: 
+- `msgraph-mail-get-attachment`: 
+- `msgraph-mail-list-folders`: 
+- `msgraph-mail-list-child-folders`: 
+- `msgraph-mail-create-folder`: 
+- `msgraph-mail-update-folder`: 
+- `msgraph-mail-delete-folder`: 
+- `msgraph-mail-move-email`: 
+- `msgraph-mail-get-email-as-eml`: 
+- `msgraph-mail-create-draft`: 
+- `send-mail`: 
+- `msgraph-mail-reply-to`: 
 
 
 ## O365 Teams (Using Graph API)
@@ -14392,17 +13869,17 @@ Microsoft Graph lets your app get authorized access to a user's Teams app in a p
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `msgraph-teams-list-chats`: 
+- `msgraph-teams-create-chat`: 
+- `msgraph-teams-get-chat`: 
+- `msgraph-teams-update-chat`: 
+- `msgraph-teams-list-members`: 
+- `msgraph-teams-add-member`: 
+- `msgraph-teams-list-messages`: 
+- `msgraph-teams-send-message`: 
+- `msgraph-teams-test`: 
+- `msgraph-teams-auth-reset`: 
+- `msgraph-teams-generate-login-url`: 
 
 
 ## OctoxLabs
@@ -14414,21 +13891,21 @@ Octox Labs Cyber Security Asset Management platform This integration was integra
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `octoxlabs-get-adapters`: 
+- `octoxlabs-get-connections`: 
+- `octoxlabs-get-discoveries`: 
+- `octoxlabs-get-last-discovery`: 
+- `octoxlabs-search-devices`: 
+- `octoxlabs-get-device`: 
+- `octoxlabs-get-queries`: 
+- `octoxlabs-get-query-by-id`: 
+- `octoxlabs-get-query-by-name`: 
+- `octoxlabs-get-user-by-username`: 
+- `octoxlabs-get-groups`: 
+- `octoxlabs-get-companies`: 
+- `octoxlabs-get-domain-by-domain-name`: 
+- `octoxlabs-get-company-by-id`: 
+- `octoxlabs-get-permissions`: 
 
 
 ## OktaApiModule
@@ -14469,13 +13946,13 @@ Integrate with open source LLMs using Ollama. With an instance of Ollama running
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ollama-list-models`: 
+- `ollama-model-pull`: 
+- `ollama-model-delete`: 
+- `ollama-conversation`: 
+- `ollama-model-info`: 
+- `ollama-model-create`: 
+- `ollama-generate`: 
 
 
 ## OnboardingIntegration
@@ -14487,11 +13964,11 @@ Creates mock email incidents using one of two randomly selected HTML templates. 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `demo-ip`: 
+- `demo-url`: 
+- `demo-domain`: 
+- `demo-file`: 
+- `demo-email`: 
 
 
 ## OpenAI GPT
@@ -14500,18 +13977,17 @@ Creates mock email incidents using one of two randomly selected HTML templates. 
 **Product:** OpenAI  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gpt-send-message`: 
+- `gpt-check-email-body`: 
+- `gpt-check-email-header`: 
+- `gpt-analyze-email-header`: 
+- `gpt-analyze-email-body`: 
+- `gpt-create-soc-email-template`: 
+- `gpt-draft-soc-email`: 
+- `openai-get-events`: 
+- `gpt-create-response`: 
+- `gpt-list-models`: 
+- `gpt-create-moderation`: 
 
 
 ## OpenCVE
@@ -14523,16 +13999,15 @@ Ingests CVEs from an instance of OpenCVE
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `opencve-latest`: 
+- `opencve-get-my-vendors`: 
+- `opencve-get-my-products`: 
+- `opencve-get-vendor-cves`: 
+- `opencve-get-product-cves`: 
+- `opencve-get-reports`: 
+- `opencve-get-alerts`: 
+- `opencve-get-products`: 
+- `opencve-get-vendors`: 
 
 
 ## OPNSense
@@ -14544,21 +14019,21 @@ Manage OPNsense Firewall. For more information see OPNsense documentation. OPNse
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `opnsense-alias-list`: 
+- `opnsense-alias-add`: 
+- `opnsense-alias-del`: 
+- `opnsense-alias-mod`: 
+- `opnsense-alias-mod-additem`: 
+- `opnsense-alias-mod-delitem`: 
+- `opnsense-alias-get`: 
+- `opnsense-alias-get-uuid`: 
+- `opnsense-interfaces-list`: 
+- `opnsense-category-list`: 
+- `opnsense-category-add`: 
+- `opnsense-category-del`: 
+- `opnsense-category-get`: 
+- `opnsense-category-mod`: 
+- `opnsense-rule-list`: 
 
 
 ## OpsGenie v3
@@ -14570,21 +14045,18 @@ Integration with Atlassian OpsGenie. OpsGenie is a cloud-based service that enab
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `opsgenie-create-alert`: 
+- `opsgenie-get-alerts`: 
+- `opsgenie-delete-alert`: 
+- `opsgenie-ack-alert`: 
+- `opsgenie-close-alert`: 
+- `opsgenie-assign-alert`: 
+- `opsgenie-add-responder-alert`: 
+- `opsgenie-get-escalations`: 
+- `opsgenie-escalate-alert`: 
+- `opsgenie-add-alert-tag`: 
+- `opsgenie-remove-alert-tag`: 
+- `opsgenie-get-alert-attachments`: 
 
 
 ## Oracle IAM
@@ -14596,21 +14068,14 @@ Integrate with Oracle Identity Access Management service to execute CRUD (create
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iam-create-user`: 
+- `iam-get-user`: 
+- `iam-update-user`: 
+- `iam-disable-user`: 
+- `iam-create-group`: 
+- `iam-get-group`: 
+- `iam-delete-group`: 
+- `iam-update-group`: 
 
 
 ## Orca
@@ -14622,7 +14087,7 @@ Agentless, Workload-Deep, Context-Aware Security and Compliance for AWS, Azure, 
 
 **Commands:**
 
-- `None`: 
+- `orca-get-alerts`: 
 
 
 ## OrionMalware
@@ -14634,8 +14099,8 @@ This is the Orion Malware integration. Analyzes hash and files with static and d
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `hash-scan`: 
+- `file-scan`: 
 
 
 ## OSQueryBasicQuery
@@ -14695,24 +14160,6 @@ Adds zeros (0) to the beginning of the string, until the string reaches the spec
 **Product:** PagerDuty  
 
 Use the PagerDuty integration to manage schedules and on-call users. This integration was integrated and tested with PagerDuty API v2
-
-**Commands:**
-
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
 
 
 ## PagerDutyAlertOnIncident
@@ -14800,9 +14247,9 @@ Retrieve and monitor internal security findings for your organization, and criti
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `panorays-finding-list`: 
+- `panorays-supplier-finding-list`: 
+- `panorays-supplier-list`: 
 
 
 ## PanoraysCheckOlderDuplicate
@@ -14846,21 +14293,17 @@ Improve the effectiveness of your service provision and resources, and the quali
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `hda-create-ticket`: 
+- `hda-list-tickets`: 
+- `hda-add-ticket-attachment`: 
+- `hda-list-ticket-attachments`: 
+- `hda-add-ticket-comment`: 
+- `hda-list-ticket-statuses`: 
+- `hda-change-ticket-status`: 
+- `hda-list-ticket-priorities`: 
+- `hda-get-ticket-history`: 
+- `hda-list-users`: 
+- `hda-list-groups`: 
 
 
 ## PDFUnlocker
@@ -14885,7 +14328,7 @@ The penfield-get-assignee command takes in necessary context data, and returns t
 
 **Commands:**
 
-- `None`: 
+- `penfield-get-assignee`: 
 
 
 ## Penfield Assign
@@ -14914,7 +14357,7 @@ PenfieldAssign will use the PenfieldGetAssignee integration to determine who an 
 **Product:** Pentera  
 **Commands:**
 
-- `None`: 
+- `pentera-run-template-by-name`: 
 
 
 ## Pentera Filter And Create Incident
@@ -14955,10 +14398,6 @@ Perform user actions such as link, close, etc., on selected incidents from a cam
 
 Gathers PerimeterX related data
 
-**Commands:**
-
-- `None`: 
-
 
 ## Perplexity AI
 
@@ -14969,7 +14408,7 @@ Perplexity AI is a web search engine that uses a large language model to process
 
 **Commands:**
 
-- `None`: 
+- `deepresearch-chat`: 
 
 
 ## PFXAnalyzer
@@ -15014,21 +14453,21 @@ This integration was integrated and tested with Picus NG
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `picus-get-access-token`: 
+- `picus-get-agent-list`: 
+- `picus-get-agent-detail`: 
+- `picus-create-simulation`: 
+- `picus-get-template-list`: 
+- `picus-get-integration-agent-list`: 
+- `picus-get-simulation-list`: 
+- `picus-simulate-now`: 
+- `picus-get-simulation-detail`: 
+- `picus-get-latest-simulation-result`: 
+- `picus-get-simulation-result`: 
+- `picus-get-simulation-threats`: 
+- `picus-get-simulation-actions`: 
+- `picus-get-mitigation-devices`: 
+- `picus-get-signature-list`: 
 
 
 ## PiHole
@@ -15040,21 +14479,21 @@ Pi-hole is a network-level advertisement and Internet tracker blocking applicati
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `pihole-get-version`: 
+- `pihole-get-type`: 
+- `pihole-get-summaryraw`: 
+- `pihole-get-overtimedata10mins`: 
+- `pihole-get-topitems`: 
+- `pihole-get-topclients`: 
+- `pihole-get-forward-destinations`: 
+- `pihole-get-query-types`: 
+- `pihole-get-all-queries`: 
+- `pihole-status`: 
+- `pihole-enable`: 
+- `pihole-disable`: 
+- `pihole-get-versions`: 
+- `pihole-get-topclientsblocked`: 
+- `pihole-get-cache-info`: 
 
 
 ## PiHole v6
@@ -15066,21 +14505,21 @@ PiHole v6 integration using the new REST API. PiHole is a network-level advertis
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `pihole-get-summary`: 
+- `pihole-get-top-domains`: 
+- `pihole-get-top-clients`: 
+- `pihole-get-upstreams`: 
+- `pihole-get-query-types`: 
+- `pihole-get-recent-blocked`: 
+- `pihole-get-history`: 
+- `pihole-get-history-clients`: 
+- `pihole-get-queries`: 
+- `pihole-get-blocking-status`: 
+- `pihole-set-blocking`: 
+- `pihole-get-domains`: 
+- `pihole-add-domain`: 
+- `pihole-delete-domain`: 
+- `pihole-get-version`: 
 
 
 ## Ping
@@ -15104,8 +14543,7 @@ This integration will run a server that will listen for PingCastle XML reports. 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `pingcastle-get-report`: 
 
 
 ## Pipl
@@ -15117,8 +14555,7 @@ Pipl provides a reputation for email addresses and identity solutions
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `pipl-search`: 
 
 
 ## Polar Security
@@ -15130,13 +14567,13 @@ Polar Security, an innovator in technology that helps companies discover, contin
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `polar-list-linked-vendors`: 
+- `polar-list-data-stores`: 
+- `polar-data-stores-summary`: 
+- `polar-list-vendors-data-stores`: 
+- `polar-get-data-store`: 
+- `polar-list-vendor-accessible-data-stores`: 
+- `polar-apply-label`: 
 
 
 ## PolySwarm
@@ -15148,15 +14585,11 @@ Real-time threat intelligence from a crowd-sourced network of security experts a
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `polyswarm-get-report`: 
+- `url-scan`: 
+- `file-rescan`: 
+- `get-file`: 
+- `file-scan`: 
 
 
 ## Popular News
@@ -15165,11 +14598,6 @@ Real-time threat intelligence from a crowd-sourced network of security experts a
 **Product:** Popular Cybersecurity News  
 
 How to use this integration ? This integration was integrated and tested with version 1.0.0 of Popular News
-
-**Commands:**
-
-- `None`: 
-- `None`: 
 
 
 ## PopulateCriticalAssets
@@ -15218,9 +14646,7 @@ Postmark's spam API, Spamcheck, is a RESTfull interface to the Spam filter tool 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `postmark-spamcheck`: 
 
 
 ## Prepare your CTF
@@ -15275,16 +14701,12 @@ The Prisma Cloud DSPM(Data Security Posture Management) integration enhances the
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `dspm-list-risk-findings`: 
+- `dspm-get-risk-finding-by-id`: 
+- `dspm-list-assets`: 
+- `dspm-get-asset-details`: 
+- `dspm-get-asset-files-by-id`: 
+- `dspm-get-list-of-asset-fields-by-id`: 
 
 
 ## PrismaAirsApiModule
@@ -15317,8 +14739,8 @@ Query Prometheus via its HTTP API (/api/v1/query). Supports a pipe-separated met
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `prometheus-query`: 
+- `prometheus-raw`: 
 
 
 ## ProvidesCommand
@@ -15356,11 +14778,8 @@ Enrich and analyze any domain, URL, or IP. Pivot to search on data points and li
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `pulsedive-scan`: 
+- `pulsedive-scan-result`: 
 
 
 ## QR Code Reader - goqr.me
@@ -15372,7 +14791,7 @@ Read QR Code from image file. This integration was integrated and tested with ve
 
 **Commands:**
 
-- `None`: 
+- `goqr-read-qr-code-from-file`: 
 
 
 ## qrcodereader
@@ -15422,7 +14841,7 @@ An example playbook on how to query Sigma rules from within TIM and query a SIEM
 **Product:** QueryAI  
 **Commands:**
 
-- `None`: 
+- `queryai-run-query`: 
 
 
 ## Quest KACE Systems Management Appliance (Beta)
@@ -15434,19 +14853,13 @@ This is the Quest KACE integration. This integration was integrated and tested w
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `kace-machines-list`: 
+- `kace-assets-list`: 
+- `kace-queues-list`: 
+- `kace-tickets-list`: 
+- `kace-ticket-create`: 
+- `kace-ticket-update`: 
+- `kace-ticket-delete`: 
 
 
 ## QutteraWebsiteMalwareScanner
@@ -15458,11 +14871,11 @@ Quttera Website Malware Scanner This integration was integrated and tested with 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `quttera-scan-start`: 
+- `quttera-rescan-status`: 
+- `quttera-scan-report`: 
+- `quttera-report-malware`: 
+- `quttera-status-blacklist`: 
 
 
 ## RaDark
@@ -15474,9 +14887,9 @@ This integration enables you to fetch incidents and manage your RaDark monitor f
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `radark-incident-get-items`: 
+- `radark-email-enrich`: 
+- `radark-item-handle`: 
 
 
 ## RankRemediationOwners
@@ -15519,11 +14932,10 @@ Converts URLs, PDF files, and emails to an image file or PDF file
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `rasterize-email`: 
+- `rasterize-image`: 
+- `rasterize-pdf`: 
+- `rasterize-html`: 
 
 
 ## RasterizeImageOriginal
@@ -15554,11 +14966,6 @@ This script starts an RCS scan and sets the scan ID in context
 
 **Type:** integration  
 **Product:** RDAP  
-**Commands:**
-
-- `None`: 
-- `None`: 
-
 
 ## Reco
 
@@ -15569,21 +14976,21 @@ Reco is the leader in SaaS & AI Security — securing AI sprawl across SaaS apps
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `reco-add-comment-to-alert`: 
+- `reco-update-incident-timeline`: 
+- `reco-resolve-visibility-event`: 
+- `reco-get-risky-users`: 
+- `reco-add-risky-user-label`: 
+- `reco-add-leaving-org-user-label`: 
+- `reco-get-assets-user-has-access-to`: 
+- `reco-get-sensitive-assets-by-name`: 
+- `reco-get-sensitive-assets-by-id`: 
+- `reco-get-assets-by-id`: 
+- `reco-get-link-to-user-overview-page`: 
+- `reco-get-3rd-parties-accessible-to-data-list`: 
+- `reco-get-sensitive-assets-with-public-link`: 
+- `reco-get-files-shared-with-3rd-parties`: 
+- `reco-change-alert-status`: 
 
 
 ## Reco - Reduce Risk - Google Publicly Exposed Files
@@ -15653,21 +15060,19 @@ A project management and issue tracking system that provides a web-based platfor
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `redmine-issue-create`: 
+- `redmine-issue-list`: 
+- `redmine-issue-update`: 
+- `redmine-issue-get`: 
+- `redmine-issue-delete`: 
+- `redmine-issue-watcher-add`: 
+- `redmine-issue-watcher-remove`: 
+- `redmine-project-list`: 
+- `redmine-custom-field-list`: 
+- `redmine-user-id-list`: 
+- `redmine-priority-id-list`: 
+- `redmine-status-id-list`: 
+- `redmine-tracker-id-list`: 
 
 
 ## RegexExpand
@@ -15734,12 +15139,9 @@ RelayShield real-time identity-compromise and agent-security threat intelligence
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `relayshield-mcp-registry-risk`: 
+- `relayshield-cert-expiry`: 
+- `relayshield-supply-chain`: 
 
 
 ## RemediationPathRuleEvaluation
@@ -15818,9 +15220,7 @@ This package allows retrieving asset monitoring results from monitoring tasks th
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `resecurity-get-task-monitor-results-data-breaches`: 
 
 
 ## ResolveGemAlert
@@ -15927,7 +15327,7 @@ ReversingLabs A1000 advanced Malware Analysis Platform
 
 **Commands:**
 
-- `None`: 
+- `reversinglabs-a1000-get-results`: 
 
 
 ## ReversingLabs TitaniumScale
@@ -15936,7 +15336,7 @@ ReversingLabs A1000 advanced Malware Analysis Platform
 **Product:** ReversingLabs TitaniumScale  
 **Commands:**
 
-- `None`: 
+- `reversinglabs-titaniumscale-upload-sample-and-get-results`: 
 
 
 ## RiskSense
@@ -15945,7 +15345,7 @@ ReversingLabs A1000 advanced Malware Analysis Platform
 **Product:** RiskSense  
 **Commands:**
 
-- `None`: 
+- `risksense-get-hosts`: 
 
 
 ## Roksit DNS Security (DNSSense)
@@ -15954,10 +15354,6 @@ ReversingLabs A1000 advanced Malware Analysis Platform
 **Product:** Roksit DNS Security  
 
 This integration provides adding selected domains to the Roksit Secure DNS's Blacklisted Domain List through API . This integration was integrated and tested with version 1.0.0 of Roksit DNS Security (DNSSense)
-
-**Commands:**
-
-- `None`: 
 
 
 ## RSA Archer v2
@@ -15969,21 +15365,21 @@ The RSA Archer GRC platform provides a common foundation for managing policies, 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `archer-search-applications`: 
+- `archer-get-application-fields`: 
+- `archer-get-field`: 
+- `archer-get-mapping-by-level`: 
+- `archer-get-record`: 
+- `archer-create-record`: 
+- `archer-delete-record`: 
+- `archer-update-record`: 
+- `archer-execute-statistic-search-by-report`: 
+- `archer-get-reports`: 
+- `archer-get-search-options-by-guid`: 
+- `archer-reset-cache`: 
+- `archer-get-valuelist`: 
+- `archer-upload-file`: 
+- `archer-get-file`: 
 
 
 ## RSA NetWitness Security Analytics
@@ -15995,21 +15391,21 @@ RSA Security Analytics is a distributed and modular system that enables highly f
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `nw-login`: 
+- `fetch-incidents`: 
+- `netwitness-im-list-incidents`: 
+- `netwitness-im-login`: 
+- `netwitness-im-get-components`: 
+- `netwitness-im-get-events`: 
+- `netwitness-im-get-available-assignees`: 
+- `netwitness-im-create-incident`: 
+- `netwitness-im-add-events-to-incident`: 
+- `netwitness-im-update-incident`: 
+- `netwitness-im-get-alerts`: 
+- `netwitness-im-get-alert-details`: 
+- `netwitness-im-get-event-details`: 
+- `netwitness-im-get-incident-details`: 
+- `netwitness-im-get-alert-original`: 
 
 
 ## RSA_DisplayMetasEvents
@@ -16037,21 +15433,21 @@ RSA NetWitness Platform provides systems Logs, Network, and endpoint visibility 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `rsa-nw-list-incidents`: 
+- `rsa-nw-update-incident`: 
+- `rsa-nw-remove-incident`: 
+- `rsa-nw-incident-add-journal-entry`: 
+- `rsa-nw-incident-list-alerts`: 
+- `rsa-nw-services-list`: 
+- `rsa-nw-hosts-list`: 
+- `rsa-nw-snapshots-list-for-host`: 
+- `rsa-nw-snapshot-details-get`: 
+- `rsa-nw-files-list`: 
+- `rsa-nw-scan-request`: 
+- `rsa-nw-scan-stop-request`: 
+- `rsa-nw-host-alerts-list`: 
+- `rsa-nw-file-alerts-list`: 
+- `rsa-nw-file-download`: 
 
 
 ## RSSWidget
@@ -16083,21 +15479,18 @@ Rundeck is a runbook automation for incident management, business continuity, an
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `rundeck-projects-list`: 
+- `rundeck-jobs-list`: 
+- `rundeck-job-execute`: 
+- `rundeck-job-retry`: 
+- `rundeck-job-executions-query`: 
+- `rundeck-job-execution-output`: 
+- `rundeck-job-execution-abort`: 
+- `rundeck-adhoc-command-run`: 
+- `rundeck-adhoc-script-run`: 
+- `rundeck-adhoc-script-run-from-url`: 
+- `rundeck-webhooks-list`: 
+- `rundeck-webhook-event-send`: 
 
 
 ## Rundeck-job-execute-Generic
@@ -16121,21 +15514,16 @@ RunZero is a network discovery and asset inventory platform that uncovers every 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `runzero-asset-search`: 
+- `runzero-asset-delete`: 
+- `runzero-service-search`: 
+- `runzero-service-delete`: 
+- `runzero-comment-add`: 
+- `runzero-tag-add`: 
+- `runzero-quota-get`: 
+- `runzero-tag-delete`: 
+- `runzero-wireless-lan-search`: 
+- `runzero-wireless-lan-delete`: 
 
 
 ## SafeBreach
@@ -16147,21 +15535,21 @@ For enterprises using SafeBreach and platform, integrating this package streamli
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `safebreach-approve-simulator`: 
+- `safebreach-generate-api-key`: 
+- `safebreach-create-deployment`: 
+- `safebreach-create-user`: 
+- `safebreach-delete-api-key`: 
+- `safebreach-delete-deployment`: 
+- `safebreach-clear-integration-issues`: 
+- `safebreach-delete-scheduled-scenarios`: 
+- `safebreach-delete-simulator`: 
+- `safebreach-delete-test-with-id`: 
+- `safebreach-delete-user`: 
+- `safebreach-get-integration-issues`: 
+- `safebreach-get-running-simulations`: 
+- `safebreach-get-running-tests`: 
+- `safebreach-get-available-simulator-details`: 
 
 
 ## SafeNet Trusted Access - Add to Unusual Activity Group
@@ -16201,21 +15589,21 @@ Safewalk server integration This integration was integrated and tested with vers
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `safewalk-get-transactionlog`: 
+- `safewalk-get-users`: 
+- `safewalk-get-ldap-users`: 
+- `safewalk-get-ldaps`: 
+- `safewalk-get-user-personalinformation`: 
+- `safewalk-set-user-personalinformation`: 
+- `safewalk-get-user-accessattempts`: 
+- `safewalk-delete-user-accessattempts`: 
+- `safewalk-get-user-tokens`: 
+- `safewalk-delete-user-token`: 
+- `safewalk-send-user-virtualtoken`: 
+- `safewalk-get-user-settings`: 
+- `safewalk-get-user-group`: 
+- `safewalk-add-user-group`: 
+- `safewalk-remove-user-group`: 
 
 
 ## Safewalk Reports
@@ -16227,17 +15615,17 @@ Safewalk server integration This integration was integrated and tested with vers
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `safewalk-get-associated-users`: 
+- `safewalk-get-authentication-methods-distribution`: 
+- `safewalk-get-authentication-rate-per-device`: 
+- `safewalk-get-least-active-users`: 
+- `safewalk-get-licenses-inventory`: 
+- `safewalk-get-licenses-usage`: 
+- `safewalk-get-most-active-users`: 
+- `safewalk-get-physical-tokens-inventory`: 
+- `safewalk-get-registered-devices-distribution`: 
+- `safewalk-get-registration`: 
+- `safewalk-get-users-associations-indicators`: 
 
 
 ## Salesforce Fusion IAM
@@ -16249,14 +15637,10 @@ Integrate with Salesforce Fusion Identity Access Management service to execute C
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iam-create-user`: 
+- `iam-update-user`: 
+- `iam-get-user`: 
+- `iam-disable-user`: 
 
 
 ## Salesforce IAM
@@ -16268,11 +15652,11 @@ Integrate with Salesforce's services to perform Identity Lifecycle Management op
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iam-create-user`: 
+- `iam-update-user`: 
+- `iam-get-user`: 
+- `iam-disable-user`: 
+- `get-mapping-fields`: 
 
 
 ## Salesforce v2
@@ -16284,21 +15668,21 @@ CRM Services
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `salesforce-search`: 
+- `salesforce-query`: 
+- `salesforce-get-object`: 
+- `salesforce-update-object`: 
+- `salesforce-create-object`: 
+- `salesforce-push-comment`: 
+- `salesforce-get-case`: 
+- `salesforce-create-case`: 
+- `salesforce-update-case`: 
+- `salesforce-get-cases`: 
+- `salesforce-close-case`: 
+- `salesforce-push-comment-threads`: 
+- `salesforce-delete-case`: 
+- `salesforce-get-casecomment`: 
+- `salesforce-post-casecomment`: 
 
 
 ## SalesforceAskUser
@@ -16348,8 +15732,8 @@ Integrate with SAP's services to execute get and disable operations for employee
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `iam-get-user`: 
+- `iam-disable-user`: 
 
 
 ## SAP BTP (Business Technology Platform)
@@ -16358,8 +15742,7 @@ Integrate with SAP's services to execute get and disable operations for employee
 **Product:** SAP BTP (Business Technology Platform)  
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `sap-btp-get-events`: 
 
 
 ## Schedule Task and Poll
@@ -16470,14 +15853,14 @@ Use SecneurX Analysis pack to provide threat analysts and incident response team
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `snx-analysis-get-verdict`: 
+- `snx-analysis-get-completed`: 
+- `snx-analysis-get-pending`: 
+- `snx-analysis-get-status`: 
+- `snx-analysis-submit-file`: 
+- `snx-analysis-submit-url`: 
+- `snx-analysis-get-report`: 
+- `snx-analysis-get-quota`: 
 
 
 ## SecurityScorecard
@@ -16489,21 +15872,21 @@ Provides commands to access SecurityScorecard's API. This integration was integr
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `securityscorecard-portfolios-list`: 
+- `securityscorecard-portfolio-list-companies`: 
+- `securityscorecard-company-score-get`: 
+- `securityscorecard-company-factor-score-get`: 
+- `securityscorecard-company-history-score-get`: 
+- `securityscorecard-company-history-factor-score-get`: 
+- `securityscorecard-alert-grade-change-create`: 
+- `securityscorecard-alert-score-threshold-create`: 
+- `securityscorecard-alert-delete`: 
+- `securityscorecard-alerts-list`: 
+- `securityscorecard-company-services-get`: 
+- `securityscorecard-company-events-get`: 
+- `securityscorecard-company-findings-get`: 
+- `securityscorecard-issue-metadata`: 
+- `securityscorecard-alert-rules-list`: 
 
 
 ## SecurityTrails
@@ -16515,16 +15898,15 @@ This integration provides API access to the SecurityTrails platform. This integr
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `securitytrails-get-subdomains`: 
+- `securitytrails-get-tags`: 
+- `securitytrails-get-company-associated-ips`: 
+- `securitytrails-get-dns-history`: 
+- `securitytrails-get-ip-neighbors`: 
+- `securitytrails-statistics-domain`: 
+- `securitytrails-search-ip`: 
+- `securitytrails-get-ip-whois`: 
+- `securitytrails-sql-get-next`: 
 
 
 ## Securonix
@@ -16533,7 +15915,7 @@ This integration provides API access to the SecurityTrails platform. This integr
 **Product:** Securonix  
 **Commands:**
 
-- `None`: 
+- `securonix-list-workflows`: 
 
 
 ## SecuronixGetViolations
@@ -16553,21 +15935,21 @@ Fetch alerts and events from SEKOIA.IO XDR. To use this integration, please crea
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `sekoia-xdr-list-alerts`: 
+- `sekoia-xdr-get-alert`: 
+- `sekoia-xdr-events-execute-query`: 
+- `sekoia-xdr-events-status-query`: 
+- `sekoia-xdr-events-results-query`: 
+- `sekoia-xdr-search-events`: 
+- `sekoia-xdr-update-status-alert`: 
+- `sekoia-xdr-post-comment-alert`: 
+- `sekoia-xdr-get-comments`: 
+- `sekoia-xdr-get-workflow-alert`: 
+- `sekoia-xdr-get-cases-alert`: 
+- `sekoia-xdr-get-asset`: 
+- `get-remote-data`: 
+- `get-modified-remote-data`: 
+- `get-mapping-fields`: 
 
 
 ## SekoiaXDRAddComment
@@ -16630,21 +16012,21 @@ SendGrid provides a cloud-based service that assists businesses with email deliv
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `sg-send-email`: 
+- `sg-get-global-email-stats`: 
+- `sg-get-category-stats`: 
+- `sg-get-all-categories-stats`: 
+- `sg-list-categories`: 
+- `sg-create-batch-id`: 
+- `sg-scheduled-status-change`: 
+- `sg-retrieve-all-scheduled-sends`: 
+- `sg-retrieve-scheduled-send`: 
+- `sg-update-scheduled-send`: 
+- `sg-delete-scheduled-send`: 
+- `sg-get-email-activity-list`: 
+- `sg-get-all-lists`: 
+- `sg-get-list-by-id`: 
+- `sg-create-list`: 
 
 
 ## Sepio
@@ -16653,18 +16035,13 @@ SendGrid provides a cloud-based service that assists businesses with email deliv
 **Product:** Sepio  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `sepio-query-agents`: 
+- `sepio-query-peripherals`: 
+- `sepio-query-switches`: 
+- `sepio-query-switch-ports`: 
+- `sepio-query-system-events`: 
+- `sepio-set-agent-mode`: 
+- `sepio-set-peripherals-mode`: 
 
 
 ## Serenety
@@ -16676,7 +16053,7 @@ XMCO Serenety
 
 **Commands:**
 
-- `None`: 
+- `fetch-incidents`: 
 
 
 ## Server Message Block (SMB) v2
@@ -16688,13 +16065,12 @@ Files and Directories management with an SMB server. Supports SMB2 and SMB3 prot
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `smb-download`: 
+- `smb-upload`: 
+- `smb-directory-list`: 
+- `smb-file-remove`: 
+- `smb-directory-create`: 
+- `smb-directory-remove`: 
 
 
 ## ServerLogs
@@ -16722,21 +16098,17 @@ IT Service Management
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `service-desk-plus-requests-list`: 
+- `service-desk-plus-request-delete`: 
+- `service-desk-plus-request-create`: 
+- `service-desk-plus-request-update`: 
+- `service-desk-plus-request-assign`: 
+- `service-desk-plus-request-pickup`: 
+- `service-desk-plus-linked-request-list`: 
+- `service-desk-plus-request-resolution-add`: 
+- `service-desk-plus-request-resolutions-list`: 
+- `service-desk-plus-generate-refresh-token`: 
+- `service-desk-plus-link-request-modify`: 
 
 
 ## Service Desk Plus - Generic Polling
@@ -16781,21 +16153,14 @@ ServiceNow CMDB is a service‑centric foundation that proactively analyzes serv
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `servicenow-cmdb-records-list`: 
+- `servicenow-cmdb-record-get-by-id`: 
+- `servicenow-cmdb-record-create`: 
+- `servicenow-cmdb-record-update`: 
+- `servicenow-cmdb-record-add-relations`: 
+- `servicenow-cmdb-record-delete-relations`: 
+- `servicenow-cmdb-oauth-login`: 
+- `servicenow-cmdb-oauth-test`: 
 
 
 ## ServiceNow CMDB Search
@@ -16822,14 +16187,10 @@ Integrate with ServiceNow's services to perform Identity Lifecycle Management op
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iam-create-user`: 
+- `iam-update-user`: 
+- `iam-get-user`: 
+- `iam-disable-user`: 
 
 
 ## ServiceNow MCP
@@ -16841,8 +16202,8 @@ Use this integration to connect securely with a ServiceNow Model Context Protoco
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `servicenow-mcp-auth-test`: 
+- `servicenow-mcp-generate-login-url`: 
 
 
 ## ServiceNow v2
@@ -16854,21 +16215,21 @@ IT service management. Cortex interfaces with ServiceNow to help streamline secu
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `servicenow-login`: 
+- `servicenow-test`: 
+- `servicenow-get-ticket`: 
+- `servicenow-create-ticket`: 
+- `servicenow-update-ticket`: 
+- `servicenow-delete-ticket`: 
+- `servicenow-query-tickets`: 
+- `servicenow-add-link`: 
+- `servicenow-add-comment`: 
+- `servicenow-upload-file`: 
+- `servicenow-delete-file`: 
+- `servicenow-get-record`: 
+- `servicenow-query-table`: 
+- `servicenow-create-record`: 
+- `servicenow-update-record`: 
 
 
 ## ServiceNowApiModule
@@ -16998,9 +16359,9 @@ Integrate ShiftLeft CORE code analysis platform with the platform. This integrat
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `shiftleft-list-apps`: 
+- `shiftleft-list-app-findings`: 
+- `shiftleft-list-app-secrets`: 
 
 
 ## Shodan v2
@@ -17012,11 +16373,9 @@ Shodan is a search engine for Internet-connected devices. Unlike traditional sea
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `shodan-search-count`: 
+- `shodan-scan-ip`: 
+- `shodan-scan-internet`: 
 
 
 ## SiemApiModule
@@ -17055,11 +16414,6 @@ Allows converting a Sigma Rule indicator into a SIEM query
 
 SIGNL4 offers critical alerting, incident response and service dispatching for operating critical infrastructure. It alerts you persistently via app push, SMS text, voice calls, and email including tracking, escalation, on-call duty scheduling and collaboration
 
-**Commands:**
-
-- `None`: 
-- `None`: 
-
 
 ## Signum
 
@@ -17070,7 +16424,7 @@ Signum password expiry notification
 
 **Commands:**
 
-- `None`: 
+- `signum-list-domain-users`: 
 
 
 ## SilentPush
@@ -17082,21 +16436,47 @@ The Silent Push Platform uses first-party data and a proprietary scanning engine
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `silentpush-add-feed`: 
+- `silentpush-add-feed-tags`: 
+- `silentpush-add-indicators`: 
+- `silentpush-add-indicator-tags`: 
+- `silentpush-bulk-enrich`: 
+- `silentpush-density-lookup`: 
+- `silentpush-forward-padns-lookup`: 
+- `silentpush-get-asns-for-domain`: 
+- `silentpush-get-data-exports`: 
+- `silentpush-get-domain-certificates`: 
+- `silentpush-get-enrichment-data`: 
+- `silentpush-get-enrichment-data`: 
+- `silentpush-get-nameserver-reputation`: 
+- `silentpush-get-subnet-reputation`: 
+- `silentpush-ip-diversity-lookup`: 
+
+
+## SilentPush
+
+**Type:** integration  
+**Product:** Silent Push  
+
+The Silent Push Platform uses first-party data and a proprietary scanning engine to enrich global DNS data with risk and reputation scoring, giving security teams the ability to join the dots across the entire IPv4 and IPv6 range, and identify adversary infrastructure before an attack is launched. The content pack integrates with the Silent Push system to gain insights into domain/IP information, reputations, enrichment, and infratag-related details. It also provides functionality to live-scan URLs and take screenshots of them. Additionally, it allows fetching future attack feeds from the Silent Push system. This integration was integrated and tested with version 4.2 of SilentPush
+
+**Commands:**
+
+- `silentpush-density-lookup`: 
+- `silentpush-forward-padns-lookup`: 
+- `silentpush-get-asn-reputation`: 
+- `silentpush-get-asn-takedown-reputation`: 
+- `silentpush-get-asns-for-domain`: 
+- `silentpush-get-domain-certificates`: 
+- `silentpush-get-enrichment-data`: 
+- `silentpush-get-future-attack-indicators`: 
+- `silentpush-get-ipv4-reputation`: 
+- `silentpush-get-job-status`: 
+- `silentpush-get-nameserver-reputation`: 
+- `silentpush-get-subnet-reputation`: 
+- `silentpush-list-domain-information`: 
+- `silentpush-list-domain-infratags`: 
+- `silentpush-list-ip-information`: 
 
 
 ## Silverfort
@@ -17108,12 +16488,10 @@ Silverfort protects organizations from data breaches by delivering strong authen
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `silverfort-get-user-risk`: 
+- `silverfort-get-resource-risk`: 
+- `silverfort-update-user-risk`: 
+- `silverfort-update-resource-risk`: 
 
 
 ## Skyhigh Secure Web Gateway (On Prem)
@@ -17125,21 +16503,14 @@ Manages the block and allow lists within Skyhigh Secure Web Gateway. This integr
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `swg-get-available-lists`: 
+- `swg-get-list`: 
+- `swg-get-list-entry`: 
+- `swg-insert-entry`: 
+- `swg-delete-entry`: 
+- `swg-modify-list`: 
+- `swg-create-list`: 
+- `swg-delete-list`: 
 
 
 ## Skyhigh Security
@@ -17151,13 +16522,11 @@ Skyhigh Security is a cloud-based, multi-tenant service that enables Cloud Disco
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `skyhigh-security-incident-query`: 
+- `skyhigh-security-incident-status-update`: 
+- `skyhigh-security-anomaly-activity-list`: 
+- `skyhigh-security-policy-dictionary-list`: 
+- `skyhigh-security-policy-dictionary-update`: 
 
 
 ## Slack IAM
@@ -17169,18 +16538,14 @@ Note: This integration should be used as part of our Identity Lifecycle Manageme
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iam-create-user`: 
+- `iam-update-user`: 
+- `iam-get-user`: 
+- `iam-disable-user`: 
+- `iam-create-group`: 
+- `iam-get-group`: 
+- `iam-delete-group`: 
+- `iam-update-group`: 
 
 
 ## Slack v3
@@ -17192,21 +16557,21 @@ Send messages and notifications to your Slack team. This integration was integra
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `mirror-investigation`: 
+- `send-notification`: 
+- `close-channel`: 
+- `slack-send-file`: 
+- `slack-set-channel-topic`: 
+- `slack-create-channel`: 
+- `slack-invite-to-channel`: 
+- `slack-kick-from-channel`: 
+- `slack-rename-channel`: 
+- `slack-get-user-details`: 
+- `slack-edit-message`: 
+- `slack-pin-message`: 
+- `slack-get-integration-context`: 
+- `slack-user-session-reset`: 
+- `slack-list-channels`: 
 
 
 ## SMIME Messaging
@@ -17218,11 +16583,9 @@ Use the S/MIME (Secure Multipurpose Internet Mail Extensions) integration to sen
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `smime-verify-sign`: 
+- `smime-decrypt-email-body`: 
+- `smime-sign-and-encrypt`: 
 
 
 ## Smokescreen IllusionBLACK
@@ -17234,7 +16597,7 @@ Smokescreen IllusionBLACK is a deception-based threat defense platform designed 
 
 **Commands:**
 
-- `None`: 
+- `illusionblack-get-ad-decoys`: 
 
 
 ## SnmpDetection
@@ -17259,8 +16622,8 @@ SOC Framework Pack Manager — internal HTTP layer used by the SOCFWPackManager 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `socfw-install-pack`: 
+- `socfw-catalog-url-get`: 
 
 
 ## SOCFWPackManager
@@ -17272,8 +16635,8 @@ The SOC Framework bootloader for Cortex XSIAM. Lists the SOC Framework pack cata
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `socfw-install-pack`: 
+- `socfw-catalog-url-get`: 
 
 **Inputs:**
 
@@ -17308,8 +16671,8 @@ Fetches SOCRadar incidents with desired parameters so that relevant actions over
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `socradar-mark-incident-fp`: 
+- `socradar-mark-incident-resolved`: 
 
 
 ## SOCRadar Incidents Multi-Tenant
@@ -17321,13 +16684,13 @@ Fetch and manage security incidents from multiple companies using SOCRadar's Mul
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `socradar-change-alarm-status`: 
+- `socradar-mark-false-positive`: 
+- `socradar-mark-resolved`: 
+- `socradar-add-comment`: 
+- `socradar-add-assignee`: 
+- `socradar-add-tag`: 
+- `socradar-test-fetch`: 
 
 
 ## SOCRadar Incidents v4
@@ -17337,25 +16700,11 @@ Fetch and manage security incidents from multiple companies using SOCRadar's Mul
 
 Fetch and manage security incidents from SOCRadar's Incident API v4 with advanced filtering, multi-status selection, and comprehensive incident enrichment
 
-**Commands:**
-
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-
 
 ## SOCRadar IoC Enrichment
 
 **Type:** integration  
 **Product:** SOCRadar  
-**Commands:**
-
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-
 
 ## SOCRadar Rapid Reputation
 
@@ -17366,8 +16715,7 @@ Enrich indicators (IP, Domain, URL, Hash) by obtaining reputation information vi
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `socradar-bulk-check`: 
 
 
 ## SOCRadar Takedown
@@ -17379,10 +16727,10 @@ Submit and monitor takedown requests for phishing domains, impersonating account
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `socradar-submit-phishing-domain`: 
+- `socradar-submit-social-media-impersonation`: 
+- `socradar-submit-source-code-leak`: 
+- `socradar-submit-rogue-app`: 
 
 
 ## SOCRadar ThreatFusion
@@ -17394,19 +16742,9 @@ Enrich indicators by obtaining enhanced information and reputation via ThreatFus
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `socradar-score-ip`: 
+- `socradar-score-domain`: 
+- `socradar-score-hash`: 
 
 
 ## SolarWinds
@@ -17418,12 +16756,9 @@ The SolarWinds integration interacts with the SWIS API to allow users to fetch a
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `swis-event-list`: 
+- `swis-alert-list`: 
+- `swis-query`: 
 
 
 ## Sophos Central
@@ -17435,21 +16770,21 @@ The unified console for managing Sophos products
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `sophos-central-alert-list`: 
+- `sophos-central-alert-get`: 
+- `sophos-central-alert-action`: 
+- `sophos-central-alert-search`: 
+- `sophos-central-endpoint-list`: 
+- `sophos-central-endpoint-scan`: 
+- `sophos-central-endpoint-tamper-get`: 
+- `sophos-central-endpoint-tamper-update`: 
+- `sophos-central-allowed-item-list`: 
+- `sophos-central-allowed-item-get`: 
+- `sophos-central-allowed-item-add`: 
+- `sophos-central-allowed-item-update`: 
+- `sophos-central-allowed-item-delete`: 
+- `sophos-central-blocked-item-list`: 
+- `sophos-central-blocked-item-get`: 
 
 
 ## Spamcop
@@ -17458,11 +16793,6 @@ The unified console for managing Sophos products
 **Product:** Spamcop  
 
 SpamCop is an email spam reporting service. The integration allows checking the reputation of an IP address. This integration was integrated and tested with Spamcop
-
-**Commands:**
-
-- `None`: 
-- `None`: 
 
 
 ## SpecterOps BloodHound Enterprise
@@ -17474,9 +16804,9 @@ This integration enables automated retrieval of attack path findings from BloodH
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `bloodhound-object-id-get`: 
+- `bloodhound-asset-info-get`: 
+- `bloodhound-path-exist`: 
 
 
 ## SpecterOpsBloodHoundEnterprise
@@ -17488,9 +16818,9 @@ Automated playbook that enriches BloodHound Enterprise attack path incidents wit
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `bloodhound-object-id-get`: 
+- `bloodhound-asset-info-get`: 
+- `bloodhound-path-exist`: 
 
 
 ## SSDeepReputation
@@ -17538,9 +16868,9 @@ Analyze a host or a URL
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ssl-labs-register-email`: 
+- `ssl-labs-info`: 
+- `ssl-labs-analyze`: 
 
 
 ## SSL_Certificate_Verification
@@ -17607,10 +16937,8 @@ Use the Stairwell Inception integration to enrich data in platform using Stairwe
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `inception-file-enrichment`: 
+- `inception-variant-discovery`: 
 
 
 ## Stamus
@@ -17622,9 +16950,9 @@ Use the Stairwell Inception integration to enrich data in platform using Stairwe
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `stamus-check-ioc`: 
+- `stamus-get-host-insight`: 
+- `stamus-get-doc-events`: 
 
 
 ## Stamus Networks - Get Extra Data
@@ -17659,10 +16987,10 @@ Fetches and mirrors in Cases from Stellar Cyber to platform. In addition, provid
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `stellar-get-alert`: 
+- `stellar-update-case`: 
+- `get-remote-data`: 
+- `get-modified-remote-data`: 
 
 
 ## StixCreator
@@ -17858,9 +17186,9 @@ The script gets the pack name as input and suggests an available branch name, fo
 **Product:** Superna Zero Trust  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `superna-zt-snapshot-critical-paths`: 
+- `superna-zt-lockout-user`: 
+- `superna-zt-unlock-user`: 
 
 
 ## Superna Zero Trust Request User Storage Lockout
@@ -17912,21 +17240,20 @@ Symantec Data Loss Prevention enables you to discover, monitor and protect your 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `symantec-dlp-list-incidents`: 
+- `symantec-dlp-get-incident-details`: 
+- `symantec-dlp-update-incident`: 
+- `symantec-dlp-list-incident-status`: 
+- `symantec-dlp-get-incident-history`: 
+- `symantec-dlp-list-remediation-status`: 
+- `symantec-dlp-get-incident-original-message`: 
+- `symantec-dlp-get-report-filters`: 
+- `symantec-dlp-list-users`: 
+- `symantec-dlp-get-sender-recipient-pattern`: 
+- `symantec-dlp-list-sender-recipient-patterns`: 
+- `symantec-dlp-update-sender-pattern`: 
+- `symantec-dlp-update-recipient-pattern`: 
+- `symantec-dlp-get-message-body`: 
 
 
 ## Symantec Endpoint Security (ICDM)
@@ -17938,13 +17265,9 @@ Query the Symantec Endpoint Security Cloud Portal (ICDM). This integration was i
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `symantec-protection-file`: 
+- `symantec-protection-network`: 
+- `symantec-protection-cve`: 
 
 
 ## Synapse
@@ -17956,21 +17279,13 @@ Synapse intelligence analysis platform. This integration was integrated and test
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `synapse-storm-query`: 
+- `synapse-list-users`: 
+- `synapse-list-roles`: 
+- `synapse-create-user`: 
+- `synapse-create-role`: 
+- `synapse-grant-user-role`: 
+- `synapse-query-model`: 
 
 
 ## Synchronize Incident Closure - Cyberhaven
@@ -17990,21 +17305,21 @@ SysAid is a robust IT management system designed to meet all of the needs of an 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `sysaid-table-list`: 
+- `sysaid-asset-list`: 
+- `sysaid-asset-search`: 
+- `sysaid-filter-list`: 
+- `sysaid-user-list`: 
+- `sysaid-user-search`: 
+- `sysaid-service-record-list`: 
+- `sysaid-service-record-search`: 
+- `sysaid-service-record-update`: 
+- `sysaid-service-record-close`: 
+- `sysaid-service-record-template-get`: 
+- `sysaid-service-record-create`: 
+- `sysaid-service-record-delete`: 
+- `sysaid-service-record-attach-file`: 
+- `sysaid-service-record-get-file`: 
 
 
 ## Syslog Sender
@@ -18013,7 +17328,7 @@ SysAid is a robust IT management system designed to meet all of the needs of an 
 **Product:** Syslog  
 **Commands:**
 
-- `None`: 
+- `mirror-investigation`: 
 
 
 ## TaegisXDR v2
@@ -18022,21 +17337,21 @@ SysAid is a robust IT management system designed to meet all of the needs of an 
 **Product:** Secureworks  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `taegis-add-evidence-to-investigation`: 
+- `taegis-archive-investigation`: 
+- `taegis-create-comment`: 
+- `taegis-create-investigation`: 
+- `taegis-create-sharelink`: 
+- `taegis-execute-playbook`: 
+- `taegis-fetch-alerts`: 
+- `taegis-fetch-assets`: 
+- `taegis-fetch-comment`: 
+- `taegis-fetch-comments`: 
+- `taegis-fetch-endpoint`: 
+- `taegis-fetch-investigation`: 
+- `taegis-fetch-investigation-alerts`: 
+- `taegis-fetch-playbook-execution`: 
+- `taegis-fetch-users`: 
 
 
 ## Tag massive and internal IOCs to avoid EDL listing
@@ -18106,7 +17421,7 @@ Tavily is a web service that provides real-time web search and retrieval capabil
 
 **Commands:**
 
-- `None`: 
+- `tavily-extract`: 
 
 
 ## TAXII2 Server
@@ -18115,10 +17430,8 @@ Tavily is a web service that provides real-time web search and retrieval capabil
 **Product:** TAXII Server  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `taxii-server-list-collections`: 
+- `taxii-server-info`: 
 
 
 ## TAXII2ApiModule
@@ -18137,9 +17450,7 @@ Team Cymru provides various service options dedicated to mapping IP numbers to B
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cymru-bulk-whois`: 
 
 
 ## Team Cymru Scout
@@ -18148,21 +17459,9 @@ Team Cymru provides various service options dedicated to mapping IP numbers to B
 **Product:** Team Cymru  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `scout-api-usage`: 
+- `scout-indicator-search`: 
+- `scout-ip-list`: 
 
 
 ## Tenzai
@@ -18174,9 +17473,9 @@ Validate Cortex ASM-discovered exposures with Tenzai's agentic penetration testi
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `tenzai-create-scan`: 
+- `tenzai-get-scan`: 
+- `tenzai-get-scan-result`: 
 
 
 ## Tenzai Agentic Issue Validation
@@ -18218,7 +17517,7 @@ Tessian is an email security platform that allows organizations to protect their
 
 **Commands:**
 
-- `None`: 
+- `tessian-list-events`: 
 
 
 ## TextFromHTML
@@ -18247,21 +17546,21 @@ Manage secrets and protect sensitive data through Thales CipherTrust security pl
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ciphertrust-csr-generate`: 
+- `ciphertrust-certificate-issue`: 
+- `ciphertrust-certificate-list`: 
+- `ciphertrust-certificate-resume`: 
+- `ciphertrust-certificate-revoke`: 
+- `ciphertrust-external-ca-delete`: 
+- `ciphertrust-external-ca-list`: 
+- `ciphertrust-external-ca-update`: 
+- `ciphertrust-external-ca-upload`: 
+- `ciphertrust-group-create`: 
+- `ciphertrust-group-delete`: 
+- `ciphertrust-group-list`: 
+- `ciphertrust-group-update`: 
+- `ciphertrust-local-ca-create`: 
+- `ciphertrust-local-ca-delete`: 
 
 
 ## Thales SafeNet Trusted Access
@@ -18273,15 +17572,11 @@ This integration enables you to process alerts from SafeNet Trusted Access (STA)
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `sta-get-user-list`: 
+- `sta-get-user-info`: 
+- `sta-create-user`: 
+- `sta-update-user-info`: 
+- `sta-delete-user`: 
 
 
 ## TheHive Project
@@ -18293,21 +17588,20 @@ Integration with The Hive Project Security Incident Response Platform. This inte
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `thehive-list-cases`: 
+- `thehive-get-case`: 
+- `thehive-update-case`: 
+- `thehive-create-case`: 
+- `thehive-create-task`: 
+- `thehive-remove-case`: 
+- `thehive-merge-cases`: 
+- `thehive-get-case-tasks`: 
+- `thehive-get-task`: 
+- `thehive-update-task`: 
+- `thehive-update-observable`: 
+- `get-mapping-fields`: 
+- `thehive-get-version`: 
+- `get-modified-remote-data`: 
 
 
 ## ThousandEyes
@@ -18319,10 +17613,10 @@ This Integration is used to fetch-incidents via “Active alerts”, get alert d
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `thousandeyes-get-alerts`: 
+- `thousandeyes-get-alert`: 
+- `thousandeyes-get-agents`: 
+- `thousandeyes-get-agent`: 
 
 
 ## ThreeDigitAlphaCountryCodeToCountryName
@@ -18411,21 +17705,21 @@ TOPdesk’s Enterprise Service Management software (ESM) lets your service teams
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `topdesk-subcategories-list`: 
+- `topdesk-categories-list`: 
+- `topdesk-entry-types-list`: 
+- `topdesk-call-types-list`: 
+- `topdesk-deescalation-reasons-list`: 
+- `topdesk-escalation-reasons-list`: 
+- `topdesk-archiving-reasons-list`: 
+- `topdesk-persons-list`: 
+- `topdesk-operators-list`: 
+- `topdesk-branches-list`: 
+- `topdesk-incidents-list`: 
+- `topdesk-incident-actions`: 
+- `topdesk-incident-create`: 
+- `topdesk-incident-update`: 
+- `topdesk-incident-escalate`: 
 
 
 ## TopMaliciousRatioIndicators
@@ -18460,11 +17754,6 @@ Converts an array in to a table display. Usually, from the context
 
 **Type:** integration  
 **Product:** Traceable  
-**Commands:**
-
-- `None`: 
-- `None`: 
-
 
 ## Trello
 
@@ -18475,13 +17764,11 @@ Interact with the Trello task manager This integration was integrated and tested
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `trello-list-boards`: 
+- `trello-list-lists`: 
+- `trello-create-card`: 
+- `trello-delete-card`: 
+- `trello-add-comment`: 
 
 
 ## TrendAI Vision One™
@@ -18493,21 +17780,21 @@ Support and maintenance for this integration are provided by the author. Please 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `trendmicro-visionone-add-to-block-list`: 
+- `trendmicro-visionone-remove-from-block-list`: 
+- `trendmicro-visionone-quarantine-email-message`: 
+- `trendmicro-visionone-delete-email-message`: 
+- `trendmicro-visionone-isolate-endpoint`: 
+- `trendmicro-visionone-restore-endpoint-connection`: 
+- `trendmicro-visionone-add-objects-to-exception-list`: 
+- `trendmicro-visionone-delete-objects-from-exception-list`: 
+- `trendmicro-visionone-add-objects-to-suspicious-list`: 
+- `trendmicro-visionone-delete-objects-from-suspicious-list`: 
+- `trendmicro-visionone-get-endpoint-info`: 
+- `trendmicro-visionone-terminate-process`: 
+- `trendmicro-visionone-get-file-analysis-status`: 
+- `trendmicro-visionone-get-file-analysis-report`: 
+- `trendmicro-visionone-collect-forensic-file`: 
 
 
 ## TrendAI Vision One™ v3
@@ -18519,21 +17806,21 @@ TrendAI Vision One™ is a purpose-built threat defense platform that provides a
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `trendmicro-visionone-enable-user-account`: 
+- `trendmicro-visionone-disable-user-account`: 
+- `trendmicro-visionone-force-signout`: 
+- `trendmicro-visionone-force-password-reset`: 
+- `trendmicro-visionone-add-to-block-list`: 
+- `trendmicro-visionone-remove-from-block-list`: 
+- `trendmicro-visionone-quarantine-email-message`: 
+- `trendmicro-visionone-delete-email-message`: 
+- `trendmicro-visionone-restore-email-message`: 
+- `trendmicro-visionone-isolate-endpoint`: 
+- `trendmicro-visionone-restore-endpoint-connection`: 
+- `trendmicro-visionone-add-objects-to-exception-list`: 
+- `trendmicro-visionone-delete-objects-from-exception-list`: 
+- `trendmicro-visionone-add-objects-to-suspicious-list`: 
+- `trendmicro-visionone-delete-objects-from-suspicious-list`: 
 
 
 ## TrendAI™ Apex One
@@ -18545,21 +17832,18 @@ TrendAI™ Apex One central automation to manage agents and User-Defined Suspici
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `trendmicro-apex-udso-list`: 
+- `trendmicro-apex-udso-add`: 
+- `trendmicro-apex-udso-delete`: 
+- `trendmicro-apex-isolate`: 
+- `trendmicro-apex-restore`: 
+- `trendmicro-apex-list-logs`: 
+- `trendmicro-apex-udso-file-add`: 
+- `trendmicro-apex-managed-servers-list`: 
+- `trendmicro-apex-security-agents-list`: 
+- `trendmicro-apex-endpoint-sensors-list`: 
+- `trendmicro-apex-historical-investigation-create`: 
+- `trendmicro-apex-investigation-result-list`: 
 
 
 ## TrendAI™ Deep Security™
@@ -18571,21 +17855,21 @@ TrendAI™ Deep Security™ This integration was integrated and tested with vers
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `trendmicro-create-computer`: 
+- `trendmicro-search-computers`: 
+- `trendmicro-get-computer`: 
+- `trendmicro-list-computers`: 
+- `trendmicro-modify-computer`: 
+- `trendmicro-delete-computer`: 
+- `trendmicro-get-computer-setting`: 
+- `trendmicro-modify-computer-setting`: 
+- `trendmicro-reset-computer-setting`: 
+- `trendmicro-list-computer-groups`: 
+- `trendmicro-create-computer-group`: 
+- `trendmicro-search-computer-groups`: 
+- `trendmicro-get-computer-group`: 
+- `trendmicro-modify-computer-group`: 
+- `trendmicro-delete-computer-group`: 
 
 
 ## Tripwire
@@ -18597,14 +17881,10 @@ Tripwire is a file integrity management (FIM), FIM monitors files and folders on
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `tripwire-versions-list`: 
+- `tripwire-rules-list`: 
+- `tripwire-elements-list`: 
+- `tripwire-nodes-list`: 
 
 
 ## TrustwaveFusion
@@ -18616,21 +17896,15 @@ The Trustwave Fusion platform connects your organization’s digital footprint t
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `trustwave-get-ticket`: 
+- `trustwave-search-tickets`: 
+- `trustwave-add-ticket-comment`: 
+- `trustwave-close-ticket`: 
+- `trustwave-get-updated-tickets`: 
+- `trustwave-search-findings`: 
+- `trustwave-get-finding`: 
+- `trustwave-get-asset`: 
+- `trustwave-search-assets`: 
 
 
 ## Tufin
@@ -18639,7 +17913,7 @@ The Trustwave Fusion platform connects your organization’s digital footprint t
 **Product:** Tufin  
 **Commands:**
 
-- `None`: 
+- `tufin-search-topology`: 
 
 
 ## Tufin - Enrich IP Address(es)
@@ -18700,19 +17974,19 @@ TwinWave analyzes URLs and files to detect credential phishing and malware threa
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `twinwave-submit-url`: 
+- `twinwave-submit-file`: 
+- `twinwave-resubmit-job`: 
+- `twinwave-get-job-summary`: 
+- `twinwave-wait-job`: 
+- `twinwave-download-job-pdf`: 
+- `twinwave-get-job-normalized-forensics`: 
+- `twinwave-get-task-normalized-forensics`: 
+- `twinwave-get-task-raw-forensics`: 
+- `twinwave-download-submitted-resource`: 
+- `twinwave-get-engines`: 
+- `twinwave-search-across-jobs-and-resources`: 
+- `twinwave-get-temp-artifact-url`: 
 
 
 ## Twitter v2
@@ -18724,11 +17998,8 @@ Twitter integration provides access to searching recent Tweets (in last 7 days) 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `twitter-tweet-search`: 
+- `twitter-user-get`: 
 
 
 ## TypeSafe Jev
@@ -18740,11 +18011,11 @@ Use TypeSafe Jev typed judgments and calibrated probabilities in Cortex XSIAM an
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `jev-evaluate`: 
+- `jev-noul`: 
+- `jev-choice`: 
+- `jev-score`: 
+- `jev-list-models`: 
 
 
 ## UltraMSG
@@ -18756,7 +18027,7 @@ This is the UltraMSG integration for getting started made by Trustnet
 
 **Commands:**
 
-- `None`: 
+- `send-whatsapp`: 
 
 
 ## Unblock Indicator - Infoblox NIOS
@@ -18820,13 +18091,13 @@ This integration is intended to aid companies in integrating with the Stealth Ec
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `stealth-isolate-machine`: 
+- `stealth-unisolate-machine`: 
+- `stealth-get-stealth-roles`: 
+- `stealth-isolate-user`: 
+- `stealth-unisolate-user`: 
+- `stealth-isolate-machine-and-user`: 
+- `stealth-unisolate-machine-and-user`: 
 
 
 ## UnitTest
@@ -18936,8 +18207,7 @@ Unpacks a file using the fileName or entryID to specify a file. Files unpacked w
 **Product:** UnshortenMe  
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `unshorten-me-unshorten-url`: 
 
 
 ## UnzipFile
@@ -19007,7 +18277,7 @@ This sub-playbook takes the entryId of a vendor-generated vulnerability report C
 **Product:** Uptycs  
 **Commands:**
 
-- `None`: 
+- `uptycs-get-assets`: 
 
 
 ## Uptycs - Bad IP Incident
@@ -19083,13 +18353,7 @@ URLhaus leverages abuse.ch and shares malicious URLs that are being used for mal
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `urlhaus-download-sample`: 
 
 
 ## URLNumberOfAds
@@ -19153,11 +18417,11 @@ USTA is an Cyber Intelligence Platform that responds directly and effectively to
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `usta-get-malicious-urls`: 
+- `usta-get-phishing-sites`: 
+- `usta-get-stolen-client-accounts`: 
+- `usta-get-ip-address`: 
+- `usta-search-specific-identity-leaks`: 
 
 
 ## UtilAnyResults
@@ -19181,12 +18445,10 @@ Streamline alerts and related forensic information from Varonis DSP This integra
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `varonis-get-alerts`: 
+- `varonis-update-alert-status`: 
+- `varonis-close-alert`: 
+- `varonis-get-alerted-events`: 
 
 
 ## Varonis SaaS
@@ -19198,16 +18460,13 @@ Streamline alerts and related forensic information from Varonis SaaS
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `varonis-get-threat-models`: 
+- `varonis-get-alerts`: 
+- `varonis-get-alerted-events`: 
+- `varonis-alert-add-note`: 
+- `varonis-update-alert-status`: 
+- `varonis-close-alert`: 
+- `get-mapping-fields`: 
 
 
 ## varonis-alert-post-processing
@@ -19227,21 +18486,21 @@ This integration allows to create incidents based on Vectra Accounts/Hosts/Detec
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `vectra-search-accounts`: 
+- `vectra-search-hosts`: 
+- `vectra-search-detections`: 
+- `vectra-search-assignments`: 
+- `vectra-search-users`: 
+- `vectra-search-outcomes`: 
+- `vectra-account-describe`: 
+- `vectra-account-add-tags`: 
+- `vectra-account-del-tags`: 
+- `vectra-account-tag-list`: 
+- `vectra-account-note-add`: 
+- `vectra-account-note-update`: 
+- `vectra-account-note-remove`: 
+- `vectra-account-note-list`: 
+- `vectra-account-markall-detections-asfixed`: 
 
 
 ## Vectra RUX - Network Detection & Response
@@ -19253,21 +18512,21 @@ This integration allows the security operations center to create and manage inci
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `vectra-detections-mark-asclosed`: 
+- `vectra-user-list`: 
+- `vectra-entity-list`: 
+- `vectra-entity-describe`: 
+- `vectra-entity-detection-list`: 
+- `vectra-detection-describe`: 
+- `vectra-entity-note-add`: 
+- `vectra-entity-note-update`: 
+- `vectra-entity-note-remove`: 
+- `vectra-entity-tag-add`: 
+- `vectra-entity-tag-remove`: 
+- `vectra-entity-tag-list`: 
+- `vectra-entity-assignment-add`: 
+- `vectra-entity-assignment-update`: 
+- `vectra-detection-pcap-download`: 
 
 
 ## Vectra XDR
@@ -19276,21 +18535,21 @@ This integration allows the security operations center to create and manage inci
 **Product:** Vectra XDR  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `vectra-user-list`: 
+- `vectra-entity-list`: 
+- `vectra-entity-describe`: 
+- `vectra-entity-detection-list`: 
+- `vectra-detection-describe`: 
+- `vectra-entity-note-add`: 
+- `vectra-detection-note-add`: 
+- `vectra-entity-note-update`: 
+- `vectra-detection-note-update`: 
+- `vectra-entity-note-remove`: 
+- `vectra-detection-note-remove`: 
+- `vectra-detections-mark-fixed`: 
+- `vectra-detections-unmark-fixed`: 
+- `vectra-entity-tag-add`: 
+- `vectra-entity-tag-remove`: 
 
 
 ## VectraDetectCloseDuplicateIncidents
@@ -19399,17 +18658,17 @@ Vega integration for fetching alerts and incidents from the Vega platform
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `vega-get-alert-events`: 
+- `vega-get-alert-metadata`: 
+- `vega-set-detections-state`: 
+- `vega-update-detections`: 
+- `vega-update-alert`: 
+- `vega-update-incident`: 
+- `vega-reconcile-incidents`: 
+- `get-remote-data`: 
+- `get-modified-remote-data`: 
+- `update-remote-system`: 
+- `get-mapping-fields`: 
 
 
 ## Vercara UltraDNS
@@ -19421,7 +18680,7 @@ This integration fetches DNS configuration audit logs from Vercara UltraDNS plat
 
 **Commands:**
 
-- `None`: 
+- `vercara-ultradns-get-events`: 
 
 
 ## VerdictResult
@@ -19441,21 +18700,21 @@ Versa Director is a virtualization and service creation platform that simplifies
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `vd-auth-start`: 
+- `vd-auth-test`: 
+- `vd-predefined-application-list`: 
+- `vd-appliance-user-modified-application-list`: 
+- `vd-template-user-modified-application-list`: 
+- `vd-appliance-user-defined-application-list`: 
+- `vd-template-user-defined-application-list`: 
+- `vd-appliance-address-object-delete`: 
+- `vd-appliance-address-object-edit`: 
+- `vd-appliance-address-object-create`: 
+- `vd-appliance-address-object-list`: 
+- `vd-template-address-object-delete`: 
+- `vd-template-address-object-edit`: 
+- `vd-template-address-object-create`: 
+- `vd-template-address-object-list`: 
 
 
 ## Viper
@@ -19467,8 +18726,8 @@ Viper is a binary analysis and management framework
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `viper-download`: 
+- `viper-search`: 
 
 
 ## VMRay
@@ -19480,21 +18739,21 @@ This integration enables users to design playbooks that involve analyzing a file
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `vmray-upload-sample`: 
+- `vmray-upload-url`: 
+- `vmray-get-analysis-by-sample`: 
+- `vmray-get-job-by-sample`: 
+- `vmray-get-submission`: 
+- `vmray-get-sample`: 
+- `vmray-get-sample-by-hash`: 
+- `vmray-get-threat-indicators`: 
+- `vmray-add-tag`: 
+- `vmray-delete-tag`: 
+- `vmray-get-iocs`: 
+- `vmray-get-job-by-id`: 
+- `vmray-get-summary`: 
+- `vmray-get-screenshots`: 
+- `vmray-get-license-usage-verdicts`: 
 
 
 ## VMware
@@ -19506,21 +18765,21 @@ VMware vCenter server is a centralized management application that lets you mana
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `vmware-get-vms`: 
+- `vmware-poweron`: 
+- `vmware-poweroff`: 
+- `vmware-hard-reboot`: 
+- `vmware-suspend`: 
+- `vmware-soft-reboot`: 
+- `vmware-create-snapshot`: 
+- `vmware-revert-snapshot`: 
+- `vmware-get-events`: 
+- `vmware-change-nic-state`: 
+- `vmware-list-vms-by-tag`: 
+- `vmware-create-vm`: 
+- `vmware-clone-vm`: 
+- `vmware-relocate-vm`: 
+- `vmware-delete-vm`: 
 
 
 ## VMware Workspace ONE UEM (AirWatch MDM)
@@ -19532,12 +18791,9 @@ VMware Workspace ONE UEM integration allows users to search enrolled corporate o
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `vmwuem-devices-search`: 
+- `vmwuem-device-get`: 
+- `vmwuem-device-os-updates-list`: 
 
 
 ## WALLIX Bastion
@@ -19549,21 +18805,21 @@ Centralized Control and Monitoring of Privileged Access to Sensitive Assets. Thi
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `wab-add-session-target-to-target-group`: 
+- `wab-add-password-target-to-target-group`: 
+- `wab-add-restriction-to-target-group`: 
+- `wab-add-timeframe-period`: 
+- `wab-add-global-domain`: 
+- `wab-get-account-references`: 
+- `wab-get-account-reference`: 
+- `wab-change-password-or-ssh-key-of-account`: 
+- `wab-get-all-accounts`: 
+- `wab-get-one-account`: 
+- `wab-delete-account`: 
+- `wab-get-application-account-credentials`: 
+- `wab-add-credential-to-application-account`: 
+- `wab-get-application-account-credential`: 
+- `wab-edit-credential-of-application-account`: 
 
 
 ## Web File Repository
@@ -19575,17 +18831,17 @@ Simple web server with a file uploading console to store small files. Helps make
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `wfr-status`: 
+- `wfr-cleanup`: 
+- `wfr-upload-as-file`: 
+- `wfr-upload-file`: 
+- `wfr-upload-files`: 
+- `wfr-list-files`: 
+- `wfr-remove-files`: 
+- `wfr-download-file`: 
+- `wfr-download-as-text`: 
+- `wfr-archive-zip`: 
+- `wfr-reset`: 
 
 
 ## WebScraper
@@ -19639,21 +18895,30 @@ CVE-2021-32648 vulnerability has a CVSS score of 9.1 and was found in octobercms
 - `AutoBlockIndicators`: Should the given indicators be automatically blocked, or should the user be given the option to choose?If set to True - no prompt will appea
 
 
+## WhisperGate and HermeticWiper & CVE-2021-32648
+
+**Type:** playbook  
+**Product:** WhisperGate and HermeticWiper & CVE-2021-32648  
+
+CVE-2021-32648 vulnerability has a CVSS score of 9.1 and was found in octobercms, which is a CMS platform based on the Laravel PHP Framework. In affected versions of the october/system package an attacker can request an account password reset and then gain access to the account using a specially crafted request. The issue has been patched in Build 472 and v1.1.5. The playbook includes the following tasks: Mitigations: More information: UNIT42 Blog - Ongoing Russia and Ukraine Cyber Conflict Russia-Ukraine Cyberattacks: How to Protect Against Related Cyberthreats Including DDoS, HermeticWiper, Gamaredon and Website Defacement Microsoft Blog CVE-2021-32648 NVD Note: This is a beta playbook, which lets you implement and test pre-release software. Since the playbook is beta, it might contain bugs. Updates to the pack during the beta phase might include non-backward compatible features. We appreciate your feedback on the quality and usability of the pack to help us identify issues, fix them, and continually improve
+
+**Inputs:**
+
+- `PlaybookDescription`: The playbook description for Rapid Breach Response layout.
+- `BlockIndicatorsAutomatically`: Whether to block the indicators automatically or not.
+- `CollectedIndicatorsSeverity`: The verdict of the collected indicators. Default is "Malicious". Other options can be "Suspicious" and "Unknown".
+- `RelatedCVE`: The WhisperGate malware related CVE.
+- `RunXQLHuntingQueries`: Whether to perform XQL hunting queries. Default is "False".
+- `UserVerification`: Possible values: True/False.\nWhether to provide user verification for blocking IPs. \n\nFalse - No prompt will be displayed to the user.\nT
+- `AutoBlockIndicators`: Should the given indicators be automatically blocked, or should the user be given the option to choose?If set to True - no prompt will appea
+
+
 ## Whois
 
 **Type:** integration  
 **Product:** Whois  
 
 Provides data enrichment for domains. This integration was integrated and tested with version 1.0 of Whois
-
-**Commands:**
-
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
 
 
 ## WidgetNoOp
@@ -19692,21 +18957,21 @@ Agentless, context-aware and full-stack security and compliance across AWS, Azur
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `wiz-get-issue`: 
+- `wiz-get-issues`: 
+- `wiz-get-resource`: 
+- `wiz-get-resources`: 
+- `wiz-issue-in-progress`: 
+- `wiz-reopen-issue`: 
+- `wiz-reject-issue`: 
+- `wiz-resolve-issue`: 
+- `wiz-set-issue-note`: 
+- `wiz-clear-issue-note`: 
+- `wiz-get-issue-evidence`: 
+- `wiz-rescan-machine-disk`: 
+- `wiz-set-issue-due-date`: 
+- `wiz-clear-issue-due-date`: 
+- `wiz-get-project-team`: 
 
 
 ## WizDefend
@@ -19718,15 +18983,15 @@ Agentless cloud security platform for detecting and addressing cloud issues, det
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `wiz-defend-get-detections`: 
+- `wiz-defend-get-detection`: 
+- `wiz-defend-get-threat`: 
+- `wiz-defend-get-threats`: 
+- `wiz-defend-reopen-threat`: 
+- `wiz-defend-resolve-threat`: 
+- `wiz-defend-set-threat-in-progress`: 
+- `wiz-defend-set-threat-comment`: 
+- `wiz-defend-clear-threat-comments`: 
 
 
 ## Wolken ITSM
@@ -19738,11 +19003,11 @@ Use The Wolken IT Service Management (ITSM) solution to modernize the way you ma
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `wolken-add-internal-notes`: 
+- `wolken-get-access-token`: 
+- `wolken-post-api-v1-incidents-add-attachments`: 
+- `wolken-post-api-v1-incidents-by-incident-id`: 
+- `wolken-put-api-v1-incidents-cancel`: 
 
 
 ## Wordpress
@@ -19754,21 +19019,21 @@ The WordPress REST API provides an interface for applications to interact with y
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `wordpress-url-request`: 
+- `wordpress-list-posts`: 
+- `wordpress-get-post`: 
+- `wordpress-create-post`: 
+- `wordpress-update-post`: 
+- `wordpress-delete-post`: 
+- `wordpress-list-categories`: 
+- `wordpress-create-category`: 
+- `wordpress-get-category`: 
+- `wordpress-update-category`: 
+- `wordpress-delete-category`: 
+- `wordpress-list-tags`: 
+- `wordpress-create-tag`: 
+- `wordpress-get-tag`: 
+- `wordpress-update-tag`: 
 
 
 ## Workday
@@ -19780,8 +19045,7 @@ Workday offers enterprise-level software solutions for financial management, hum
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `workday-list-workers`: 
 
 
 ## Workday IAM
@@ -19793,8 +19057,7 @@ Use the Workday IAM Integration as part of the IAM premium pack. For more inform
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `workday-iam-get-full-report`: 
 
 
 ## Workday IAM Event Generator (Beta)
@@ -19806,11 +19069,11 @@ Generates mock reports and events for Workday IAM. Use these for testing and dev
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `workday-generate-hire-event`: 
+- `workday-generate-update-event`: 
+- `workday-generate-rehire-event`: 
+- `workday-generate-terminate-event`: 
+- `initialize-context`: 
 
 
 ## XM Cyber
@@ -19822,16 +19085,13 @@ The XM Cyber integration creates unique incidents with valuable data collected d
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `xmcyber-affected-critical-assets-list`: 
+- `xmcyber-affected-entities-list`: 
+- `xmcyber-version-supported`: 
+- `xmcyber-version-get`: 
+- `xmcyber-enrich-from-ip`: 
+- `xmcyber-enrich-from-hostname`: 
+- `xmcyber-enrich-from-fields`: 
 
 
 ## XM Cyber CEM
@@ -19843,14 +19103,10 @@ The XM Cyber integration connects XM Cyber's Continuous Exposure Management (CEM
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `xmcyber-enrich-incident`: 
+- `xmcyber-push-breach-point`: 
+- `xmcyber-remove-breach-point`: 
+- `xmcyber-calculate-risk-score`: 
 
 
 ## xMatters
@@ -19862,9 +19118,9 @@ This is an integration for using xMatters. This integration was integrated and t
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `xm-trigger-workflow`: 
+- `xm-get-events`: 
+- `xm-get-event`: 
 
 
 ## xMatters - Example Conditional Actions
@@ -19949,7 +19205,7 @@ Allow integration with Zabbix api
 
 **Commands:**
 
-- `None`: 
+- `zabbix-execute-command`: 
 
 
 ## Zafran API
@@ -19961,9 +19217,9 @@ In today’s complex security landscape, resource-constrained teams struggle to 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `zafran-mitigation-performed`: 
+- `zafran-mitigations-export`: 
+- `zafran-mitigations-performed`: 
 
 
 ## ZeroFox
@@ -19975,21 +19231,21 @@ Cloud-based SaaS to detect risks found on social media and digital channels. Thi
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `zerofox-get-alert`: 
+- `zerofox-alert-user-assignment`: 
+- `zerofox-close-alert`: 
+- `zerofox-alert-request-takedown`: 
+- `zerofox-modify-alert-tags`: 
+- `zerofox-list-alerts`: 
+- `zerofox-create-entity`: 
+- `zerofox-alert-cancel-takedown`: 
+- `zerofox-open-alert`: 
+- `zerofox-list-entities`: 
+- `zerofox-get-entity-types`: 
+- `zerofox-get-policy-types`: 
+- `zerofox-modify-alert-notes`: 
+- `zerofox-submit-threat`: 
+- `zerofox-send-alert-attachment`: 
 
 
 ## ZeroFox Key Incidents
@@ -20001,7 +19257,7 @@ Cloud-based SaaS to detect risks found on social media and digital channels. Thi
 
 **Commands:**
 
-- `None`: 
+- `zerofox-get-key-incident-attachment`: 
 
 
 ## Zerohack XDR
@@ -20013,7 +19269,7 @@ The companion integration for Zerohack XDR. Current versions allow the user to c
 
 **Commands:**
 
-- `None`: 
+- `zerohack-get-latest-incident`: 
 
 
 ## ZeroTrustAnalyticsPlatform
@@ -20025,9 +19281,9 @@ Zero Trust Analytics Platform (ZTAP) is the underlying investigation platform an
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `get-mapping-fields`: 
+- `get-remote-data`: 
+- `ztap-get-alert-entries`: 
 
 
 ## Zimperium
@@ -20039,21 +19295,14 @@ Zimperium is a mobile security platform that generates alerts based on anomalous
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `zimperium-events-search`: 
+- `zimperium-users-search`: 
+- `zimperium-user-get-by-id`: 
+- `zimperium-devices-search`: 
+- `zimperium-device-get-by-id`: 
+- `zimperium-devices-get-last-updated`: 
+- `zimperium-app-classification-get`: 
+- `zimperium-report-get`: 
 
 
 ## Zimperium v2
@@ -20065,21 +19314,21 @@ Fetch and investigate mobile security alerts, generated based on anomalous or un
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `zimperium-users-search`: 
+- `zimperium-devices-search`: 
+- `zimperium-report-get`: 
+- `zimperium-app-version-list`: 
+- `zimperium-get-devices-by-cve`: 
+- `zimperium-devices-os-version`: 
+- `zimperium-get-cves-by-device`: 
+- `zimperium-vulnerability-get`: 
+- `zimperium-policy-group-list`: 
+- `zimperium-policy-privacy-get`: 
+- `zimperium-policy-threat-get`: 
+- `zimperium-policy-phishing-get`: 
+- `zimperium-policy-app-settings-get`: 
+- `zimperium-policy-device-inactivity-list`: 
+- `zimperium-policy-device-inactivity-get`: 
 
 
 ## ZipFile
@@ -20119,21 +19368,21 @@ Use the Zoom integration manage your Zoom users and meetings This integration wa
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `zoom-create-user`: 
+- `zoom-create-meeting`: 
+- `zoom-fetch-recording`: 
+- `zoom-list-users`: 
+- `zoom-delete-user`: 
+- `zoom-meeting-get`: 
+- `zoom-meeting-list`: 
+- `zoom-list-user-channels`: 
+- `zoom-create-channel`: 
+- `zoom-delete-channel`: 
+- `zoom-update-channel`: 
+- `zoom-invite-to-channel`: 
+- `zoom-remove-from-channel`: 
+- `zoom-send-file`: 
+- `zoom-send-message`: 
 
 
 ## Zoom Mail
@@ -20145,13 +19394,13 @@ Enables interaction with the Zoom Mail API
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `zoom-mail-email-move-trash`: 
+- `zoom-mail-email-list`: 
+- `zoom-mail-thread-list`: 
+- `zoom-mail-email-attachment-get`: 
+- `zoom-mail-send-email`: 
+- `zoom-mail-mailbox-profile-get`: 
+- `zoom-mail-user-list`: 
 
 
 ## Zoom_IAM
@@ -20163,13 +19412,10 @@ An Identity and Access Management integration template. This integration was int
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `iam-disable-user`: 
+- `iam-enable-user`: 
+- `iam-get-user`: 
+- `get-mapping-fields`: 
 
 
 ## ZoomApiModule

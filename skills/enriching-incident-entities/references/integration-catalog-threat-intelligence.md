@@ -39,17 +39,8 @@ ACTI provides intelligence regarding security threats and vulnerabilities. This 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `acti-get-ioc-by-uuid`: 
+- `acti-get-fundamentals-by-uuid`: 
 
 
 ## ACTI Vulnerability Query
@@ -61,8 +52,7 @@ Accenture CTI provides intelligence regarding security threats and vulnerabiliti
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `acti-vuln`: 
 
 
 ## Active Directory - Get User Manager Details
@@ -87,8 +77,8 @@ The Active Directory Query integration enables you to access and manage Active D
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `ad-expire-password`: 
+- `ad-modify-password-never-expire`: 
 
 
 ## ActiveMQ
@@ -97,7 +87,7 @@ The Active Directory Query integration enables you to access and manage Active D
 **Product:** ActiveMQ  
 **Commands:**
 
-- `None`: 
+- `activemq-send`: 
 
 
 ## ADGetUser
@@ -140,21 +130,21 @@ Use Anomali ThreatStream to query and submit threats. Some changes have been mad
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `threatstream-email-reputation`: 
+- `threatstream-get-passive-dns`: 
+- `threatstream-import-indicator-with-approval`: 
+- `threatstream-import-indicator-without-approval`: 
+- `threatstream-get-model-list`: 
+- `threatstream-get-model-description`: 
+- `threatstream-get-indicators-by-model`: 
+- `threatstream-submit-to-sandbox`: 
+- `threatstream-get-analysis-status`: 
+- `threatstream-analysis-report`: 
+- `threatstream-get-indicators`: 
+- `threatstream-add-tag-to-model`: 
+- `threatstream-create-model`: 
+- `threatstream-update-model`: 
+- `threatstream-supported-platforms`: 
 
 
 ## ARIA Packet Intelligence
@@ -166,21 +156,21 @@ The ARIA Cybesecurity Solutions Software-Defined Security (SDS) platform integra
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `aria-block-conversation`: 
+- `aria-block-conversation`: 
+- `aria-unblock-conversation`: 
+- `aria-unblock-conversation`: 
+- `aria-record-conversation`: 
+- `aria-record-conversation`: 
+- `aria-stop-recording-conversation`: 
+- `aria-stop-recording-conversation`: 
+- `aria-alert-conversation`: 
+- `aria-alert-conversation`: 
+- `aria-mute-alert-conversation`: 
+- `aria-mute-alert-conversation`: 
+- `aria-block-dest-port`: 
+- `aria-block-dest-port`: 
+- `aria-unblock-dest-port`: 
 
 
 ## ATD - Detonate File
@@ -240,13 +230,12 @@ Blueliv ThreatCompass systematically looks for information about companies,produ
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `blueliv-resource-all`: 
+- `blueliv-resource-search`: 
+- `blueliv-resource-set-read-status`: 
+- `blueliv-resource-assign-rating`: 
+- `blueliv-resource-fav`: 
+- `blueliv-resource-set-tlp`: 
 
 
 ## Blueliv ThreatContext
@@ -258,21 +247,17 @@ The Threat Context module provides SOC, Incident Response and Threat Intelligenc
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `blueliv-authenticate`: 
+- `blueliv-tc-malware`: 
+- `blueliv-tc-indicator-ip`: 
+- `blueliv-tc-cve`: 
+- `blueliv-tc-indicator-fqdn`: 
+- `blueliv-tc-indicator-cs`: 
+- `blueliv-tc-threat-actor`: 
+- `blueliv-tc-campaign`: 
+- `blueliv-tc-attack-pattern`: 
+- `blueliv-tc-tool`: 
+- `blueliv-tc-signature`: 
 
 
 ## Brandefense Digital Risk Protection Services
@@ -281,24 +266,6 @@ The Threat Context module provides SOC, Incident Response and Threat Intelligenc
 **Product:** Brandefense Digital Risk Protection Services  
 
 Brandefense is a SaaS platform offering Digital Risk Protection Services (DRPS), External Attack Surface Management (EASM), and Actionable Threat Intelligence. This integration connects the platform, brand monitoring, and phishing response operations
-
-**Commands:**
-
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
 
 
 ## Check Point Threat Emulation (SandBlast)
@@ -310,18 +277,10 @@ Threat Emulation performs remote analysis by uploading files to a virtual SandBo
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `sandblast-query`: 
+- `sandblast-upload`: 
+- `sandblast-download`: 
+- `sandblast-quota`: 
 
 
 ## Cofense Intelligence v2
@@ -333,19 +292,8 @@ Use the Cofense Intelligence integration to check the reputation of domains, URL
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cofense-search`: 
+- `cofense-threat-report-get`: 
 
 
 ## Compare Process Execution Arguments To LOLBAS Patterns
@@ -598,7 +546,7 @@ Cybersixgill automatically collects intelligence in real-time on all items that 
 
 **Commands:**
 
-- `None`: 
+- `cybersixgill-update-alert-status`: 
 
 
 ## CybersixgillActionableAlertStatusUpdate
@@ -618,12 +566,12 @@ This integration enables your organization to efficiently collect, analyze, and 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `cypho-get-incident`: 
+- `cypho-assign-incident`: 
+- `cypho-add-comment`: 
+- `cypho-update-severity`: 
+- `cypho-download-attachment`: 
+- `cypho-approve-dismiss-issue`: 
 
 
 ## CyphoAddCommentButton
@@ -737,21 +685,21 @@ The Cyware Intel Exchange integration allows users to fetch threat intelligence 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ctix-create-tag`: 
+- `ctix-get-tags`: 
+- `ctix-disable-or-enable-tags`: 
+- `ctix-allowed-iocs`: 
+- `ctix-get-allowed-iocs`: 
+- `ctix-remove-allowed-ioc`: 
+- `ctix-get-threat-data`: 
+- `ctix-get-saved-searches`: 
+- `ctix-get-server-collections`: 
+- `ctix-get-actions`: 
+- `ctix-add-indicator-as-false-positive`: 
+- `ctix-ioc-manual-review`: 
+- `ctix-deprecate-ioc`: 
+- `ctix-add-analyst-tlp`: 
+- `ctix-add-analyst-score`: 
 
 
 ## Darkfeed IOC detonation and proactive blocking
@@ -855,21 +803,21 @@ Digital Shadows monitors and manages an organization's digital risk across the w
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ds-get-breach-reviews`: 
+- `ds-snapshot-breach-status`: 
+- `ds-find-breach-records`: 
+- `ds-get-breach-summary`: 
+- `ds-find-breach-usernames`: 
+- `ds-get-breach`: 
+- `ds-get-breach-records`: 
+- `ds-find-data-breaches`: 
+- `ds-get-incident`: 
+- `ds-get-incident-reviews`: 
+- `ds-snapshot-incident-review`: 
+- `ds-find-incidents-filtered`: 
+- `ds-get-incidents-summary`: 
+- `ds-get-apt-report`: 
+- `ds-get-intelligence-incident`: 
 
 
 ## Digital Shadows - Domain Alert Intelligence (Automated)
@@ -930,21 +878,16 @@ Threat Intelligence Platform that connects and interprets intelligence data from
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `eclecticiq-get-entity`: 
+- `eclecticiq-create-sighting`: 
+- `eclecticiq-create-indicator`: 
+- `eclecticiq-get-entity-by-id`: 
+- `eclecticiq-request-get`: 
+- `eclecticiq-request-post`: 
+- `eclecticiq-request-put`: 
+- `eclecticiq-request-patch`: 
+- `eclecticiq-request-delete`: 
+- `eclecticiq-get-indicators`: 
 
 
 ## Email Collection by Enriched Domain - Google Threat Intelligence
@@ -1005,7 +948,7 @@ Real-Time Threat Intelligence Feeds provide data on the different stages of the 
 
 **Commands:**
 
-- `None`: 
+- `domaintools-get-indicators`: 
 
 
 ## Fighting Ursa Luring Targets With Car For Sale
@@ -1043,13 +986,11 @@ FireEye Detection On Demand is a threat detection service delivered as an API fo
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `fireeye-dod-get-hashes`: 
+- `fireeye-dod-submit-file`: 
+- `fireeye-dod-submit-urls`: 
+- `fireeye-dod-get-reports`: 
+- `fireeye-dod-get-report-url`: 
 
 
 ## Get Email From Email Gateway - Proofpoint Protection Server
@@ -1128,21 +1069,21 @@ This script prevents duplication of existing incidents
 **Product:** Gigamon ThreatINSIGHT  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `insight-get-sensors`: 
+- `insight-get-devices`: 
+- `insight-get-tasks`: 
+- `insight-create-task`: 
+- `insight-get-telemetry-events`: 
+- `insight-get-telemetry-packetstats`: 
+- `insight-get-telemetry-network`: 
+- `insight-get-entity-summary`: 
+- `insight-get-entity-pdns`: 
+- `insight-get-entity-dhcp`: 
+- `insight-get-entity-file`: 
+- `insight-get-detections`: 
+- `insight-get-detection-rules`: 
+- `insight-resolve-detection`: 
+- `insight-get-detection-rule-events`: 
 
 
 ## Google Threat Intelligence
@@ -1154,21 +1095,21 @@ This integration analyzes suspicious hashes, URLs, domains, and IP addresses
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `url-scan`: 
+- `gti-comments-add`: 
+- `gti-file-scan-upload-url`: 
+- `gti-comments-delete`: 
+- `gti-comments-get`: 
+- `gti-comments-get-by-id`: 
+- `gti-search`: 
+- `gti-file-sandbox-report`: 
+- `gti-passive-dns-data`: 
+- `gti-analysis-get`: 
+- `gti-file-sigma-analysis`: 
+- `gti-privatescanning-file`: 
+- `gti-privatescanning-file-scan`: 
+- `gti-privatescanning-analysis-get`: 
+- `gti-curated-threat-actors-get`: 
 
 
 ## Google Threat Intelligence - ASM Issues
@@ -1180,12 +1121,9 @@ This integration allows the creation of incidents based on ASM Issues from Googl
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gti-asm-issue-list`: 
+- `gti-asm-issue-get`: 
+- `gti-asm-issue-status-update`: 
 
 
 ## Google Threat Intelligence - DTM Alerts
@@ -1197,12 +1135,9 @@ This integration allows the creation of incidents based on DTM Alerts from Googl
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gti-dtm-alert-list`: 
+- `gti-dtm-alert-get`: 
+- `gti-dtm-alert-status-update`: 
 
 
 ## Google Threat Intelligence - Relevance System Alerts
@@ -1214,12 +1149,9 @@ This integration allows the creation of incidents based on RS Alerts from Google
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gti-rs-alert-list`: 
+- `gti-rs-alert-get`: 
+- `gti-rs-alert-status-update`: 
 
 
 ## Group-IB Digital Risk Protection
@@ -1231,14 +1163,11 @@ Pack helps to integrate Group-IB Digital Risk Protection and get violations inci
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gibdrp-get-brands`: 
+- `gibdrp-get-subscriptions`: 
+- `gibdrp-get-violation-by-id`: 
+- `gibdrp-change-violation-status`: 
+- `gibdrp-create-violation`: 
 
 
 ## Group-IB Threat Intelligence
@@ -1250,21 +1179,21 @@ Pack helps to integrate Group-IB Threat Intelligence and get incidents directly 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gibti-get-compromised-account-info`: 
+- `gibti-get-compromised-breached-info`: 
+- `gibti-get-compromised-mule-info`: 
+- `gibti-get-compromised-spd-info`: 
+- `gibti-get-osi-git-leak-info`: 
+- `gibti-get-osi-public-leak-info`: 
+- `gibti-get-osi-vulnerability-info`: 
+- `gibti-get-attacks-ddos-info`: 
+- `gibti-get-attacks-deface-info`: 
+- `gibti-get-phishing-kit-info`: 
+- `gibti-get-threat-info`: 
+- `gibti-get-threat-actor-info`: 
+- `gibti-get-suspicious-ip-tor-node-info`: 
+- `gibti-get-suspicious-ip-open-proxy-info`: 
+- `gibti-get-suspicious-ip-socks-proxy-info`: 
 
 
 ## Handle TD events
@@ -1289,7 +1218,7 @@ This integration fetches alerts from iManage Threat Manager, an AI-driven securi
 
 **Commands:**
 
-- `None`: 
+- `imanage-threat-manager-get-events`: 
 
 
 ## Indicator Enrichment - Infoblox Cloud
@@ -1331,21 +1260,14 @@ Infoblox Threat Defense with DDI integration leverages DNS as the first line of 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `bloxone-td-dossier-lookup-get`: 
+- `bloxone-td-dossier-source-list`: 
+- `bloxone-td-lookalike-domain-list`: 
+- `infobloxcloud-block-ip`: 
+- `infobloxcloud-unblock-ip`: 
+- `infobloxcloud-block-domain`: 
+- `infobloxcloud-unblock-domain`: 
+- `infobloxcloud-customlist-indicator-remove`: 
 
 
 ## Intel471 Credentials
@@ -1357,8 +1279,7 @@ Fetches leaked credentials from the Intel471 Credentials API (/credentials/strea
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `intel471-credentials-get-indicators`: 
 
 
 ## IP Enrichment - External - RST Threat Feed
@@ -1394,21 +1315,15 @@ This playbook enriches IP addresses with the dossier, TIDE and asset data using 
 **Product:** IPQualityScore (IPQS) Threat Risk Scoring  
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `ipqs-ip-reputation`: 
+- `ipqs-email-reputation`: 
+- `ipqs-url-reputation`: 
+- `ipqs-phone-reputation`: 
+- `ipqs-username-leaked`: 
+- `ipqs-password-leaked`: 
+- `ipqs-email-leaked`: 
+- `ipqs-file-scan`: 
+- `ipqs-url-file-scan`: 
 
 
 ## Malwarebytes
@@ -1417,7 +1332,7 @@ This playbook enriches IP addresses with the dossier, TIDE and asset data using 
 **Product:** ThreatDown  
 **Commands:**
 
-- `None`: 
+- `malwarebytes-scan-and-remediate`: 
 
 
 ## Mandiant Advantage Threat Intelligence
@@ -1429,21 +1344,10 @@ Enrich Indicators of Compromise, and fetch information about Actors, Malware Fam
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `mati-get-indicator`: 
+- `mati-get-actor`: 
+- `mati-get-malware`: 
+- `mati-get-campaign`: 
 
 
 ## Mandiant Enrich
@@ -1455,14 +1359,9 @@ Enrich Indicators of Compromise using the platform, and create indicators for Th
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `mati-get-actor`: 
+- `mati-get-malware`: 
+- `mati-get-campaign`: 
 
 
 ## MAR - Endpoint data collection
@@ -1486,19 +1385,8 @@ Use the McAfee Threat Intelligence Exchange (TIE) integration to get file reputa
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `tie-set-file-reputation`: 
+- `tie-file-references`: 
 
 
 ## MITRE ATT&CK - Courses of Action
@@ -1887,8 +1775,8 @@ Retrieve alerts and recommendations from NTT CTS This integration was integrated
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `ntt-cyber-threat-sensor-poll-blobs`: 
+- `ntt-cyber-threat-sensor-fetch-blobs`: 
 
 
 ## OpenCTI
@@ -1900,21 +1788,21 @@ Manages indicators from OpenCTI. This integration was tested with version 5.12.1
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `opencti-get-indicators`: 
+- `opencti-indicator-delete`: 
+- `opencti-indicator-field-update`: 
+- `opencti-indicator-create`: 
+- `opencti-indicator-field-add`: 
+- `opencti-indicator-field-remove`: 
+- `opencti-indicator-create`: 
+- `opencti-label-list`: 
+- `opencti-label-create`: 
+- `opencti-external-reference-create`: 
+- `opencti-marking-definition-list`: 
+- `opencti-relationship-create`: 
+- `opencti-incident-delete`: 
+- `opencti-incident-create`: 
+- `opencti-observable-field-add`: 
 
 
 ## OpenCTI Create Indicator
@@ -1945,18 +1833,10 @@ Use the Palo Alto Networks Threat Vault to research the latest threats (vulnerab
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `threatvault-threat-signature-get`: 
+- `threatvault-release-note-get`: 
+- `threatvault-threat-batch-search`: 
+- `threatvault-threat-search`: 
 
 
 ## PAN-OS - Apply Security Profile to Policy Rule
@@ -2109,20 +1989,18 @@ Proofpoint email security appliance. This integration was integrated and tested 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `proofpoint-pps-smart-search`: 
+- `proofpoint-pps-quarantine-messages-list`: 
+- `proofpoint-pps-quarantine-message-release`: 
+- `proofpoint-pps-quarantine-message-resubmit`: 
+- `proofpoint-pps-quarantine-message-forward`: 
+- `proofpoint-pps-quarantine-message-move`: 
+- `proofpoint-pps-quarantine-message-delete`: 
+- `proofpoint-pps-quarantine-message-download`: 
+- `proofpoint-pps-get-user`: 
+- `proofpoint-pps-create-user`: 
+- `proofpoint-pps-modify-user`: 
+- `proofpoint-pps-delete-user`: 
 
 
 ## Proofpoint Threat Protection
@@ -2134,16 +2012,16 @@ Threat Protection APIs are REST APIs that allow Proofpoint On Demand customers t
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `proofpoint-tp-blocklist-get`: 
+- `proofpoint-tp-blocklist-add-or-delete-entry`: 
+- `proofpoint-tp-safelist-get`: 
+- `proofpoint-tp-safelist-add-or-delete-entry`: 
+- `proofpoint-tp-blocklist-list`: 
+- `proofpoint-tp-blocklist-add-entry`: 
+- `proofpoint-tp-blocklist-delete-entry`: 
+- `proofpoint-tp-safelist-list`: 
+- `proofpoint-tp-safelist-add-entry`: 
+- `proofpoint-tp-safelist-delete-entry`: 
 
 
 ## Proofpoint Threat Response
@@ -2155,21 +2033,21 @@ Use the Proofpoint Threat Response integration to orchestrate and automate incid
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `proofpoint-tr-get-list`: 
+- `proofpoint-tr-add-to-list`: 
+- `proofpoint-tr-block-ip`: 
+- `proofpoint-tr-block-domain`: 
+- `proofpoint-tr-search-indicator`: 
+- `proofpoint-tr-delete-indicator`: 
+- `proofpoint-tr-block-url`: 
+- `proofpoint-tr-block-hash`: 
+- `proofpoint-tr-list-incidents`: 
+- `proofpoint-tr-get-incident`: 
+- `proofpoint-tr-update-incident-comment`: 
+- `proofpoint-tr-add-user-to-incident`: 
+- `proofpoint-tr-ingest-alert`: 
+- `proofpoint-tr-close-incident`: 
+- `proofpoint-tr-verify-quarantine`: 
 
 
 ## PublishThreatIntelReport
@@ -2191,11 +2069,6 @@ Sets a Threat Intel Report as published
 
 Qintel’s Patch Management Intelligence (PMI) product simplifies the vulnerability management process by providing vital context around reported Common Vulnerabilities and Exposures. With this integration, users can query PMI to surface CVEs that are known by Qintel to be leveraged by eCrime and Nation State adversaries. This integration was integrated and tested with version 0.16.0 of PMI
 
-**Commands:**
-
-- `None`: 
-- `None`: 
-
 
 ## Qintel QSentry
 
@@ -2203,11 +2076,6 @@ Qintel’s Patch Management Intelligence (PMI) product simplifies the vulnerabil
 **Product:** Qintel  
 
 QSentry queries help measure the likelihood that a user is masking their identity using publicly or privately available proxy or VPN services. The returns also flag any known fraud associations. QSentry aggregates data from Qintel’s proprietary Deep and DarkWeb research, as well as from commercially available anonymization services. This integration was integrated and tested with version 4.0 of Qintel QSentry
-
-**Commands:**
-
-- `None`: 
-- `None`: 
 
 
 ## Qintel QWatch
@@ -2219,8 +2087,7 @@ Qintel's QWatch system contains credentials obtained from dump sites, hacker col
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `qintel-qwatch-exposures`: 
 
 
 ## Rapid7 - Threat Command (IntSights)
@@ -2232,21 +2099,21 @@ Rapid7 Insight - Threat Command allows managing alerts, CVEs, IOCs, and assets b
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `threat-command-cyber-term-list`: 
+- `threat-command-cyber-term-cve-list`: 
+- `threat-command-cyber-term-ioc-list`: 
+- `threat-command-source-list`: 
+- `threat-command-source-document-create`: 
+- `threat-command-source-document-delete`: 
+- `threat-command-source-document-ioc-create`: 
+- `threat-command-ioc-search`: 
+- `threat-command-ioc-tags-add`: 
+- `threat-command-account-whitelist-update`: 
+- `threat-command-account-whitelist-remove`: 
+- `threat-command-ioc-blocklist-add`: 
+- `threat-command-ioc-blocklist-remove`: 
+- `threat-command-ioc-severity-update`: 
+- `threat-command-ioc-comment-add`: 
 
 
 ## Recorded Future - Lists
@@ -2258,10 +2125,10 @@ Search and manage watchlists in Recorded Future This integration was integrated 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `recordedfuture-lists-search`: 
+- `recordedfuture-lists-add-entities`: 
+- `recordedfuture-lists-remove-entities`: 
+- `recordedfuture-lists-entities`: 
 
 
 ## Recorded Future - Playbook Alerts
@@ -2273,9 +2140,9 @@ Fetch & triage Recorded Future Playbook Alerts
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `recordedfuture-playbook-alerts-search`: 
+- `recordedfuture-playbook-alerts-details`: 
+- `recordedfuture-playbook-alerts-update`: 
 
 
 ## Recorded Future - Threat Actor Search
@@ -2299,11 +2166,11 @@ Fetch and triage Recorded Future Classic Alerts and Recorded Future Playbook Ale
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `rf-alerts`: 
+- `rf-alert-lookup`: 
+- `rf-alert-update`: 
+- `rf-alert-rules`: 
+- `rf-alert-images`: 
 
 
 ## Recorded Future Attack Surface Intelligence
@@ -2312,7 +2179,7 @@ Fetch and triage Recorded Future Classic Alerts and Recorded Future Playbook Ale
 **Product:** Recorded Future Attack Surface Intelligence  
 **Commands:**
 
-- `None`: 
+- `asi-project-issues-fetch`: 
 
 
 ## Recorded Future CVE Intelligence
@@ -2432,8 +2299,8 @@ File reputation using Recorded Future SOAR Enrichment
 **Product:** Recorded Future Identity  
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `recordedfuture-identity-search`: 
+- `recordedfuture-identity-lookup`: 
 
 
 ## Recorded Future Identity - Create Incident (sub)
@@ -2608,20 +2475,15 @@ Unique threat intel technology that automatically serves up relevant insights in
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `recordedfuture-threat-assessment`: 
+- `recordedfuture-intelligence`: 
+- `recordedfuture-links`: 
+- `recordedfuture-single-alert`: 
+- `recordedfuture-alerts`: 
+- `recordedfuture-alert-rules`: 
+- `recordedfuture-alert-set-status`: 
+- `recordedfuture-alert-set-note`: 
+- `recordedfuture-malware-search`: 
 
 
 ## Recorded Future Vulnerability
@@ -2668,7 +2530,7 @@ ReliaQuest GreyMatter DR monitors and manages an organization's digital risk acr
 
 **Commands:**
 
-- `None`: 
+- `ds-search`: 
 
 
 ## ReliaquestTakedown
@@ -2680,11 +2542,11 @@ This is Reliaquest DRP Takedown integration. It enables platform user to create 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `rq-takedown-create`: 
+- `rq-takedown-list-brand`: 
+- `rq-takedown-create-comment`: 
+- `rq-takedown-upload-attachment`: 
+- `rq-takedown-download-attachment`: 
 
 
 ## Retrieve Alert Attachments - Rapid7 ThreatCommand
@@ -2763,7 +2625,7 @@ SecneurX provides real-time threat intelligence that protects companies against 
 
 **Commands:**
 
-- `None`: 
+- `snxfeeds-get-indicators`: 
 
 
 ## SEKOIAIntelligenceCenter
@@ -2772,24 +2634,6 @@ SecneurX provides real-time threat intelligence that protects companies against 
 **Product:** SEKOIAIntelligenceCenter  
 
 Fetch Indicator and Observables from SEKOIA.IO Intelligence Center. To use this integration, please create an API Key with the right permissions. This integration was integrated and tested with version 2.20220712 of SEKOIA.IO Intelligence Center
-
-**Commands:**
-
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
 
 
 ## SEPCheckOutdatedEndpoints
@@ -2813,9 +2657,7 @@ Leverage the power of Sixgill to supercharge the platform. Enrich IOCs such as d
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `sixgill-get-actor`: 
 
 
 ## Sixgill DarkFeed Threat Intelligence
@@ -2824,10 +2666,6 @@ Leverage the power of Sixgill to supercharge the platform. Enrich IOCs such as d
 **Product:** Sixgill Darkfeed - Annual Subscription  
 
 Sixgill's premium underground intelligence collection capabilities, real-time collection and advanced warnings of IOCs help you keep your edge against unknown threats. This integration was integrated and tested with Sixgill clients
-
-**Commands:**
-
-- `None`: 
 
 
 ## SixgillSearchIndicators
@@ -2847,21 +2685,21 @@ Symantec EDR (On Prem) endpoints help to detect threats in your network by filte
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `symantec-edr-endpoint-isolate`: 
+- `symantec-edr-domain-file-association-list`: 
+- `symantec-edr-endpoint-domain-association-list`: 
+- `symantec-edr-endpoint-file-association-list`: 
+- `symantec-edr-domain-instance-list`: 
+- `symantec-edr-endpoint-instance-list`: 
+- `symantec-edr-file-instance-list`: 
+- `symantec-edr-system-activity-list`: 
+- `symantec-edr-audit-event-list`: 
+- `symantec-edr-event-list`: 
+- `symantec-edr-incident-event-list`: 
+- `symantec-edr-incident-list`: 
+- `symantec-edr-incident-comment-get`: 
+- `symantec-edr-deny-list-policy-get`: 
+- `symantec-edr-allow-list-policy-get`: 
 
 
 ## Symantec Endpoint Protection v2
@@ -2873,19 +2711,19 @@ Query the Symantec Endpoint Protection Manager using the official REST API
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `sep-endpoints-info`: 
+- `sep-groups-info`: 
+- `sep-system-info`: 
+- `sep-command-status`: 
+- `sep-client-content`: 
+- `sep-list-policies`: 
+- `sep-assign-policy`: 
+- `sep-list-locations`: 
+- `sep-endpoint-quarantine`: 
+- `sep-scan-endpoint`: 
+- `sep-update-endpoint-content`: 
+- `sep-move-client-to-group`: 
+- `sep-identify-old-clients`: 
 
 
 ## Sysdig Response Actions
@@ -2897,12 +2735,12 @@ This is an integration that will use Sysdig agent to respond to malicious activi
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `execute-response-action`: 
+- `create-system-capture`: 
+- `get-capture-file`: 
+- `get-action-execution`: 
+- `sysdig-agent-info-get`: 
+- `sysdig-customer-info-get`: 
 
 
 ## Sysdig Trigger System Capture
@@ -2922,7 +2760,7 @@ Tanium Threat Response - This Integration works with Tanium Threat Response vers
 
 **Commands:**
 
-- `None`: 
+- `tanium-tr-get-intel-doc-by-id`: 
 
 
 ## Tanium Threat Response v2
@@ -2934,21 +2772,21 @@ Use the Tanium Threat Response integration to manage endpoints processes, eviden
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `tanium-tr-get-intel-doc-by-id`: 
+- `tanium-tr-list-intel-docs`: 
+- `tanium-tr-list-alerts`: 
+- `tanium-tr-get-alert-by-id`: 
+- `tanium-tr-alert-update-state`: 
+- `tanium-tr-create-snapshot`: 
+- `tanium-tr-delete-snapshot`: 
+- `tanium-tr-list-snapshots`: 
+- `tanium-tr-delete-local-snapshot`: 
+- `tanium-tr-list-connections`: 
+- `tanium-tr-create-connection`: 
+- `tanium-tr-delete-connection`: 
+- `tanium-tr-close-connection`: 
+- `tanium-tr-list-labels`: 
+- `tanium-tr-get-label-by-id`: 
 
 
 ## ThreatConnect v3
@@ -2960,21 +2798,21 @@ ThreatConnect's integration is a intelligence-driven security operations solutio
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `tc-owners`: 
+- `tc-indicators`: 
+- `tc-get-tags`: 
+- `tc-tag-indicator`: 
+- `tc-get-indicator`: 
+- `tc-get-indicators-by-tag`: 
+- `tc-add-indicator`: 
+- `tc-create-incident`: 
+- `tc-incident-associate-indicator`: 
+- `tc-get-incident-associate-indicators`: 
+- `tc-update-indicator`: 
+- `tc-delete-indicator-tag`: 
+- `tc-delete-indicator`: 
+- `tc-create-campaign`: 
+- `tc-create-event`: 
 
 
 ## ThreatExchange v2
@@ -2986,21 +2824,11 @@ Receive threat intelligence about applications, IP addresses, URLs, and hashes. 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `threatexchange-query`: 
+- `threatexchange-members`: 
+- `threatexchange-tags-search`: 
+- `threatexchange-tagged-objects-list`: 
+- `threatexchange-object-get-by-id`: 
 
 
 ## ThreatIntelManagementGetIncidentsPerFeed
@@ -3017,12 +2845,6 @@ Total number of incidents per OOTB feed. This automation runs using the default 
 **Product:** ThreatMiner  
 
 Data Mining for Threat Intelligence
-
-**Commands:**
-
-- `None`: 
-- `None`: 
-- `None`: 
 
 
 ## ThreatstreamBuildIocImportJson
@@ -3053,21 +2875,21 @@ ThreatZone malware analysis sandboxing. This integration was integrated and test
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `tz-sandbox-upload-sample`: 
+- `tz-static-upload-sample`: 
+- `tz-cdr-upload-sample`: 
+- `tz-url-analysis`: 
+- `tz-get-result`: 
+- `tz-get-indicator-result`: 
+- `tz-get-ioc-result`: 
+- `tz-get-yara-result`: 
+- `tz-get-artifact-result`: 
+- `tz-get-config-result`: 
+- `tz-get-sanitized`: 
+- `tz-download-html-report`: 
+- `tz-get-metafields`: 
+- `tz-get-environments`: 
+- `tz-list-network-configs`: 
 
 
 ## Unblock Indicator - Infoblox Cloud
@@ -3091,17 +2913,6 @@ This playbook unblocks the given IP or domain by adding it to the given allow ty
 **Product:** Unit 42 Threat Intelligence by Palo Alto Networks  
 
 Enrich indicators with Unit 42 threat intelligence context including verdicts, threat object associations, and relationships
-
-**Commands:**
-
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
 
 
 ## UnpublishThreatIntelReport
@@ -3164,9 +2975,7 @@ USTAv4 Account Takeover Prevention is designed to collect compromised credential
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `usta-atp-search-username`: 
 
 
 ## USTAv4 Stolen Credit Cards
@@ -3178,9 +2987,7 @@ This integration offers organizations the ability to track stolen credit card da
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `usta-scc-search`: 
 
 
 ## XDR Best Practice Assessment

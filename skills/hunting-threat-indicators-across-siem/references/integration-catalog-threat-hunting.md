@@ -12,7 +12,7 @@ Appsentinels.ai offers a platform for collecting, analyzing, and managing securi
 
 **Commands:**
 
-- `None`: 
+- `appsentinels-get-events`: 
 
 
 ## Elasticsearch v2
@@ -24,21 +24,21 @@ Elasticsearch_v2 integration is used to search for and analyze data in real time
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `es-search`: 
+- `get-mapping-fields`: 
+- `es-eql-search`: 
+- `es-index`: 
+- `es-integration-health-check`: 
+- `es-get-indices-statistics`: 
+- `es-esql-search`: 
+- `es-kibana-alerting-health-get`: 
+- `es-kibana-rule-types-list`: 
+- `es-kibana-rule-list`: 
+- `es-kibana-rule-enable`: 
+- `es-kibana-rule-disable`: 
+- `es-kibana-rule-update`: 
+- `es-kibana-rule-alert-mute`: 
+- `es-kibana-rule-alert-unmute`: 
 
 
 ## FortiSIEM v2
@@ -50,21 +50,21 @@ Use FortiSIEM v2 to fetch and update incidents, search events and manage FortiSI
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `fortisiem-event-search`: 
+- `fortisiem-incident-update`: 
+- `fortisiem-cmdb-devices-list`: 
+- `fortisiem-cmdb-device-get`: 
+- `fortisiem-monitored-organizations-list`: 
+- `fortisiem-event-list-by-incident`: 
+- `fortisiem-watchlist-list`: 
+- `fortisiem-watchlist-get`: 
+- `fortisiem-watchlist-add`: 
+- `fortisiem-watchlist-entry-add`: 
+- `fortisiem-watchlist-entry-update`: 
+- `fortisiem-watchlist-entry-delete`: 
+- `fortisiem-watchlist-delete`: 
+- `fortisiem-watchlist-entry-get`: 
+- `fortisiem-event-search-results`: 
 
 
 ## ForwardAuditLogsToSplunkHEC
@@ -88,10 +88,9 @@ FullHunt is the attack surface database of the entire Internet. FullHunt enables
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `fullhunt-get-account-status`: 
+- `fullhunt-get-host`: 
+- `fullhunt-get-subdomain`: 
 
 
 ## GaiatopForwardAuditLogsToSplunkHEC
@@ -158,15 +157,15 @@ Use the Hoxhunt integration to send feedback to reporters of incidents, set inci
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `hoxhunt-current-user-get`: 
+- `hoxhunt-incident-threats-get`: 
+- `hoxhunt-incident-note-add`: 
+- `hoxhunt-incident-threats-remove`: 
+- `hoxhunt-incident-soc-feedback-send`: 
+- `hoxhunt-incident-set-sensitive`: 
+- `hoxhunt-incident-set-soc-classification`: 
+- `hoxhunt-incident-update-state`: 
+- `get-mapping-fields`: 
 
 
 ## IBM QRadar v3
@@ -178,21 +177,21 @@ IBM QRadar SIEM helps security teams accurately detect and prioritize threats ac
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `qradar-offenses-list`: 
+- `qradar-offense-update`: 
+- `qradar-closing-reasons`: 
+- `qradar-offense-notes-list`: 
+- `qradar-offense-note-create`: 
+- `qradar-rules-list`: 
+- `qradar-rule-groups-list`: 
+- `qradar-assets-list`: 
+- `qradar-saved-searches-list`: 
+- `qradar-searches-list`: 
+- `qradar-search-create`: 
+- `qradar-search-status-get`: 
+- `qradar-search-results-get`: 
+- `qradar-search-delete`: 
+- `qradar-reference-sets-list`: 
 
 
 ## IBM Security QRadar SOAR
@@ -204,21 +203,21 @@ Case management that enables visibility across your tools for continual IR impro
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `rs-search-incidents`: 
+- `rs-update-incident`: 
+- `rs-incidents-get-members`: 
+- `rs-get-incident`: 
+- `rs-get-incident`: 
+- `rs-incident-artifacts`: 
+- `rs-incident-attachments`: 
+- `rs-related-incidents`: 
+- `rs-incidents-get-tasks`: 
+- `rs-add-note`: 
+- `rs-add-artifact`: 
+- `rs-delete-incidents`: 
+- `rs-list-incident-notes`: 
+- `rs-update-task`: 
+- `rs-add-custom-task`: 
 
 
 ## IbmAddNote
@@ -335,21 +334,21 @@ Use this Content Pack to search logs, fetch incident logs from LogPoint, analyze
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `lp-get-incidents`: 
+- `lp-get-incident-data`: 
+- `lp-get-incident-states`: 
+- `lp-add-incident-comment`: 
+- `lp-assign-incidents`: 
+- `lp-resolve-incidents`: 
+- `lp-close-incidents`: 
+- `lp-reopen-incidents`: 
+- `lp-get-users`: 
+- `lp-get-users-preference`: 
+- `lp-get-logpoints`: 
+- `lp-get-repos`: 
+- `lp-get-devices`: 
+- `lp-get-livesearches`: 
+- `lp-get-searchid`: 
 
 
 ## LogPoint SIEM Playbook
@@ -369,11 +368,9 @@ Logsign SIEM provides comprehensive visibility and control of your data lake by 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `logsign-fetch-incidents`: 
+- `logsign-get-columns-query`: 
+- `logsign-get-count-query`: 
 
 
 ## Microsoft Sentinel
@@ -385,21 +382,21 @@ Use the Azure Sentinel integration to get and manage incidents and get related e
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `azure-sentinel-get-incident-by-id`: 
+- `azure-sentinel-list-incidents`: 
+- `azure-sentinel-list-watchlists`: 
+- `azure-sentinel-delete-watchlist`: 
+- `azure-sentinel-watchlist-create-update`: 
+- `azure-sentinel-update-incident`: 
+- `azure-sentinel-create-incident`: 
+- `azure-sentinel-delete-incident`: 
+- `azure-sentinel-list-incident-comments`: 
+- `azure-sentinel-incident-add-comment`: 
+- `azure-sentinel-incident-delete-comment`: 
+- `azure-sentinel-list-incident-relations`: 
+- `azure-sentinel-list-incident-entities`: 
+- `azure-sentinel-list-incident-alerts`: 
+- `azure-sentinel-list-watchlist-items`: 
 
 
 ## MicrosoftSentinelConvertAlertsToTable
@@ -684,7 +681,7 @@ Use the SplunkPy integration to: This integration was integrated and tested with
 
 **Commands:**
 
-- `None`: 
+- `splunk-results`: 
 
 
 ## SplunkPy v2
@@ -696,7 +693,7 @@ Use the SplunkPy v2 integration to: Important: This integration is designed spec
 
 **Commands:**
 
-- `None`: 
+- `splunk-results`: 
 
 
 ## SplunkShowAsset

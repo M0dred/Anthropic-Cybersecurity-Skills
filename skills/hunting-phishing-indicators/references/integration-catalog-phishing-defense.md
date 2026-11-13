@@ -12,11 +12,9 @@ Agari Phishing Defense stops phishing, BEC, and other identity deception attacks
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `apd-list-policy-events`: 
+- `apd-list-message-data`: 
+- `apd-remediate-message`: 
 
 
 ## Check Point - Phishing Takedown
@@ -47,21 +45,21 @@ The Best Way to Protect Enterprise Email & Collaboration from phishing, malware,
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `checkpointhec-get-entity`: 
+- `checkpointhec-get-email-info`: 
+- `checkpointhec-get-scan-info`: 
+- `checkpointhec-search-emails`: 
+- `checkpointhec-send-action`: 
+- `checkpointhec-get-action-result`: 
+- `checkpointhec-send-notification`: 
+- `checkpointhec-get-events`: 
+- `checkpointhec-get-ctp-list`: 
+- `checkpointhec-delete-avurl-exceptions`: 
+- `checkpointhec-delete-avdlp-exception`: 
+- `checkpointhec-get-anomaly-exceptions`: 
+- `checkpointhec-update-cp2-exception`: 
+- `checkpointhec-create-avdlp-exception`: 
+- `checkpointhec-delete-ctp-list-items`: 
 
 
 ## CheckPhish
@@ -70,13 +68,6 @@ The Best Way to Protect Enterprise Email & Collaboration from phishing, malware,
 **Product:** CheckPhish  
 
 Check any URL to detect supsicious behavior
-
-**Commands:**
-
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
 
 
 ## CheckPointHEC Get email for incident
@@ -100,7 +91,7 @@ The Cisco ETD Connector ingests Cisco Secure Email Threat Defense (ETD) message,
 
 **Commands:**
 
-- `None`: 
+- `cisco-etd-get-events`: 
 
 
 ## Cloaked Ursa Diplomatic Phishing Campaign
@@ -196,9 +187,9 @@ This pack includes configurations to combine the world-class threat detection of
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `darktrace-email-get-email`: 
+- `darktrace-email-hold-email`: 
+- `darktrace-email-release-email`: 
 
 
 ## DBot Create Phishing Classifier V2
@@ -354,12 +345,7 @@ This is the Email Hippo integration used to verify email sources as fake emails 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `email-hippo-email-quota-get`: 
 
 
 ## EmailAskUser
@@ -439,9 +425,8 @@ EmailRep.io provides the reputation and reports for email addresses. This integr
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `emailrepio-email-reputation-get`: 
+- `emailrepio-email-address-report`: 
 
 
 ## EmailReputation
@@ -479,21 +464,18 @@ FireEye Email Security (EX) series protects against breaches caused by advanced 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `fireeye-ex-get-alerts`: 
+- `fireeye-ex-get-alert-details`: 
+- `fireeye-ex-get-artifacts-by-uuid`: 
+- `fireeye-ex-get-artifacts-metadata-by-uuid`: 
+- `fireeye-ex-get-quarantined-emails`: 
+- `fireeye-ex-release-quarantined-emails`: 
+- `fireeye-ex-download-quarantined-emails`: 
+- `fireeye-ex-get-reports`: 
+- `fireeye-ex-list-allowedlist`: 
+- `fireeye-ex-update-allowedlist`: 
+- `fireeye-ex-list-blockedlist`: 
+- `fireeye-ex-update-blockedlist`: 
 
 
 ## Get Email From Email Gateway - FireEye
@@ -571,21 +553,21 @@ Gophish is a powerful, open-source phishing framework that makes it easy to test
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `gophish-get-users`: 
+- `gophish-get-user`: 
+- `gophish-create-user`: 
+- `gophish-modify-user`: 
+- `gophish-delete-user`: 
+- `gophish-get-all-sending-profiles`: 
+- `gophish-get-sending-profile`: 
+- `gophish-create-sending-profile`: 
+- `gophish-delete-sending-profile`: 
+- `gophish-get-all-landing-pages`: 
+- `gophish-create-landing-page`: 
+- `gophish-delete-landing-page`: 
+- `gophish-import-site-as-landing-page`: 
+- `gophish-get-all-templates`: 
+- `gophish-get-template`: 
 
 
 ## HtmlPhishingCheck
@@ -620,10 +602,6 @@ Automatically changes email field when choosing a classification
 
 Collaborative web service that provides validation on whether a URL is a phishing page or not by analyzing the content of the webpage
 
-**Commands:**
-
-- `None`: 
-
 
 ## LinkToPhishingCampaign
 
@@ -642,21 +620,21 @@ Use the Mimecast integration to manage email security, continuity, and archiving
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `mimecast-query`: 
+- `mimecast-list-blocked-sender-policies`: 
+- `mimecast-get-policy`: 
+- `mimecast-create-policy`: 
+- `mimecast-delete-policy`: 
+- `mimecast-manage-sender`: 
+- `mimecast-list-managed-url`: 
+- `mimecast-create-managed-url`: 
+- `mimecast-list-messages`: 
+- `mimecast-get-attachment-logs`: 
+- `mimecast-get-url-logs`: 
+- `mimecast-get-impersonation-logs`: 
+- `mimecast-url-decode`: 
+- `mimecast-discover`: 
+- `mimecast-refresh-token`: 
 
 
 ## MimecastFindEmail
@@ -710,10 +688,8 @@ OpenPhish uses proprietary Artificial Intelligence algorithms to automatically i
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `openphish-reload`: 
+- `openphish-status`: 
 
 
 ## PhishER
@@ -725,12 +701,11 @@ KnowBe4 PhishER integration allows to pull events from PhishER system and do mut
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `phisher-message-list`: 
+- `phisher-create-comment`: 
+- `phisher-update-message`: 
+- `phisher-tags-create`: 
+- `phisher-tags-delete`: 
 
 
 ## Phishing - Handle Microsoft 365 Defender Results
@@ -815,10 +790,8 @@ PhishTank is a free community site where anyone can submit, verify, track and sh
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `phishtank-reload`: 
+- `phishtank-status`: 
 
 
 ## PhishUp
@@ -827,10 +800,6 @@ PhishTank is a free community site where anyone can submit, verify, track and sh
 **Product:** PhishUp  
 
 If you don't have PhishUp Api Key please create an account on PhishUp and get a free Api Key. Also you can visit and test PhishUp Web Demo. If you have any question feel free to concat us: info@phishup.com
-
-**Commands:**
-
-- `None`: 
 
 
 ## Process Email - EWS
@@ -854,7 +823,7 @@ Proofpoint Isolation is an integration that supports fetching Browser and Email 
 
 **Commands:**
 
-- `None`: 
+- `proofpoint-isolation-get-events`: 
 
 
 ## Proofpoint TAP v2
@@ -866,21 +835,18 @@ Use the Proofpoint Targeted Attack Protection (TAP) integration to protect again
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `proofpoint-get-events`: 
+- `proofpoint-get-forensics`: 
+- `proofpoint-get-events-clicks-blocked`: 
+- `proofpoint-get-events-clicks-permitted`: 
+- `proofpoint-get-events-messages-blocked`: 
+- `proofpoint-get-events-messages-delivered`: 
+- `proofpoint-list-issues`: 
+- `proofpoint-list-campaigns`: 
+- `proofpoint-get-campaign`: 
+- `proofpoint-list-most-attacked-users`: 
+- `proofpoint-get-top-clickers`: 
+- `proofpoint-url-decode`: 
 
 
 ## ProofpointTAPMostAttackedUsers
@@ -945,9 +911,8 @@ Symantec Email Security.cloud is a hosted service that filters email messages an
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
+- `symantec-email-security-ioc-list`: 
+- `symantec-email-security-ioc-action`: 
 
 
 ## Trustwave Secure Email Gateway
@@ -959,21 +924,20 @@ Trustwave SEG is a secure messaging solution that protects businesses and users 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `trustwave-seg-get-version`: 
+- `trustwave-seg-automatic-config-backup-list`: 
+- `trustwave-seg-automatic-config-backup-restore`: 
+- `trustwave-seg-automatic-config-backup-run`: 
+- `trustwave-seg-list-alerts`: 
+- `trustwave-seg-statistics`: 
+- `trustwave-seg-list-servers`: 
+- `trustwave-seg-get-server`: 
+- `trustwave-seg-list-classifications`: 
+- `trustwave-seg-list-quarantine-folders`: 
+- `trustwave-seg-list-quarantine-folders-with-day-info`: 
+- `trustwave-seg-list-day-info-by-quarantine-folder`: 
+- `trustwave-seg-find-quarantine-message`: 
+- `trustwave-seg-spiderlabs-forward-quarantine-message-as-spam`: 
 
 
 ## VectraXDRGenerateMailBody

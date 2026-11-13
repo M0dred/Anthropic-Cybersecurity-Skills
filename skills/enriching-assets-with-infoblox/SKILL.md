@@ -1,7 +1,7 @@
 ---
 name: enriching-assets-with-infoblox
 description: >-
-  Is used to initiate the incident response. This playbook runs when an incident is selected for investigation. It will change the state from pending to active and it will list the available indicators, events, assets, and comments from Infoblox corresponding to the incident. If incident severity is found to be higher than or equivalent to medium, it will create a ServiceNow incident otherwise the given incident. Covers 3 vendor variants: Infoblox Threat Defense with DDI. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: enriching, assets, with, infoblox, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Enriches MAC addresses with DHCP lease information using Infoblox Threat Defense with DDI integration. Covers 3 vendor variants: Infoblox Threat Defense with DDI. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: enriching, assets, with, infoblox, threat intelligence. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: threat-intelligence
 tags:

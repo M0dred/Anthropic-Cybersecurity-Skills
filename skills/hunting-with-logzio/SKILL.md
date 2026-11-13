@@ -1,7 +1,7 @@
 ---
 name: hunting-with-logzio
 description: >-
-  Handles a Logz.io Alert by retrieving the events that generated it. Covers 2 vendor variants: Logz.io. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: hunting, with, logzio, threat hunting. Do not use for the vendor-neutral procedure - use the matching generic skill.
+  Queries Logz.io in order to hunt indicators such as File Hashes IP Addresses Domains \ URLS And outputs the related users, IP addresses, host names for the indicators searched. Covers 2 vendor variants: Logz.io. Use when this procedure must run through one of these products, or when the vendor-neutral workflow needs the exact API or console steps. Keywords: hunting, with, logzio, threat hunting. Do not use for the vendor-neutral procedure - use the matching generic skill.
 domain: cybersecurity
 subdomain: threat-hunting
 tags:

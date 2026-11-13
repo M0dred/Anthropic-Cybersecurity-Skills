@@ -12,21 +12,19 @@ Druva Ransomware Response Integration provides ransomware protection for endpoin
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `druva-find-device`: 
+- `druva-list-quarantine-ranges`: 
+- `druva-quarantine-resource`: 
+- `druva-delete-quarantine-range`: 
+- `druva-view-quarantine-range`: 
+- `druva-update-quarantine-range`: 
+- `druva-list-quarantine-snapshots`: 
+- `druva-delete-quarantined-snapshot`: 
+- `druva-endpoint-search-file-hash`: 
+- `druva-endpoint-initiate-restore`: 
+- `druva-endpoint-check-restore-status`: 
+- `druva-endpoint-decommission`: 
+- `druva-find-user`: 
 
 
 ## RansomwareDataEncryptionStatus
@@ -152,21 +150,21 @@ Veeam Backup & Replication REST API allows you to query information about Veeam 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
-- `None`: 
+- `veeam-vbr-create-malware-event`: 
+- `veeam-vbr-get-all-malware-events`: 
+- `veeam-vbr-get-all-repository-states`: 
+- `veeam-vbr-get-all-restore-points`: 
+- `veeam-vbr-get-backup-object`: 
+- `veeam-vbr-get-backup-object`: 
+- `veeam-vbr-get-inventory-objects`: 
+- `veeam-vbr-get-session`: 
+- `veeam-vbr-start-configuration-backup`: 
+- `veeam-vbr-start-instant-recovery-customized`: 
+- `veeam-vbr-start-instant-recovery`: 
+- `veeam-vbr-mount-entra-id-tenant`: 
+- `veeam-vbr-start-security-analyzer`: 
+- `veeam-vbr-start-malware-backup-scan`: 
+- `veeam-vbr-start-disk-publishing`: 
 
 
 ## Veeam ONE REST API
@@ -178,6 +176,6 @@ Veeam ONE REST API allows you to query information about Veeam ONE entities and 
 
 **Commands:**
 
-- `None`: 
-- `None`: 
+- `veeam-vone-get-triggered-alarms`: 
+- `veeam-vone-resolve-triggered-alarms`: 
 
