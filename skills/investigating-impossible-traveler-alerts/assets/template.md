@@ -1,0 +1,51 @@
+# Investigating Impossible Traveler Alerts - Investigation Record
+
+## Case
+
+| Field | Value |
+|---|---|
+| Incident | INC-1234 |
+| Analyst | analyst@example.com |
+| Started | 2026-08-31T10:00Z |
+| Authorization | ticket / RoE reference |
+| Scope | hosts, accounts, or indicators in scope |
+
+## Inputs
+
+| Input | Value | Source |
+|---|---|---|
+| | | alert / feed / analyst |
+
+## Findings
+
+| # | Finding | Evidence | Confidence |
+|---|---|---|---|
+| 1 | | | high / medium / low |
+
+## Actions
+
+| # | Action | Target | Result | Timestamp |
+|---|---|---|---|---|
+| 1 | | | success / partial / failed | |
+
+## Verification
+
+- [ ] The platform reports the expected state.
+- [ ] An independent check confirms the effect.
+- [ ] A control path still works.
+- [ ] The rollback command has been tested.
+
+## Rollback
+
+```
+<exact command to undo the change>
+```
+
+## Review
+
+| Field | Value |
+|---|---|
+| Reviewed by | |
+| Review date | |
+| Outcome | contained / eradicated / recovered / false positive |
+| Follow-up | |
