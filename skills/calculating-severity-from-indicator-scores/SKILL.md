@@ -64,9 +64,8 @@ Write the per-factor breakdown and the final band.
 The commands below are the platform-native equivalents for this procedure.
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Score an incident from its factors
+python3 scripts/agent.py --input incident.json --out severity.json
 ```
 
 ## Verification

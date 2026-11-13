@@ -76,10 +76,12 @@ Inputs:
 
 ## Platform Commands
 
+The commands below are the platform-native equivalents for this procedure.
+
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+curl -sS -X POST "https://<org>.xmatters.com/api/xm/1/events" \
+  -H "Authorization: Bearer $XMATTERS_TOKEN" -H "Content-Type: application/json" \
+  -d '{"eventType":"incident","priority":"high","description":"INC-1234"}'
 ```
 
 ## Verification

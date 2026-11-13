@@ -64,9 +64,9 @@ Record the queries, the hit counts, the false positives, and the coverage gaps.
 The commands below are the platform-native equivalents for this procedure.
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# CrowdStrike: search the fleet by hash
+curl "https://api.crowdstrike.com/devices/queries/devices/v1?filter=sha256:'<hash>'" \
+  -H "Authorization: Bearer $CS_TOKEN"
 ```
 
 ## Verification

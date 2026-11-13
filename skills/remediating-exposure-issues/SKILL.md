@@ -64,9 +64,8 @@ Write the change, the approver, the verification, and the rollback.
 The commands below are the platform-native equivalents for this procedure.
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# List exposure findings and their remediation path
+aws securityhub get-findings --filters '{"ProductFields":[{"Key":"aws/securityhub/ProductName","Value":"Security Hub"}]}'
 ```
 
 ## Verification

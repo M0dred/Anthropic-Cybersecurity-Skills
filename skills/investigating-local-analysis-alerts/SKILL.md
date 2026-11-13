@@ -64,9 +64,10 @@ State the verdict, the confidence, and the recommended containment.
 The commands below are the platform-native equivalents for this procedure.
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Compare process trees across two hosts
+ps -eo pid,ppid,user,comm,args --sort=pid > hostA.txt
+ssh hostB 'ps -eo pid,ppid,user,comm,args --sort=pid' > hostB.txt
+diff -u hostA.txt hostB.txt
 ```
 
 ## Verification

@@ -64,9 +64,8 @@ Write the decision log and the exit criteria.
 The commands below are the platform-native equivalents for this procedure.
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Track the phase checklist
+python3 scripts/agent.py --incident INC-1234 --phase contain
 ```
 
 ## Verification

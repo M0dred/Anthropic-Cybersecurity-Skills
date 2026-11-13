@@ -75,10 +75,11 @@ Obtains additional information on the threat actor involved in the incident and 
 
 ## Platform Commands
 
+The commands below are the platform-native equivalents for this procedure.
+
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+curl -sS "https://api.group-ib.com/v1/indicators?query=evil.example" \
+  -H "Authorization: Bearer $GROUPIB_TOKEN"
 ```
 
 ## Verification

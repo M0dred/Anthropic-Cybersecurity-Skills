@@ -69,10 +69,12 @@ Find all the users who might’ve performed the actions using root (via the sour
 
 ## Platform Commands
 
+The commands below are the platform-native equivalents for this procedure.
+
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Identify the process and user behind a root-usage alert
+ps -eo pid,ppid,user,comm,args --sort=-%cpu | head -20
+last -i | head -20
 ```
 
 ## Verification

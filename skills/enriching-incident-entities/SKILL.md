@@ -64,9 +64,9 @@ Attach the record to the incident and pass the decision to the containment or es
 The commands below are the platform-native equivalents for this procedure.
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Enrich every entity in an incident
+python3 scripts/agent.py --type ip --value 203.0.113.10
+python3 scripts/agent.py --type domain --value evil.example
 ```
 
 ## Verification

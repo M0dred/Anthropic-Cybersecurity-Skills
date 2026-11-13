@@ -64,9 +64,9 @@ Record the queries, the hit counts, the false positives, and the coverage gaps.
 The commands below are the platform-native equivalents for this procedure.
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Enrich every entity in an incident
+python3 scripts/agent.py --type ip --value 203.0.113.10
+python3 scripts/agent.py --type domain --value evil.example
 ```
 
 ## Verification

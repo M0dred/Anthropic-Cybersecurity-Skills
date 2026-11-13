@@ -66,9 +66,9 @@ Write the change, operator, ticket, timestamp, rollback, and expiry into the inc
 The commands below are the platform-native equivalents for this procedure.
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# CrowdStrike: lift containment after remediation is verified
+curl -X POST "https://api.crowdstrike.com/devices/entities/devices-actions/v2?action_name=lift_containment" \
+  -H "Authorization: Bearer $CS_TOKEN" -H "Content-Type: application/json" -d '{"ids":["<device_id>"]}'
 ```
 
 ## Verification

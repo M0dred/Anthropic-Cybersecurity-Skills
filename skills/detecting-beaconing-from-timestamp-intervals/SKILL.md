@@ -64,9 +64,8 @@ Record the queries, the hit counts, the false positives, and the coverage gaps.
 The commands below are the platform-native equivalents for this procedure.
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Inter-arrival times and coefficient of variation
+python3 scripts/agent.py --file capture.pcapng --min-connections 5
 ```
 
 ## Verification

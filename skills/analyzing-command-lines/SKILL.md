@@ -63,10 +63,10 @@ Write findings with the evidence path, the commands used, and the limits of the 
 
 The commands below are the platform-native equivalents for this procedure.
 
-```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+```powershell
+# Windows: decode and inspect a command line
+Get-WinEvent -FilterHashtable @{LogName='Microsoft-Windows-Sysmon/Operational'; Id=1} -MaxEvents 50 |
+  Select-Object TimeCreated, @{n='Image';e={$_.Properties[4].Value}}, @{n='Cmd';e={$_.Properties[10].Value}}
 ```
 
 ## Verification

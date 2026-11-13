@@ -64,9 +64,11 @@ Write the per-factor breakdown and the final band.
 The commands below are the platform-native equivalents for this procedure.
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# CVSS v3.1 base score from a vector
+python3 - <<'EOF'
+from cvss import CVSS3
+print(CVSS3("CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H").scores())
+EOF
 ```
 
 ## Verification

@@ -64,9 +64,9 @@ Attach the record to the incident and pass the decision to the containment or es
 The commands below are the platform-native equivalents for this procedure.
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Pull ASM findings for an asset
+curl -sS "https://api.example-asm.com/v1/assets?query=203.0.113.10" \
+  -H "Authorization: Bearer $ASM_TOKEN"
 ```
 
 ## Verification

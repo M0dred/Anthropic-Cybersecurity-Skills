@@ -64,9 +64,8 @@ Write findings with the evidence path, the commands used, and the limits of the 
 The commands below are the platform-native equivalents for this procedure.
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+openssl x509 -in cert.pem -noout -subject -issuer -dates -ext subjectAltName
+openssl x509 -in cert.pem -noout -fingerprint -sha256
 ```
 
 ## Verification

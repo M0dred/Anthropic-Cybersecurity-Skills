@@ -75,10 +75,11 @@ Inputs:
 
 ## Platform Commands
 
+The commands below are the platform-native equivalents for this procedure.
+
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+nmap -Pn -sS -p- --min-rate 1000 -oA scan-203.0.113.10 203.0.113.10
+nmap -Pn -sV -p 22,80,443 -oA scan-services 203.0.113.10
 ```
 
 ## Verification

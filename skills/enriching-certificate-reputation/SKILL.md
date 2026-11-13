@@ -64,9 +64,8 @@ Attach the record to the incident and pass the decision to the containment or es
 The commands below are the platform-native equivalents for this procedure.
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Certificate transparency lookup
+curl -sS "https://crt.sh/?q=evil.example&output=json" | jq '.[].name_value' | sort -u
 ```
 
 ## Verification

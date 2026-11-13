@@ -63,10 +63,11 @@ Write findings with the evidence path, the commands used, and the limits of the 
 
 The commands below are the platform-native equivalents for this procedure.
 
-```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+```python
+import zipfile, re
+with zipfile.ZipFile("sample.docx") as z:
+    xml = z.read("word/document.xml").decode("utf-8", "replace")
+print(re.findall(r"https?://[^<\s]+", xml))
 ```
 
 ## Verification

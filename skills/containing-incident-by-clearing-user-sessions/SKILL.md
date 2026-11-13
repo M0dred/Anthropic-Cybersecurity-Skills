@@ -66,9 +66,10 @@ Write the change, operator, ticket, timestamp, rollback, and expiry into the inc
 The commands below are the platform-native equivalents for this procedure.
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Microsoft Entra ID: revoke all refresh tokens
+az rest --method POST --url "https://graph.microsoft.com/v1.0/users/user@example.com/revokeSignInSessions"
+# Okta: clear all sessions
+curl -X DELETE "https://<org>.okta.com/api/v1/users/<id>/sessions" -H "Authorization: SSWS $OKTA_TOKEN"
 ```
 
 ## Verification

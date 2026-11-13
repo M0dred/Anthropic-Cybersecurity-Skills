@@ -65,10 +65,11 @@ Write the change, operator, ticket, timestamp, rollback, and expiry into the inc
 
 The commands below are the platform-native equivalents for this procedure.
 
-```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+```powershell
+# Terminate a process tree and verify no respawn
+Stop-Process -Id 4242 -Force
+Get-CimInstance Win32_Process -Filter "ParentProcessId=4242" | ForEach-Object { Stop-Process -Id $_.ProcessId -Force }
+Get-Process -Id 4242 -ErrorAction SilentlyContinue
 ```
 
 ## Verification

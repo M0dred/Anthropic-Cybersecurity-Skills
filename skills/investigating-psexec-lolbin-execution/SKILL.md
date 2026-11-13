@@ -63,10 +63,10 @@ State the verdict, the confidence, and the recommended containment.
 
 The commands below are the platform-native equivalents for this procedure.
 
-```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+```spl
+index=windows (EventCode=7045 OR EventCode=4624)
+| search ServiceName="PSEXESVC" OR ProcessName="psexesvc.exe"
+| stats count by host, user, ServiceName
 ```
 
 ## Verification

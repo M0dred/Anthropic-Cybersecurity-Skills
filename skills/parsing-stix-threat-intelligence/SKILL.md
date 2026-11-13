@@ -63,10 +63,12 @@ Write findings with the evidence path, the commands used, and the limits of the 
 
 The commands below are the platform-native equivalents for this procedure.
 
-```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+```python
+import json
+bundle = json.load(open("bundle.json"))
+for obj in bundle.get("objects", []):
+    if obj.get("type") == "indicator":
+        print(obj["pattern"])
 ```
 
 ## Verification

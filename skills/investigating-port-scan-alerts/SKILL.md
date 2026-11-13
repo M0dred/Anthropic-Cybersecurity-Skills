@@ -64,9 +64,9 @@ State the verdict, the confidence, and the recommended containment.
 The commands below are the platform-native equivalents for this procedure.
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Top talkers by SYN count
+tshark -r capture.pcapng -Y 'tcp.flags.syn==1 && tcp.flags.ack==0' \
+  -T fields -e ip.src -e tcp.dstport | sort | uniq -c | sort -rn | head -20
 ```
 
 ## Verification

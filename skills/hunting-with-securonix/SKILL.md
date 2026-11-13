@@ -87,10 +87,11 @@ Inputs:
 
 ## Platform Commands
 
+The commands below are the platform-native equivalents for this procedure.
+
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+curl -sS "https://<securonix>/api/v1/violations?status=open" \
+  -H "Authorization: Bearer $SECURONIX_TOKEN"
 ```
 
 ## Verification

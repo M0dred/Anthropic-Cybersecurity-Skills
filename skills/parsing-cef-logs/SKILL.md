@@ -64,9 +64,12 @@ Write findings with the evidence path, the commands used, and the limits of the 
 The commands below are the platform-native equivalents for this procedure.
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Parse CEF fields
+python3 - <<'EOF'
+line = 'CEF:0|Vendor|Product|1.0|100|Test|5|src=203.0.113.10 dst=198.51.100.7'
+head, *kv = line.split("|")[-1].split(" ")
+print(dict(p.split("=", 1) for p in kv if "=" in p))
+EOF
 ```
 
 ## Verification

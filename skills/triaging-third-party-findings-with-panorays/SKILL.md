@@ -77,10 +77,11 @@ Inputs:
 
 ## Platform Commands
 
+The commands below are the platform-native equivalents for this procedure.
+
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+curl -sS "https://api.panorays.com/v1/findings?status=open" \
+  -H "Authorization: Bearer $PANORAYS_TOKEN"
 ```
 
 ## Verification

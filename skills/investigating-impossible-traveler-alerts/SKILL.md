@@ -64,9 +64,9 @@ State the verdict, the confidence, and the recommended containment.
 The commands below are the platform-native equivalents for this procedure.
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Correlate access events for a user and source IP
+az monitor log-analytics query -w "$WORKSPACE" --analytics-query \
+  "SigninLogs | where UserPrincipalName == 'user@example.com' | where IPAddress == '203.0.113.10' | project TimeGenerated, ResultType, AppDisplayName"
 ```
 
 ## Verification

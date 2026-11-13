@@ -63,10 +63,9 @@ Record the queries, the hit counts, the false positives, and the coverage gaps.
 
 The commands below are the platform-native equivalents for this procedure.
 
-```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+```powershell
+# Windows Defender Application Control: block by image name
+New-CIPolicyRule -DriverFilePath "C:\Windows\System32\cmd.exe" -Level FileName
 ```
 
 ## Verification

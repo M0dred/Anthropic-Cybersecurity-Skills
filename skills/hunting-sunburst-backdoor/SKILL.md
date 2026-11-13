@@ -63,10 +63,9 @@ Record the queries, the hit counts, the false positives, and the coverage gaps.
 
 The commands below are the platform-native equivalents for this procedure.
 
-```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+```spl
+index=* (SUNBURST OR "SolarWinds.Orion.Core.BusinessLayer.dll")
+| stats count by host, user, dest
 ```
 
 ## Verification

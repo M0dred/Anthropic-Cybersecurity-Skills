@@ -108,10 +108,12 @@ Inputs:
 
 ## Platform Commands
 
+The commands below are the platform-native equivalents for this procedure.
+
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Count failed logons by source
+az monitor log-analytics query -w "$WORKSPACE" --analytics-query \
+  "SecurityEvent | where EventID == 4625 | summarize count() by IpAddress, Account | where count_ > 10"
 ```
 
 ## Verification

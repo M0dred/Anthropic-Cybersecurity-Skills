@@ -63,10 +63,12 @@ Write findings with the evidence path, the commands used, and the limits of the 
 
 The commands below are the platform-native equivalents for this procedure.
 
-```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+```python
+import math, collections
+def shannon(data):
+    c = collections.Counter(data)
+    return -sum((n/len(data))*math.log2(n/len(data)) for n in c.values())
+print(round(shannon(open("sample.bin","rb").read()), 2))
 ```
 
 ## Verification

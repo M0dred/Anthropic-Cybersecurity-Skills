@@ -102,10 +102,11 @@ Is used to initiate the processing of an incident. This playbook runs when a pen
 
 ## Platform Commands
 
+The commands below are the platform-native equivalents for this procedure.
+
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+curl -sS "https://<vectra>/api/v2/detections?state=active" \
+  -H "Authorization: Token $VECTRA_TOKEN"
 ```
 
 ## Verification

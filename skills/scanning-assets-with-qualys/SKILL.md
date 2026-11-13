@@ -107,10 +107,12 @@ Inputs:
 
 ## Platform Commands
 
+The commands below are the platform-native equivalents for this procedure.
+
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+curl -sS -X POST "https://qualysapi.qualys.com/api/2.0/fo/scan/" \
+  -H "X-Requested-With: curl" -u "$QUALYS_USER:$QUALYS_PASS" \
+  -d "action=launch&scan_title=INC-1234&ip=203.0.113.10&option_title=Initial+Options"
 ```
 
 ## Verification
