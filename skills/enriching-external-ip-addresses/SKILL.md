@@ -155,3 +155,4 @@ response is recorded as `sources_failed`, not as a clean result.
 - `references/standards.md` - STIX, NIST, ATT&CK mappings
 - `references/workflows.md` - interpretation matrix and confidence model
 - `scripts/agent.py` - classify, enrich, cache, normalize
+- `references/variants.md` - vendor-specific implementations of this procedure

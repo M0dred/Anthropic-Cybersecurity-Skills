@@ -169,3 +169,4 @@ incident. The parse report is the evidence; do not paraphrase it away.
 - `references/standards.md` - RFC 5322, 7208, 6376, 7489, NIST mappings
 - `references/workflows.md` - triage decision tree and evidence template
 - `scripts/agent.py` - parse, headers, attachments, indicators
+- `references/variants.md` - vendor-specific implementations of this procedure

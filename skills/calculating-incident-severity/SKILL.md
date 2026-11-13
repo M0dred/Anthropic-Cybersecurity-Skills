@@ -173,3 +173,4 @@ confirmed. Keep every version with a timestamp.
 - `references/standards.md` - NIST, ISO 27035, ATT&CK impact mapping
 - `references/workflows.md` - modifiers, recalculation, review template
 - `scripts/agent.py` - score, explain, batch
+- `references/variants.md` - vendor-specific implementations of this procedure

@@ -91,3 +91,4 @@ kubectl cordon node-01
 - `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
 - `references/workflows.md` - decision tree and incident record template
 - `scripts/agent.py` - runnable helper for this procedure
+- `references/integration-catalog-container-security.md` - integration and automation catalog for this domain

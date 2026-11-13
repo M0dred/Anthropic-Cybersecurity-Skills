@@ -346,3 +346,7 @@ for all scanned devices.
 **Recommended Action**: Investigate source workstation for compromise
 indicators. Block FC 43 from non-engineering subnets at OT firewall.
 ```
+
+## References
+
+- `references/integration-catalog-ot-ics-security.md` - integration and automation catalog for this domain

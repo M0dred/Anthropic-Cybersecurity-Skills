@@ -189,3 +189,7 @@ tags:
 - Action items list with owners and deadlines
 - Updated IR playbooks and detection rules
 - Executive summary for leadership
+
+## References
+
+- `references/variants.md` - vendor-specific implementations of this procedure

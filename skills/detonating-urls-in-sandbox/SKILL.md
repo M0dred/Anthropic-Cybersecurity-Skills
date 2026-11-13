@@ -116,3 +116,4 @@ curl -X POST "https://www.virustotal.com/api/v3/files" -H "x-apikey: $VT_API_KEY
 - `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
 - `references/workflows.md` - decision tree and incident record template
 - `scripts/agent.py` - runnable helper for this procedure
+- `references/variants.md` - vendor-specific implementations of this procedure

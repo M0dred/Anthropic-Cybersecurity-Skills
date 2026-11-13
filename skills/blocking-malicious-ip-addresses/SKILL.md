@@ -203,3 +203,5 @@ can find later becomes an outage nobody can explain.
 - `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
 - `references/workflows.md` - decision tree and rollback procedures
 - `scripts/agent.py` - validation, rule generation, dry-run and apply
+- `references/variants.md` - vendor-specific implementations of this procedure
+- `references/integration-catalog-network-security.md` - integration and automation catalog for this domain

@@ -363,3 +363,7 @@ Email Header Analysis Report:
 
   Risk Level: HIGH
 ```
+
+## References
+
+- `references/variants.md` - vendor-specific implementations of this procedure

@@ -89,3 +89,5 @@ python3 scripts/agent.py --type domain --value evil.example
 - `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
 - `references/workflows.md` - decision tree and incident record template
 - `scripts/agent.py` - runnable helper for this procedure
+- `references/variants.md` - vendor-specific implementations of this procedure
+- `references/integration-catalog-threat-intelligence.md` - integration and automation catalog for this domain

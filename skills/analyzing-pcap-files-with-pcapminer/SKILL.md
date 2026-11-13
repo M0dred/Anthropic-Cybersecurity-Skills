@@ -150,3 +150,5 @@ submitted to a sandbox.
 - `references/standards.md` - NIST, ATT&CK, evidence handling
 - `references/workflows.md` - triage sequence and beaconing math
 - `scripts/agent.py` - info, flows, dns, http, tls, beacon, carve
+- `references/variants.md` - vendor-specific implementations of this procedure
+- `references/integration-catalog-digital-forensics.md` - integration and automation catalog for this domain

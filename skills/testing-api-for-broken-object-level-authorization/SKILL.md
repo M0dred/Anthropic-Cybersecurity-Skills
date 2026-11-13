@@ -390,3 +390,7 @@ enumeration trivial.
 4. Add authorization tests to the CI/CD pipeline for every endpoint that accepts object IDs
 5. Implement rate limiting per user to slow enumeration attempts
 ```
+
+## References
+
+- `references/integration-catalog-api-security.md` - integration and automation catalog for this domain

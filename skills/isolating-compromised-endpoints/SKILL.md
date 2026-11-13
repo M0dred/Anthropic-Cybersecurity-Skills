@@ -201,3 +201,4 @@ curl -X POST "https://api.securitycenter.microsoft.com/api/machines/<id>/unisola
 - `references/standards.md` - NIST CSF, 800-53, ATT&CK mappings
 - `references/workflows.md` - decision tree, evidence-first sequence, unisolation
 - `scripts/agent.py` - isolate, verify, and unisolate through EDR APIs
+- `references/variants.md` - vendor-specific implementations of this procedure

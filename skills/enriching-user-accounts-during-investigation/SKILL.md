@@ -104,3 +104,4 @@ curl -X DELETE "https://<org>.okta.com/api/v1/users/<user_id>/sessions" \
 - `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
 - `references/workflows.md` - decision tree and incident record template
 - `scripts/agent.py` - runnable helper for this procedure
+- `references/integration-catalog-identity-access-management.md` - integration and automation catalog for this domain

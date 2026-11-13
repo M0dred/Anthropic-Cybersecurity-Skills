@@ -98,3 +98,4 @@ sudo tar czf /evidence/etc.tar.gz /etc
 - `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
 - `references/workflows.md` - decision tree and incident record template
 - `scripts/agent.py` - runnable helper for this procedure
+- `references/variants.md` - vendor-specific implementations of this procedure

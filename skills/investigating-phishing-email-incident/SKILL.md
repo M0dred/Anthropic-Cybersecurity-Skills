@@ -334,3 +334,7 @@ Containment:
 
 Status:       RESOLVED — No evidence of lateral movement post-compromise
 ```
+
+## References
+
+- `references/variants.md` - vendor-specific implementations of this procedure
