@@ -70,9 +70,13 @@ Example Playbook utilizing the Tufin integration to enrich a network alert and p
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Tufin: check network path compliance
+curl -sS "https://<tufin>/securetrack/api/network_zones" \
+  -H "Authorization: Basic $TUFIN_AUTH" | jq '.network_zones[] | {name, id}'
+
+# Search for a rule matching an IP
+curl -sS "https://<tufin>/securetrack/api/rules/search?ip=203.0.113.10" \
+  -H "Authorization: Basic $TUFIN_AUTH"
 ```
 
 ## Verification

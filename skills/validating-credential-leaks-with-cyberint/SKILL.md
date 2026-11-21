@@ -91,9 +91,14 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Cyberint: search for leaked credentials
+curl -sS -X POST "https://api.cyberint.io/v1/credentials/search" \
+  -H "Authorization: Bearer $CYBERINT_TOKEN" -H "Content-Type: application/json" \
+  -d '{"query":"user@example.com","source":"all"}' | jq '.results[] | {email, source, date}'
+
+# Validate a leak
+curl -sS "https://api.cyberint.io/v1/credentials/validate/<leak_id>" \
+  -H "Authorization: Bearer $CYBERINT_TOKEN"
 ```
 
 ## Verification

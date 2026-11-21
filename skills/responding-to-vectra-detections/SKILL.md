@@ -103,9 +103,14 @@ Is used to initiate the processing of an incident. This playbook runs when a pen
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Vectra AI: list active detections
+curl -sS "https://<vectra>/api/v2/detections?state=active&detection_type=command_control" \
+  -H "Authorization: Token $VECTRA_TOKEN" | jq '.results[] | {id, title, severity, src_ip}'
+
+# Mark detection as resolved
+curl -sS -X PATCH "https://<vectra>/api/v2/detections/<id>/notes" \
+  -H "Authorization: Token $VECTRA_TOKEN" -H "Content-Type: application/json" \
+  -d '{"note":"INC-1234: confirmed C2, host isolated"}'
 ```
 
 ## Verification

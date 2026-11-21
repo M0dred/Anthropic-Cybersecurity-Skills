@@ -74,9 +74,9 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# DataBee: search for entity context
+curl -sS "https://api.databee.io/v1/entities/search?q=evil.example" \
+  -H "Authorization: Bearer $DATABEE_TOKEN" | jq '.results[] | {type, value, confidence}'
 ```
 
 ## Verification

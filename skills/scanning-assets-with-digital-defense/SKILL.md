@@ -70,9 +70,14 @@ Pulls IP addresses from the detail value of an incident and check if that asset 
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Digital Defense Frontline VM: list assets
+curl -sS "https://api.digitaldefense.com/v1/assets?ip=203.0.113.10" \
+  -H "Authorization: Bearer $DD_TOKEN" | jq '.assets[] | {id, hostname, vulnerabilities}'
+
+# Trigger a scan
+curl -sS -X POST "https://api.digitaldefense.com/v1/scans" \
+  -H "Authorization: Bearer $DD_TOKEN" -H "Content-Type: application/json" \
+  -d '{"targets":["203.0.113.10"],"profile":"standard"}'
 ```
 
 ## Verification

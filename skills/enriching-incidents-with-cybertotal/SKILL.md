@@ -80,9 +80,13 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# CyberTotal: enrich an IP
+curl -sS "https://api.cybertotal.com/v1/ip/203.0.113.10" \
+  -H "Authorization: Bearer $CYBERTOTAL_TOKEN" | jq '{reputation, asn, country, threats}'
+
+# Enrich a domain
+curl -sS "https://api.cybertotal.com/v1/domain/evil.example" \
+  -H "Authorization: Bearer $CYBERTOTAL_TOKEN"
 ```
 
 ## Verification

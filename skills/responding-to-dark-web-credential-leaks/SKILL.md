@@ -79,9 +79,13 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Check HaveIBeenPwned for leaked credentials
+curl -sS "https://haveibeenpwned.com/api/v3/breachedaccount/user@example.com?truncateResponse=true" \
+  -H "hibp-api-key: $HIBP_KEY" | jq '.[] | {Name, BreachDate}'
+
+# Check paste sites via HIBP
+curl -sS "https://haveibeenpwned.com/api/v3/pasteaccount/user@example.com" \
+  -H "hibp-api-key: $HIBP_KEY"
 ```
 
 ## Verification

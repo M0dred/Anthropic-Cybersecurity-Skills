@@ -94,9 +94,13 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Cofense Triage: search reports
+curl -sS "https://<cofense>/api/v1/reports?query=evil.example" \
+  -H "Authorization: Bearer $COFENSE_TOKEN" | jq '.reports[] | {id, subject, status}'
+
+# Get report details
+curl -sS "https://<cofense>/api/v1/reports/<id>" \
+  -H "Authorization: Bearer $COFENSE_TOKEN"
 ```
 
 ## Verification

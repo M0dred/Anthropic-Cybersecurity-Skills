@@ -70,9 +70,12 @@ Find all the users who might’ve performed the actions using root (via the sour
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Identify root-usage processes
+ps -eo pid,ppid,user,comm,args --sort=-%cpu | head -20
+
+# Check recent root logins
+last -i | head -20
+sudo grep "COMMAND" /var/log/sudo.log | tail -50
 ```
 
 ## Verification

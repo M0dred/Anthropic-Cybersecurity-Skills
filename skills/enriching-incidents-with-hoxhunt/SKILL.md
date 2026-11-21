@@ -70,9 +70,13 @@ Enriches the incidents pulled from Hoxhunt with additional information.
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Hoxhunt: get incident details
+curl -sS "https://api.hoxhunt.com/v1/incidents/<id>" \
+  -H "Authorization: Bearer $HOXHUNT_TOKEN" | jq '{subject, sender, verdict}'
+
+# List open incidents
+curl -sS "https://api.hoxhunt.com/v1/incidents?status=open" \
+  -H "Authorization: Bearer $HOXHUNT_TOKEN"
 ```
 
 ## Verification

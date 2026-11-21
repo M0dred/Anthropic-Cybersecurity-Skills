@@ -76,9 +76,13 @@ Obtains additional information on the threat actor involved in the incident and 
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Group-IB: search indicators
+curl -sS "https://api.group-ib.com/v1/indicators?query=evil.example" \
+  -H "Authorization: Bearer $GROUPIB_TOKEN" | jq '.indicators[] | {type, value, confidence}'
+
+# Get threat actor profile
+curl -sS "https://api.group-ib.com/v1/actors/<actor_id>" \
+  -H "Authorization: Bearer $GROUPIB_TOKEN"
 ```
 
 ## Verification

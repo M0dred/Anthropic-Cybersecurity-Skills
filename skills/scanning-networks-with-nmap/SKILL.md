@@ -76,9 +76,14 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Nmap: full port scan
+nmap -Pn -sS -p- --min-rate 1000 -oA scan-203.0.113.10 203.0.113.10
+
+# Service version detection
+nmap -Pn -sV -p 22,80,443 -oA scan-services 203.0.113.10
+
+# Vulnerability scan with NSE
+nmap --script vuln -p 80,443 203.0.113.10
 ```
 
 ## Verification

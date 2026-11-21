@@ -88,9 +88,14 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Securonix: list open violations
+curl -sS "https://<securonix>/api/v1/violations?status=open&tenant=<tenant>" \
+  -H "Authorization: Bearer $SECURONIX_TOKEN" | jq '.violations[] | {id, policy, risk_score}'
+
+# Search for entity activity
+curl -sS -X POST "https://<securonix>/api/v1/search/activity" \
+  -H "Authorization: Bearer $SECURONIX_TOKEN" -H "Content-Type: application/json" \
+  -d '{"query":"user@example.com","timeRange":"last_24_hours"}'
 ```
 
 ## Verification

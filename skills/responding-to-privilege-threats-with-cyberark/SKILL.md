@@ -87,9 +87,13 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# CyberArk EPM: get agent status
+curl -sS "https://<epm>/api/agents?filter=computerName:WEB-01" \
+  -H "Authorization: Bearer $EPM_TOKEN" | jq '.agents[] | {id, name, status}'
+
+# List policy violations
+curl -sS "https://<epm>/api/policyviolations?severity=high" \
+  -H "Authorization: Bearer $EPM_TOKEN"
 ```
 
 ## Verification

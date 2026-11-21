@@ -91,9 +91,10 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Logz.io: search for IOC
+curl -sS -X POST "https://api.logz.io/v1/search" \
+  -H "X-API-TOKEN: $LOGZIO_TOKEN" -H "Content-Type: application/json" \
+  -d '{"query":"evil.example","timeRange":{"from":"now-24h","to":"now"}}' | jq '.results[] | {timestamp, message}'
 ```
 
 ## Verification

@@ -84,9 +84,14 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Pentera: run a security test
+curl -sS -X POST "https://<pentera>/api/v1/tests" \
+  -H "Authorization: Bearer $PENTERA_TOKEN" -H "Content-Type: application/json" \
+  -d '{"name":"INC-1234","targets":["203.0.113.10"],"profile":"full"}'
+
+# Get test results
+curl -sS "https://<pentera>/api/v1/tests/<test_id>" \
+  -H "Authorization: Bearer $PENTERA_TOKEN" | jq '{status, findings}'
 ```
 
 ## Verification

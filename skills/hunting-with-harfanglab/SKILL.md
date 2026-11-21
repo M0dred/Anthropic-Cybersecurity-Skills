@@ -74,9 +74,14 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# HarfangLab: search for an IOC across the fleet
+curl -sS -X POST "https://<hl>/api/v1/endpoint/agents/search" \
+  -H "Authorization: Token $HL_TOKEN" -H "Content-Type: application/json" \
+  -d '{"query":{"bool":{"must":[{"match":{"hostname":"WEB-01"}}]}}}'
+
+# Get process list from an agent
+curl -sS "https://<hl>/api/v1/endpoint/agents/<agent_id>/processes" \
+  -H "Authorization: Token $HL_TOKEN"
 ```
 
 ## Verification

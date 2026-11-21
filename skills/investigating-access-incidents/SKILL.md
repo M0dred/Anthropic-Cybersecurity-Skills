@@ -100,9 +100,13 @@ Investigates an Access incident by gathering user and IP address information. Th
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Correlate access events for a user
+az monitor log-analytics query -w "$WORKSPACE" --analytics-query \
+  "SigninLogs | where UserPrincipalName == 'user@example.com' | where ResultType != '0' | project TimeGenerated, IPAddress, ResultType"
+
+# Windows: failed logons by source
+Get-WinEvent -FilterHashtable @{LogName='Security'; Id=4625} -MaxEvents 500 |
+  Group-Object { $_.Properties[19].Value } | Sort-Object Count -Descending | Select-Object Count, Name -First 10
 ```
 
 ## Verification

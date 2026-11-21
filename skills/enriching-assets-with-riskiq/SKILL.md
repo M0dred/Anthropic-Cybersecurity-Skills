@@ -92,9 +92,13 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# RiskIQ PassiveTotal: passive DNS lookup
+curl -sS "https://api.passivetotal.org/v2/dns/passive?query=evil.example" \
+  -u "$RISKIQ_USER:$RISKIQ_KEY" | jq '.results[] | {value, firstSeen, lastSeen}'
+
+# WHOIS lookup
+curl -sS "https://api.passivetotal.org/v2/whois/search?query=evil.example" \
+  -u "$RISKIQ_USER:$RISKIQ_KEY"
 ```
 
 ## Verification

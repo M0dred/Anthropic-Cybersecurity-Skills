@@ -109,9 +109,14 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Count failed logons by source IP (Windows Event ID 4625)
+Get-WinEvent -FilterHashtable @{LogName='Security'; Id=4625} -MaxEvents 1000 |
+  Group-Object { $_.Properties[19].Value } |
+  Sort-Object Count -Descending |
+  Select-Object Count, Name -First 20
+
+# Linux: auditd failed logins
+ausearch -m USER_AUTH --success no -ts today | aureport --auth --summary
 ```
 
 ## Verification

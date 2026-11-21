@@ -84,9 +84,14 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Arcanna: get AI analysis for an alert
+curl -sS "https://<arcanna>/api/v1/alerts/<alert_id>/analysis" \
+  -H "Authorization: Bearer $ARCANNA_TOKEN" | jq '{verdict, confidence, reasoning}'
+
+# Submit feedback
+curl -sS -X POST "https://<arcanna>/api/v1/alerts/<alert_id>/feedback" \
+  -H "Authorization: Bearer $ARCANNA_TOKEN" -H "Content-Type: application/json" \
+  -d '{"correct":true,"notes":"Confirmed malicious"}'
 ```
 
 ## Verification

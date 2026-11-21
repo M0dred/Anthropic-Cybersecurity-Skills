@@ -77,9 +77,14 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Illusive: get forensics for an incident
+curl -sS "https://<illusive>/api/v1/incidents/<id>/forensics" \
+  -H "Authorization: Bearer $ILLUSIVE_TOKEN" | jq '{timeline, artifacts}'
+
+# Run forensics on-demand
+curl -sS -X POST "https://<illusive>/api/v1/forensics/run" \
+  -H "Authorization: Bearer $ILLUSIVE_TOKEN" -H "Content-Type: application/json" \
+  -d '{"host":"<hostname>","artifacts":["processes","network"]}'
 ```
 
 ## Verification

@@ -101,9 +101,13 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Infoblox: search host records
+curl -sS "https://<infoblox>/wapi/v2.12/record:host?_return_fields=name,ipv4addrs" \
+  -H "Authorization: Basic $INFOBLOX_AUTH" | jq '.[] | {name, ip: .ipv4addrs[0].ipv4addr}'
+
+# Search by IP
+curl -sS "https://<infoblox>/wapi/v2.12/ipv4address?ip_address=203.0.113.10&_return_fields=names" \
+  -H "Authorization: Basic $INFOBLOX_AUTH"
 ```
 
 ## Verification

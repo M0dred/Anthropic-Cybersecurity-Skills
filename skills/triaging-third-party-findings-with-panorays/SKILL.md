@@ -78,9 +78,14 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Panorays: list open findings
+curl -sS "https://api.panorays.com/v1/findings?status=open&severity=high" \
+  -H "Authorization: Bearer $PANORAYS_TOKEN" | jq '.findings[] | {id, title, severity, company}'
+
+# Update finding status
+curl -sS -X PATCH "https://api.panorays.com/v1/findings/<id>" \
+  -H "Authorization: Bearer $PANORAYS_TOKEN" -H "Content-Type: application/json" \
+  -d '{"status":"resolved","notes":"Fixed by supplier"}'
 ```
 
 ## Verification

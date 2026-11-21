@@ -109,9 +109,15 @@ Inputs:
 ## Platform Commands
 
 ```bash
-# Generic REST call with a bearer token
-curl -sS -X GET "https://api.example.com/v1/resource" \
-  -H "Authorization: Bearer $API_TOKEN" -H "Accept: application/json"
+# Tenable.io: launch a scan
+curl -sS -X POST "https://cloud.tenable.com/scans" \
+  -H "X-ApiKeys: accessKey=$TIO_ACCESS;secretKey=$TIO_SECRET" \
+  -H "Content-Type: application/json" \
+  -d '{"uuid":"<template-uuid>","settings":{"name":"INC-1234","text_targets":"203.0.113.10"}}'
+
+# Get scan status
+curl -sS "https://cloud.tenable.com/scans/<scan_id>" \
+  -H "X-ApiKeys: accessKey=$TIO_ACCESS;secretKey=$TIO_SECRET" | jq '.status'
 ```
 
 ## Verification
