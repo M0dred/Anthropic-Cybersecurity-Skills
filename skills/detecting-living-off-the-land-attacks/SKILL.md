@@ -1,10 +1,11 @@
 ---
 name: detecting-living-off-the-land-attacks
-description: 'Detect abuse of legitimate Windows binaries (LOLBins) used for living
+description: >-
+  Detect abuse of legitimate Windows binaries (LOLBins) used for living
   off the land attacks. Monitors process creation, command-line arguments, and parent-child
   relationships to identify suspicious LOLBin execution patterns.
 
-  '
+   Use when a threat detection task matches this procedure.
 domain: cybersecurity
 subdomain: threat-detection
 tags:
