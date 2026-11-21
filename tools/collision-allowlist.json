@@ -328,6 +328,41 @@
         "enriching-urls-with-threat-intelligence"
       ],
       "reason": "Different entity: an endpoint vs a URL. EDR inventory vs URL reputation."
+    },
+    {
+      "pair": [
+        "detecting-insider-threat-with-ueba",
+        "implementing-ueba-engineering"
+      ],
+      "reason": "Different intent: detect insider threats with UEBA vs engineer and tune the UEBA platform itself."
+    },
+    {
+      "pair": [
+        "performing-post-quantum-cryptography-migration",
+        "planning-post-quantum-migration"
+      ],
+      "reason": "Different scope: hands-on migration execution vs strategic migration planning and inventory."
+    },
+    {
+      "pair": [
+        "migrating-to-post-quantum-cryptography",
+        "planning-post-quantum-migration"
+      ],
+      "reason": "Different scope: hands-on migration execution vs strategic migration planning and inventory."
+    },
+    {
+      "pair": [
+        "executing-wire-fraud-recall",
+        "responding-to-bec-invoice-fraud"
+      ],
+      "reason": "Different scope: bank-side wire recall procedure vs end-to-end invoice fraud response."
+    },
+    {
+      "pair": [
+        "detecting-bec-vendor-fraud",
+        "responding-to-gift-card-scam"
+      ],
+      "reason": "Different fraud pattern: vendor invoice fraud vs executive gift card scam."
     }
   ]
 }
