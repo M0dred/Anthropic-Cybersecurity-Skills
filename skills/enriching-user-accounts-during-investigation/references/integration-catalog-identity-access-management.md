@@ -327,3 +327,10 @@ SailPoint IdentityNow This integration was integrated and tested with SailPoint 
 - `identitynow-request-grant`: Grant access request for a single object(access profile or role) for a single user.
 - `identitynow-request-revoke`: Revoke access request for a single object(access profile or role) for a single user.
 
+## CertificateManagerSaaSApiModule
+
+**Type:** script  
+**Product:** CyberArk
+
+Provides shared CyberArk Certificate Manager SaaS code, which the Certificate Manager SaaS and Next-Gen Trust Security integrations reuse. The code includes parsing, GraphQL queries, paging, commands, and the expiry fetch.
+

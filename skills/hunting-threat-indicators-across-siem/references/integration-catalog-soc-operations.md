@@ -20013,3 +20013,41 @@ Parses ZTAP external links to display in a dynamic table
 
 View notes only relating to ZTAP
 
+## Cognyte Luminar V3 Feed
+
+**Type:** integration  
+**Product:** Cognyte
+
+This Integration is part of the Luminar IOCs & leaked credentials Pack.#Supported versionsAvailable on Cortex XSOAR (versions 6.9.0 and later) and Cortex XSIAM.Cognyte is a global leader in security analytics software that empowers governments and enterprises with Actionable Intelligence for a safer world. Luminar is Cognyte's asset-based cybersecurity intelligence platform that enables organizations to build and maintain a proactive threat intelligence operation.This integration fetches intelligence-based IOCs and customer-related leaked records identified by Luminar, using the Luminar TAXII
+
+**Commands:**
+
+- `luminar-v3-get-indicators`: Gets Luminar indicators from the IOCs collection
+- `luminar-v3-get-leaked-records`: Gets Luminar leaked records (leaked credentials) from the Leaked Records collection
+
+
+## KELA BrandControl
+
+**Type:** integration  
+**Product:** KELA
+
+This Integration is part of the KELA BrandControl Pack.#Supported versionsAvailable on Cortex XSOAR (versions 6.10.0 and later) and Cortex XSIAM.KELA Brand Control#Brand Control detects brand impersonation across the open web, social media and app ecosystems: phishing websites, look-alike domains, fake social media profiles, fake shops and more.This integration fetches brand impersonation incidents from KELA Brand Control into Cortex. This integration was integrated and tested with version 1.0 of the KELA Brand Control API.Configure KELA BrandControl in Cortex#Navigate to Settings > Integratio
+
+**Commands:**
+
+- `kela-brandcontrol-incident-list`: Retrieves the Brand Control incidents of a workspace, with filtering, sorting and pagination
+
+
+## KELA Identity Guard
+
+**Type:** integration  
+**Product:** KELA
+
+This Integration is part of the KELA Identity Guard Pack.#Supported versionsAvailable on Cortex XSOAR (versions 6.10.0 and later) and Cortex XSIAM.KELA Identity Guard#Search KELA Identity Guard incidents: compromised credentials detected on infostealer-infected machines (bots), leaked credential lists, data breaches and cybercrime chatter; bot-market alerts (bots/webmails offered for sale); and compromised session-cookie incidents. Includes fetch-incidents to automatically mirror all three sources into Cortex, each independently toggleable.This integration was integrated and tested with the Id
+
+**Commands:**
+
+- `kela-identityguard-search-incidents`: Search Identity Guard incidents for a workspace, with rich filtering, sorting and pagination
+- `kela-identityguard-search-bot-markets`: Search Identity Guard bot-market alerts (bots/webmails offered for sale) for a workspace
+- `kela-identityguard-search-cookie-incidents`: Search Identity Guard compromised session-cookie incidents for a workspace
+
