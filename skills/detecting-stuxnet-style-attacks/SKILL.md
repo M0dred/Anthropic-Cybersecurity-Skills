@@ -492,3 +492,9 @@ ENGINEERING WORKSTATION:
   Unauthorized modifications: [N]
   USB connections: [N]
 ```
+## Verification
+
+- Output contains expected fields and indicators; result is recorded with tool, version, and timestamp.
+## References
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

@@ -242,3 +242,7 @@ Get-MpPreference | Select-Object -ExpandProperty AttackSurfaceReductionRules_Act
 - **Microsoft Defender Exploit Guard**: Suite including CFA, ASR rules, and Network Protection
 - **GPResult**: Command-line tool for verifying GPO application status on endpoints
 - **PowerShell Get-MpPreference**: Cmdlet for querying Microsoft Defender configuration including ASR and CFA status
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

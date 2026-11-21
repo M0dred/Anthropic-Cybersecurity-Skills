@@ -175,3 +175,15 @@ Add MobSF scanning as a build gate:
 - **Missing obfuscated code**: Static analysis accuracy drops significantly against obfuscated apps. Supplement with dynamic analysis for apps using DexGuard or custom packers.
 - **Outdated MobSF rules**: Security rules evolve with Android API levels. Ensure MobSF is updated to match the target app's `targetSdkVersion`.
 - **Skipping native code analysis**: MobSF analyzes Java/Kotlin but has limited coverage of native C/C++ libraries. Use `checksec` and manual review for `.so` files.
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `references/workflows.md` - decision tree and record template
+- `scripts/agent.py` - runnable helper for this procedure

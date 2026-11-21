@@ -192,3 +192,15 @@ run app.service.send com.target.app com.target.app.MessengerService \
 - **Permission-protected components**: An exported component may still require a permission. Test with and without the required permission.
 - **Implicit intents vs explicit**: Only implicit intents (action-based) are interceptable by other apps. Explicit intents (specifying target) are secure.
 - **Custom permissions**: Apps can define custom permissions with different protection levels (normal, dangerous, signature). Signature-level permissions are only grantable to apps signed with the same certificate.
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `references/workflows.md` - decision tree and record template
+- `scripts/agent.py` - runnable helper for this procedure

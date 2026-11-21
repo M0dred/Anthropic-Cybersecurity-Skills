@@ -522,3 +522,7 @@ foreach ($binary in $lolbins_to_restrict) {
 - Check that AppLocker or WDAC policies do not break legitimate administrative workflows before deploying to production
 - Validate false positive rates by running detection rules against 7 days of baseline telemetry from a clean environment
 - Cross-reference detections against the LOLBAS project database at https://lolbas-project.github.io/ for completeness
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

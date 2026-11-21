@@ -228,3 +228,15 @@ output.elasticsearch:
 - **Ignoring baseline establishment**: First FIM scan creates a baseline. Changes detected before baseline stabilization are noise, not threats. Allow 48 hours for baseline.
 - **Active response without testing**: Auto-blocking IPs or disabling accounts can cause outages. Test active response rules in a non-production environment first.
 - **Agent enrollment failures**: Agents must successfully enroll with the manager before monitoring begins. Verify firewall rules allow port 1514 and 1515 traffic.
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `references/workflows.md` - decision tree and record template
+- `scripts/agent.py` - runnable helper for this procedure

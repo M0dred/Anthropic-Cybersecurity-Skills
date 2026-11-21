@@ -308,6 +308,14 @@ def push_to_taxii(server_url, collection_id, stix_bundle, user, password):
 - Consumer tracks polling state for incremental updates
 - Local TAXII server accepts and serves STIX bundles
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [STIX 2.1 Specification](https://docs.oasis-open.org/cti/stix/v2.1/stix-v2.1.html)

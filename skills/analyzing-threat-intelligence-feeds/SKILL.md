@@ -125,6 +125,14 @@ Export enriched indicators via TAXII 2.1 push to SIEM (Splunk, Microsoft Sentine
 - **TLP violation**: Redistributing RED-classified intelligence outside authorized boundaries violates sharing agreements and trust relationships.
 - **Over-blocking on low-confidence indicators**: Indicators with confidence below 50 should trigger detection-only rules, not blocking, to avoid operational disruption.
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - `references/variants.md` - vendor-specific implementations of this procedure

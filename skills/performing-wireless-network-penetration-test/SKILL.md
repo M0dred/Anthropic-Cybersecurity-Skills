@@ -256,6 +256,14 @@ reaver -i wlan0mon -b AA:BB:CC:DD:EE:03 -K 1 -vv
 | Corporate SSID broadcasts on rogue AP | High | 8.1 | Deploy WIDS/WIPS, implement 802.1X with cert validation |
 | EAP-MSCHAP without cert pinning | High | 7.5 | Enforce server certificate validation on all clients |
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - Aircrack-ng Documentation: https://www.aircrack-ng.org/doku.php

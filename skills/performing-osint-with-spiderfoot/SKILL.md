@@ -60,3 +60,13 @@ SpiderFoot is an open-source OSINT automation tool with 200+ modules that integr
 ## Expected Output
 
 JSON report containing OSINT findings organized by data type (domains, IPs, emails, credentials, DNS records), module source attribution, and target profile summary with risk indicators.
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

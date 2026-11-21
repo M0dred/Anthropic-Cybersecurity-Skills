@@ -407,3 +407,13 @@ cat /var/log/suricata/eve.json | jq 'select(.event_type=="stats") | .stats.captu
 1. SID 9000003: Cobalt Strike JA3 from 10.10.5.12 to 203.0.113.50 (189 alerts)
 2. SID 9000002: DNS tunneling from 10.10.3.45 to suspect-domain.xyz (98 alerts)
 ```
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

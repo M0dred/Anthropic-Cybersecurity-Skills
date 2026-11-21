@@ -335,3 +335,9 @@ docker run --rm --net host --pid host \
 8. **Audit Docker socket** - Monitor access to /var/run/docker.sock
 9. **Run Docker Bench regularly** - Automate CIS benchmark checks
 10. **Keep Docker updated** - Apply security patches promptly
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `references/workflows.md` - decision tree and record template
+- `scripts/agent.py` - runnable helper for this procedure

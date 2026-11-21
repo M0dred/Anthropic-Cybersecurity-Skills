@@ -244,6 +244,14 @@ curl -k "https://harbor.example.com/api/v2.0/audit-logs?page=1&page_size=10" \
   -H "Authorization: Basic $(echo -n admin:Harbor12345 | base64)"
 ```
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Harbor Documentation](https://goharbor.io/docs/)

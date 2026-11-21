@@ -415,3 +415,7 @@ validate_stix_bundle("emotet_campaign_bundle.json")
 - Re-retrieve published objects from the TAXII server and confirm they round-trip without data loss
 - Check that consuming systems (SIEM, SOAR, TIP) can ingest the bundle and create corresponding detection rules or enrichment data
 - Run `stix2-validator` CLI tool against exported bundles: `stix2_validator emotet_campaign_bundle.json`
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

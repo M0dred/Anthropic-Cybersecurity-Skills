@@ -218,3 +218,14 @@ python scripts/agent.py --url https://localhost --key YOUR_AUTH_KEY \
 - [ ] Sigma rule generated and converted to the SIEM backend.
 - [ ] Generated detections confirmed to load (and fire on a test IOC).
 - [ ] Pipeline scheduled and logging successfully.
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `scripts/agent.py` - runnable helper for this procedure

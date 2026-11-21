@@ -307,3 +307,13 @@ RECOMMENDATIONS:
   [HIGH] Remediate 3 orphan cloud accounts not managed by Okta
   [MEDIUM] Reduce session duration for admin roles from 8h to 4h
 ```
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

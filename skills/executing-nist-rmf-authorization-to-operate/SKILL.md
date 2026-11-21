@@ -140,3 +140,12 @@ Produce an **Authorization Package summary** using `assets/template.md`, contain
 8. **ConMon plan** — what's monitored, how often, reporting cadence, reassessment triggers.
 
 Use `scripts/process.py` to select the right SP 800-53B baseline from a FIPS 199 categorization, summarize control-implementation status, and generate a POA&M table from a findings JSON.
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings

@@ -303,6 +303,14 @@ webhooks:
 | AppArmor annotation | +3 | Kernel-level MAC enforcement |
 | Seccomp profile | +4 | Syscall filtering |
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Kubesec GitHub Repository](https://github.com/controlplaneio/kubesec)

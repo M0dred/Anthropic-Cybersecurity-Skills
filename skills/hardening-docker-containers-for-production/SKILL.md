@@ -235,6 +235,14 @@ docker ps -q | xargs docker inspect --format '{{.Id}}: User={{.Config.User}}'
 | TLS for daemon | daemon.json TLS config | 2.6 |
 | Audit logging | auditd rules | 1.1 |
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [CIS Docker Benchmark](https://www.cisecurity.org/benchmark/docker)

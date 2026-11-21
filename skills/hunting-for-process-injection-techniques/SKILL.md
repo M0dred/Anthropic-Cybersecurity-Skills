@@ -74,3 +74,13 @@ Process injection (MITRE ATT&CK T1055) allows adversaries to execute code in the
 - Process injection relationship graph
 - MITRE ATT&CK sub-technique mapping (T1055.001-T1055.012)
 - False positive exclusion recommendations
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

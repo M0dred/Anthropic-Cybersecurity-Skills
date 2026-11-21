@@ -172,3 +172,9 @@ Implement SAML 2.0 Single Sign-On (SSO) using Okta as the Identity Provider (IdP
 - [ ] Session timeout forces re-authentication
 - [ ] SLO properly terminates sessions on both IdP and SP
 - [ ] Certificate rotation tested without service interruption
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `references/workflows.md` - decision tree and record template
+- `scripts/agent.py` - runnable helper for this procedure

@@ -146,3 +146,9 @@ Conduct systematic access reviews and certifications to ensure users have approp
 - [ ] Audit evidence package complete and archived
 - [ ] SOD violations identified and documented
 - [ ] Exceptions documented with business justification and expiry
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `references/workflows.md` - decision tree and record template
+- `scripts/agent.py` - runnable helper for this procedure

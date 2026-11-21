@@ -192,3 +192,14 @@ Promote the highest-fidelity queries (Steps 2-4) to scheduled analytics rules. S
 - [ ] At least one finding correlated back to a sign-in/session and source identity
 - [ ] Best queries promoted to scheduled analytics rules with T1078.004 mapping and entity mappings
 - [ ] Known-good service principals/IPs excluded via watchlist to control false positives
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `scripts/agent.py` - runnable helper for this procedure

@@ -412,6 +412,14 @@ if __name__ == '__main__':
 - **Small Broadcast Domains** - Use VLANs to limit the scope of ARP-based attacks
 - **Regular Audits** - Periodically compare ARP tables across devices to identify anomalies
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [NIST SP 800-54 - Border Gateway Protocol Security](https://csrc.nist.gov/publications/detail/sp/800-54/final)

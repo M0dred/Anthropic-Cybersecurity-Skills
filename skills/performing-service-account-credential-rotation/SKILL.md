@@ -297,6 +297,14 @@ def verify_service_health(service_endpoints, max_retries=3, delay=10):
 - [ ] Rotation events logged and auditable
 - [ ] Rollback procedure documented and tested
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Google Cloud Service Account Key Rotation](https://cloud.google.com/iam/docs/key-rotation)

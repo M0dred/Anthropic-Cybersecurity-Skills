@@ -312,3 +312,13 @@ REMEDIATION ACTIONS COMPLETED:
   Egress deny rule: Created at priority 65534
   Flow logs enabled: 6 subnets
 ```
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

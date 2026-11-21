@@ -277,6 +277,14 @@ kubectl delete pod pentest-pod
 kubectl delete pod test-netpol test-egress test-metadata
 ```
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [kube-hunter - Kubernetes Penetration Testing](https://github.com/aquasecurity/kube-hunter)

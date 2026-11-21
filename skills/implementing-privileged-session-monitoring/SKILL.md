@@ -338,3 +338,7 @@ Example CEF Event:
 - [ ] Session metadata and alerts are forwarding to SIEM and correlating correctly
 - [ ] Auditors can search, review, and annotate sessions through the PVWA interface
 - [ ] Terminated sessions leave a complete recording up to the point of termination
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

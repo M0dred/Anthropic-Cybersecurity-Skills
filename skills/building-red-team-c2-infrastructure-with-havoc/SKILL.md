@@ -315,6 +315,14 @@ demon> rportfwd start 8080 TARGET_INTERNAL 80
 | T1105 | Ingress Tool Transfer | Command and Control |
 | T1055 | Process Injection | Defense Evasion |
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - Havoc Framework GitHub: https://github.com/HavocFramework/Havoc

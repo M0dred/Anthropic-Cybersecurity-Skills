@@ -280,6 +280,14 @@ mimikatz# misc::skeleton
 | No LAPS deployed | 7.2 | Deploy Windows LAPS for local admin management |
 | Weak domain password policy | 6.5 | Enforce 14+ chars, implement fine-grained password policies |
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - BloodHound: https://github.com/BloodHoundAD/BloodHound

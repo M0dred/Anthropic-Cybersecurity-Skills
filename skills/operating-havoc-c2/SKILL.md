@@ -276,3 +276,14 @@ Stop the team server (`Ctrl-C`) and revoke operator credentials at engagement en
 - [ ] A .NET assembly or BOF executed in-memory
 - [ ] SOCKS proxy or port-forward established for pivoting
 - [ ] Artifacts removed, agent exited, and team server stopped at cleanup
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `scripts/agent.py` - runnable helper for this procedure

@@ -133,3 +133,9 @@ Implement Just-In-Time (JIT) access provisioning to eliminate standing privilege
 - [ ] All JIT events logged to SIEM
 - [ ] Standing privileges reduced by measurable percentage
 - [ ] Mean time to access meets business SLA
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `references/workflows.md` - decision tree and record template
+- `scripts/agent.py` - runnable helper for this procedure

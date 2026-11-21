@@ -178,3 +178,9 @@ Deploy CyberArk Privileged Access Management to discover, vault, rotate, and mon
 - [ ] SIEM receives CyberArk audit events
 - [ ] Break-glass procedure tested and documented
 - [ ] DR vault failover tested successfully
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `references/workflows.md` - decision tree and record template
+- `scripts/agent.py` - runnable helper for this procedure

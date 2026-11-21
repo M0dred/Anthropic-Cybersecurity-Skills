@@ -73,3 +73,13 @@ Hardware Security Modules (HSMs) provide tamper-resistant cryptographic key stor
 
 - JSON report listing HSM slots, tokens, stored keys, supported mechanisms, and compliance status
 - Signing test results with key metadata and algorithm details
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

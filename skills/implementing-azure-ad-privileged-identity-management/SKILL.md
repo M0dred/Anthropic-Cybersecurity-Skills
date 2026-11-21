@@ -265,6 +265,14 @@ Enable PIM security alerts:
 - [ ] PIM alerts enabled and reviewed weekly
 - [ ] Audit logs forwarded to SIEM for monitoring
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Microsoft Entra PIM Documentation](https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-configure)

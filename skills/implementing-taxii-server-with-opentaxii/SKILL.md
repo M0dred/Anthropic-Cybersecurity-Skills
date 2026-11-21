@@ -368,6 +368,14 @@ def push_to_elasticsearch(iocs, es_url, index="threat-intel"):
 - IOCs extracted and forwarded to SIEM platform
 - Authentication and authorization enforced correctly
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [TAXII 2.1 Specification](https://docs.oasis-open.org/cti/taxii/v2.1/os/taxii-v2.1-os.html)

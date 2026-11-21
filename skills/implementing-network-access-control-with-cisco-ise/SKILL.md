@@ -343,6 +343,14 @@ test aaa server radius ISE-PRIMARY username testuser password testpass
 - **High Availability** - Deploy ISE in a Primary/Secondary node pair with PAN failover
 - **Certificate Infrastructure** - Use machine certificates for EAP-TLS for strongest authentication
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Cisco ISE Admin Guide 3.1](https://www.cisco.com/c/en/us/td/docs/security/ise/3-1/admin_guide/b_ise_admin_3_1.html)

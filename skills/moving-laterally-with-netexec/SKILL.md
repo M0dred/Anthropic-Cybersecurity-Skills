@@ -197,3 +197,14 @@ nxc smb 192.168.1.0/24 -u jsmith -p 'Summer2025!' --shares --log spray_results.l
 - [ ] Credential dumping (`--sam`/`--lsa`/`--ntds`) performed only on authorized targets.
 - [ ] LDAP attacks (Kerberoasting/ASREPRoast/LAPS/BloodHound) executed where in scope.
 - [ ] Workspace results exported and included in the engagement report.
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `scripts/agent.py` - runnable helper for this procedure

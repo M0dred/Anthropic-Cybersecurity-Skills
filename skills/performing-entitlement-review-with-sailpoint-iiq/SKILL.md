@@ -489,3 +489,11 @@ SIGN-OFF
 Campaign Signed:        2026-02-14 by compliance-admin
 Audit Evidence:         Exported to /reports/Q1-2026-cert-evidence.pdf
 ```
+## Verification
+
+- The output contains the expected fields and indicators for this procedure.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

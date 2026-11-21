@@ -276,6 +276,14 @@ show system resources
 - **HA Configuration** - Deploy in active/passive HA pair for production environments
 - **Commit Validation** - Always validate configuration before committing: `validate full`
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [PAN-OS Admin Guide](https://docs.paloaltonetworks.com/pan-os)

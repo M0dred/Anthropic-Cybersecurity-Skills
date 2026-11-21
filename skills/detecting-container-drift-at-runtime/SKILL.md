@@ -243,6 +243,14 @@ For Azure Kubernetes environments, Microsoft Defender provides built-in binary d
 5. **Evict**: Delete the drifted pod (ReplicaSet will recreate from clean image)
 6. **Remediate**: Fix the root cause (patch vulnerability, update image, tighten RBAC)
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Container Drift Detection with Falco - Sysdig](https://www.sysdig.com/blog/container-drift-detection-with-falco)

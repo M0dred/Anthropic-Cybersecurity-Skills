@@ -208,6 +208,14 @@ Threat Dragon participates in the CycloneDX Threat Model Bill of Materials (TMBO
 5. **Living documents**: Treat threat models as living documents that evolve with the system
 6. **Automate where possible**: Use the rule engine for initial threat generation, then refine manually
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [OWASP Threat Dragon](https://owasp.org/www-project-threat-dragon/)

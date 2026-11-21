@@ -182,6 +182,14 @@ csv_output = misp.search(
 - Export to STIX 2.1 produces valid STIX bundles
 - Automated feed fetch runs on schedule (cron or MISP scheduler)
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [MISP Project Official Site](https://www.misp-project.org/)

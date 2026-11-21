@@ -217,3 +217,13 @@ read access to 75,000 customer records including names, emails, and addresses.
 3. Audit all sudo entries for binaries listed in GTFOBins
 4. Implement sudo logging with auditd for all privileged command execution
 ```
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

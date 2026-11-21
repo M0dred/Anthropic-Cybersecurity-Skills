@@ -266,6 +266,14 @@ trivy image --exit-code 1 --severity CRITICAL myapp:latest
 echo "Exit code: $?"  # 0 = no vulns, 1 = vulns found
 ```
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Trivy Documentation](https://trivy.dev/docs/)

@@ -280,6 +280,14 @@ for tactic in tactic_order:
 - Cross-group comparison reveals shared and unique TTPs
 - Output is actionable for detection engineering prioritization
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [MITRE ATT&CK Navigator](https://mitre-attack.github.io/attack-navigator/)

@@ -262,3 +262,14 @@ trivy k8s --report summary --severity HIGH,CRITICAL cluster
 - [ ] SARIF output produced for the code-scanning dashboard.
 - [ ] CI/CD gate fails the build on HIGH/CRITICAL findings via `--exit-code 1`.
 - [ ] `.trivyignore` configured for accepted-risk findings with documented justification.
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `scripts/agent.py` - runnable helper for this procedure

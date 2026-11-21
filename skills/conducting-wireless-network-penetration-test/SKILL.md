@@ -186,3 +186,13 @@ the WPA2-Enterprise authentication required for employee access.
 4. Migrate IoT devices to 802.1X authentication with device certificates where supported
 5. Deploy WIDS to detect deauthentication attacks and rogue access points
 ```
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

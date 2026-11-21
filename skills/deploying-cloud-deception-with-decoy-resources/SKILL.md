@@ -167,3 +167,12 @@ Produce a **Cloud Deception Deployment Record** using `assets/template.md`, cont
 5. **Maintenance plan** — rotation cadence and review owner.
 
 Use `scripts/process.py` to render the deployment record and a per-decoy detection checklist from a decoy-inventory JSON, and to flag decoys missing detection wiring or validation.
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings

@@ -454,3 +454,13 @@ and the 7-day expiration means stolen tokens remain valid for extended periods.
 4. Reduce token TTL to 15 minutes with refresh token rotation
 5. Add `iss` and `aud` claims validation to prevent token misuse across services
 ```
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

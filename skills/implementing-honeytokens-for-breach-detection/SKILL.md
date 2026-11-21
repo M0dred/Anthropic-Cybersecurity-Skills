@@ -81,3 +81,13 @@ aws_creds = f"[default]\naws_access_key_id = {canary_key_id}\naws_secret_access_
 with open("/opt/backup/.aws/credentials", "w") as f:
     f.write(aws_creds)
 ```
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

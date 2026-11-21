@@ -161,3 +161,12 @@ Produce an **Adversary Engagement Operation Plan** using `assets/template.md`, c
 8. **After-action report** — objectives met/missed, intel produced, detections promoted to production, threat-model updates.
 
 Use `scripts/process.py` to validate technique→Activity coverage and generate the operation-plan skeleton from a threat-model input.
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings

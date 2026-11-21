@@ -355,6 +355,14 @@ When 42Crunch identifies issues, follow this remediation process:
 - **Security Misconfiguration**: Checks authentication schemes, transport security, CORS settings
 - **Mass Assignment**: Validates that request bodies use explicit property allowlists
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - 42Crunch API Security Platform: https://42crunch.com/api-security-platform/

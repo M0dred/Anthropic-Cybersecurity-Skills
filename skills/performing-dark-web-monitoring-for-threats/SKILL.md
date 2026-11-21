@@ -260,6 +260,14 @@ def generate_dark_web_report(findings, organization):
 - All monitoring performed within legal and ethical boundaries
 - OPSEC maintained: no personal or corporate identity exposure
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Tor Project](https://www.torproject.org/)

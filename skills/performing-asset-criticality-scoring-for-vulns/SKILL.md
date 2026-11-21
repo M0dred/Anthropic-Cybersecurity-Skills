@@ -170,3 +170,15 @@ def apply_criticality_to_vulns(vulns_df, asset_scores):
 - building-vulnerability-aging-and-sla-tracking
 - performing-business-impact-analysis
 - implementing-asset-management-program
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `references/workflows.md` - decision tree and record template
+- `scripts/agent.py` - runnable helper for this procedure

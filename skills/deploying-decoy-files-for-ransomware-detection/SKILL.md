@@ -220,3 +220,7 @@ mv /path/to/canary/report.xlsx /path/to/canary/report.xlsx.locked
 - **OSSEC/Wazuh**: Open-source HIDS with built-in file integrity monitoring and alerting capabilities
 - **Elastic Endpoint**: Uses canary files internally for ransomware protection and key capture
 - **Sysmon**: Windows system monitor that logs file creation events (Event ID 11) for canary file monitoring
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

@@ -168,3 +168,7 @@ Review the JSON output for any prompts flagged with `injection_detected: true` a
 - **Pytector**: Lightweight Python package for prompt injection detection supporting local DeBERTa/DistilBERT models and API-based safeguards
 - **OWASP LLM Top 10**: Industry-standard risk taxonomy for LLM application security, with LLM01 dedicated to prompt injection
 - **deepset/prompt-injections**: Hugging Face dataset containing labeled prompt injection examples used for training and evaluating detection models
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

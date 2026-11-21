@@ -255,6 +255,14 @@ Remove-AdfsCertificate -CertificateType Token-Signing -Thumbprint $oldThumbprint
 - [ ] Monitoring configured for AD FS health and certificate expiry
 - [ ] Disaster recovery: managed authentication fallback documented
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Microsoft Entra Federation Documentation](https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/whatis-fed)

@@ -329,6 +329,14 @@ if __name__ == "__main__":
 - **Coordinate with Upstreams** - Notify transit providers about your RPKI deployment
 - **Test with Looking Glass** - Verify your ROAs are visible using public RPKI validators
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [RPKI Documentation](https://rpki.readthedocs.io/en/latest/)

@@ -439,3 +439,13 @@ An OAuth consent screen allows framing. The attacker embeds the consent page and
 4. Add confirmation dialogs that cannot be pre-filled or auto-submitted
 5. Implement SameSite=Strict cookies to reduce session availability in frames
 ```
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

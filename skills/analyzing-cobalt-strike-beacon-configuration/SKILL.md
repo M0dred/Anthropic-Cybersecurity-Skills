@@ -379,6 +379,14 @@ def analyze_c2_profile(beacon_config):
 - YARA rules detect beacon in both packed and unpacked samples
 - Network signatures generated from extracted C2 profile
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [SentinelOne CobaltStrikeParser](https://github.com/Sentinel-One/CobaltStrikeParser)

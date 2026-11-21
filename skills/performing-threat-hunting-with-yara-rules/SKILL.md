@@ -431,3 +431,7 @@ print("YARA hunting pipeline active. Monitoring /mnt/quarantine/ ...")
 - Check that community rule sets load without critical syntax errors after filtering
 - Confirm the continuous hunting pipeline generates alerts in JSONL format when test files are dropped
 - Cross-reference YARA matches against VirusTotal or sandbox results to validate detection accuracy
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

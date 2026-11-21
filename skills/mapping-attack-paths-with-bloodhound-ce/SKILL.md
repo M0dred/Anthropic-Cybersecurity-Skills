@@ -226,3 +226,14 @@ Rank paths by hop count, stealth (avoid noisy edges like HasSession requiring ho
 - [ ] ADCS and ACL-abuse paths enumerated
 - [ ] At least one custom Cypher query (including a hybrid query where applicable) executed
 - [ ] Paths prioritized by hops/stealth and documented with remediation
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `scripts/agent.py` - runnable helper for this procedure

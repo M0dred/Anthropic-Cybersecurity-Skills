@@ -409,6 +409,14 @@ policies:
 | Policy Compliance | % of APIs meeting all policies | > 90% |
 | Mean Time to Remediate | Average days to fix findings | < 7 days |
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - OX Security ASPM Guide 2025: https://www.ox.security/blog/application-security-posture-management-aspm/

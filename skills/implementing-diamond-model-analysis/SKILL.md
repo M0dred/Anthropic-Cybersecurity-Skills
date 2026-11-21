@@ -178,6 +178,14 @@ class DiamondAnalysis:
 - Graph visualization renders the activity-attack graph correctly
 - Events map to MITRE ATT&CK techniques for capability classification
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Diamond Model Paper](https://www.activeresponse.org/wp-content/uploads/2013/07/diamond.pdf)

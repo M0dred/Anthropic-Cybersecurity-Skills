@@ -293,6 +293,14 @@ search = index=new_source sourcetype=new_sourcetype action=failure \
 - [ ] Documentation completed
 - [ ] SOC team notified
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [UK NCSC - Onboarding Systems and Log Sources](https://www.ncsc.gov.uk/collection/building-a-security-operations-centre/onboarding-systems-and-log-sources)

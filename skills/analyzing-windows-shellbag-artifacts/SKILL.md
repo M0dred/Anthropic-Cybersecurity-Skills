@@ -159,6 +159,14 @@ created and navigated to this folder.
 - Timestamps may reflect view setting changes, not necessarily folder access
 - Windows may batch-update Shellbag entries during Explorer shutdown
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - Shellbags Forensic Analysis 2025: https://www.cybertriage.com/blog/shellbags-forensic-analysis-2025/

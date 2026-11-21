@@ -288,6 +288,14 @@ show counter global filter category ssl
 - **Key Protection** - Store inspection CA private key in HSM for production environments
 - **Regular CA Rotation** - Plan for CA certificate rotation before expiration
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Palo Alto SSL Decryption](https://docs.paloaltonetworks.com/network-security/decryption)

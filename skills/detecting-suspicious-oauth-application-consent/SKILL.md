@@ -63,3 +63,13 @@ Illicit consent grant attacks trick users into granting excessive permissions to
 
 - JSON report listing all OAuth apps with granted permissions, risk scores, unverified publishers, and suspicious consent patterns
 - Audit trail of consent grant events with user and IP details
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

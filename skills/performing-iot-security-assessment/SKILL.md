@@ -200,3 +200,13 @@ network entry point with root-level command execution capability.
 3. Encrypt stored WiFi credentials using a hardware-backed key
 4. Deploy cameras on an isolated VLAN with no access to the corporate network
 ```
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

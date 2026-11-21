@@ -254,6 +254,14 @@ Every merge request displays a security scanning widget showing:
 | False positive rate | Percentage of dismissed-as-false-positive findings | < 15% |
 | Secret detection block rate | Percentage of secret commits blocked by push rules | > 99% |
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [GitLab Security Scanning Documentation](https://docs.gitlab.com/ee/user/application_security/)

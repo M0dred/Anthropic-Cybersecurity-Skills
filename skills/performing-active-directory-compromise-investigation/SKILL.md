@@ -202,6 +202,14 @@ Track modifications to these critical groups:
 | Account Manipulation | T1098 | Privileged group changes |
 | SID-History Injection | T1134.005 | Privilege escalation |
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [CISA: Detecting and Mitigating Active Directory Compromises](https://www.cisa.gov/resources-tools/resources/detecting-and-mitigating-active-directory-compromises)

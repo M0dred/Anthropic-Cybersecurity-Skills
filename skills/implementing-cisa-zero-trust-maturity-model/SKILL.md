@@ -341,6 +341,14 @@ class ZTMMAssessment:
 - **Data Pillar**: Percentage of sensitive data classified and protected
 - **Overall**: ZTMM stage achieved per pillar (target: Advanced minimum)
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [CISA Zero Trust Maturity Model v2.0](https://www.cisa.gov/zero-trust-maturity-model)

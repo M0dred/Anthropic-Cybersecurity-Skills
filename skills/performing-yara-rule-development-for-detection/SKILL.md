@@ -336,6 +336,14 @@ def benchmark_rule(rule_text, scan_directory, iterations=3):
 - Rules survive minor malware modifications (recompilation, string changes)
 - Metadata includes hash, author, date, description, and TLP marking
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [YARA Official Documentation](https://virustotal.github.io/yara/)

@@ -375,3 +375,13 @@ The `.git` directory is accessible on the production server. Using git-dumper, t
 7. Enable TLS 1.2+ on all endpoints; redirect HTTP to HTTPS
 8. Implement secret scanning in CI/CD pipeline (trufflehog/gitleaks)
 ```
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

@@ -305,3 +305,7 @@ Policy: "Alert on mass file download (exfiltration via stolen token)"
 - [ ] Device code flow is restricted via conditional access (block or require compliant device)
 - [ ] Incident response runbook includes token revocation, password reset, and OAuth consent review steps
 - [ ] Mail forwarding rules and OAuth app grants are audited for compromised accounts
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

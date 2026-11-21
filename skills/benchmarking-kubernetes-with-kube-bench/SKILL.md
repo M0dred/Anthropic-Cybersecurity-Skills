@@ -225,3 +225,14 @@ sudo kube-bench run --targets master,node --pgsql
 - [ ] CIS remediation applied to control-plane manifests and node configs.
 - [ ] Re-run confirms previously failing checks now PASS.
 - [ ] Results tracked over time (file archive or PostgreSQL).
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `scripts/agent.py` - runnable helper for this procedure

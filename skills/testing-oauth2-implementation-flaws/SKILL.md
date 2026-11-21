@@ -403,3 +403,13 @@ resources the OAuth scope grants access to.
 5. Enforce single-use authorization codes with a short TTL (max 60 seconds)
 6. Validate the audience (aud) claim in tokens before accepting them
 ```
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

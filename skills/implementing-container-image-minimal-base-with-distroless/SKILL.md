@@ -213,6 +213,14 @@ trivy image myapp:distroless
 # Result: 2 vulnerabilities (0 CRITICAL, 0 HIGH)
 ```
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [GoogleContainerTools/distroless GitHub](https://github.com/GoogleContainerTools/distroless)

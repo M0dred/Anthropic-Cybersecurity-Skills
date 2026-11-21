@@ -272,3 +272,14 @@ Collect garak's HTML/JSONL report, Promptfoo's report, and PyRIT memory transcri
 - [ ] Findings mapped to OWASP LLM01:2025 and MITRE ATLAS AML.T0051
 - [ ] Remediation recommendations provided (context isolation, output filtering, corpus provenance)
 - [ ] Report delivered with severity ratings and reproduction steps
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `scripts/agent.py` - runnable helper for this procedure

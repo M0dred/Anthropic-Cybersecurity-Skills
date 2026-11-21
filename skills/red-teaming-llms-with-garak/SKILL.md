@@ -224,3 +224,14 @@ This skill uses MITRE ATLAS (the adversarial-ML companion to ATT&CK) technique I
 - [ ] Successful attack strings captured from the hit log as evidence.
 - [ ] A mitigation applied and a comparison re-run completed showing changed hit rates.
 - [ ] Findings documented against OWASP LLM Top 10 and MITRE ATLAS for the risk assessment.
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `scripts/agent.py` - runnable helper for this procedure

@@ -302,6 +302,14 @@ if __name__ == '__main__':
 - **Time-Based Analysis** - Scans at unusual hours (3 AM) warrant higher priority
 - **Rate Limit Alerts** - Prevent scan floods from overwhelming the SIEM with noise
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Suricata Rules Documentation](https://docs.suricata.io/en/latest/rules/index.html)

@@ -72,3 +72,13 @@ Sessions: 288 over 24 hours
 Avg interval: 300s, Jitter: 4.2%
 Verdict: HIGH confidence C2 beaconing (jitter < 5%)
 ```
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

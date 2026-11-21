@@ -70,3 +70,13 @@ Test connectivity between pods to verify policies are correctly enforced.
 ## Expected Output
 
 JSON audit report listing all network policies, unprotected namespaces, policy rule counts, and connectivity test results.
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

@@ -329,6 +329,14 @@ python scripts/agent.py --action scan_tls --target server.example.com:443
 - [ ] "Harvest now, decrypt later" risk assessed for sensitive data channels
 - [ ] Certificate Authority PQC readiness confirmed for certificate issuance
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - NIST PQC Standards: https://csrc.nist.gov/projects/post-quantum-cryptography

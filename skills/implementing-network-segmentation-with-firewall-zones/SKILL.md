@@ -341,6 +341,14 @@ if __name__ == "__main__":
 - **Monitor Denied Traffic** - Log and review denied inter-zone traffic for policy refinement
 - **PCI Scope Reduction** - Use segmentation to minimize PCI DSS Cardholder Data Environment scope
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [CISA Zero Trust Microsegmentation Guidance](https://www.cisa.gov/sites/default/files/2025-07/ZT-Microsegmentation-Guidance-Part-One_508c.pdf)

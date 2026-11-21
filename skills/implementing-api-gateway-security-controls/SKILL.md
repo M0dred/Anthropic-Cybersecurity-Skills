@@ -466,3 +466,7 @@ cloudwatch.put_metric_alarm(
 - mTLS: Requests without client certificate rejected with 401
 - WAF: SQL injection payloads blocked (tested top 100 SQLi patterns)
 ```
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

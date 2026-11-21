@@ -251,3 +251,7 @@ Combine Amcache data with other artifacts for a comprehensive timeline:
 - [ ] LinkDate vs. FileKeyLastWriteTimestamp comparison has been performed to detect timestomping
 - [ ] Amcache findings are correlated with Prefetch and ShimCache for execution confirmation
 - [ ] Final timeline integrates Amcache data with other forensic artifacts
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

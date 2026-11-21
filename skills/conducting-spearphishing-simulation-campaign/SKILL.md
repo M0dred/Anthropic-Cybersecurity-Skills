@@ -171,3 +171,15 @@ Spearphishing simulation is a targeted social engineering attack vector used by 
 - [ ] Campaign tracked with delivery and interaction metrics
 - [ ] Evidence collected for engagement report
 - [ ] Cleanup performed on infrastructure post-campaign
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `references/workflows.md` - decision tree and record template
+- `scripts/agent.py` - runnable helper for this procedure

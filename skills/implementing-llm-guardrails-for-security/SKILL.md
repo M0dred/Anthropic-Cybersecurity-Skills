@@ -229,3 +229,7 @@ python agent.py --file interaction_logs.txt --mode full --output json > guardrai
 - **Microsoft Presidio**: Open-source PII detection and anonymization engine supporting 30+ entity types with configurable NLP backends
 - **Colang 2.0**: Event-driven interaction modeling language for defining guardrail flows with Python-like syntax, supporting multi-turn dialog control
 - **OpenAI Guardrails Python**: OpenAI's client-side guardrails library for prompt injection detection and content policy enforcement
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

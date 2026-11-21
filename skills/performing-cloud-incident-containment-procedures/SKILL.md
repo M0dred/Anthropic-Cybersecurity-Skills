@@ -305,6 +305,14 @@ gcloud compute instances delete-access-config compromised-instance \
 | T1578 - Modify Cloud Compute | Isolate instances, snapshot disks |
 | T1552 - Unsecured Credentials | Rotate all access keys and secrets |
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Sygnia: Cloud Incident Response Best Practices](https://www.sygnia.co/blog/incident-response-to-cloud-security-incidents-aws-azure-and-gcp-best-practices/)

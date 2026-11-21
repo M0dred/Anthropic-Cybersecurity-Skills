@@ -194,3 +194,8 @@ Document the level each consumed artifact achieves:
 - [ ] GitHub blob/bundle attestation verified
 - [ ] Verification wired as a fail-closed CI/admission gate
 - [ ] Each consumed artifact assigned a SLSA Build level
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `scripts/agent.py` - runnable helper for this procedure

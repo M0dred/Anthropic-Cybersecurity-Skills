@@ -489,8 +489,12 @@ VLAN ARCHITECTURE:
 
 FIREWALL RULES:
   [Zone A] -> [Zone B]: [allow/deny count]
-
 VALIDATION RESULTS:
   Tests Passed: [N]/[Total]
   Critical Failures: [N]
 ```
+## Verification
+- Output contains expected fields and indicators; result is recorded with tool, version, and timestamp.
+## References
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

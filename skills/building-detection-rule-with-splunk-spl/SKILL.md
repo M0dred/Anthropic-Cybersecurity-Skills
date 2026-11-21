@@ -253,6 +253,14 @@ index=notable
 | T1053.005 | Scheduled Task | EventCode 4698 with suspicious command patterns |
 | T1003.001 | LSASS Memory | Process access to lsass.exe via Sysmon EventCode 10 |
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Splunk ES Correlation Searches Best Practices](https://detect.fyi/splunk-es-correlation-searches-rules-best-cool-practices-06ef94884170)

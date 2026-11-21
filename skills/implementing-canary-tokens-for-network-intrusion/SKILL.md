@@ -324,6 +324,14 @@ python scripts/agent.py --action inventory \
 - [ ] Self-hosted Canarytokens instance (if used) is hardened and monitored
 - [ ] Token rotation schedule is established (quarterly recommended)
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - Canarytokens Documentation: https://docs.canarytokens.org/guide/

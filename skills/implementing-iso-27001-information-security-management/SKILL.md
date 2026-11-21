@@ -175,6 +175,14 @@ The 2022 revision restructured 93 controls into four categories:
 - **NIST CSF 2.0**: Cross-mapping for dual compliance
 - **SOC 2**: Overlapping trust service criteria
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 - ISO/IEC 27001:2022 Information Security Management Systems
 - ISO/IEC 27002:2022 Information Security Controls

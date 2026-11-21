@@ -80,3 +80,13 @@ Top attribute type: ip-dst (31%), domain (22%), sha256 (18%)
 Top MITRE technique: T1566 Phishing (89 events)
 Top threat actor: APT28 (34 events)
 ```
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

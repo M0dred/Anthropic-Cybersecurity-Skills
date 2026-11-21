@@ -213,3 +213,13 @@ nmap-parse-output full_tcp_scan.xml csv > scan_results.csv
 3. Upgrade MySQL to 8.0.x on 10.10.12.5 and restrict bind address
 4. Change SNMP community strings from "public" on 10.10.3.77
 ```
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

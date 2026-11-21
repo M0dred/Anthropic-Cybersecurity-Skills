@@ -256,6 +256,14 @@ trivy sbom sbom-cyclonedx.json
 | SBOM coverage | Percentage of production images with generated SBOMs | 100% |
 | Scan duration | Average time per image scan | < 2 minutes |
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Trivy Documentation](https://aquasecurity.github.io/trivy/)

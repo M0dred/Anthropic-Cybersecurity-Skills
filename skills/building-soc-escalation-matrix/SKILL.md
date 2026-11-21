@@ -215,6 +215,14 @@ auto_escalation_rules:
       - add_comment: "Auto-escalated due to SLA breach"
 ```
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Torq - Threat Escalation Matrix for Modern Security Challenges](https://torq.io/blog/escalation-matrix/)

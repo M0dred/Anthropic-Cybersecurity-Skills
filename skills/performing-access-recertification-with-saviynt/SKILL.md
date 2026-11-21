@@ -283,6 +283,14 @@ After campaign closes:
 - [ ] Campaign report generated for compliance audit
 - [ ] Evidence archived for regulatory retention period
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Saviynt Campaigns and Certifications Documentation](https://docs.saviyntcloud.com/bundle/EIC-Admin-25/page/Content/Chapter15-Campaigns-and-Certifications/Campaigns.htm)

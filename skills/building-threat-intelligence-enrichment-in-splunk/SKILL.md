@@ -304,6 +304,14 @@ index=firewall sourcetype=pan:traffic action=allowed
 | eval status=case(avg_age_days > 30, "STALE", avg_age_days > 7, "AGING", true(), "FRESH")
 ```
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Splunk Threat Intelligence Framework Documentation](https://help.splunk.com/en/splunk-enterprise-security-8/administer/8.2/threat-intelligence/overview-of-threat-intelligence-in-splunk-enterprise-security)

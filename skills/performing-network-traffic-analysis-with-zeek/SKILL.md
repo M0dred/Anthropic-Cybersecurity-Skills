@@ -413,6 +413,14 @@ cat ssl.log | zeek-cut server_name not_valid_after | awk -F'\t' '$2 < systime()'
 - **Packet Loss Monitoring** - Monitor `capture_loss.log` for dropped packets
 - **Custom Scripts** - Develop organization-specific detections based on threat landscape
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Zeek Documentation](https://docs.zeek.org/en/master/)

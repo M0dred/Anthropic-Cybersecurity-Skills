@@ -130,3 +130,9 @@ Audit service accounts across enterprise infrastructure to identify orphaned, ov
 - [ ] Orphaned accounts flagged for remediation
 - [ ] gMSA migration candidates identified
 - [ ] Compliance report generated
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `references/workflows.md` - decision tree and record template
+- `scripts/agent.py` - runnable helper for this procedure

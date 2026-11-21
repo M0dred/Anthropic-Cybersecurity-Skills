@@ -213,3 +213,14 @@ Remove flagged samples (intersection of Cleanlab + ART signals is highest-confid
 - [ ] Model retrained on cleaned data and re-tested for the trigger
 - [ ] Findings mapped to MITRE ATLAS AML.T0020 / AML.T0018 and OWASP LLM04:2025
 - [ ] Report delivered with remediation (provenance, signed weights, pipeline scanning)
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `scripts/agent.py` - runnable helper for this procedure

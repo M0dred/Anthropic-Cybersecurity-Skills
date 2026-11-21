@@ -169,3 +169,9 @@ PKCE (RFC 7636) prevents authorization code interception attacks:
 - [ ] Token revocation invalidates both access and refresh tokens
 - [ ] Client Credentials flow works for service-to-service calls
 - [ ] Scopes correctly enforced at resource server
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `references/workflows.md` - decision tree and record template
+- `scripts/agent.py` - runnable helper for this procedure

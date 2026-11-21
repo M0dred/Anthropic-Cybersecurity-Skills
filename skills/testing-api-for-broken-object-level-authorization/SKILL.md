@@ -391,6 +391,14 @@ enumeration trivial.
 5. Implement rate limiting per user to slow enumeration attempts
 ```
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - `references/integration-catalog-api-security.md` - integration and automation catalog for this domain

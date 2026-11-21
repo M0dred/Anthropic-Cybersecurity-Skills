@@ -390,3 +390,7 @@ pre-commit run --all-files  # Test against existing codebase
 - [ ] Branch protection rules enforce required status checks before merge
 - [ ] Pre-commit hooks catch secrets and SAST findings locally before push
 - [ ] Developer documentation explains how to interpret scan results and fix common findings
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

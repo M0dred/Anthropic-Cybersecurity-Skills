@@ -140,3 +140,12 @@ Produce a **HIPAA Security Rule Gap Assessment** using `assets/template.md`, con
 7. **Remediation plan** — prioritized, with owners and dates; required specs and risk-analysis gaps first.
 
 Use `scripts/process.py` to score a safeguard-status JSON across the §164.308/310/312 standards, weight required gaps above addressable ones, and emit the gap table plus a remediation-priority list.
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings

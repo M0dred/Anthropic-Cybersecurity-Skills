@@ -68,3 +68,13 @@ Active Directory forest trusts enable authentication across organizational bound
 
 - JSON report listing all trust relationships, SID filtering status, foreign principals, trust direction/transitivity, and risk assessment
 - Cross-forest attack path analysis with remediation recommendations
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

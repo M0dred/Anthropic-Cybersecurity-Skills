@@ -370,6 +370,14 @@ generate_dossier("APT29", {
 - Dossier includes attribution assessment with confidence levels
 - Profile is actionable for detection engineering and threat hunting
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Huntress: Threat Actor Profiling](https://www.huntress.com/cybersecurity-101/topic/threat-actor-profiling)

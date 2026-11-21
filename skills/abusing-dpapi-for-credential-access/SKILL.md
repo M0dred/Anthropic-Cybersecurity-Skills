@@ -207,3 +207,14 @@ donpapi collect -u alice -p 'Password123!' -d corp.local --target 10.0.0.0/24
 - [ ] Browser logins/cookies decrypted with SharpChrome.
 - [ ] Domain DPAPI backup key retrieved with Domain Admin (if in scope) and reused offline.
 - [ ] All recovered secrets documented with source host/user and ROE adherence confirmed.
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `scripts/agent.py` - runnable helper for this procedure

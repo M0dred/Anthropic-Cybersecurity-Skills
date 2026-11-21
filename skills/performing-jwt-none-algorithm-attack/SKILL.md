@@ -339,6 +339,14 @@ def verify_token_secure(token: str, secret_key: str) -> dict:
 - Tokens with modified claims (role escalation) from the same session
 - Authorization header containing tokens with only two Base64 segments
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - OWASP JWT Testing Guide: https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/10-Testing_JSON_Web_Tokens

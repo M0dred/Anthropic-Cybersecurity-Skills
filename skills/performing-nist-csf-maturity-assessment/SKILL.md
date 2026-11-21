@@ -134,6 +134,14 @@ The NIST Cybersecurity Framework (CSF) 2.0, released in February 2024, provides 
 - Ignoring the new Govern function in CSF 2.0
 - Not aligning CSF assessment with existing compliance requirements (ISO 27001, SOC 2)
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 - NIST CSF 2.0: https://csf.tools/reference/nist-cybersecurity-framework/v2-0/
 - NIST SP 800-53 Rev 5 (control catalog that maps to CSF)

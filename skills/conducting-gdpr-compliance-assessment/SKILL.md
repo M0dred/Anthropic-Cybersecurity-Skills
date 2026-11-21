@@ -291,4 +291,7 @@ COMPLIANCE SCORE: 67/100 → Target 90/100 (6 months post-remediation)
 - [ ] Privacy policy published and updated within 12 months
 - [ ] DPO designated if required (Article 37 criteria met)
 - [ ] Staff trained on GDPR principles and data subject rights
+## References
 
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings

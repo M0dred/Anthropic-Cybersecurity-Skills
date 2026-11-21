@@ -236,3 +236,7 @@ Automated Response Actions:
 - **psutil (Python)**: Process and system monitoring library for tracking per-process I/O statistics
 - **Elastic Endpoint**: Commercial endpoint protection with built-in ransomware behavioral detection using canary files
 - **Wazuh**: Open-source security platform with file integrity monitoring and active response capabilities
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

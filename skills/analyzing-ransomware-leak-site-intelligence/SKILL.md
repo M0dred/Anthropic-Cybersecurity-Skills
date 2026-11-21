@@ -354,6 +354,14 @@ generate_ransomware_intel_report(trends, risk, new_groups)
 - Intelligence report generated with actionable recommendations
 - All collection conducted through authorized public sources
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Ransomwatch GitHub](https://github.com/joshhighet/ransomwatch)

@@ -72,3 +72,13 @@ Living Off the Land Binaries, Scripts, and Libraries (LOLBAS) are legitimate sys
 - MITRE ATT&CK technique mapping for each detection (T1218, T1105, T1140, T1127)
 - Parent-child process anomaly analysis
 - Sigma rule match details with raw event data
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

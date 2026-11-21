@@ -196,6 +196,14 @@ Recovery Test Report:
 - **Measuring RTO without WRT**: Restore completion is not recovery completion. Include validation and hardening time.
 - **No immutable backups**: If ransomware can encrypt or delete backups, recovery is impossible. Use air-gapped or immutable storage.
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - NIST SP 800-184: Guide for Cybersecurity Event Recovery

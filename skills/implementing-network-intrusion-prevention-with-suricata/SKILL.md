@@ -369,6 +369,14 @@ echo "rate_filter gen_id 1, sig_id 2100366, track by_src, count 10, seconds 60, 
 - **Regular Updates** - Run `suricata-update` daily via cron to keep signatures current
 - **Monitor Drops** - Track kernel packet drops and increase ring buffer size if needed
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Suricata Documentation](https://docs.suricata.io/en/latest/)

@@ -173,3 +173,8 @@ Indicators are retrieved separately via `list-indicators` and include types such
 3. Cross-reference Detective findings with raw CloudTrail logs for accuracy
 4. Verify finding group correlations match manual investigation conclusions
 5. Confirm automated alerts trigger for HIGH/CRITICAL severity investigations
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `references/workflows.md` - decision tree and record template

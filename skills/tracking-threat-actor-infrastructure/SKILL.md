@@ -329,6 +329,14 @@ def build_infrastructure_timeline(indicators):
 - Timeline shows infrastructure evolution over time
 - Results are exportable as STIX 2.1 Infrastructure objects
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Shodan API Documentation](https://developer.shodan.io/api)

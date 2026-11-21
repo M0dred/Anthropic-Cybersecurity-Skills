@@ -310,3 +310,13 @@ Evidence Collected:   4 items (SHA-256 verified, chain of custody documented)
 Recommendation:       Immediate access revocation recommended
                       Evidence package prepared for Legal review
 ```
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

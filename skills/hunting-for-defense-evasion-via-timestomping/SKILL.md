@@ -357,3 +357,7 @@ generate_report(stomped_files, "D:\\Evidence\\timestomping_report.json")
 - Verify ShimCache and Amcache timestamps provide independent corroboration of timeline inconsistencies
 - Test against known-clean system images to establish a false-positive baseline (some backup/imaging software legitimately resets timestamps)
 - Confirm the detection pipeline correctly handles deleted MFT entries (InUse=false) which may contain evidence of timestomped files that were later removed
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

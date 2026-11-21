@@ -422,3 +422,7 @@ with ApiClient(configuration) as api_client:
 - [ ] Notification workflows deliver alerts to Slack, PagerDuty, or Jira for critical and high signals
 - [ ] Suppression queries are configured to reduce false positives on noisy rules
 - [ ] Security Signals API returns results programmatically for automation integration
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

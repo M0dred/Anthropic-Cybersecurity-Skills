@@ -441,6 +441,14 @@ index=dns sourcetype=zeek:dns
 - **TXT Record Monitoring** - Pay special attention to TXT and NULL record queries
 - **Encrypted DNS Awareness** - Monitor for DoH/DoT usage that may bypass DNS inspection
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Splunk DNS Exfiltration Detection with Deep Learning](https://www.splunk.com/en_us/blog/security/machine-learning-in-security-detect-dns-data-exfiltration-using-deep-learning.html)

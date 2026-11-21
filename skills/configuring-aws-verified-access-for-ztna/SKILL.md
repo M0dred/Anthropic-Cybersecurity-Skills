@@ -455,6 +455,14 @@ aws cloudwatch put-metric-alarm \
 7. **Set high device trust thresholds**: Require overall score above 70 for production access
 8. **Monitor for policy drift**: Use AWS Config rules to detect unauthorized changes
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [AWS Verified Access Documentation](https://docs.aws.amazon.com/verified-access/)

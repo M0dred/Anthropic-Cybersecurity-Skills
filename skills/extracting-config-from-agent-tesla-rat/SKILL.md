@@ -198,6 +198,14 @@ if __name__ == "__main__":
 - Persistence mechanism identified
 - IOCs suitable for network blocking extracted
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Splunk - Agent Tesla Detection and Analysis](https://www.splunk.com/en_us/blog/security/inside-the-mind-of-a-rat-agent-tesla-detection-and-analysis.html)

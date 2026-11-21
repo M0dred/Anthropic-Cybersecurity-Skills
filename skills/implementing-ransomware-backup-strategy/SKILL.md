@@ -317,3 +317,15 @@ Document restore test results and maintain a recovery runbook with step-by-step 
 | 2 | 200 | 4hr | 12hr | 4hr inc/Daily full | Monthly |
 | 3 | 250 | 24hr | 48hr | Daily inc/Weekly full | Quarterly |
 ```
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `references/workflows.md` - decision tree and record template
+- `scripts/agent.py` - runnable helper for this procedure

@@ -280,6 +280,14 @@ Regards,
 - App store monitoring detects counterfeit applications
 - Takedown requests generated with required evidence
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Netcraft: Brand Protection Platforms](https://www.netcraft.com/blog/6-best-brand-protection-platforms-for-defending-your-company-s-online-reputation/)

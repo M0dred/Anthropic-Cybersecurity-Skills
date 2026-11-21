@@ -233,6 +233,14 @@ def generate_attribution_report(analyzer):
 - Attribution confidence levels are properly justified
 - Report includes alternative hypotheses and false flag considerations
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [Diamond Model of Intrusion Analysis](https://www.activeresponse.org/wp-content/uploads/2013/07/diamond.pdf)

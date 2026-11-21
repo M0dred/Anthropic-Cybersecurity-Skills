@@ -307,3 +307,13 @@ LICENSE COMPLIANCE
 - NVD API rate limits can slow analysis when scanning hundreds of components without an API key
 - CPE names in SBOMs may not exactly match NVD entries, requiring fuzzy matching
 - Transitive dependencies may include log4j even when it is not a direct dependency
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

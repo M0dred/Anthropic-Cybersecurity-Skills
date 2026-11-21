@@ -281,3 +281,13 @@ sha256sum handshake_capture-01.cap > evidence_hashes.txt
 4. Consider WPA3-SAE for PSK networks to prevent offline cracking
 5. Enable 802.11w Protected Management Frames to prevent deauth attacks
 ```
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

@@ -273,3 +273,7 @@ transport = tcp
 - [ ] Critical file watches trigger alerts on test modifications (`touch /etc/shadow` generates an event)
 - [ ] Logs are forwarding to central SIEM (verify with a test event and confirm receipt)
 - [ ] Audit rules persist across reboot (rules in `/etc/audit/rules.d/`, not only via `auditctl`)
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `scripts/agent.py` - runnable helper for this procedure

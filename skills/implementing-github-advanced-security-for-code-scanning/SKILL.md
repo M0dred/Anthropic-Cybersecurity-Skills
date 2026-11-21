@@ -203,6 +203,14 @@ The organization-level security overview provides:
 3. **Over-alerting with security-and-quality** --- Start with `default` suite and expand gradually to avoid developer alert fatigue
 4. **Missing GHAS license seats** --- Only active committers to GHAS-enabled repositories consume license seats; plan capacity accordingly
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - [GitHub Code Scanning Documentation](https://docs.github.com/en/code-security/code-scanning)

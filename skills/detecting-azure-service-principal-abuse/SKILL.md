@@ -243,6 +243,14 @@ Create analytics rules for:
 | Account Discovery: Cloud Account | T1087.004 | Enumerating service principals |
 | Steal Application Access Token | T1528 | OAuth token theft via service principal |
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - Splunk Detection: Azure AD Service Principal Abuse

@@ -230,3 +230,14 @@ Record each deployed token (type, memo, location, alert channel, D3FEND mapping)
 - [ ] Each token validated by a controlled trigger; alert confirmed end-to-end.
 - [ ] Token inventory exported (type, memo, location, alert channel, D3-DF/D3-DUC mapping).
 - [ ] No tokens committed to public repositories or planted on out-of-scope systems.
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+## References
+
+- `references/api-reference.md` - commands, parameters, and usage
+- `references/standards.md` - NIST CSF, NIST 800-53, MITRE ATT&CK mappings
+- `scripts/agent.py` - runnable helper for this procedure

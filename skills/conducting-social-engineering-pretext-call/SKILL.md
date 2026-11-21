@@ -212,6 +212,14 @@ Track the following for each call:
 6. **Never publicly identify** specific employees who failed
 7. **Comply with telecommunications laws** in your jurisdiction
 
+
+## Verification
+
+- The command completed without errors and produced the expected output.
+- The output contains the expected fields, values, or indicators for this procedure.
+- A second run with the same input produces consistent results.
+- The result is recorded with the tool, version, timestamp, and operator.
+
 ## References
 
 - Verizon DBIR 2025: 74% of breaches involve human element
