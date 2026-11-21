@@ -661,7 +661,7 @@ detection:
     selection:
         EventID: 4662
         ObjectName|contains:
-{"\n".join(f"            - '{a}'" for a in accounts)}
+{chr(10).join("            - '" + a + "'" for a in accounts)}
     condition: selection
 falsepositives:
     - Legitimate AD administration tools
